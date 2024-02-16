@@ -10,7 +10,7 @@ settings:
 
 sidebar: 
   entries:
-  - title: Amazon FsX for NetApp ONTAP docs
+  - title: Amazon FSx for NetApp ONTAP docs
     url: /index.html
   - title: Release notes  
     entries:
