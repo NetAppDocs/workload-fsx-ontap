@@ -1,12 +1,50 @@
 settings:
-  name: "Product Name"
+  name: Amazon FSx for NetApp ONTAP
+  platform: cloud
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  rss_page: "whats-new.html"  
 
 sidebar: 
   entries:
+  - title: Amazon FsX for NetApp ONTAP docs
+    url: /index.html
+  - title: Release notes  
+    entries:
+      - title: What's new
+        url: /whats-new.html
+      - title: Known limitations
+        url: /known-limitations.html 
+  - title: Get started
+    entries: 
+      - title: Learn about Amazon FSx for NetApp ONTAP
+        url: /learn-fsx-ontap.html
+      - title: Quick start
+        url: /quick-start-fsx.html
+  - title: Requirements
+    entries: 
+      - title: Set up permissions
+        url: /set-up-permissions-fsx.html
+      - title: Security group rules
+        url: /security-groups-fsx.html  
+  - title: Use Amazon FSx for NetApp ONTAP
+    entries: 
+      - title: Create an FSx for ONTAP file system
+        url: /create-file-system-fsx.html
+      - title: Manage an FSx for ONTAP file system
+        url: /manage-file-system-fsx.html
+  - title: Knowledge and support
+    entries: 
+      - title: Register for support
+        url: /support-registration-fsx.html
+      - title: Get help
+        url: /get-help-fsx.html                  
   - title: Legal notices
     url: /legal-notices.html
+
+product-family:
+  name: Workload Factory
+  repo: workload-family
