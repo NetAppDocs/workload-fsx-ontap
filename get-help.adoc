@@ -9,5 +9,5 @@ summary: NetApp provides support for Amazon FSx for NetApp ONTAP in a variety of
 :imagesdir: ./media/
 
 [.lead]
-NetApp provides support for Amazon FSx for NetApp ONTAP in a variety of ways. Extensive free self-support options are available 24x7, such as knowledgebase (KB) articles and a community forum. Your support registration includes remote technical support via web ticketing.
+include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/get-help.adoc[]
 
