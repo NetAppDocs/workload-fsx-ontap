@@ -1,0 +1,35 @@
+---
+sidebar: sidebar
+permalink: learn-fsx-ontap.html
+keywords: Amazon FSx for NetApp ONTAP, volumes, aws
+summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing customers to launch and run file systems powered by NetApp’s ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
+---
+= Learn about Amazon FSx for NetApp ONTAP 
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Amazon FSx for NetApp ONTAP is a fully managed service allowing customers to launch and run file systems powered by NetApp’s ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Refer to Amazon FSx for NetApp ONTAP documentation^]. 
+
+== Features
+
+* No need to configure or manage storage devices, software, or backups.
+* Support for CIFS, iSCSI, NFSv3, NFSv4.x, and SMB v2.0 - v3.1.1 protocols.
+* Low cost, virtually unlimited data storage capacity using available Infrequently Accessed (IA) storage tier.
+* Certified to run on latency-sensitive applications including Oracle RAC.
+* Choice of bundled and pay-as-you-go pricing.
+
+== Additional features in Workload Factory
+
+== Cost
+
+== Supported regions
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+
+== Getting help
+Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.
+
+For general questions about Workload Factory or Workload Factory applications and services, you can start with ?.
