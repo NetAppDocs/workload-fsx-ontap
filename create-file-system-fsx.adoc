@@ -1,0 +1,79 @@
+---
+sidebar: sidebar
+permalink: create-file-system-fsx.html
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage
+summary: 
+---
+= Create an FSx for ONTAP file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Using Workload Factory you can create an FSx for ONTAP file system. 
+
+== Options for creating an FSx for ONTAP file system
+When creating an FSX for ONTAP file system, you have two options. Consider the following options. 
+
+Option 1:: This option allows Workload Factory to create the FSx for ONTAP file system for you. You'll need AWS credentials if you select this option. Refer to link:...[Credentials]. 
+
+Option 2:: Workload Factory generates a CloudFormation stack for development from AWS. Minimum permissions are required. Refer to link:...[Permissions]. 
+
+== Create an FSx for ONTAP file system
+In the *Storage* capability in Workload Factory, you can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. 
+
+[role="tabbed-block"]
+====
+
+.Quick create
+--
+Quick create enables you to use a recommended best-practice configuration. You can change most configuration options after you create an FSx for ONTAP file system. 
+
+.Steps
+. Obtain the necessary AWS credentials and permissions for the two Quick create options. 
+. Enter a *File system name*.
+. Select a *Deployment topology*.
+. Choose the *Number of HA pairs*. 
+. Select a *Deployment type*.
+. Optionally, you can add tags. 
+. Under *Network & security*, select the region and VPC. 
+. Under *File system details*, set the capacity and unit. 
+. Provide *ONTAP credentials*: *User name* and *Password*. 
+. Open the *Summary* to review the default configurations. 
+. Save, load, or create the file system. 
+--
+
+.Advanced create
+--
+With Advanced create, you set all of the configuration options, including availability, security, backups, and maintenance. 
+
+.Steps
+. Obtain the necessary AWS credentials and permissions for the two Quick create options. 
+. In *File System general configuration*, do the following:
+.. Enter a *File system name*.
+.. Select a *Deployment topology*.
+.. Choose the *Number of HA pairs*. 
+.. Select a *Deployment type*.
+.. Optionally, you can add tags. 
+. Under *Network & security*, do the following: 
+.. Select the region and VPC. 
+.. Create or use an existing security group.
+.. In *Availability Zones*, ...
+.. Under *VPC route tables*, ...
+.. Select a *Floating IP address range outside your VPC* or enter an IP address range. 
+.. In *Encryption*, ...
+. Under *File system details*, do the following: 
+.. Set the *SSD storage capacity* and unit. 
+.. Select throughput capacity per HA pair. 
+.. Provide *ONTAP credentials*: *User name* and *Password*. 
+.. In *Storage VM Credentials*, enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
+. In *Backup and maintenance*, do the following: 
+.. Optionally, enable *Daily automatic backups*.
+.. Choose the number of days that Amazon FSx for ONTAP will retain the backups.  
+.. Under *Daily automatic backup window*, select either *No preference* or *Select start time for 30-minute weekly maintenance window*. 
+. Under *Weekly maintenance window*, select either *No preference* or *Select start time for 30-minute weekly maintenance window*.  
+. Save, load, or create the file system. 
+--
+
+====
+
+

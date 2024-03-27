@@ -9,7 +9,7 @@ summary: You can get started with FSx for ONTAP in just a few steps.
 :imagesdir: ./media/
 
 [.lead]
-Get started with Amazon FSx for NetApp ONTAP in just a few steps. 
+Using Workload Factory, you can get started with Amazon FSx for NetApp ONTAP in just a few steps. 
 
 link: (Set up and admin docs?)
 
