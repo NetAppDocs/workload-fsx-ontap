@@ -22,42 +22,105 @@ sidebar:
     entries: 
       - title: Learn about Amazon FSx for NetApp ONTAP
         url: /learn-fsx-ontap.html
+      - title: Set up 
+        entries: 
+        - title: Sign up for an AWS account
+          url: /aws-sign-up-fsx.html
+        - title: Create an administrative user
+          url: /create-admin-user-fsx.html  
+        - title: Set up permissions
+          url: /set-up-permissions-fsx.html
+        - title: Security group rules    
+          url: /security-groups-fsx.html 
       - title: Quick start
         url: /quick-start-fsx.html
-  - title: Requirements
-    entries: 
-      - title: Set up permissions
-        url: /set-up-permissions-fsx.html
-      - title: Security group rules
-        url: /security-groups-fsx.html  
   - title: Use Amazon FSx for NetApp ONTAP
     entries: 
-      - title: About FSx for ONTAP file systems
+      - title: About FSx for ONTAP resources
         url: /about-file-systems-fsx.html
-      - title: Create an FSx for ONTAP file system
-        url: /create-file-system-fsx.html
-      - title: Create a volume
-        url: /create-volume-fsx.html 
-      - title: Create a storage VM 
-        url: /create-storage-vm-fsx.html
-      - title: Create a replication relationship
-        url: /create-replication-relationship-fsx.html
-      - title: Manage an FSx for ONTAP file system
-        url: /manage-file-system-fsx.html
-      - title: Manage AWS backups      
-        url: /manage-backups-fsx.html
+      - title: Manage resources
+        entries: 
+        - title: Manage file systems
+          entries:
+          - title: Choose a file system deployment type
+            url: /choose-file-system-deployment.html
+          - title: Create an FSx for ONTAP file system
+            url: /create-file-system-fsx.html
+        - title: Manage SVMs
+          entries: 
+          - title: Create an SVM 
+            url: /create-storage-vm-fsx.html 
+        - title: Manage volumes
+          entries:        
+          - title: Create a volume
+            url: /create-volume-fsx.html 
+          - title: Mount a volume
+            url: /mount-volume-fsx.html  
+      - title: Access your data
+        url: /access-your-data-fsx.html
+      - title: Integrate with Active Directory
+        entries: 
+        - title: About Active Directory
+          url: /about-active-directory.html
+      - title: Manage storage capacity
+        entries: 
+        - title: About storage tiers
+          url: /about-storage-tiers.html                    
   - title: Protect your data
     entries: 
-      - title: Manage AWS backups      
-        url: /manage-backups-fsx.html
-      - title: Manage replication relationships
-        url: /manage-replication-relationships.html   
+    - title: Manage AWS backups      
+      entries: 
+      - title: About AWS backup
+        url: /about-aws-backup-fsx.html
+      - title: Use AWS Backup with FSx for ONTAP
+        url: /use-aws-backup-fsx.html
+    - title: Manage snapshots
+      entries: 
+      - title: About snapshots
+        url: /about-snapshots-fsx.html
+      - title: Create a snapshot policy
+        url: /create-snapshot-policy.html
+      - title: Restore a file from a snapshot 
+        url: /restore-file-snapshot-fsx.html
+      - title: Delete a snapshot
+        url: /delete-snapshot-fsx.html
+      - title: Disable automatic snapshots
+        url: /disable-automatic-snapshots-fsx.html
+      - title: Use snapshot reserve
+        url: /use-snapshot-reserve-fsx.html
+      - title: Update snapshot reserve
+        url: /update-snapshot-reserve-fsx.html           
+    - title: Manage replication
+      entries: 
+      - title: About replication
+        url: /about-replication-fsx.html
+      - title: Create a replication relationship
+        url: /create-replication-relationship-fsx.html
+  - title: Administer and monitor
+    entries: 
+    - title: Performance
+      entries: 
+    - title: Security
+      entries: 
+    - title: Monitor file systems
+      url: /monitor-file-systems-fsx.html
+  - title: Learn more
+    entries: 
+    - title: Availability and durability 
+      entries: 
+      - title: Failover process for FSx for ONTAP
+        url: /failover-process-fsx.html
+      - title: Network resources
+        url: /network-resources-fsx.html
+    - title:       
   - title: Knowledge and support
     entries: 
       - title: Register for support
         url: /support-registration-fsx.html
       - title: Get help
-        url: /get-help-fsx.html                  
+        url: /get-help-fsx.html  
+      - title: Troubleshooting
+        url: /troubleshooting-fsx.html                  
   - title: Legal notices
     url: /legal-notices.html
 
