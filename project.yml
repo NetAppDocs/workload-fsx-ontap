@@ -22,8 +22,8 @@ sidebar:
       entries:
         - title: Learn about Amazon FSx for NetApp ONTAP
           url: /learn-fsx-ontap.html
-        - title: Set up
-          entries:
+      #  - title: Set up
+        #  entries:
           #  - title: Sign up for an AWS account
           #    url: /aws-sign-up-fsx.html
           #  - title: Create an administrative user
