@@ -33,8 +33,9 @@ sidebar:
             - title: Create a volume
               url: /create-volume-fsx.html
             - title: Access your data
-              url: /access-data-overview.html
               entries: 
+                - title: Data access overview
+                  url: data-access-overview.html
                 - title: Connect to NAS clients  
                   entries:
                     - title: Mount a volume on Linux clients
