@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: delete-volume.html
+keywords: 
+summary: 
+---
+= Delete a volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

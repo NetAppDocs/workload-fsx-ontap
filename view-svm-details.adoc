@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: view-svm-details.html
+keywords: 
+summary: 
+---
+= View the details of a storage VM
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

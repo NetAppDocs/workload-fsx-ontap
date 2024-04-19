@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: mount-volume-windows.html
+keywords: 
+summary: 
+---
+= Mount a volume on Windows clients
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

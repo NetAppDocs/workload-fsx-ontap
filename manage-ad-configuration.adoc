@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: manage-ad-configuration.html
+keywords: 
+summary: 
+---
+= Manage an Active Directory configuration
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: increase-volume-capacity.html
+keywords: 
+summary: 
+---
+= Increase volume capacity
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

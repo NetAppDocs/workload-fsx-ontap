@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: create-file-system-fsx.html
+permalink: create-file-system.html
 keywords: create, FSx file system, ONTAP file system, Workload Factory, storage
 summary: 
 ---

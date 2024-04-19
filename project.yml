@@ -20,137 +20,145 @@ sidebar:
           url: /known-limitations.html
     - title: Get started
       entries:
-        - title: Learn about Amazon FSx for NetApp ONTAP
+        - title: Learn about Amazon FSx for ONTAP in Workload Factory
           url: /learn-fsx-ontap.html
-      #  - title: Set up
-        #  entries:
-          #  - title: Sign up for an AWS account
-          #    url: /aws-sign-up-fsx.html
-          #  - title: Create an administrative user
-          #    url: /create-admin-user-fsx.html
-          #  - title: Set up permissions
-          #    url: /set-up-permissions-fsx.html
-          #  - title: Security group rules
-          #    url: /security-groups-fsx.html
         - title: Quick start
-          url: /quick-start-fsx.html
+          url: /quick-start.html
+        - title: Create an FSx for ONTAP file system
+          url: /create-file-system-fsx.html
     - title: Use Amazon FSx for NetApp ONTAP
       entries:
-        - title: About FSx for ONTAP resources
-          url: /about-file-systems-fsx.html
-        - title: Manage resources
+        - title: Manage volumes
           entries:
-            - title: Manage file systems
+            - title: Create a volume
+              url: /create-volume-fsx.html
+            - title: Access your data
+              url: /access-data-overview.html
+              entries: 
+                - title: Connect to NAS clients  
+                  entries:
+                    - title: Mount a volume on Linux clients
+                      url: /mount-volume-linux.html
+                    - title: Mount a volume on Windows clients
+                      url: /mount-volume-windows.html
+                    - title: Mount a volume on macOS clients
+                      url: /mount-volume-macos.html
+                - title: Connect to SAN clients
+                  entries:
+                    - title: Mount an iSCSI LUN on Linux clients
+                      url: /mount-iscsi-linux.html
+                    - title: Mount an iSCSI LUN on Windows clients
+                      url: /mount-iscsi-windows.html  
+        - title: Create a storage VM
+          url: /create-storage-vm.html                
+        - title: Protect your data
+          entries:
+            - title: Data protection overview 
+              url: /data-protection-overview.html
+            - title: Manage snapshots
               entries:
-          #      - title: Choose a file system deployment type
-          #        url: /choose-file-system-deployment.html
-                - title: Create an FSx for ONTAP file system
-                  url: /create-file-system-fsx.html
-          #  - title: Manage storage VMs
-            #  entries:
-              #  - title: Create a storage VM
-              #    url: /create-storage-vm-fsx.html
-          #  - title: Manage volumes
-            #  entries:
-              #  - title: Create a volume
-              #    url: /create-volume-fsx.html
-              #  - title: Mount a volume
-              #    url: /mount-volume-fsx.html
-              #  - title: View volume details
-              #    url: /view-volume-details-fsx.html
-              #  - title: Edit volume autogrow
-              #    url: /edit-volume-autogrow-fsx.html
-              #  - title: Increase volume capacity
-              #    url: /increase-volume-capacity-fsx.html
-              #  - title: Edit volume tags
-              #    url: /edit-volume-tags-fsx.html
-              #  - title: Redistribute volume capacity
-              #    url: /redistribute-volume-capacity-fsx.html
-              #  - title: Delete a volume
-              #    url: /delete-volume-fsx.html
-              #  - title: Manage volume access controls
-              #    url: /manage-volume-access-controls-fsx.html
-              #  - title: Manage iSCSI volumes
-              #    url: /manage-iscsi-volumes-fsx.html
-      #  - title: Access your data
-      #    url: /access-your-data-fsx.html
-      #  - title: Integrate with Active Directory
-      #    entries:
-          #  - title: About Active Directory
-          #    url: /about-active-directory.html
-      #  - title: Manage storage capacity
-        #  entries: 
-          #  - title: About storage tiers
-          #    url: /about-storage-tiers.html
-          #  - title: Set a volume tiering policy
-          #    url: /set-tiering-policy-fsx.html
-          #  - title: Change a volume tiering policy
-          #    url: /change-tiering-policy-fsx.html                   
-  #  - title: Protect your data
-    #  entries:
-      #  - title: Manage AWS backups
-        #  entries:
-          #  - title: About AWS backup
-          #    url: /about-aws-backup-fsx.html
-          #  - title: Create a backup
-          #    url: /create-backup-fsx.html
-          #  - title: Restore a volume from a backup
-          #    url: /restore-from-backup-fsx.html
-      #  - title: Manage snapshots
-        #  entries:
-          #  - title: About snapshots
-          #    url: /about-snapshots-fsx.html
-          #  - title: Create a snapshot policy
-          #    url: /create-snapshot-policy.html
-          #  - title: Edit a snapshot policy
-          #    url: /edit-snapshot-policy.html
-          #  - title: Create a snapshot
-          #    url: /create-snapshot-fsx.html
-          #  - title: Restore a volume from a snapshot
-          #    url: /restore-volume-from-snapshot-fsx.html
-          #  - title: Create a new volume from a snapshot
-          #    url: /clone-volume-fsx.html
-          #  - title: Delete a snapshot
-          #    url: /delete-snapshot-fsx.html
-          #  - title: Disable automatic snapshots
-          #    url: /disable-automatic-snapshots-fsx.html    
-     #   - title: Manage replication
-        #  entries:
-          #  - title: About replication
-          #    url: /about-replication-fsx.html
-          #  - title: Create a replication relationship
-          #    url: /create-replication-relationship-fsx.html
-  #  - title: Administer and monitor
-    #  entries:
-      #  - title: Performance
-      #  - title: Networking
-      #    entries:
-      #      - title: Client protocols
-      #        url: /client-protocols-fsx.html
-      #      - title: Edit iSCSI configuration
-      #        url: /edit-iscsi-configuration.html 
-      #  - title: Security
-      #    entries:
-      #      - title: Volume access controls
-      #        url: /volume-access-controls-fsx.html
-      #  - title: Monitor file systems
-      #    url: /monitor-file-systems-fsx.html
- #   - title: Learn more
-    #  entries:
-      #  - title: Availability and durability
-        #  entries:
-          #  - title: Failover process for FSx for ONTAP
-          #    url: /failover-process-fsx.html
-          #  - title: Network resources
-          #    url: /network-resources-fsx.html 
+          #      - title: Create a snapshot
+          #        url: /create-snapshot.html
+            #   - title: Create a snapshot policy
+          #       url: /create-snapshot-policy.html
+          #      - title: Edit a snapshot policy
+          #        url: /edit-snapshot-policy.html
+          #      - title: Restore a volume from a snapshot
+          #        url: /restore-volume-from-snapshot.html
+          #      - title: Create a new volume from a snapshot
+          #        url: /clone-volume.html
+          #      - title: Delete a snapshot
+          #        url: /delete-snapshot.html
+          #      - title: Disable automatic snapshots
+          #        url: /disable-automatic-snapshots.html 
+          #  - title: Manage backups to object storage
+          #    entries: 
+          #      - title: Create a backup
+          #        url: /create-backup.html
+              #  - title: Set up a backup policy
+              #    url: /set-backup-policy.html  
+           #     - title: Restore a volume from a backup
+           #       url: /restore-from-backup.html
+           # - title: Manage replication
+           #   entries:
+           #     - title: Create a replication relationship
+            #      url: /create-replication-relationship.html
+    - title: Administer and monitor
+      entries:
+        - title: Volume administration
+          entries:  
+            - title: View volume details
+              url: /view-volume-details.html
+            - title: Edit volume autogrow
+              url: /edit-volume-autogrow.html
+            - title: Increase volume capacity
+              url: /increase-volume-capacity.html
+            - title: Edit volume tags
+              url: /edit-volume-tags.html
+            - title: Redistribute volume capacity
+              url: /redistribute-volume-capacity.html
+            - title: Delete a volume
+              url: /delete-volume.html
+        - title: File system administration
+          entries: 
+            - title: Increase file system capacity
+              url: /increase-file-system-capacity.html
+            - title: Enable automatic capacity management
+              url: /enable-auto-capacity-management.html
+            - title: Reset fsxadmin password
+              url: /reset-fsxadmin-password.html
+            - title: Delete a file system
+              url: /delete-file-system.html
+        - title: Storage VM administration
+          entries: 
+            - title: View storage VM details
+              url: /view-svm-details.html
+            - title: Replicate a storage VM to another file system
+              url: /replicate-svm-to-file-system.html
+            - title: Manage storage VM Active Directory configuration
+              entries: 
+                - title: Manage Active Directory configuration 
+                  url: /manage-ad-configuration.html
+                - title: Edit an existing Active Directory configuration
+                  url: /edit-ad-configuration.html
+            - title: Edit storage VM tags
+              url: /edit-svm-tags.html
+            - title: Reset storage VM password
+              url: reset-svm-password.html
+            - title: Delete a storage VM 
+              url: /delete-svm.html
+#        - title: Data protection administration
+#          entries:
+            #  - title: Delete a snapshot
+            #    url: /delete-snapshot.html
+            #  - title: Pause a replication relationship
+            #    url: /pause-replication.html
+            #  - title: Resync a replication relationship
+            #    url: /resync-replication.html
+            #  - title: Break a replication relationship
+            #    url: /break-replication.html
+            #  - title: Delete a replication relationship
+            #    url: /delete-replication.html 
+        - title: Performance administration
+          entries: 
+            - title: Provision IOPS for a file system
+              url: /provision-iops-file-system.html
+            - title: Update throughput capacity for a file system
+              url: /update-throughput-file-system.html  
+    - title: Reference
+      entries: 
+        - title: Performance for FSx for ONTAP
+          url: /performance-reference.html
+        - title: Security for FSx for ONTAP
+          url: /security-reference.html  
     - title: Knowledge and support
       entries:
         - title: Register for support
-          url: /support-registration-fsx.html
+          url: /support-registration.html
         - title: Get help
           url: /get-help-fsx.html
-      #  - title: Troubleshooting
-      #    url: /troubleshooting-fsx.html          
+        - title: Troubleshooting
+          url: /troubleshooting.html          
     - title: Legal notices
       url: /legal-notices.html
 

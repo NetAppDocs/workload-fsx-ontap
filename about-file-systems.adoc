@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: about-file-systems-fsx.html
+permalink: about-file-systems.html
 keywords: overview, FSx file system, ONTAP file system, Workload Factory, storage
 summary: 
 ---

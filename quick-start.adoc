@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: quick-start-fsx.html
+permalink: quick-start.html
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
 summary: You can get started with FSx for ONTAP in just a few steps. 
 ---

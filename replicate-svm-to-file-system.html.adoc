@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: replicate-svm-to-file-system.html
+keywords: 
+summary: 
+---
+= Replicate a storage VM to another file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

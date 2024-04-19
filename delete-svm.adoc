@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: delete-svm.html
+keywords: 
+summary: 
+---
+= Delete a storage VM
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

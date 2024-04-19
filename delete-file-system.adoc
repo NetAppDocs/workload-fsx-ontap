@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: delete-file-system.html
+keywords: 
+summary: 
+---
+= Delete a file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

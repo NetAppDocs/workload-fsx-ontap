@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: update-throughput-file-system.html
+keywords: 
+summary: 
+---
+= Update the throughput capacity for a file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

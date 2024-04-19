@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: create-storage-vm.html
+keywords: create
+summary: 
+---
+= Create a storage VM
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

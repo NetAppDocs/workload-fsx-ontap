@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: enable-auto-capacity-management.html
+keywords: 
+summary: 
+---
+= Enable automatic capacity management
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

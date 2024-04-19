@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: view-volume-details.html
+keywords: 
+summary: 
+---
+= View volume details
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

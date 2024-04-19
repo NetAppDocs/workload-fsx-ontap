@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: edit-svm-tags.html
+keywords: 
+summary: 
+---
+= Edit storage VM tags
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

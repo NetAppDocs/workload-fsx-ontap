@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: create-volume.html
+keywords: 
+summary: 
+---
+= Create a volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

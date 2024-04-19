@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: increase-file-system-capacity.html
+keywords: 
+summary: 
+---
+= Increase file system capacity
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

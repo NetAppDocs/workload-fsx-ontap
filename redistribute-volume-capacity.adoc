@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: redistribute-volume-capacity.html
+keywords: 
+summary: 
+---
+= Redistribute volume capacity
+:icons: font
+:imagesdir: ./media/
+
+[.lead]

@@ -1,0 +1,11 @@
+---
+sidebar: sidebar
+permalink: performance-reference.html
+keywords: 
+summary: 
+---
+= Performance for FSx for ONTAP
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
