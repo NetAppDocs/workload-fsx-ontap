@@ -56,8 +56,8 @@ sidebar:
           entries:
             - title: Data protection overview 
               url: /data-protection-overview.html
-            - title: Manage snapshots
-              entries:
+          #  - title: Manage snapshots
+          #    entries:
           #      - title: Create a snapshot
           #        url: /create-snapshot.html
             #   - title: Create a snapshot policy
