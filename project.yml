@@ -25,31 +25,32 @@ sidebar:
         - title: Quick start
           url: /quick-start.html
         - title: Create an FSx for ONTAP file system
-          url: /create-file-system-fsx.html
+          url: /create-file-system.html
     - title: Use Amazon FSx for NetApp ONTAP
       entries:
         - title: Manage volumes
           entries:
             - title: Create a volume
-              url: /create-volume-fsx.html
+              url: /create-volume.html
             - title: Access your data
-              entries: 
-                - title: Data access overview
-                  url: data-access-overview.html
-                - title: Connect to NAS clients  
-                  entries:
-                    - title: Mount a volume on Linux clients
-                      url: /mount-volume-linux.html
-                    - title: Mount a volume on Windows clients
-                      url: /mount-volume-windows.html
-                    - title: Mount a volume on macOS clients
-                      url: /mount-volume-macos.html
-                - title: Connect to SAN clients
-                  entries:
-                    - title: Mount an iSCSI LUN on Linux clients
-                      url: /mount-iscsi-linux.html
-                    - title: Mount an iSCSI LUN on Windows clients
-                      url: /mount-iscsi-windows.html  
+              url: access-data.html
+          #    entries: 
+          #      - title: Data access overview
+          #        url: data-access-overview.html
+          #      - title: Connect to NAS clients  
+          #        entries:
+          #          - title: Mount a volume on Linux clients
+          #            url: /mount-volume-linux.html
+          #          - title: Mount a volume on Windows clients
+          #            url: /mount-volume-windows.html
+          #          - title: Mount a volume on macOS clients
+          #            url: /mount-volume-macos.html
+          #      - title: Connect to SAN clients
+          #        entries:
+          #          - title: Mount an iSCSI LUN on Linux clients
+          #            url: /mount-iscsi-linux.html
+          #          - title: Mount an iSCSI LUN on Windows clients
+          #            url: /mount-iscsi-windows.html  
         - title: Create a storage VM
           url: /create-storage-vm.html                
         - title: Protect your data
