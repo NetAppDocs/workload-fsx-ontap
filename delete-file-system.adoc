@@ -9,3 +9,11 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+To delete a file system, you must first delete any volumes, storage VMs, or replication relationships associated with the file system. 
+
+.Steps
+. In Workload Factory Storage, click *Go to storage inventory*.
+. Click the three dots menu for the FSx for ONTAP file system you want to delete. 
+. Select *Manage*.
+. In the *Overview* tab, click the three dots menu. 
+. Click *Delete*.  
