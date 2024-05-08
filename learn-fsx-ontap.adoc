@@ -31,7 +31,7 @@ FSx for ONTAP provides the same features, performance, and administrative capabi
 * Codebox: The Codebox is an Infrastructure as Code feature that gives developers code templates, such as for creating a file system, for use outside Workload Factory. 
 
 == Tools to access
-The following tools access the Workload Factory Storage capability:
+The following tools access FSx for ONTAP:
 
 * User interface: 
 * Codebox: 

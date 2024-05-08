@@ -13,29 +13,23 @@ summary: You can get started with FSx for ONTAP in just a few steps.
 [.lead]
 Using Workload Factory, you can get started with Amazon FSx for NetApp ONTAP in just a few steps. 
 
-Workload Factory offers three different operation modes depending on the level of trust you have with using Workload Factory to manage your database workloads. 
-
-Each mode has its own requirements for getting started.
+Workload Factory offers three different operation modes depending on the level of trust you have with using Workload Factory to manage your database workloads. Each mode has its own requirements for getting started.
 
 * _Basic_ mode
 +
-In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. You can also use the storage calculator to compare the costs of managing databases in AWS EBS, EFS and Windows File Server with FSx for ONTAP. AWS credentials and permissions aren't required.
+In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. You can also use the storage calculator to compare the costs of managing your resources in AWS EBS, EFS and Windows File Server with FSx for ONTAP. AWS credentials and permissions aren't required.
 
 * _Read_ mode
 +
-In read mode, you'll need some read-only permissions in AWS CloudFormation.
-+
-To use a ready-to-execute template that you fill out in Workload Factory for execution with AWS CloudFormation, you'll need AWS account credentials with some read-only permissions.  
+In read mode, you can use a ready-to-execute template that you fill out in Workload Factory for execution in AWS CloudFormation. You'll need AWS account credentials with some read-only permissions.  
 
 * _Automate_ mode
 +
-In automate mode, you'll need AWS credentials, AWS CloudFormation permissions, and AWS Systems Manager Session Manager (SSM) connectivity.
-+
-To deploy and manage your workload resources within Workload Factory, you must have:
+In automate mode, you can deploy and manage your resources within Workload Factory. You'll need the following to operate in automate mode:  
 +
 ** AWS account credentials 
 ** AWS CloudFormation permissions 
-** A deployed Amazon EC2 instance with an installed AWS Systems Manager Agent. The SSM Agent gives Workload Factory access to database host machines for installing, patching, or fetching data.
+** A deployed Amazon EC2 instance with an installed AWS Systems Manager (SSM) Agent. The SSM Agent gives Workload Factory access to FSx for ONTAP file systems for installing, patching, or fetching data. 
  
 
 [role="tabbed-block"]
@@ -105,7 +99,7 @@ Option 2: Quick start
 [.lead]
 You can get started with Workload Factory FSx for ONTAP in a few steps. 
 
-Workload Factory offers three different operation modes depending on the level of trust you have with using Workload Factory to manage your database workloads. 
+Workload Factory offers three different operation modes depending on the level of trust you have with using Workload Factory to deploy and manage FSx for ONTAP file systems, volumes, and other AWS resources. 
 
 Each mode has its own requirements for getting started.
 
@@ -113,7 +107,7 @@ Each mode has its own requirements for getting started.
 
 * _Basic_ mode
 +
-In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. You can also use the storage calculator to compare the costs of managing databases in AWS EBS, EFS and Windows File Server with FSx for ONTAP. AWS credentials and permissions aren't required.
+In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. You can also use the storage calculator to compare the costs of managing your resources in AWS EBS, EFS and Windows File Server with FSx for ONTAP. AWS credentials and permissions aren't required.
 
 * _Read_ mode
 +
@@ -121,21 +115,21 @@ In read mode, you can use a ready-to-execute template that you fill out in Workl
 
 * _Automate_ mode
 +
-In automate mode, you can deploy and manage your workload resources within Workload Factory. You'll need the following to operate in automate mode:  
+In automate mode, you can deploy and manage your resources within Workload Factory. You'll need the following to operate in automate mode:  
 +
 ** AWS account credentials 
 ** AWS CloudFormation permissions 
-** A deployed Amazon EC2 instance with an installed AWS Systems Manager (SSM) Agent. The SSM Agent gives Workload Factory access to database host machines for installing, patching, or fetching data. 
+** A deployed Amazon EC2 instance with an installed AWS Systems Manager (SSM) Agent. The SSM Agent gives Workload Factory access to FSx for ONTAP file systems for installing, patching, or fetching data. 
 
 == Quick start 
-Follow these steps to get started with Workload Factory Databases. 
+Follow these steps to get started with FSx for ONTAP. 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Choose the mode you want to operate in
 
 [role="quick-margin-para"]
 Choose between Basic, Read, and Automate modes. 
 
-If you choose to operate in Basic mode, you don't need to go any further. You can start using Workload Factory Databases to copy empty code templates. In the Databases tile, click *Deploy database*. link:deploy-host.html[Learn how to deploy a database host]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference).  
+If you choose to operate in Basic mode, you don't need to go any further. You can start using FSx for ONTAP to copy empty code templates. In the Storage tile, click *Create file system*. link:create-file-system.html[Learn how to create a file system]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference).  
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Verify AWS account credentials 

@@ -9,17 +9,24 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-Using Workload Factory you can create an FSx for ONTAP file system. 
+Using Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
+
+== Before you begin
+Before creating your FSx for ONTAP file system, you will need:
+
+* The ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP file system. See adding AWS credentials to BlueXP for details.
+
+* The region and VPN information for where you will create the FSx for ONTAP instance.
 
 == Options for creating an FSx for ONTAP file system
 When creating an FSX for ONTAP file system, you have two options. Consider the following options. 
 
-Option 1:: This option allows Workload Factory to create the FSx for ONTAP file system for you. You'll need AWS credentials if you select this option. Refer to link:...[Credentials]. 
+Option 1:: This option allows Workload Factory to create the FSx for ONTAP file system for you. You'll need AWS credentials if you select this option. Refer to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[Credentials]. 
 
-Option 2:: Workload Factory generates a CloudFormation stack for development from AWS. Minimum permissions are required. Refer to link:...[Permissions]. 
+Option 2:: Workload Factory generates a CloudFormation stack for development from AWS. Minimum permissions are required. Refer to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[Permissions]. 
 
 == Create an FSx for ONTAP file system
-In the *Storage* capability in Workload Factory, you can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. 
+You can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. 
 
 [role="tabbed-block"]
 ====
@@ -29,15 +36,27 @@ In the *Storage* capability in Workload Factory, you can create an FSx for ONTAP
 Quick create enables you to use a recommended best-practice configuration. You can change most configuration options after you create an FSx for ONTAP file system. 
 
 .Steps
-. Obtain the necessary AWS credentials and permissions for the two Quick create options. 
-. Enter a *File system name*.
-. Select a *Deployment topology*.
-. Choose the *Number of HA pairs*. 
-. Select a *Deployment type*.
-. Optionally, you can add tags. 
-. Under *Network & security*, select the region and VPC. 
-. Under *File system details*, set the capacity and unit. 
-. Provide *ONTAP credentials*: *User name* and *Password*. 
+. Go to the Workload Factory console.
+. In Storage, click *Create FSx for ONTAP*.  
+. On the Create FSx for ONTAP page, select *Quick create*. 
+. Under File system general configuration, provide the following: 
+.. *AWS credentials*: Select AWS credentials. To add new credentials, go to the link:https://console.workloads.netapp.com/credentials[Credentials page^]. 
+.. *File system name*: Enter a name for the file system. 
+.. *Deployment topology*: Select a deployment topology. 
++
+* Scale-up topology is where one file system is used for data distribution and can increase in size to accommodate data growth.
+* Scale-out topology is where more than one file system is used for data distribution. 
+.. *HA pairs*: Enter the number of HA pairs.
++
+* For scale-up deployments, you can only have one HA pair. 
+* For scale-out deployments, you can have between two and six HA pairs.
+.. *Deployment type*: Select a deployment type.
+.. *Tags*: Optionally, you can add up to 50 tags. 
+. Under *Network & security*, provide the following: 
+.. *Region & VPC*: Select the region and VPC for the file system. 
+. Under *File system details*, provide the following: 
+.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
+.. *ONTAP credentials*: Enter your ONTAP user name and password.  
 . Open the *Summary* to review the default configurations. 
 . Save, load, or create the file system. 
 --
@@ -47,30 +66,43 @@ Quick create enables you to use a recommended best-practice configuration. You c
 With Advanced create, you set all of the configuration options, including availability, security, backups, and maintenance. 
 
 .Steps
-. Obtain the necessary AWS credentials and permissions for the two Quick create options. 
-. In *File System general configuration*, do the following:
-.. Enter a *File system name*.
-.. Select a *Deployment topology*.
-.. Choose the *Number of HA pairs*. 
-.. Select a *Deployment type*.
-.. Optionally, you can add tags. 
-. Under *Network & security*, do the following: 
-.. Select the region and VPC. 
-.. Create or use an existing security group.
-.. In *Availability Zones*, ...
-.. Under *VPC route tables*, ...
-.. Select a *Floating IP address range outside your VPC* or enter an IP address range. 
-.. In *Encryption*, ...
-. Under *File system details*, do the following: 
-.. Set the *SSD storage capacity* and unit. 
-.. Select throughput capacity per HA pair. 
-.. Provide *ONTAP credentials*: *User name* and *Password*. 
-.. In *Storage VM Credentials*, enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
-. In *Backup and maintenance*, do the following: 
-.. Optionally, enable *Daily automatic backups*.
-.. Choose the number of days that Amazon FSx for ONTAP will retain the backups.  
-.. Under *Daily automatic backup window*, select either *No preference* or *Select start time for 30-minute weekly maintenance window*. 
-. Under *Weekly maintenance window*, select either *No preference* or *Select start time for 30-minute weekly maintenance window*.  
+. Go to the Workload Factory console.
+. In Storage, click *Create FSx for ONTAP*.  
+. On the Create FSx for ONTAP page, select *Advanced create*. 
+. Under File system general configuration, provide the following: 
+.. *AWS credentials*: Select AWS credentials. To add new credentials, go to the link:https://console.workloads.netapp.com/credentials[Credentials page^]. 
+.. *File system name*: Enter a name for the file system. 
+.. *Deployment topology*: Select a deployment topology. 
++
+* Scale-up topology is where one file system is used for data distribution and can increase in size to accommodate data growth.
+* Scale-out topology is where more than one file system is used for data distribution. 
+.. *HA pairs*: Enter the number of HA pairs.
++
+* For scale-up deployments, you can only have one HA pair. 
+* For scale-out deployments, you can have between two and six HA pairs.
+.. *Deployment type*: Select a deployment type.
+.. *Tags*: Optionally, you can add up to 50 tags. 
+. Under Network & security, provide the following: 
+.. *Region & VPC*: Select the region and VPC for the file system. 
+.. *Security group*: Create or use an existing security group.
+.. *Availability Zones*: Select availability zones and subnets.
++
+* For Cluster configuration node 1: Select an availability zone and subnet. 
+* For Cluster configuration node 2: Select an availability zone and subnet. 
+.. *VPC route tables*: Select the VPC route table to enable client access to volumes. 
+.. *Endpoint IP address range*: Select *Floating IP address range outside your VPC* or *Enter an IP address range* and enter an IP address range. 
+.. *Encryption*: Select the encryption key name from the dropdown.
+. Under File system details, provide the following: 
+.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
+.. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*. 
+.. *Throughput capacity per HA pair*: Select throughput capacity per HA pair. 
+.. *ONTAP credentials*: Enter your ONTAP user name and password.  . 
+.. *Storage VM Credentials*: Enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
+. Under Backup and maintenance, provide the following: 
+.. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. 
+... *Automatic backup retention period*:  Enter the number of days to retain automatic backups. 
+... *Daily automatic backup window*: Select either *No preference* (a daily backup start time will be selected for you) or *Select start time for daily backups* and specify a start time. 
+... *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time will be selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  
 . Save, load, or create the file system. 
 --
 
