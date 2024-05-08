@@ -63,8 +63,8 @@ sidebar:
                   url: /create-snapshot.html
                 - title: Create a snapshot policy
                   url: /create-snapshot-policy.html
-          #      - title: Edit a snapshot policy
-          #        url: /edit-snapshot-policy.html
+                - title: Modify a snapshot policy
+                  url: /modify-snapshot-policy.html
                 - title: Restore a volume from a snapshot
                   url: /restore-volume-from-snapshot.html
           #      - title: Create a new volume from a snapshot
