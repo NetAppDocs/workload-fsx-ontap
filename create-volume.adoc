@@ -9,3 +9,45 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+After you set up your FSx for ONTAP file system, you can create FSx for ONTAP volumes.
+
+== About this task
+You can create volumes from your FSx for ONTAP file system in Workload Factory Storage. 
+FSx for ONTAP volumes are virtual resources used for grouping data, determining how data is stored, and determining the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 
+
+The following protocols may be used for your volumes:
+
+* CIFS
+* NFS
+* iSCSI 
+
+== Before you begin
+Review the following prerequisites before you create a volume: 
+
+* You must have an FSx for ONTAP file system in Workload Factory. 
+* (Anything else?)
+
+.Steps
+. Go to the Workload Factory console.
+. In Storage, select *Go to storage inventory*. 
+. Under the FSx for ONTAP tab, select the three dots menu of the file system you want to create a volume in, and select *Manage*. 
+. On the Overview page of the selected FSx file system, click *Create volume*. 
+. On the Create volume page under General details, provide the following details: 
+.. *Volume name*: Enter a name for the volume. 
+.. *Storage VM name*: Optionally, enter a storage VM name. 
+.. *Volume style*: Select FlexVol or FlexGroup volume. 
++
+FlexVol volume style is selected by default. If needed after volume creation, you can rebalance volume capacity but only for FlexGroup volumes. FlexGroup rebalancing helps redistribute capacity when imbalances develop over time due to the addition of new files and file growth. 
+.. *Volume size*: Enter the volume size and unit. 
+.. *Tags*: Optionally, you can add up to 50 tags.
+. Under Efficiency and protection, provide the following details: 
+.. *Storage efficiency*: Disable or enable storage efficiency. 
++
+A thin-provisioned volume is one for which storage is allocated as it is needed. Free space is released back to the storage system when data in the volume is deleted.
+.. *Snapshot policy*: Select the snapshot policy permissions to specify the frequency of snapshots.  
+.. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
++
+Auto is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[“Volume storage capacity” in AWS FSx for NetApp ONTAP documentation^]. 
+. Under Advance configuration, provide the following: 
+.. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. 
+. Click *Create*. 
