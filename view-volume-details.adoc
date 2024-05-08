@@ -9,3 +9,17 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+View volume details, distribution, consumption, access, and protection. 
+Volume details appear only after a volume has been created in a file system.
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the Volumes tab, select the three dots menu for the volume you wish to modify. 
+. Select *Basic actions* then *View volume details*. 
+. In *Volume details*, select the tabs to view the following volume details: 
+.. *General details*: Name, etc.
+.. *Distribution*: The data distribution of the volume. 
+.. *Consumption*: Includes details about volume data consumption, sizing plans, storage efficiency and savings, and the tiering policy of the volume. 
+.. *Access*: The file level access of the volume.
+.. *Protection*: The data protection policies for the volume. 
