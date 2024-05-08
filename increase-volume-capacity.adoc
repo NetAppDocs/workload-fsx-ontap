@@ -9,3 +9,18 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+Manually increase the volume capacity of a volume at any time. 
+
+Optionally, you can enable the autogrow feature so Workload Factory manages volume capacity for you. 
+
+== Before you begin
+To increase volume capacity, you must associate a link. 
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the Volumes tab, select the three dots menu for the volume you wish to modify. 
+. Select *Basic actions* then *Increase volume capacity*. 
+. Select a larger size.
+. Change the unit if needed.  
+. Click *Increase*.

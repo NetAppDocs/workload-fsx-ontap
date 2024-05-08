@@ -9,3 +9,18 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+Redistribute, or rebalance, the capacity of a volume to avoid imbalance. 
+
+== About this task
+Rebalancing a volume redistributes the capacity when imbalances develop over time due to the addition of new files and file growth. After you manually start the rebalance operation, we select the files and move them automatically and non-disruptively. 
+
+== Before you begin
+Rebalancing a volume is only supported for FlexGroup volumes. 
+
+.Steps
+. Go to the Workload Factory console. 
+. In *Storage*, select *Go to storage inventory*. 
+. In the *Volumes* tab, select the three dots menu for the volume to rebalance.
+. Select *Advanced actions* then *Rebalance volume*. 
+. A dialog appears. Review the text. 
+. Select *Rebalance*. 

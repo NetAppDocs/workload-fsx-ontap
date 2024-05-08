@@ -9,3 +9,19 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+Enable volume autogrow to let Workload Factory manage volume capacity for you. You can disable it at any time. 
+
+Optionally, you can manually increase the volume capacity of a volume at any time using the increase volume capacity feature. 
+
+NOTE: Volume autogrow isn't supported for iSCSI volumes. 
+
+== Before you begin
+To enable volume autogrow, you must associate a link. 
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the Volumes tab, select the three dots menu for the volume you wish to modify. 
+. Select *Basic actions* then *Edit volume autogrow*. 
+. Enable or disable volume autogrow. 
+. Click *Apply*.

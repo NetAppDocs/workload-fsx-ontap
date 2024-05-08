@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: create-snapshot-policy.html
+keywords: create
+summary: Create a snapshot policy for FSx for ONTAP volumes.
+---
+= Create a snapshot policy for FSx for ONTAP volumes
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Create a snapshot policy for FSx for ONTAP volumes.
+
+== About this task
+
+== Before you begin
+
+.Steps
+. Go to the Workload Factory console. 
+. In *Storage*, select *Go to storage inventory*. 
+. In the *Volumes* tab, select the three dots menu for the volume to protect with scheduled snapshots. 
+. Select *Data protection actions* then *Manage snapshot policies*. 
+. On the Snapshot policy management page, select *Create a new snapshot policy*.
+. In the *Snapshot policy name* field, enter a name for the snapshot policy. 
+. Optional: in the *Description* field, enter a description for the snapshot policy.
+. Under *Schedule*, select when to create snapshots. For example, every minute or hourly. 
++
+You can select more than one frequency. 
+. Under *Number of copies*, enter the number of copies to retain. 
++
+The maximum number of copies is 1,023. 
+. Optional: Under *Naming convention*, enter a *Prefix* for the policy. 
+. *Retention label* is automatically populated. 
++
+This label refers to the SnapMirror, or replication label, used to select only specified snapshots for replication from the source to the target system. 
+. Click *Apply*. 

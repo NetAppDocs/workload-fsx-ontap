@@ -1,0 +1,27 @@
+---
+sidebar: sidebar
+permalink: create-snapshot.html
+keywords: create
+summary: 
+---
+= Create a snapshot of an FSx for ONTAP volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Create a snapshot of an FSx for ONTAP volume.
+
+== About this task
+
+== Before you begin
+
+.Steps
+. Go to the Workload Factory console. 
+. In *Storage*, select *Go to storage inventory*. 
+. In the *Volumes* tab, select the three dots menu for the volume to protect with scheduled snapshots. 
+. Select *Data protection actions* then *Create and restore from snapshots*. 
+. On the Snapshot create and restore page, select *Create a snapshot*.
+. In the *Snapshot name* field, enter a snapshot name. 
+. Click *Apply*. 
+
+Learn about managing your snapshots. 
