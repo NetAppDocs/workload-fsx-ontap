@@ -1,5 +1,5 @@
 settings:
-  name: Amazon FSx for NetApp ONTAP
+  name: Workload Factory for Amazon FSx for NetApp ONTAP
   platform: cloud
   internal:
     pdf_enabled: true
@@ -10,7 +10,7 @@ settings:
 
 sidebar: 
   entries:
-    - title: Amazon FSx for NetApp ONTAP docs
+    - title: Workload Factory for Amazon FSx for NetApp ONTAP docs
       url: /index.html
     - title: Release notes
       entries:

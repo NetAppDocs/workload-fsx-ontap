@@ -4,7 +4,7 @@ permalink: learn-fsx-ontap.html
 keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws
 summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing customers to launch and run file systems as the storage backend for your workloads within Workload Factory. 
 ---
-= Learn about Amazon FSx for NetApp ONTAP 
+= Learn about Amazon FSx for NetApp ONTAP in Workload Factory
 :icons: font
 :imagesdir: ./media/
 

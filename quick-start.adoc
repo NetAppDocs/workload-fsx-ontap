@@ -4,153 +4,46 @@ permalink: quick-start.html
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
 summary: You can get started with FSx for ONTAP in just a few steps. 
 ---
-= Quick start for Amazon FSx for NetApp ONTAP
+= Quick start for Workload Factory for Amazon FSx for NetApp ONTAP
 :icons: font
 :imagesdir: ./media/
 
 .Option 1
 
 [.lead]
-Using Workload Factory, you can get started with Amazon FSx for NetApp ONTAP in just a few steps. 
+With Workload Factory for Amazon FSx for NetApp ONTAP, you can get started immediately in Basic mode. 
 
-Workload Factory offers three different operation modes depending on the level of trust you have with using Workload Factory to manage your database workloads. Each mode has its own requirements for getting started.
-
-* _Basic_ mode
-+
-In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. You can also use the storage calculator to compare the costs of managing your resources in AWS EBS, EFS and Windows File Server with FSx for ONTAP. AWS credentials and permissions aren't required.
-
-* _Read_ mode
-+
-In read mode, you can use a ready-to-execute template that you fill out in Workload Factory for execution in AWS CloudFormation. You'll need AWS account credentials with some read-only permissions.  
-
-* _Automate_ mode
-+
-In automate mode, you can deploy and manage your resources within Workload Factory. You'll need the following to operate in automate mode:  
-+
-** AWS account credentials 
-** AWS CloudFormation permissions 
-** A deployed Amazon EC2 instance with an installed AWS Systems Manager (SSM) Agent. The SSM Agent gives Workload Factory access to FSx for ONTAP file systems for installing, patching, or fetching data. 
- 
-
-[role="tabbed-block"]
-====
-
-.Basic mode quick start
--- 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Access templates in Workload Factory Storage
-
-[role="quick-margin-para"]
-If you choose to operate in Basic mode, you can start using Workload Factory Databases to copy empty code templates. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system-fsx.html[create an FSx for ONTAP file system]. 
-
-You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference).  
---
-
-.Read mode quick start
---
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Verify AWS account credentials 
-
-[role="quick-margin-para"]
-You must verify AWS account credentials to operate in Read mode.
-
-If you don't have existing AWS credentials, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^]. 
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Verify permissions
-
-[role="quick-margin-para"]
-
-Verify that the credentials you use in Workload Factory have the correct permissions for Read mode. (Link to permissions in setup and admin guide)
-
-.What's next
-You can use a ready-to-execute template that you fill out in Workload Factory for execution in AWS CloudFormation. 
-
-You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference).   
-
---
-
-.Automate mode quick start
---
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Verify AWS account credentials 
-
-[role="quick-margin-para"]
-In Automate mode, you must verify AWS account credentials.
-
-If you don't have existing AWS credentials, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^]. 
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Verify permissions
-
-[role="quick-margin-para"]
-
-Verify that the credentials you use in Workload Factory have the correct permissions for Automate mode. (Link to permissions in setup and admin guide)
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Three] Create an FSx for ONTAP file system
-
-[role="quick-margin-para"]
-
-You must create an FSx file system to begin managing your AWS FSx for ONTAP resources in Workload Factory. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system-fsx.html[create an FSx for ONTAP file system]. 
-
---
-
-
-====
-
-Option 2: Quick start
-
-[.lead]
-You can get started with Workload Factory FSx for ONTAP in a few steps. 
-
-Workload Factory offers three different operation modes depending on the level of trust you have with using Workload Factory to deploy and manage FSx for ONTAP file systems, volumes, and other AWS resources. 
-
-Each mode has its own requirements for getting started.
-
-== Workload Factory operation modes
-
-* _Basic_ mode
-+
-In Basic mode, you can copy an empty template which you can complete outside of Workload Factory using the AWS CloudFormation console. You can also use the storage calculator to compare the costs of managing your resources in AWS EBS, EFS and Windows File Server with FSx for ONTAP. AWS credentials and permissions aren't required.
-
-* _Read_ mode
-+
-In read mode, you can use a ready-to-execute template that you fill out in Workload Factory for execution in AWS CloudFormation. You'll need AWS account credentials with some read-only permissions.  
-
-* _Automate_ mode
-+
-In automate mode, you can deploy and manage your resources within Workload Factory. You'll need the following to operate in automate mode:  
-+
-** AWS account credentials 
-** AWS CloudFormation permissions 
-** A deployed Amazon EC2 instance with an installed AWS Systems Manager (SSM) Agent. The SSM Agent gives Workload Factory access to FSx for ONTAP file systems for installing, patching, or fetching data. 
+If you'd like to use Workload Factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account to get started. 
 
 == Quick start 
-Follow these steps to get started with FSx for ONTAP. 
+Follow these steps to get started with Workload Factory Databases. 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Choose the mode you want to operate in
-
-[role="quick-margin-para"]
-Choose between Basic, Read, and Automate modes. 
-
-If you choose to operate in Basic mode, you don't need to go any further. You can start using FSx for ONTAP to copy empty code templates. In the Storage tile, click *Create file system*. link:create-file-system.html[Learn how to create a file system]. You can also start with the calculator (provide link to task-based page to use the calculator and link to calculator reference).  
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Verify AWS account credentials 
-
-[role="quick-margin-para"]
-If you operate in Read or Automate mode, you must verify AWS account credentials.
-
-If you don't have existing AWS credentials, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^]. 
-
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Verify permissions
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to Workload Factory
 
 [role="quick-margin-para"]
 
-Verify that the credentials you use in Workload Factory have the correct permissions. The permissions you need depend on the mode you operate in. (Link to permissions in setup and admin guide)
+First, you'll need to log in and set up an account with Workload Factory. 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Three] Create an FSx for ONTAP file system
+[role="quick-margin-para"]
+link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/sign-up-saas.html[Sign up to Workload Factory^].
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
 
 [role="quick-margin-para"]
 
-You must create an FSx file system to begin managing your AWS FSx for ONTAP resources in Workload Factory. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system-fsx.html[create an FSx for ONTAP file system]. 
+Choose between _Basic_, _Read_, and _Automate_ link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/operational-modes.html[operational modes^]. 
+
+[role="quick-margin-para"]
+If you choose to operate in _Basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy empty code templates. In the Workload Factory console, in the Storage tile, click *Create file system*. link:create-file-system.html[Learn how to create a file system]. You can also start with the storage savings calculator (provide link to task-based page to use the calculator and link to calculator reference). 
+
+[role="quick-margin-para"]
+If you operate in Read or Automate mode, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in Read or Automate mode.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a file system
+
+[role="quick-margin-para"]
+
+You must create an FSx file system to begin managing your AWS FSx for ONTAP resources in Workload Factory. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system-fsx.html[create an FSx for ONTAP file system].
 
 == What's next
-You can now create volumes, manage your FSx for ONTAP file system, and set up data protection for your resources.
+With a file system in your Storage inventory, you can link:create-volume.html[create volumes^], manage your FSx for ONTAP file system, and set up data protection for your resources.
