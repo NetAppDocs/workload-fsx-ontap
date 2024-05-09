@@ -9,29 +9,39 @@ summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing custome
 :imagesdir: ./media/
 
 [.lead]
-Amazon FSx for NetApp ONTAP is a fully managed service allowing customers to launch and run file systems as the storage backend for your workloads within Workload Factory. 
+Amazon FSx for NetApp ONTAP is a fully managed, cloud-based data storage service that provides advanced data management capabilities and highly scalable performance. FSx for ONTAP allows you to create and manage file systems as the storage backend for all your workloads within Workload Factory. 
+
+FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
 
 FSx for ONTAP is the _Storage_ component in Workload Factory.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Refer to Amazon FSx for NetApp ONTAP documentation^]. 
 
 == Features
-FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
+FSx for ONTAP offers the following features:
 
-* No need to configure or manage storage devices, software, or backups.
-* Support for CIFS, iSCSI, NFSv3, NFSv4.x, and SMB v2.0 - v3.1.1 protocols.
-* Low cost, virtually unlimited data storage capacity using available Infrequently Accessed (IA) storage tier.
-* Certified to run on latency-sensitive applications including Oracle RAC.
-* Choice of bundled and pay-as-you-go pricing.
+* *Fully-managed service*: provides a fully-managed service with no operations, integrated with the Workload Factory console. 
+* *High availability*: provides high availability for each FSx for ONTAP file system, supporting single and multiple Availability Zones deployments. 
+* *Automated snapshots*: protects data with automated, efficient snapshots, which are near instantaneous, space efficient point-in-time read-only copies of the file system or volumes. 
+* *Volume replication*: provides disaster recovery with cross-region replication across Amazon Web Services. 
+* *Efficient backups*: provides an additional later of protection with a copy of the data in another region. This provides an extra layer of protection in case of emergencies. 
+* *Fast cloning*: accelerates application development with fast cloning
+* *Multi-protocol support*: supports CIFS, iSCSI, NFSv3, NFSv4.x, and SMB v2.0-v3.1.1 protocols. 
+* *High throughput*: delivers high throughput performance to ensure low latencies for workloads running on top of FSx for ONTAP file systems. 
+* *In-memory cache and NVMe cache*: incorporates a unique in-memory cache and NVMe cache, which further enhances the performance of frequently accessed data.  
+* *Hundreds of thousands of IOPS*: provides hundreds of thousands of IOPS with SSD disks, ensuring that your storage and workloads receive timely results.
+* *Thin Provisioning*: allows capacity provisioning in advance, saving costs until more capacity is needed.  
+* *Data deduplication and compression*: eliminates duplicate data blocks and compresses data blocks to reduce the amount of physical storage that is required for FSx for ONTAP file systems resulting in cost savings. 
+* *Data tiering*: allows storage cost reduction by moving less frequently accessed data from the primary, high performance SSD storage tier to the secondary capacity pool storage tier. 
 
 == Additional features in Workload Factory
 
-* Storage cost comparison calculator: Compares your AWS Elastic File System (EFS), Elastic Block Storage (EBS), and FSx for Windows File Server storage costs with AWS FSx for ONTAP. From the calculator, you can view how FSx storage configurations offer potential savings and plan your move to FSx storage.
-* Workload Factory user interface: Provides *Quick create* and *Advanced create* deployment mode options. Quick create includes AWS, NetApp, and industry standard best practices for your storage configurations.
-* Codebox: The Codebox is an Infrastructure as Code feature that gives developers code templates, such as for creating a file system, for use outside Workload Factory. 
+* *Storage cost comparison calculator*: Compares your AWS Elastic File System (EFS), Elastic Block Storage (EBS), and FSx for Windows File Server storage costs with AWS FSx for ONTAP. From the calculator, you can view how FSx storage configurations offer potential savings and plan your move to FSx storage.
+* *Workload Factory user interface*: Provides *Quick create* and *Advanced create* deployment mode options. Quick create includes AWS, NetApp, and industry standard best practices for your storage configurations.
+* *Codebox*: provides developers with a code viewer for FSx for ONTAP operations, code templates for copy and download, and an automation catalog for code re-use.
 
 == Tools to access
-The following tools access FSx for ONTAP:
+The following tools access FSx for ONTAP in Workload Factory:
 
 * User interface: 
 * Codebox: 
