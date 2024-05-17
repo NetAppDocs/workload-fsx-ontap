@@ -120,13 +120,13 @@ sidebar:
           entries:
             - title: Change the snapshot policy of a volume
               url: change-snapshot-policy.html
-            - title: Delete a snapshot
-              url: /delete-snapshot.html
-            #  - title: Pause a replication relationship
-            #    url: /pause-replication.html
-            #  - title: Resync a replication relationship
-            #    url: /resync-replication.html
-            #  - title: Break a replication relationship
+          #  - title: Delete a snapshot
+          #    url: /delete-snapshot.html
+         #  - title: Pause a replication relationship
+         #    url: /pause-replication.html
+         #  - title: Resync a replication relationship
+          #    url: /resync-replication.html
+          #  - title: Break a replication relationship
             #    url: /break-replication.html
             #  - title: Delete a replication relationship
             #    url: /delete-replication.html 

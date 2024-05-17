@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: clone-volume.html
+permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume
 summary: Split a clone FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume. 
 ---
