@@ -1,28 +1,29 @@
 ---
 sidebar: sidebar
 permalink: restore-volume-from-snapshot.html
-keywords: create
-summary: Create a snapshot policy for FSx for ONTAP volumes.
+keywords: restore volume, snapshot
+summary: Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
 ---
-= Create a snapshot policy for FSx for ONTAP volumes
+= Restore a volume from a snapshot
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Restore a volume from a snapshot. 
+Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
 
 == About this task
 This operation restores data from a snapshot to a new volume. 
 
 == Before you begin
-You can only restore a volume from a snapshot if you have an existing snapshot copy. 
+You can only restore a volume from a snapshot if you have an existing snapshot copy of the volume. 
+
+Make sure you have enough capacity to complete this operation. 
 
 .Steps
 . Go to the Workload Factory console. 
-. In *Storage*, select *Go to storage inventory*. 
-. In the *Volumes* tab, select the three dots menu for the volume to restore from a snapshot copy.
-. Select *Data protection actions* then *Create and restore from snapshots*. 
-. On the Snapshot create and restore page/screen (?) select *Restore from a snapshot*.
-. In the *Snapshot name* field, select the snapshot to restore from the dropdown. 
+. In *Storage*, select *Go to storage inventory*.  
+. In the *Volumes* tab, select the three dots menu for the volume to restore from a snapshot.
+. Select *Data protection actions*, *Snapshots*, then *Restore volume from a snapshot*. 
+. In the Restore volume from a snapshot dialog, in the *Snapshot name* field, select the snapshot to restore from in the dropdown.
 . In the *Restored volume name* field, enter a unique name for the volume to restore. 
-. Click *Apply*. 
+. Click *Restore*. 

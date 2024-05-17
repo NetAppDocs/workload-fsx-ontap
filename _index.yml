@@ -9,23 +9,19 @@ indexpage:
         - title: Learn about Amazon FSx for NetApp ONTAP
           url: /learn-fsx-ontap.html
         - title: Quick start
-          url: /quick-start-fsx.html
-    - title: Requirements
-      links:
-        - title: Set up permissions
-          url: /set-up-permissions-fsx.html
-        - title: Security group rules 
-          url: /security-groups-fsx.html
+          url: /quick-start.html
     - title: Use FSx for ONTAP
       links:
         - title: Create an FSx for ONTAP file system
           url: /create-fsx-file-system.html
+        - title: Create an FSx for ONTAP volume
+          url: /create-volume.html      
     - title: Knowledge and support
       links:
         - title: Register for support
-          url: /support-registration-fsx.html
+          url: /support-registration.html
         - title: Get help
-          url: /get-help-fsx.html
+          url: /get-help.html
     - title: Blogs & community
       links:
         - title: NetApp Community

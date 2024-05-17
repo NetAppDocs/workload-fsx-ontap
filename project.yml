@@ -46,28 +46,22 @@ sidebar:
                   url: /create-snapshot.html
                 - title: Create a snapshot policy
                   url: /create-snapshot-policy.html
-                - title: Modify a snapshot policy
-                  url: /modify-snapshot-policy.html
                 - title: Restore a volume from a snapshot
-                  url: /restore-volume-from-snapshot.html
-          #      - title: Create a new volume from a snapshot
-          #        url: /clone-volume.html
-          #      - title: Delete a snapshot
-          #        url: /delete-snapshot.html
-          #      - title: Disable automatic snapshots
-          #        url: /disable-automatic-snapshots.html 
-          #  - title: Manage backups to object storage
-          #    entries: 
-          #      - title: Create a backup
-          #        url: /create-backup.html
+                  url: /restore-volume-from-snapshot.html 
+                - title: Create a new volume from a snapshot
+                  url: /create-volume-from-snapshot.html
+            - title: Manage backups to object storage
+              entries: 
+                - title: Create a manual backup
+                  url: /create-backup.html
               #  - title: Set up a backup policy
               #    url: /set-backup-policy.html  
-           #     - title: Restore a volume from a backup
-           #       url: /restore-from-backup.html
-           # - title: Manage replication
-           #   entries:
-           #     - title: Create a replication relationship
-            #      url: /create-replication-relationship.html
+                - title: Restore a volume from a backup
+                  url: /restore-from-backup.html
+          #  - title: Manage replication
+          #    entries:
+          #      - title: Create a replication relationship
+          #        url: /create-replication.html
     - title: Administer and monitor
       entries:
         - title: Volume administration
@@ -80,8 +74,18 @@ sidebar:
               url: /increase-volume-capacity.html
             - title: Edit volume tags
               url: /edit-volume-tags.html
-            - title: Redistribute volume capacity
-              url: /redistribute-volume-capacity.html
+            - title: Rebalance a volume's capacity
+              url: /rebalance-volume.html
+            - title: Change the tiering policy
+              url: /change-tiering-policy.html   
+            - title: Change the NFS export policy
+              url: /change-nfs-export-policy.html  
+            - title: Change the CIFS share
+              url: /change-cifs-share.html
+            - title: Clone a volume
+              url: clone-volume.html  
+            - title: Split a cloned volume
+              url: split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
         - title: File system administration
@@ -112,10 +116,12 @@ sidebar:
               url: reset-svm-password.html
             - title: Delete a storage VM 
               url: /delete-svm.html
-#        - title: Data protection administration
-#          entries:
-            #  - title: Delete a snapshot
-            #    url: /delete-snapshot.html
+        - title: Data protection administration
+          entries:
+            - title: Change the snapshot policy of a volume
+              url: change-snapshot-policy.html
+            - title: Delete a snapshot
+              url: /delete-snapshot.html
             #  - title: Pause a replication relationship
             #    url: /pause-replication.html
             #  - title: Resync a replication relationship

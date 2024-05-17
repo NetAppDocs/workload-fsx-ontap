@@ -1,0 +1,43 @@
+---
+sidebar: sidebar
+permalink: change-nfs-export-policy.html
+keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy
+summary: Change the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types. 
+---
+= Change the tiering policy for a volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Change the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types. 
+
+== About this task
+Changing a volume's export policy involves adding export policy rules which detail client specifications, access control, super user access, and NFS version. You can add more than one export policy and prioritize them. 
+
+== Before you begin
+Determine the client specifications for the export policy rules. Valid values for the client specification are as follows: 
+
+* IP addresses
+* IP addresses with subnet masks
+* IP addresses with a network mask
+* A netgroup name preceded by the “@” character
+* A domain name preceded by a period “.”
+* Host names
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. Select the *Volumes* tab. 
+. Click the three dots menu for the volume to change the NFS export policy for. 
+. Select *Advanced actions*, then *Edit NFS export policy*. 
+. On the Edit NFS export policy page, provide the following: 
+.. *Access control*: Select *Custom export policy* or *Existing export policy*. 
++
+Alternatively, you can select *No access to the volume*. 
+.. *Export policy name*: Optionally, enter a name for the export policy.
+.. *Add export policy rule*: Provide the following details and rank the policies starting with #1 as the priority rule: 
+... *Client specification*: Separate multiple values with commas. 
+... *Access control*: Select *Read/Write*, *Read only*, or *No access* from the dropdown.
+... *Super user access*: Select *Yes* or *No*.
+... *NFS version*: Select *All*, *NFSv3*, or *NFSv4*. 
+. Click *Apply*. 

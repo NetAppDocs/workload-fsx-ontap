@@ -1,27 +1,26 @@
 ---
 sidebar: sidebar
 permalink: create-snapshot.html
-keywords: create
-summary: 
+keywords: create snapshot, snapshot 
+summary: Create a manual snapshot of an FSx for ONTAP volume. Snapshots are point-in-time versions of your volume's content.
 ---
-= Create a snapshot of an FSx for ONTAP volume
+= Create a manual snapshot of an FSx for ONTAP volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a snapshot of an FSx for ONTAP volume.
+Create a manual snapshot of an FSx for ONTAP volume. Snapshots are point-in-time versions of your volume's content.
 
-== About this task
+Snapshots are resources of volumes and are instant captures of your data that consume space only for modified data. Because data changes over time, snapshots usually consume more space as they get older. 
 
-== Before you begin
+FSx for ONTAP volumes use just-in-time copy-on-write so that any unmodified files in snapshots don't consume any of the volume's capacity.
+
+NOTE: Snapshots aren't copies of your data. If you want to make copies of your data, consider using the FSx for ONTAP backups or volume replication features. 
 
 .Steps
 . Go to the Workload Factory console. 
 . In *Storage*, select *Go to storage inventory*. 
 . In the *Volumes* tab, select the three dots menu for the volume to protect with scheduled snapshots. 
-. Select *Data protection actions* then *Create and restore from snapshots*. 
-. On the Snapshot create and restore page, select *Create a snapshot*.
-. In the *Snapshot name* field, enter a snapshot name. 
-. Click *Apply*. 
-
-Learn about managing your snapshots. 
+. Select *Data protection actions*, *Snapshots*, then *Create volume from a snapshot*. 
+. In the Create volume from a snapshot dialog, in the *Snapshot name* field, enter a snapshot name. 
+. Click *Create*. 

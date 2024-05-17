@@ -1,11 +1,32 @@
 ---
 sidebar: sidebar
 permalink: delete-volume.html
-keywords: 
-summary: 
+keywords: delete volume, volume deletion
+summary: Delete a volume in your FSx for ONTAP file system. 
 ---
 = Delete a volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
+Delete a volume in your FSx for ONTAP file system. 
+
+== About this task
+You can delete a volume in your FSx for ONTAP file system at any time.
+
+//Volumes with SnapLock cannot be deleted until the SnapLock retention period expires. 
+
+== Before you begin
+This operation is irreversible. 
+
+Consider the following before deleting a volume: 
+
+* *Local snapshots*: All snapshots associated with this FSx for ONTAP file system will be permanently deleted. 
+* *FSx for ONTAP Backup*: FSx for ONTAP backup copies will remain and you can still use them. 
+* *Replication relationships*: We recommend that you link:[delete any existing replication relationships] for this volume before deleting the volume so that no broken relationships remain. 
+
+.Steps
+. In the Volumes tab, select the three dots menu for the volume you wish to modify. 
+. Select *Basic actions* then *Delete volume*. 
+. In the Delete volume dialog, type “delete” to delete the volume. 
+. Click *Delete*. 

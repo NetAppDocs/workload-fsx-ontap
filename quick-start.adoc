@@ -41,7 +41,7 @@ If you operate in _Read_ or _Automate_ mode, you'll need to link:https://review.
 
 [role="quick-margin-para"]
 
-You must create an FSx file system to begin managing your AWS FSx for ONTAP resources in Workload Factory. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system-fsx.html[create an FSx for ONTAP file system].
+You must create an FSx file system to begin managing your AWS FSx for ONTAP resources in Workload Factory. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system.html[create an FSx for ONTAP file system].
 
 == What's next
 With a file system in your Storage inventory, you can link:create-volume.html[create volumes^], manage your FSx for ONTAP file system, and set up data protection for your resources.

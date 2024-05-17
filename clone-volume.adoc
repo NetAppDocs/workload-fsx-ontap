@@ -1,0 +1,25 @@
+---
+sidebar: sidebar
+permalink: clone-volume.html
+keywords: clone volume
+summary: Clone a volume to make a read-write volume of the original volume for testing. 
+---
+= Clone a volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Clone a volume to make a read-write volume of the original volume for testing. 
+
+The clone reflects the current, point-in-time state of the data. You can also use clones to give additional users access to data without giving them access to production data.
+
+NOTE: Volume cloning is only supported for FlexClone volumes. 
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. Select the *Volumes* tab. 
+. In the Volumes tab, select the three dots menu of the volume to clone. 
+. Select *Data protection actions*, then *Clone volume*. 
+. In the Clone volume dialog, enter a name for the volume clone. 
+. Click *Clone*. 
