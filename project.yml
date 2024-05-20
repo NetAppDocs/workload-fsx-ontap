@@ -58,10 +58,12 @@ sidebar:
               #    url: /set-backup-policy.html  
                 - title: Restore a volume from a backup
                   url: /restore-from-backup.html
-          #  - title: Manage replication
-          #    entries:
+            - title: Manage replication
+              entries:
           #      - title: Create a replication relationship
           #        url: /create-replication.html
+                - title: Initialize a replication relationship
+                  url: /initialize-replication.html
     - title: Administer and monitor
       entries:
         - title: Volume administration
@@ -120,16 +122,22 @@ sidebar:
           entries:
             - title: Change the snapshot policy of a volume
               url: change-snapshot-policy.html
+            - title: Enable snapshots for long-term retention
+              url: /enable-snapshots-long-term.html
           #  - title: Delete a snapshot
           #    url: /delete-snapshot.html
-         #  - title: Pause a replication relationship
-         #    url: /pause-replication.html
-         #  - title: Resync a replication relationship
-          #    url: /resync-replication.html
-          #  - title: Break a replication relationship
-            #    url: /break-replication.html
-            #  - title: Delete a replication relationship
-            #    url: /delete-replication.html 
+            - title: Reverse a replication relationship
+              url: /reverse-replication.html
+            - title: Change the replication schedule of a source volume
+              url: /change-replication-schedule.html
+            - title: Limit the max transfer rate of a replication relationship
+              url: /limit-transfer-rate.html
+            - title: Manual update of snapshot data in a replication relationship
+              url: /update-snapshot-replication.html
+            - title: Stop a replication relationship
+              url: /stop-replication.html
+            - title: Delete a replication relationship
+              url: /delete-replication.html 
         - title: Performance administration
           entries: 
             - title: Provision IOPS for a file system

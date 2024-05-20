@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: update-snapshot-replication.html
+keywords: update snapshot data, replication
+summary: Manually update snapshot data transferred between source and target volumes in a replication relationship at any time. 
+---
+= Update snapshot data in a replication relationship
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manually update snapshot data transferred between source and target volumes in a replication relationship at any time. 
+
+== About this task
+A replication relationship has a set replication schedule. You can manually update snapshot data transferred between source and target volumes at any time. 
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In Storage, select the *Replication relationships* tab. 
+. Click the three dots menu of the replication relationship to update. 
+. Select *Update*. 
+. In the Update dialog, click *Update*. 

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: stop-replication.html
+keywords: stop replication, break replication
+summary: Stop a replication relationship between source and target volumes. 
+---
+= Stop a replication relationship
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Stop a replication relationship between source and target volumes. 
+
+== About this task
+When you stop a replication, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.
+
+== Before you begin
+You can't stop a replication relationship when the status is ….? 
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In Storage, select the *Replication relationships* tab. 
+. Click the three dots menu of the replication relationship to stop. 
+. Select *Break*. 
+. In the Break replication dialog, select *Break*.
+
+The replication status of the volume changes to *Broken*. The target volume becomes writable.

@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: initialize-replication.html
+keywords: initialize replication, begin replication, start replication
+summary: Initialize a replication relationship between source and target volumes. 
+---
+= Initialize a replication relationship
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Initialize a replication relationship between source and target volumes. 
+
+== About this task
+Initialization performs a _baseline_ transfer: it makes a snapshot of the source volume, then transfers the snapshot and all the data blocks it references to the target volume. 
+
+== Before you begin
+Consider when you choose to complete this operation. Initialization can be time-consuming. You might want to run the baseline transfer in off-peak hours.
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In Storage, select the *Replication relationships* tab. 
+. Click the three dots menu of the replication relationship to initialize. 
+. Select *Initialize*. 
+. In the Initialize relationship dialog, click *Initialize*. 
