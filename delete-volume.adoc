@@ -26,7 +26,9 @@ Consider the following before deleting a volume:
 * *Replication relationships*: We recommend that you link:[delete any existing replication relationships] for this volume before deleting the volume so that no broken relationships remain. 
 
 .Steps
-. In the Volumes tab, select the three dots menu for the volume you wish to modify. 
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the Volumes tab, select the three dots menu of the volume to delete. 
 . Select *Basic actions* then *Delete volume*. 
 . In the Delete volume dialog, type “delete” to delete the volume. 
 . Click *Delete*. 
