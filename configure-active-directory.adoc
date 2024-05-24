@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: configure-active-directory.html
+keywords: configure AD, configure active directory, update ad, edit active directory
+summary: 
+---
+= Configure and update Active Directory for a storage VM
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Configure and update Active Directory for a storage VM in an FSx for ONTAP file system.
+
+== About this task
+The same steps apply for configuring and updating Active Directory for a storage VM. 
+
+.Steps
+. Go to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. Select the *Storage VMs* tab. 
+. Select the three dots menu of the storage VM to configure Active Directory for.
+. Select *Manage AD configuration*. 
+. On the Manage AD configuration page, provide the following: 
+.. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. The FQDN cannot exceed 255 characters. 
+.. *DNS IP addresses*: Enter up to 3 IP addresses separated by commas. 
++
+The IPv4 addresses of the DNS servers for your domain.
+.. *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. The NetBIOS name cannot exceed 15 characters. This is the name of this SVM in Active Directory.
+.. *User name*: Enter the user name of the service account in your existing Active Directory. 
++
+Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
+.. *Password*: Enter the password for the service account. 
+.. *Organization unit (OU)*: Enter the organization unit. 
++
+The OU is the distinguished path name of the organizational unit to which you want to join your file system.
+.. *Delegated administrators group*: Optionally, enter the delegated file system administrators group. 
++
+The deleted administrators group is the name of the group in your Active Directory that can administer your file system.
++
+If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
++
+If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
+
+. Click *Apply*. 
+

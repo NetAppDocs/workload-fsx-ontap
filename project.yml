@@ -64,6 +64,8 @@ sidebar:
           #        url: /create-replication.html
                 - title: Initialize a replication relationship
                   url: /initialize-replication.html
+            - title: Clone a volume
+              url: clone-volume.html       
     - title: Administer and monitor
       entries:
         - title: Volume administration
@@ -83,9 +85,7 @@ sidebar:
             - title: Change the NFS export policy
               url: /change-nfs-export-policy.html  
             - title: Change the CIFS share
-              url: /change-cifs-share.html
-            - title: Clone a volume
-              url: clone-volume.html  
+              url: /change-cifs-share.html 
             - title: Split a cloned volume
               url: split-cloned-volume.html    
             - title: Delete a volume
@@ -106,12 +106,8 @@ sidebar:
               url: /view-svm-details.html
             - title: Replicate a storage VM to another file system
               url: /replicate-svm-to-file-system.html
-            - title: Manage storage VM Active Directory configuration
-              entries: 
-                - title: Manage Active Directory configuration 
-                  url: /manage-ad-configuration.html
-                - title: Edit an existing Active Directory configuration
-                  url: /edit-ad-configuration.html
+            - title: Configure and update Active Directory for a storage VM
+              url: /configure-active-directory.html
             - title: Edit storage VM tags
               url: /edit-svm-tags.html
             - title: Reset storage VM password
