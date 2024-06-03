@@ -20,28 +20,32 @@ Follow these steps to get started.
 
 [role="quick-margin-para"]
 
-First, you'll need to log in and set up an account with Workload Factory. 
+Log in and set up an account with Workload Factory. 
 
 [role="quick-margin-para"]
-link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/sign-up-saas.html[Sign up to Workload Factory^].
+link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[Sign up to Workload Factory^].
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
 
 [role="quick-margin-para"]
 
-Choose between _Basic_, _Read_, and _Automate_ link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/operational-modes.html[operational modes^]. 
+Choose between _Basic_, _Read_, and _Automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^]. 
 
 [role="quick-margin-para"]
-If you choose to operate in _Basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy empty code templates. In the Workload Factory console, in the Storage tile, click *Create file system*. link:create-file-system.html[Learn how to create a file system]. You can also start with the storage savings calculator (provide link to task-based page to use the calculator and link to calculator reference). 
+If you choose to operate in _Basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy partially completed code samples. 
 
 [role="quick-margin-para"]
-If you operate in _Read_ or _Automate_ mode, you'll need to link:https://review.docs.netapp.com/us-en/workload-setup-admin_first-draft/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _Read_ or _Automate_ mode.
+If you operate in _Read_ or _Automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _Read_ or _Automate_ mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a file system
 
 [role="quick-margin-para"]
 
-You must create an FSx file system to begin managing your AWS FSx for ONTAP resources in Workload Factory. In the Storage tile, click *Create FSx for ONTAP*. Learn how to link:create-file-system.html[create an FSx for ONTAP file system].
+You'll create an FSx file system to begin managing your storage and FSx for ONTAP resources in Workload Factory. In the Workload Factory console, in the Storage tile, click *Create file system*. link:create-file-system.html[Learn how to create a file system]. 
+
+[role="quick-margin-para"]
+
+You can also start with the storage savings calculator (provide link to task-based page to use the calculator and link to calculator reference) to compare the costs of your AWS storage environments to that of FSx for ONTAP. 
 
 == What's next
 With a file system in your Storage inventory, you can link:create-volume.html[create volumes^], manage your FSx for ONTAP file system, and set up data protection for your resources.

@@ -15,12 +15,10 @@ FSx for ONTAP provides the same features, performance, and administrative capabi
 
 FSx for ONTAP is the _Storage_ component in Workload Factory.
 
-link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Refer to Amazon FSx for NetApp ONTAP documentation^]. 
-
 == Features
 FSx for ONTAP offers the following features:
 
-* *Fully-managed service*: provides a fully-managed service with no operations, integrated with the Workload Factory console. 
+* *Fully-managed service*: provides a fully-managed service integrated with the Workload Factory console. 
 * *High availability*: provides high availability for each FSx for ONTAP file system, supporting single and multiple Availability Zones deployments. 
 * *Automated snapshots*: protects data with automated, efficient snapshots, which are near instantaneous, space efficient point-in-time read-only copies of the file system or volumes. 
 * *Volume replication*: provides disaster recovery with cross-region replication across Amazon Web Services. 
@@ -36,7 +34,7 @@ FSx for ONTAP offers the following features:
 
 == Additional features in Workload Factory
 
-* *Storage cost comparison calculator*: Compares your AWS Elastic File System (EFS), Elastic Block Storage (EBS), and FSx for Windows File Server storage costs with AWS FSx for ONTAP. From the calculator, you can view how FSx storage configurations offer potential savings and plan your move to FSx storage.
+* *Storage cost comparison calculator*: Compares your AWS Elastic File System (EFS), Elastic Block Storage (EBS), and FSx for Windows File Server storage costs with AWS FSx for ONTAP. From the calculator, you can view how FSx for ONTAP storage configurations offer potential savings and plan your move to FSx for ONTAP storage.
 * *Workload Factory user interface*: Provides *Quick create* and *Advanced create* deployment mode options. Quick create includes AWS, NetApp, and industry standard best practices for your storage configurations.
 * *Codebox*: provides developers with a code viewer for FSx for ONTAP operations, code templates for copy and download, and an automation catalog for code re-use.
 
@@ -47,7 +45,7 @@ The following tools access FSx for ONTAP in Workload Factory:
 * Codebox: 
 
 == Cost
-
+Your FSx for ONTAP account is maintained by AWS and not by Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
 
 == Supported regions
 
@@ -56,4 +54,4 @@ https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services
 == Getting help
 Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.
 
-For general questions about Workload Factory or Workload Factory applications and services, you can start with ?.
+For general questions about Workload Factory or Workload Factory applications and services, refer to link:get-help.html[Get help for FSx for ONTAP for Workload Factory].
