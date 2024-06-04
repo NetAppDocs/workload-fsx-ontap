@@ -13,7 +13,7 @@ indexpage:
     - title: Use FSx for ONTAP
       links:
         - title: Create an FSx for ONTAP file system
-          url: /create-fsx-file-system.html
+          url: /create-file-system.html
         - title: Create an FSx for ONTAP volume
           url: /create-volume.html      
     - title: Knowledge and support

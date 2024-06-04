@@ -3,6 +3,7 @@ settings:
   platform: cloud
   internal:
     pdf_enabled: true
+    termcheck_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
