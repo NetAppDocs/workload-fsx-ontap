@@ -137,8 +137,8 @@ sidebar:
               url: /delete-replication.html 
         - title: Performance administration
           entries: 
-            - title: Provision IOPS for a file system
-              url: /provision-iops-file-system.html
+        #    - title: Provision IOPS for a file system
+        #      url: /provision-iops-file-system.html
             - title: Update throughput capacity for a file system
               url: /update-throughput-file-system.html  
     - title: Reference
