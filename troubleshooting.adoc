@@ -11,5 +11,5 @@ summary: Amazon FSx for NetApp ONTAP documentation hosts troubleshooting topics 
 [.lead]
 Amazon FSx for NetApp ONTAP documentation hosts troubleshooting topics for your reference. 
 
-Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/troubleshooting.html[“Troubleshooting Amazon FSx for NetApp ONTAP” documentation^] for more information. 
+Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/troubleshooting.html[“Troubleshooting Amazon FSx for NetApp ONTAP”^] for more information. 
 

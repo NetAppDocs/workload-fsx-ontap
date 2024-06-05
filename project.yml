@@ -29,6 +29,8 @@ sidebar:
           url: /create-file-system.html
     - title: Use Amazon FSx for NetApp ONTAP
       entries:
+        - title: Explore savings
+          url: explore-savings.html
         - title: Manage volumes
           entries:
             - title: Create a volume

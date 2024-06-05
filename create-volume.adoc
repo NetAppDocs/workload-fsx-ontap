@@ -36,9 +36,11 @@ Review the following prerequisites before you create a volume:
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
 .. *Storage VM name*: Optionally, enter a storage VM name. 
-.. *Volume style*: Select FlexVol or FlexGroup volume. 
+.. *Volume style*: Select *FlexVol* or *FlexGroup* volume. 
 +
 FlexVol volume style is selected by default. If needed after volume creation, you can rebalance volume capacity but only for FlexGroup volumes. FlexGroup rebalancing helps redistribute capacity when imbalances develop over time due to the addition of new files and file growth. 
++
+FlexGroup volume size depends on the number of constituents. 100 GiB is required per constituent. 
 .. *Volume size*: Enter the volume size and unit. 
 .. *Tags*: Optionally, you can add up to 50 tags.
 . Under Efficiency and protection, provide the following details: 
@@ -50,5 +52,6 @@ A thin-provisioned volume is one for which storage is allocated as it is needed.
 +
 Auto is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[“Volume storage capacity” in AWS FSx for NetApp ONTAP documentation^]. 
 . Under Advance configuration, provide the following: 
-.. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. 
+.. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted.
+.. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 
 . Click *Create*. 

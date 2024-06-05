@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: explore-savings.html
+keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP
+summary: Explore savings for your storage workloads in AWS Elastic Block Store (EBS) storage, Elastic File Storage (EFS), and FSx for Windows File Servers against AWS FSx for NetApp ONTAP. 
+---
+= Explore savings in FSx for ONTAP 
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Explore savings for your storage workloads which use AWS Elastic Block Store (EBS), Elastic File Storage (EFS), and FSx for Windows File Server storage. 
+
+== About this task
+Workload Factory provides a storage calculator so you can compare the costs of storage on FSx for ONTAP file systems against Elastic Block Store (EBS) storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for you.
+
+When you click the Explore savings button and follow the wizard, the storage calculator displays whether the storage for the workloads on these storage systems would cost less if you used an FSx for ONTAP file system.
+
+You can also select specific volumes from this page and then click Explore savings to compare only those selected volumes.
+
+If Workload Factory determines that you could save money by running these workloads on an FSx for ONTAP file system, you can deploy the file system from the calculator directly from Workload Factory. In some cases, Workload Factory may recommend that you deploy multiple file systems based on the amount of storage you are currently using, and based on the performance characteristics of your workloads.
+
+== Before you begin
+Complete the following prerequisite before you begin: 
+
+* Make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html#grant-permissions[grant _Read_ permissions^] in your AWS account to detect AWS Elastic Block Store (EBS), Elastic File Storage (EFS), and FSx for Windows File Server storage environments. 
+
+.Steps
+Need to verify in the stage environment.
