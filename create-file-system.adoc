@@ -14,7 +14,7 @@ Using Workload Factory you can create an FSx for ONTAP file system to add and ma
 == Before you begin
 Before creating your FSx for ONTAP file system, you will need:
 
-* The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. For details, refer to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[Workload Factory Setup and administration guide to learn how to grant permissions to an account^].
+* The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[Learn how to grant permissions to an account^].
 
 * The region and VPC information for where you will create the FSx for ONTAP instance.
 
