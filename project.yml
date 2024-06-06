@@ -63,8 +63,8 @@ sidebar:
                   url: /restore-from-backup.html
             - title: Manage replication
               entries:
-          #      - title: Create a replication relationship
-          #        url: /create-replication.html
+                - title: Create a replication relationship
+                  url: /create-replication.html
                 - title: Initialize a replication relationship
                   url: /initialize-replication.html
             - title: Clone a volume

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
-permalink: explore-savings.html
-keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP
-summary: Explore savings for your storage workloads in AWS Elastic Block Store (EBS) storage, Elastic File Storage (EFS), and FSx for Windows File Servers against AWS FSx for NetApp ONTAP. 
+permalink: create-replication.html
+keywords: replication, replicate
+summary: Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster.
 ---
 = Create a replication relationship
 :icons: font
