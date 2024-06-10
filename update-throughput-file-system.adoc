@@ -4,8 +4,27 @@ permalink: update-throughput-file-system.html
 keywords: 
 summary: 
 ---
-= Update the throughput capacity for a file system
+= Update throughput capacity for a file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
+Update throughput capacity for an FSx for ONTAP file system as needed. 
+
+== About this task
+For a scale up file system, throughput capacity can be increased up to 4 GB/s. 
+
+NOTE: The following regions don't support throughput capacity of 4 GB/s: 
+
+For a scale out file system, throughput capacity per HA pair can be increased up to 6 GB/s. 
+
+== Before you begin
+
+.Steps
+. Log in to the the Workload Factory console. 
+. In Storage, click *Go to Storage inventory*. 
+. In the Storage inventory, click the three dots menu of the file system to increase capacity for. 
+. Select *Manage*. 
+. Under Information, click the pencil icon next to *Throughput capacity*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Throughput capacity* row. 
+. In the Throughput capacity dialog, select the throughput capacity you need. 
+. Click *Apply*. 

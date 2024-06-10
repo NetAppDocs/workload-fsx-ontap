@@ -9,3 +9,26 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+Manually increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify. 
+
+Alternatively, you can the link:enable-auto-capacity-management.html[enable automatic capacity management feature^] so Workload Factory manages file system capacity for you. 
+
+== About this task
+Increasing file system capacity impacts IOPS for your FSx for ONTAP file system. 
+
+When you automatically provision IOPS for a file system, IOPS increases by 3 IOPS with every 1 GiB increase in SSD capacity. For example, if you provision 100 TiB (102,400 GiB) of SSD capacity, IOPS will increase by 307,200. 
+
+When you provision IOPS manually, you may need to increase your IOPS allocation to support the increased file system capacity. 
+
+== Before you begin
+To increase capacity for a file system, you must first disable automatic capacity management. 
+
+.Steps
+. Log in to the the Workload Factory console. 
+. In Storage, click *Go to Storage inventory*. 
+. In the Storage inventory, click the three dots menu of the file system to increase capacity for. 
+. Select *Manage*. 
+. Under Information, click the pencil icon next to *Capacity distribution*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Capacity distribution* row. 
+. In the SSD storage size dialog, enter a number in *Provisioned capacity*. 
+. Select the unit for the provisioned capacity.
+. Click *Apply*. 
