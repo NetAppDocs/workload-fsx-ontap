@@ -14,7 +14,7 @@ View volume details, distribution, consumption, access, and protection.
 Volume details appear only after a volume has been created in a file system.
 
 .Steps
-. Go to the Workload Factory console. 
+. Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 
 . In the Volumes tab, select the three dots menu for the volume you wish to modify. 
 . Select *Basic actions* then *View volume details*. 

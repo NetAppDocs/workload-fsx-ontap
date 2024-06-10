@@ -12,7 +12,7 @@ summary: Restore a volume from a backup to any FSx for ONTAP file system in your
 Restore a volume from a backup to any FSx for ONTAP file system in your AWS account.
 
 .Steps
-. Go to the Workload Factory console. 
+. Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 
 . Select the *Volumes* tab. 
 . Click the three dots menu for the volume to restore from a backup. 

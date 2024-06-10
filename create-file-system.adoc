@@ -36,7 +36,7 @@ You can create an FSx for ONTAP file system using _Quick create_ or _Advanced cr
 Quick create enables you to use a recommended best-practice configuration. You can change most configuration options after you create an FSx for ONTAP file system. 
 
 .Steps
-. Go to the Workload Factory console.
+. Log in to the Workload Factory console.
 . In Storage, click *Create FSx for ONTAP*.  
 . On the Create FSx for ONTAP page, select *Quick create*. 
 +
