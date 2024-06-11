@@ -1,6 +1,6 @@
 indexpage:
-  title: Workload Factory for Amazon FSx for NetApp ONTAP documentation
-  lead: Workload Factory for Amazon FSx for NetApp ONTAP brings the full capabilities of ONTAP to a native AWS managed service delivering a consistent hybrid cloud experience. This documentation describes how to manage FSx for ONTAP by using NetApp Workload Factory.
+  title: Amazon FSx for NetApp ONTAP documentation
+  lead: Amazon FSx for NetApp ONTAP brings the full capabilities of ONTAP to a native AWS managed service delivering a consistent hybrid cloud experience. This documentation describes how to manage FSx for ONTAP by using NetApp Workload Factory.
   tiles: 
     - title: Get started
       links:
