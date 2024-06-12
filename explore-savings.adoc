@@ -45,6 +45,7 @@ Follow the steps under the tab for your storage selection.
 .. *Amount changed per snapshot (GiB)*: For snapshot storage only. Enter the amount changed per snapshot in GiB. 
 .. *Provisioned IOPS per volume*: For gp3, io1, and io2 volumes. Enter the provisioned IOPS per volume. 
 .. *Throughput (MiB/s)*: For gp3 volumes only. Enter throughput in MiB/s per volume. 
+--
 
 .Amazon FSx for Windows File Server
 --
@@ -76,7 +77,6 @@ Follow the steps under the tab for your storage selection.
 .. *Data frequently accessed (%)*: Enter the percentage of data that is frequently accessed.
 .. *Throughput mode*: Select *Provisioned throughput* or *Elastic throughput*. 
 .. *Throughput (MiB/s)*: Enter the throughput in MiB/s.  
-
 --
 
 ====
