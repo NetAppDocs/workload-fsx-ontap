@@ -26,7 +26,7 @@ The following protocols may be used for your volumes:
 Review the following prerequisites before you create a volume: 
 
 * You must have an FSx for ONTAP file system in Workload Factory. 
-* (Anything else?)
+* To configure access to the volume, you must associate a link. To associate a link in the file system, click *Associate link* under *Account name*. Then return to this operation. 
 
 .Steps
 . Log in to the Workload Factory console.
@@ -42,7 +42,32 @@ FlexVol volume style is selected by default. If needed after volume creation, yo
 +
 FlexGroup volume size depends on the number of constituents. 100 GiB is required per constituent. 
 .. *Volume size*: Enter the volume size and unit. 
++
+Optionally, enable volume autogrow. This option is available when you select *File access* as the volume access type. 
 .. *Tags*: Optionally, you can add up to 50 tags.
+. Under Access (only for file systems with associated links), provide the following details: 
+.. *Access type*: Select *File access* or *Block access*. Additional fields to configure volume access differ depending on your selection. 
+* *File access*: allows multiple authorized users and devices access to the volume using SMB/CIFS, NFS, or dual (SMB/NFS) protocols. 
++
+Complete the following fields to set up file access to the volume.
++ 
+... *NFS export policy*: Provide the following details to provide NFS access: 
+.... *Access control*: Select a *Custom export policy*, *Existing export policy*, or *No access to the volume* from the dropdown menu.
+.... *Export policy name*: 
+..... If you selected a custom export policy, select an existing policy name from the dropdown men.
+..... If you selected an existing export policy, enter a new policy name. 
+.... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
+... *CIFS share*: Enter the CIFS share name to provide SMB access. 
++
+* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol.
++
+Complete the following fields to set up block access to the volume.
++
+... *iSCSI configuration*: Provide the following details to configure iSCSI for block access to the volume. 
+.... Select *Create a new initiator group* or *Map an existing initiator group*. 
+.... Select the *Host operating system* from the dropdown menu. 
+.... Enter an *Initiator group name* for a new initiator group. 
+.... Under Host Initiators, add one or more iSCSI qualified name (IQN) host initiators.  
 . Under Efficiency and protection, provide the following details: 
 .. *Storage efficiency*: Disable or enable storage efficiency. 
 +
