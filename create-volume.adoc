@@ -18,15 +18,20 @@ FSx for ONTAP volumes are virtual resources used for grouping data, determining 
 
 The following protocols may be used for your volumes:
 
-* CIFS
-* NFS
-* iSCSI 
+* CIFS: file storage protocol for Windows operating systems
+* NFS: file storage protocol for Unix operating systems
+* iSCSI: block storage protocol 
 
 == Before you begin
 Review the following prerequisites before you create a volume: 
 
 * You must have an FSx for ONTAP file system in Workload Factory. 
-* To configure access to the volume, you must associate a link. To associate a link in the file system, click *Associate link* under *Account name*. Then return to this operation. 
+* You must have a storage VM. 
+
+For protocol access, complete the following: 
+
+. To configure access to the volume, you must associate a link. To associate a link in the file system, click *Associate link* under *Account name*. Once the link associates, return to this operation. 
+. You must configure access for the protocol you select, either CIFS, NFS, or iSCSI. 
 
 .Steps
 . Log in to the Workload Factory console.
@@ -38,7 +43,9 @@ Review the following prerequisites before you create a volume:
 .. *Storage VM name*: Optionally, enter a storage VM name. 
 .. *Volume style*: Select *FlexVol* or *FlexGroup* volume. 
 +
-FlexVol volume style is selected by default. If needed after volume creation, you can rebalance volume capacity but only for FlexGroup volumes. FlexGroup rebalancing helps redistribute capacity when imbalances develop over time due to the addition of new files and file growth. 
+FlexVol volume style is selected by default. 
++
+After volume creation, you can rebalance volume capacity but only for FlexGroup volumes. FlexGroup rebalancing helps redistribute capacity when imbalances develop over time due to the addition of new files and file growth. 
 +
 FlexGroup volume size depends on the number of constituents. 100 GiB is required per constituent. 
 .. *Volume size*: Enter the volume size and unit. 
@@ -71,12 +78,28 @@ Complete the following fields to set up block access to the volume.
 . Under Efficiency and protection, provide the following details: 
 .. *Storage efficiency*: Disable or enable storage efficiency. 
 +
-A thin-provisioned volume is one for which storage is allocated as it is needed. Free space is released back to the storage system when data in the volume is deleted.
-.. *Snapshot policy*: Select the snapshot policy permissions to specify the frequency of snapshots.  
+Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
+.. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
++
+The following are default policies from AWS. For custom snapshot policies, you need to associate a link. 
++
+`default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
++
+* A maximum of six hourly snapshots taken five minutes past the hour.
+* A maximum of two daily snapshots taken Monday through Saturday at 10 minutes after midnight.
+* A maximum of two weekly snapshots taken every Sunday at 15 minutes after midnight.
++
+NOTE: Snapshot times are based on the file system's time zone, which defaults to Coordinated Universal Time (UTC). For information about changing the time zone, refer to link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html[Displaying and setting the system time zone^] in the NetApp Support documentation.
++
+
+`default-1weekly`::: This policy works in the same way as the `default` policy, except that it only retains one snapshot from the weekly schedule.
++
+`none`::: This policy doesn't take any snapshots. You can assign this policy to volumes to prevent automatic snapshots from being taken.
+
 .. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
 +
 Auto is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[“Volume storage capacity” in AWS FSx for NetApp ONTAP documentation^]. 
 . Under Advance configuration, provide the following: 
-.. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted.
+.. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
 .. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 
 . Click *Create*. 
