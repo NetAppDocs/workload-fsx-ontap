@@ -9,7 +9,7 @@ summary: You can get started with FSx for ONTAP in just a few steps.
 :imagesdir: ./media/
 
 [.lead]
-With Workload Factory for Amazon FSx for NetApp ONTAP, you can get started immediately in Basic mode. 
+With Workload Factory for Amazon FSx for NetApp ONTAP, you can get started immediately in _basic_ mode. 
 
 If you'd like to use Workload Factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account to get started. 
 
@@ -29,13 +29,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[Sign u
 
 [role="quick-margin-para"]
 
-Choose between _Basic_, _Read_, and _Automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^]. 
+Choose between _basic_ and _automate_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^]. 
+//add _read_ mode above when it is supported
+[role="quick-margin-para"]
+If you choose to operate in _basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy partially completed code samples. 
 
 [role="quick-margin-para"]
-If you choose to operate in _Basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy partially completed code samples. 
-
-[role="quick-margin-para"]
-If you operate in _Read_ or _Automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _Read_ or _Automate_ mode.
+If you operate in _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _automate_ mode.
+//add _read_ mode above when it is supported
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a file system
 
