@@ -11,4 +11,40 @@ summary: Known limitations identify platforms, devices, or functions that are no
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
+== Operational modes
+_Read_ mode isn't currently available. 
+
+== Links
+A link is required to complete some operations like replication and to view some infographics in the Workload Factory user interface. 
+
+== Storage efficiency
+Storage efficiency cannot be disabled or enabled after volume creation. 
+
+== Capacity management
+* The volume autogrow feature isn't currently supported for the iSCSI protocol. 
+* When automatic capacity management is enabled, manual capacity increase isn't allowed. 
+* Disabling automatic capacity management is only possible with the same permissions used to enable it. 
+
+== Storage VMs
+The number of storage VMs is limited per SKU. Creating storage VMs beyond the limitation isn't supported in Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[“Managing FSx for ONTAP storage virtual machines”^] for the maximum number of SVMs per file system. 
+
+== iSCSI protocol support
+* The iSCSI protocol is only supported for scale-out deployments.
+* The iSCSI protocol is only available for FlexGroup volumes. 
+* Only a single LUN can be configured per volume. 
+
+== Region support
+Canada West (Calgary) region isn't currently supported in Workload Factory. 
+
+== Data protection
+* Snapshots cannot be deleted. 
+* Only replication between FSx for ONTAP file systems is supported. 
+
+== Storage savings calculator
+The Storage savings calculator doesn't calculate cost savings for the following configurations: 
+
+* FSx for Windows File Server: HDD storage type
+* Elastic Block Store (EBS): st1, sc1, and standard volume types
+* Elastic File Store (EFS): Bursting throughput mode
+
 

@@ -26,7 +26,7 @@ You create links from the FSx for ONTAP file system pages in Workload Factory. l
 
 There is a charge to your AWS account for each transaction that Lambda performs. Since Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to Workload Factory.
 
-https://aws.amazon.com/lambda/pricing/[Learn more about the costs related to using AWS Lambda^]
+link:https://aws.amazon.com/lambda/pricing/[Learn more about the costs related to using AWS Lambda^]
 
 == When a link is required
 

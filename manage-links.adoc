@@ -12,9 +12,9 @@ summary: You can create and manage links to provide a trust relationship and con
 [.lead]
 You can create and manage links to provide a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
 
-See link:connectivity-links.html[Connectivity links] for details about when a link is and is not needed.
-
 Links leverage AWS Lambda to execute code in response to events and automatically manage the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
+
+link:links-overview.html[Learn more about links].
 
 == View the links associated with your account
 
@@ -153,4 +153,4 @@ image:screenshot-remove-link.png[A screenshot showing how to remove a link from 
 
 . If you are sure, select *Remove* again.
 
-See the AWS documentation to https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function[delete the Lambda function].
+See the AWS documentation to link:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function[delete the Lambda function].
