@@ -30,7 +30,13 @@ sidebar:
     - title: Use Amazon FSx for NetApp ONTAP
       entries:
         - title: Explore savings
-          url: explore-savings.html
+          url: /explore-savings.html
+        - title: Use links
+          entries: 
+            - title: Links overview
+              url: links-overview.html
+            - title: Manage links
+              url: /manage-links.html    
         - title: Manage volumes
           entries:
             - title: Create a volume
@@ -161,5 +167,5 @@ sidebar:
       url: /legal-notices.html
 
 product-family:
-  name: Workload Factory
+  name: BlueXP Workload Factory for AWS
   repo: workload-family
