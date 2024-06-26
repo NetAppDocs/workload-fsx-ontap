@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-file-system.html
 keywords: create, FSx file system, ONTAP file system, Workload Factory, storage
-summary: 
+summary: Using Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 ---
 = Create an FSx for ONTAP file system
 :icons: font
@@ -14,16 +14,9 @@ Using Workload Factory you can create an FSx for ONTAP file system to add and ma
 == Before you begin
 Before creating your FSx for ONTAP file system, you will need:
 
-* The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[Learn how to grant permissions to an account^].
+* The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an account^].
 
 * The region and VPC information for where you will create the FSx for ONTAP instance.
-
-== Options for creating an FSx for ONTAP file system
-When creating an FSX for ONTAP file system, you have two options depending on the level of permission into your AWS environment that you want to give Workload Factory.
-
-Option 1:: This option allows Workload Factory to create the FSx for ONTAP file system for you. You'll need AWS credentials if you select this option. Refer to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[Credentials]. 
-
-Option 2:: Workload Factory generates a CloudFormation stack for development from AWS. Minimum permissions are required. Refer to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[Permissions]. 
 
 == Create an FSx for ONTAP file system
 You can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. 
@@ -42,7 +35,7 @@ Quick create enables you to use a recommended best-practice configuration. You c
 +
 You can also load a saved configuration.
 . Under File system general configuration, provide the following: 
-.. *AWS credentials*: Select AWS credentials. To add new credentials, go to the link:https://console.workloads.netapp.com/credentials[Credentials page^]. 
+.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Deployment topology*: Select a deployment topology. 
 +
@@ -54,9 +47,7 @@ You can also load a saved configuration.
 * For scale-out deployments, you can have between two and six HA pairs.
 .. *Deployment type*: Select a deployment type.
 +
-* *Single Availability Zone (Single-AZ) deployment*: ensures availability and durability as follows: 
-** To ensure high availability, Amazon FSx continuously monitors for hardware failures, and automatically replaces infrastructure components in the event of a failure. 
-** To achieve high durability, Amazon FSx automatically replicates your data within an Availability Zone to protect it from component failure.
+* *Single Availability Zone (Single-AZ) deployment*: ensures availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
 +
 * *Multiple Availability Zones (Multi-AZ) deployment*: provides continuous availability to data even when an Availability Zone is unavailable. Multi-AZ file systems support all the availability and durability features of Single-AZ file systems. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
 .. *Tags*: Optionally, you can add up to 50 tags. 
@@ -65,6 +56,14 @@ You can also load a saved configuration.
 . Under *File system details*, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
 .. *ONTAP credentials*: Enter your ONTAP user name and password.  
+.. *SMB/CIFS setup*: Provide the following details. 
+... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
+... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
+... *SMB server NetBIOS name*: Enter the NetBIOS name of the Active Directory computer object.
+... *User name*: Enter the user name for the Active Directory domain. 
+... *Password*: Enter the password for the Active Directory domain. 
+... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. 
+... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
 . Open the *Summary* to review the configuration that you defined. You can correct anything at this point. 
 . Save or create the file system. 
 
@@ -82,7 +81,7 @@ With Advanced create, you set all of the configuration options, including availa
 +
 You can also load a saved configuration.
 . Under File system general configuration, provide the following: 
-.. *AWS credentials*: Select AWS credentials. To add new credentials, go to the link:https://console.workloads.netapp.com/credentials[Credentials page^]. 
+.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Deployment topology*: Select a deployment topology. 
 +
@@ -94,9 +93,7 @@ You can also load a saved configuration.
 * For scale-out deployments, you can have between two and six HA pairs.
 .. *Deployment type*: Select a deployment type.
 +
-* *Single Availability Zone (Single-AZ) deployment*: ensures availability and durability as follows: 
-** To ensure high availability, Amazon FSx continuously monitors for hardware failures, and automatically replaces infrastructure components in the event of a failure. 
-** To achieve high durability, Amazon FSx automatically replicates your data within an Availability Zone to protect it from component failure.
+* *Single Availability Zone (Single-AZ) deployment*: ensures availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
 +
 * *Multiple Availability Zones (Multi-AZ) deployment*: provides continuous availability to data even when an Availability Zone is unavailable. Multi-AZ file systems support all the availability and durability features of Single-AZ file systems. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
 .. *Tags*: Optionally, you can add up to 50 tags. 
@@ -116,9 +113,17 @@ You can also load a saved configuration.
 .. *Throughput capacity per HA pair*: Select throughput capacity per HA pair. 
 .. *ONTAP credentials*: Enter your ONTAP user name and password.  . 
 .. *Storage VM Credentials*: Enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
+.. *SMB/CIFS setup*: Provide the following details. 
+... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
+... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
+... *SMB server NetBIOS name*: Enter the NetBIOS name of the Active Directory computer object.
+... *User name*: Enter the user name for the Active Directory domain. 
+... *Password*: Enter the password for the Active Directory domain. 
+... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. 
+... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
 . Under Backup and maintenance, provide the following: 
-.. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. 
-... *Automatic backup retention period*:  Enter the number of days to retain automatic backups. 
+.. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. Disable if desired. 
+... *Automatic backup retention period*: Enter the number of days to retain automatic backups. 
 ... *Daily automatic backup window*: Select either *No preference* (a daily backup start time will be selected for you) or *Select start time for daily backups* and specify a start time. 
 ... *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time will be selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  
 . Save or create the file system. 
