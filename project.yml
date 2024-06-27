@@ -33,8 +33,10 @@ sidebar:
           url: /explore-savings.html
         - title: Use links
           entries: 
-            - title: Links overview
-              url: links-overview.html
+            - title: Link overview
+              url: link-overview.html
+            - title: Create a link
+              url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
         - title: Manage volumes
@@ -127,7 +129,9 @@ sidebar:
           entries:
             - title: Change the snapshot policy of a volume
               url: change-snapshot-policy.html
-            - title: Enable snapshots for long-term retention
+            - title: Update FSx for ONTAP backup schedule
+              url: /update-backup-schedule.html
+            - title: Enable and edit snapshots for long-term retention
               url: /enable-snapshots-long-term.html
           #  - title: Delete a snapshot
           #    url: /delete-snapshot.html

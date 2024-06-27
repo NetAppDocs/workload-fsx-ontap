@@ -128,7 +128,7 @@ You can also load a saved configuration.
 .. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. Disable if desired. 
 ... *Automatic backup retention period*: Enter the number of days to retain automatic backups. 
 ... *Daily automatic backup window*: Select either *No preference* (a daily backup start time will be selected for you) or *Select start time for daily backups* and specify a start time. 
-... *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time will be selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  
+... *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time is selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  
 . Save or create the file system. 
 
 You can now view the FSx for ONTAP file system that you created in the *Inventory* page.

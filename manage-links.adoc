@@ -14,7 +14,7 @@ You can create and manage links to provide a trust relationship and connectivity
 
 Links leverage AWS Lambda to execute code in response to events and automatically manage the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
 
-link:links-overview.html[Learn more about links].
+link:link-overview.html[Learn more about links].
 
 == View the links associated with your account
 

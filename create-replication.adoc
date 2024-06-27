@@ -48,6 +48,7 @@ Without a limit, network and application performance may decline. Alternatively,
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
++
 ... For *Choose an existing policy*, select an existing policy from the dropdown menu. 
 ... For *Create a new policy*, provide the following: 
 ... *Policy name*: Enter a policy name. 
@@ -76,6 +77,7 @@ Without a limit, network and application performance may decline. Alternatively,
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
++
 ... For *Choose an existing policy*, select an existing policy from the dropdown menu. 
 ... For *Create a new policy*, provide the following: 
 ... *Policy name*: Enter a policy name. 

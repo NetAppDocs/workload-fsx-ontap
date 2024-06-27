@@ -15,3 +15,4 @@ include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/commo
 include::https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[]
 
 // Add required link(s)
+include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/notice-files.adoc[]
