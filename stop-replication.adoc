@@ -12,10 +12,7 @@ summary: Stop a replication relationship between source and target volumes.
 Stop a replication relationship between source and target volumes. 
 
 == About this task
-When you stop a replication, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.
-
-== Before you begin
-You can't stop a replication relationship when the status is ….? 
+When you stop a replication, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. 
 
 .Steps
 . Log in to the Workload Factory console. 

@@ -4,7 +4,7 @@ permalink: enable-snapshots-long-term.html
 keywords: snapshot long-term retention, enable long-term retention
 summary: Change the replication schedule of the source volume in a replication relationship. 
 ---
-= Enable snapshots for long-term retention
+= Enable and edit snapshots for long-term retention
 :icons: font
 :imagesdir: ./media/
 
@@ -12,6 +12,8 @@ summary: Change the replication schedule of the source volume in a replication r
 Enable snapshots for long-term retention lets you replicate specific snapshots for long-term disaster recovery. 
 
 Long-term retention enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. 
+
+The same steps apply for enabling and editing snapshots for long-term retention.
 
 .Steps
 . Log in to the Workload Factory console. 

@@ -16,6 +16,9 @@ Limiting the max transfer rate is optional but recommended. Without a limit, net
 
 Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 
+== Before you begin
+Consider how much bandwidth to allocate for replication.
+
 .Steps
 . Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 

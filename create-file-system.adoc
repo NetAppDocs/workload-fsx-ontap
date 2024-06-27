@@ -11,6 +11,9 @@ summary: Using Workload Factory you can create an FSx for ONTAP file system to a
 [.lead]
 Using Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 
+== About this task
+A storage VM is created when you create a file system. 
+
 == Before you begin
 Before creating your FSx for ONTAP file system, you will need:
 
@@ -56,7 +59,7 @@ You can also load a saved configuration.
 . Under *File system details*, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
 .. *ONTAP credentials*: Enter your ONTAP user name and password.  
-.. *SMB/CIFS setup*: Provide the following details. 
+.. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
 ... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
 ... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
 ... *SMB server NetBIOS name*: Enter the NetBIOS name of the Active Directory computer object.
@@ -113,7 +116,7 @@ You can also load a saved configuration.
 .. *Throughput capacity per HA pair*: Select throughput capacity per HA pair. 
 .. *ONTAP credentials*: Enter your ONTAP user name and password.  . 
 .. *Storage VM Credentials*: Enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
-.. *SMB/CIFS setup*: Provide the following details. 
+.. *SMB/CIFS setup*: Provide the following details . 
 ... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
 ... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
 ... *SMB server NetBIOS name*: Enter the NetBIOS name of the Active Directory computer object.
