@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: update-throughput-file-system.html
-keywords: 
-summary: 
+keywords: update throughput, change throughput, throughput capacity
+summary: Update throughput capacity for an FSx for ONTAP file system as needed. 
 ---
 = Update throughput capacity for a file system
 :icons: font
