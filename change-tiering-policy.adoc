@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: change-tiering-policy.html
 keywords: 
-summary: 
+summary: Change the tiering policy to re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier.
 ---
 = Change the tiering policy of a volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Change the tiering policy to automatically re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier. The tiering policy is defined per volume. 
+Change the tiering policy to automatically re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier. 
 
 == About this task
 You can change the tiering policy of a volume at any time. The tiering policy is defined per volume. 
@@ -21,6 +21,8 @@ FSx for ONTAP has two tiers for storing volume data:
 * *SSD storage tier*: This primary storage tier is for the data you access most frequently, also known as _hot_ data. Storing data in the primary storage tier is more expensive than in the secondary storage tier. 
 * *Capacity pool storage tier*: This secondary storage tier is for archived data or infrequently accessed data, also known as _cold_ data. 
 
+Refer to the AWS documentation link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Managing storage capacity"^] for more information about FSx for ONTAP storage tiers.
+
 == Before you begin
 Review the four available tiering policies before you change the tiering policy.
 
@@ -29,11 +31,14 @@ Review the four available tiering policies before you change the tiering policy.
 * *None*: Keeps all your volume's data on the primary storage tier. 
 * *All*: Marks all user data and snapshot data as cold and stores it in the capacity pool storage tier. 
 
+Note that _cooling days_ for a volume set the threshold that's used to determine which data is warm and which data is cold.
+
 .Steps
 . Log in to the Workload Factory console. 
-. In Storage, select *Go to storage inventory*. 
-. Select the *Volumes* tab. 
-. In the Volumes tab, click the three dots menu of the volume to change the tiering policy for. 
+. In Storage, select *Go to storage inventory*.
+. In the *FSx for ONTAP* tab, select the three dots menu of the file system with the volume to update and then select *Manage*.
+. From the file system overview, select the *Volumes* tab. 
+. From the Volumes tab, click the three dots menu of the volume to change the tiering policy for. 
 . Select *Advanced actions*, then *Change tiering policy*.  
 . On the Change tiering policy page, select one of the following tiering policies: 
 +

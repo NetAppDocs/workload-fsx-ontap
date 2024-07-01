@@ -16,8 +16,7 @@ For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/la
 .Steps
 . Log in to the the Workload Factory console. 
 . In Storage, click *Go to Storage inventory*. 
-. In the Storage inventory, click the three dots menu of the file system to update throughput capacity for. 
-. Select *Manage*. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update throughput capacity for and then select *Manage*. 
 . Under Information, click the pencil icon next to *Throughput capacity*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Throughput capacity* row. 
 . In the Throughput capacity dialog, select the throughput capacity you need. 
 . Click *Apply*. 

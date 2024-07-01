@@ -17,15 +17,14 @@ The same steps apply for configuring and updating Active Directory for a storage
 .Steps
 . Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 
-. Select the *Storage VMs* tab. 
-. Select the three dots menu of the storage VM to configure Active Directory for.
+. In the *FSx for ONTAP* tab, select the three dots menu of the file system with the storage VM to update and then select *Manage*.
+. From the file system overview, select the *Storage VMs* tab.
+. From the Storage VMs tab, select the three dots menu of the storage VM to configure Active Directory for.
 . Select *Manage AD configuration*. 
 . On the Manage AD configuration page, provide the following: 
-.. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. The FQDN cannot exceed 255 characters. 
-.. *DNS IP addresses*: Enter up to 3 IP addresses separated by commas. 
-+
-The IPv4 addresses of the DNS servers for your domain.
-.. *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. The NetBIOS name cannot exceed 15 characters. This is the name of this SVM in Active Directory.
+.. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. 
+.. *DNS IP addresses*: Enter up to three IP addresses separated by commas. 
+.. *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this SVM in Active Directory.
 .. *User name*: Enter the user name of the service account in your existing Active Directory. 
 +
 Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.

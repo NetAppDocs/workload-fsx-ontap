@@ -22,8 +22,8 @@ Storage efficiency cannot be disabled or enabled after volume creation.
 
 == Capacity management
 * The volume autogrow feature isn't currently supported for the iSCSI protocol. 
-* When automatic capacity management is updating, manual capacity increase isn't allowed. 
-* Disabling automatic capacity management is only possible with the same permissions used to enable it. 
+* When the automatic capacity management feature is running, manual capacity increase isn't allowed. 
+* Disabling the automatic capacity management feature is only possible with the same permissions used to enable it. 
 
 == Storage VMs
 The number of storage VMs is limited per SKU. Creating storage VMs beyond the limitation isn't supported in Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[“Managing FSx for ONTAP storage virtual machines”^] for the maximum number of SVMs per file system. 
@@ -40,7 +40,7 @@ The number of storage VMs is limited per SKU. Creating storage VMs beyond the li
 == Data protection
 * Snapshots cannot be deleted. 
 * Only replication between FSx for ONTAP file systems is supported.
-* When you replicate a file system, all volumes use the same replication policy. 
+* When you replicate a file system, all volumes in the file system use the same replication policy. 
 * Only the last snapshot is available for restore.  
 
 == Storage savings calculator
@@ -48,6 +48,6 @@ The Storage savings calculator doesn't calculate cost savings for the following 
 
 * FSx for Windows File Server: HDD storage type
 * Elastic Block Store (EBS): st1, sc1, and standard volume types
-* Elastic File Store (EFS): Bursting throughput mode
+* Elastic File System (EFS): Bursting throughput mode
 
 

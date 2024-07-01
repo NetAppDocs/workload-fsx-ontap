@@ -34,7 +34,7 @@ sidebar:
         - title: Use links
           entries: 
             - title: Link overview
-              url: link-overview.html
+              url: /link-overview.html
             - title: Create a link
               url: /create-link.html
             - title: Manage links
@@ -113,8 +113,6 @@ sidebar:
               url: /delete-file-system.html
         - title: Storage VM administration
           entries: 
-          #  - title: View storage VM details
-          #    url: /view-svm-details.html
             - title: Replicate a storage VM to another file system
               url: /replicate-svm-to-file-system.html
             - title: Configure and update Active Directory for a storage VM

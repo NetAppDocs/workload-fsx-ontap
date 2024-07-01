@@ -23,8 +23,7 @@ For IOPS limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide
 .Steps
 . Log in to the the Workload Factory console. 
 . In Storage, click *Go to Storage inventory*. 
-. In the Storage inventory, click the three dots menu of the file system to provision IOPS for. 
-. Select *Manage*. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system to provision IOPS for and then select *Manage*. 
 . Under Information, click the pencil icon next to *IOPS allocation*. The pencil icon appears next to the dropdown arrow when the mouse hovers over the *IOPS allocation* row. 
 . In the Provisioned IOPS dialog, select *Automatic* or *User provisioned*. 
 . If you select *User provisioned*, enter the *IOPS value*. 

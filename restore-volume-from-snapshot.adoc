@@ -22,8 +22,10 @@ Make sure you have enough capacity to complete this operation.
 .Steps
 . Log in to the Workload Factory console. 
 . In *Storage*, select *Go to storage inventory*.  
-. In the *Volumes* tab, select the three dots menu for the volume to restore from a snapshot.
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume and then select *Manage*.  
+. In the file system overview, select the *Volumes* tab.
+. From the *Volumes* tab, select the three dots menu for the volume to restore from a snapshot.
 . Select *Data protection actions*, *Snapshots*, then *Restore volume from a snapshot*. 
-. In the Restore volume from a snapshot dialog, in the *Snapshot name* field, select the snapshot to restore from in the dropdown.
+. In the Restore volume from a snapshot dialog, in the *Snapshot name* field, select the snapshot to restore from the dropdown menu.
 . In the *Restored volume name* field, enter a unique name for the volume to restore. 
 . Click *Restore*. 

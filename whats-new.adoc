@@ -14,4 +14,4 @@ Learn what's new with Amazon FSx for NetApp ONTAP.
 == 7 July
 Amazon FSx for NetApp ONTAP is now generally available in BlueXP Workload Factory. 
 
-link:learn-fsx-ontap.html[Learn about Amazon FSx for NetApp ONTAP].
+link:learn-fsx-ontap.html[Learn about BlueXP Workload Factory for Amazon FSx for NetApp ONTAP].

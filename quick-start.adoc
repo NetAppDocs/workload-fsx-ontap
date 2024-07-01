@@ -46,7 +46,7 @@ You'll create an FSx file system to begin managing your storage and FSx for ONTA
 
 [role="quick-margin-para"]
 
-You can also start with the storage savings calculator (provide link to task-based page to use the calculator and link to calculator reference) to compare the costs of your AWS storage environments to that of FSx for ONTAP. 
+You can also start with the storage savings calculator to compare the costs of your AWS storage environments to that of FSx for ONTAP. link:explore-savings.html[Explore savings with the storage savings calculator.]
 
 == What's next
-With a file system in your Storage inventory, you can link:create-volume.html[create volumes^], manage your FSx for ONTAP file system, and set up data protection for your resources.
+With a file system in your Storage inventory, you can link:create-volume.html[create volumes], manage your FSx for ONTAP file system, and set up data protection for your resources.

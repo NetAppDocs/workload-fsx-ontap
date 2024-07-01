@@ -24,8 +24,9 @@ To take backups of your volumes, both your volume and your file system must have
 .Steps
 . Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 
-. Select the *Volumes* tab. 
-. Click the three dots menu for the volume to back up. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume and then select *Manage*.  
+. In the file system overview, select the *Volumes* tab.
+. From the *Volumes* tab, click the three dots menu for the volume to back up. 
 . Select *Data protection actions*, *FSx for ONTAP backup*, and then *Manual backup*. 
 . In the Manual backup dialog, enter a name for the backup. 
 . Click *Back up*. 

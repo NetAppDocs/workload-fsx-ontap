@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: enable-auto-capacity-management.html
-keywords: Enable automatic capacity management for an FSx for ONTAP file system. 
-summary: 
+keywords: auto capacity, automatic capacity management, file system capacity
+summary: Enable automatic capacity management for an FSx for ONTAP file system. 
 ---
 = Enable automatic capacity management for a file system
 :icons: font
@@ -23,8 +23,8 @@ You must have credentials with _Automate_ permissions in Workload Factory to com
 
 .Steps
 . Log in to the the Workload Factory console. 
-. In Storage, click *Go to Storage inventory*. 
-. In the Storage inventory, click the three dots menu of the file system to enable automatic capacity management for. 
+. In Storage, select *Go to Storage inventory*. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system to enable automatic capacity management for. 
 . Select *Manage*. 
 . Under Information, click the pencil icon next to *Automatic capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic capacity management* row. 
 . In the *Automatic capacity management* dialog, provide the following: 

@@ -20,10 +20,13 @@ To replicate a storage VM to another FSx for ONTAP file system, you must associa
 .Steps
 . Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 
-. Select the three dots menu for the file system to replicate an SVM for.
+. In the *FSx for ONTAP* tab, select the three dots menu of the file system with the storage VM to replicate and then select *Manage*.
+. From the file system overview, select the *Storage VMs* tab.
+. From the Storage VMs tab, select the three dots menu of the storage VM to replicate an SVM for.
 . Select *Replicate storage VM*. 
-. Under FSx for ONTAP file system, select the credentials and region for the target FSx for ONTAP file system. 
-. Then, select the target FSx for ONTAP file system for replication. 
+. On the Create replication page, under FSx for ONTAP file system, select the credentials and region for the target FSx for ONTAP file system. 
+. Select the target FSx for ONTAP file system for replication from the dropdown menu. 
 . Under Storage VM name, provide a name for the replicated storage VM. 
-. Under Volume name, select the volume? – Look at the stage environment.
+. Under Volume name, select the volume.
+. Click *Apply*. 
 

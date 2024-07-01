@@ -20,11 +20,11 @@ Links leverage AWS Lambda. Lambda executes code in response to events and automa
 
 After you have created a link you can associate it with one, or many, FSx for ONTAP file systems. Each file system can be associated only to one link in the same NetApp account. If you have multiple NetApp accounts, a single file system can be associated with additional links under different NetApp accounts.
 
-You create links from the FSx for ONTAP file system pages in Workload Factory. link:manage-links.html[Learn how to create links] for details.
+You create links from the FSx for ONTAP file system pages in Workload Factory. link:create-link.html[Learn how to create links] for details.
 
 == Costs
 
-There is a charge to your AWS account for each transaction that Lambda performs. Since Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to Workload Factory.
+Each transaction that Lambda performs incurs a charge. Since Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to Workload Factory.
 
 link:https://aws.amazon.com/lambda/pricing/[Learn more about the costs related to using AWS Lambda^]
 

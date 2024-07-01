@@ -22,8 +22,9 @@ Consider how much bandwidth to allocate for replication.
 .Steps
 . Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*. 
-. In Storage, select the *Replication relationships* tab. 
-. Click the three dots menu of the replication relationship to limit the max transfer rate for. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, click the three dots menu of the replication relationship to limit the max transfer rate for. 
 . Select *Edit max transfer rate*. 
 . In the Edit max transfer rate dialog, select *Limited* and enter the max transfer limit in MB/s. 
 +
