@@ -23,8 +23,8 @@ FSx for ONTAP offers the following features:
 * *Automated snapshots*: protects data with automated, efficient snapshots, which are near instantaneous, space efficient point-in-time read-only copies of the file system or volumes. 
 * *Volume replication*: provides disaster recovery with cross-region replication across Amazon Web Services. 
 * *Efficient backups*: provides an additional later of protection with a copy of the data in another region. This provides an extra layer of protection in case of emergencies. 
-* *Fast cloning*: accelerates application development with fast cloning
-* *Multi-protocol support*: supports CIFS, iSCSI, NFSv3, NFSv4.x, and SMB v2.0-v3.1.1 protocols. 
+* *Fast cloning*: accelerates application development with fast cloning.
+* *Multi-protocol support*: supports Network File System (NFS), Server Message Block (SMB), and Internet Small Computer Systems Interface (iSCSI) protocols. 
 * *High throughput*: delivers high throughput performance to ensure low latencies for workloads running on top of FSx for ONTAP file systems. 
 * *In-memory cache and NVMe cache*: incorporates a unique in-memory cache and NVMe cache, which further enhances the performance of frequently accessed data.  
 * *Hundreds of thousands of IOPS*: provides hundreds of thousands of IOPS with SSD disks, ensuring that your storage and workloads receive timely results.
