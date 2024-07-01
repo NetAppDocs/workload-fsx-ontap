@@ -31,7 +31,7 @@ Review the four available tiering policies before you change the tiering policy.
 * *None*: Keeps all your volume's data on the primary storage tier. 
 * *All*: Marks all user data and snapshot data as cold and stores it in the capacity pool storage tier. 
 
-Note that _cooling days_ for a volume set the threshold that's used to determine which data is warm and which data is cold.
+Note that some tiering policies have an associated minimum cooling period which sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk. 
 
 .Steps
 . Log in to the Workload Factory console. 
