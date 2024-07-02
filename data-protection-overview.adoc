@@ -27,7 +27,7 @@ You can choose to create both replicated volumes on another FSx for ONTAP file s
 
 The following diagram shows a visual representation of data protection for FSx for ONTAP storage using snapshots, replication across regions, and backup to object storage. 
 
-image:diagram-fsx-data-protection.png[Screenshot shows data protection for FSx for ONTAP storage using snapshots, replication across regions, and backup to object storage.]
+//image:diagram-fsx-data-protection.png[Screenshot shows data protection for FSx for ONTAP storage using snapshots, replication across regions, and backup to object storage.]
 
 == Best practices for protecting your workload data
 FSx for ONTAP offers multiple data protection options which can be combined to achieve your selected recovery point and time objectives. For the best possible protection, we recommend that you use both volume snapshots and volume backups. 
