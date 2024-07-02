@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: delete-file-system.html
-keywords: 
-summary: 
+keywords: file system, delete file system, file system deletion
+summary: To delete a file system, you must first delete any volumes, storage VMs, or replication relationships associated with the file system. 
 ---
 = Delete a file system
 :icons: font

@@ -13,7 +13,6 @@ With Workload Factory for Amazon FSx for NetApp ONTAP, you can get started immed
 
 If you'd like to use Workload Factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account to get started. 
 
-== Quick start 
 Follow these steps to get started. 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to Workload Factory
@@ -35,7 +34,7 @@ Choose between _basic_ and _automate_ link:https://docs.netapp.com/us-en/workloa
 If you choose to operate in _basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy partially completed code samples. 
 
 [role="quick-margin-para"]
-If you operate in _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/manage-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _automate_ mode.
+If you operate in _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _automate_ mode.
 //add _read_ mode above when it is supported
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a file system
@@ -48,5 +47,5 @@ You'll create an FSx file system to begin managing your storage and FSx for ONTA
 
 You can also start with the storage savings calculator to compare the costs of your AWS storage environments to that of FSx for ONTAP. link:explore-savings.html[Explore savings with the storage savings calculator.]
 
-== What's next
+.What's next
 With a file system in your Storage inventory, you can link:create-volume.html[create volumes], manage your FSx for ONTAP file system, and set up data protection for your resources.

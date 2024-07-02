@@ -21,7 +21,7 @@ FSx for ONTAP has two tiers for storing volume data:
 * *SSD storage tier*: This primary storage tier is for the data you access most frequently, also known as _hot_ data. Storing data in the primary storage tier is more expensive than in the secondary storage tier. 
 * *Capacity pool storage tier*: This secondary storage tier is for archived data or infrequently accessed data, also known as _cold_ data. 
 
-Refer to the AWS documentation link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers["Managing storage capacity"^] for more information about FSx for ONTAP storage tiers.
+Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers[Managing storage capacity^] in AWS for FSx for NetApp ONTAP documentation for more information about storage tiers.
 
 == Before you begin
 Review the four available tiering policies before you change the tiering policy.

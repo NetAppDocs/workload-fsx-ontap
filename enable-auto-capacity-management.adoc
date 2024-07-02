@@ -2,21 +2,19 @@
 sidebar: sidebar
 permalink: enable-auto-capacity-management.html
 keywords: auto capacity, automatic capacity management, file system capacity
-summary: Enable automatic capacity management for an FSx for ONTAP file system. 
+summary: Enabling this feature lets Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time.  
 ---
 = Enable automatic capacity management for a file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enable automatic capacity management for an FSx for ONTAP file system. 
-
-== About this task 
 Enabling this feature lets Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. 
 
-NOTE: Only one account can manage this feature. 
+== About this task 
+Only one account can manage this feature. 
 
-The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is 524,288 GiB. To request a quota increase, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] in AWS FSx for NetApp ONTAP documentation. 
+The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is 524,288 GiB. To request a quota increase, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
 == Before you begin
 You must have credentials with _Automate_ permissions in Workload Factory to complete this task. 

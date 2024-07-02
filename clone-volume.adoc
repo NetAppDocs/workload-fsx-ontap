@@ -18,7 +18,7 @@ Volume cloning is only supported for FlexClone volumes.
 
 When a volume is cloned, a writeable volume is created with references to snapshots from the parent volume. Clone creation occurs in seconds. The cloned data doesn't reside on the volume clone but instead resides on the parent volume. Any new data written to the volume after clone creation resides on the clone.
 
-For a cloned volume to contain all data from the parent volume and any new data added to the clone after creation, you'll need to link:split-cloned-volume.html[split the clone^] from the parent volume. Additionally, you can't delete a parent volume if it has a clone. A clone must be split before a parent volume can be deleted. 
+For a cloned volume to contain all data from the parent volume and any new data added to the clone after creation, you'll need to link:split-cloned-volume.html[split the clone] from the parent volume. Additionally, you can't delete a parent volume if it has a clone. A clone must be split before a parent volume can be deleted. 
 
 .Steps
 . Log in to the Workload Factory console. 

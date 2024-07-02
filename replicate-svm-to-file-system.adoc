@@ -2,16 +2,13 @@
 sidebar: sidebar
 permalink: replicate-svm-to-file-system.html
 keywords: 
-summary: Replicate a storage VM to another FSx for ONTAP file system. 
+summary: Replicating a storage VM to another FSx for ONTAP file system provides a protective layer of data access in case of data loss. 
 ---
 = Replicate a storage VM to another FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Replicate a storage VM to another FSx for ONTAP file system. 
-
-== About this task
 Replicating a storage VM to another FSx for ONTAP file system provides a protective layer of data access in case of data loss. 
 
 == Before you begin

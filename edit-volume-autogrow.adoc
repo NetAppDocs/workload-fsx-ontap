@@ -11,7 +11,7 @@ summary: Enable volume autogrow to let Workload Factory manage volume capacity f
 [.lead]
 Enable volume autogrow to let Workload Factory manage volume capacity for you. You can disable it at any time. 
 
-Optionally, you can manually increase the volume capacity of a volume at any time using the link:increase-volume-capacity.html[increase volume capacity feature^]. 
+Optionally, you can manually increase the volume capacity of a volume at any time using the link:increase-volume-capacity.html[increase volume capacity feature]. 
 
 NOTE: Volume autogrow isn't supported for iSCSI volumes. 
 

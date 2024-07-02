@@ -11,7 +11,7 @@ summary: Manually increase the volume capacity of a volume at any time.
 [.lead]
 Manually increase the volume capacity of a volume at any time. 
 
-Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature^] to let Workload Factory manage volume capacity for you. 
+Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature] to let Workload Factory manage volume capacity for you. 
 
 == About this task
 For an iSCSI LUN, this operation increases the size of the host LUN. After the capacity increases, follow the procedure provided by your host operating system to discover the new size of the LUN and expand the file system of the LUN. 

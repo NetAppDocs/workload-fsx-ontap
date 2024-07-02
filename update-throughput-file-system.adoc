@@ -11,7 +11,7 @@ summary: Update throughput capacity for an FSx for ONTAP file system as needed.
 [.lead]
 Update throughput capacity for an FSx for ONTAP file system as needed. 
 
-For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Quotas"^] in AWS FSx for NetApp ONTAP documentation.
+For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation.
 
 .Steps
 . Log in to the the Workload Factory console. 

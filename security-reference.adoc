@@ -11,6 +11,6 @@ summary:
 [.lead]
 Amazon FSx for NetApp ONTAP documentation provides the following security topics for your reference. 
 
-* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html[“Data protection in Amazon FSx for NetApp ONTAP”^]
-* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html[“Identity and access management for Amazon FSx for NetApp ONTAP^]
-* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html[“File System Access Control with Amazon VPC”^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html[Data protection in Amazon FSx for NetApp ONTAP^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html[Identity and access management for Amazon FSx for NetApp ONTAP^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html[File System Access Control with Amazon VPC^] in Amazon FSx for NetApp ONTAP documentation

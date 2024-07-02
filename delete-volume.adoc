@@ -2,16 +2,13 @@
 sidebar: sidebar
 permalink: delete-volume.html
 keywords: delete volume, volume deletion
-summary: Delete a volume in your FSx for ONTAP file system. 
+summary: You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible.
 ---
 = Delete a volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Delete a volume in your FSx for ONTAP file system. 
-
-== About this task
 You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible.
 
 //Volumes with the immutable files feature cannot be deleted until the retention period expires. 
