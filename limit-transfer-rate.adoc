@@ -11,12 +11,12 @@ summary: Limit the max transfer rate of a replication relationship. An unlimited
 [.lead]
 Limit the max transfer rate of a replication relationship. An unlimited transfer rate might negatively impact the performance of other applications and your network. 
 
-== About this task
+.About this task
 Limiting the max transfer rate is optional but recommended. Without a limit, network and application performance may decline. 
 
 Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 
-== Before you begin
+.Before you begin
 Consider how much bandwidth to allocate for replication.
 
 .Steps

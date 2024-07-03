@@ -11,7 +11,7 @@ summary: Stop a replication relationship between source and target volumes.
 [.lead]
 Stop a replication relationship between source and target volumes. 
 
-== About this task
+.About this task
 When you stop a replication, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. 
 
 .Steps

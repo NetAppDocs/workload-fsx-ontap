@@ -15,7 +15,7 @@ Optionally, you can manually increase the volume capacity of a volume at any tim
 
 NOTE: Volume autogrow isn't supported for iSCSI volumes. 
 
-== Before you begin
+.Before you begin
 To enable volume autogrow, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, click *Associate link* under *Account name*. Once the link associates, return to this operation. 
 
 .Steps

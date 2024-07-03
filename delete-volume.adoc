@@ -13,7 +13,7 @@ You can delete a volume in your FSx for ONTAP file system at any time. This oper
 
 //Volumes with the immutable files feature cannot be deleted until the retention period expires. 
 
-== Before you begin
+.Before you begin
 Consider the following before deleting a volume: 
 
 * Local snapshots: All snapshots associated with this FSx for ONTAP file system will be permanently deleted. 

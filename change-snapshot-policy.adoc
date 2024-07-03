@@ -11,10 +11,10 @@ summary: Update the snapshot policy of a volume at any time.
 [.lead]
 Update the snapshot policy of a volume at any time. 
 
-== About this task 
+.About this task 
 This operation updates the frequency of snapshots taken for a volume or disables automatic snapshots.  
 
-== Before you begin
+.Before you begin
 A link is required to display existing snapshot policies. To associate a link, click *Associate link* under *Account name*. Then return to this operation. 
 
 .Steps

@@ -11,7 +11,7 @@ summary: Replicating a storage VM to another FSx for ONTAP file system provides 
 [.lead]
 Replicating a storage VM to another FSx for ONTAP file system provides a protective layer of data access in case of data loss. 
 
-== Before you begin
+.Before you begin
 To replicate a storage VM to another FSx for ONTAP file system, you must associate a link. To associate a link, click *Associate link* under *Account name*. Then return to this operation. 
 
 .Steps

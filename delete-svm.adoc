@@ -11,7 +11,7 @@ summary: Delete a storage VM (SVM) that you no longer require from an FSx for ON
 [.lead]
 Delete a storage VM (SVM) that you no longer require from an FSx for ONTAP file system configuration.
 
-== Before you begin
+.Before you begin
 Review the following before you delete a storage VM:
 
 * Make sure that no applications are accessing the data in the SVM. 

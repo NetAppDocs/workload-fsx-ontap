@@ -11,7 +11,7 @@ summary:
 [.lead]
 Configure and update Active Directory for a storage VM in an FSx for ONTAP file system.
 
-== About this task
+.About this task
 The same steps apply for configuring and updating Active Directory for a storage VM. 
 
 .Steps

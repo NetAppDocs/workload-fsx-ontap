@@ -13,7 +13,7 @@ Split a clone FlexVol volume from its parent volume to make the clone a normal r
 
 Data is accessible on the clone and the parent during the split. The split process only updates metadata and requires minimal IO. No data blocks are copied.
 
-== About this task 
+.About this task 
 The clone splitting operation involves the following: 
 
 * New snapshot copies of the FlexClone volume cannot be created during the split operation.
@@ -22,7 +22,7 @@ The clone splitting operation involves the following:
 * After the split, both the parent FlexVol volume and the clone require the full space allocation determined by their volume guarantees.
 * After a FlexClone volume is split from its parent the two cannot be rejoined.
 
-== Before you begin
+.Before you begin
 Consider the following before you split a cloned volume: 
 
 * To split a cloned volume, you must associate a link. To associate a link, click *Associate link* under *Account name*. Then return to this operation. 

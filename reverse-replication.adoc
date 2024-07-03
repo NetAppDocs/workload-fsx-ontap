@@ -13,12 +13,12 @@ Reverse a replication relationship so that the target volume becomes the source 
 
 After you stop replication and make changes to the target volume, you can replicate those changes back to the source volume. This process is common in a disaster recovery scenario in which you operate on the target volume for a while and want to switch roles of the volumes.
 
-== About this task
+.About this task
 When you reverse and resume a replication, it switches the source and target roles of your volumes; the target volume becomes the new source volume, and the source volume becomes the new target volume. The reverse operation also overwrites the contents of the new target volume with the contents of the new source volume. If you reverse a replication twice, the original replication direction re-establishes.
 
 NOTE: Any data written to the original source volume between the last data replication and the time that the source volume is disabled is not preserved.
 
-== Before you begin
+.Before you begin
 Make sure that you know the current and future roles of your source and target volumes because changes on the new target volume are overwritten with the new source volume. If used incorrectly, you can experience unintended data loss.
 
 .Steps

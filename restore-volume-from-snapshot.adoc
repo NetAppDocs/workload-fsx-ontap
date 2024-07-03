@@ -11,10 +11,10 @@ summary: Restore an FSx for ONTAP volume from a snapshot when the volume contain
 [.lead]
 Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
 
-== About this task
+.About this task
 This operation restores data from a snapshot to a new volume. 
 
-== Before you begin
+.Before you begin
 You can only restore a volume from a snapshot if you have an existing snapshot copy of the volume. 
 
 Make sure you have enough capacity to complete this operation. 

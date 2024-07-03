@@ -11,12 +11,12 @@ summary: Enabling this feature lets Workload Factory automatically add increment
 [.lead]
 Enabling this feature lets Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. 
 
-== About this task 
+.About this task 
 Only one account can manage this feature. 
 
 The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is 524,288 GiB. To request a quota increase, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
-== Before you begin
+.Before you begin
 You must have credentials with _Automate_ permissions in Workload Factory to complete this task. 
 
 .Steps

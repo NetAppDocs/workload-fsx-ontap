@@ -11,7 +11,7 @@ summary: Automatically provision or manually provision SSD IOPS for an FSx for O
 [.lead]
 Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system. 
 
-== About this task
+.About this task
 You can enable automatic SSD IOPS provisioning for an FSx file system or manually provision IOPS. 
 
 Automatic provisioned IOPS are calculated as 3 IOPS per GiB. 

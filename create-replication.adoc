@@ -11,14 +11,14 @@ summary: Create a replication relationship for an FSx for ONTAP file system to a
 [.lead]
 Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster.
 
-== About this task
+.About this task
 Replication is an added layer of data protection which is essential in case the region where your data resides experiences a disaster. Data loss can be avoided if you use cross-region replication. 
 
 This operation creates a replication relationship for one or all source volumes in an FSx for ONTAP file system. 
 
 Replicated volumes in the target file system follow the naming format: `{OriginalVolumeName}_copy`.
 
-== Before you begin
+.Before you begin
 Make sure you meet the following prerequisites before you begin. 
 
 * You must have two available file systems in your storage inventory to create a replication relationship.

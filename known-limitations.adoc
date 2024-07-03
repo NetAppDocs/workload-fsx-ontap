@@ -26,7 +26,7 @@ Storage efficiency cannot be disabled or enabled after volume creation.
 The following regions support up to 4 GB/s maximum throughput capacity for scale-up deployments: US East (Ohio) Region, US East (N. Virginia) Region, US West (Oregon) Region, and Europe (Ireland).
 
 == Scale-out deployments
-
+The following regions support up to 3 and 6 GB/s maximum throughput capacity for scale-out deployments: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland), and Asia Pacific (Sydney).ney.
 
 == Capacity management
 * The volume autogrow feature isn't currently supported for the iSCSI protocol. 

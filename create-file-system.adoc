@@ -11,10 +11,10 @@ summary: Using Workload Factory you can create an FSx for ONTAP file system to a
 [.lead]
 Using Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 
-== About this task
+.About this task
 A storage VM is created when you create a file system. 
 
-== Before you begin
+.Before you begin
 Before creating your FSx for ONTAP file system, you will need:
 
 * The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^].

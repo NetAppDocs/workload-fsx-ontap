@@ -13,7 +13,7 @@ Manually increase the SSD storage capacity of an FSx for ONTAP file system when 
 
 Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so Workload Factory manages file system capacity for you. 
 
-== About this task
+.About this task
 Increasing file system capacity impacts IOPS for your FSx for ONTAP file system. 
 
 When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases by 3 IOPS with every 1 GiB increase in SSD capacity. For example, if you provision 100 TiB (102,400 GiB) of SSD capacity, IOPS will increase by 300 TiB (307,200 GiB). 
@@ -22,7 +22,7 @@ When you link:provision-iops.html[provision IOPS] manually, you may need to incr
 
 For SSD storage capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
-== Before you begin
+.Before you begin
 To increase capacity for a file system, you must first link:enable-auto-capacity-management.html[disable automatic capacity management]. 
 
 .Steps

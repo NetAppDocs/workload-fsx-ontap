@@ -11,12 +11,12 @@ summary: You can create an FSx for ONTAP storage VM (SVM) to provide storage and
 [.lead]
 Create a storage VM (SVM) for an FSx for ONTAP file system to access storage and data services virtually for your workloads in Workload Factory.
 
-== About this task
+.About this task
 Storage VMs are isolated file servers that you can use to access the data from each workload in Workload Factory Storage. Each SVM has its own administrative credentials and endpoints for administering and accessing data. 
 
 With SVMs, when you access data in FSx for ONTAP, your clients and workstations mount a volume, CIFS/SMB share, or iSCSI LUN hosted by an SVM using the SVM's endpoint (IP address).  
 
-== Before you begin
+.Before you begin
 Verify the supported number of storage VMs per file system. Refer to the “Maximum number of SVMs per file system” table in link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[AWS SVM documentation^]. 
 
 .Steps
