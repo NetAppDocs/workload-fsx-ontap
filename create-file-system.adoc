@@ -149,4 +149,4 @@ If you created the file system, you can now view the FSx for ONTAP file system i
 ====
 
 .What's next
-With a file system in your Storage inventory, you can link:create-volume.html[create volumes], manage your FSx for ONTAP file system, and set up link:data-protection-overview.html[data protection^] for your resources.
+With a file system in your Storage inventory, you can link:create-volume.html[create volumes], manage your FSx for ONTAP file system, and set up link:data-protection-overview.html[data protection] for your resources.
