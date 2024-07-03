@@ -9,7 +9,7 @@ summary: Known limitations identify platforms, devices, or functions that are no
 :imagesdir: ./media/
 
 [.lead]
-Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+Known limitations identify platforms, devices, or functions that are not supported by this release of the product in Workload Factory, or that do not interoperate correctly with it. Review these limitations carefully.
 
 == Operational modes
 _Read_ mode isn't currently available. 
@@ -20,28 +20,38 @@ A link is required to complete some operations like replication in the Workload 
 == Storage efficiency
 Storage efficiency cannot be disabled or enabled after volume creation. 
 
+== Throughput capacity region support
+
+=== Scale-up deployments
+The following regions support up to 4 GB/s maximum throughput capacity for scale-up deployments: US East (Ohio) Region, US East (N. Virginia) Region, US West (Oregon) Region, and Europe (Ireland).
+
+== Scale-out deployments
+
+
 == Capacity management
 * The volume autogrow feature isn't currently supported for the iSCSI protocol. 
 * When the automatic capacity management feature is running, manual capacity increase isn't allowed. 
 * Disabling the automatic capacity management feature is only possible with the same permissions used to enable it. 
 
 == Storage VMs
-The number of storage VMs is limited per SKU. Creating storage VMs beyond the limitation isn't supported in Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[Managing FSx for ONTAP storage virtual machines^] for the maximum number of SVMs per file system. 
+The number of storage VMs is limited per SKU. Creating storage VMs beyond the limitation isn't supported in Workload Factory.^1^ 
+
+Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[Managing FSx for ONTAP storage virtual machines^] for the maximum number of SVMs per file system. 
 
 == iSCSI protocol support
-* The iSCSI protocol is only supported for scale-up deployments.
-* The iSCSI protocol is only available for FlexGroup volumes. 
-* Only a single LUN can be configured per volume. 
+* The iSCSI protocol is only supported for scale-up deployments. ^1^
+* The iSCSI protocol is only available for FlexGroup volumes. ^1^  
+* Only a single LUN can be configured per volume.
 
 == Region support
-* *Option 1 without footnote*: Canada West (Calgary) region isn't currently supported in Workload Factory.
-* *Option 2 with footnote*: Canada West (Calgary) region isn't currently supported.footnote:[Applies to Workload Factory] 
+* Canada West (Calgary) region isn't currently supported.
+
 
 == Data protection
 * Snapshots cannot be deleted. 
 * Only replication between FSx for ONTAP file systems is supported.
-* When you replicate a file system, all volumes in the file system use the same replication policy. 
-* Only the last snapshot is available for restore.  
+* When you replicate a file system, all volumes in the file system use the same replication policy.
+* Only the last snapshot is available for restore.
 
 == Storage savings calculator
 The Storage savings calculator doesn't calculate cost savings for the following configurations: 
@@ -50,4 +60,6 @@ The Storage savings calculator doesn't calculate cost savings for the following 
 * Elastic Block Store (EBS): st1, sc1, and standard volume types
 * Elastic File System (EFS): Bursting throughput mode
 
+Note:
 
+. Applies to Amazon FSx for NetApp ONTAP
