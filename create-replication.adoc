@@ -39,7 +39,7 @@ Complete the following steps to replicate a single volume or replicate all volum
 . On the Create replication page, under Replication target, provide the following: 
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
 .. *Storage VM name*: Select the storage VM from the dropdown menu.
-.. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`.
+.. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
 +
 _Auto_ is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
@@ -91,5 +91,6 @@ If you enable long-term retention, then select an existing policy or create a ne
 
 ====
 
+.Result
 The replication relationship appears in the *Replication relationships* tab.  
 
