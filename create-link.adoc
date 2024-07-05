@@ -12,7 +12,7 @@ summary: You can create and manage links to provide a trust relationship and con
 [.lead]
 You can create and manage links to provide a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
 
-link:link-overview.html[Learn more about links].
+link:links-overview.html[Learn more about links].
 
 .About this task
 

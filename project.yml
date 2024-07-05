@@ -34,7 +34,7 @@ sidebar:
         - title: Use links
           entries: 
             - title: Link overview
-              url: /link-overview.html
+              url: /links-overview.html
             - title: Create a link
               url: /create-link.html
             - title: Manage links

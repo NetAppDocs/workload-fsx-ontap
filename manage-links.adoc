@@ -12,7 +12,7 @@ summary: You can create and manage links to provide a trust relationship and con
 [.lead]
 Manage links you've associated with your Workload Factory account. 
 
-link:link-overview.html[Learn more about links] or link:create-link.html[create a link]. 
+link:links-overview.html[Learn more about links] or link:create-link.html[create a link]. 
 
 == View the links associated with your account
 You can view the links that are currently associated with your account.
