@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: delete-replication.html
+keywords: delete replication
+summary: Delete a replication relationship as needed. 
+---
+= Delete a replication relationship
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+When you delete a replication relationship, it removes the replication relationship between the source and target volume. After the replication relationship deletes, both volumes continue to exist independently with the current data they contain.
+
+When you delete a replication relationship, FSx for ONTAP also deletes the common replication snapshots of the source and target volume. 
+
+.Steps
+. Log in to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, click the three dots menu of the replication relationship to delete. 
+. Select *Delete*. 
+. In the Delete relationship dialog, click *Delete*. 

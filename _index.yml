@@ -1,9 +1,36 @@
 indexpage:
-  lead: # single paragraph, shown on the page
-  tiles:
-    # one or more tile definitions for the page
-  - title: # short string (tile title)
-    links:
-      # one or more links on the tile
-      - title: # short string (link title)
-        url: # single file name or external URL
+  title: Amazon FSx for NetApp ONTAP documentation
+  lead: Amazon FSx for NetApp ONTAP brings the full capabilities of ONTAP to a native AWS managed service delivering a consistent hybrid cloud experience. This documentation describes how to manage FSx for ONTAP by using BlueXP Workload Factory.
+  tiles: 
+    - title: Get started
+      links:
+        - title: Release notes
+          url: /whats-new.html
+        - title: Learn about Amazon FSx for NetApp ONTAP
+          url: /learn-fsx-ontap.html
+        - title: Quick start
+          url: /quick-start.html
+    - title: Use FSx for ONTAP
+      links:
+        - title: Explore savings
+          url: /explore-savings.html
+        - title: Create an FSx for ONTAP file system
+          url: /create-file-system.html
+        - title: Create an FSx for ONTAP volume
+          url: /create-volume.html   
+        - title: Protect your data
+          url: /data-protection-overview.html     
+    - title: Knowledge and support
+      links:
+        - title: Register for support
+          url: /support-registration.html
+        - title: Get help
+          url: /get-help.html
+  #  - title: Blogs & community
+  #    links:
+  #      - title: NetApp Community
+  #        url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+  #      - title: Cloud Central blog
+  #        url: https://cloud.netapp.com/blog
+  #      - title: Cloud webinars
+  #        url: https://cloud.netapp.com/events

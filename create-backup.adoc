@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: create-backup.html
+keywords: create backup, volume backup, back up a volume
+summary: Create a manual backup of a volume outside regularly scheduled backups.
+---
+= Create a manual backup of a volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Create a manual backup of a volume outside regularly scheduled backups. 
+
+.About this task
+
+FSx for ONTAP backups are per volume, so each backup contains only the data in a particular volume. 
+
+FSx for ONTAP backups are incremental which means that only the data on the volume that has changed after your most recent backup is saved. This minimizes the time required to create the backup and the storage required for the backup, which saves on storage costs by not duplicating data.
+
+.Before you begin
+
+To take backups of your volumes, both your volume and your file system must have enough available SSD storage capacity to store the backup snapshot. When taking a backup snapshot, the additional storage capacity consumed by the snapshot cannot cause the volume to exceed 98% SSD storage utilization. If this happens, the backup will fail.
+
+.Steps
+. Log in to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume and then select *Manage*.  
+. In the file system overview, select the *Volumes* tab.
+. From the *Volumes* tab, click the three dots menu for the volume to back up. 
+. Select *Data protection actions*, *FSx for ONTAP backup*, and then *Manual backup*. 
+. In the Manual backup dialog, enter a name for the backup. 
+. Click *Back up*. 

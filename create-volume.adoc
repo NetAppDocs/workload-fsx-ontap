@@ -1,0 +1,102 @@
+---
+sidebar: sidebar
+permalink: create-volume.html
+keywords: create volume, FSx for ONTAP volume
+summary: After you set up your FSx for ONTAP file system, you can create FSx for ONTAP volumes.
+---
+= Create an FSx for ONTAP volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+After you set up your FSx for ONTAP file system, you can create FSx for ONTAP volumes.
+
+.About this task
+FSx for ONTAP volumes are virtual resources used for grouping data, determining how data is stored, and determining the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 
+
+The following protocols may be used for your volumes:
+
+* CIFS: file storage protocol for Windows operating systems
+* NFS: file storage protocol for Unix operating systems
+* iSCSI: block storage protocol 
+
+.Before you begin
+Review the following prerequisites before you create a volume: 
+
+* You must have an FSx for ONTAP file system in Workload Factory. 
+* You must have a storage VM. 
+* For protocol access, complete the following: 
+** To configure access to the volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, click *Associate link* under *Account name*. Once the link associates, return to this operation. 
+** You must configure access for the protocol you select, either CIFS, NFS, or iSCSI. 
+
+.Steps
+. Log in to the Workload Factory console.
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three dots menu of the file system you want to create a volume in, and select *Manage*. 
+. From the *Overview* tab, click *Create volume*. 
+. On the Create volume page under General details, provide the following details: 
+.. *Volume name*: Enter a name for the volume. 
+.. *Storage VM name*: Optionally, enter a storage VM name. 
+.. *Volume style*: Select *FlexVol* or *FlexGroup* volume. 
++
+FlexVol volume style is selected by default. 
++
+FlexGroup volume size depends on the number of constituents. 100 GiB is required per constituent. 
+.. *Volume size*: Enter the volume size and unit. 
++
+Optionally, enable volume autogrow. This option is available when you select *File access* as the volume access type. 
+.. *Tags*: Optionally, you can add up to 50 tags.
+. Under Access (only for file systems with associated links), provide the following details: 
+.. *Access type*: Select *File access* or *Block access*. Additional fields to configure volume access differ depending on your selection. 
+* *File access*: allows multiple authorized users and devices access to the volume using SMB/CIFS, NFS, or dual (SMB/NFS) protocols. 
++
+Complete the following fields to set up file access to the volume.
++ 
+... *NFS export policy*: Provide the following details to provide NFS access: 
+.... *Access control*: Select a *Custom export policy*, *Existing export policy*, or *No access to the volume* from the dropdown menu.
+.... *Export policy name*: 
++
+If you selected a custom export policy, select an existing policy name from the dropdown menu.
++
+If you selected an existing export policy, enter a new policy name. 
+.... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
+... *CIFS share*: Enter the CIFS share name to provide SMB access. 
++
+* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol.
++
+Complete the following fields to set up block access to the volume.
++
+... *iSCSI configuration*: Provide the following details to configure iSCSI for block access to the volume. 
+.... Select *Create a new initiator group* or *Map an existing initiator group*. 
+.... Select the *Host operating system* from the dropdown menu. 
+.... Enter an *Initiator group name* for a new initiator group. 
+.... Under Host Initiators, add one or more iSCSI qualified name (IQN) host initiators.  
+. Under Efficiency and protection, provide the following details: 
+.. *Storage efficiency*: Disable or enable storage efficiency. 
++
+Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
+.. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
++
+The following are default policies from AWS. For custom snapshot policies, you must associate a link. 
++
+`default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
++
+* A maximum of six hourly snapshots taken five minutes past the hour.
+* A maximum of two daily snapshots taken Monday through Saturday at 10 minutes after midnight.
+* A maximum of two weekly snapshots taken every Sunday at 15 minutes after midnight.
++
+NOTE: Snapshot times are based on the file system's time zone, which defaults to Coordinated Universal Time (UTC). For information about changing the time zone, refer to link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html[Displaying and setting the system time zone^] in the NetApp Support documentation.
++
+
+`default-1weekly`::: This policy works in the same way as the `default` policy, except that it only retains one snapshot from the weekly schedule.
++
+`none`::: This policy doesn't take any snapshots. You can assign this policy to volumes to prevent automatic snapshots from being taken.
+
+.. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
++
+Auto is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. 
+. Under Advance configuration, provide the following: 
+.. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
+.. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
+.. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
+. Click *Create*. 

@@ -1,0 +1,28 @@
+---
+sidebar: sidebar
+permalink: access-data.html
+keywords: access data, mount clients, on-premises
+summary: You can access your FSx for ONTAP file systems from on-premises by mounting volumes for NAS clients and mounting iSCSI LUNs for SAN clients. 
+---
+= Access your data
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can access your FSx for ONTAP file systems from on-premises by mounting volumes for NAS clients and mounting iSCSI LUNs for SAN clients. 
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html[Accessing data^] in Amazon FSx for NetApp ONTAP documentation provides topics about how to access data for your reference. 
+
+== Connect to NAS clients
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html[Mount a volume on Linux clients^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-windows-client.html[Mount a volume on Windows clients^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-mac-client.html[Mount a volume on macOS clients^]
+
+== Connect to SAN clients
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html[Mount an iSCSI LUN on Linux clients^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-windows.html[Mount an iSCSI LUN on Windows clients^]
+
+
+

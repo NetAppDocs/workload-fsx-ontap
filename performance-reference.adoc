@@ -1,0 +1,12 @@
+---
+sidebar: sidebar
+permalink: performance-reference.html
+keywords: performance, FSx for ONTAP performance
+summary: Performance for FSx for ONTAP. 
+---
+= Performance for FSx for ONTAP
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+For an overview about performance, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html[Amazon FSx for NetApp ONTAP performance^] documentation. 
