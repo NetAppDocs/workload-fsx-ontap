@@ -34,7 +34,7 @@ FSx for ONTAP offers the following features:
 
 == Additional features in Workload Factory
 
-* *Storage cost comparison calculator*: Compares your AWS Elastic File System (EFS), Elastic Block Store (EBS), and FSx for Windows File Server storage costs with FSx for ONTAP. From the calculator, you can view how FSx for ONTAP storage configurations offer potential savings and plan your move to FSx for ONTAP storage.
+* *Storage cost comparison calculator*: Compares your Amazon Elastic Block Store (EBS) and FSx for Windows File Server storage costs with FSx for ONTAP. From the calculator, you can view how FSx for ONTAP storage configurations offer potential savings and plan your move to FSx for ONTAP storage.
 * *Workload Factory user interface*: Provides *Quick create* and *Advanced create* deployment mode options. Quick create includes AWS, NetApp, and industry standard best practices for your storage configurations.
 * *Codebox*: provides developers with a code viewer for FSx for ONTAP operations, code templates for copy and download, and an automation catalog for code re-use.
 

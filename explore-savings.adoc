@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP
-summary: Explore savings for your storage workloads in AWS Elastic Block Store (EBS) storage, Elastic File System (EFS), and FSx for Windows File Servers against AWS FSx for NetApp ONTAP. 
+summary: Explore savings for your storage workloads in Amazon Elastic Block Store (EBS) storage, Elastic File System (EFS), and FSx for Windows File Servers against AWS FSx for NetApp ONTAP. 
 ---
 = Explore savings in FSx for ONTAP 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Explore savings for your storage workloads which use AWS Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server against FSx for NetApp ONTAP. 
+Explore savings for your storage workloads which use Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server against FSx for NetApp ONTAP. 
 
 .About this task
 Workload Factory provides a storage calculator so you can compare the costs of storage on FSx for ONTAP file systems against Elastic Block Store (EBS),Elastic File System (EFS), and FSx for Windows File Server storage. Depending on your storage requirements, you might find that FSx for ONTAP file systems are the most cost effective for you.
@@ -34,7 +34,7 @@ This figure shows the storage calculator page with a comparison between FSx for 
 image:screenshot-ebs-calculator.png[The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage.]
 
 .Before you begin
-For Workload Factory to detect AWS Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server storage environments in your AWS account, make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account.
+For Workload Factory to detect Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server storage environments in your AWS account, make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account.
 
 == Explore savings
 Follow the steps under the tab for your storage selection.
