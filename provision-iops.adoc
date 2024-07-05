@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: provision-iops-file-system.html
+permalink: provision-iops.html
 keywords: iops, SSD, provision, allocate
 summary: Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system. 
 ---

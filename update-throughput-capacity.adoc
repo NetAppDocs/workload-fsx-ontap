@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: update-throughput-file-system.html
+permalink: update-throughput-capacity.html
 keywords: update throughput, change throughput, throughput capacity
 summary: Update throughput capacity for an FSx for ONTAP file system as needed. 
 ---

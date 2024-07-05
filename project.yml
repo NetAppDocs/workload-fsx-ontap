@@ -148,9 +148,9 @@ sidebar:
         - title: Performance administration
           entries: 
             - title: Provision IOPS for a file system
-              url: /provision-iops-file-system.html
+              url: /provision-iops.html
             - title: Update throughput capacity for a file system
-              url: /update-throughput-file-system.html  
+              url: /update-throughput-capacity.html  
     - title: Reference
       entries: 
         - title: Performance for FSx for ONTAP
