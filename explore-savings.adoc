@@ -102,8 +102,8 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View the
 == Deploy FSx for ONTAP file systems
 If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or click *Save* to save the recommended configuration(s) for later. 
 
-=== Deployment methods
+Deployment methods:::
 In _automate_ mode, you can deploy the FSx for ONTAP file system directly from Workload Factory. You can also copy the content from the Codebox window and deploy the system using one of the Codebox methods.
-
++
 In  _basic_ mode, you can copy the content from the Codebox window and deploy the FSx for ONTAP file system using one of the Codebox methods.
 

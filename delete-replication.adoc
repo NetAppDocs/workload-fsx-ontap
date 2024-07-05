@@ -9,9 +9,6 @@ summary: Delete a replication relationship as needed.
 :imagesdir: ./media/
 
 [.lead]
-Delete a replication relationship as needed. 
-
-.About this task
 When you delete a replication relationship, it removes the replication relationship between the source and target volume. After the replication relationship deletes, both volumes continue to exist independently with the current data they contain.
 
 When you delete a replication relationship, FSx for ONTAP also deletes the common replication snapshots of the source and target volume. 

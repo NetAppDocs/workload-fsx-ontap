@@ -55,8 +55,10 @@ Complete the following fields to set up file access to the volume.
 ... *NFS export policy*: Provide the following details to provide NFS access: 
 .... *Access control*: Select a *Custom export policy*, *Existing export policy*, or *No access to the volume* from the dropdown menu.
 .... *Export policy name*: 
-..... If you selected a custom export policy, select an existing policy name from the dropdown men.
-..... If you selected an existing export policy, enter a new policy name. 
++
+If you selected a custom export policy, select an existing policy name from the dropdown menu.
++
+If you selected an existing export policy, enter a new policy name. 
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
 ... *CIFS share*: Enter the CIFS share name to provide SMB access. 
 +

@@ -21,8 +21,6 @@ Consider the following limitations before you create a volume from a snapshot:
 
 * Increased volume consumption: After you create a volume from a snapshot, you have two independent volumes, and both consume capacity from the host file system.
 
-* Replication capabilities: Volumes created from a snapshot don't support volume replication.
-
 .Steps
 . Log in to the Workload Factory console. 
 . In Storage, select *Go to storage inventory*.

@@ -9,10 +9,7 @@ summary: Change the CIFS share for a volume that uses the SMB/CIFS protocol type
 :imagesdir: ./media/
 
 [.lead]
-Change the CIFS share for a volume that uses the SMB/CIFS protocol type. 
-
-.About this task
-Changing a volume's CIFS share involves determining the users and groups to give access to and the type of access to give them. 
+Changing a volume's CIFS share involves determining the users and groups to give access to and the type of access to give them.
 
 .Before you begin
 Determine the users or groups to give access to and the type of access to give them. 

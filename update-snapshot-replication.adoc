@@ -9,9 +9,6 @@ summary: Manually update snapshot data transferred between source and target vol
 :imagesdir: ./media/
 
 [.lead]
-Manually update snapshot data transferred between source and target volumes in a replication relationship at any time. 
-
-.About this task
 A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes when needed. 
 
 .Steps

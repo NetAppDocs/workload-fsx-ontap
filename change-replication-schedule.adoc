@@ -21,9 +21,10 @@ Choose how frequently snapshots from the source volume are transferred to the re
 . In the Replication relationships tab, click the three dots menu of the replication relationship schedule to change. 
 . Select *Edit replication interval*. 
 . In the Edit replication interval dialog, select the frequency of snapshot transfer from the source volume. You may select between the following frequencies: 
-.. Every 5 minutes
-.. Hourly
-.. Every 8 hours
-.. Daily
-.. Weekly
++
+* Every 5 minutes
+* Hourly
+* Every 8 hours
+* Daily
+* Weekly
 . Click *Apply*. 
