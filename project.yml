@@ -1,12 +1,173 @@
 settings:
-  name: "Product Name"
+  name: Amazon FSx for NetApp ONTAP
+  platform: cloud
   internal:
     pdf_enabled: true
+    termcheck_enabled: true
   prod:
     pdf_enabled: true
-  # harmony_enabled: true
+    harmony_enabled: true
+  rss_page: "whats-new.html"  
 
 sidebar: 
   entries:
-  - title: Legal notices
-    url: /legal-notices.html
+    - title: Amazon FSx for NetApp ONTAP docs
+      url: /index.html
+    - title: Release notes
+      entries:
+        - title: What's new
+          url: /whats-new.html
+        - title: Known limitations
+          url: /known-limitations.html
+    - title: Get started
+      entries:
+        - title: Learn about Amazon FSx for NetApp ONTAP
+          url: /learn-fsx-ontap.html
+        - title: Quick start
+          url: /quick-start.html
+        - title: Create an FSx for ONTAP file system
+          url: /create-file-system.html
+    - title: Use Amazon FSx for NetApp ONTAP
+      entries:
+        - title: Explore savings
+          url: /explore-savings.html
+        - title: Use links
+          entries: 
+            - title: Link overview
+              url: /links-overview.html
+            - title: Create a link
+              url: /create-link.html
+            - title: Manage links
+              url: /manage-links.html    
+        - title: Manage volumes
+          entries:
+            - title: Create a volume
+              url: /create-volume.html
+            - title: Access your data
+              url: access-data.html
+        - title: Create a storage VM
+          url: /create-storage-vm.html                
+        - title: Protect your data
+          entries:
+            - title: Data protection overview 
+              url: /data-protection-overview.html
+            - title: Manage snapshots
+              entries:
+                - title: Create a snapshot
+                  url: /create-snapshot.html
+                - title: Create a snapshot policy
+                  url: /create-snapshot-policy.html
+                - title: Restore a volume from a snapshot
+                  url: /restore-volume-from-snapshot.html 
+                - title: Create a new volume from a snapshot
+                  url: /create-volume-from-snapshot.html
+            - title: Manage backups to object storage
+              entries: 
+                - title: Create a manual backup
+                  url: /create-backup.html
+              #  - title: Set up a backup policy
+              #    url: /set-backup-policy.html  
+                - title: Restore a volume from a backup
+                  url: /restore-from-backup.html
+            - title: Manage replication
+              entries:
+                - title: Create a replication relationship
+                  url: /create-replication.html
+                - title: Initialize a replication relationship
+                  url: /initialize-replication.html
+            - title: Clone a volume
+              url: clone-volume.html       
+    - title: Administer and monitor
+      entries:
+        - title: Volume administration
+          entries:  
+          #  - title: View volume details
+          #    url: /view-volume-details.html
+            - title: Edit volume autogrow
+              url: /edit-volume-autogrow.html
+            - title: Increase volume capacity
+              url: /increase-volume-capacity.html
+            - title: Edit volume tags
+              url: /edit-volume-tags.html
+            - title: Rebalance a volume's capacity
+              url: /rebalance-volume.html
+            - title: Change the tiering policy
+              url: /change-tiering-policy.html   
+            - title: Change the NFS export policy
+              url: /change-nfs-export-policy.html  
+            - title: Change the CIFS share
+              url: /change-cifs-share.html 
+            - title: Split a cloned volume
+              url: split-cloned-volume.html    
+            - title: Delete a volume
+              url: /delete-volume.html
+        - title: File system administration
+          entries: 
+            - title: Increase file system capacity
+              url: /increase-file-system-capacity.html
+            - title: Enable automatic capacity management
+              url: /enable-auto-capacity-management.html
+            - title: Reset fsxadmin password
+              url: /reset-fsxadmin-password.html
+            - title: Delete a file system
+              url: /delete-file-system.html
+        - title: Storage VM administration
+          entries: 
+            - title: Replicate a storage VM to another file system
+              url: /replicate-svm-to-file-system.html
+            - title: Configure and update Active Directory for a storage VM
+              url: /configure-active-directory.html
+            - title: Edit storage VM tags
+              url: /edit-svm-tags.html
+            - title: Reset storage VM password
+              url: reset-svm-password.html
+            - title: Delete a storage VM 
+              url: /delete-svm.html
+        - title: Data protection administration
+          entries:
+            - title: Change the snapshot policy of a volume
+              url: change-snapshot-policy.html
+            - title: Update FSx for ONTAP backup schedule
+              url: /update-backup-schedule.html
+            - title: Enable and edit snapshots for long-term retention
+              url: /enable-snapshots-long-term.html
+          #  - title: Delete a snapshot
+          #    url: /delete-snapshot.html
+            - title: Reverse a replication relationship
+              url: /reverse-replication.html
+            - title: Change the replication schedule of a source volume
+              url: /change-replication-schedule.html
+            - title: Limit the max transfer rate of a replication relationship
+              url: /limit-transfer-rate.html
+            - title: Manual update of snapshot data in a replication relationship
+              url: /update-snapshot-replication.html
+            - title: Stop a replication relationship
+              url: /stop-replication.html
+            - title: Delete a replication relationship
+              url: /delete-replication.html 
+        - title: Performance administration
+          entries: 
+            - title: Provision IOPS for a file system
+              url: /provision-iops.html
+            - title: Update throughput capacity for a file system
+              url: /update-throughput-capacity.html  
+    - title: Reference
+      entries: 
+        - title: Performance for FSx for ONTAP
+          url: /performance-reference.html
+        - title: Security for FSx for ONTAP
+          url: /security-reference.html  
+    - title: Knowledge and support
+      entries:
+        - title: Register for support
+          url: /support-registration.html
+        - title: Get help
+          url: /get-help.html
+        - title: Troubleshooting
+          url: /troubleshooting.html          
+    - title: Legal notices
+      url: /legal-notices.html
+
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

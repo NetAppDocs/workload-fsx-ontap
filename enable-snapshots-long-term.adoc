@@ -1,0 +1,33 @@
+---
+sidebar: sidebar
+permalink: enable-snapshots-long-term.html
+keywords: snapshot long-term retention, enable long-term retention
+summary: Change the replication schedule of the source volume in a replication relationship. 
+---
+= Enable and edit snapshots for long-term retention
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Enable snapshots for long-term retention lets you replicate specific snapshots for long-term disaster recovery. 
+
+Long-term retention enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy. 
+
+The same steps apply for enabling and editing snapshots for long-term retention.
+
+.Steps
+. Log in to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, click the three dots menu of the replication relationship schedule to change. 
+. Select *Edit long-term retention*. 
+. In the Edit long-term retention dialog, enable or disable snapshots for long-term retention. 
+. If you select to disable snapshots for long-term retention, click *Apply* to complete this operation. 
+. If you select to enable snapshots for long-term retention, choose between selecting an existing policy or creating a new policy. 
+.. For an existing policy, select an existing policy from the dropdown menu. 
+.. To create a new policy, provide the following: 
+... *Policy name*: Enter a policy name. 
+... *Snapshot policies*: Select one or more snapshot policies. 
+... *Copies to retain*: Enter the number of snapshot copies to retain on the target file system. 
+. Click *Apply*. 

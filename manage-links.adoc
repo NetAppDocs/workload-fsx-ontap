@@ -1,0 +1,65 @@
+---
+sidebar: sidebar
+permalink: manage-links.html
+keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing
+summary: You can create and manage links to provide a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain features directly from the ONTAP file system that are not available through the AWS FSx for ONTAP APIs.
+---
+
+= Manage links
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manage links you've associated with your Workload Factory account. 
+
+link:links-overview.html[Learn more about links] or link:create-link.html[create a link]. 
+
+== View the links associated with your account
+You can view the links that are currently associated with your account.
+
+.Steps
+. Log in to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. From the Account menu, select *Links*.
++
+image:screenshot-links-button.png[A screenshot showing how to open the links page.]
+. If any links exist, the overview page provides the information.
+. To view the FSx for ONTAP file systems that are associated with a link, select the *View* button in the Associated resources section.
++
+image:screenshot-view-link-details.png[A screens that shows the FSx for ONTAP file systems that are using a specific link.]
+. If you need the Amazon Resource Name (ARN) for the link, you can select the _copy_ icon next to the ARN field. 
+
+== Associate a link with an FSx for ONTAP file system
+After you create a link, you can associate it with your FSx for ONTAP file systems. Each file system can be associated to only one link in a single NetApp account, but a link can be associated with many file systems. 
+
+.Steps
+. Log in to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three dots menu of the file system to associate a link to and then select *Manage*. 
+. In the file system overview, select *Associate link*.
+. In the Associate link page, select *Associate an existing link*, select the link, and select *Apply*.
+
+.Result
+
+The link is associated with the FSx for ONTAP file system and you can perform advanced ONTAP operations.
+
+== Edit a link
+You can't edit a link from the Workload Factory interface. If you need to make a change to a link, you'll need to create a new link and then associate that link to your file system.
+
+NOTE: You can edit the Lambda network configuration (for example VPC, subnets, and security groups) using the AWS console and the changes will be reflected in links management UI; however, these changes can lead to connectivity issues between Lambda and ONTAP, and are not recommended. 
+
+== Remove a link
+You can remove a link that you're no longer using in your environment. Any FSx for ONTAP file systems or other resources that were using the link will be unable to use certain functionality after the link is removed.
+
+Note that the link is only deleted from Workload Factory - it is not deleted from your AWS environment. You must delete the Lambda function from your AWS account after removing the link in Workload Factory.
+
+.Steps
+. Log in to the Workload Factory console. 
+. In Storage, select *Go to storage inventory*. 
+. From the Account menu, select *Links*.
+. From the Links page, select the menu button and select *Remove*.
++
+image:screenshot-remove-link.png[A screenshot showing how to remove a link from Workload Factory.]
+. If you are sure, select *Remove* again.
+
+Refer to the AWS documentation to link:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function[delete the Lambda function].
