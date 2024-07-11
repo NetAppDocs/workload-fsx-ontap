@@ -11,14 +11,13 @@ summary: You can delete a volume in your FSx for ONTAP file system at any time. 
 [.lead]
 You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible.
 
-//Volumes with the immutable files feature cannot be deleted until the retention period expires. 
-
 .Before you begin
 Consider the following before deleting a volume: 
 
 * Local snapshots: All snapshots associated with this FSx for ONTAP file system will be permanently deleted. 
 * FSx for ONTAP backup: FSx for ONTAP backup copies will remain and you can still use them. 
-* Replication relationships: We recommend that you link:delete-replication.html[delete any existing replication relationships] for this volume before deleting the volume so that no broken relationships remain. 
+* Replication relationships: We recommend that you link:delete-replication.html[delete any existing replication relationships] for this volume before deleting the volume so that no broken relationships remain.
+* Immutable files: Volumes containing immutable files powered by SnapLock cannot be deleted until the retention period expires. (add link to immutable files topic) 
 
 .Steps
 . Log in to the Workload Factory console. 
@@ -27,5 +26,8 @@ Consider the following before deleting a volume:
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three dots menu of the volume to delete. 
 . Select *Basic actions* then *Delete volume*. 
-. In the Delete volume dialog, type “delete” to delete the volume. 
-. Click *Delete*. 
+. In the Delete volume dialog, do the following: 
+.. Optionally, click *Back up the volume* to back up the volume before deletion.
+.. Click *Continue*. 
+.. Type “delete” to delete the volume. 
+.. Click *Delete*. 
