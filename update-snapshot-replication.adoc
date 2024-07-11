@@ -12,7 +12,7 @@ summary: Manually update snapshot data transferred between source and target vol
 A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes when needed. 
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 

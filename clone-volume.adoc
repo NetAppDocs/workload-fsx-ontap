@@ -21,7 +21,7 @@ When a volume is cloned, a writeable volume is created with references to snapsh
 For a cloned volume to contain all data from the parent volume and any new data added to the clone after creation, you'll need to link:split-cloned-volume.html[split the clone] from the parent volume. Additionally, you can't delete a parent volume if it has a clone. A clone must be split before a parent volume can be deleted. 
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
 . In Storage, select *Go to storage inventory*. 
 . Select the *Volumes* tab. 
 . In the Volumes tab, select the three dots menu of the volume to clone. 

@@ -45,7 +45,7 @@ Follow the steps under the tab for your storage selection.
 .Amazon Elastic Block Store (EBS)
 --
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
 . In Storage, select *Explore savings* then *Amazon Elastic Block Store (EBS)*. 
 . In the Storage savings calculator, provide the following details: 
 .. *Use case*: Select a use case from the dropdown menu. The selected use case determines the FSx for ONTAP file system characteristics for comparison. 
@@ -62,7 +62,7 @@ Follow the steps under the tab for your storage selection.
 .Amazon FSx for Windows File Server
 --
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
 . In Storage, select *Explore savings* then *Amazon FSx for Windows File Server*.
 . In the Storage savings calculator, provide the following details: 
 .. *Use case*: Select a use case from the dropdown menu. The selected use case determines the FSx for ONTAP file system characteristics for comparison. 
@@ -81,7 +81,7 @@ Follow the steps under the tab for your storage selection.
 .Amazon Elastic File System (EFS)
 --
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
 . In Storage, select *Explore savings* then *Amazon Elastic File System (EFS)*. 
 . In the Storage savings calculator, provide the following details: 
 .. *Use case*: Select a use case from the dropdown menu. The selected use case determines the FSx for ONTAP file system characteristics for comparison. 

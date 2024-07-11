@@ -12,7 +12,7 @@ summary: Update the FSx for ONTAP backup schedule when needed.
 Update the FSx for ONTAP backup schedule when needed. 
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
 . In Storage, click *Go to Storage inventory*. 
 . In the *FSx for ONTAP* tab, click the three dots menu of the file system to update the backup schedule for and then select *Manage*. 
 . Under Information, click the pencil icon next to *FSx for ONTAP backup*. The pencil icon appears next to the dropdown arrow when the mouse hovers over the *FSx for ONTAP backup* row. 
