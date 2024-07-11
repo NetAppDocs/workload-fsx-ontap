@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files
 summary: Make your files permanently immutable with the immutable files feature. 
 ---
-= Increase volume capacity
+= Manage immutable files
 :icons: font
 :imagesdir: ./media/
 
