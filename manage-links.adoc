@@ -18,7 +18,7 @@ link:links-overview.html[Learn more about links] or link:create-link.html[create
 You can view the links that are currently associated with your account.
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
 . In Storage, select *Go to storage inventory*. 
 . From the Account menu, select *Links*.
 +
@@ -33,7 +33,7 @@ image:screenshot-view-link-details.png[A screens that shows the FSx for ONTAP fi
 After you create a link, you can associate it with your FSx for ONTAP file systems. Each file system can be associated to only one link in a single NetApp account, but a link can be associated with many file systems. 
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three dots menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Associate link*.
@@ -54,7 +54,7 @@ You can remove a link that you're no longer using in your environment. Any FSx f
 Note that the link is only deleted from Workload Factory - it is not deleted from your AWS environment. You must delete the Lambda function from your AWS account after removing the link in Workload Factory.
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
 . In Storage, select *Go to storage inventory*. 
 . From the Account menu, select *Links*.
 . From the Links page, select the menu button and select *Remove*.

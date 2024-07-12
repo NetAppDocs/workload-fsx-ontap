@@ -15,7 +15,7 @@ Replicating a storage VM to another FSx for ONTAP file system provides a protect
 To replicate a storage VM to another FSx for ONTAP file system, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, click *Associate link* under *Account name*. Once the link associates, return to this operation. 
 
 .Steps
-. Log in to the Workload Factory console. 
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three dots menu of the file system with the storage VM to replicate and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.

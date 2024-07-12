@@ -16,7 +16,7 @@ Alternatively, you can link:enable-auto-capacity-management.html[enable the auto
 .About this task
 Increasing file system capacity impacts IOPS for your FSx for ONTAP file system. 
 
-When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases by 3 IOPS with every 1 GiB increase in SSD capacity. For example, if you provision 100 TiB (102,400 GiB) of SSD capacity, IOPS will increase by 300 TiB (307,200 GiB). 
+When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases by 3 IOPS with every 1 GiB increase in SSD capacity. 
 
 When you link:provision-iops.html[provision IOPS] manually, you may need to increase your IOPS allocation to support the increased file system capacity. 
 
