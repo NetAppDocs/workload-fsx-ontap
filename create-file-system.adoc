@@ -24,6 +24,8 @@ Before creating your FSx for ONTAP file system, you will need:
 == Create an FSx for ONTAP file system
 You can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
+NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code.  
+
 [role="tabbed-block"]
 ====
 

@@ -130,3 +130,7 @@ Auto is the default tiering policy when creating a volume using the Workload Fac
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
 .. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
 . Click *Create*. 
+
+.Result
+Volume creation is initiated. Once created, the new volume will appear in the Volumes tab. 
+

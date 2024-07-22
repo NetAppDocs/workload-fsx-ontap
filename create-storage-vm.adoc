@@ -21,6 +21,8 @@ Verify the supported number of storage VMs per file system. Refer to link:https:
 
 You can create a storage VM from the Workload Factory console. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
+NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. 
+
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
 . In Storage, select *Go to storage inventory*. 

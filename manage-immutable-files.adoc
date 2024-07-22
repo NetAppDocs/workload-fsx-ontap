@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files
-summary: You can update certain immutable files settings when the feature is enabled.  
+summary: You can update certain immutable files settings for a volume when the feature is enabled.  
 ---
-= Manage immutable files
+= Manage immutable files for a volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-You can update certain immutable files settings when the feature is enabled, such as the retention policy and periods, the autocommit period, privileged delete, and volume append mode.
+You can update certain immutable files settings for a volume when the feature is enabled, such as the retention policy and periods, the autocommit period, privileged delete, and volume append mode.
 
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
@@ -28,6 +28,11 @@ Unspecified: The default minimum period is "0" years and the default maximum per
 .. Under *Privileged delete*, enable or disable the feature. Enabling the feature allows a SnapLock administrator to delete an unexpired WORM volume. This feature is only supported in Enterprise retention mode. 
 .. Under *Volume append mode*, enable or disable the feature. Enabling volume append mode enables you to add new content to WORM files. 
 . Click *Apply*. 
+
+.Result
+The updates now apply to the volume. 
+
+If you'd like to enable immutable files for a new volume, you can during link:create-volume.html[volume creation].
 
 //Future update:
 //If users can enable or disable the immutable files feature from this workflow, use the following lead: 
