@@ -14,7 +14,9 @@ Make your files permanently immutable with the immutable files feature. This fea
 .About this task
 Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
 
-You can disable the feature at any time. 
+Enabling this feature is possible only during volume creation. 
+
+Once enabled, this feature cannot be disabled. 
 
 Retention modes:::
 You can select from two retention modes - Enterprise or Compliance. 
@@ -54,18 +56,20 @@ Unspecified: The default minimum period is "0" years and the default maximum per
 . Under *Volume append mode*, enable or disable the feature. Enabling volume append mode enables you to add new content to WORM files. 
 . Click *Apply*. 
 
-== Disable the immutable files feature
-Disabling immutable files allows volumes to be modified or deleted.
+// Disabling the feature is currently unavailable. Add if it becomes available. - Rachel Lithman
 
-Follow the steps to disable the immutable files features for any volume. 
+//== Disable the immutable files feature
+//Disabling immutable files allows volumes to be modified or deleted.
 
-.Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
-. In Storage, select *Go to storage inventory*. 
-. Select the *Volumes* tab. 
-. In the Volumes tab, select the three dots menu of the volume to clone. 
-. Select *Data protection actions*, then *Manage immutable files*. 
-. Disable *Immutable files powered by SnapLock*.
-. In the Disable immutable files dialog, read and accept the statement. 
-. Click *Disable*.
-. On the Manage immutable files page, click *Apply*. 
+//Follow the steps to disable the immutable files features for any volume. 
+
+//.Steps
+//. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
+//. In Storage, select *Go to storage inventory*. 
+//. Select the *Volumes* tab. 
+//. In the Volumes tab, select the three dots menu of the volume to clone. 
+//. Select *Data protection actions*, then *Manage immutable files*. 
+//. Disable *Immutable files powered by SnapLock*.
+//. In the Disable immutable files dialog, read and accept the statement. 
+//. Click *Disable*.
+//. On the Manage immutable files page, click *Apply*. 
