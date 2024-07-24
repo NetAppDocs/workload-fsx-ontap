@@ -11,6 +11,18 @@ summary: Learn what's new with Amazon FSx for NetApp ONTAP.
 [.lead]
 Learn what's new with Amazon FSx for NetApp ONTAP.
 
+== 4 August
+
+=== Terraform support 
+You can now use Terraform from the Codebox to deploy and manage file systems and storage VMs. 
+
+* link:create-file-system.html[Create a file system]
+* link:create-storage-vm.html[Create a storage VM]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]
+
+=== Throughput and IOPS recommendations in the storage calculator   
+Throughput and IOPS recommendations are now based on AWS best practices.  
+
 == 7 July
 Amazon FSx for NetApp ONTAP is now generally available in BlueXP Workload Factory. 
 
