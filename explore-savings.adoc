@@ -24,13 +24,13 @@ If you have enabled _read_ or _automate_ mode (link:https://docs.netapp.com/us-e
 
 This figure shows the volumes on FSx for Windows File Server systems that have been discovered in an AWS account.
 
-image:screenshot-storage-inventory.png[The storage inventory page showing your current inventory of volumes on FSx for Windows File Servers.]
+image:screenshot-storage-inventory.png["The storage inventory page showing your current inventory of volumes on FSx for Windows File Servers."]
 
 If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the characteristics required for a storage system you are planning to deploy and the storage calculator will determine the best file system based on cost. You can use this method to scope a new FSx for ONTAP file system while using _automate_ mode as well.
 
 This figure shows the storage calculator page with a comparison between FSx for ONTAP and EBS storage.
 
-image:screenshot-ebs-calculator.png[The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage.]
+image:screenshot-ebs-calculator.png["The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage."]
 
 .Before you begin
 For Workload Factory to detect Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server storage environments in your AWS account, make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account.
