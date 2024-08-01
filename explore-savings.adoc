@@ -22,7 +22,7 @@ In manual mode, you provide the configuration settings for a storage environment
 
 In automatic mode, Workload Factory links to your existing AWS storage environments and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use automatic mode. You can change the use case, but all other details are automatically determined in the calculation. 
 
-=== Explore savings in manual mode
+== Explore savings in manual mode
 Follow the steps under the tab for your storage selection. 
 
 [role="tabbed-block"]
@@ -86,7 +86,7 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View the
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy FSx for ONTAP file systems,deploy FSx for ONTAP file systems>>.
 
-=== Explore savings in automatic mode
+== Explore savings in automatic mode
 Follow the steps under the tab for your storage selection.
 
 NOTE: Automatic mode doesn't support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
