@@ -80,6 +80,12 @@ Follow the steps under the tab for your storage selection.
 --
 ====
 
+After you provide details for your storage system configuration, review the calculations and recommendations provided on the page. 
+
+Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
+
+To switch to FSx for ONTAP, follow the instructions to <<Deploy FSx for ONTAP file systems,deploy FSx for ONTAP file systems>>.
+
 === Explore savings in automatic mode
 
 .Before you begin
