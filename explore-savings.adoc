@@ -11,7 +11,7 @@ summary: Explore savings for your storage workloads in Amazon Elastic Block Stor
 [.lead]
 Explore savings for your storage workloads which use Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server against FSx for NetApp ONTAP. 
 
-Workload Factory has a built-in storage savings calculator so that you can compare your Amazon storage environments to FSx for ONTAP. You can explore savings with or without providing your AWS credentials and manually customize configuration settings for your storage environment. You can provide your AWS credentials, select one or more instances of Amazon Elastic Block Store, for example, and let Workload Factory make the comparison automatically. Either way, you'll determine which storage service provides the lowest cost. 
+Workload Factory has a built-in storage savings calculator so that you can compare your Amazon storage environments to FSx for ONTAP. You can explore savings with or without providing your AWS credentials and manually customize configuration settings for your storage environment. When you provide AWS credentials, you can select one or more instances of Amazon Elastic Block Store, for example, and let Workload Factory make the comparison automatically. Whether manually or automatically, the calculator determines which storage service provides the lowest cost for your storage needs. 
 
 If the storage calculator determines that the most cost-effective storage is FSx for ONTAP, you can create or save FSx for ONTAP configurations and use the Codebox to generate Infrastructure-as-Code templates in manual or automatic mode regardless of the permissions you grant to Workload Factory.
 
