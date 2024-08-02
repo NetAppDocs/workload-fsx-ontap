@@ -19,6 +19,8 @@ With SVMs, when you access data in FSx for ONTAP, your clients and workstations 
 .Before you begin
 Verify the supported number of storage VMs per file system. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[Managing FSx for ONTAP storage virtual machines^] in AWS documentation for the maximum number of SVMs per file system. 
 
+== Create a storage VM
+
 You can create a storage VM from the Workload Factory console. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
 NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. 
