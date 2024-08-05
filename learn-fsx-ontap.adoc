@@ -38,6 +38,14 @@ FSx for ONTAP offers the following features:
 * *Workload Factory user interface*: Provides _Quick create_ and _Advanced create_ deployment mode options. Quick create includes AWS, NetApp, and industry standard best practices for your storage configurations.
 * *Codebox*: provides developers with a code viewer for FSx for ONTAP operations, code templates for copy and download, and an automation catalog for code re-use.
 
+== Tools to use Workload Factory
+You can use BlueXP Workload Factory with the following tools:
+
+* *Workload Factory console*: the Workload Factory console provides a visual interface that gives you a holistic view of your applications and projects
+* *REST API*: Workload Factory REST APIs let you deploy and manage your FSx for ONTAP file systems and other AWS resources
+* *CloudFormation*: AWS CloudFormation code lets you perform the actions you defined in the Workload Factory console to model, provision, and manage AWS and third-party resources from the CloudFormation stack in your AWS account.
+* *Terraform BlueXP Workload Factory Provider*: Terraform lets you build and manage infrastructure workflows generated in the Workload Factory console.
+
 == Cost
 Your FSx for ONTAP account is maintained by AWS and not by Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
 

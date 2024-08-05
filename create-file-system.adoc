@@ -22,7 +22,9 @@ Before creating your FSx for ONTAP file system, you will need:
 * The region and VPC information for where you will create the FSx for ONTAP instance.
 
 == Create an FSx for ONTAP file system
-You can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. 
+You can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+
+NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code.  
 
 [role="tabbed-block"]
 ====
@@ -84,7 +86,7 @@ If you created the file system, you can now view the FSx for ONTAP file system i
 With Advanced create, you set all of the configuration options, including availability, security, backups, and maintenance. 
 
 .Steps
-. Go to the Workload Factory console.
+. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
 . In Storage, select *Create FSx for ONTAP*.  
 . On the Create FSx for ONTAP page, select *Advanced create*. 
 +
