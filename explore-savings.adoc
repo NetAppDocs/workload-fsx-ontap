@@ -16,13 +16,13 @@ Workload Factory has a built-in storage savings calculator so that you can compa
 If the storage calculator determines that the most cost-effective storage is FSx for ONTAP, you can create or save FSx for ONTAP configurations and use the Codebox to generate Infrastructure-as-Code templates in manual or automatic mode regardless of the permissions you grant to Workload Factory.
 
 == Calculator options
-Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP -- manual mode and automatic mode. 
+Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP -- customization and automatic detection for your Amazon storage environments and customization. 
 
-In manual mode, you provide the configuration settings for a storage environment including the use case, region, number of volumes or file systems, storage amount, snapshot frequency, amount changed per snapshot, provisioned IOPS, throughput, and more. 
+Explore savings via customization: You provide the configuration settings for a storage environment including the use case, region, number of volumes or file systems, storage amount, snapshot frequency, amount changed per snapshot, provisioned IOPS, throughput, and more. 
 
-In automatic mode, Workload Factory links to your existing AWS storage environments and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use automatic mode. You can change the use case, but all other details are automatically determined in the calculation. 
+Explore savings for detected storage environments: Workload Factory links to your existing AWS storage environments and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use automatic mode. You can change the use case, but all other details are automatically determined in the calculation. 
 
-== Explore savings in manual mode
+== Explore savings via customization
 Follow the steps under the tab for your storage selection. 
 
 [role="tabbed-block"]
@@ -86,7 +86,7 @@ Additionally, scroll down to the bottom of the page to *Export PDF* or *View the
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy FSx for ONTAP file systems,deploy FSx for ONTAP file systems>>.
 
-== Explore savings in automatic mode
+== Explore savings for detected storage environments
 Follow the steps under the tab for your storage selection.
 
 NOTE: Automatic mode doesn't support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
