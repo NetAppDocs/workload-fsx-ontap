@@ -21,17 +21,17 @@ If Workload Factory determines that you could save money by running these worklo
 == Provide your system requirements
 
 If you have enabled _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[learn more about modes]) by adding AWS credentials to your Workload Factory account, then Workload Factory can identify all the storage systems that are available in your AWS account and display the characteristics of the volumes on those systems in the Storage inventory page. The AWS account that is searched is based on the credentials you've defined in your Workload Factory account.
-//add _read_ mode above when it is supported
+//Add _read_ mode when supported. 
 
 This figure shows the volumes on FSx for Windows File Server systems that have been discovered in an AWS account.
 
-image:screenshot-storage-inventory.png[The storage inventory page showing your current inventory of volumes on FSx for Windows File Servers.]
+image:screenshot-storage-inventory.png["The storage inventory page showing your current inventory of volumes on FSx for Windows File Servers."]
 
 If you haven't added credentials to link your Workload Factory account with an AWS account (called _basic_ mode), you can manually enter the characteristics required for a storage system you are planning to deploy and the storage calculator will determine the best file system based on cost. You can use this method to scope a new FSx for ONTAP file system while using _automate_ mode as well.
 
 This figure shows the storage calculator page with a comparison between FSx for ONTAP and EBS storage.
 
-image:screenshot-ebs-calculator.png[The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage.]
+image:screenshot-ebs-calculator.png["The storage calculator page with a comparison between FSx for ONTAP and Elastic Block Store storage."]
 
 .Before you begin
 For Workload Factory to detect Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server storage environments in your AWS account, make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account.
@@ -106,4 +106,5 @@ Deployment methods:::
 In _automate_ mode, you can deploy the FSx for ONTAP file system directly from Workload Factory. You can also copy the content from the Codebox window and deploy the system using one of the Codebox methods.
 +
 In  _basic_ mode, you can copy the content from the Codebox window and deploy the FSx for ONTAP file system using one of the Codebox methods.
+
 
