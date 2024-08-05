@@ -16,7 +16,7 @@ Workload Factory has a built-in storage savings calculator so that you can compa
 If the storage calculator determines that the most cost-effective storage is FSx for ONTAP, you can create or save FSx for ONTAP configurations and use the Codebox to generate Infrastructure-as-Code templates regardless of the permissions you grant to Workload Factory.
 
 == Calculator options
-Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP -- customization and automatic detection for your Amazon storage environments and customization. 
+Two calculator options are available for making the cost comparison between your systems and FSx for ONTAP -- customization and automatic detection for your Amazon storage environments. 
 
 Explore savings via customization: You provide the configuration settings for a storage environment including the use case, region, number of volumes or file systems, storage amount, snapshot frequency, amount changed per snapshot, provisioned IOPS, throughput, and more. 
 
