@@ -89,7 +89,7 @@ To switch to FSx for ONTAP, follow the instructions to <<Deploy FSx for ONTAP fi
 == Explore savings for detected storage environments
 Follow the steps under the tab for your storage selection.
 
-NOTE: Automatic mode doesn't support calculations for EBS snapshots and FSx for Windows File Server shadow copies. In manual mode, you can provide EBS and FSx for Windows File Server snapshot details.   
+NOTE: This calculator option doesn't support calculations for EBS snapshots and FSx for Windows File Server shadow copies. When exploring savings via customization, you can provide EBS and FSx for Windows File Server snapshot details.   
 
 [role="tabbed-block"]
 ====
