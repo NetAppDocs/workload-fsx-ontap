@@ -11,8 +11,8 @@ summary: Known limitations identify platforms, devices, or functions that are no
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product in Workload Factory, or that do not interoperate correctly with it. Review these limitations carefully.
 
-== Operational modes
-_Read_ mode isn't currently available. 
+//== Operational modes
+//_Read_ mode isn't currently available. 
 
 == Link
 A link is required to complete some operations like replication in the Workload Factory user interface. 
