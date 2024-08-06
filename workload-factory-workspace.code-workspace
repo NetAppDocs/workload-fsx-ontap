@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "../workload-databases-internal"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../workload-setup-admin-internal"
+		},
+		{
+			"name": "workload-relnotes-internal",
+			"path": "../workload-relnotes-internal"
+		}
+	],
+	"settings": {}
+}
