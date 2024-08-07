@@ -12,7 +12,18 @@ summary: Learn what's new with Amazon FSx for NetApp ONTAP.
 Learn what's new with Amazon FSx for NetApp ONTAP.
 
 == 4 August 2024
-include::_whatsnew/2024-08-04.adoc[]
+
+=== Terraform support 
+You can now use Terraform from the Codebox to deploy and manage file systems and storage VMs. 
+
+* link:create-file-system.html[Create a file system]
+* link:create-storage-vm.html[Create a storage VM]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]
+
+=== Throughput and IOPS recommendations in the storage calculator   
+The storage calculator makes FSx for ONTAP file system configuration recommendations for throughput and IOPS based on AWS best practices, which provides you with optimal guidance for your selections.
 
 == 7 July 2024
-include::_whatsnew/2024-07-07.adoc[]
+
+=== Initial release of Workload Factory for Databases
+The initial release includes the capability to explore savings with Amazon FSx for NetApp ONTAP as the storage environment for your database workloads, detect, manage, and deploy Microsoft SQL Servers, deploy and clone databases, and monitor these jobs within Workload Factory.
