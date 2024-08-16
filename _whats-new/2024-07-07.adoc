@@ -1,4 +1,0 @@
-=== Initial release of Workload Factory for Databases
-The initial release includes the capability to explore savings with Amazon FSx for NetApp ONTAP as the storage environment for your database workloads, detect, manage, and deploy Microsoft SQL Servers, deploy and clone databases, and monitor these jobs within Workload Factory.
-
-link:learn-databases.html[Learn about Databases].
