@@ -18,3 +18,4 @@ include::_whatsnew/2024-08-04.adoc[]
 == 7 July 2024
 
 include::_whatsnew/2024-07-07.adoc[]
+
