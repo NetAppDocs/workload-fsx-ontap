@@ -1,0 +1,9 @@
+=== Terraform support 
+You can now use Terraform from the Codebox to deploy and manage file systems and storage VMs. 
+
+* link:create-file-system.html[Create a file system]
+* link:create-storage-vm.html[Create a storage VM]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]
+
+=== Throughput and IOPS recommendations in the storage calculator   
+The storage calculator makes FSx for ONTAP file system configuration recommendations for throughput and IOPS based on AWS best practices, which provides you with optimal guidance for your selections.
