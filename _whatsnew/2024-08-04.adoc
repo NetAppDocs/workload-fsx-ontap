@@ -1,5 +1,5 @@
 === Terraform support 
-You can now use Terraform from the Codebox to deploy and manage file systems and storage VMs. 
+You can now use Terraform from the Codebox to deploy file systems and storage VMs. 
 
 * link:create-file-system.html[Create a file system]
 * link:create-storage-vm.html[Create a storage VM]
