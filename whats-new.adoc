@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx
+keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx for netapp ontap, fsx for ontap
 summary: Learn what's new with Amazon FSx for NetApp ONTAP.
 ---
 = What's new
@@ -18,3 +18,4 @@ include::_whatsnew/2024-08-04.adoc[]
 == 7 July 2024
 
 include::_whatsnew/2024-07-07.adoc[]
+
