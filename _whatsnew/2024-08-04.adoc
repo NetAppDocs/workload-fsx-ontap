@@ -1,8 +1,8 @@
 === Terraform support 
-You can now use Terraform from the Codebox to deploy file systems and storage VMs. 
+You can now use Terraform from the Codebox to deploy and manage file systems and storage VMs. 
 
-* link:create-file-system.html[Create a file system]
-* link:create-storage-vm.html[Create a storage VM]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create a file system]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html[Create a storage VM]
 * link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html[Use Terraform from Codebox^]
 
 === Throughput and IOPS recommendations in the storage calculator   
