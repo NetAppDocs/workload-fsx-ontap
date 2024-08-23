@@ -9,7 +9,7 @@ settings:
     harmony_enabled: true
   rss_page: "whats-new.html"  
   release_notes_autogen:
-    release_notes_repo: workload-relnotes   
+    release_notes_repo: workload-relnotes
 sidebar: 
   entries:
     - title: Amazon FSx for NetApp ONTAP docs

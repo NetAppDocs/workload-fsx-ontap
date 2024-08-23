@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: clone-volume.html
-keywords: clone volume
+keywords: clone volume, clone, clone data 
 summary: Clone a volume to make a read-write volume of the original volume for testing. 
 ---
 = Clone a volume
