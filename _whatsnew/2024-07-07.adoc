@@ -1,0 +1,2 @@
+=== Initial release of Workload Factory for Amazon FSx for NetApp ONTAP
+Amazon FSx for NetApp ONTAP is now generally available in Workload Factory. 
