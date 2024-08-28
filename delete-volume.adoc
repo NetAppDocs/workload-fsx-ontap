@@ -27,11 +27,10 @@ Consider the following before deleting a volume:
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three dots menu of the volume to delete. 
 . Select *Basic actions* then *Delete volume*. 
-. In the Delete volume dialog, type "delete" to delete the volume.
-. Click *Delete*. 
-//Replace current instructions when backup before deletion is available.
-//. In the Delete volume dialog, do the following: 
-//.. Optionally, click *Back up the volume* to back up the volume before deletion.
-//.. Click *Continue*. 
-//.. Type “delete” to delete the volume. 
-//.. Click *Delete*. 
+. In the Delete volume dialog, do the following: 
+.. Optionally, click *Back up the volume* to back up the volume before deletion.
++
+The backup will remain in the file system until you manually delete it. 
+.. Click *Continue*. 
+.. Type “delete” to delete the volume. 
+.. Click *Delete*. 
