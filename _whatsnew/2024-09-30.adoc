@@ -1,0 +1,11 @@
+=== Link creation update    
+Two link creation options are available. You can create a link with automatic registration or with manual registration. 
+
+link:https:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.adoc[Create a link^]
+
+=== Tab views in storage inventory
+Your storage inventory has been updated to a two-tab view: 
+
+* FSx for ONTAP: displays the FSx for ONTAP file systems you currently have.
+* Explore savings: displays Elastic Block Store, FSx for Windows File Server, and Elastic File Systems storage systems. From there, you can explore savings for these systems by comparing them with FSx for ONTAP. 
+
