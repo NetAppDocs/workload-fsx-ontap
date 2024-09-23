@@ -103,10 +103,7 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 +
 You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
 . Return to the Workload Factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
-
-[role="tabbed-block"]
-====
-
+--
 .Create manually
 --
 Create a link manually. With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload Factory manually registers the link for you. 
@@ -135,6 +132,7 @@ After you successfully create the stack, paste the Lambda ARN in the text box.
 +
 You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
 . Return to the Workload Factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
+
 --
 ====
 
