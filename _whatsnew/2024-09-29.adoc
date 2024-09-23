@@ -1,6 +1,6 @@
 === Link creation updates    
 
-* Codebox viewer: Codebox is now integrated in the link creation process. You can view the CloudFormation template from the Codebox in Workload Factory before redirecting to AWS to execute the operation.  
+* Codebox viewer: Codebox is now integrated in the link creation process. You can view the CloudFormation template from Codebox in Workload Factory before redirecting to AWS to execute the operation.  
 
 * Required permissions: The permissions required to execute the link creation in AWS CloudFormation are now available to view and copy from the Create Link wizard in Workload Factory.
 
