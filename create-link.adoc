@@ -24,8 +24,8 @@ You'll need to launch an AWS CloudFormation stack in your AWS account to create 
 
 You have two options for creating links - automatically or manually. 
 
-* Automatically: Creates a link with automatic registration via Workload Factory. A link created automatically requires tokens for Workload Factory automation and the CloudFormation code is short-lived. It can only be used for about 6-24 hours. 
-* Manually: Creates a link with manual registration. The CloudFormation code persists giving you more time to complete the operation. This is useful when working with different teams like DevOps which may need to first grant the permissions necessary to complete link creation.
+* Automatically: Creates a link with automatic registration via Workload Factory. A link created automatically requires tokens for Workload Factory automation and the CloudFormation code is short-lived. It can only be used for up to 6 hours. 
+* Manually: Creates a link with manual registration. The CloudFormation code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps which may first need to grant the permissions necessary to complete link creation.
 
 .Before you begin
 * You should consider which link creation option you'll use. 
@@ -72,7 +72,7 @@ You have two options for creating links - automatically or manually.
 
 .Create automatically
 --
-Create a link automatically. 
+Use CloudFormation to automatically create and register the link within Workload Factory. 
 
 .Steps
 
@@ -106,7 +106,7 @@ You can monitor the link creation status from the Events page. This should take 
 --
 .Create manually
 --
-Create a link manually. With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload Factory manually registers the link for you. 
+With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload Factory manually registers the link for you. 
 
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
