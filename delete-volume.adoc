@@ -14,9 +14,9 @@ You can delete a volume in your FSx for ONTAP file system at any time. This oper
 .Before you begin
 Consider the following before deleting a volume: 
 
+* Replication relationships: You must link:delete-replication.html[delete all existing replication relationships] for this volume before deleting the volume so that no broken relationships remain.
 * Local snapshots: All snapshots associated with this FSx for ONTAP file system will be permanently deleted. 
 * FSx for ONTAP backup: FSx for ONTAP backup copies will remain and you can still use them. 
-* Replication relationships: We recommend that you link:delete-replication.html[delete any existing replication relationships] for this volume before deleting the volume so that no broken relationships remain.
 //Add when immutable files releases
 //* Immutable files: Volumes containing link:manage-immutable-files.html[immutable files] powered by SnapLock cannot be deleted until the retention period expires. 
 
