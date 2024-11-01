@@ -17,7 +17,7 @@ The same steps apply for configuring and updating Active Directory for a storage
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three dots menu of the file system with the storage VM to update and then select *Manage*.
+. In the *FSx for ONTAP* tab, click on the three-dot menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
 . From the Storage VMs tab, select the three dots menu of the storage VM to configure Active Directory for.
 . Select *Manage AD configuration*. 
@@ -34,11 +34,11 @@ Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
 The OU is the distinguished path name of the organizational unit to which you want to join your file system.
 .. *Delegated administrators group*: Optionally, enter the delegated file system administrators group. 
 +
-The deleted administrators group is the name of the group in your Active Directory that can administer your file system.
+The delegated administrators group is the name of the group in your Active Directory that can administer your file system.
 +
 If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
 +
-If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
+If you are connecting to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
 
 . Click *Apply*. 
 

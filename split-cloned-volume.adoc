@@ -9,7 +9,7 @@ summary: Split a clone FlexVol volume from its parent volume to make the clone a
 :imagesdir: ./media/
 
 [.lead]
-Split a clone FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume. 
+Split a cloned FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume. 
 
 Data is accessible on the clone and the parent during the split. The split process only updates metadata and requires minimal IO. No data blocks are copied.
 
