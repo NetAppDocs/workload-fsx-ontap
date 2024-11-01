@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-link.html
 keywords: links, add, add links, add link, create link
-summary: You can create and manage links to provide a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems.
+summary: You can create and manage links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems.
 ---
 
 = Create a link
@@ -10,7 +10,7 @@ summary: You can create and manage links to provide a trust relationship and con
 :imagesdir: ./media/
 
 [.lead]
-You can create and manage links to provide a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
+You can create and manage links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
 
 link:links-overview.html[Learn more about links].
 
@@ -24,7 +24,7 @@ You'll need to launch an AWS CloudFormation stack in your AWS account to create 
 
 You have two options for creating links - automatically or manually. 
 
-* Automatically: Creates a link with automatic registration via Workload Factory. A link created automatically requires tokens for Workload Factory automation and the CloudFormation code is short-lived. It can only be used for up to 6 hours. 
+* Automatically: Creates a link with automatic registration via workload factory. A link created automatically requires tokens for workload factory automation and the CloudFormation code is short-lived. It can only be used for up to 6 hours. 
 * Manually: Creates a link with manual registration. The CloudFormation code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps which may first need to grant the permissions necessary to complete link creation.
 
 .Before you begin
@@ -72,11 +72,11 @@ You have two options for creating links - automatically or manually.
 
 .Create automatically
 --
-Use CloudFormation to automatically create and register the link within Workload Factory. 
+Use CloudFormation to automatically create and register the link within workload factory. 
 
 .Steps
 
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three dots menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Associate link*.
@@ -92,7 +92,7 @@ The Redirect to CloudFormation dialog appears and explains how to create the lin
 . Select *Continue* to open the AWS Management Console, and then log in to the AWS account for this FSx for ONTAP file system.
 . On the Quick create stack page, under Capabilities, select *I acknowledge that AWS CloudFormation might create IAM resources*.
 +
-Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload Factory uses these permissions when using links.
+Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload factory uses these permissions when using links.
 +
 [source,json]
 "lambda:InvokeFunction",
@@ -102,14 +102,14 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 . Select *Create stack* and then select *Continue*.
 +
 You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
-. Return to the Workload Factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
+. Return to the workload factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
 --
 .Create manually
 --
-With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload Factory manually registers the link for you. 
+With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload factory manually registers the link for you. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three dots menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Associate link*.
@@ -119,7 +119,7 @@ With this option, you extract the ARN for the link from AWS CloudFormation and r
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 .. *Link registration*: Click on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service. Follow the instructions. 
 +
-Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload Factory uses these permissions when using links.
+Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload factory uses these permissions when using links.
 +
 [source,json]
 "lambda:InvokeFunction",
@@ -131,7 +131,7 @@ After you successfully create the stack, paste the Lambda ARN in the text box.
 . Click *Create*. 
 +
 You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
-. Return to the Workload Factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
+. Return to the workload factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
 
 --
 ====

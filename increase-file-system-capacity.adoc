@@ -11,7 +11,7 @@ summary: Manually increase the SSD storage capacity of an FSx for ONTAP file sys
 [.lead]
 Manually increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify. 
 
-Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so Workload Factory manages file system capacity for you. 
+Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so workload factory manages file system capacity for you. 
 
 .About this task
 Increasing file system capacity impacts IOPS for your FSx for ONTAP file system. 
@@ -26,7 +26,7 @@ For SSD storage capacity limits, refer to link:https://docs.aws.amazon.com/fsx/l
 To increase capacity for a file system, you must first link:enable-auto-capacity-management.html[disable automatic capacity management]. 
 
 .Steps
-. Log in to the the Workload Factory console. 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, click *Go to Storage inventory*. 
 . In the *FSx for ONTAP* tab, click the three dots menu of the file system to increase capacity for. 
 . Select *Manage*. 

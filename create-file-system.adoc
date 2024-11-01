@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
 permalink: create-file-system.html
-keywords: create, FSx file system, ONTAP file system, Workload Factory, storage
-summary: Using Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
+keywords: create, FSx file system, ONTAP file system, workload factory, storage
+summary: Using workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 ---
 = Create an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Using Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
+Using workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 
 .About this task
 A storage VM is created when you create a file system. 
@@ -17,7 +17,7 @@ A storage VM is created when you create a file system.
 .Before you begin
 Before creating your FSx for ONTAP file system, you will need:
 
-* The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^].
+* The ARN of an IAM role that gives workload factory the permissions needed to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^].
 
 * The region and VPC information for where you will create the FSx for ONTAP instance.
 
@@ -34,13 +34,13 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 Quick create enables you to use a recommended best-practice configuration. You can change most settings after you create an FSx for ONTAP file system. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Create FSx for ONTAP*.  
 . On the Create FSx for ONTAP page, select *Quick create*. 
 +
 You can also load a saved configuration.
 . Under File system general configuration, provide the following: 
-.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
+.. *AWS credentials*: Select to add AWS credentials in workload factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Deployment topology*: Select a deployment topology. 
 +
@@ -86,13 +86,13 @@ If you created the file system, you can now view the FSx for ONTAP file system i
 With Advanced create, you set all of the configuration options, including availability, security, backups, and maintenance. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Create FSx for ONTAP*.  
 . On the Create FSx for ONTAP page, select *Advanced create*. 
 +
 You can also load a saved configuration.
 . Under File system general configuration, provide the following: 
-.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
+.. *AWS credentials*: Select to add AWS credentials in workload factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Deployment topology*: Select a deployment topology. 
 +

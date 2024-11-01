@@ -22,7 +22,7 @@ Consider the following limitations before you create a volume from a snapshot:
 * Increased volume consumption: After you create a volume from a snapshot, you have two independent volumes, and both consume capacity from the host file system.
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*.
 . In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume snapshot and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab. 

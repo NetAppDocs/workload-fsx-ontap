@@ -34,7 +34,7 @@ Review the four available tiering policies before you change the tiering policy.
 Note that some tiering policies have an associated minimum cooling period which sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*.
 . In the *FSx for ONTAP* tab, select the three dots menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 

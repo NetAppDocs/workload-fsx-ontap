@@ -2,17 +2,17 @@
 sidebar: sidebar
 permalink: create-storage-vm.html
 keywords: create storage VM, create svm
-summary: You can create an FSx for ONTAP storage VM (SVM) to provide storage and data services for your workloads in Workload Factory.
+summary: You can create an FSx for ONTAP storage VM (SVM) to provide storage and data services for your workloads in workload factory.
 ---
 = Create a storage VM for an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a storage VM (SVM) for an FSx for ONTAP file system to access storage and data services virtually for your workloads in Workload Factory.
+Create a storage VM (SVM) for an FSx for ONTAP file system to access storage and data services virtually for your workloads in workload factory.
 
 .About this task
-Storage VMs are isolated file servers that you can use to access the data from each workload in Workload Factory Storage. Each SVM has its own administrative credentials and endpoints for administering and accessing data. 
+Storage VMs are isolated file servers that you can use to access the data from each workload in workload factory Storage. Each SVM has its own administrative credentials and endpoints for administering and accessing data. 
 
 With SVMs, when you access data in FSx for ONTAP, your clients and workstations mount a volume, CIFS/SMB share, or iSCSI LUN hosted by an SVM using the SVM's endpoint (IP address).  
 
@@ -21,12 +21,12 @@ Verify the supported number of storage VMs per file system. Refer to link:https:
 
 == Create a storage VM
 
-You can create a storage VM from the Workload Factory console. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+You can create a storage VM from the workload factory console. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
 
 NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the FSx for ONTAP tab, click the three dots menu of the file system to create a storage VM for and select *Manage*.  
 . From the file system overview, select *Create a storage VM*.

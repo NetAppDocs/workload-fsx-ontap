@@ -15,7 +15,7 @@ Configure and update Active Directory for a storage VM in an FSx for ONTAP file 
 The same steps apply for configuring and updating Active Directory for a storage VM. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, click on the three-dot menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.

@@ -14,7 +14,7 @@ When you delete a replication relationship, it removes the replication relations
 When you delete a replication relationship, FSx for ONTAP also deletes the common replication snapshots of the source and target volume. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 

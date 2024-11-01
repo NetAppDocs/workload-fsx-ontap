@@ -31,7 +31,7 @@ Complete the following steps to replicate a single volume or replicate all volum
 .Replicate a single volume
 --
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three dots menu of the file system that contains the volume to replicate and then select *Manage*.
 . From the Volumes tab, select the three dots menu of the volume to replicate.
@@ -42,7 +42,7 @@ Complete the following steps to replicate a single volume or replicate all volum
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
 +
-_Auto_ is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
+_Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
@@ -62,7 +62,7 @@ If you enable long-term retention, then select an existing policy or create a ne
 .Replicate all volumes in a file system
 --
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the FSx for ONTAP tab, click the three dots menu of the file system with the volumes and then select *Manage*.  
 . From the file system overview, select *Create replication*. 
@@ -72,7 +72,7 @@ If you enable long-term retention, then select an existing policy or create a ne
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`.
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
 +
-_Auto_ is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
+_Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 

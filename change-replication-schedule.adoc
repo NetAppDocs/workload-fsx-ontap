@@ -14,7 +14,7 @@ Change the replication schedule of the source volume in a replication relationsh
 Choose how frequently snapshots from the source volume are transferred to the replicated volume to match your required point objectives (RPOs). 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
