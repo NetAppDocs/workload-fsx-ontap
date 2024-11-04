@@ -1,0 +1,5 @@
+=== Tab views in storage inventory
+Storage inventory has been updated to a two-tab view:
+
+* FSx for ONTAP tab: displays the FSx for ONTAP file systems you currently have.
+* Explore savings tab: displays Elastic Block Store, FSx for Windows File Server, and Elastic File Systems storage systems. From there, you can explore savings for these systems by comparing them with FSx for ONTAP.
