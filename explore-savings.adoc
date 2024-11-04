@@ -102,9 +102,9 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
-. In Storage, select *Go to storage inventory*.  
-. In the Storage inventory, select the *Elastic Block Store (EBS)* tab.
-. Select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
+. From Storage, select *Go to storage inventory*.  
+. In the Storage inventory, select the *Explore savings* tab. 
+. In the *Elastic Block Store (EBS)* tab, select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed. 
 .. *Selected volumes*: the number of volumes in the EBS configuration
@@ -117,8 +117,9 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
-. In Storage, select *Go to storage inventory*.  
-. In the Storage inventory, select the *FSx for Windows File Server* tab.
+. From Storage, select *Go to storage inventory*.  
+. In the Storage inventory, select the *Explore savings* tab. 
+. Select the *FSx for Windows File Server* tab.
 . Select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the deployment type of the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed.
@@ -133,8 +134,9 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
-. In Storage, select *Go to storage inventory*.  
-. In the Storage inventory, select the *Elastic File System (EFS)* tab.
+. From Storage, select *Go to storage inventory*.  
+. In the Storage inventory, select the *Explore savings* tab. 
+. Select the *Elastic File System (EFS)* tab.
 . Select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed.
