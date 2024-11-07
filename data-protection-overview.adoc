@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: data-protection-overview.html
 keywords: overview
-summary: 
+summary: "FSx for ONTAP supports snapshots, volume backups, and volume replication in BlueXP workload factory."
 ---
-= Data protection overview
+= Data protection in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 

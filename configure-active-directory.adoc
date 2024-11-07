@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: configure-active-directory.html
 keywords: configure AD, configure active directory, update ad, edit active directory
-summary: 
+summary: "Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in BlueXP workload factory."
 ---
 = Configure and update Active Directory for a storage VM
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Configure and update Active Directory for a storage VM in an FSx for ONTAP file system.
+Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in BlueXP workload factory.
 
 .About this task
 The same steps apply for configuring and updating Active Directory for a storage VM. 
@@ -17,9 +17,9 @@ The same steps apply for configuring and updating Active Directory for a storage
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click on the three-dot menu of the file system with the storage VM to update and then select *Manage*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
-. From the Storage VMs tab, select the three dots menu of the storage VM to configure Active Directory for.
+. From the Storage VMs tab, select the three-dot menu of the storage VM to configure Active Directory for.
 . Select *Manage AD configuration*. 
 . On the Manage AD configuration page, provide the following: 
 .. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. 
@@ -40,5 +40,5 @@ If you are using AWS Managed Microsoft AD, you must specify a group such as AWS 
 +
 If you are connecting to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
 
-. Click *Apply*. 
+. Select *Apply*. 
 

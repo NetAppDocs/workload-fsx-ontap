@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: create-volume.html
 keywords: create volume, FSx for ONTAP volume
-summary: After you set up your FSx for ONTAP file system, you can create FSx for ONTAP volumes.
+summary: "After you set up your FSx for ONTAP file system in BlueXP workload factory, you can create FSx for ONTAP volumes."
 ---
-= Create an FSx for ONTAP volume
+= Create an FSx for ONTAP volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -26,14 +26,14 @@ Review the following prerequisites before you create a volume:
 * You must have an FSx for ONTAP file system in workload factory. 
 * You must have a storage VM. 
 * For protocol access, complete the following: 
-** To configure access to the volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, click *Associate link* under *Account name*. Once the link associates, return to this operation. 
+** To configure access to the volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
 ** You must configure access for the protocol you select, either CIFS, NFS, or iSCSI. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three dots menu of the file system you want to create a volume in, and select *Manage*. 
-. From the *Overview* tab, click *Create volume*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system you want to create a volume in, and select *Manage*. 
+. From the *Overview* tab, select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
 .. *Storage VM name*: Optionally, enter a storage VM name. 
@@ -99,7 +99,7 @@ Auto is the default tiering policy when creating a volume using the user interfa
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
 .. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
-. Click *Create*. 
+. Select *Create*. 
 
 .Result
 Volume creation is initiated. Once created, the new volume will appear in the Volumes tab. 
@@ -120,8 +120,8 @@ Volume creation is initiated. Once created, the new volume will appear in the Vo
 //_Autocommit_
 //You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. The files you want to autocommit must reside on a SnapLock volume.
 //... Select to enable *Immutable files powered by SnapLock*. 
-//... Click the box to agree and proceed.  
-//... Click *Enable*. 
+//... Select the box to agree and proceed.  
+//... Select *Enable*. 
 //... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
 //... *Retention period*: 
 //* Select the retention policy: 

@@ -6,5 +6,5 @@
 
 * Support for manual link creation: This feature allows standalone creation in AWS CloudFormation with manual registration of the link ARN. It's useful when a Security or DevOps team assists in the link creation process.  
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Create a link^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Create a link]
 

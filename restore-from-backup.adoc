@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: restore-from-backup.html
 keywords: restore backup, new volume, volume restoration, backup
-summary: Restore a volume from a backup to any FSx for ONTAP file system in your AWS account.
+summary: "Restore a volume from a backup to any FSx for ONTAP file system in your AWS account."
 ---
-= Restore a volume from a backup
+= Restore a volume from a backup in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -14,13 +14,13 @@ Restore a volume from a backup to any FSx for ONTAP file system in your AWS acco
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, click the three dots menu for the volume to restore from a backup. 
+. From the *Volumes* tab, select the three-dot menu for the volume to restore from a backup. 
 . Select *Data protection actions*, *FSx for ONTAP backup*, and then *Restore from a backup*. 
 . In the Restore from a backup dialog, provide the following: 
 .. *Target file system*: Select the target file system from the dropdown menu. 
 .. *Target storage VM*: Select the target storage VM from the dropdown menu. 
 .. *Backup name*: Select the backup name from the dropdown menu.
 .. *Restored volume name*: Enter the restored volume name. 
-. Click *Restore*. 
+. Select *Restore*. 

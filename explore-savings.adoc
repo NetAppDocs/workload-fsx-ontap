@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: explore-savings.html
 keywords: cost, savings, compare costs, EBS, EFS, FSx for Windows file servers FSx for ONTAP
-summary: Explore savings for your storage workloads in Amazon Elastic Block Store (EBS) storage, Elastic File System (EFS), and FSx for Windows File Servers against AWS FSx for NetApp ONTAP. 
+summary: "Explore savings for your storage workloads in Amazon Elastic Block Store (EBS) storage, Elastic File System (EFS), and FSx for Windows File Servers against AWS FSx for NetApp ONTAP." 
 ---
-= Explore savings in FSx for ONTAP 
+= Explore savings with FSx for ONTAP in BlueXP workload factory 
 :icons: font
 :imagesdir: ./media/
 
@@ -102,9 +102,9 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.  
-. In the Storage inventory, select the *Elastic Block Store (EBS)* tab.
-. Select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
+. From Storage, select *Go to storage inventory*.  
+. In the Storage inventory, select the *Explore savings* tab. 
+. In the *Elastic Block Store (EBS)* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed. 
 .. *Selected volumes*: the number of volumes in the EBS configuration
@@ -117,9 +117,9 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.  
-. In the Storage inventory, select the *FSx for Windows File Server* tab.
-. Select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
+. From Storage, select *Go to storage inventory*.  
+. In the Storage inventory, select the *Explore savings* tab. 
+. In the *Amazon FSx for Windows File Server* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the deployment type of the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed.
 .. *Selected file systems
@@ -133,9 +133,9 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.  
-. In the Storage inventory, select the *Elastic File System (EFS)* tab.
-. Select the instance(s) to compare with FSx for ONTAP and click *Explore savings*.
+. From Storage, select *Go to storage inventory*.  
+. In the Storage inventory, select the *Explore savings* tab. 
+. In the *Elastic File System (EFS)* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed.
 .. *Total file systems*
@@ -152,7 +152,7 @@ After you provide details for your storage system configuration, review the calc
 Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
 
 == Deploy FSx for ONTAP file systems
-If you'd like to switch to FSx for ONTAP to realize cost savings, click *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or click *Save* to save the recommended configuration(s) for later. 
+If you'd like to switch to FSx for ONTAP to realize cost savings, select *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or select *Save* to save the recommended configuration(s) for later. 
 
 Deployment methods:::
 In _automate_ mode, you can deploy the FSx for ONTAP file system directly from workload factory. You can also copy the content from the Codebox window and deploy the system using one of the Codebox methods.

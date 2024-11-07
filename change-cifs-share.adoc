@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: change-cifs-share.html
 keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share
-summary: Change the CIFS share for a volume that uses the SMB/CIFS protocol type. 
+summary: "Change the CIFS share for a volume in BlueXP workload factory that uses the SMB/CIFS protocol type." 
 ---
-= Change the CIFS share for a volume
+= Change the CIFS share for a volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Changing a volume's CIFS share involves determining the users and groups to give access to and the type of access to give them.
+Changing a volume's CIFS share in BlueXP workload factory involves determining the users and groups to give access to and the type of access to give them.
 
 .Before you begin
 Determine the users or groups to give access to and the type of access to give them. 
@@ -17,11 +17,11 @@ Determine the users or groups to give access to and the type of access to give t
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*.
-. In the *FSx for ONTAP* tab, select the three dots menu of the file system with the volume to update and then select *Manage*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
-. From the Volumes tab, click the three dots menu of the volume to change the SMB share for. 
+. From the Volumes tab, select the three-dot menu of the volume to change the SMB share for. 
 . Select *Advanced actions*, then *Edit CIFS share*. 
 . On the Edit CIFS share page, provide the following: 
 .. *Users or groups*: Enter valid users and groups. Separate each entry by a semi-colon “;”. 
 .. *Permissions*: Select *Full control*, *Read/Write*, *Read*, or *No access*. 
-. Click *Apply*.
+. Select *Apply*.

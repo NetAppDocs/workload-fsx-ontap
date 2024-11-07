@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: links-overview.html
 keywords: links, accounts, lambda
-summary: A workload factory link creates a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain file system features directly from the ONTAP REST APIs that are not available through the Amazon FSx for ONTAP APIs.
+summary: "A workload factory link creates a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems."
 ---
 
-= Learn about workload factory links
+= Learn about BlueXP workload factory links
 :icons: font
 :imagesdir: ./media/
 

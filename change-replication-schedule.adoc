@@ -2,23 +2,23 @@
 sidebar: sidebar
 permalink: change-replication-schedule.html
 keywords: change replication schedule, update replication schedule, edit replication schedule
-summary: Change the replication schedule of the source volume in a replication relationship. 
+summary: "Change the replication schedule of the source volume in a replication relationship in BlueXP workload factory." 
 ---
 = Change the replication schedule of a source volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Change the replication schedule of the source volume in a replication relationship. 
+Change the replication schedule of the source volume in a replication relationship in BlueXP workload factory. 
 
 Choose how frequently snapshots from the source volume are transferred to the replicated volume to match your required point objectives (RPOs). 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, click the three dots menu of the replication relationship schedule to change. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship schedule to change. 
 . Select *Edit replication interval*. 
 . In the Edit replication interval dialog, select the frequency of snapshot transfer from the source volume. You may select between the following frequencies: 
 +
@@ -27,4 +27,4 @@ Choose how frequently snapshots from the source volume are transferred to the re
 * Every 8 hours
 * Daily
 * Weekly
-. Click *Apply*. 
+. Select *Apply*. 

@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: known-limitations.html
 keywords: limitations, fsx, ontap 
-summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
+summary: "Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it."
 ---
-= Known limitations
+= Known limitations in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -59,6 +59,10 @@ The Storage savings calculator doesn't calculate cost savings for the following 
 * FSx for Windows File Server: HDD storage type
 * Elastic Block Store (EBS): st1, sc1, and standard volume types
 * Elastic File System (EFS): Bursting throughput mode
+
+== System Manager  
+System Manager doesn't support links for FSx for ONTAP connectivity. 
+
 
 Note:
 

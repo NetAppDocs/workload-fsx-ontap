@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: enable-auto-capacity-management.html
 keywords: auto capacity, automatic capacity management, file system capacity
-summary: Enabling this feature lets workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time.  
+summary: "Enabling this feature lets workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time."  
 ---
-= Enable automatic capacity management for a file system
+= Enable automatic capacity management for an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
@@ -22,14 +22,14 @@ You must have credentials with _Automate_ permissions in workload factory to com
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to enable automatic capacity management for. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable automatic capacity management for. 
 . Select *Manage*. 
-. Under Information, click the pencil icon next to *Automatic capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic capacity management* row. 
+. Under Information, select the pencil icon next to *Automatic capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic capacity management* row. 
 . In the *Automatic capacity management* dialog, provide the following: 
 .. *Credentials*: Select credentials with _Automate_ permissions from the dropdown menu. 
-.. Click the enable button to *Enable automatic capacity management*. 
+.. Select the enable button to *Enable automatic capacity management*. 
 +
 Alternatively, disable the feature. If you need to increase file system capacity, you must first disable automatic capacity management. 
 .. *Capacity threshold*: Enter the maximum size for the FSx for ONTAP file system.
 .. *Capacity increase increments*: Enter the percentage to increase capacity incrementally. 
-. Click *Apply*. 
+. Select *Apply*. 

@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: create-file-system.html
 keywords: create, FSx file system, ONTAP file system, workload factory, storage
-summary: Using workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
+summary: "Using BlueXP workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services." 
 ---
-= Create an FSx for ONTAP file system
+= Create an FSx for ONTAP file system in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 

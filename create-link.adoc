@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: create-link.html
 keywords: links, add, add links, add link, create link
-summary: You can create and manage links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems.
+summary: "You can create and manage links to provide a trust relationship and connectivity between a BlueXP workload factory account and one or more FSx for ONTAP file systems."
 ---
 
-= Create a link
+= Create a link in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -78,7 +78,7 @@ Use CloudFormation to automatically create and register the link within workload
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three dots menu of the file system to associate a link to and then select *Manage*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Associate link*.
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
@@ -86,7 +86,7 @@ Use CloudFormation to automatically create and register the link within workload
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 +
 The AWS account and the additional information for Account, Location, and Security group are retrieved automatically based on the FSx for ONTAP file system.
-. Click *Create*. 
+. Select *Create*. 
 +
 The Redirect to CloudFormation dialog appears and explains how to create the link from the AWS CloudFormation service is displayed.
 . Select *Continue* to open the AWS Management Console, and then log in to the AWS account for this FSx for ONTAP file system.
@@ -99,7 +99,7 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 
-. Select *Create stack* and then select *Continue*.
+. Select *Create stack* and then Select *Continue*.
 +
 You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
 . Return to the workload factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
@@ -111,13 +111,13 @@ With this option, you extract the ARN for the link from AWS CloudFormation and r
 .Steps
 Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three dots menu of the file system to associate a link to and then select *Manage*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Associate link*.
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
-.. *Link registration*: Click on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service. Follow the instructions. 
+.. *Link registration*: select on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service. Follow the instructions. 
 +
 Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload factory uses these permissions when using links.
 +
@@ -128,7 +128,7 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 +
 After you successfully create the stack, paste the Lambda ARN in the text box.
 .. The AWS account and the additional information for Account, Location, and Security group are retrieved automatically based on the FSx for ONTAP file system.
-. Click *Create*. 
+. Select *Create*. 
 +
 You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
 . Return to the workload factory interface and you'll see that the link is associated with the FSx for ONTAP file system.

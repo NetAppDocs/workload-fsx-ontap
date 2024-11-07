@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: increase-file-system-capacity.html
 keywords: increase capacity, increase file system capacity, increase FSx capacity
-summary: Manually increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify. 
+summary: "Manually increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify." 
 ---
-= Increase file system capacity
+= Increase file system capacity in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -27,10 +27,10 @@ To increase capacity for a file system, you must first link:enable-auto-capacity
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, click *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to increase capacity for. 
+. In Storage, select *Go to Storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to increase capacity for. 
 . Select *Manage*. 
-. Under Information, click the pencil icon next to *Capacity distribution*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Capacity distribution* row. 
+. Under Information, select the pencil icon next to *Capacity distribution*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Capacity distribution* row. 
 . In the SSD storage size dialog, enter a number for *Provisioned capacity*. 
 . Select the unit for the provisioned capacity.
-. Click *Apply*. 
+. Select *Apply*. 
