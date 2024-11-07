@@ -10,7 +10,7 @@ summary: "A workload factory link creates a trust relationship and connectivity 
 :imagesdir: ./media/
 
 [.lead]
-A workload factory link creates a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain file system features directly from the ONTAP REST API calls that are not available through the Amazon FSx for ONTAP API.
+A BlueXP workload factory link creates a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain file system features directly from the ONTAP REST API calls that are not available through the Amazon FSx for ONTAP API.
 
 You don't need a link to get started with workload factory, but in some cases you'll need to create a link to unlock all workload factory features and workload capabilities. 
 

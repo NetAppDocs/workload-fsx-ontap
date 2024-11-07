@@ -9,7 +9,7 @@ summary: "Create a snapshot policy for FSx for ONTAP volumes in BlueXP workload 
 :imagesdir: ./media/
 
 [.lead]
-Create a custom snapshot policy for FSx for ONTAP volumes. A snapshot policy defines how the system creates snapshots for a volume.
+Create a custom snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
 
 .About this task
 You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 

@@ -10,7 +10,7 @@ summary: "You can view links associated with your account, associate a link, and
 :imagesdir: ./media/
 
 [.lead]
-Manage links you've associated with your BlueXP workload factory account. 
+Manage links that you've associated with your BlueXP workload factory account. 
 
 link:links-overview.html[Learn more about links] or link:create-link.html[create a link]. 
 

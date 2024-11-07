@@ -10,7 +10,7 @@ summary: "You can create and manage links to provide a trust relationship and co
 :imagesdir: ./media/
 
 [.lead]
-You can create and manage links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
+You can create and manage links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems in BlueXP workload factory. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
 
 link:links-overview.html[Learn more about links].
 

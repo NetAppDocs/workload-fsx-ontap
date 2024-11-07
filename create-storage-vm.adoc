@@ -9,7 +9,7 @@ summary: "You can create an FSx for ONTAP storage VM (SVM) to provide storage an
 :imagesdir: ./media/
 
 [.lead]
-Create a storage VM (SVM) for an FSx for ONTAP file system to access storage and data services virtually for your workloads in workload factory.
+Create a storage VM (SVM) for an FSx for ONTAP file system to access storage and data services virtually for your workloads in BlueXP workload factory.
 
 .About this task
 Storage VMs are isolated file servers that you can use to access the data from each workload in workload factory Storage. Each SVM has its own administrative credentials and endpoints for administering and accessing data. 

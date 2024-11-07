@@ -9,7 +9,7 @@ summary: "Create a manual backup of a volume in BlueXP workload factory outside 
 :imagesdir: ./media/
 
 [.lead]
-Create a manual backup of a volume outside regularly scheduled backups. 
+Create a manual backup of a volume outside regularly scheduled backups in BlueXP workload factory. 
 
 .About this task
 

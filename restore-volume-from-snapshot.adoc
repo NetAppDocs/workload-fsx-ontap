@@ -9,7 +9,7 @@ summary: "Restore an FSx for ONTAP volume from a snapshot when the volume contai
 :imagesdir: ./media/
 
 [.lead]
-Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
+In BlueXP workload factory, you can restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
 
 .About this task
 This operation restores data from a snapshot to a new volume. 

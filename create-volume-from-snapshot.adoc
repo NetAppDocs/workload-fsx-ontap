@@ -9,7 +9,7 @@ summary: "Create a manual snapshot of an FSx for ONTAP volume in BlueXP workload
 :imagesdir: ./media/
 
 [.lead]
-Create a new FSx for ONTAP volume from a snapshot to enable point-in-time recovery. 
+Create a new FSx for ONTAP volume from a snapshot in BlueXP workload factory to enable point-in-time recovery. 
 
 .About this task
 A snapshot is a read-only image of an FSx for ONTAP volume taken at a point in time. The creation of a new volume from a snapshot makes a copy of an entire volume within a few seconds independent of volume size. The newly created copy represents a new volume. 

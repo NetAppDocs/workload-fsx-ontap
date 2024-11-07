@@ -9,7 +9,7 @@ summary: "After you set up your FSx for ONTAP file system in BlueXP workload fac
 :imagesdir: ./media/
 
 [.lead]
-After you set up your FSx for ONTAP file system, you can create FSx for ONTAP volumes.
+After you set up your FSx for ONTAP file system, you can create FSx for ONTAP volumes in BlueXP workload factory.
 
 .About this task
 FSx for ONTAP volumes are virtual resources used for grouping data, determining how data is stored, and determining the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 

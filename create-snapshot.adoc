@@ -9,7 +9,7 @@ summary: "Create a manual snapshot of an FSx for ONTAP volume in BlueXP workload
 :imagesdir: ./media/
 
 [.lead]
-Create a manual snapshot of an FSx for ONTAP volume. Snapshots are point-in-time versions of your volume's content.
+Create a manual snapshot of an FSx for ONTAP volume in BlueXP workload factory. Snapshots are point-in-time versions of your volume's content.
 
 Snapshots are resources of volumes and are instant captures of your data that consume space only for modified data. Because data changes over time, snapshots usually consume more space as they get older. 
 
