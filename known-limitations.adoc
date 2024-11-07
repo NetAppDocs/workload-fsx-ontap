@@ -4,12 +4,12 @@ permalink: known-limitations.html
 keywords: limitations, fsx, ontap 
 summary: "Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it."
 ---
-= Known limitations in BlueXP workload factory
+= Known limitations in BlueXP workload factory for Storage
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Known limitations identify platforms, devices, or functions that are not supported by this release of the product in workload factory, or that do not interoperate correctly with it. Review these limitations carefully.
+Known limitations identify platforms, devices, or functions that are not supported by this release of Storage in BlueXP workload factory, or that do not interoperate correctly with it. Review these limitations carefully.
 
 //== Operational modes
 //_Read_ mode isn't currently available. 
