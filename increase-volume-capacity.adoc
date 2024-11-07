@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: increase-volume-capacity.html
 keywords: increase capacity, volume capacity
-summary:" Manually increase the volume capacity of a volume in BlueXP workload factory at any time." 
+summary: "Manually increase the volume capacity of a volume in BlueXP workload factory at any time." 
 ---
 = Increase volume capacity in BlueXP workload factory
 :icons: font
