@@ -9,7 +9,7 @@ summary: "Using BlueXP workload factory you can create an FSx for ONTAP file sys
 :imagesdir: ./media/
 
 [.lead]
-Using workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
+Using BlueXP workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 
 .About this task
 A storage VM is created when you create a file system. 

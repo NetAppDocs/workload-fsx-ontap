@@ -4,14 +4,14 @@ permalink: quick-start.html
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
 summary: "You can get started with FSx for ONTAP in BlueXP workload factory in just a few steps." 
 ---
-= Quick start for BlueXP workload factory for Amazon FSx for NetApp ONTAP
+= Quick start for Amazon FSx for NetApp ONTAP in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-With BlueXP workload factory for Amazon FSx for NetApp ONTAP, you can get started immediately in _basic_ mode. 
+With Amazon FSx for NetApp ONTAP in BlueXP workload factory, you can get started immediately in _basic_ mode. 
 
-If you'd like to use workload factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account to get started. 
+If you'd like to use workload factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account and credentials to get started. 
 
 Follow these steps to get started. 
 
