@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: edit-svm-tags.html
+permalink: manage-svm-tags.html
 keywords: edit storage vm tags, vm tags, svm tags
 summary: "Add, update, or remove storage VM tags for a storage VM at any time." 
 ---
@@ -9,7 +9,7 @@ summary: "Add, update, or remove storage VM tags for a storage VM at any time."
 :imagesdir: ./media/
 
 [.lead]
-Tags can help you categorize your resources. You can add, edit, and remove tags for a storage VM at any time. 
+Tags can help you categorize your resources. You can add, edit, and remove tags for a storage VM at any time in BlueXP workload factory. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

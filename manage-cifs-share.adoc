@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
-permalink: change-cifs-share.html
+permalink: manage-cifs-share.html
 keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share
 summary: "Change the CIFS share for a volume in BlueXP workload factory that uses the SMB/CIFS protocol type." 
 ---
-= Change the CIFS share for a volume in BlueXP workload factory
+= Manage the CIFS share for a volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Changing a volume's CIFS share in BlueXP workload factory involves determining the users and groups to give access to and the type of access to give them.
+Managing a volume's CIFS share in BlueXP workload factory involves determining the users and groups to give access to and the type of access to give them.
 
 .Before you begin
 Determine the users or groups to give access to and the type of access to give them. 

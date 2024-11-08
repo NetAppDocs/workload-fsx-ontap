@@ -9,7 +9,7 @@ summary: "To delete a file system in BlueXP workload factory, you must first del
 :imagesdir: ./media/
 
 [.lead]
-To delete a file system, you must first delete any volumes, storage VMs, or replication relationships associated with the file system. 
+To delete a file system in BlueXP workload factory, you must first delete any volumes, storage VMs, or replication relationships associated with the file system. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

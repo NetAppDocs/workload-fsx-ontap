@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: edit-volume-tags.html
+permalink: manage-volume-tags.html
 keywords: volume tags, edit volume tags, edit tags
 summary: "Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes." 
 ---
@@ -9,7 +9,7 @@ summary: "Tags can help you categorize your resources. You can add, edit, and re
 :imagesdir: ./media/
 
 [.lead]
-Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes. 
+Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes in BlueXP workload factory. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

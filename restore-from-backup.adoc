@@ -9,7 +9,7 @@ summary: "Restore a volume from a backup to any FSx for ONTAP file system in you
 :imagesdir: ./media/
 
 [.lead]
-Restore a volume from a backup to any FSx for ONTAP file system in your AWS account.
+In BlueXP workload factory, you can restore a volume from a backup to any FSx for ONTAP file system in your AWS account.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

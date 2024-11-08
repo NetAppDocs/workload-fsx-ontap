@@ -9,7 +9,7 @@ summary: "Manually increase the volume capacity of a volume in BlueXP workload f
 :imagesdir: ./media/
 
 [.lead]
-Manually increase the volume capacity of a volume at any time. 
+Manually increase the volume capacity of a volume at any time in BlueXP workload factory. 
 
 Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature] to let workload factory manage volume capacity for you. 
 

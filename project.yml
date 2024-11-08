@@ -96,16 +96,16 @@ sidebar:
               url: /increase-volume-capacity.html
         #    - title: Manage immutable files 
         #      url: /manage-immutable-files.html  
-            - title: Edit volume tags
-              url: /edit-volume-tags.html
+            - title: Manage volume tags
+              url: /manage-volume-tags.html
             - title: Rebalance a volume's capacity
               url: /rebalance-volume.html
             - title: Change the tiering policy
               url: /change-tiering-policy.html   
-            - title: Change the NFS export policy
-              url: /change-nfs-export-policy.html  
-            - title: Change the CIFS share
-              url: /change-cifs-share.html 
+            - title: Manage the NFS export policy
+              url: /manage-nfs-export-policy.html  
+            - title: Manage the CIFS share
+              url: /manage-cifs-share.html 
             - title: Split a cloned volume
               url: split-cloned-volume.html    
             - title: Delete a volume
@@ -126,8 +126,8 @@ sidebar:
               url: /replicate-svm-to-file-system.html
             - title: Configure and update Active Directory for a storage VM
               url: /configure-active-directory.html
-            - title: Edit storage VM tags
-              url: /edit-svm-tags.html
+            - title: Manage storage VM tags
+              url: /manage-svm-tags.html
             - title: Reset storage VM password
               url: reset-svm-password.html
             - title: Delete a storage VM 
@@ -136,8 +136,8 @@ sidebar:
           entries:
             - title: Change the snapshot policy of a volume
               url: change-snapshot-policy.html
-            - title: Update FSx for ONTAP backup schedule
-              url: /update-backup-schedule.html
+            - title: Manage FSx for ONTAP backup schedule
+              url: /manage-backup-schedule.html
             - title: Enable and edit snapshots for long-term retention
               url: /enable-snapshots-long-term.html
           #  - title: Delete a snapshot

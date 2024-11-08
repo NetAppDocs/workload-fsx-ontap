@@ -9,7 +9,7 @@ summary: "Split a clone FlexVol volume from its parent volume to make the clone 
 :imagesdir: ./media/
 
 [.lead]
-Split a cloned FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume. 
+Split a cloned FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume in BlueXP workload factory. 
 
 Data is accessible on the clone and the parent during the split. The split process only updates metadata and requires minimal IO. No data blocks are copied.
 
@@ -37,3 +37,6 @@ Consider the following before you split a cloned volume:
 . In the Volumes tab, select the three-dot menu of the volume with the cloned volume to split. 
 . Select *Data protection actions*, then *Split cloned volume*. 
 . In the Split volume dialog, select *Delete*. 
+
+.Result
+The volume clone is split and appears in the Volumes tab. 

@@ -9,7 +9,7 @@ summary: "Automatically provision or manually provision SSD IOPS for an FSx for 
 :imagesdir: ./media/
 
 [.lead]
-Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system. 
+Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system in BlueXP workload factory. 
 
 .About this task
 You can enable automatic SSD IOPS provisioning for an FSx file system or manually provision IOPS. 

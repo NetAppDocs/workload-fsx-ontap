@@ -9,7 +9,7 @@ summary: "Enable snapshots for long-term retention, which lets you replicate spe
 :imagesdir: ./media/
 
 [.lead]
-Enable snapshots for long-term retention, which lets you replicate specific snapshots for long-term disaster recovery. 
+In BlueXP workload factory, you can enable snapshots for long-term retention, which lets you replicate specific snapshots for long-term disaster recovery. 
 
 Long-term retention enables business services to continue operating even in the event of a complete site failure, supporting transparent failover of applications using a secondary copy.
 

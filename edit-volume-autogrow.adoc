@@ -9,7 +9,7 @@ summary: "Enable volume autogrow to let BlueXP workload factory manage volume ca
 :imagesdir: ./media/
 
 [.lead]
-Enable volume autogrow to let workload factory manage volume capacity for you. You can disable it at any time. 
+Enable volume autogrow to let BlueXP workload factory manage volume capacity for you. You can disable it at any time. 
 
 Optionally, you can manually increase the volume capacity of a volume at any time using the link:increase-volume-capacity.html[increase volume capacity feature]. 
 

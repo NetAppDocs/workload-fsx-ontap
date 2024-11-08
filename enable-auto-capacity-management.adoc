@@ -9,7 +9,7 @@ summary: "Enabling this feature lets workload factory automatically add incremen
 :imagesdir: ./media/
 
 [.lead]
-Enabling this feature lets workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. 
+Enabling this feature lets BlueXP workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. 
 
 .About this task 
 Only one account can manage this feature. 

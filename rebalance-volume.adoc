@@ -9,7 +9,7 @@ summary: "Rebalance the capacity of a volume to avoid imbalances that develop ov
 :imagesdir: ./media/
 
 [.lead]
-Rebalance the capacity of a volume to avoid imbalances that develop over time. 
+Rebalance the capacity of a volume in BlueXP workload factory to avoid imbalances that develop over time. 
 
 .About this task
 Rebalancing a volume redistributes the capacity when imbalances develop over time due to the addition of new files and file growth. After you manually start the rebalance operation, we select the files and move them automatically and non-disruptively. 

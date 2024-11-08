@@ -9,7 +9,7 @@ summary: "Change the tiering policy in BlueXP workload factory to re-allocate da
 :imagesdir: ./media/
 
 [.lead]
-Change the tiering policy to automatically re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier. 
+In BlueXP workload factory, you can change the tiering policy to automatically re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier. 
 
 .About this task
 You can change the tiering policy of a volume at any time. The tiering policy is defined per volume. 

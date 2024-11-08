@@ -9,7 +9,7 @@ summary: "Reverse a replication relationship so that the target volume becomes t
 :imagesdir: ./media/
 
 [.lead]
-Reverse a replication relationship so that the target volume becomes the source volume. 
+Reverse a replication relationship in BlueXP workload factory so that the target volume becomes the source volume. 
 
 After you stop replication and make changes to the target volume, you can replicate those changes back to the source volume. This process is common in a disaster recovery scenario in which you operate on the target volume for a while and want to switch roles of the volumes.
 

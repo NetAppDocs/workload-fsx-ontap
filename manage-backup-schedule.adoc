@@ -1,15 +1,15 @@
 ---
 sidebar: sidebar
-permalink: update-backup-schedule.html
+permalink: manage-backup-schedule.html
 keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup
-summary: "Update the FSx for ONTAP backup schedule when needed." 
+summary: "Manage the backup schedule for an FSx for ONTAP file system in BlueXP workload factory when needed." 
 ---
-= Update FSx for ONTAP backup schedule in BlueXP workload factory
+= Manage the backup schedule for an FSx for ONTAP file system 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Update the FSx for ONTAP backup schedule when needed. 
+Manage the backup schedule for an FSx for ONTAP file system in BlueXP workload factory. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

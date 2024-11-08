@@ -9,7 +9,7 @@ summary: "Manually update snapshot data transferred between source and target vo
 :imagesdir: ./media/
 
 [.lead]
-A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes when needed. 
+A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes in BlueXP workload factory at any time. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: update-throughput-capacity.html
 keywords: update throughput, change throughput, throughput capacity
-summary: "Update throughput capacity for an FSx for ONTAP file system as needed." 
+summary: "Update throughput capacity for an FSx for ONTAP file system in BlueXP workload factory as needed." 
 ---
 = Update throughput capacity for a file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Update throughput capacity for an FSx for ONTAP file system as needed. 
+Update throughput capacity for an FSx for ONTAP file system in BlueXP workload factory as needed. 
 
 For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation.
 
@@ -19,4 +19,4 @@ For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/la
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update throughput capacity for and then select *Manage*. 
 . Under Information, select the pencil icon next to *Throughput capacity*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Throughput capacity* row. 
 . In the Throughput capacity dialog, select the throughput capacity you need. 
-. Select *Apply*. 
+. Select *Apply* to save the changes. 

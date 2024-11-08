@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: limit-transfer-rate.html
 keywords: limit max transfer rate, limit transfer rate
-summary: "Limit the max transfer rate of a replication relationship. An unlimited transfer rate might negatively impact the performance of other applications and your network." 
+summary: "Limit the max transfer rate of a replication relationship in BlueXP workload factory." 
 ---
 = Limit the max transfer rate of a replication relationship
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Limit the max transfer rate of a replication relationship. An unlimited transfer rate might negatively impact the performance of other applications and your network. 
+Limit the max transfer rate of a replication relationship in BlueXP workload factory. An unlimited transfer rate might negatively impact the performance of other applications and your network. 
 
 .About this task
 Limiting the max transfer rate is optional but recommended. Without a limit, network and application performance may decline. 
