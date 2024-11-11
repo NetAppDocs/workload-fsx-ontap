@@ -2,17 +2,17 @@
 sidebar: sidebar
 permalink: links-overview.html
 keywords: links, accounts, lambda
-summary: A Workload Factory link creates a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain file system features directly from the ONTAP REST APIs that are not available through the Amazon FSx for ONTAP APIs.
+summary: "A workload factory link creates a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems."
 ---
 
-= Learn about Workload Factory links
+= Learn about BlueXP workload factory links
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-A Workload Factory link creates a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain file system features directly from the ONTAP REST API calls that are not available through the Amazon FSx for ONTAP API.
+A BlueXP workload factory link creates a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems. This enables you to monitor and manage certain file system features directly from the ONTAP REST API calls that are not available through the Amazon FSx for ONTAP API.
 
-You don't need a link to get started with Workload Factory, but in some cases you'll need to create a link to unlock all Workload Factory features and workload capabilities. 
+You don't need a link to get started with workload factory, but in some cases you'll need to create a link to unlock all workload factory features and workload capabilities. 
 
 == How links work
 
@@ -20,17 +20,17 @@ Links leverage AWS Lambda. Lambda executes code in response to events and automa
 
 After you have created a link you can associate it with one, or many, FSx for ONTAP file systems. Each file system can be associated only to one link in the same NetApp account. If you have multiple NetApp accounts, a single file system can be associated with additional links under different NetApp accounts.
 
-You create links from the FSx for ONTAP file system pages in Workload Factory. link:create-link.html[Learn how to create links] for details.
+You create links from the FSx for ONTAP file system pages in workload factory. link:create-link.html[Learn how to create links] for details.
 
 == Costs
 
-Each transaction that Lambda performs incurs a charge. Since Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to Workload Factory.
+Each transaction that Lambda performs incurs a charge. Since Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to workload factory.
 
 link:https://aws.amazon.com/lambda/pricing/[Learn more about the costs related to using AWS Lambda^]
 
 == When a link is required
 
-Workload Factory requires a link to display some information and to perform some tasks. If you attempt to perform an operation that requires a link and you haven't associated a link with the FSx for ONTAP file system, you will see a message that the operation requires a link. You can add a new link, or associate the FSx for ONTAP file system with an existing link at that time so you can perform the operation.
+Workload factory requires a link to display some information and to perform some tasks. If you attempt to perform an operation that requires a link and you haven't associated a link with the FSx for ONTAP file system, you will see a message that the operation requires a link. You can add a new link, or associate the FSx for ONTAP file system with an existing link at that time so you can perform the operation.
 
 The features that require a link include:
 

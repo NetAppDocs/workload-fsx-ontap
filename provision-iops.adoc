@@ -2,29 +2,29 @@
 sidebar: sidebar
 permalink: provision-iops.html
 keywords: iops, SSD, provision, allocate
-summary: Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system. 
+summary: "Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system." 
 ---
 = Provision SSD IOPS for an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system. 
+Automatically provision or manually provision SSD IOPS for an FSx for ONTAP file system in BlueXP workload factory. 
 
 .About this task
 You can enable automatic SSD IOPS provisioning for an FSx file system or manually provision IOPS. 
 
-Automatic provisioned IOPS are calculated as 3 IOPS per GiB. 
+Automatically provisioned IOPS are calculated as 3 IOPS per GiB. 
 
-If you manually provision IOPS, you may need to increase IOPS before you can link:increase-file-system-capacity.html[increase file system capacity]. 
+If you manually provision IOPS, you may need to increase IOPS before link:increase-file-system-capacity.html[increasing file system capacity]. 
 
-For IOPS limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
+For information about IOPS limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
 .Steps
-. Log in to the the Workload Factory console. 
-. In Storage, click *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to provision IOPS for and then select *Manage*. 
-. Under Information, click the pencil icon next to *IOPS allocation*. The pencil icon appears next to the dropdown arrow when the mouse hovers over the *IOPS allocation* row. 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to provision IOPS for and then select *Manage*. 
+. Under Information, select the pencil icon that appears next to the dropdown arrow when the mouse hovers over the *IOPS allocation* row. 
 . In the Provisioned IOPS dialog, select *Automatic* or *User provisioned*. 
-. If you select *User provisioned*, enter the *IOPS value*. 
-. Click *Apply*. 
+. If you select *User provisioned*, enter the desired *IOPS value*. 
+. Select *Apply*. 

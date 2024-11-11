@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-snapshot-policy.html
 keywords: create
-summary: Create a snapshot policy for FSx for ONTAP volumes. A snapshot policy defines how the system creates snapshots for a volume.
+summary: "Create a snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume."
 ---
 = Create a snapshot policy for FSx for ONTAP volumes
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a custom snapshot policy for FSx for ONTAP volumes. A snapshot policy defines how the system creates snapshots for a volume.
+Create a custom snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
 
 .About this task
 You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
@@ -26,14 +26,14 @@ Customizing a policy lets you specify when to create snapshots, how many copies 
 * Consider the following about snapshot capacity before you use snapshots:
 ** For most datasets, an additional capacity of 20% is enough to keep snapshots for up to four weeks. As data gets older, its use for restorations becomes less likely.
 ** Overwriting all the data in a snapshot consumes significant volume capacity, which factors into provisioning volume capacity.
-* To create a custom snapshot policy, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, click *Associate link* under *Account name*. Once the link associates, return to this operation. 
+* To create a custom snapshot policy, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three dots menu for the volume to protect with scheduled snapshots. 
+. From the *Volumes* tab, select the three-dot menu for the volume to protect with scheduled snapshots. 
 . Select *Data protection actions*, *Snapshots*, then *Manage snapshot policies*. 
 . On the Snapshot policy management page, select *Create a new snapshot policy*.
 . In the *Snapshot policy name* field, enter a name for the snapshot policy. 
@@ -48,4 +48,4 @@ The maximum number of copies is 1,023.
 . *Retention label* is automatically populated. 
 +
 This label refers to the SnapMirror, or replication label, used to select only specified snapshots for replication from the source to the target file system. 
-. Click *Apply*. 
+. Select *Apply*. 

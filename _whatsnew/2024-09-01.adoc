@@ -1,9 +1,9 @@
 === Read mode support for storage management
-Read mode is available for storage management in Workload Factory. Read mode enhances the experience of basic mode by adding read-only permissions so that the Infrastructure-as-Code templates are filled with your specific variables. The Infrastructure-as-Code templates can be executed directly from your AWS account without providing any modify permissions to Workload Factory.
+Read mode is available for storage management in workload factory. Read mode enhances the experience of basic mode by adding read-only permissions so that the Infrastructure-as-Code templates are filled with your specific variables. The Infrastructure-as-Code templates can be executed directly from your AWS account without providing any modify permissions to workload factory.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about read mode^] 
+link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about read mode] 
 
 === Backup before volume deletion support
 You can now back up a volume before deleting it. The backup will remain in the file system until deleted. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html[Delete a volume^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html[Delete a volume]

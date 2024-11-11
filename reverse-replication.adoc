@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: reverse-replication.html
 keywords: reverse replication, change replication
-summary: Reverse a replication relationship so that the target volume becomes the source volume. 
+summary: "Reverse a replication relationship so that the target volume becomes the source volume." 
 ---
-= Reverse a replication relationship
+= Reverse a replication relationship in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Reverse a replication relationship so that the target volume becomes the source volume. 
+Reverse a replication relationship in BlueXP workload factory so that the target volume becomes the source volume. 
 
 After you stop replication and make changes to the target volume, you can replicate those changes back to the source volume. This process is common in a disaster recovery scenario in which you operate on the target volume for a while and want to switch roles of the volumes.
 
@@ -22,10 +22,10 @@ NOTE: Any data written to the original source volume between the last data repli
 Make sure that you know the current and future roles of your source and target volumes because changes on the new target volume are overwritten with the new source volume. If used incorrectly, you can experience unintended data loss.
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, click the three dots menu of the replication relationship to reverse. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship to reverse. 
 . Select *Reverse relationship*. 
-. In the Reverse relationship dialog, click *Reverse*. 
+. In the Reverse relationship dialog, select *Reverse*. 

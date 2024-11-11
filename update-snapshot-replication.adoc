@@ -2,20 +2,20 @@
 sidebar: sidebar
 permalink: update-snapshot-replication.html
 keywords: update snapshot data, replication
-summary: Manually update snapshot data transferred between source and target volumes in a replication relationship at any time. 
+summary: "Manually update snapshot data transferred between source and target volumes in a replication relationship at any time." 
 ---
 = Update snapshot data in a replication relationship
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes when needed. 
+A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes in BlueXP workload factory at any time. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, click the three dots menu of the replication relationship to update. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship to update. 
 . Select *Update now*. 
-. In the Update dialog, click *Update now*. 
+. In the Update dialog, select *Update now*. 

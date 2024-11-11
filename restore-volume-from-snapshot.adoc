@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot
-summary: Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
+summary: "Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files." 
 ---
-= Restore a volume from a snapshot
+= Restore a volume from a snapshot in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
+In BlueXP workload factory, you can restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
 
 .About this task
 This operation restores data from a snapshot to a new volume. 
@@ -20,12 +20,12 @@ You can only restore a volume from a snapshot if you have an existing snapshot c
 Make sure you have enough capacity to complete this operation. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to storage inventory*.  
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system with the volume and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three dots menu for the volume to restore from a snapshot.
+. From the *Volumes* tab, select the three-dot menu for the volume to restore from a snapshot.
 . Select *Data protection actions*, *Snapshots*, then *Restore volume from a snapshot*. 
 . In the Restore volume from a snapshot dialog, in the *Snapshot name* field, select the snapshot to restore from the dropdown menu.
 . In the *Restored volume name* field, enter a unique name for the volume to restore. 
-. Click *Restore*. 
+. Select *Restore*. 

@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: access-data.html
 keywords: access data, mount clients, on-premises
-summary: You can access your FSx for ONTAP file systems from on-premises by mounting volumes for NAS clients and mounting iSCSI LUNs for SAN clients. 
+summary: "You can access your FSx for ONTAP file systems from on-premises by mounting volumes for NAS clients and mounting iSCSI LUNs for SAN clients." 
 ---
-= Access your data
+= Access your FSx for ONTAP file system data 
 :icons: font
 :imagesdir: ./media/
 
