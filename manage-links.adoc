@@ -19,10 +19,9 @@ You can view the links that are currently associated with your account.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. From the Account menu, select *Links*.
+. From the home page, select *Links* from the menu.
 +
-image:screenshot-links-button.png[A screenshot showing how to open the links page.]
+image:screenshot-menu-links.png[A screenshot showing how to open the links page.]
 . If any links exist, the overview page provides the information.
 . To view the FSx for ONTAP file systems that are associated with a link, select the *View* button in the Associated resources section.
 +
@@ -55,8 +54,9 @@ Note that the link is only deleted from Workload Factory - it is not deleted fro
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. From the Account menu, select *Links*.
+. From the home page, select *Links* from the menu.
++
+image:screenshot-menu-links.png[A screenshot showing how to open the links page.]
 . From the Links page, select the menu button and select *Remove*.
 +
 image:screenshot-remove-link.png["A screenshot showing how to remove a link from workload factory."]
