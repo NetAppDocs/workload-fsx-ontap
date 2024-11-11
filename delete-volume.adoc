@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: delete-volume.html
 keywords: delete volume, volume deletion
-summary: You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible.
+summary: "You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible."
 ---
-= Delete a volume
+= Delete a volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -21,16 +21,16 @@ Consider the following before deleting a volume:
 //* Immutable files: Volumes containing link:manage-immutable-files.html[immutable files] powered by SnapLock cannot be deleted until the retention period expires. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three dots menu of the file system with the volume to delete and then select *Manage*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to delete and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
-. From the Volumes tab, select the three dots menu of the volume to delete. 
+. From the Volumes tab, select the three-dot menu of the volume to delete. 
 . Select *Basic actions* then *Delete volume*. 
 . In the Delete volume dialog, do the following: 
-.. Optionally, click *Back up the volume* to back up the volume before deletion.
+.. Optionally, select *Back up the volume* to back up the volume before deletion.
 +
 The backup will remain in the file system until you manually delete it. 
-.. Click *Continue*. 
+.. Select *Continue*. 
 .. Type “delete” to delete the volume. 
-.. Click *Delete*. 
+.. Select *Delete*. 

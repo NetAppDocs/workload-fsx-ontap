@@ -1,10 +1,10 @@
 === Link creation updates    
 
-* Codebox viewer: Codebox is now integrated in the link creation process. You can view and copy the CloudFormation template from Codebox in Workload Factory before redirecting to AWS to execute the operation.  
+* Codebox viewer: Codebox is now integrated in the link creation process. You can view and copy the CloudFormation template from Codebox in workload factory before redirecting to AWS to execute the operation.  
 
-* Required permissions: The permissions required to execute the link creation in AWS CloudFormation are now available to view and copy from the Create Link wizard in Workload Factory.
+* Required permissions: The permissions required to execute the link creation in AWS CloudFormation are now available to view and copy from the Create Link wizard in workload factory.
 
 * Support for manual link creation: This feature allows standalone creation in AWS CloudFormation with manual registration of the link ARN. It's useful when a Security or DevOps team assists in the link creation process.  
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Create a link^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Create a link]
 

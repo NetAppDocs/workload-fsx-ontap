@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication
-summary: Initialize a replication relationship between source and target volumes. 
+summary: "Initialize a replication relationship between source and target volumes." 
 ---
-= Initialize a replication relationship
+= Initialize a replication relationship in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Initialize a replication relationship between source and target volumes. 
+Initialize a replication relationship between source and target volumes in BlueXP workload factory. 
 
 .About this task
 Initialization performs a _baseline_ transfer: it makes a snapshot of the source volume, then transfers the snapshot and all the data blocks it references to the target volume. 
@@ -18,10 +18,10 @@ Initialization performs a _baseline_ transfer: it makes a snapshot of the source
 Consider when you choose to complete this operation. Initialization can be time-consuming. You might want to run the baseline transfer in off-peak hours.
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab.
-. In the Replication relationships tab, click the three dots menu of the replication relationship to initialize. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship to initialize. 
 . Select *Initialize*. 
-. In the Initialize relationship dialog, click *Initialize*. 
+. In the Initialize relationship dialog, select *Initialize*. 

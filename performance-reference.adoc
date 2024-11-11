@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: performance-reference.html
 keywords: performance, FSx for ONTAP performance
-summary: Performance for FSx for ONTAP. 
+summary: "Performance reference is provided for FSx for ONTAP in BlueXP workload factory." 
 ---
-= Performance for FSx for ONTAP
+= Performance for FSx for ONTAP in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 

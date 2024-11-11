@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: support-registration.html
 keywords: support registration, register for support, support, nss account, add nss account
-summary: Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to Workload Factory and then register for support.
+summary: "Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to workload factory and then register for support."
 ---
 
 = Register for support
@@ -10,6 +10,6 @@ summary: Before you can open a support case with NetApp technical support, you n
 :imagesdir: ./media/
 
 [.lead]
-Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to Workload Factory and then register for support.
+Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to workload factory and then register for support.
 
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/support-registration.adoc[]

@@ -2,22 +2,23 @@
 sidebar: sidebar
 permalink: stop-replication.html
 keywords: stop replication, break replication
-summary: Stop a replication relationship between source and target volumes. 
+summary: "Stop a replication relationship between source and target volumes in BlueXP workload factory." 
 ---
-= Stop a replication relationship
+= Stop a replication relationship in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-When you stop a replication, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. 
+Stop a replication relationship in BlueXP workload factory. When you stop a replication relationship, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. 
 
 .Steps
-. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^] 
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, click the three dots menu of the file system to update and then select *Manage*.  
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, click the three dots menu of the replication relationship to stop. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship to stop. 
 . Select *Break*. 
 . In the Break replication dialog, select *Break*.
 
+.Result
 The replication status of the volume changes to *Broken*. The target volume becomes writable.
