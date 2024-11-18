@@ -11,11 +11,8 @@ summary: "Known limitations identify platforms, devices, or functions that are n
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully. 
 
-== Link
-A link is required to complete some operations like replication in the workload factory user interface. 
-
-== Storage efficiency
-Storage efficiency cannot be disabled or enabled after volume creation. 
+== Link or Connector required for advanced ONTAP operations
+A link or Connector is required to complete some operations like replication in the workload factory user interface. 
 
 == Throughput capacity region support
 
@@ -36,13 +33,11 @@ The number of storage VMs is limited per SKU. Creating storage VMs beyond the li
 Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[Managing FSx for ONTAP storage virtual machines^] in AWS documentation for the maximum number of SVMs per file system. 
 
 == iSCSI protocol support
-* The iSCSI protocol is only supported for scale-up deployments. ^1^
 * The iSCSI protocol is only available for FlexVol volumes. ^1^  
 * Only a single LUN can be configured per volume.
 
 == Region support
 * Canada West (Calgary) region isn't currently supported.
-
 
 == Data protection
 * Snapshots cannot be deleted. 
