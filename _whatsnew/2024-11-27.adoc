@@ -1,0 +1,29 @@
+=== Block storage for scale-out FSx for ONTAP file systems
+You can now create a scale-out FSx for ONTAP file system deployment with up to 6 HA pairs giving FlexVol volumes block access.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create an FSx for ONTAP file system in BlueXP workload factory]
+
+=== Mount command available 
+Mount commands are now available for NFS and CIFS access to a volume. You can get the mount point by going to an FSx for ONTAP file system and selecting *Basic actions* then *View mount command* for a volume. 
+
+image:screenshot-view-mount-command.png["Screenshot that shows to view the mount command by going into an fsx for ontap file system, selecting the volume menu, selecting basic actions, and then selecting view mount command. The mount command dialog appears and displays the mount command for CIFS or NFS access."]
+
+=== Storage efficiency support for volumes
+You can now enable storage efficiency for FlexVol volumes. Storage efficiency includes the following features: deduplication, data compression, and data compaction. Enabling storage efficiency helps you achieve optimal space savings on a FlexVol volume. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create an FSx for ONTAP volume in BlueXP workload factory]
+
+=== On-premises detection and replication
+On-premises storage environments are now detected in BlueXP workload factory. Once detected, you can replicate data from your on-premises clusters to FSx for ONTAP file systems. A new On-prem tab displays detected on-premises clusters. 
+
+link:
+
+=== AWS credentials improve savings calculator analysis
+You now have the option to add AWS credentials from the savings calculator. Doing so improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store, Elastic File Systems, and FSx for Windows File Server storage environments when compared with FSx for ONTAP. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Explore savings with FSx for ONTAP in BlueXP workload factory]
+
+=== Amazon Systems Manager Agent link support
+Additional link support includes AWS Systems Manager Agent (SSM) which you can use to execute code in response to events and automatically manage the computing resources required by that code. Associate existing SSM links with an FSx for ONTAP file system to utilize advanced ONTAP operations. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn about BlueXP workload factory links]
