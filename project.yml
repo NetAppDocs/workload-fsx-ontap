@@ -48,6 +48,8 @@ sidebar:
               url: access-data.html
         - title: Create a storage VM
           url: /create-storage-vm.html                
+        - title: Discover ONTAP on-premises clusters
+          url: /discover-on-prem.html
         - title: Protect your data
           entries:
             - title: Data protection overview 
