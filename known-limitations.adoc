@@ -11,15 +11,15 @@ summary: "Known limitations identify platforms, devices, or functions that are n
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully. 
 
-== Link or Connector required for advanced ONTAP operations
-A link or Connector is required to complete some operations like replication in the workload factory user interface. 
+== Link required for advanced ONTAP operations
+A link is required to complete some operations like replication in the workload factory user interface. 
 
 == Throughput capacity region support
 
 === Scale-up deployments
 The following regions support up to 4 GB/s maximum throughput capacity for scale-up deployments: US East (Ohio) Region, US East (N. Virginia) Region, US West (Oregon) Region, and Europe (Ireland).
 
-== Scale-out deployments
+=== Scale-out deployments
 The following regions support up to 3 and 6 GB/s maximum throughput capacity for scale-out deployments: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland), and Asia Pacific (Sydney).
 
 == Capacity management
