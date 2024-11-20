@@ -104,6 +104,8 @@ You can also load a saved configuration.
 +
 * For scale-up deployments, you can only have one HA pair. 
 * For scale-out deployments, you can have between two and twelve HA pairs.
++
+To provision iSCSI block volumes on the file system, select no more than 6 HA pairs.
 .. *Deployment type*: Select a deployment type.
 +
 * Single Availability Zone (Single-AZ) deployment: ensures availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
