@@ -62,7 +62,7 @@ If you selected an existing export policy, enter a new policy name.
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
 ... *CIFS share*: Enter the CIFS share name to provide SMB access. 
 +
-* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. This access option is only available when the file system scale-out deployment has 6 HA pairs or fewer. 
+* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. Block access is only available when the file system scale-out deployment has 6 HA pairs or fewer. 
 +
 Complete the following fields to set up block access to the volume.
 +
