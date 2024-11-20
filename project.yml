@@ -44,6 +44,8 @@ sidebar:
           entries:
             - title: Create a volume
               url: /create-volume.html
+            - title: View mount command for a volume
+              url: /view-mount-command.html
             - title: Access your data
               url: access-data.html
         - title: Create a storage VM
