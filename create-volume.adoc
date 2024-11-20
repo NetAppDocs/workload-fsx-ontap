@@ -51,7 +51,7 @@ Optionally, enable volume autogrow. This option is available when you select *Fi
 * *File access*: allows multiple authorized users and devices access to the volume using SMB/CIFS, NFS, or dual (SMB/NFS) protocols. 
 +
 Complete the following fields to set up file access to the volume.
-+ 
++
 ... *NFS export policy*: Provide the following details to provide NFS access: 
 .... *Access control*: Select a *Custom export policy*, *Existing export policy*, or *No access to the volume* from the dropdown menu.
 .... *Export policy name*: 
@@ -62,7 +62,7 @@ If you selected an existing export policy, enter a new policy name.
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
 ... *CIFS share*: Enter the CIFS share name to provide SMB access. 
 +
-* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol.
+* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. This access option is only available when the file system scale-out deployment has 6 HA pairs or fewer. 
 +
 Complete the following fields to set up block access to the volume.
 +
