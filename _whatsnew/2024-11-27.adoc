@@ -1,22 +1,24 @@
 === Block storage for scale-out FSx for ONTAP file systems
-You can now create a scale-out FSx for ONTAP file system deployment with up to 6 HA pairs giving FlexVol volumes block access.
+You can now provision block storage over FSx for ONTAP when using a scale-out file system deployment with up to 6 HA pairs.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create an FSx for ONTAP file system in BlueXP workload factory]
 
 === Mount command available 
-Mount commands are now available for NFS and CIFS access to a volume. You can get the mount point by going to an FSx for ONTAP file system and selecting *Basic actions* then *View mount command* for a volume. 
+Mount commands are now available for NFS and CIFS access to a volume. You can get the mount point for a volume within an FSx for ONTAP file system by selecting *Basic actions* then *View mount command*. 
 
 image:screenshot-view-mount-command.png["Screenshot that shows to view the mount command by going into an fsx for ontap file system, selecting the volume menu, selecting basic actions, and then selecting view mount command. The mount command dialog appears and displays the mount command for CIFS or NFS access."]
 
-=== Storage efficiency support for volumes
-You can now enable storage efficiency for FlexVol volumes. Storage efficiency includes the following features: deduplication, data compression, and data compaction. Enabling storage efficiency helps you achieve optimal space savings on a FlexVol volume. 
+link:https://docs.netapp.com/us-en/workload-fsx-ontap_view-mount-command/view-mount-command.html[View mount command for a volume]
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create an FSx for ONTAP volume in BlueXP workload factory]
+=== Update storage efficiency after volume creation
+You can now enable or disable storage efficiency for FlexVol volumes after volume creation. Storage efficiency includes the following features: deduplication, data compression, and data compaction. Enabling storage efficiency helps you achieve optimal space savings on a FlexVol volume. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.html[Update storage efficiency for a volume]
 
 === On-premises detection and replication
-On-premises storage environments are now detected in BlueXP workload factory. Once detected, you can replicate data from your on-premises clusters to FSx for ONTAP file systems. A new On-prem tab displays detected on-premises clusters. 
+On-premises storage environment detection and replication are now possible in BlueXP workload factory. Once an on-premises ONTAP cluster is detected, you can replicate data from the on-premises cluster to an FSx for ONTAP file system. All on-premises workflows are found in the new *On-Premises ONTAP* tab in the Storage inventory. 
 
-link:
+link:https://docs.netapp.com/us-en/workload-fsx-ontap_on-prem-support/discover-on-prem.html[Discover an on-premises ONTAP cluster]
 
 === AWS credentials improve savings calculator analysis
 You now have the option to add AWS credentials from the savings calculator. Doing so improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store, Elastic File Systems, and FSx for Windows File Server storage environments when compared with FSx for ONTAP. 
