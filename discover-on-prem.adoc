@@ -1,17 +1,28 @@
 ---
 sidebar: sidebar
-permalink: discover-on-prem.html
-keywords: discover, detect, on-premises, ONTAP cluster, on-premises cluster, ONTAP
+permalink: use-onprem-data.html
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
 summary: "You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible."
 ---
-= Discover an on-premise ONTAP cluster in BlueXP workload factory
+= Use on-premise ONTAP cluster data in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Discover an on-premise ONTAP cluster in BlueXP workload factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
+You can access and use on-premises ONTAP data in BlueXP workload factory.
 
 .About this task
+
+
+Use cases::
+The primary use case is for the GenAI workload, but you can use on-premises data for the all of the following use cases:
+
+* *GenAI workload*: Replicate on-premises-ONTAP volume data to an FSx for ONTAP file system so that the data can be used to enrich AI knowledge bases. 
+* *Backup and migration to cloud*: Replicated on-premises ONTAP volume data to an FSx for ONTAP file system can be used as a backup in the cloud. 
+* *Data tiering*: Move infrequently accessed on-premises ONTAP volume data once replicated to an FSx for ONTAP file system from SSD, performance, tier storage to the capacity pool tier 
+
+== Discover an on-premises ONTAP cluster
+Discover an on-premise ONTAP cluster in BlueXP workload factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
 
 .Before you begin
 Make sure you have the following before you begin: 
@@ -42,3 +53,7 @@ If you haven't created a link, follow the instructions and then return to this o
 The on-premises ONTAP cluster has been discovered and now appears in the *On-Premises ONTAP* tab. 
 
 You can now view the data in your on-premises ONTAP cluster and replicate the data to an FSx for ONTAP file system. 
+
+== Replicate volume data from an on-premises ONTAP cluster
+
+== Remove an on-premises ONTAP cluster from BlueXP workload factory
