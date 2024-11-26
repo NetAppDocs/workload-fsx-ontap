@@ -42,7 +42,7 @@ image:screenshot-on-prem-connectivity.png["Screenshot that shows how an on-premi
 . Select *Discover*. 
 . Review the prerequisites and select *Next*. 
 . On the Discover ONTAP on-premises page, provide the following under *Cluster configuration*:
-.. *Link*: Select a link. The link will be associated with the FSx for ONTAP file system and to create connectivity between your on-premises cluster and the file system. 
+.. *Link*: Select a link. The link will be associated with the on-premises cluster to create connectivity between the cluster and workload factory.
 +
 If you haven't created a link, follow the instructions and then return to this operation and select the link.
 .. *Cluster IP address*: Provide the IP address for the on-premises ONTAP cluster to replicate. 
