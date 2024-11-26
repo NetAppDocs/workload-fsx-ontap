@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
-summary: "You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible."
+summary: "Discover and replicate on-premises ONTAP data in BlueXP workload factory so it can be used to enrich AI knowledge bases."
 ---
 = Use on-premise ONTAP cluster data in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-You can access and use on-premises ONTAP data in BlueXP workload factory to replicate the data for AI knowledge bases, for backup and migration to the cloud, and to tier hot data to cold data storage in the cloud.
+Discover and replicate on-premises ONTAP data in BlueXP workload factory so it can be used to enrich AI knowledge bases.
 
 .About this task
 To use data from an on-premises ONTAP cluster, you'll first need to discover the on-premises ONTAP cluster. After you've discovered an on-premises ONTAP cluster, you can use the data for any of the following use cases. 
