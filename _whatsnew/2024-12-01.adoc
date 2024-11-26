@@ -8,10 +8,10 @@ Mount commands are now available for NFS and CIFS access to a volume. You can ge
 
 image:screenshot-view-mount-command.png["Screenshot that shows to view the mount command by going into an fsx for ontap file system, selecting the volume menu, selecting basic actions, and then selecting view mount command. The mount command dialog appears and displays the mount command for CIFS or NFS access."]
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap_view-mount-command/view-mount-command.html[View mount command for a volume]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/access-data.html[View mount command for a volume]
 
 === Update storage efficiency after volume creation
-You can now enable or disable storage efficiency for FlexVol volumes after volume creation. Storage efficiency includes the following features: deduplication, data compression, and data compaction. Enabling storage efficiency helps you achieve optimal space savings on a FlexVol volume. 
+You can now enable or disable storage efficiency for FlexVol volumes after volume creation. Storage efficiency includes deduplication, data compression, and data compaction. Enabling storage efficiency helps you achieve optimal space savings on a FlexVol volume. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.html[Update storage efficiency for a volume]
 
@@ -21,11 +21,6 @@ Discover and replicate on-premises ONTAP cluster data to an FSx for ONTAP file s
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html[Discover an on-premises ONTAP cluster]
 
 === AWS credentials improve savings calculator analysis
-You now have the option to add AWS credentials from the savings calculator. Doing so improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store, Elastic File Systems, and FSx for Windows File Server storage environments when compared with FSx for ONTAP. 
+You now have the option to add AWS credentials from the savings calculator. Adding credentials improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store, Elastic File Systems, and FSx for Windows File Server storage environments when compared with FSx for ONTAP. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Explore savings with FSx for ONTAP in BlueXP workload factory]
-
-=== Amazon Systems Manager Agent link support
-Additional link support includes AWS Systems Manager Agent (SSM) which you can use to execute code in response to events and automatically manage the computing resources required by that code. Associate existing SSM links with an FSx for ONTAP file system to utilize advanced ONTAP operations. 
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn about BlueXP workload factory links]
