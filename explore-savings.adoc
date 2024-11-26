@@ -22,6 +22,8 @@ Explore savings via customization: You provide the configuration settings for a 
 
 Explore savings for detected storage environments: workload factory links to your existing AWS storage environments and pulls in the details to the calculator for automatic comparison. You'll need to grant automate permissions to use automatic mode. You can change the use case, but all other details are automatically determined in the calculation. 
 
+Additionally, you can link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add AWS credentials^] to improve the accuracy of the calculator analysis. Select *Calculate savings based on existing resources*. You'll be redirected to the Add credentials page. After you add credentials, select the existing resources to compare with FSx for ONTAP, and select *Explore savings*. 
+
 == Explore savings via customization
 Follow the steps under the tab for your storage selection. 
 
@@ -82,7 +84,11 @@ Follow the steps under the tab for your storage selection.
 
 After you provide details for your storage system configuration, review the calculations and recommendations provided on the page.
 
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
+Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
+
+* *Export PDF* 
+* *Send by email* 
+* *View the calculations*
 
 To switch to FSx for ONTAP, follow the instructions to <<Deploy FSx for ONTAP file systems,deploy FSx for ONTAP file systems>>.
 
@@ -149,7 +155,11 @@ Follow the steps under the tab for your storage selection.
 
 After you provide details for your storage system configuration, review the calculations and recommendations provided on the page.
 
-Additionally, scroll down to the bottom of the page to *Export PDF* or *View the calculations*.
+Additionally, scroll down to the bottom of the page to view the report by selecting one of the following:
+
+* *Export PDF* 
+* *Send by email* 
+* *View the calculations*
 
 == Deploy FSx for ONTAP file systems
 If you'd like to switch to FSx for ONTAP to realize cost savings, select *Create* to create the file system(s) directly from the Create an FSx for ONTAP file system wizard or select *Save* to save the recommended configuration(s) for later. 
