@@ -15,10 +15,10 @@ You can now enable or disable storage efficiency for FlexVol volumes after volum
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.html[Update storage efficiency for a volume]
 
-=== On-premises detection and replication
-On-premises storage environment detection and replication are now possible in BlueXP workload factory. Once an on-premises ONTAP cluster is detected, you can replicate data from the on-premises cluster to an FSx for ONTAP file system. All on-premises workflows are found in the new *On-Premises ONTAP* tab in the Storage inventory. 
+=== On-premises ONTAP cluster discovery and replication
+Discover and replicate on-premises ONTAP cluster data to an FSx for ONTAP file system so that it can be used to enrich AI knowledge bases.  All on-premises discovery and replication workflows are possible from the new *On-Premises ONTAP* tab in the Storage inventory. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap_on-prem-support/discover-on-prem.html[Discover an on-premises ONTAP cluster]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap_on-prem-support/use-onprem-data.html[Discover an on-premises ONTAP cluster]
 
 === AWS credentials improve savings calculator analysis
 You now have the option to add AWS credentials from the savings calculator. Doing so improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store, Elastic File Systems, and FSx for Windows File Server storage environments when compared with FSx for ONTAP. 
