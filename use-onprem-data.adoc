@@ -1,0 +1,114 @@
+---
+sidebar: sidebar
+permalink: use-onprem-data.html
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
+summary: "You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible."
+---
+= Use on-premise ONTAP cluster data in BlueXP workload factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+You can access and use on-premises ONTAP data in BlueXP workload factory to replicate the data for AI knowledge bases, for backup and migration to the cloud, and to tier hot data to cold data storage in the cloud.
+
+.About this task
+To use data from an on-premises ONTAP cluster, you'll first need to discover the on-prem cluster. After you've discovered an on-prem cluster, you can use the data for any of the following use cases. 
+
+Use cases::
+Note that the primary use case for the GenAI workload is the focus of this series of tasks.
+
+* *GenAI workload*: Replicate on-premises-ONTAP volume data to an FSx for ONTAP file system so that the data can be used to enrich AI knowledge bases. 
+* *Backup and migration to cloud*: Replicated on-premises ONTAP volume data to an FSx for ONTAP file system can be used as a backup in the cloud. 
+* *Data tiering*: Move infrequently accessed on-premises ONTAP volume data once replicated to an FSx for ONTAP file system from SSD, performance, tier storage to the capacity pool tier 
+
+== Discover an on-premises ONTAP cluster
+Discover an on-premise ONTAP cluster in BlueXP workload factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
+
+.Before you begin
+Make sure you have the following before you begin: 
+
+* An FSx for ONTAP file system for replication.
+* A connected link to associate with the discovered on-premises cluster. If you don't have a link, you'll need to link:create-link.html[create one]. 
+* ONTAP user credentials with required permissions. 
+* On-premises ONTAP version 9.8 and above.
+* Connectivity as shown in the following diagram. 
++
+image:screenshot-on-prem-connectivity.png["Screenshot that shows how an on-premises ONTAP cluster should be connected for the management path and data path to Amazon Web Services Cloud"]
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. Select the *On-premises ONTAP* tab.
+. Select *Discover*. 
+. Review the prerequisites and select *Next*. 
+. On the Discover ONTAP on-premises page, provide the following under *Cluster configuration*:
+.. *Link*: Select a link. The link will be associated with the FSx for ONTAP file system and to create connectivity between your on-premises cluster and the file system. 
++
+If you haven't created a link, follow the instructions and then return to this operation and select the link.
+.. *Cluster IP address*: Provide the IP address for the on-premises ONTAP cluster to replicate. 
+.. *ONTAP credentials*: Enter the ONTAP credentials for the on-premises ONTAP cluster. Make sure the user has the required permissions. 
+. Select *Discover* to start the discovery process. 
+
+.Result
+The on-premises ONTAP cluster has been discovered and now appears in the *On-Premises ONTAP* tab. 
+
+You can now view the data in your on-premises ONTAP cluster and replicate the data to an FSx for ONTAP file system. 
+
+== Replicate volume data from an on-premises ONTAP cluster
+Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file system. Once replicated, the data can be used to enrich AI knowledge bases. 
+
+.Before you begin
+
+* You must discover an on-premises ONTAP cluster to replicate its volume data.
+* You must have an available FSx for ONTAP file system to be the target for the replication.
+* Both the on-premises ONTAP cluster and the FSx for ONTAP file system you use for the replication relationship must have an associated link. If the file systems don't have existing links, link:create-link.html[first create a link]. To link:manage-links.html[associate a link] in the file systems, select *Associate link* under *Account name*. Once the link associates in both file systems, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. Select the *On-premises ONTAP* tab.
+. To find volumes by storage VM, you can *Select storage VM* from the dropdown.  
+. Select one or more volumes to replicate and then select *Replicate*.
+. On the Create replication page, under Replication target, provide the following: 
+.. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
+.. *Storage VM name*: Select the storage VM from the dropdown menu.
+.. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
+.. *Tiering data*: Select the tiering policy for the data stored in the target volume. 
++
+* *Auto*: The default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. Tiers all cold data which includes user data and snapshots to the capacity pool storage tier for a specific time period. 
+* *Snapshot only*: Tiers only snapshot data to the capacity pool storage tier. 
+* *None*: Keeps all your volume's data on the primary storage tier. 
+* *All*: Marks all user data and snapshot data as cold and stores it in the capacity pool storage tier. 
++
+Note that some tiering policies have an associated minimum cooling period which sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk.
++
+For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
+.. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MiB/s. Alternatively, select *Unlimited*. 
++
+Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+. Under Replication settings, provide the following: 
+.. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
+.. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
++
+If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
++
+* For an existing policy, select *Choose an existing policy* and then select the existing policy from the dropdown menu. 
+* For a new policy, select *Create a new policy* and provide the following: 
+** *Policy name*: Enter a policy name. 
+** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
+. Select *Create*. 
+
+.Result
+The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system.  
+
+== Remove an on-premises ONTAP cluster from BlueXP workload factory
+Remove an on-premises ONTAP cluster from BlueXP workload factory when needed. 
+
+.Before you begin
+You must link:delete-replication.html[delete all existing replication relationships] for any volumes in the on-premises ONTAP cluster before removing the cluster so that no broken relationships remain.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. Select the *On-premises ONTAP* tab.
+. Select the 
