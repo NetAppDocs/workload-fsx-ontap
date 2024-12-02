@@ -60,7 +60,9 @@ If you selected a custom export policy, select an existing policy name from the 
 +
 If you selected an existing export policy, enter a new policy name. 
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
-... *CIFS share*: Enter the CIFS share name to provide SMB access. 
+... *CIFS share*: Provide the following: 
+.... *Name*: Enter the CIFS share name to provide SMB access. 
+.... *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username". 
 +
 * *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. Block access is only available when the file system scale-out deployment has 6 HA pairs or fewer. 
 +
