@@ -1,0 +1,29 @@
+---
+sidebar: sidebar
+permalink: update-storage-efficiency.html
+keywords: storage efficiency change, update storage efficiency
+summary: "In BlueXP workload factory, you can update the storage efficiency setting after volume creation."
+---
+= Update storage efficiency setting of a volume
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+In BlueXP workload factory, you can update the storage efficiency setting after volume creation. 
+
+.About this task
+The storage efficiency feature includes deduplication, data compression, and data compaction to achieve optimal space savings on a FlexVol volume. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. Data compaction stores more data in less space to increase storage efficiency. 
+
+If you chose not to enable storage efficiency when you created a volume, you can enable the setting for potential space and cost savings at any time. 
+
+Volumes use thin provisioning whether you enable or disable storage efficiency. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
+. From the file system overview, select the *Volumes* tab. 
+. From the Volumes tab, select the three-dot menu of the volume to change the tiering policy for. 
+. Select *Advanced actions*, then *Set storage efficiency*.  
+. Choose to enable or disable volume storage efficiency.
+. Select *Apply* to save the change. 

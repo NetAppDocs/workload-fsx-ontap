@@ -98,6 +98,8 @@ sidebar:
               url: /rebalance-volume.html
             - title: Change the tiering policy
               url: /change-tiering-policy.html   
+            - title: Update storage efficiency
+              url: /update-storage-efficiency.html
             - title: Manage the NFS export policy
               url: /manage-nfs-export-policy.html  
             - title: Manage the CIFS share
