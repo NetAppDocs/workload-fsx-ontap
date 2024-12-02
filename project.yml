@@ -44,8 +44,6 @@ sidebar:
           entries:
             - title: Create a volume
               url: /create-volume.html
-            - title: View mount command for a volume
-              url: /view-mount-command.html
             - title: Access your data
               url: access-data.html
         - title: Create a storage VM
@@ -80,12 +78,6 @@ sidebar:
                   url: /initialize-replication.html
             - title: Clone a volume
               url: clone-volume.html  
-  #          - title: Use automation with FSx for ONTAP  
-  #            entries:
-  #              - title: Automation overview 
-  #                url: /automation-overview.html
-  #              - title: Use Terraform with FSx for ONTAP 
-  #                url: /use-terraform-automation.html   
     - title: Administer and monitor
       entries:
         - title: Volume administration
