@@ -78,6 +78,8 @@ sidebar:
                   url: /initialize-replication.html
             - title: Clone a volume
               url: clone-volume.html  
+            - title: Use on-premises ONTAP data
+              url: /use-onprem-data.html
     - title: Administer and monitor
       entries:
         - title: Volume administration
