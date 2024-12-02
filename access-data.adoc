@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: access-data.html
-keywords: access data, mount clients, on-premises
+keywords: access data, mount point, mount volumes, mount clients, on-premises
 summary: "You can access your FSx for ONTAP file systems from on-premises by mounting volumes for NAS clients and mounting iSCSI LUNs for SAN clients." 
 ---
 = Access your FSx for ONTAP file system data 
@@ -12,6 +12,20 @@ summary: "You can access your FSx for ONTAP file systems from on-premises by mou
 You can access your FSx for ONTAP file systems from on-premises by mounting volumes for NAS clients and mounting iSCSI LUNs for SAN clients. 
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html[Accessing data^] in Amazon FSx for NetApp ONTAP documentation provides topics about how to access data for your reference. 
+
+You can also get the mount point for volumes in BlueXP workload factory. 
+
+== Get mount point for volumes in BlueXP workload factory 
+Get the mount point for a volume to mount a share on a CIFS share or NFS client. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. From Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.
+. From the file system overview, select the *Volumes* tab. 
+. From the Volumes tab, select the three-dot menu for the volume, then *Basic actions*, and then *View mount command*. 
+. In the Mount command dialog, select *Copy* to copy the command. You'll enter the copied command in your terminal. 
+. Select *Close*. 
 
 == Connect to NAS clients
 

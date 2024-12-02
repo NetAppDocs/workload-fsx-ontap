@@ -78,12 +78,6 @@ sidebar:
                   url: /initialize-replication.html
             - title: Clone a volume
               url: clone-volume.html  
-  #          - title: Use automation with FSx for ONTAP  
-  #            entries:
-  #              - title: Automation overview 
-  #                url: /automation-overview.html
-  #              - title: Use Terraform with FSx for ONTAP 
-  #                url: /use-terraform-automation.html  
             - title: Use on-premises ONTAP data
               url: /use-onprem-data.html
     - title: Administer and monitor
