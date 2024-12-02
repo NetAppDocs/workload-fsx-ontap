@@ -52,10 +52,10 @@ Without a limit, network and application performance may decline. Alternatively,
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
 +
-... For *Choose an existing policy*, select an existing policy from the dropdown menu. 
-... For *Create a new policy*, provide the following: 
-.... *Policy name*: Enter a policy name. 
-.... *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
+* For *Choose an existing policy*, select an existing policy from the dropdown menu. 
+* For *Create a new policy*, provide the following: 
+** *Policy name*: Enter a policy name. 
+** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
 . Select *Create*. 
 --
 
@@ -73,7 +73,7 @@ If you enable long-term retention, then select an existing policy or create a ne
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
 +
 _Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
-.. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
+.. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MiB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
@@ -82,15 +82,15 @@ Without a limit, network and application performance may decline. Alternatively,
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
 +
-... For *Choose an existing policy*, select an existing policy from the dropdown menu. 
-... For *Create a new policy*, provide the following: 
-.... *Policy name*: Enter a policy name. 
-.... *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
+* For *Choose an existing policy*, select an existing policy from the dropdown menu. 
+* For *Create a new policy*, provide the following: 
+** *Policy name*: Enter a policy name. 
+** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
 . Select *Create*. 
 --
 
 ====
 
 .Result
-The replication relationship appears in the *Replication relationships* tab.  
+The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system.  
 
