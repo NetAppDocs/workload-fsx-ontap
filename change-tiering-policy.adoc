@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: change-tiering-policy.html
-keywords: 
+keywords: tiering policy, change tier, change tiers, tier policy update
 summary: "Change the tiering policy in BlueXP workload factory to re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier."
 ---
 = Change the tiering policy of a volume in BlueXP workload factory

@@ -1,0 +1,26 @@
+=== Block storage for scale-out FSx for ONTAP file systems
+You can now provision block storage over FSx for ONTAP when using a scale-out file system deployment with up to 6 HA pairs.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create an FSx for ONTAP file system in BlueXP workload factory]
+
+=== Mount command available 
+Mount commands are now available for NFS and CIFS access to a volume. You can get the mount point for a volume within an FSx for ONTAP file system by selecting *Basic actions* then *View mount command*. 
+
+image:screenshot-view-mount-command.png["Screenshot that shows to view the mount command by going into an fsx for ontap file system, selecting the volume menu, selecting basic actions, and then selecting view mount command. The mount command dialog appears and displays the mount command for CIFS or NFS access."]
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/access-data.html[View mount command for a volume]
+
+=== Update storage efficiency after volume creation
+You can now enable or disable storage efficiency for FlexVol volumes after volume creation. Storage efficiency includes deduplication, data compression, and data compaction. Enabling storage efficiency helps you achieve optimal space savings on a FlexVol volume. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.html[Update storage efficiency for a volume]
+
+=== On-premises ONTAP cluster discovery and replication
+Discover and replicate on-premises ONTAP cluster data to an FSx for ONTAP file system so that it can be used to enrich AI knowledge bases.  All on-premises discovery and replication workflows are possible from the new *On-Premises ONTAP* tab in the Storage inventory. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html[Discover an on-premises ONTAP cluster]
+
+=== AWS credentials improve savings calculator analysis
+You now have the option to add AWS credentials from the savings calculator. Adding credentials improves the accuracy of the savings calculator analysis of your Amazon Elastic Block Store, Elastic File Systems, and FSx for Windows File Server storage environments when compared with FSx for ONTAP. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Explore savings with FSx for ONTAP in BlueXP workload factory]

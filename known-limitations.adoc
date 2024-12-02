@@ -11,18 +11,15 @@ summary: "Known limitations identify platforms, devices, or functions that are n
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully. 
 
-== Link
+== Link required for advanced ONTAP operations
 A link is required to complete some operations like replication in the workload factory user interface. 
-
-== Storage efficiency
-Storage efficiency cannot be disabled or enabled after volume creation. 
 
 == Throughput capacity region support
 
 === Scale-up deployments
 The following regions support up to 4 GB/s maximum throughput capacity for scale-up deployments: US East (Ohio) Region, US East (N. Virginia) Region, US West (Oregon) Region, and Europe (Ireland).
 
-== Scale-out deployments
+=== Scale-out deployments
 The following regions support up to 3 and 6 GB/s maximum throughput capacity for scale-out deployments: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland), and Asia Pacific (Sydney).
 
 == Capacity management
@@ -36,13 +33,11 @@ The number of storage VMs is limited per SKU. Creating storage VMs beyond the li
 Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms[Managing FSx for ONTAP storage virtual machines^] in AWS documentation for the maximum number of SVMs per file system. 
 
 == iSCSI protocol support
-* The iSCSI protocol is only supported for scale-up deployments. ^1^
 * The iSCSI protocol is only available for FlexVol volumes. ^1^  
 * Only a single LUN can be configured per volume.
 
 == Region support
 * Canada West (Calgary) region isn't currently supported.
-
 
 == Data protection
 * Snapshots cannot be deleted. 
