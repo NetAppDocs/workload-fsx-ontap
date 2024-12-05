@@ -9,10 +9,7 @@ summary: "You can delete a volume in your FSx for ONTAP file system at any time.
 :imagesdir: ./media/
 
 [.lead]
-You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible.
-
-.About this task
-Volumes with the immutable files feature cannot be deleted until the retention period expires. 
+You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible. 
 
 .Before you begin
 Consider the following before deleting a volume: 
