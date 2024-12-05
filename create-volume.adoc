@@ -77,6 +77,34 @@ Complete the following fields to set up block access to the volume.
 .. *Storage efficiency*: Disable or enable storage efficiency. 
 +
 Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
+.. *Immutable files*: Disabled by default. Enabling immutable files is possible only during volume creation. Once enabled, this feature cannot be disabled.
++
+Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
++
+Retention modes:::
+You can select from two retention modes - Enterprise or Compliance. 
+* In Enterprise mode, an immutable files, or SnapLock, administrator can delete a file during its retention period. 
+* In Compliance mode, a WORM file cannot be deleted before its retention period expires. Similarly, the immutable volume cannot be deleted until the retention periods for all files within the volume expire. 
++
+Retention period:::
+The retention period has two settings - retention policy and retention periods. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified) which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
++
+Autocommit:::
+You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. The files you want to autocommit must reside on a SnapLock volume.
+... Select to enable *Immutable files powered by SnapLock*. 
+... Click the box to agree and proceed.  
+... Click *Enable*. 
+... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
+... *Retention period*: 
+* Select the retention policy: 
+** *Unspecified*: Sets the retention policy to 30 years.
+** *Specify period*: Enter the number of seconds, hours, days, months, or years to set your own retention policy.  
+* Select the minimum and maximum retention periods: 
+** *Minimum*: Enter the number of seconds, hours, days, months, or years to set the minimum retention period.
+** *Maximum*: Enter the number of seconds, hours, days, months, or years to set the maximum retention period.
+... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
+... *Privileged delete*: Disable or enable. Allows an administrator to delete an unexpired WORM file. 
+... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
 The following are default policies from AWS. For custom snapshot policies, you must associate a link. 
