@@ -36,7 +36,7 @@ Follow the steps to create a CIFS share for a volume.
 .Result
 The CIFS share for the volume is created.
 
-== Change the CIFS for a volume
+== Change a CIFS share for a volume
 Follow the steps to change the CIFS share settings for a volume.
 
 .Steps
