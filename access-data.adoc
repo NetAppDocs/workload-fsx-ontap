@@ -24,7 +24,7 @@ Get the mount point for a volume to mount a share on a CIFS share or NFS client.
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu for the volume, then *Basic actions*, and then *View mount command*. 
-. In the Mount command dialog, select *Copy* to copy the command. You'll enter the copied command in your terminal. 
+. In the Mount command dialog, select *Copy* to copy the command for either the NFS mount point or CIFS share. You'll enter the copied command in your terminal. 
 . Select *Close*. 
 
 == Connect to NAS clients

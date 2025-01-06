@@ -17,7 +17,7 @@ A link is required to complete some operations like replication in the workload 
 == Throughput capacity region support
 
 === Scale-up deployments
-The following regions support up to 4 GB/s maximum throughput capacity for scale-up deployments: US East (Ohio) Region, US East (N. Virginia) Region, US West (Oregon) Region, and Europe (Ireland).
+Scale-up configurations are supported up to 2 GB/s in all regions. The following regions support up to 4 GB/s maximum throughput capacity for scale-up deployments: US East (Ohio) Region, US East (N. Virginia) Region, US West (Oregon) Region, and Europe (Ireland).
 
 === Scale-out deployments
 The following regions support up to 3 and 6 GB/s maximum throughput capacity for scale-out deployments: US East (N. Virginia), US East (Ohio), US West (Oregon), Europe (Ireland), and Asia Pacific (Sydney).
@@ -36,14 +36,10 @@ Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 * The iSCSI protocol is only available for FlexVol volumes. ^1^  
 * Only a single LUN can be configured per volume.
 
-== Region support
-* Canada West (Calgary) region isn't currently supported.
-
 == Data protection
 * Snapshots cannot be deleted. 
-* Only replication between FSx for ONTAP file systems is supported.
 * When you replicate a file system, all volumes in the file system use the same replication policy.
-* Only the last snapshot is available for restore.
+* For long-term retention replication relationships, only the last snapshot is available for restore.
 
 == Storage savings calculator
 The Storage savings calculator doesn't calculate cost savings for the following configurations: 
