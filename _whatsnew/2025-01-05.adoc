@@ -1,0 +1,9 @@
+=== Volume CIFS share enhancements 
+The following enhancements are available for managing CIFS share for volumes in an Amazon FSx for ONTAP file system in BlueXP workload factory: 
+
+* Support for multiple CIFS shares on a volume
+* The option to update users and groups at any time
+* The option to update permissions for users and groups at any time
+* CIFS share deletion
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html[Manage CIFS shares]

@@ -34,12 +34,15 @@ Workload factory requires a link to display some information and to perform some
 
 The features that require a link include:
 
-* Display the version of ONTAP that is installed on an FSx for ONTAP file system
-* Manage iSCSI volumes on the system
-* Enable and disable the autogrow feature for volumes
-* Create and manage snapshot policies
-* Configure replication relationships and replicate volumes between file systems
-* Configure backup relationships and back up volume data to cloud storage
-* Clone volumes within a file system
-* Display additional metrics directly from ONTAP (default metrics are collected by Amazon CloudWatch)
-* Management of NFS Export policies
+* Displaying the version of ONTAP that is installed on an FSx for ONTAP file system
+* Management of iSCSI volumes on an FSx for ONTAP file system
+* Autogrow feature for volumes
+* Creation and management of snapshot policies
+* Replication relationship configuration 
+* Volume replication between FSx for ONTAP file systems
+* Backup relationship configuration 
+* Volume data backups to cloud storage
+* Volume clones within an FSx for ONTAP file system
+* Displaying additional metrics directly from ONTAP (default metrics are collected by Amazon CloudWatch)
+* Management of NFS export policies
+* Management of CIFS shares

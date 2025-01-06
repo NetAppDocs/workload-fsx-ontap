@@ -45,7 +45,7 @@ sidebar:
             - title: Create a volume
               url: /create-volume.html
             - title: Access your data
-              url: access-data.html
+              url: /access-data.html
         - title: Create a storage VM
           url: /create-storage-vm.html                
         - title: Protect your data
@@ -77,7 +77,7 @@ sidebar:
                 - title: Initialize a replication relationship
                   url: /initialize-replication.html
             - title: Clone a volume
-              url: clone-volume.html  
+              url: /clone-volume.html  
             - title: Use on-premises ONTAP data
               url: /use-onprem-data.html
     - title: Administer and monitor
@@ -96,16 +96,16 @@ sidebar:
               url: /manage-volume-tags.html
             - title: Rebalance a volume's capacity
               url: /rebalance-volume.html
-            - title: Change the tiering policy
+            - title: Change a tiering policy
               url: /change-tiering-policy.html   
             - title: Update storage efficiency
               url: /update-storage-efficiency.html
-            - title: Manage the NFS export policy
+            - title: Manage NFS export policies
               url: /manage-nfs-export-policy.html  
-            - title: Manage the CIFS share
+            - title: Manage CIFS shares
               url: /manage-cifs-share.html 
             - title: Split a cloned volume
-              url: split-cloned-volume.html    
+              url: /split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
         - title: File system administration
@@ -127,13 +127,13 @@ sidebar:
             - title: Manage storage VM tags
               url: /manage-svm-tags.html
             - title: Reset storage VM password
-              url: reset-svm-password.html
+              url: /reset-svm-password.html
             - title: Delete a storage VM 
               url: /delete-svm.html
         - title: Data protection administration
           entries:
             - title: Change the snapshot policy of a volume
-              url: change-snapshot-policy.html
+              url: /change-snapshot-policy.html
             - title: Manage FSx for ONTAP backup schedule
               url: /manage-backup-schedule.html
             - title: Enable and edit snapshots for long-term retention
