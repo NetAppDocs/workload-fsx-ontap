@@ -30,5 +30,5 @@ You must link:manage-links.html[associate a link] to create a snapshot. If you d
 . In the Create a snapshot dialog, in the *Snapshot name* field, enter a snapshot name. 
 . Optional: Make the snapshot immutable to prevent the snapshot from being deleted during the retention period. 
 .. Enable *Immutable snapshot*.
-.. Set the *Retention period*. 
+.. Set the *Retention period* as a number of hours, days, months, or years. 
 . Select *Create*. 

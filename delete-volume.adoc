@@ -18,7 +18,8 @@ Consider the following before deleting a volume:
 * Local snapshots: All snapshots associated with this FSx for ONTAP file system will be permanently deleted. 
 * FSx for ONTAP backup: FSx for ONTAP backup copies will remain and you can still use them. 
 //Add when immutable files releases
-//* Immutable files: Volumes containing link:manage-immutable-files.html[immutable files] powered by SnapLock cannot be deleted until the retention period expires. 
+//* Immutable files: Volumes containing link:manage-immutable-files.html[immutable files] powered by SnapLock cannot be deleted until the retention period expires.
+* Immutable files and snapshots: Volumes containing immutable files or snapshots cannot be deleted until the retention period expires. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
