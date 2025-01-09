@@ -1,11 +1,36 @@
 
 = Manage snapshot policies
 
-*Does a user need to associate a link to manage all of the following for snapshot policies?*
+.[lead]
+You can manage snapshot policies for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
+
+.About this task
+Snapshot management operations like assigning, changing, and deleting snapshot policies for volumes in an FSx for ONTAP file system are managed at the storage VM level. Snapshot policies can be shared with a single storage VM or with all storage VMs. 
+
+Some management tasks require you to link:manage-links.html[associate a link] to the file system. If you don't have an existing link, link:create-link.html[create a link].
+
+By default, every volume is associated with the file system's `default` snapshot policy. We recommend using this policy for most workloads. -*Hanan: Is this true?*
+
+*Hanan: Does a user need to associate a link to manage all of the following for snapshot policies?*
 
 == Change a snapshot policy
+You can change the snapshot policy name, schedule, and number of copies to retain, enable or disable immutable snapshots, and enable or disable the share feature.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In *Storage*, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the three-dot menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. On the Snapshot policy management page, select the three-dot menu for the snapshot policy to change and then select *Edit*.
+. In the Edit snapshot policy dialog, make the necessary changes to the snapshot policy.
+. Select *Apply*.
+
+.Result
+The snapshot policy has been updated.
 
 == Assign a snapshot policy
+You can assign a snapshot policy to a single volume, a single storage VM, or all storage VMs in an FSx for ONTAP file system.
 
 .Before you begin
 You must link:manage-links.html[associate a link] to assign a snapshot policy. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
@@ -26,6 +51,7 @@ If the policy retains immutable snapshots, and you'd like to use it, accept the 
 The snapshot policy has been assigned to the volume. 
 
 == Enable immutable snapshots
+Lock snapshots to prevent them from being deleted during the retention period.
 
 .Before you begin
 You must link:manage-links.html[associate a link] to assign a snapshot policy. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
@@ -47,3 +73,16 @@ You must link:manage-links.html[associate a link] to assign a snapshot policy. I
 The snapshot is now immutable.
 
 == Delete a snapshot policy
+Delete a snapshot policy when you no longer need it. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In *Storage*, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the three-dot menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. On the Snapshot policy management page, select the three-dot menu for the snapshot policy to change and then select *Delete*.
+. In the Delete dialog, select *Delete* to delete the policy. 
+
+.Result
+The snapshot policy has been deleted.
