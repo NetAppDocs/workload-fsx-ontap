@@ -19,7 +19,7 @@ You must link:manage-links.html[associate a link] to assign a snapshot policy. I
 . Select *Data protection actions*, *Snapshots*, then *Assign snapshot policy*. 
 . In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
 +
-If the policy contains immutable snapshot retention, and you'd like to use it, accept the statement. *I don't understand how this works. Hanan, can you explain how a policy contains immutable snapshot retention?*
+If the policy retains immutable snapshots, and you'd like to use it, accept the statement. *I don't understand how this works. Hanan, can you explain how a policy contains immutable snapshot retention?*
 . Select *Assign*. 
 
 .Result

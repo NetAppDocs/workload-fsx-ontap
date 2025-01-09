@@ -52,9 +52,12 @@ Without a limit, network and application performance may decline. Alternatively,
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
 +
-* For *Choose an existing policy*, select an existing policy from the dropdown menu. 
-* For *Create a new policy*, provide the following: 
-** *Policy name*: Enter a policy name. 
+* *Choose an existing policy*: select an existing policy from the dropdown menu. 
+* *Create a new policy*: provide the following: 
+** *Policy name*: Enter a policy name.
+** Optional: Enable immutable snapshots.
+*** Select *Enable immutable snapshots* to prevent snapshots taken in this policy from being deleted during the retention period.
+*** Set the *Retention period* in number of hours, days, months, or years. 
 ** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
 . Select *Create*. 
 --
@@ -82,8 +85,8 @@ Without a limit, network and application performance may decline. Alternatively,
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
 +
-* For *Choose an existing policy*, select an existing policy from the dropdown menu. 
-* For *Create a new policy*, provide the following: 
+* *Choose an existing policy*: select an existing policy from the dropdown menu. 
+* *Create a new policy*: provide the following: 
 ** *Policy name*: Enter a policy name. 
 ** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
 . Select *Create*. 
