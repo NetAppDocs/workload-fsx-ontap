@@ -3,7 +3,7 @@
 === Inventory data download
 You can now download FSx for ONTAP inventory data into an Microsoft Excel or CSV file from Storage in BlueXP workload factory. 
 
-image:sceenshot-storage-inventory-download-small.png[A screenshot of Storage in  BlueXP workload factory showing the new download button to download FSx for ONTAP file system inventory data.]
+image:screenshot-storage-inventory-download-small.png[A screenshot of Storage in  BlueXP workload factory showing the new download button to download FSx for ONTAP file system inventory data.]
 
 === FSx for ONTAP file system additional menu options  
 We've made it simpler to do the following for an FSx for ONTAP file system from the FSx for ONTAP tab in Storage.  
