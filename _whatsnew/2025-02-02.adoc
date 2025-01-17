@@ -1,0 +1,24 @@
+=== CloudShell support 
+
+=== Inventory data download
+You can now download FSx for ONTAP inventory data into an Microsoft Excel or CSV file from Storage in BlueXP workload factory. 
+
+=== FSx for ONTAP file system additional menu options  
+We've made it simpler to do the following for an FSx for ONTAP file system from the FSx for ONTAP tab in Storage.  
+
+* Create a storage VM
+* Create a volume
+* Replicate volume data
+
+image:screenshot-filesystem-menu-options.png[A screenshot of the FSx for ONTAP tab in Storage showing the new menu options create storage VM, create volume, and replicate volume data.]
+
+=== Amazon CloudWatch dashboard enhancements for FSx for ONTAP
+We've added the following enhancements to the monitoring dashboard for Amazon CloudWatch:
+
+* Alarms: change the default threshold using resource tags to trigger alarms
+* LUN metrics: extract LUN metrics to CloudWatch and automatically discover LUNs in CloudWatch
+* User identification: select from users other than 'fsxadmin'
+* Capacity pool metrics: create charts for different capacity pool metrics
+* Dashboard usage report: generate a report on dashboard usage
+
+Learn about link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Amazon-CloudWatch-dashboard-for-FSx-for-ONTAP/ba-p/457334[Amazon CloudWatch dashboard for FSx for ONTAP^]. The blog post describes the monitoring options available for FSx for ONTAP on AWS, a dashboard walkthrough, and instructions for how to deploy the Amazon CloudWatch dashboard. 
