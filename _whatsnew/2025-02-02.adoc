@@ -28,3 +28,16 @@ We've added the following enhancements to the monitoring dashboard for Amazon Cl
 * Dashboard usage report: generate a report on dashboard usage
 
 Learn about link:https://community.netapp.com/t5/Tech-ONTAP-Blogs/Amazon-CloudWatch-dashboard-for-FSx-for-ONTAP/ba-p/457334[Amazon CloudWatch dashboard for FSx for ONTAP^]. The blog post describes the monitoring options available for FSx for ONTAP on AWS, a dashboard walkthrough, and instructions for how to deploy the Amazon CloudWatch dashboard. 
+
+=== Terraform support for creating volumes
+You can now use Terraform from the Codebox to create volumes. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
+
+=== File locking with the immutable files feature
+You can now lock files using the immutable files feature when you create a volume for an FSx for ONTAP file system. File locking helps you and others prevent accidental or intentional file deletion for a specified period. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
+
+=== Tracker available for monitoring and tracking operations
+Tracker, a new monitoring capability is available in Storage. You can use Tracker to monitor and track the progress and status of operations, and diagnose any issues or failures.
