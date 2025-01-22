@@ -39,4 +39,6 @@ You can now lock files using the immutable files feature when you create a volum
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
 
 === Tracker available for monitoring and tracking operations
-Tracker, a new monitoring capability is available in Storage. You can use Tracker to monitor and track the progress and status of operations, and diagnose any issues or failures.
+Tracker, a new monitoring capability is available in Storage. You can use Tracker to monitor and track the progress and status of operations, review details for tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations. 
+
+//add link to tracker page
