@@ -15,7 +15,7 @@ Known limitations identify platforms, devices, or functions that are not support
 A link is required to complete some operations like replication in the workload factory user interface. 
 
 == Adding HA pairs limits other operations
-Adding HA pairs limits updates to IO allocation, SSD allocation, and throughput capacity. 
+Adding HA pairs limits the following operations: adding more HA pairs, provisioning IOPS, increasing SSD capacity, and updating throughput capacity. 
 
 == Throughput capacity region support
 
