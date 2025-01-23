@@ -17,7 +17,8 @@ Consider the following before deleting a volume:
 * Replication relationships: You must link:delete-replication.html[delete all existing replication relationships] for this volume before deleting the volume so that no broken relationships remain.
 * Local snapshots: All snapshots associated with this FSx for ONTAP file system will be permanently deleted. 
 * FSx for ONTAP backup: FSx for ONTAP backup copies will remain and you can still use them. 
-* Immutable files: Volumes containing link:manage-immutable-files.html[immutable files] powered by SnapLock cannot be deleted until the retention period expires. 
+* Immutable files: Volumes containing immutable files powered by SnapLock cannot be deleted until the retention period expires.
+//update Immutable files when editing is available: Volumes containing link:manage-immutable-files.html[immutable files] powered by SnapLock cannot be deleted until the retention period expires.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
