@@ -77,7 +77,7 @@ Complete the following fields to set up block access to the volume.
 .. *Storage efficiency*: Disable or enable storage efficiency. 
 +
 Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
-.. *Immutable files*: Disabled by default. Enabling immutable files is possible only during volume creation. Once enabled, this feature cannot be disabled.
+.. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files is possible only during volume creation. Once enabled, this feature cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in the AWS FSx for NetApp ONTAP documentation. 
 +
 Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
 +
