@@ -9,7 +9,7 @@ summary: "Add high-availability pairs to a file system in BlueXP workload factor
 :imagesdir: ./media/
 
 [.lead]
-Add HA pairs to scale out an FSx for ONTAP second-generation Single-AZ file system in BlueXP workload factory to increase performance and capacity. This expansion gives you more performance scalability and flexibility over first-generation file systems. 
+Add high-availability (HA) pairs to scale out an FSx for ONTAP second-generation Single-AZ file system in BlueXP workload factory to increase performance and capacity. This expansion gives you more performance scalability and flexibility over first-generation file systems. 
 
 .About this task 
 The new HA pairs get added using the same SKU and same capacity per HA pair.
