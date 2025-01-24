@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs
+summary: "Track FSx for ONTAP, credentials, and link operations and monitor job progress with Tracker in BlueXP workload factory for Storage."  
+---
+= Monitor storage operations with Tracker in BlueXP workload factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Monitor and track the execution of FSx for ONTAP, credentials, and link operations and monitor task progress with Tracker in BlueXP workload factory. 
+
+.About this task 
+Workload factory provides Tracker, a monitoring feature, so you can monitor and track the progress and status of FSx for ONTAP, credentials, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations. You can filter jobs by type and status, find jobs using the search function, and download the jobs table.
+
+Tracker supports up to three levels of monitoring depending on the operation. Each task, such as file system deployment, displays the task description, status, start time, task duration, user, region, proxy resource, task ID, and all related sub tasks.   
+
+Tracker task levels with examples::: 
+
+* Level 1 (parent job): Tracks a file system deployment.
+* Level 2 (sub-job): Tracks the sub-jobs related to the file system deployment. 
+* Level 3 (task): Lists the sequence of actions taken on each resource.
+
+Operation status:::
+Operation status in Tracker is as follows _in progress_, _success_, and _failed_.
+
+Operation frequency::
+Operation frequency is based on the job type and the job schedule.
+
+Events retention:::
+Events are retained in the user interface for 30 days. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*.
+. From storage inventory, select account settings menu and then select *Tracker*.
++
+image:screenshot-account-tracker-option.png[A screenshot of the account settings menu with the Tracker option highlighted.] 
+. In the Tracker tab, use the filters or search to narrow job results. You can also download a jobs report. 
+. Click the three-dot menu of the job and click *Go to CloudFormation* to view the job log in the AWS CloudFormation console.  
