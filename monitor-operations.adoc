@@ -31,6 +31,9 @@ Operation frequency is based on the job type and the job schedule.
 Events retention:::
 Events are retained in the user interface for 30 days. 
 
+== Track and monitor operations
+Track and monitor operations in BlueXP with Tracker.
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*.
@@ -39,3 +42,34 @@ Events are retained in the user interface for 30 days.
 image:screenshot-account-tracker-option.png[A screenshot of the account settings menu with the Tracker option highlighted.] 
 . In the Tracker tab, use the filters or search to narrow job results. You can also download a jobs report. 
 . Click the three-dot menu of the job and click *Go to CloudFormation* to view the job log in the AWS CloudFormation console.  
+
+== View API request
+View the API request in the Codebox for a task in Tracker.
+
+.Steps
+. In Tracker, select a task. 
+. Select the three-dot menu and then select *View API request*.
+
+== Retry a failed operation
+Retry a failed operation in Tracker. You can also copy the error message of a failed operation. 
+
+NOTE: Only x number of retries are allowed for a failed operation.
+
+.Steps
+. In Tracker, select a failed operation.
+. Select the three-dot menu and then select *Retry*. 
+
+.Result
+The operation is re-initiated.
+
+== Edit and retry a failed operation
+Edit the parameters of the failed operation and retry the operation outside Tracker. 
+
+.Steps
+. In Tracker, select a failed operation.
+. Select the three-dot menu and then select *Edit and retry*.
++
+You are redirected to the operation page where you can edit the parameters and retry the operation.
+
+.Result
+The operation is re-initiated. Go to Tracker to view the status of the operation.
