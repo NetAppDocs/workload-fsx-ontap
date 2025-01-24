@@ -32,7 +32,7 @@ Review the following prerequisites before you create a volume:
 == Create a volume
 You can create a volume using the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^].
 
-NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin`` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code.
+NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
