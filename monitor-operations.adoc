@@ -39,7 +39,7 @@ Track and monitor operations in BlueXP with Tracker.
 . In Storage, select *Go to Storage inventory*.
 . From storage inventory, select account settings menu and then select *Tracker*.
 +
-image:screenshot-menu-tracker-option.png[A screenshot of the account settings menu with the Tracker option highlighted.] 
+image:screenshot-menu-tracker-option.png["A screenshot of the account settings menu with the Tracker option highlighted."] 
 . In the Tracker tab, use the filters or search to narrow job results. You can also download a jobs report. 
 . Click the three-dot menu of the job and click *Go to CloudFormation* to view the job log in the AWS CloudFormation console.  
 
