@@ -23,13 +23,12 @@ Adding HA pairs isn't supported for the following:
 
 Consider the following about adding HA pairs: 
 
-* *HA pair removal*: HA pairs cannot be removed once added to the file system. 
-* *Operation time and limitations*: Adding HA pairs may take approximately 30 minutes. Consider adding HA pairs during a maintenance window or during low activity periods. 
-* *Solo operation*: Adding HA pairs is a solo operation and can't be done in parallel with other operations. 
-* *IO allocation*: Automatic IO allocation depends on total storage capacity. User-configured IO allocation is multiplied by the amount of HA pairs added.
-* *NVMe cache*: When adding HA pairs, NVME cache is enabled by default. We recommend turning off NVMe cache for heavy workloads.
-* *Number of HA pairs*: We recommend expanding your file system to an even number of HA pairs for balanced data distribution across HA pairs.
-* *LUN creation*: LUN creation is possible on a second-generation Single-AZ file system only if LUNs don't already exist on the file system when adding HA pairs. LUN creation is only supported on a file system with 6 HA pairs or fewer. 
+* HA pair removal: HA pairs cannot be removed once added to the file system. 
+* Operation time and limitations: Adding HA pairs may take approximately 30 minutes. Consider adding HA pairs during a maintenance window or during low activity periods. In addition, adding HA pairs limits other operations like adding more HA pairs, provisioning IOPS, increasing SSD capacity, and updating throughput capacity.
+* IO allocation: Automatic IO allocation depends on total storage capacity. User-configured IO allocation is multiplied by the amount of HA pairs added.
+* NVMe cache: When adding HA pairs, NVME cache is enabled by default. We recommend turning off NVMe cache for heavy workloads.
+* Number of HA pairs: We recommend expanding your file system to an even number of HA pairs for balanced data distribution across HA pairs.
+* LUN creation: LUN creation is possible on a second-generation Single-AZ file system only if LUNs don't already exist on the file system when adding HA pairs. LUN creation is only supported on a file system with 6 HA pairs or fewer. 
 
 .Before you begin
 Do the following before you add HA pairs to a file system:
