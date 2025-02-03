@@ -1,8 +1,7 @@
 === CloudShell in BlueXP workload factory console
 CloudShell is an embedded CLI capability available within BlueXP workload factory for Storage. You can use CloudShell to create, share, and execute ONTAP or AWS CLI commands from multiple sessions in a shell-like environment from within the workload factory console. 
 
-//add link
-//link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-cloudshell.html[Learn more about CloudShell in BlueXP workload factory]
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html[Learn more about CloudShell in BlueXP workload factory^]
 
 === Inventory data download
 You can now download FSx for ONTAP inventory data into an Microsoft Excel or CSV file from Storage in BlueXP workload factory. 
@@ -47,4 +46,4 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Le
 You can now use Amazon FSx for NetApp ONTAP second-generation file systems in BlueXP workload factory. FSx for ONTAP second-generation Single-AZ file systems are powered by up to 12 HA pairs which can deliver up to 72 GBps of throughput capacity and 2,400,000 SSD IOPS. FSx for ONTAP second-generation Multi-AZ file systems are powered by one HA pair and deliver 6 GBps of throughput capacity and 200,000 SSD IOPS. 
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/add-ha-pairs.html[Add high-availability pairs]
-* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas and limits for Amazon FSx for NetApp ONTAP]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas and limits for Amazon FSx for NetApp ONTAP^]
