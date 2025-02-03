@@ -92,8 +92,8 @@ sidebar:
               url: /edit-volume-autogrow.html
             - title: Increase volume capacity
               url: /increase-volume-capacity.html
-        #    - title: Manage immutable files 
-        #      url: /manage-immutable-files.html  
+            #- title: Manage immutable files 
+            #  url: /manage-immutable-files.html  
             - title: Manage volume tags
               url: /manage-volume-tags.html
             - title: Rebalance a volume's capacity
