@@ -14,6 +14,10 @@ Known limitations identify platforms, devices, or functions that are not support
 == Link required for advanced ONTAP operations
 A link is required to complete some operations like replication in the workload factory user interface. 
 
+== Adding HA pairs limitations
+* This operation may take approximately 30 minutes to complete.
+* Adding HA pairs limits the following operations: adding more HA pairs, provisioning IOPS, increasing SSD capacity, and updating throughput capacity. 
+
 == Throughput capacity region support
 
 === Scale-up deployments
