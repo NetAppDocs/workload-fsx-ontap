@@ -28,8 +28,7 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the FSx for ONTAP tab, select the three-dot menu of the file system to create a storage VM for and select *Manage*.  
-. From the file system overview, select *Create a storage VM*.
+. In the FSx for ONTAP tab, select the three-dot menu of the file system to create a storage VM for and select *Create a storage VM*.
 . On the Storage VM page, under Storage VM configuration, provide the following: 
 .. *Name*: Enter a name for the storage VM. 
 .. *Storage VM credentials*: Provide a password for this storage VM's `vsadmin` user or use the file system's `fsxadmin` user credentials. 
