@@ -82,6 +82,8 @@ sidebar:
               url: /use-onprem-data.html
     - title: Administer and monitor
       entries:
+        - title: Monitor operations with Tracker
+          url: /monitor-operations.html
         - title: Volume administration
           entries:  
           #  - title: View volume details
