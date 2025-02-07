@@ -4,12 +4,12 @@ permalink: data-protection-overview.html
 keywords: overview
 summary: "FSx for ONTAP supports snapshots, volume backups, and volume replication in BlueXP workload factory."
 ---
-= Data protection in BlueXP workload factory
+= Types of data protection in BlueXP Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-FSx for ONTAP supports snapshots to create read-only, point-in-time images of a volume, volume backups to create offline backups with long retention of your volumes, and volume replication to create asynchronous mirrors of your volume in different regions. 
+FSx for ONTAP supports snapshots, backups, and replication for data protection. We recommend that you use a combination of data protection types to prepare for the inevitable and safeguard your data.
 
 == Types of data protection
 Data protection for your workloads helps ensure that you can recover from any data loss at any time. Learn about the types of data protection before you select the features you'll use. 
