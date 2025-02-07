@@ -22,14 +22,14 @@ FSx for ONTAP offers the following features:
 * *High availability*: provides high availability for each FSx for ONTAP file system, supporting Single and Multiple Availability Zones deployments. 
 * *Automated snapshots*: protects data with automated, efficient snapshots, which are near instantaneous, space efficient point-in-time read-only copies of the file system or volumes. 
 * *Volume replication*: provides disaster recovery with cross-region replication across Amazon Web Services. 
-* *Efficient backups*: provides an additional later of protection with a copy of the data in another region. This provides an extra layer of protection in case of emergencies. 
+* *Efficient backups*: adds an extra layer of protection with a copy of the data in another region for emergencies.
 * *Fast cloning*: accelerates application development with fast cloning.
 * *Multi-protocol support*: supports Network File System (NFS), Server Message Block (SMB), and Internet Small Computer Systems Interface (iSCSI) protocols. 
 * *High throughput*: delivers high throughput performance to ensure low latencies for workloads running on top of FSx for ONTAP file systems. 
-* *In-memory cache and NVMe cache*: incorporates a unique in-memory cache and NVMe cache, which further enhances the performance of frequently accessed data.  
+* *In-memory cache and NVMe cache*: includes a unique in-memory cache and NVMe cache, which boosts the performance of frequently accessed data.
 * *Hundreds of thousands of IOPS*: provides hundreds of thousands of IOPS with SSD disks, ensuring that your storage and workloads receive timely results.
 * *Thin Provisioning*: allows capacity provisioning in advance, saving costs until more capacity is needed.  
-* *Data deduplication and compression*: eliminates duplicate data blocks and compresses data blocks to reduce the amount of physical storage that is required for FSx for ONTAP file systems resulting in cost savings. 
+* *Data deduplication and compression*: removes duplicate data and compresses data to reduce the amount of physical storage that is required for FSx for ONTAP file systems resulting in cost savings. 
 * *Data tiering*: allows storage cost reduction by moving less frequently accessed data from the primary, high performance SSD storage tier to the secondary capacity pool storage tier. 
 
 == Additional features in workload factory
@@ -48,7 +48,7 @@ You can use BlueXP workload factory with the following tools:
 * *Terraform BlueXP workload factory Provider*: Terraform lets you build and manage infrastructure workflows generated in the workload factory console
 
 == Cost
-Your FSx for ONTAP account is maintained by AWS and not by workload factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
+AWS maintains your FSx for ONTAP account, not workload factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
 
 == Supported regions
 

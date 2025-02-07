@@ -10,7 +10,7 @@ summary: "You can view links associated with your account, associate a link, and
 :imagesdir: ./media/
 
 [.lead]
-Manage links that you've associated with your BlueXP workload factory account. 
+Manage links that you've associated with your BlueXP workload factory account. You can view links associated with an FSx for ONTAP file system, associate a link with an FSx for ONTAP file system, edit a link, and remove a link.
 
 link:links-overview.html[Learn more about links] or link:create-link.html[create a link]. 
 
