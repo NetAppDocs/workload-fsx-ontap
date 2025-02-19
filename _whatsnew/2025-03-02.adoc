@@ -1,0 +1,31 @@
+=== Automatic capacity management improvements
+When automatic capacity management is enabled, BlueXP workload factory now checks if a file system reached its capacity threshold every 30 minutes instead of every 2 hours.
+
+Workload factory also scans for available inodes in volumes and increases their count according to the configured automatic capacity management thresholds.
+
+The provisioned IOPS setting is no longer affected when capacity threshold is reached.
+
+=== Immutable snapshots
+Now you can lock snapshots, making them immutable, for a specific retention period. Locking prevents the unauthorized access and malicious deletions of snapshots. You can enable immutable snapshots during snapshot policy creation for a _________ and during ___________. 
+
+=== Immutable files update
+You can now make the following changes to your immutable files configuration: retention policy, retention period, autocommit period, and volume append mode. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html[Manage immutable files^]
+
+=== Data replication enhancements
+* Data protection volume replication: Data protection volumes now support cascading replication, when volumes replicate from replicated volumes. 
+* Pause and resume replication: You can pause scheduled replication updates from the source volume to the destination volume and then resume the replication schedule when you're ready. During the pause, source and destination volumes become independent, and the destination volume transitions from read-only to read-write.
+
+=== iSCSI LUN improvements
+You can now provision volumes and have storage space consistency between FSx for ONTAP and the EC2 instance. This allows me to free up space due to LUN data deletion and easily understand the LUN capacity utilization.
+
+=== Available space on a file system
+BlueXP workload factory allows you to enable logical space reporting to determine the available space on a shared file system so that you can learn how much data to write in my volume.
+
+link: Determine available space on a file system 
+
+=== CloudShell events in Tracker
+Now you can track CloudShell events in Tracker. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Learn how to monitor and track operations with Tracker]
