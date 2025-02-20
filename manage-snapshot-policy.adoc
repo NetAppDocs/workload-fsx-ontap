@@ -1,10 +1,12 @@
 ---
 sidebar: sidebar
-permalink: manage-snapshots.html
+permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
 summary: "Manage snapshot policies for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume."
 ---
 = Manage snapshot policies
+:icons: font
+:imagesdir: ./media/
 
 .[lead]
 Manage snapshot policies for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
