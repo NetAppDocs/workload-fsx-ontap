@@ -1,0 +1,39 @@
+=== CloudShell in BlueXP workload factory console
+CloudShell is an embedded CLI capability available within BlueXP workload factory for Storage. You can use CloudShell to create, share, and execute ONTAP or AWS CLI commands from multiple sessions in a shell-like environment from within the workload factory console. 
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html[Learn more about CloudShell in BlueXP workload factory^]
+
+=== Inventory data download
+You can now download FSx for ONTAP inventory data into an Microsoft Excel or CSV file from Storage in BlueXP workload factory. 
+
+image:screenshot-fsx-inventory-download.png[A screenshot of Storage in  BlueXP workload factory showing the new download button to download FSx for ONTAP file system inventory data.]
+
+=== FSx for ONTAP file system additional menu options  
+We've made it simpler to do the following for an FSx for ONTAP file system from the FSx for ONTAP tab in Storage.  
+
+* Create a storage VM
+* Create a volume
+* Replicate volume data
+
+image:screenshot-filesystem-menu-options.png[A screenshot of the FSx for ONTAP tab in Storage showing the new menu options create storage VM, create volume, and replicate volume data.]
+
+=== Terraform support for creating volumes
+You can now use Terraform from the Codebox to create volumes. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
+
+=== File locking with the immutable files feature
+You can now lock files using the immutable files feature when you create a volume for an FSx for ONTAP file system. File locking helps you and others prevent accidental or intentional file deletion for a specified period. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
+
+=== Tracker available for monitoring and tracking operations
+Tracker, a new monitoring capability is available in Storage. You can use Tracker to monitor and track the progress and status of credentials, storage, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Learn how to monitor and track operations with Tracker]
+
+=== Support for second-generation Amazon FSx for NetApp ONTAP file systems
+You can now use Amazon FSx for NetApp ONTAP second-generation file systems in BlueXP workload factory. FSx for ONTAP second-generation Single-AZ file systems are powered by up to 12 HA pairs which can deliver up to 72 GBps of throughput capacity and 2,400,000 SSD IOPS. FSx for ONTAP second-generation Multi-AZ file systems are powered by one HA pair and deliver 6 GBps of throughput capacity and 200,000 SSD IOPS. 
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/add-ha-pairs.html[Add high-availability pairs]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas and limits for Amazon FSx for NetApp ONTAP^]

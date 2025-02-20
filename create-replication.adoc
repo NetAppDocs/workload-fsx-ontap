@@ -33,9 +33,7 @@ Complete the following steps to replicate a single volume or replicate all volum
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to replicate and then select *Manage*.
-. From the Volumes tab, select the three-dot menu of the volume to replicate.
-. Select *Data protection actions* then *Replicate volume data*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to replicate and then select *Replicate volume data*.
 . On the Create replication page, under Replication target, provide the following: 
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
 .. *Storage VM name*: Select the storage VM from the dropdown menu.
