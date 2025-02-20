@@ -33,3 +33,6 @@ You must link:manage-links.html[associate a link] to create a snapshot. If you d
 .. Set the *Retention period* as a number of hours, days, months, or years. 
 .. Accept the statement regarding immutable snapshots.
 . Select *Create*. 
+
+.Result
+The volume has a snapshot copy. 
