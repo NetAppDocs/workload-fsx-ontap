@@ -8,7 +8,7 @@ summary: "Manage snapshot policies for FSx for ONTAP volumes in BlueXP workload 
 :icons: font
 :imagesdir: ./media/
 
-.[lead]
+[.lead]
 Manage snapshot policies for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
 
 .About this task
