@@ -14,8 +14,11 @@ You can now make the following changes to your immutable files configuration: re
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html[Manage immutable files^]
 
 === Data replication enhancements
+* Terraform support for data replication: You can now use Terraform from the Codebox to replicate a single volume or all volumes in a file system. 
 * Data protection volume replication: Data protection volumes now support cascading replication, when volumes replicate from replicated volumes. 
 * Pause and resume replication: You can pause scheduled replication updates from the source volume to the destination volume and then resume the replication schedule when you're ready. During the pause, source and destination volumes become independent, and the destination volume transitions from read-only to read-write.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
 
 === iSCSI LUN improvements
 You can now provision volumes and have storage space consistency between FSx for ONTAP and the EC2 instance. This allows me to free up space due to LUN data deletion and easily understand the LUN capacity utilization.
