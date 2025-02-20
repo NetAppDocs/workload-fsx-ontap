@@ -134,8 +134,8 @@ sidebar:
               url: /delete-svm.html
         - title: Data protection administration
           entries:
-            - title: Change the snapshot policy of a volume
-              url: /change-snapshot-policy.html
+            - title: Manage the snapshot policy of a volume
+              url: /manage-snapshot-policy.html
             - title: Manage FSx for ONTAP backup schedule
               url: /manage-backup-schedule.html
             - title: Enable and edit snapshots for long-term retention

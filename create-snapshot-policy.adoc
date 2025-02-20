@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-snapshot-policy.html
 keywords: create
-summary: "Create a snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume."
+summary: "Create a custom snapshot policy for a storage VM in BlueXP workload factory."
 ---
-= Create a snapshot policy for FSx for ONTAP volumes
+= Create a snapshot policy for storage VMs in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a custom snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
+Create a custom snapshot policy for storage VMs in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
 
 .About this task
 You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
@@ -28,34 +28,26 @@ Customizing a policy lets you specify when to create snapshots, how many copies 
 ** Overwriting all the data in a snapshot consumes significant volume capacity, which factors into provisioning volume capacity.
 * To create a custom snapshot policy, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
 
-*Hanan: I'll delete the section "Create a snapshot policy for a volume" because it is moving to SVM snapshot policy management. Should I use the same heading title "Create a snapshot policy for a volume" for the new workflow or use what I currently have "Create a snapshot policy for a storage VM"?*
-== Create a snapshot policy for a volume
-You can create a snapshot policy for a volume in an FSx for ONTAP file system.
+== Create a snapshot policy 
+Create a custom snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
 
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
-. In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume to protect with scheduled snapshots. 
-. Select *Data protection actions*, *Snapshots*, then *Manage snapshot policies*. 
-. On the Snapshot policy management page, select *Create a new snapshot policy*.
-. In the *Snapshot policy name* field, enter a name for the snapshot policy. 
-. Optional: in the *Description* field, enter a description for the snapshot policy.
-. Under *Schedule*, select when to create snapshots. For example, every minute or hourly. 
-+
-You can select more than one frequency. 
-. Under *Number of copies*, enter the number of copies to retain. 
-+
-The maximum number of copies is 1,023. 
-. Optional: Under *Naming convention*, enter a *Prefix* for the policy. 
-. *Retention label* is automatically populated. 
-+
-This label refers to the SnapMirror, or replication label, used to select only specified snapshots for replication from the source to the target file system. 
-. Select *Apply*. 
+You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
 
-== Create a snapshot policy for a storage VM
-You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs
+You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
+
+* `default`
+* `default-1weekly`
+* `none`
+
+By default, every volume is associated with the file system's `default` snapshot policy. We recommend using this policy for most workloads.
+
+Customizing a policy lets you specify when to create snapshots, how many copies to retain, and how to name them.
+
+.Before you begin 
+* Consider the following about snapshot capacity before you use snapshots:
+** For most datasets, an additional capacity of 20% is enough to keep snapshots for up to four weeks. As data gets older, its use for restorations becomes less likely.
+** Overwriting all the data in a snapshot consumes significant volume capacity, which factors into provisioning volume capacity.
+* To create a custom snapshot policy, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -65,7 +57,7 @@ You can create a snapshot policy for a storage VM in an FSx for ONTAP file syste
 . From the *Storage VMs* tab, select the three-dot menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
 . On the Snapshot policy management page, select *Create snapshot policy*. 
 . In the *Snapshot policy name* field, enter a name for the snapshot policy. 
-. Optional: in the *Description* field, enter a description for the snapshot policy.
+. Optionally, enter a description for the snapshot policy.
 . Under *Policy schedule and copies*, select when to create snapshots. For example, every minute or hourly. 
 +
 You can select more than one frequency. 
@@ -75,10 +67,13 @@ The maximum number of copies is 1,023.
 . Optional: Under *Naming convention*, enter a *Prefix* for the policy. 
 . *Retention label* is automatically populated. 
 +
-This label refers to the SnapMirror, or replication label, used to select only specified snapshots for replication from the source to the target file system. 
-. Optional: Lock all snapshots in this policy to prevent the snapshots from being deleted during the retention period. 
-.. Enable *Immutable snapshot*.
-.. Set the *Retention period* as a number of hours, days, months, or years. 
+This label refers to the SnapMirror, or replication label that is used to select only specified snapshots for replication from the source to the target file system. 
+. Optional: Enable *Immutable snapshots* for any schedules you need, set the *Retention period* for each schedule, and accept the statement to continue. 
++
+Enabling immutable snapshots locks all snapshots in this snapshot policy to prevent the snapshots from being deleted during the retention period. 
 . *Share across storage VMs*: Enabled by default. When enabled, the snapshot policy is shared across all storage VMs in the file system. Disable to create a snapshot policy for a single storage VM.
 . Select *Create*. 
+
+.Result
+The snapshot policy is created.
 
