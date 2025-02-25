@@ -16,7 +16,7 @@ Replication is an added layer of data protection which is essential in case the 
 
 This operation creates a replication relationship for one or all source volumes in an FSx for ONTAP file system. 
 
-Replicated volumes in the target file system follow the naming format: `{OriginalVolumeName}_copy`.
+Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
 
 .Before you begin
 Make sure you meet the following prerequisites before you begin. 

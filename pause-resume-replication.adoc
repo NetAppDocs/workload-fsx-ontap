@@ -1,0 +1,46 @@
+---
+sidebar: sidebar
+permalink: pause-resume-replication.html
+keywords: pause replication, quiesce replication, resume replication
+summary: "Pause and resume a replication relationship so that the target volume becomes the source volume." 
+---
+= Pause and resume a replication relationship in BlueXP workload factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Pause a replication relationship to stop scheduled replication updates from the source volume to the target volume. The target volume transitions from read-only to read-write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.
+
+.About this task
+When paused, the replication relationship between source and target volume continues to exist. Data transfers pause and the volumes become independent. To re-enable the transfer of changes from source volume to destination volume, resume the replication. 
+
+When you resume a replication, all the changes to the target volume are undone and BlueXP workload factory re-enables the replication. The target volume transitions from read-write to read-only, and receives updates from the source volume at the scheduled replication interval again. When you resume a replication relationship, the target volume reverts back to the latest initial replication snapshot, at which point, the volume replication process starts over.
+
+.Before you begin
+* If you pause when a transfer is in progress, the transfer is not affected, and the relationship becomes "Quiescing" until the transfer completes. If the current transfer aborts, it is now a future transfer and will not restart.
+* 
+
+== Pause a replication relationship
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship to reverse. 
+. Select *Reverse relationship*. 
+. In the Reverse relationship dialog, select *Reverse*. 
+
+== Resume a paused replication relationship
+When you resume a replication relationship, any changes to the destination volume while the replication was stopped are deleted.
+
+NOTE: Any data written to the original source volume between the last data replication and the time that the source volume is disabled is not preserved.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the three-dot menu of the replication relationship to reverse. 
+. Select *Reverse relationship*. 
+. In the Reverse relationship dialog, select *Reverse*. 
