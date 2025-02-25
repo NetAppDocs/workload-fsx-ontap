@@ -37,7 +37,8 @@ Check the balance of an active FlexGroup volume.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select *Check FlexGroup balance* at the top of the table.
 . In the FlexGroup balance window, review the balance status of all FlexGroup volumes in the FSx for ONTAP file system.  
-
++
+When FlexGroup volumes are unbalanced, consider <<Rebalance a FlexGroup volume,rebalancing it>>.
 
 == Rebalance a FlexGroup volume
 <<Check the balance of a FlexGroup volume,Check the balance of a FlexGroup volume>> before rebalancing volumes.
