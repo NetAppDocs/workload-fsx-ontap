@@ -4,7 +4,7 @@ permalink: cascade-replication.html
 keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume
 summary: "Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems." 
 ---
-= Use cascading replication in BlueXP workload factory
+= Replicate data protection volumes in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
