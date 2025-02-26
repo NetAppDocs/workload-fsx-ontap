@@ -14,7 +14,7 @@ After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in
 .About this task
 FSx for ONTAP volumes are virtual resources used for grouping data, determining how data is stored, and determining the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 
 
-The following protocols may be used for your volumes:
+The following protocols might be used for your volumes:
 
 * CIFS: file storage protocol for Windows operating systems
 * NFS: file storage protocol for Unix operating systems
@@ -26,7 +26,7 @@ Review the following prerequisites before you create a volume:
 * You must have an FSx for ONTAP file system in workload factory. 
 * You must have a storage VM. 
 * For protocol access, complete the following: 
-** To configure access to the volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
+** To configure access to the volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 ** You must configure access for the protocol you select, either CIFS, NFS, or iSCSI. 
 
 == Create a volume
@@ -68,7 +68,7 @@ If you selected an existing export policy, enter a new policy name.
 .... *Name*: Enter the CIFS share name to provide SMB access. 
 .... *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username". 
 +
-* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. Block access is only available when the file system scale-out deployment has 6 HA pairs or fewer. 
+* *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. Block access is only available when the file system scale-out deployment has six HA pairs or fewer. 
 +
 Complete the following fields to set up block access to the volume.
 +
@@ -81,7 +81,7 @@ Complete the following fields to set up block access to the volume.
 .. *Storage efficiency*: Disable or enable storage efficiency. 
 +
 Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
-.. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data from being deleted or overwritten for a specified period of time. Enabling this feature is possible only during volume creation. Once enabled, this feature cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
+.. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data from being deleted or overwritten for a specified period of time. Enabling this feature is possible only during volume creation. After the feature is enabled, it cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
 +
 Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
 +
@@ -91,7 +91,7 @@ You can select from two retention modes - _Enterprise_ or _Compliance_.
 * In _Compliance_ mode, a WORM file cannot be deleted before its retention period expires. Similarly, the immutable volume cannot be deleted until the retention periods for all files within the volume expire. 
 +
 Retention period:::
-The retention period has two settings - _retention policy_ and _retention periods_. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified) which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
+The retention period has two settings - _retention policy_ and _retention periods_. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified), which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
 +
 NOTE:: Even after the retention period expires, you can't modify a WORM file. You can only delete it or set a new retention period to turn on WORM protection again.
 +
@@ -106,8 +106,8 @@ You can't modify existing data in a WORM-protected file. However, immutable file
 +
 .Steps for immutable files
 ... Select to enable *Immutable files powered by SnapLock*. 
-... Click the box to agree and proceed.  
-... Click *Enable*. 
+... Select the box to agree and proceed.  
+... Select *Enable*. 
 ... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
 ... *Retention period*: 
 * Select the retention policy: 
@@ -117,7 +117,7 @@ You can't modify existing data in a WORM-protected file. However, immutable file
 ** *Minimum*: Enter the number of seconds, minutes, hours, days, months, or years to set the minimum retention period.
 ** *Maximum*: Enter the number of seconds, minutes, hours, days, months, or years to set the maximum retention period.
 ... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
-//... *Privileged delete*: Disable or enable. Enabling this feature allows an administrator to delete an unexpired WORM file, but it may prevent the file system from deletion for six months. 
+//... *Privileged delete*: Disable or enable. Enabling this feature allows an administrator to delete an unexpired WORM file, but it might prevent the file system from deletion for six months. 
 ... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
