@@ -30,6 +30,8 @@ Complete the following steps to replicate a single volume or replicate all volum
 
 .Replicate a single volume
 --
+You can replicate one source (read/write) volume or one data protection (DP) volume. You cannot create a second replica of a DP volume.
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
@@ -66,6 +68,10 @@ If you enable long-term retention, then select an existing policy or create a ne
 
 .Replicate all volumes in a file system
 --
+You can replicate all source (read/write) and data protection (DP) volumes in a file system. 
+
+NOTE: Replicating a data protection volume is supported one time. 
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
