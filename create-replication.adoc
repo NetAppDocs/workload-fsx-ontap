@@ -47,9 +47,11 @@ You can replicate one source (read/write) volume or one data protection (DP) vol
 //** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
 //** Archive: replicates data for long-term storage and compliance
 //* Other
-.. *Tiering policy*: Select the tiering policy for the data stored in the target volume. Depending on the use case you selected, the tiering policy defaults to the recommended tiering policy for the use case. 
+.. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
+//Add to the Tiering policy description when tiering types change. "Depending on the use case you selected, the tiering policy defaults to the recommended tiering policy for the use case."" 
 +
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. 
+_Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation.
+//Replace _Auto_ with _Balanced (Auto) when tiering updates. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
