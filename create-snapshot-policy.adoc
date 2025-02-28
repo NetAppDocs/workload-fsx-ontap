@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-snapshot-policy.html
 keywords: create
-summary: "Create a snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume."
+summary: "Create a custom snapshot policy for a storage VM in BlueXP workload factory."
 ---
-= Create a snapshot policy for FSx for ONTAP volumes
+= Create a snapshot policy for storage VMs in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a custom snapshot policy for FSx for ONTAP volumes in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a volume.
+Create a custom snapshot policy for storage VMs in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
 
 .About this task
 You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
@@ -31,14 +31,13 @@ Customizing a policy lets you specify when to create snapshots, how many copies 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
-. In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume to protect with scheduled snapshots. 
-. Select *Data protection actions*, *Snapshots*, then *Manage snapshot policies*. 
-. On the Snapshot policy management page, select *Create a new snapshot policy*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the three-dot menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. On the Snapshot policy management page, select *Create snapshot policy*. 
 . In the *Snapshot policy name* field, enter a name for the snapshot policy. 
-. Optional: in the *Description* field, enter a description for the snapshot policy.
-. Under *Schedule*, select when to create snapshots. For example, every minute or hourly. 
+. Optionally, enter a description for the snapshot policy.
+. Under *Policy schedule and copies*, select when to create snapshots. For example, every minute or hourly. 
 +
 You can select more than one frequency. 
 . Under *Number of copies*, enter the number of copies to retain. 
@@ -47,5 +46,13 @@ The maximum number of copies is 1,023.
 . Optional: Under *Naming convention*, enter a *Prefix* for the policy. 
 . *Retention label* is automatically populated. 
 +
-This label refers to the SnapMirror, or replication label, used to select only specified snapshots for replication from the source to the target file system. 
-. Select *Apply*. 
+This label refers to the SnapMirror, or replication label that is used to select only specified snapshots for replication from the source to the target file system. 
+. Optional: Enable *Immutable snapshots* for any schedules you need, set the *Retention period* for each schedule, and accept the statement to continue. 
++
+Enabling immutable snapshots locks all snapshots in this snapshot policy to prevent the snapshots from being deleted during the retention period. 
+. *Share across storage VMs*: Enabled by default. When enabled, the snapshot policy is shared across all storage VMs in the file system. Disable to create a snapshot policy for a single storage VM.
+. Select *Create*. 
+
+.Result
+The snapshot policy is created.
+

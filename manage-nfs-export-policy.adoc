@@ -12,7 +12,7 @@ summary: "Manage the NFS export policy for a volume that uses NFSv3 or NFSv4.1 p
 Manage the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types in BlueXP workload factory. 
 
 .About this task
-Managing a volume's export policy involves adding export policy rules which detail client specifications, access control, super user access, and NFS version. You can add more than one export policy and prioritize them. 
+Managing a volume's export policy involves adding export policy rules that detail client specifications, access control, super user access, and NFS version. You can add more than one export policy and prioritize them. 
 
 .Before you begin
 Determine the client specifications for the export policy rules. Valid values for the client specification are as follows: 

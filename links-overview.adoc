@@ -24,7 +24,7 @@ You create links from the FSx for ONTAP file system pages in workload factory. l
 
 == Costs
 
-Each transaction that Lambda performs incurs a charge. Since Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to workload factory.
+Each transaction that Lambda performs incurs a charge. Because Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to workload factory.
 
 link:https://aws.amazon.com/lambda/pricing/[Learn more about the costs related to using AWS Lambda^]
 

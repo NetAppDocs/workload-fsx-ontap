@@ -14,7 +14,7 @@ Managing a volume's CIFS share in BlueXP workload factory includes CIFS share cr
 .Before you begin
 Before you begin, do the following: 
 
-* To manage CIFS shares, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
+* To manage CIFS shares, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 * Determine the users or groups to give access to and the level of permissions to give them. 
 
 == Create a CIFS share for a volume
@@ -49,7 +49,7 @@ Follow the steps to change the CIFS share settings for a volume.
 . On the Manage CIFS share page, hover over a CIFS share and select the pencil icon to make changes.
 . Change the CIFS access permissions, or the users or groups to give permissions to. 
 +
-Changes may cause current users or groups to lose access to the CIFS share.
+Changes might cause current users or groups to lose access to the CIFS share.
 . Select *Apply* to save the changes.
 
 .Result
