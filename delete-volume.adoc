@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: delete-volume.html
 keywords: delete volume, volume deletion
-summary: "You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible."
+summary: "Delete a volume in your FSx for ONTAP file system that is no longer required and to free up space. This operation is irreversible."
 ---
 = Delete a volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-You can delete a volume in your FSx for ONTAP file system at any time. This operation is irreversible. 
+Delete a volume in your FSx for ONTAP file system that is no longer required and to free up space. This operation is irreversible. 
 
 .Before you begin
 Consider the following before deleting a volume: 
