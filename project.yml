@@ -136,8 +136,8 @@ sidebar:
           entries:
             - title: Snapshots
               entries: 
-                - title: Change the snapshot policy of a volume
-                  url: /change-snapshot-policy.html
+                - title: Manage snapshot policies
+                  url: /manage-snapshot-policy.html
                 - title: Enable and edit snapshots for long-term retention
                   url: /enable-snapshots-long-term.html 
          #  - title: Delete a snapshot
