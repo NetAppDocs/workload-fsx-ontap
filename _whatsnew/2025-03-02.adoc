@@ -14,9 +14,7 @@ You can now make the following changes to your immutable files configuration: re
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html[Manage immutable files^]
 
 === Data replication enhancements
-* Terraform support for data replication: You can now use Terraform from the Codebox to replicate a single volume or all volumes in a file system. 
-+
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
+* Cross-account replication: Replication between two AWS accounts is supported in the BlueXP workload factory console as well as replication management. 
 * Data protection volume replication: Data protection volumes now support cascading replication, when volumes replicate from replicated volumes. 
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[Replicate a data protection volume]
