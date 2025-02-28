@@ -21,7 +21,7 @@ The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is
 .Before you begin
 You must have credentials with _Automate_ permissions in workload factory to complete this task.
 
-To make sure volume inodes increase along with storage capacity, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
+To make sure volume inodes increase along with storage capacity, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
