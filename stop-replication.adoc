@@ -9,7 +9,7 @@ summary: "Stop a replication relationship between source and target volumes in B
 :imagesdir: ./media/
 
 [.lead]
-Stop a replication relationship in BlueXP workload factory. When you stop a replication relationship, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read-write. 
+Stop a replication relationship in BlueXP workload factory. When you stop a replication relationship, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read/write. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

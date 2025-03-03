@@ -9,7 +9,7 @@ summary: "Initialize a replication relationship between source and target volume
 :imagesdir: ./media/
 
 [.lead]
-Initialize a replication relationship between source and target volumes in BlueXP workload factory. 
+Initialize a replication relationship between source and target volumes to transfer the snapshot and all data blocks in BlueXP workload factory. 
 
 .About this task
 Initialization performs a _baseline_ transfer: it makes a snapshot of the source volume, then transfers the snapshot and all the data blocks it references to the target volume. 

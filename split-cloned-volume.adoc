@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume
-summary: "Split a clone FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume." 
+summary: "Split a clone FlexVol volume from its parent volume to make the clone a normal read/write FlexVol volume." 
 ---
 = Split a cloned volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Split a cloned FlexVol volume from its parent volume to make the clone a normal read-write FlexVol volume in BlueXP workload factory. 
+Split a cloned FlexVol volume from its parent volume to make the clone a normal read/write FlexVol volume in BlueXP workload factory. 
 
 Data is accessible on the clone and the parent during the split. The split process only updates metadata and requires minimal IO. No data blocks are copied.
 
@@ -25,7 +25,7 @@ The clone splitting operation involves the following:
 .Before you begin
 Consider the following before you split a cloned volume: 
 
-* To split a cloned volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation.  
+* To split a cloned volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
 * You must be a cluster administrator.
 * The FlexClone volume must be online when the split operation begins.
 * The parent volume must be online for the split to succeed.

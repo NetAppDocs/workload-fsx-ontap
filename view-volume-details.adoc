@@ -19,7 +19,7 @@ Volume details appear only after a volume has been created in a file system.
 . In the Volumes tab, select the three-dot menu for the volume you wish to modify. 
 . Select *Basic actions* then *View volume details*. 
 . In *Volume details*, select the tabs to view the following volume details: 
-.. *General details*: includes volume name, volume UUID, volume ID, creation time, state, volume type (read-write/data protection (RW/DP) or read only), snapshot policy name, hosting storage VM (SVM), and tags. 
+.. *General details*: includes volume name, volume UUID, volume ID, creation time, state, volume type (read/write/data protection (RW/DP) or read only), snapshot policy name, hosting storage VM (SVM), and tags. 
 .. *Distribution*: includes hosting aggregates, volume style (FlexGroup or FlexVol), constituents (FlexGroup only), and rebalance ratio (FlexGroup only -high, medium, or low).
 .. *Consumption*: includes size, SSD used, capacity pool used, autogrow setting, max growth size, storage efficiency setting, compression space saved, deduplication space saved, tiering policy, and cooling days.
 .. *Access*: includes junction path, security style, export policy and NFS version for NFS, and Active Directory, CIFS share name, users or groups, and permissions for SMB/CIFS, and initiator group and host IQNs for iSCSI.

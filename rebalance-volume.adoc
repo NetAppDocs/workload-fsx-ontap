@@ -2,22 +2,49 @@
 sidebar: sidebar
 permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity
-summary: "Rebalance the capacity of a volume to avoid imbalances that develop over time."
+summary: "Check and rebalance the capacity of a volume to avoid imbalances that develop over time."
 ---
-= Rebalance a volume's capacity in BlueXP workload factory
+= Check and rebalance a volume's capacity
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Rebalance the capacity of a volume in BlueXP workload factory to avoid imbalances that develop over time. 
+Check the balance of FlexGroup volume capacity and rebalance volume capacity to spread files evenly across all constituents so that all nodes participate in the workload of a single Flex Group volume.
 
 .About this task
+FlexGroup volume capacity is spread across a number of constituents in a scale-out FSx for ONTAP file system with two or more high availability (HA) pairs. Each constituent is a container that dictates the maximum single file size. FSx for ONTAP spreads files across all constituents in an even way so all nodes participate in the workload of a single FlexGroup volume.
+
+When the constituents are not evenly distributed across all nodes, FlexGroup volume performance decreases. 
+
+Checking the balance of FlexGroup volume capacity includes assessing the current layout of constituents. When you rebalance the volume's capacity, BlueXP workload factory designs a new constituent layout with an even number of constituents to spread the data evenly across all HA pairs. The service executes the rebalance plan which in turn improves read and write operations.
+
 Rebalancing a volume redistributes the capacity when imbalances develop over time due to the addition of new files and file growth. After you manually start the rebalance operation, we select the files and move them automatically and non-disruptively. 
 
-NOTE: Rebalancing a volume is only supported for FlexGroup volumes. 
+NOTE: Rebalancing a volume is supported only for FlexGroup volumes. 
+
+== Check the balance of a FlexGroup volume
+Check the balance of an active FlexGroup volume. 
 
 .Before you begin
-To rebalance a volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation.  
+* FlexGroup volume balance is available only for FSx for ONTAP file systems using a scale-out deployment with at least two HA pairs.
+* The volume style must be a FlexGroup volume.
+* To check the balance of a FlexGroup volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In *Storage*, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to rebalance and then select *Manage*.
+. From the file system overview, select the *Volumes* tab. 
+. From the Volumes tab, select *Check FlexGroup balance* at the top of the table.
+. In the FlexGroup balance window, review the balance status of all FlexGroup volumes in the FSx for ONTAP file system.  
++
+When a FlexGroup volume is unbalanced, consider <<Rebalance a FlexGroup volume,rebalancing it>>.
+
+== Rebalance a FlexGroup volume
+<<Check the balance of a FlexGroup volume,Check the balance of a FlexGroup volume>> before rebalancing volumes.
+
+.Before you begin
+To rebalance a volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -27,3 +54,6 @@ To rebalance a volume, you must link:manage-links.html[associate a link]. If you
 . From the Volumes tab, select the three-dot menu of the volume to rebalance.
 . Select *Advanced actions*, then *Rebalance volume*. 
 . In the Rebalance volume dialog, select *Rebalance*. 
+
+.Result
+The capacity of the FlexGroup volume rebalances.
