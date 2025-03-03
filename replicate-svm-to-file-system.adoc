@@ -12,7 +12,7 @@ summary: "Replicating a storage VM to another FSx for ONTAP file system provides
 Replicating a storage VM to another FSx for ONTAP file system in BlueXP workload factory provides a protective layer of data access in case of data loss. This operation replicates all volumes in one storage VM to another FSx for ONTAP file system. 
 
 .Before you begin
-To replicate a storage VM to another FSx for ONTAP file system, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
+To replicate a storage VM to another FSx for ONTAP file system, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -30,7 +30,7 @@ To replicate a storage VM to another FSx for ONTAP file system, you must link:ma
 _Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
-Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+Without a limit, network and application performance might decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. 

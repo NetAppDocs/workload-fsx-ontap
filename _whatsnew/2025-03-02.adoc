@@ -1,0 +1,28 @@
+=== Automatic capacity management improvements
+When automatic capacity management is enabled, BlueXP workload factory now checks if a file system reached its capacity threshold every 30 minutes instead of every 2 hours.
+
+Workload factory also scans for available inodes in volumes and increases their count according to the configured automatic capacity management thresholds.
+
+The provisioned IOPS setting is no longer affected when capacity threshold is reached.
+
+=== Immutable snapshots
+Now you can lock snapshots, making them immutable, for a specific retention period. Locking prevents the unauthorized access and malicious deletions of snapshots. You can enable immutable snapshots during snapshot policy creation, when creating manual snapshots, and after snapshot creation. 
+
+=== Immutable files update
+You can now make the following changes to your immutable files configuration: retention policy, retention period, autocommit period, and volume append mode. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html[Manage immutable files^]
+
+=== Data replication enhancements
+* Cross-account replication: Replication between two AWS accounts is supported in the BlueXP workload factory console as well as replication management. 
+* Data protection volume replication: Data protection volumes now support cascading replication, when volumes replicate from replicated volumes. 
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[Replicate a data protection volume]
+* Pause and resume replication: You can pause (quiesce) scheduled replication updates from the source volume to the destination volume and then resume the replication schedule when you're ready. During the pause, source and destination volumes become independent, and the destination volume transitions from read-only to read-write.
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.html[Pause and resume a replication relationship]
+
+=== CloudShell events in Tracker
+Now you can track CloudShell events in Tracker. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Learn how to monitor and track operations with Tracker]

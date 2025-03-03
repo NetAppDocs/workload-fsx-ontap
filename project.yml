@@ -92,8 +92,8 @@ sidebar:
               url: /edit-volume-autogrow.html
             - title: Increase volume capacity
               url: /increase-volume-capacity.html
-            #- title: Manage immutable files 
-            #  url: /manage-immutable-files.html  
+            - title: Manage immutable files 
+              url: /manage-immutable-files.html  
             - title: Manage volume tags
               url: /manage-volume-tags.html
             - title: Rebalance a volume's capacity
@@ -134,26 +134,36 @@ sidebar:
               url: /delete-svm.html
         - title: Data protection administration
           entries:
-            - title: Change the snapshot policy of a volume
-              url: /change-snapshot-policy.html
-            - title: Manage FSx for ONTAP backup schedule
-              url: /manage-backup-schedule.html
-            - title: Enable and edit snapshots for long-term retention
-              url: /enable-snapshots-long-term.html
-          #  - title: Delete a snapshot
-          #    url: /delete-snapshot.html
-            - title: Reverse a replication relationship
-              url: /reverse-replication.html
-            - title: Change the replication schedule of a source volume
-              url: /change-replication-schedule.html
-            - title: Limit the max transfer rate of a replication relationship
-              url: /limit-transfer-rate.html
-            - title: Manual update of snapshot data in a replication relationship
-              url: /update-snapshot-replication.html
-            - title: Stop a replication relationship
-              url: /stop-replication.html
-            - title: Delete a replication relationship
-              url: /delete-replication.html 
+            - title: Snapshots
+              entries: 
+                - title: Manage snapshot policies
+                  url: /manage-snapshot-policy.html
+                - title: Enable and edit snapshots for long-term retention
+                  url: /enable-snapshots-long-term.html 
+         #  - title: Delete a snapshot
+          #    url: /delete-snapshot.html 
+            - title: Backups
+              entries: 
+                - title: Manage FSx for ONTAP backup schedule
+                  url: /manage-backup-schedule.html
+            - title: Replication
+              entries: 
+                - title: Reverse a replication relationship
+                  url: /reverse-replication.html
+                - title: Change the replication schedule of a source volume
+                  url: /change-replication-schedule.html
+                - title: Limit the max transfer rate of a replication relationship
+                  url: /limit-transfer-rate.html
+                - title: Manual update of snapshot data in a replication relationship
+                  url: /update-snapshot-replication.html
+                - title: Replicate a data protection volume
+                  url: /cascade-replication.html
+                - title: Pause and resume a replication relationship
+                  url: /pause-resume-replication.html 
+                - title: Stop a replication relationship
+                  url: /stop-replication.html
+                - title: Delete a replication relationship
+                  url: /delete-replication.html 
         - title: Performance administration
           entries: 
             - title: Provision IOPS for a file system

@@ -31,7 +31,7 @@ Choose between _basic_, _read_, and _automate_ link:https://docs.netapp.com/us-e
 If you choose to operate in _basic_ mode, you don't need to go any further. You can start using workload factory for FSx for ONTAP to copy partially completed code samples. 
 
 [role="quick-margin-para"]
-If you operate in _read_ or _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] which includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _read_ or _automate_ mode.
+If you operate in _read_ or _automate_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] that includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _read_ or _automate_ mode.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a file system
 

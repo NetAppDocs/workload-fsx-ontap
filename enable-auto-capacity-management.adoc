@@ -12,12 +12,16 @@ summary: "Enabling this feature lets workload factory automatically add incremen
 Enabling this feature lets BlueXP workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. 
 
 .About this task 
+A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, or the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
+
 Only one account can manage this feature. 
 
 The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is 524,288 GiB. To request a quota increase, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
 .Before you begin
-You must have credentials with _Automate_ permissions in workload factory to complete this task. 
+You must have credentials with _Automate_ permissions in workload factory to complete this task.
+
+To make sure volume inodes increase along with storage capacity, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -33,3 +37,6 @@ Alternatively, disable the feature. If you need to increase file system capacity
 .. *Capacity threshold*: Enter the maximum size for the FSx for ONTAP file system.
 .. *Capacity increase increments*: Enter the percentage to increase capacity incrementally. 
 . Select *Apply*. 
+
+.Result
+A file system scan occurs every 30 minutes to determine if the file system needs additional capacity.

@@ -12,7 +12,7 @@ summary: "Limit the max transfer rate of a replication relationship in BlueXP wo
 Limit the max transfer rate of a replication relationship in BlueXP workload factory. An unlimited transfer rate might negatively impact the performance of other applications and your network. 
 
 .About this task
-Limiting the max transfer rate is optional but recommended. Without a limit, network and application performance may decline. 
+Limiting the max transfer rate is optional but recommended. Without a limit, network and application performance might decline. 
 
 Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 

@@ -4,7 +4,7 @@ permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
 summary: "Discover and replicate on-premises ONTAP data in BlueXP workload factory so it can be used to enrich AI knowledge bases."
 ---
-= Use on-premise ONTAP cluster data in BlueXP workload factory
+= Use on-premises ONTAP cluster data in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
@@ -22,7 +22,7 @@ Note that the primary use case for the GenAI workload is the focus of this serie
 * *Data tiering*: After replication, infrequently accessed on-premises ONTAP volume data can be tiered from the SSD storage tier to the capacity pool storage tier. 
 
 == Discover an on-premises ONTAP cluster
-Discover an on-premise ONTAP cluster in BlueXP workload factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
+Discover an on-premises ONTAP cluster in BlueXP workload factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
 
 .Before you begin
 Make sure you have the following before you begin: 
@@ -55,7 +55,7 @@ The on-premises ONTAP cluster is discovered and now appears in the *On-Premises 
 You can now view the data in your on-premises ONTAP cluster and <<Replicate volume data from an on-premises ONTAP cluster,replicate the data to an FSx for ONTAP file system>>. 
 
 == Replicate volume data from an on-premises ONTAP cluster
-Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file system. Once replicated, the data can be used to enrich AI knowledge bases. 
+Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file system. After replication, the data can be used to enrich AI knowledge bases. 
 
 .Before you begin
 
@@ -75,7 +75,7 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering data*: Select the tiering policy for the data stored in the target volume. 
 +
-* *Auto*: The default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. Tiers all cold data which includes user data and snapshots to the capacity pool storage tier for a specific time period. 
+* *Auto*: The default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. Tiers all cold data that includes user data and snapshots to the capacity pool storage tier for a specific time period. 
 * *Snapshot only*: Tiers only snapshot data to the capacity pool storage tier. 
 * *None*: Keeps all your volume's data on the primary storage tier. 
 * *All*: Marks all user data and snapshot data as cold and stores it in the capacity pool storage tier. 
@@ -85,7 +85,7 @@ Note that some tiering policies have an associated minimum cooling period which 
 For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MiB/s. Alternatively, select *Unlimited*. 
 +
-Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+Without a limit, network and application performance might decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
