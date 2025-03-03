@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: cascade-replication.html
 keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume
-summary: "Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems." 
+summary: "Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems or migrate your data." 
 ---
 = Replicate data protection volumes in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems. 
+Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems or migrate your data. 
 
 .About this task
 BlueXP workload factory supports replicating data protection volumes. In ONTAP, replicating data protection volumes is considered a _mirror-mirror cascade deployment_. A mirror-mirror cascade deployment consists of a chain of relationships in which a source volume is mirrored to a secondary volume, and the secondary volume is mirrored to a tertiary volume. If the secondary volume becomes unavailable, you can synchronize the relationship between the primary and tertiary volumes without performing a new baseline transfer.
