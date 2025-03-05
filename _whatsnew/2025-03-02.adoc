@@ -11,7 +11,7 @@ Now you can lock snapshots, making them immutable, for a specific retention peri
 === Immutable files update
 You can now make the following changes to your immutable files configuration: retention policy, retention period, autocommit period, and volume append mode. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html[Manage immutable files^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.html[Manage immutable files]
 
 === Data replication enhancements
 * Cross-account replication: Replication between two AWS accounts is supported in the BlueXP workload factory console as well as replication management. 
