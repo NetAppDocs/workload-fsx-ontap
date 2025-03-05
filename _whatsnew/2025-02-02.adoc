@@ -1,7 +1,7 @@
 === CloudShell in BlueXP workload factory console
 CloudShell is an embedded CLI capability available within BlueXP workload factory for Storage. You can use CloudShell to create, share, and execute ONTAP or AWS CLI commands from multiple sessions in a shell-like environment from within the workload factory console. 
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html[Learn more about CloudShell in BlueXP workload factory^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html[Learn more about CloudShell in BlueXP workload factory]
 
 === Inventory data download
 You can now download FSx for ONTAP inventory data into an Microsoft Excel or CSV file from Storage in BlueXP workload factory. 
