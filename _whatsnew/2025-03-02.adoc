@@ -1,8 +1,6 @@
 === Automatic capacity management improvements
 When automatic capacity management is enabled, BlueXP workload factory now checks if a file system reached its capacity threshold every 30 minutes instead of every 2 hours.
 
-Workload factory also scans for available inodes in volumes and increases their count according to the configured automatic capacity management thresholds.
-
 The provisioned IOPS setting is no longer affected when capacity threshold is reached.
 
 === Immutable snapshots
