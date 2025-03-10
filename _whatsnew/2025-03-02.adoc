@@ -13,9 +13,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 
 === Data replication enhancements
 * Cross-account replication: Replication between two AWS accounts is supported in the BlueXP workload factory console as well as replication management. 
-* Data protection volume replication: Data protection volumes now support cascading replication, when volumes replicate from replicated volumes. 
-+
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[Replicate a data protection volume]
 * Pause and resume replication: You can pause (quiesce) scheduled replication updates from the source volume to the destination volume and then resume the replication schedule when you're ready. During the pause, source and destination volumes become independent, and the destination volume transitions from read-only to read-write.
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.html[Pause and resume a replication relationship]
