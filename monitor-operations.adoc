@@ -18,9 +18,8 @@ Tracker supports up to three levels of monitoring depending on the operation. Ea
 
 Tracker task levels with examples::: 
 
-* Level 1 (parent job): Tracks a file system deployment.
-* Level 2 (sub-job): Tracks the sub-jobs related to the file system deployment. 
-* Level 3 (task): Lists the sequence of actions taken on each resource.
+* Level 1 (task): Tracks a file system deployment.
+* Level 2 (sub-task): Tracks the sub-tasks related to the file system deployment. 
 
 Operation status:::
 Operation status in Tracker is as follows _in progress_, _success_, and _failed_.
