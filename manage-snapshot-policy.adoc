@@ -38,7 +38,7 @@ To display existing snapshot policies, you need to associate a link. To associat
 The snapshot policy is updated.
 
 == Assign a snapshot policy to a volume
-You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume.
+You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume. Once a snapshot policy is assigned, The SVM level “attachment” cannot be modified after creation while you can always add or remove the policy from volumes
 
 .Before you begin
 You must link:manage-links.html[associate a link] to assign a snapshot policy. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
@@ -86,7 +86,9 @@ The volume snapshot is now locked.
 == Delete a snapshot policy
 Delete a snapshot policy when you no longer need it. 
 
-You can't delete a snapshot policy that is assigned to more than one volume. 
+To delete a snapshot policy that is assigned to more than one volume, you must manually remove it from all volumes. *How do you remove a snapshot policy?*
+
+Alternatively, you can assign a different snapshot policy to the volume. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
