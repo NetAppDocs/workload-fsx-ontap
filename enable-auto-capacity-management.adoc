@@ -36,7 +36,7 @@ To make sure volume inodes increase along with storage capacity, you must link:m
 Alternatively, disable the feature. If you need to increase file system capacity, you must first disable automatic capacity management. 
 .. *Threshold increase*: Enter the maximum size for the FSx for ONTAP file system.
 .. *Incremental increase*: Enter the percentage to increase capacity incrementally. 
-.. Optional: Enable automatic inodes management. This feature makes sure that file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
+.. Optional: Enable automatic inodes management to make sure that file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
 . Select *Apply*. 
 
 .Result
