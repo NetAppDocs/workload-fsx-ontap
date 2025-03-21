@@ -44,6 +44,15 @@ Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.ht
 * Snapshots cannot be deleted. 
 * When you replicate a file system, all volumes in the file system use the same replication policy.
 * For long-term retention replication relationships, only the last snapshot is available for restore.
+* The following features aren't supported with immutable snapshots:
+** Consistency groups
+** FabricPool
+** FlexCache volumes
+** SMtape
+** SnapMirror active sync
+** SnapMirror policy rules using the -schedule parameter
+** SnapMirror synchronous
+** SVM data mobility (used for migrating or relocating an SVM from a source cluster to a destination cluster)
 
 == Storage savings calculator
 The Storage savings calculator doesn't calculate cost savings for the following configurations: 
