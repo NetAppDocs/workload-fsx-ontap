@@ -23,6 +23,7 @@ By default, every volume is associated with the file system's `default` snapshot
 Customizing a policy lets you specify when to create snapshots, how many copies to retain, and how to name them.
 
 .Before you begin 
+* Once a snapshot policy is created, its association with the storage VM(s) cannot be modified, but you can always add or remove the policy from volumes.
 * Consider the following about snapshot capacity before you use snapshots:
 ** For most datasets, an additional capacity of 20% is enough to keep snapshots for up to four weeks. As data gets older, its use for restorations becomes less likely.
 ** Overwriting all the data in a snapshot consumes significant volume capacity, which factors into provisioning volume capacity.

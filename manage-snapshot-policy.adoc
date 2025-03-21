@@ -37,30 +37,6 @@ To display existing snapshot policies, you need to associate a link. To associat
 .Result
 The snapshot policy is updated.
 
-== Assign a snapshot policy to a volume
-You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume.
-
-.Before you begin
-You must link:manage-links.html[associate a link] to assign a snapshot policy. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to assign a snapshot policy to and then select *Manage*. 
-. In the file system overview, select the *Storage VMs* tab.
-. From the *Storage VMs* tab, select the three-dot menu for the storage VM containing the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
-//. In the file system overview, select the *Volumes* tab.
-//. From the *Volumes* tab, select the three-dot menu for the volume to protect. 
-//. Select *Data protection actions*, *Snapshots*, then *Assign snapshot policy*. 
-. On the Snapshot policy management page, select the three-dot menu of the snapshot policy and then select *Assign policy to volume*.
-. In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
-+
-If the policy contains immutable snapshots, and you want use it, accept the statement. 
-. Select *Assign*. 
-
-.Result
-The snapshot policy is assigned to the volume. 
-
 == Enable immutable snapshots
 Lock snapshots to prevent them from being deleted during the retention period.
 
@@ -83,10 +59,53 @@ You must link:manage-links.html[associate a link] to enable immutable snapshots.
 .Result
 The volume snapshot is now locked.
 
+== Assign a snapshot policy to a volume
+You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume. 
+
+.Before you begin
+You must link:manage-links.html[associate a link] to assign a snapshot policy. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In *Storage*, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to assign a snapshot policy to and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the three-dot menu for the storage VM containing the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+//. In the file system overview, select the *Volumes* tab.
+//. From the *Volumes* tab, select the three-dot menu for the volume to protect. 
+//. Select *Data protection actions*, *Snapshots*, then *Assign snapshot policy*. 
+. On the Snapshot policy management page, select the three-dot menu of the snapshot policy and then select *Assign policy to volume*.
+. In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
++
+If the policy contains immutable snapshots, and you want use it, accept the statement. 
+. Select *Assign*. 
+
+.Result
+The snapshot policy is assigned to the volume. 
+
+== Remove a snapshot policy from a volume
+Remove a snapshot policy from a volume because you no longer want snapshots of the volume or because you want to delete a snapshot policy that is assigned to multiple volumes. To <<Delete a snapshot policy,delete a snapshot policy>> that is assigned to more than one volume, you must manually remove it from all volumes. 
+
+.Before you begin
+You must link:manage-links.html[associate a link] to remove a snapshot policy. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In *Storage*, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to assign a snapshot policy to and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the three-dot menu for the storage VM containing the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. On the Snapshot policy management page, select the three-dot menu of the snapshot policy and then select *Assign policy to volume*.
+. In the Assign snapshot policy dialog, select *None* to remove the snapshot policy. 
+. Select *Assign*. 
+
+.Result
+The snapshot policy is removed from the volume. 
+
 == Delete a snapshot policy
 Delete a snapshot policy when you no longer need it. 
 
-You can't delete a snapshot policy that is assigned to more than one volume. 
+When a snapshot policy is assigned to more than one volume, you must manually <<Remove a snapshot policy from a volume,remove it>> from all volumes to delete the snapshot policy. Alternatively, you can <<Assign a snapshot policy to a volume,assign a different snapshot policy>> to the volumes. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -98,4 +117,4 @@ You can't delete a snapshot policy that is assigned to more than one volume.
 . In the Delete dialog, select *Delete* to delete the policy. 
 
 .Result
-The snapshot policy is deleted.
+The snapshot policy is deleted.  
