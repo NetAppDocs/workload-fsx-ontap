@@ -138,7 +138,7 @@ NOTE: Snapshot times are based on the file system's time zone, which defaults to
 
 .. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
 +
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that workload factory includes the ONTAP tiering policy names like "Auto" in parentheses, for example "Balanced (Auto)". 
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Workload factory uses use-case based names for tiering policies and includes ONTAP tiering policy names in parentheses. To identify the correct tiering policy in AWS FSx for NetApp ONTAP documentation, look for the ONTAP tiering policy names like "Auto" in parentheses, for example "Balanced (Auto)". 
 . Under Advance configuration, provide the following: 
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
