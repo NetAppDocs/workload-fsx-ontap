@@ -24,12 +24,13 @@ FSx for ONTAP has two tiers for storing volume data:
 Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage-capacity.html#storage-tiers[Managing storage capacity^] in AWS for FSx for NetApp ONTAP documentation for more information about storage tiers.
 
 .Before you begin
-Review the four available tiering policies before you change the tiering policy.
+Review the available tiering policies before you change the tiering policy.
 
-* *Auto*: Tiers all cold data which includes user data and snapshots to the capacity pool storage tier for a specific time period. 
-* *Snapshot only*: Tiers only snapshot data to the capacity pool storage tier. 
-* *None*: Keeps all your volume's data on the primary storage tier. 
-* *All*: Marks all user data and snapshot data as cold and stores it in the capacity pool storage tier. 
+* *Migration*: Recommended for migration use cases. Applies the same tiering policy from the source volume to destination volume(s).
+* *Balanced (Auto)*: default tiering policy when creating a volume using the user interface. Keeps frequently accessed data in the SSD storage tier and tiers infrequently accessed data and snapshots to the capacity pool storage tier after the cooling period ends. Recommended for general primary workloads. 
+* *Cost-optimized (All)*: Tiers all snapshots and data to the capacity pool storage tier. Recommended for secondary targets.
+* *Performance optimized (Snapshots only)*: Tiers only snapshot data to the capacity pool storage tier. Recommended for low-latency workloads such as mission-critical databases.
+* *None*: Keeps volume data in the SSD storage tier, preventing it from being moved to the capacity pool storage tier.
 
 Note that some tiering policies have an associated minimum cooling period which sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk. 
 
