@@ -117,4 +117,4 @@ When a snapshot policy is assigned to more than one volume, you must manually <<
 . In the Delete dialog, select *Delete* to delete the policy. 
 
 .Result
-The snapshot policy is deleted.
+The snapshot policy is deleted.  
