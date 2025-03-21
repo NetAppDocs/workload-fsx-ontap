@@ -88,7 +88,9 @@ NOTE: Replicating a data protection volume is supported one time.
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`.
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
 +
-_Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
+Depending on the use case you selected, the tiering policy defaults to the recommended tiering policy for the use case.
++
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Workload factory uses use-case based names for tiering policies and includes ONTAP tiering policy names in parentheses. To identify the correct tiering policy in AWS FSx for NetApp ONTAP documentation, look for the ONTAP tiering policy names like "Auto" in parentheses, for example "Balanced (Auto)". 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MiB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
