@@ -9,7 +9,7 @@ BlueXP workload factory releases the FlexGroup rebalance API that allows you to 
 link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation]
 
 === Data tiering policy name changes in the user interface
-Now when you select a tiering policy during volume creation or replication creation, you'll find new names to describe the tiering policies. These new names are based on why you might need to tier data so that you make an appropriate selection. 
+Now when you select a tiering policy during volume creation or replication creation, you'll find new names to describe the tiering policies. These new names are based on why you need to tier data so that you make an appropriate selection. 
 
 * _Balanced (Auto)_: Keeps frequently accessed data in the SSD storage tier and tiers infrequently accessed data and snapshots to the capacity pool storage tier after the cooling period ends. Recommended for general primary workloads. 
  
