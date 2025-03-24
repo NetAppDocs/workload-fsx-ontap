@@ -1,0 +1,21 @@
+=== Automatic capacity management improvements
+Workload factory now scans for available inodes in volumes and increases their count according to the configured automatic capacity management thresholds. You can enable inodes management as part of automatic capacity management. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Enable automatic capacity management]
+
+=== FlexGroup rebalance API
+BlueXP workload factory releases the FlexGroup rebalance API that allows you to execute a plan to rebalance the data in a FlexGroup. Rebalancing redistributes data evenly to the member volumes. 
+
+link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation]
+
+=== Data tiering policy name changes in the user interface
+Now when you select a tiering policy during volume creation or replication creation, you'll find new names to describe the tiering policies. These new names are based on why you might need to tier data so that you make an appropriate selection. 
+
+* _Balanced (Auto)_: Keeps frequently accessed data in the SSD storage tier and tiers infrequently accessed data and snapshots to the capacity pool storage tier after the cooling period ends. Recommended for general primary workloads. 
+ 
+* _Cost-optimized (All)_: Tiers all snapshots and data to the capacity pool storage tier. Recommended for secondary targets.
+
+* _Performance optimized (Snapshots only)_: Tiers only snapshot data to the capacity pool storage tier. Recommended for low-latency workloads such as mission-critical databases.
+ 
+Additionally, you have the option to copy the source volume tiering policy when migrating your data to an FSx for ONTAP file system. 
+
