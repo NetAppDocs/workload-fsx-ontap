@@ -26,7 +26,6 @@ Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-storage
 .Before you begin
 Review the available tiering policies before you change the tiering policy.
 
-* *Migration*: Recommended for migration use cases. Applies the same tiering policy from the source volume to destination volume(s).
 * *Balanced (Auto)*: default tiering policy when creating a volume using the user interface. Keeps frequently accessed data in the SSD storage tier and tiers infrequently accessed data and snapshots to the capacity pool storage tier after the cooling period ends. Recommended for general primary workloads. 
 * *Cost-optimized (All)*: Tiers all snapshots and data to the capacity pool storage tier. Recommended for secondary targets.
 * *Performance optimized (Snapshots only)*: Tiers only snapshot data to the capacity pool storage tier. Recommended for low-latency workloads such as mission-critical databases.
@@ -41,10 +40,10 @@ Note that some tiering policies have an associated minimum cooling period which 
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to change the tiering policy for. 
 . Select *Advanced actions*, then *Change tiering policy*.  
-. On the Change tiering policy page, select one of the following tiering policies: 
+. On the Change tiering policy page, select to copy the tiering policy of the source volume or select one of the following tiering policies: 
 +
-* *Auto*: Enter the number of cooling days. 
-* *Snapshot only*: Enter the number of cooling days. 
+* *Balanced (Auto)*: Enter the number of cooling days. 
+* *Cost-optimized (All)*
+* *Performance-optimized (Snapshots only)*: Enter the number of cooling days. 
 * *None*
-* *All*
 . Select *Apply*.
