@@ -8,14 +8,15 @@ BlueXP workload factory releases the FlexGroup rebalance API that allows you to 
 
 link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation]
 
-=== Replication use cases and data tiering policy name changes
-Now when you select a tiering policy during volume creation or change an existing tiering policy, you'll find new names to describe the tiering policies. 
+=== Replication use cases
+You can now select one of the following use cases for data replication: migration, hot disaster recovery, cold disaster recovery, or archive. After you select a use case, Workload factory recommends values in the replicate data form in accordance with best practices. 
 
-* _Balanced (Auto)_: Keeps frequently accessed data in the SSD storage tier and tiers infrequently accessed data and snapshots to the capacity pool storage tier after the cooling period ends. Recommended for general primary workloads. 
- 
-* _Cost-optimized (All)_: Tiers all snapshots and data to the capacity pool storage tier. Recommended for secondary targets.
+=== Data tiering policy terminology changes
+Now when you select a tiering policy during volume creation or change an existing tiering policy, you'll find new terms to describe the tiering policies. 
 
-* _Performance optimized (Snapshots only)_: Tiers only snapshot data to the capacity pool storage tier. Recommended for low-latency workloads such as mission-critical databases.
- 
-When you replicate data, you'll select a use case for the replication. Workload factory recommends a tiering policy depending on the use case you select. You also have the option to copy the source volume tiering policy when migrating your data to FSx for ONTAP. 
+* _Balanced (Auto)_
+* _Cost-optimized (All)_
+* _Performance optimized (Snapshots only)_
+
+You also have the option to copy the source volume tiering policy when migrating your data to FSx for ONTAP. 
 
