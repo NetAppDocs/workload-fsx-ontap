@@ -1,4 +1,4 @@
-=== Automatic capacity management supports scale-out systems
+=== Automatic capacity management for scale-out systems
 Workload factory now scans for available inodes in volumes and increases their count according to the configured automatic capacity management thresholds. This feature supports automatic capacity management for scale-out systems. You can enable inodes management as part of automatic capacity management. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Enable automatic capacity management]
