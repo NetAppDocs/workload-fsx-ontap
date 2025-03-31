@@ -1,0 +1,21 @@
+=== Automatic capacity management for scale-out systems
+Workload factory now scans for available inodes in volumes and increases their count according to the configured automatic capacity management thresholds. This feature supports automatic capacity management for scale-out systems. You can enable inodes management as part of automatic capacity management. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Enable automatic capacity management]
+
+=== FlexGroup rebalance API
+BlueXP workload factory releases the FlexGroup rebalance API that allows you to execute a plan to rebalance the data in a FlexGroup. Rebalancing redistributes data evenly to the member volumes. 
+
+link:https://console.workloads.netapp.com/api-doc[BlueXP workload factory API documentation]
+
+=== Replicate data form includes use cases
+The replicate data form now includes use cases to make it easier for you to complete the form. You'll select one of the following use cases for data replication: migration, hot disaster recovery, cold disaster recovery, archive, or other. After you select a use case, Workload factory recommends values in accordance with best practices. You can accept the preselected values or customize the values in the form.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Replicate data]
+
+=== Data tiering policy terminology changes
+Now when you select a tiering policy during volume creation, data replication, or updates to existing tiering policies, you'll find new terms to describe the tiering policies. 
+
+* _Balanced (Auto)_
+* _Cost-optimized (All)_
+* _Performance optimized (Snapshots only)_
