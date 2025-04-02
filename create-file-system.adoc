@@ -14,10 +14,10 @@ Using BlueXP workload factory you can create an FSx for ONTAP file system to add
 .About this task
 A storage VM is created when you create a file system. 
 
-Also, the following security groups are created during file system creation.
+The following security groups are created during file system creation.
 
 // Start snippet: collapsible block (open on page load)
-.Security group protocols, ports, and roles 
+.Table of security group protocols, ports, and roles 
 [%collapsible%]
 ====
 [cols="2,2,4a" options="header"]
