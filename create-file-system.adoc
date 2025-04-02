@@ -247,7 +247,7 @@ The following table provides security group details including protocols, ports, 
 | Pinging the instance
 
 |===
-
+====
 
 .What's next
 With a file system in your Storage inventory, you can link:create-volume.html[create volumes], manage your FSx for ONTAP file system, and set up link:data-protection-overview.html[data protection] for your resources.
