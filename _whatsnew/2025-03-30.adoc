@@ -19,3 +19,8 @@ Now when you select a tiering policy during volume creation, data replication, o
 * _Balanced (Auto)_
 * _Cost-optimized (All)_
 * _Performance optimized (Snapshots only)_
+
+=== Security group details for file system creation     
+A security group is created as part of the FSx for ONTAP file system creation process. Security group details including protocols, ports, and roles are now available. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create a file system]

@@ -12,7 +12,7 @@ summary: "Using BlueXP workload factory you can create an FSx for ONTAP file sys
 Using BlueXP workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
 
 .About this task
-A storage VM is created when you create a file system. 
+A storage VM and a security group are created as part of file system creation. 
 
 .Before you begin
 Before creating your FSx for ONTAP file system, you will need:
@@ -114,7 +114,9 @@ To provision iSCSI block volumes on the file system, select no more than 6 HA pa
 .. *Tags*: Optionally, you can add up to 50 tags. 
 . Under Network & security, provide the following: 
 .. *Region & VPC*: Select the region and VPC for the file system. 
-.. *Security group*: Create or use an existing security group.
+.. *Security group*: Create or use an existing security group. 
++
+For a new security group, refer to <<Security group details,security group details>> for a description of the security group protocols, ports, and roles.
 .. *Availability Zones*: Select availability zones and subnets.
 +
 * For Cluster configuration node 1: Select an availability zone and subnet. 
@@ -152,6 +154,99 @@ If you are joining to a self-managed AD, use the name of the group in your AD. T
 If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.
 --
 
+====
+
+== Security group details
+The following table provides security group details including protocols, ports, and roles. 
+
+====
+[cols="2,2,4a" options="header"]
+|===
+| Protocol
+| Port
+| Role
+
+| SSH
+| 22
+| SSH access to the IP address of the cluster management LIF or a node management LIF
+
+| TCP
+| 80
+| Web page access to the IP address of the cluster management LIF
+
+| TCP/UDP
+| 111
+| Remote procedure call for NFS
+
+| TCP/UDP
+| 135
+| Remote procedure call for CIFS
+
+| UDP
+| 137
+| NetBIOS name resolution for CIFS
+
+| TCP/UDP
+| 139
+| NetBIOS service session for CIFS
+
+| TCP
+| 443
+| ONTAP REST API access to the IP address of the cluster management LIF or an SVM management LIF
+
+| TCP
+| 445
+| Microsoft SMB/CIFS over TCP with NetBIOS framing
+
+| TCP/UDP
+| 635
+| NFS mount
+
+| TCP
+| 749
+| Kerberos
+
+| TCP/UDP
+| 2049
+| NFS server daemon
+
+| TCP 
+| 3260
+| iSCSI access through the iSCSI data LIF
+
+| TCP/UDP
+| 4045
+| NFS lock daemon
+
+| TCP/UDP
+| 4046
+| Network status monitor for NFS
+
+| UDP
+| 4049
+| NFS quota protocol
+
+| TCP
+| 10000
+| Network data management protocol (NDMP) and NetApp SnapMirror intercluster communication
+
+| TCP 
+| 11104
+| Management of NetApp SnapMirror intercluster communication
+
+| TCP
+| 11105
+| SnapMirror data transfer using intercluster LIFs
+
+| TCP/UDP
+| 161-162
+| Simple network management protocol (SNMP)
+
+| All ICMP
+| All
+| Pinging the instance
+
+|===
 ====
 
 .What's next
