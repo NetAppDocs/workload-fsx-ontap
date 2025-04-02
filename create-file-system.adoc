@@ -14,6 +14,102 @@ Using BlueXP workload factory you can create an FSx for ONTAP file system to add
 .About this task
 A storage VM is created when you create a file system. 
 
+Also, the following security groups are created during file system creation.
+
+// Start snippet: collapsible block (open on page load)
+.Security group protocols, ports, and roles 
+[%collapsible%]
+====
+[cols="2,2,4a" options="header"]
+|===
+| Protocol
+| Ports
+| Role
+
+| SSH
+| 22
+| SSH access to the IP address of the cluster management LIF or a node management LIF
+
+| TCP
+| 80
+| Web page access to the IP address of the cluster management LIF
+
+| TCP/UDP
+| 111
+| Remote procedure call for NFS
+
+| TCP/UDP
+| 135
+| Remote procedure call for CIFS
+
+| UDP
+| 137
+| NetBIOS name resolution for CIFS
+
+| TCP/UDP
+| 139
+| NetBIOS service session for CIFS
+
+| TCP
+| 443
+| ONTAP REST API access to the IP address of the cluster management LIF or an SVM management LIF
+
+| TCP
+| 445
+| Microsoft SMB/CIFS over TCP with NetBIOS framing
+
+| TCP/UDP
+| 635
+| NFS mount
+
+| TCP
+| 749
+| Kerberos
+
+| TCP/UDP
+| 2049
+| NFS server daemon
+
+| TCP 
+| 3260
+| iSCSI access through the iSCSI data LIF
+
+| TCP/UDP
+| 4045
+| NFS lock daemon
+
+| TCP/UDP
+| 4046
+| Network status monitor for NFS
+
+| UDP
+| 4049
+| NFS quota protocol
+
+| TCP
+| 10000
+| Network data management protocol (NDMP) and NetApp SnapMirror intercluster communication
+
+| TCP 
+| 11104
+| Management of NetApp SnapMirror intercluster communication
+
+| TCP
+| 11105
+| SnapMirror data transfer using intercluster LIFs
+
+| TCP/UDP
+| 161-162
+| Simple network management protocol (SNMP)
+
+| All ICMP
+| All
+| Pinging the instance
+
+|===
+====
+
+
 .Before you begin
 Before creating your FSx for ONTAP file system, you will need:
 
