@@ -33,9 +33,9 @@ You have two options for creating links - automatically or manually.
 * You should consider which link creation option you'll use. 
 * You must have credentials to log in to your AWS account. To use your credentials stored in AWS Secrets Manager, you must set up required permissions for FSx for ONTAP instances.
 * You must have the following permissions in your AWS account when adding a link using a CloudFormation stack:
-+
-[%collapsible]
-====
+//+
+//[%collapsible]
+//====
 [source,json]
 "cloudformation:GetTemplateSummary",
 "cloudformation:CreateStack",
@@ -67,7 +67,7 @@ You have two options for creating links - automatically or manually.
 "codestar-connections:GetSyncConfiguration",
 "ecr:BatchGetImage",
 "ecr:GetDownloadUrlForLayer"
-==== 
+//==== 
 
 [role="tabbed-block"]
 ====
