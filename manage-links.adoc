@@ -29,7 +29,7 @@ image:screenshot-view-link-details.png["A screenshot that shows the FSx for ONTA
 . If you need the Amazon Resource Name (ARN) for the link, you can select the _copy_ icon next to the ARN field. 
 
 == Associate a link with an FSx for ONTAP file system
-After you create a link, you can associate it with your FSx for ONTAP file systems. Each file system can be associated to only one link in a single NetApp account, but a link can be associated with many file systems. 
+After you create a link, you can associate it with your FSx for ONTAP file systems.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -38,11 +38,6 @@ After you create a link, you can associate it with your FSx for ONTAP file syste
 . In the file system overview, select *Associate link*.
 . In the Associate link page, select *Associate an existing link*, select the link, and select *Apply*.
 
-For AWS Secrets Manager: 
-Workload factory supports the following secret format: 
-* filesystemID = _FSx_filesystem_id_
-* user = _FSx_user_
-* password = _user_password_
 .Result
 
 The link is associated with the FSx for ONTAP file system and you can perform advanced ONTAP operations.
@@ -51,6 +46,20 @@ The link is associated with the FSx for ONTAP file system and you can perform ad
 You can't edit a link from the workload factory interface. If you need to make a change to a link, you'll need to create a new link and then associate that link to your file system.
 
 NOTE: You can edit the Lambda network configuration (for example VPC, subnets, and security groups) using the AWS console and the changes will be reflected in links management UI; however, these changes can lead to connectivity issues between Lambda and ONTAP, and are not recommended. 
+
+== Update the password for link authentication
+When the administrative password is invalid, update the password to connect the link to the FSx for ONTAP file system. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
+. In the file system overview, select *Update password*.
+. In the Authenticate link page, enter the new password twice.
+. Select *Apply*.
+
+.Result
+The password is updated, and the link is now connected to the FSx for ONTAP file system.
 
 == Remove a link
 You can remove a link that you're no longer using in your environment. Any FSx for ONTAP file systems or other resources that were using the link will be unable to use certain functionality after the link is removed.

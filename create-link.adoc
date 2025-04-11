@@ -5,12 +5,12 @@ keywords: links, add, add links, add link, create link
 summary: "You can create and manage links to provide a trust relationship and connectivity between a BlueXP workload factory account and one or more FSx for ONTAP file systems."
 ---
 
-= Create a link in BlueXP workload factory
+= Create a link to connect to an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-You can create and manage links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems in BlueXP workload factory. This enables you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
+You can create and associate links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems in BlueXP workload factory. This allows you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
 
 link:links-overview.html[Learn more about links].
 
@@ -23,6 +23,8 @@ You can create a link in your account when defining an FSx for ONTAP file system
 Links require authentication. You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. 
 
 You'll need to launch an AWS CloudFormation stack in your AWS account to create the link.
+
+== Step 1: Create a link
 
 You have two options for creating links - automatically or manually. 
 
@@ -147,3 +149,35 @@ You can monitor the link creation status from the Events page. This should take 
 .Result
 
 The link you created is associated with the FSx for ONTAP file system.
+
+== Step 2: Associate a link with an FSx for ONTAP file system
+After you create a link, you can associate it with your FSx for ONTAP file systems.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
+. In the file system overview, select *Associate link*.
+. In the Associate link page, select *Associate an existing link*, select the link, and select *Apply*.
+
+.Result
+
+The link is associated with the FSx for ONTAP file system and you can perform advanced ONTAP operations.
+
+== Step 3: Authenticate a link
+Provide an administrative user password for workload factory credentials or an AWS Secrets Manager secret ARN to connect the link to an FSx for ONTAP file system. 
+
+NOTE: If you select link authentication with AWS Secrets Manager, you can't change the authentication method later. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
+. In the file system overview, select *Authenticate the link*.
+. In the Authenticate link page, select an authenticate mode: 
++
+* Workload Factory: enter the password twice. 
+* AWS Secrets Manager: enter the secret ARN.
+. Select *Apply*. 
+
+
