@@ -38,6 +38,11 @@ After you create a link, you can associate it with your FSx for ONTAP file syste
 . In the file system overview, select *Associate link*.
 . In the Associate link page, select *Associate an existing link*, select the link, and select *Apply*.
 
+For AWS Secrets Manager: 
+Workload factory supports the following secret format: 
+* filesystemID = _FSx_filesystem_id_
+* user = _FSx_user_
+* password = _user_password_
 .Result
 
 The link is associated with the FSx for ONTAP file system and you can perform advanced ONTAP operations.

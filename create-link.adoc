@@ -20,6 +20,8 @@ Links leverage AWS Lambda to execute code in response to events and automaticall
 
 You can create a link in your account when defining an FSx for ONTAP file system. That link will be used for that file system, and it can be used by other FSx for ONTAP file systems.
 
+You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. 
+
 You'll need to launch an AWS CloudFormation stack in your AWS account to create the link.
 
 You have two options for creating links - automatically or manually. 
@@ -29,7 +31,7 @@ You have two options for creating links - automatically or manually.
 
 .Before you begin
 * You should consider which link creation option you'll use. 
-* You must have credentials to log in to your AWS account.
+* You must have credentials to log in to your AWS account. To use your credentials stored in AWS Secrets Manager, you must set up required permissions for FSx for ONTAP instances.
 * You must have the following permissions in your AWS account when adding a link using a CloudFormation stack:
 +
 [%collapsible]
@@ -83,6 +85,9 @@ Use CloudFormation to automatically create and register the link within workload
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
+.. *AWS Secrets Manager*: Optional. This option allows workload factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. You can either create your secrets using this regex convention or edit the stack and modify the ARN regex according to your secret naming convention.
++
+*Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 +
 The AWS account and the additional information for Account, Location, and Security group are retrieved automatically based on the FSx for ONTAP file system.
@@ -116,6 +121,9 @@ Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
+.. *AWS Secrets Manager*: Optional. This option allows workload factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. You can either create your secrets using this regex convention or edit the stack and modify the ARN regex according to your secret naming convention.
++
+*Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 .. *Link registration*: select on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service. Follow the instructions. 
 +
