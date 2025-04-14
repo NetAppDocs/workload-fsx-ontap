@@ -15,6 +15,8 @@ Long-term retention enables business services to continue operating even in the 
 
 The same steps apply for enabling and editing snapshots for long-term retention.
 
+When an on-premises ONTAP cluster is the target for the replication relationship, changing snapshots for long-term retention isn't supported. 
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
