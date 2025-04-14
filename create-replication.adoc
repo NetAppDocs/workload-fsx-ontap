@@ -104,7 +104,7 @@ NOTE: Replicating a data protection volume is supported one time.
 +
 Additionally, the use case selection determines the replication policy, or SnapMirror policy (ONTAP). The terms used to describe replication policies come from link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html[ONTAP 9 documentation^].
 * For migration and other, the replication policy is called _MirrorAllSnapshots_. _MirrorAllSnapshots_ is an asynchronous policy for mirroring all snapshots and the latest active file system.
-* For cold or archive disaster recovery, the replication policy is called _MirrorAndVault_. _MirrorAndVault_ is an asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots.
+* For hot, cold, or archive disaster recovery, the replication policy is called _MirrorAndVault_. _MirrorAndVault_ is an asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots.
 +
 For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
