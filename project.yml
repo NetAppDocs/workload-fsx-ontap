@@ -148,6 +148,8 @@ sidebar:
                   url: /manage-backup-schedule.html
             - title: Replication
               entries: 
+                - title: Replicate a data protection volume
+                  url: /cascade-replication.html
                 - title: Reverse a replication relationship
                   url: /reverse-replication.html
                 - title: Change the replication schedule of a source volume
