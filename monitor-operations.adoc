@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs
 summary: "Track FSx for ONTAP, credentials, and link operations and monitor job progress with Tracker in BlueXP workload factory for Storage."  
 ---
 = Monitor storage operations with Tracker in BlueXP workload factory
@@ -14,7 +14,7 @@ Monitor and track the execution of FSx for ONTAP, credentials, and link operatio
 .About this task 
 Workload factory provides Tracker, a monitoring feature, so you can monitor and track the progress and status of FSx for ONTAP, credentials, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations. You can filter jobs by type and status, find jobs using the search function, and download the jobs table.
 
-Tracker supports up to three levels of monitoring depending on the operation. Each task, such as file system deployment, displays the task description, status, start time, task duration, user, region, proxy resource, task ID, and all related sub tasks.   
+Tracker supports two levels of monitoring depending on the operation. Each task, such as file system deployment, displays the task description, status, start time, task duration, user, region, proxy resource, task ID, and all related sub tasks. You can view API responses to understand what happened during the operation.
 
 Tracker task levels with examples::: 
 
