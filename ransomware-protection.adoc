@@ -4,7 +4,7 @@ permalink: ransomware-protection.html
 keywords: ransomware, arp, autonomous protection, ai, arp ai, security, detect, detection, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, antiransomware, extension conformity, ransomware protection strategy
 summary: "NetApp Autonomous Ransomware Protection with Artificial Intelligence uses workload analysis in NAS environments to detect and warn about abnormal activity that might be a ransomware attack."  
 ---
-= Enable Autonomous Ransomware Protection with AI for a file system
+= Protect your data with Autonomous Ransomware Protection with AI
 :icons: font
 :imagesdir: ./media/
 

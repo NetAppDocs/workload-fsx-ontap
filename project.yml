@@ -76,6 +76,8 @@ sidebar:
                   url: /create-replication.html
                 - title: Initialize a replication relationship
                   url: /initialize-replication.html
+            - title: Protect data with Autonomous Ransomware Protection
+              url: /ransomware-protection.html   
             - title: Clone a volume
               url: /clone-volume.html  
             - title: Use on-premises ONTAP data
@@ -161,9 +163,7 @@ sidebar:
                 - title: Stop a replication relationship
                   url: /stop-replication.html
                 - title: Delete a replication relationship
-                  url: /delete-replication.html 
-            - title: Autonomous Ransomware Protection
-              url: /ransomware-protection.html      
+                  url: /delete-replication.html    
         - title: Performance administration
           entries: 
             - title: Provision IOPS for a file system
