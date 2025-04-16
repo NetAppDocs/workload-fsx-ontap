@@ -39,13 +39,11 @@ In active mode, if a file extension is flagged as abnormal, you should evaluate 
 
 == How to recover data after a ransomware attack
 
-When an attack is suspected, the system takes a volume snapshot at that point in time and locks that copy. If the attack is confirmed later, the volume can be restored using the ARP/AI snapshot.
+When an attack is suspected, the system takes a volume snapshot at that point in time and locks that copy. If the attack is confirmed later, the affected files or the entire volume can be restored using the ARP snapshot.
 
 Locked snapshots cannot be deleted until the retention period ends. However, if you decide later to mark the attack as a false positive, the locked copy will be deleted. 
 
-With the knowledge of the affected files and the time of attack, it is possible to selectively recover the affected files from various snapshots rather than simply reverting the whole volume to one of the snapshots.
-
-link:?
+With the knowledge of the affected files and the time of attack, it is possible to selectively recover the affected files from various snapshots rather than simply reverting the whole volume to one of the snapshots. 
 
 == Before you begin
 
