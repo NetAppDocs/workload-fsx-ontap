@@ -9,10 +9,9 @@ summary: "Autonomous Ransomware Protection uses workload analysis in NAS environ
 :imagesdir: ./media/
 
 [.lead]
-Protect your data with Autonomous Ransomware Protection (ARP), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP also creates new, immutable snapshots in addition to the existing protection provided by scheduled snapshots.
+Protect your data with Autonomous Ransomware Protection (ARP), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP also creates new, immutable snapshots from which you can restore your data. 
 
 .About this task
-
 Use ARP to protect against denial-of-service attacks where the attacker withholds data until a ransom is paid. ARP offers real-time ransomware detection based on: 
 
 * Identification of the incoming data as encrypted or plaintext.
