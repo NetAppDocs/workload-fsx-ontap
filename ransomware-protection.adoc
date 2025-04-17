@@ -35,7 +35,7 @@ ARP operates first in _learning mode_ and then automatically switches to _active
 
 * *Active mode*: After ARP switches to _active mode_, FSx for ONTAP creates ARP/AI snapshots to protect the data if a threat is detected.
 +
-In active mode, if a file extension is flagged as abnormal, you should evaluate the alert. You can act on the alert to protect your data or you can mark the alert as a false positive. Marking an alert as a false positive updates the alert profile. For example, if the alert is triggered by a new file extension and you mark the alert as a false positive, you will not receive an alert the next time that file extension is observed. 
+In active mode, if a file extension is flagged as abnormal, you should evaluate the alert. You can act on the alert to protect your data or you can mark the alert as a false positive. Marking an alert as a false positive updates the alert profile. For example, if the alert is triggered by a new file extension and you mark the alert as a false positive, you will not receive an alert the next time that file extension is observed.
 
 Unsupported configurations:::
 The following configurations don't support the use of ARP. 
@@ -44,6 +44,9 @@ The following configurations don't support the use of ARP.
 * Block volumes
 
 == Enable Autonomous Ransomware Protection for a file system
+Enabling ARP for a file system adds protection for all existing NAS and newly created NAS volumes automatically. 
+
+After enabling ARP, if an attack occurs and you identify the attack is real, BlueXP workload factory automatically sets up a snapshot policy that takes up to six snapshots every four hours. Each snapshot is locked for 2-5 days.
 
 .Before you begin
 To enable ARP for a file system, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
