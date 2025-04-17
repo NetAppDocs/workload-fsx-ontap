@@ -43,6 +43,8 @@ The following configurations don't support the use of ARP.
 * SAN-only volumes
 * Block volumes
 
+== Enable Autonomous Ransomware Protection for a file system
+
 .Before you begin
 To enable ARP for a file system, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
 
