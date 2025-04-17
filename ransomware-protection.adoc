@@ -68,6 +68,7 @@ Locked snapshots cannot be deleted until the retention period ends. However, if 
 With the knowledge of the affected files and the time of attack, it is possible to selectively recover the affected files from various snapshots rather than simply reverting the whole volume to one of the snapshots. 
 
 .Before you begin
+*Question: Does a user need to associate/authenticate a link to restore?* 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
