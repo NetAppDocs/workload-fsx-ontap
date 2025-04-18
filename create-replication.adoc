@@ -24,20 +24,19 @@ Make sure you meet the following prerequisites before you begin.
 * You must have two available file systems in your storage inventory to create a replication relationship.
 * The two file systems you use for the replication relationship must have an associated link. If the file systems don't have existing links, link:create-link.html[first create a link]. To link:manage-links.html[associate a link] in the file systems, select *Associate link* under *Account name*. Once the link associates in both file systems, return to this operation. 
 
-Complete the following steps to replicate a single volume or replicate all volumes in a file system. 
-[role="tabbed-block"]
-====
+Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
 
-.Replicate one or more volumes
---
-You can replicate one source (read/write) volume or one data protection (DP) volume. You cannot create a second replica of a DP volume.
+You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^]. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume(s) to replicate and then select *Manage*.
-. From the file system overview, select the *Volumes* tab.
-. In the Volumes table, select one or more volumes and then select *Replicate data*. 
+. Either replicate all volumes in a file system or replicate select volumes. 
+* To replicate all volumes in a file system: From the file system overview, select *Replicate data*.
+* To replicate select volumes: From the file system overview, select the *Volumes* tab.
++
+In the Volumes table, select one or more volumes and then select *Replicate data*. 
 . On the Replicate data page, under Replication target, provide the following: 
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
 .. *Storage VM name*: Select the storage VM from the dropdown menu.
@@ -72,52 +71,6 @@ If you enable long-term retention, then select an existing policy or create a ne
 *** Set the *Retention period* in number of hours, days, months, or years. 
 ** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
 . Select *Create*. 
---
-
-.Replicate all volumes in a file system
---
-You can replicate all source (read/write) and data protection (DP) volumes in a file system. 
-
-NOTE: Replicating a data protection volume is supported one time. 
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the FSx for ONTAP tab, select the three-dot menu of the file system with the volumes and then select *Manage*.  
-. From the file system overview, select *Replicate data*. 
-. On the Replicate data page, under Replication target, provide the following: 
-.. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
-.. *Storage VM name*: Select the storage VM from the dropdown menu.
-.. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`.
-.. *Use case*: Select one of the following use cases for the replication. Depending on the selected use case, workload factory fills in the form with recommended values in accordance with best practices. You can accept the recommended values or make changes as you complete the form. 
-* Migration: transfers your data to the target FSx for ONTAP file system
-* Hot disaster recovery: ensures high availability and rapid disaster recovery for critical workloads
-* Cold or archive disaster recovery: 
-** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
-** Archive: replicates data for long-term storage and compliance
-* Other
-.. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
-+
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
-+
-If you selected the migration use case, workload factory automatically selects to copy tiering policy of source volumes to the target volumes in the file system. You can deselect to copy the tiering policy and select a tiering policy that applies to the volumes in the target file system for replication. 
-.. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MiB/s. Alternatively, select *Unlimited*. 
-+
-Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
-. Under Replication settings, provide the following: 
-.. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
-.. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
-+
-If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
-+
-* *Choose an existing policy*: select an existing policy from the dropdown menu. 
-* *Create a new policy*: provide the following: 
-** *Policy name*: Enter a policy name. 
-** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
-. Select *Replicate*. 
---
-
-====
 
 .Result
 The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system.  
