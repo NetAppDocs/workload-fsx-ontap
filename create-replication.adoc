@@ -26,7 +26,7 @@ Make sure you meet the following prerequisites before you begin.
 
 Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
 
-You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^]. 
+Replicating a data protection volume, or cascading replication, is supported one time. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^]. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
