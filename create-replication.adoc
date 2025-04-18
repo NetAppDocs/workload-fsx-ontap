@@ -59,9 +59,11 @@ If you selected the migration use case, workload factory automatically selects t
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
-.. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
+.. *Long-term retention*: Optionally, enable snapshots for long-term retention. Long-term retention enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy.
 +
-If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
+If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain. 
++
+NOTE: Matching source and target labels are required for long-term retention. If desired, Workload factory can create missing labels for you. 
 +
 * *Choose an existing policy*: select an existing policy from the dropdown menu. 
 * *Create a new policy*: provide the following: 
