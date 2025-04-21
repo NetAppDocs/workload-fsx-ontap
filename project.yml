@@ -84,6 +84,12 @@ sidebar:
       entries:
         - title: Monitor operations with Tracker
           url: /monitor-operations.html
+        - title: Improve storage configurations
+          entries: 
+            - title: Learn about the well-architected dashboard
+              url: /learn-well-architected-dashboard.html
+            - title: Improve storage configurations
+              url: /improve-configurations.html  
         - title: Volume administration
           entries:  
           #  - title: View volume details
