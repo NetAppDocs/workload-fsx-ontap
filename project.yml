@@ -86,9 +86,9 @@ sidebar:
           url: /monitor-operations.html
         - title: Improve storage configurations
           entries: 
-            - title: Learn about the well-architected dashboard
-              url: /learn-well-architected-dashboard.html
-            - title: Improve storage configurations
+            - title: Configuration analysis for FSx for ONTAP
+              url: /configuration-analysis.html
+            - title: Improve FSx for ONTAP storage configurations
               url: /improve-configurations.html  
         - title: Volume administration
           entries:  

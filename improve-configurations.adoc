@@ -1,0 +1,60 @@
+---
+sidebar: sidebar
+permalink: improve-configurations.html
+keywords: improve, configuration, storage, Amazon FSx for NetApp ONTAP, FSx for ONTAP
+summary: "BlueXP workload factory for Databases scans Microsoft SQL Server configurations providing insights and recommendations to help you achieve operational excellence." 
+---
+= Improve configurations for FSx for ONTAP file system deployments
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+BlueXP workload factory continuously analyzes Amazon FSx for NetApp ONTAP file system deployment configurations. This feature provides insights and recommendations with the option to automatically fix configuration issues so that your file system storage can achieve operational excellence.  
+
+.About this task
+The analysis runs automatically and continuously once every day for FSx for ONTAP file systems managed in workload factory. Assessment reports are available in the well-architected dashboard only if a daily scheduled job has run after deployment.
+
+Workload factory provides detailed recommendations to improve configurations based on best practices for FSx for ONTAP storage. You can review the recommendations and choose to fix configuration issues.
+
+What is scanned::
+Workload factory assesses the well-architected status of the following configurations for FSx for ONTAP file systems:  
+
+* Storage sizing: includes storage tier, file system headroom, log drive size, and TempDB drive size  
+* Storage layout: includes user data files placement, log files placement, and TempDB placement
+* Storage configuration: includes capacity management, thin provisioning, tiering policy, snapshots, and Multi-path I/O status, policy, and sessions, and more 
+* Compute: includes rightsizing, operating system patches, and network adapter settings like Receive Side Scaling (RSS) and TCP offloading
+* Applications: includes Microsoft SQL Server licenses, Microsoft SQL Server patch, and MAXDOP settings 
+* Resiliency: includes local snapshots, FSx for ONTAP backups, and cross-region replication (CRR)
+* Clones: includes options to refresh and delete clones (sandboxes)
+
+.Before you begin
+* You must have credentials with read or automate permissions.
+* To assess the storage of a Microsoft SQL Server instance, the instance must be managed by workload factory and the storage type must be FSx for ONTAP. 
+* Make sure you review each recommendation carefully before selecting to optimize a setting or configuration. For RSS and MAXDOP settings, we suggest that you test the recommended settings to determine performance improvements before making changes to your production environment. 
+
+NOTE: The optimization process may cause instance downtimes or service interruptions. Make sure you review the optimization summary and action items before you choose to optimize a configuration.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Databases inventory*.
+. In the *Inventory* tab, select the dropdown arrow to expand the row of the host to view its managed instances. 
++
+The host expands and host instances appear. 
+. Select the three-dot menu of the instance and then select *Optimize*. 
+. On the Optimize instance page for the SQL Server instance, review the findings from the assessment. 
++
+You can filter by categories, subcategories, status, severity, and tags. 
++ 
+You can also download a report of the assessment findings by selecting *Export PDF*.  
+. Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
++ 
+The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Select to *Optimize* unoptimized configurations.
++
+*Select all* is the default, but you can select specific resources to optimize.
+. Review the optimization summary and action items that appear in the optimization dialog to learn what will happen if you choose to optimize. Some optimization operations may cause instance downtimes or service interruptions. 
+. Select *Continue* to optimize the configuration. 
+
+.Result
+The optimization process initiates. Select the *Job monitoring* tab to view the status of the operation.
+

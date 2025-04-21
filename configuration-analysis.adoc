@@ -1,0 +1,26 @@
+---
+sidebar: sidebar
+permalink: configuration-analysis.html
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
+summary: "BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues."  
+---
+= Configuration analysis for Amazon FSx for NetApp ONTAP
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
+
+== Well-architected status
+The workload factory console dashboard provides you with a comprehensive report of insights and recommendations to make improvements to your FSx for ONTAP file system configurations. 
+
+Key capabilities include: 
+
+* Daily configuration analysis
+* Automatic best practice validations
+* Proactive observability
+* Insights to action
+* AWS Well-Architected Framework advisor
+
+link:improve-configurations.html[Improve configurations for FSx for ONTAP deployments]
+
