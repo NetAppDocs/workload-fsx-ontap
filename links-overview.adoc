@@ -22,7 +22,7 @@ After you have created a link you can associate it with one, or many, FSx for ON
 
 You create links from the FSx for ONTAP file system pages in workload factory. link:create-link.html[Learn how to create links] for details.
 
-You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. 
+You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. Workload factory doesn't support changing authentication modes. 
 
 == Costs
 
