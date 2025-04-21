@@ -185,7 +185,10 @@ NOTE: Only one authentication method is supported per link. For example, if you 
 . In the Authenticate link page, select an authenticate mode: 
 +
 * Workload Factory: enter the password twice. 
-* AWS Secrets Manager: enter the secret ARN.
+* AWS Secrets Manager: enter the secret ARN. 
++
+*Do we need to get into the following details here?*
+*2 ways of modifying permissions: edit stack or edit policy post creation and at least 2 ways of limiting: ARN regex or tags*
 . Select *Apply*. 
 
 .Result
