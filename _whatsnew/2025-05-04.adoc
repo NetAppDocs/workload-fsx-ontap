@@ -1,0 +1,40 @@
+=== Replication enhancements
+
+==== Reverse replication supported from FSx for ONTAP to on-premises
+
+Reverse replication is now available from an FSx for ONTAP file system to an on-premises ONTAP cluster from within the workload factory console.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html[Reverse replication]
+
+==== Data protection volume replication 
+
+Data protection volumes now support cascading replication, when volumes replicate from replicated volumes.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[Replicate a data protection volume]
+
+==== Multiple volume selection
+
+Multiple volume selection is available so you can select exactly the volumes you want to replicate.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
+
+=== FSx for ONTAP file name visible in volume creation
+We've improved the visibility of FSx for ONTAP file systems during volume creation. You'll see the FSx for ONTAP file system when you create a volume, so you'll know exactly where the volume is being created.
+
+=== AWS account visible across the Storage workload
+
+We've improved account visibility across the Storage workload. You'll see the AWS account when navigating to the *Volumes*, *Storage VMs*, and *Replication* tabs.
+
+=== Link association enhancement
+
+You can quickly associate a link from an FSx for ONTAP file system in the Inventory tab.
+
+=== Link authentication support for AWS Secrets Manager
+
+You now have the option to use secrets from AWS Secrets Manager to authenticate links so that you don't have to use credentials stored in BlueXP workload factory. 
+
+=== Tracker response support
+
+Tracker now provides API responses so that you can see the REST API output related to the task.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Monitor operations with Tracker]
