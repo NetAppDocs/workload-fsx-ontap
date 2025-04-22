@@ -132,7 +132,9 @@ Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/
 +
 The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
 +
-You can either create your secrets using this regex convention or edit the stack and modify the ARN regex according to your secret naming convention.
+*Option 1*: You can either create your secrets using this regex convention or edit the stack and modify the ARN regex or tags according to your secret naming convention.
++
+*Option 2*: You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy."
 +
 *Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
