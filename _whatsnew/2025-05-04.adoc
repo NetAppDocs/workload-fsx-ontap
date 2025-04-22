@@ -1,3 +1,6 @@
+=== Dual protocol security style options
+You have the option to choose either NTFS or UNIX as the security style for a volume to determine the method that users and permissions access a volume.
+
 === Replication enhancements
 
 ==== Reverse replication supported from FSx for ONTAP to on-premises
@@ -25,9 +28,10 @@ We've improved the visibility of FSx for ONTAP file systems during volume creati
 
 We've improved account visibility across the Storage workload. You'll see the AWS account when navigating to the *Volumes*, *Storage VMs*, and *Replication* tabs.
 
-=== Link association enhancement
+=== Link association enhancements
 
-You can quickly associate a link from an FSx for ONTAP file system in the Inventory tab.
+* You can quickly associate a link from an FSx for ONTAP file system in the Inventory tab.
+* BlueXP workload factory now supports the use of alternative ONTAP user credentials for link association. 
 
 === Link authentication support for AWS Secrets Manager
 
