@@ -1,4 +1,12 @@
+=== Implement best practices for an FSx for ONTAP file system
+
+BlueXP workload factory provides a dashboard where you can review the well-architected status of your file system configurations. You'll find the total well-architected score. File system configuration analysis includes the five pillars according the AWS Well-Architected Framework: reliability, security, operational excellence, cost optimization, and performance efficiency. You can leverage this analysis to implement best practices for your FSx for ONTAP file systems. 
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn about the well-architected analysis for file system configurations]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement best practices for your file systems]
+
 === Dual protocol security style options
+
 You have the option to choose either NTFS or UNIX as the security style for a volume to determine the method that users and permissions access a volume.
 
 === Replication enhancements
@@ -42,3 +50,9 @@ You now have the option to use secrets from AWS Secrets Manager to authenticate 
 Tracker now provides API responses so that you can see the REST API output related to the task.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Monitor operations with Tracker]
+
+=== Capacity validation when restoring a volume from a backup
+
+When restoring a volume from a backup, BlueXP workload factory determines if you have enough capacity for the restore and can automatically add SSD storage tier capacity if you don't.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html[Restore a volume from a backup]
