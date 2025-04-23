@@ -25,8 +25,6 @@ ARP can detect the spread of most ransomware attacks after only a small number o
 
 The ARP feature automatically updates according to the ONTAP version that Amazon FSx for NetApp ONTAP runs so you don't have to make manual updates. 
 
-NOTE: No ransomware detection or prevention system can completely guarantee safety from a ransomware attack. Although it's possible an attack might go undetected, ARP acts as an important additional layer of defense if anti-virus software has failed to detect an intrusion.
-
 Learning and active modes:::
 ARP operates first in _learning mode_ and then automatically switches to _active mode_. 
 
@@ -39,8 +37,9 @@ In active mode, if a file extension is flagged as abnormal, you should evaluate 
 Unsupported configurations:::
 The following configurations don't support the use of ARP. 
 
-* SAN-only volumes
-* Block volumes
+* SAN/Block volumes
+* iSCSI volumes
+* NVMe volumes
 
 == Enable Autonomous Ransomware Protection for a file system
 Enabling ARP for a file system adds protection for all existing NAS and newly created NAS volumes automatically. 
@@ -63,6 +62,9 @@ To enable ARP for a file system, you must link:manage-links.html[associate a lin
 //NetApp Autonomous Ransomware Protection with AI (ARP/AI)
 // ARP/AI
 
+== Validate ransomware attacks
+
+
 == Recover data after a ransomware attack
 
 When an attack is suspected, the system takes a volume snapshot at that point in time and locks that copy. If the attack is confirmed later, the affected files or the entire volume can be restored using the ARP snapshot.
@@ -70,9 +72,6 @@ When an attack is suspected, the system takes a volume snapshot at that point in
 Locked snapshots cannot be deleted until the retention period ends. However, if you decide later to mark the attack as a false positive, the locked copy will be deleted. 
 
 With the knowledge of the affected files and the time of attack, it is possible to selectively recover the affected files from various snapshots rather than simply reverting the whole volume to one of the snapshots. 
-
-.Before you begin
-*Question: Does a user need to associate/authenticate a link to restore?* 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
