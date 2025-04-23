@@ -177,6 +177,8 @@ The link is associated with the FSx for ONTAP file system.
 == Step 3: Authenticate a link
 Provide an administrative user password for workload factory credentials or an AWS Secrets Manager secret ARN to connect the link to an FSx for ONTAP file system. 
 
+AWS Secrets Manager isn't supported when using a Connector.
+
 NOTE: Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
 
 .Steps
