@@ -1,31 +1,30 @@
 ---
 sidebar: sidebar
 permalink: create-link.html
-keywords: links, add, add links, add link, create link
+keywords: connect, connection, link, lambda link, associate link, create link, authenticate link
 summary: "You can create and manage links to provide a trust relationship and connectivity between a BlueXP workload factory account and one or more FSx for ONTAP file systems."
 ---
 
-= Create a link to connect to an FSx for ONTAP file system
+= Connect to an FSx for ONTAP file system with a Lambda link
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Old: You can create and associate links to provide a trust relationship and connectivity between a workload factory account and one or more FSx for ONTAP file systems in BlueXP workload factory. This allows you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
-
-New: To perform advanced ONTAP management operations, you'll need to create a link, associate the link to an FSx for ONTAP file system, and authenticate the link. A link provides connectivity between a workload factory account and one or more FSx for ONTAP file systems in BlueXP workload factory. 
+To perform advanced ONTAP management operations, you'll need to establish connectivity between your workload factory account and one or more FSx for ONTAP file systems. Establishing connectivity includes associating new and existing Lambda links, and authenticating the links. Link association allows you to monitor and manage certain features directly from the FSx for ONTAP file system that are not available through the AWS FSx for ONTAP API. 
 
 link:links-overview.html[Learn more about links].
 
-.About this workflow
+.About this task
 
 Links leverage AWS Lambda to execute code in response to events and automatically manage the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
 
 You can create a link in your account when defining an FSx for ONTAP file system. That link will be used for that file system, and it can be used by other FSx for ONTAP file systems. You can also associate a link for a file system later. 
 
-Links require authentication. You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. 
+Links require authentication. You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
 
+NOTE: AWS Secrets Manager isn't supported when using a Connector.
 
-== Step 1: Create a link
+== Associate a new link
 
 You have two options for creating links - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
 
@@ -34,7 +33,7 @@ You have two options for creating links - automatically or manually. You'll need
 
 .Before you begin
 * You should consider which link creation option you'll use. 
-* You must have credentials to log in to your AWS account. To use your credentials stored in AWS Secrets Manager, you must set up required permissions for FSx for ONTAP instances.
+* You need to have at least one FSx for ONTAP file system in workload factory. To discover or create FSx for ONTAP file systems, you must have an AWS account with permissions for FSx for ONTAP instances and link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview[add credentials in workload factory^] with read-only or read-write permissions for Storage management. 
 * You must have the following permissions in your AWS account when adding a link using a CloudFormation stack:
 +
 [%collapsible]
@@ -92,7 +91,7 @@ Use CloudFormation to automatically create and register the link within workload
 +
 The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
 +
-You can either create your secrets using this regex convention or edit the stack and modify the ARN regex according to your secret naming convention.
+You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy.
 +
 *Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
@@ -121,7 +120,7 @@ You can monitor the link creation status from the Events page. This should take 
 With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload factory manually registers the link for you. 
 
 .Steps
-Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Associate link*.
@@ -132,9 +131,7 @@ Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/
 +
 The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
 +
-*Option 1*: You can either create your secrets using this regex convention or edit the stack and modify the ARN regex or tags according to your secret naming convention.
-+
-*Option 2*: You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy."
+You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy.
 +
 *Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
@@ -161,39 +158,44 @@ You can monitor the link creation status from the Events page. This should take 
 
 The link you created is associated with the FSx for ONTAP file system.
 
-== Step 2: Associate a link with an FSx for ONTAP file system
+== Associate an existing link with an FSx for ONTAP file system
 After you create a link, associate it with one or more FSx for ONTAP file system.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
-. In the Associate link page, select *Associate an existing link*, select the link, and select *Apply*.
-
-.Result
-
-The link is associated with the FSx for ONTAP file system.
-
-== Step 3: Authenticate a link
-Provide an administrative user password for workload factory credentials or an AWS Secrets Manager secret ARN to connect the link to an FSx for ONTAP file system. 
-
-AWS Secrets Manager isn't supported when using a Connector.
-
-NOTE: Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
-. In the file system overview, select *Authenticate the link*.
-. In the Authenticate link page, select an authenticate mode: 
-+
+. In the Associate link page, select *Associate an existing link*, select the link, and select *Continue*.
+. Select the authentication mode. 
 * Workload Factory: enter the password twice. 
-* AWS Secrets Manager: enter the secret ARN. 
+* AWS Secrets Manager: enter the secret ARN.
 +
-*Do we need to get into the following details here?*
-*2 ways of modifying permissions: edit stack or edit policy post creation and at least 2 ways of limiting: ARN regex or tags*
+The secret ARN must include the following parameters: 
+
+* filesystemID = FSx_filesystem_id
+* user = FSx_user
+* password = user_password
 . Select *Apply*. 
 
+
 .Result
-The link is authenticated, and you can perform advanced ONTAP operations
+
+The link is associated with the FSx for ONTAP file system. You can perform advanced ONTAP operations.
+
+
+== Troubleshooting issues with AWS Secrets Manager authentication
+
+* Lack of permissions to retrieve the secret
+Add permissions after the link is active
+Go into AWS console, locate the Lambda link, and edit the attached permission policy.
+
+* Secret isn't found -> respecify the correct secret arm
+
+* Secret isn't in the right format -> go to AWS Secrets Manager and edit the format
+The secret should contain these three key valid pairs
+	filesystemID = FSx_filesystem_id
+	user = FSx_user
+	password = user_password
+
+* 	The secret doesn't contain valid ONTAP credentials for file system authentication 
+Provide credentials that can authenticate file systems in AWS Secrets Manager

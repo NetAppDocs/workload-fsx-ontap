@@ -28,24 +28,31 @@ image:screenshot-menu-links.png[A screenshot showing how to open the links page.
 image:screenshot-view-link-details.png["A screenshot that shows the FSx for ONTAP file systems that are using a specific link."]
 . If you need the Amazon Resource Name (ARN) for the link, you can select the _copy_ icon next to the ARN field. 
 
-== Associate a link with an FSx for ONTAP file system
-After you create a link, you can associate it with your FSx for ONTAP file systems.
+== Edit a link
+You can't edit a link from the workload factory interface. If you need to make a change to a link, you'll need to create a new link and then associate that link to your file system.
+
+NOTE: You can edit the Lambda network configuration (for example VPC, subnets, and security groups) using the AWS console and the changes will be reflected in links management UI; however, these changes can lead to connectivity issues between Lambda and ONTAP, and are not recommended. 
+
+== Authenticate a link
+Provide an administrative user password for workload factory credentials or an AWS Secrets Manager secret ARN to connect the link to an FSx for ONTAP file system. 
+
+AWS Secrets Manager isn't supported when using a Connector.
+
+NOTE: Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
-. In the file system overview, select *Associate link*.
-. In the Associate link page, select *Associate an existing link*, select the link, and select *Apply*.
+. In the file system overview, select *Authenticate the link*.
+. In the Authenticate link page, select an authenticate mode: 
++
+* Workload Factory: enter the password twice. 
+* AWS Secrets Manager: enter the secret ARN. 
+. Select *Apply*. 
 
 .Result
-
-The link is associated with the FSx for ONTAP file system and you can perform advanced ONTAP operations.
-
-== Edit a link
-You can't edit a link from the workload factory interface. If you need to make a change to a link, you'll need to create a new link and then associate that link to your file system.
-
-NOTE: You can edit the Lambda network configuration (for example VPC, subnets, and security groups) using the AWS console and the changes will be reflected in links management UI; however, these changes can lead to connectivity issues between Lambda and ONTAP, and are not recommended. 
+The link is authenticated, and you can perform advanced ONTAP operations
 
 == Update the password for link authentication
 When the administrative password is invalid, update the password to connect the link to the FSx for ONTAP file system. 
