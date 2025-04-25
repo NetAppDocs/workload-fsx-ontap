@@ -56,3 +56,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Mo
 When restoring a volume from a backup, BlueXP workload factory determines if you have enough capacity for the restore and can automatically add SSD storage tier capacity if you don't.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html[Restore a volume from a backup]
+
+=== Updated permissions terminology
+
+The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
