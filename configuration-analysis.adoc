@@ -4,7 +4,7 @@ permalink: configuration-analysis.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
 summary: "BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues."  
 ---
-= Configuration analysis for Amazon FSx for NetApp ONTAP
+= Configuration analysis for FSx for ONTAP file systems
 :icons: font
 :imagesdir: ./media/
 
