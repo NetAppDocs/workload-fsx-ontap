@@ -64,3 +64,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html[R
 
 === File system creation options for user credentials 
 Workload factory now supports alternative sets of ONTAP credentials for creating file systems to minimize security risks for your file systems. Before you'd manage file systems using only the fsxadmin user. Now you can select a different set of ONTAP credentials or select not to provide a password for fsxadmin and vsaadmin users. 
+
+=== Updated permissions terminology
+
+The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
