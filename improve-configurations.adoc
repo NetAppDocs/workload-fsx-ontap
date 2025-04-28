@@ -17,7 +17,7 @@ BlueXP analyzes Amazon FSx for NetApp ONTAP file system deployment configuration
 You have options to review the recommendations for configuration issues with your file systems and fix those issues from the storage inventory within the workload factory console. 
 
 What is scanned::
-Workload factory assesses the well-architected status of the following configurations for FSx for ONTAP file systems:  
+Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
 
 * SSD capacity threshold
 * Data tiering
