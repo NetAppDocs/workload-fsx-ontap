@@ -157,7 +157,7 @@ You can monitor the link creation status from the Events page. This should take 
 
 .Result
 
-The link you created is associated with the FSx for ONTAP file system.
+The link you created is associated with the FSx for ONTAP file system. You can perform advanced ONTAP operations. 
 
 == Associate an existing link with an FSx for ONTAP file system
 After you create a link, associate it with one or more FSx for ONTAP file system.
