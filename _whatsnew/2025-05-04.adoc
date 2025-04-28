@@ -5,7 +5,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 === Implement best practices for an FSx for ONTAP file system
 
-BlueXP workload factory provides a dashboard where you can review the well-architected status of your file system configurations. You'll find the total well-architected score. File system configuration analysis includes the five pillars according the AWS Well-Architected Framework: reliability, security, operational excellence, cost optimization, and performance efficiency. You can leverage this analysis to implement best practices for your FSx for ONTAP file systems. 
+BlueXP Workloads provides a dashboard where you can review the well-architected status of your file system configurations. You can leverage this analysis to implement best practices for your FSx for ONTAP file systems. File system configuration analysis includes the following configurations: SSD capacity threshold, scheduled local snapshots, scheduled FSx for ONTAP backups, data tiering, and remote data replication.
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn about the well-architected analysis for file system configurations]
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement best practices for your file systems]
