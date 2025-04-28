@@ -1,3 +1,8 @@
+=== Autonomous Ransomware Protection for FSx for ONTAP file systems
+Protect your data with Autonomous Ransomware Protection (ARP), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP also creates new, immutable snapshots from which you can restore your data.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Protect your data with Autonomous Ransomware Protection]
+
 === Implement best practices for an FSx for ONTAP file system
 
 BlueXP workload factory provides a dashboard where you can review the well-architected status of your file system configurations. You'll find the total well-architected score. File system configuration analysis includes the five pillars according the AWS Well-Architected Framework: reliability, security, operational excellence, cost optimization, and performance efficiency. You can leverage this analysis to implement best practices for your FSx for ONTAP file systems. 
@@ -5,7 +10,7 @@ BlueXP workload factory provides a dashboard where you can review the well-archi
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn about the well-architected analysis for file system configurations]
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement best practices for your file systems]
 
-=== Dual protocol security style options
+=== Dual-protocol volume security style options
 
 You have the option to choose either NTFS or UNIX as the security style for a volume to determine the method that users and permissions access a volume.
 
