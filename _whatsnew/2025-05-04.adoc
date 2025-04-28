@@ -62,7 +62,8 @@ When restoring a volume from a backup, BlueXP workload factory determines if you
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html[Restore a volume from a backup]
 
-=== File system creation options for user credentials 
+=== Support for alternative ONTAP user credentials
+
 Workload factory now supports alternative sets of ONTAP credentials for creating file systems to minimize security risks for your file systems. Before you'd manage file systems using only the fsxadmin user. Now you can select a different set of ONTAP credentials or select not to provide a password for fsxadmin and vsaadmin users. 
 
 === Updated permissions terminology
