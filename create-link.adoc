@@ -186,19 +186,24 @@ The link is associated with the FSx for ONTAP file system. You can perform advan
 
 == Troubleshoot issues with AWS Secrets Manager link authentication
 
-* Issue: The link lacks permissions to retrieve the secret
-** The fix: Add permissions after the link is active. Go into AWS console, locate the Lambda link, and edit the attached permission policy.
+Issue::: The link lacks permissions to retrieve the secret.
++
+*Resolution*: Add permissions after the link is active. Log in to the AWS console, locate the Lambda link, and edit the attached permission policy.
 
-* Issue: The secret isn't found.
-** The fix: Provide the correct secret ARN.
+Issue::: The secret isn't found.
++
+*Resolution*: Provide the correct secret ARN.
 
-* Issue: The secret isn't in the right format.
-** The fix: Go to AWS Secrets Manager and edit the format.
+Issue::: The secret isn't in the right format.
++
+*Resolution*: Go to AWS Secrets Manager and edit the format.
 +
 The secret should contain the following three parameters:
-*** filesystemID = FSx_filesystem_id
-*** user = FSx_user
-*** password = user_password
 
-* Issue: The secret doesn't contain valid ONTAP credentials for file system authentication. 
-** The fix: Provide credentials that can authenticate file systems in AWS Secrets Manager
+* filesystemID = FSx_filesystem_id
+* user = FSx_user
+* password = user_password
+
+Issue::: The secret doesn't contain valid ONTAP credentials for file system authentication. 
++
+*Resolution*: Provide credentials that can authenticate FSx for ONTAP file systems in AWS Secrets Manager.
