@@ -11,12 +11,22 @@ summary: "BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file syst
 [.lead]
 BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
 
+The workload factory console provides you with a comprehensive report of insights and recommendations to make improvements to your FSx for ONTAP file system configurations. 
+
+Key capabilities include: 
+
+* Daily configuration analysis
+* Automatic best practice validations
+* Proactive observability
+* Insights to action
+* AWS Well-Architected Framework advisor
+
 == Well-architected status
 In the workload factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as issues, not analyzed, or well-architected. You can select the well-architected status and that redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
 
 Well-architected score::: The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
 
-Configuration categories::: The file system configurations are broken down into the following configuration categories: 
+Configuration categories::: The file system configurations are broken down into the following configuration categories based on five pillars of the AWS Well-Architected Framework: 
 
 * _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
 * _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies
@@ -29,17 +39,7 @@ For a complete file system analysis, you must associate a link. Link connectivit
 
 link:create-link.html[Learn how to create a link.]
 
-The workload factory console provides you with a comprehensive report of insights and recommendations to make improvements to your FSx for ONTAP file system configurations. 
-
-Severity types: critical and warning
-
-Key capabilities include: 
-
-* Daily configuration analysis
-* Automatic best practice validations
-* Proactive observability
-* Insights to action
-* AWS Well-Architected Framework advisor
+.What's next
 
 link:improve-configurations.html[Improve configurations for FSx for ONTAP deployments]
 

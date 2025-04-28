@@ -84,11 +84,11 @@ sidebar:
       entries:
         - title: Monitor operations with Tracker
           url: /monitor-operations.html
-        - title: Improve storage configurations
+        - title: Implement file system best practices
           entries: 
             - title: Configuration analysis for FSx for ONTAP
               url: /configuration-analysis.html
-            - title: Improve FSx for ONTAP storage configurations
+            - title: Implement well-architected file system configurations
               url: /improve-configurations.html  
         - title: Volume administration
           entries:  
