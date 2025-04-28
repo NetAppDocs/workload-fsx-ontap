@@ -25,6 +25,7 @@ Links require authentication. You can authentic links using credentials stored i
 NOTE: AWS Secrets Manager isn't supported when using a Connector.
 
 == Associate a new link
+Associating a new link includes link creation and association. 
 
 You have two options for creating links - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
 
@@ -171,10 +172,10 @@ After you create a link, associate it with one or more FSx for ONTAP file system
 * AWS Secrets Manager: enter the secret ARN.
 +
 The secret ARN must include the following parameters: 
-
-* filesystemID = FSx_filesystem_id
-* user = FSx_user
-* password = user_password
++
+** filesystemID = FSx_filesystem_id
+** user = FSx_user
+** password = user_password
 . Select *Apply*. 
 
 
@@ -185,17 +186,19 @@ The link is associated with the FSx for ONTAP file system. You can perform advan
 
 == Troubleshooting issues with AWS Secrets Manager authentication
 
-* Lack of permissions to retrieve the secret
-Add permissions after the link is active
-Go into AWS console, locate the Lambda link, and edit the attached permission policy.
+* Issue: The link lacks permissions to retrieve the secret
+** The fix: Add permissions after the link is active. Go into AWS console, locate the Lambda link, and edit the attached permission policy.
 
-* Secret isn't found -> respecify the correct secret arm
+* Issue: The secret isn't found.
+** The fix: Provide the correct secret ARN.
 
-* Secret isn't in the right format -> go to AWS Secrets Manager and edit the format
-The secret should contain these three key valid pairs
-	filesystemID = FSx_filesystem_id
-	user = FSx_user
-	password = user_password
+* Issue: The secret isn't in the right format.
+** The fix: Go to AWS Secrets Manager and edit the format.
++
+The secret should contain the following three parameters:
+*** filesystemID = FSx_filesystem_id
+*** user = FSx_user
+*** password = user_password
 
-* 	The secret doesn't contain valid ONTAP credentials for file system authentication 
-Provide credentials that can authenticate file systems in AWS Secrets Manager
+* Issue: The secret doesn't contain valid ONTAP credentials for file system authentication. 
+** The fix: Provide credentials that can authenticate file systems in AWS Secrets Manager
