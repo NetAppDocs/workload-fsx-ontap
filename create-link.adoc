@@ -171,7 +171,7 @@ After you create a link, associate it with one or more FSx for ONTAP file system
 * Workload Factory: enter the password twice. 
 * AWS Secrets Manager: enter the secret ARN.
 +
-The secret ARN must include the following parameters: 
+The secret ARN must include the following key valid pairs: 
 +
 ** filesystemID = FSx_filesystem_id
 ** user = FSx_user
@@ -198,7 +198,7 @@ Issue::: The secret isn't in the right format.
 +
 *Resolution*: Go to AWS Secrets Manager and edit the format.
 +
-The secret should contain the following three parameters:
+The secret should contain the following key valid pairs:
 
 * filesystemID = FSx_filesystem_id
 * user = FSx_user
