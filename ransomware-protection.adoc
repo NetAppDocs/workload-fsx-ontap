@@ -52,7 +52,7 @@ To enable ARP for a file system, you must link:manage-links.html[associate a lin
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update throughput capacity for and then select *Manage*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP and then select *Manage*. 
 . Under Information, select the pencil icon next to *Autonomous Ransomware Protection*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Autonomous Ransomware Protection* row. 
 . In the Autonomous Ransomware Protection dialog, enable or disable the feature. 
 . Accept the statement to proceed.
@@ -64,6 +64,16 @@ To enable ARP for a file system, you must link:manage-links.html[associate a lin
 
 == Validate ransomware attacks
 
+Validate whether an attack is a false alarm or a real ransomware attack. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*. 
+. From the file system overview, select the *Volumes* tab. 
+. Select *Analyze attacks* from the Autonomous Ransomware Protection tile.
+. Download the attack events report to review if any files or folders were compromised and then decide if an attack has occurred. 
+. If no attack occurred, select *False alarm* for the volume in the table and then select *Close*
+. If an attack has occurred, select *Real attack* for the volume in the table. The Restore compromised volume data dialog opens. You can proceed to <<Recover data after a ransomware attack,recover your data>> immediately or select *Close* and come back to complete the recovery process later. 
 
 == Recover data after a ransomware attack
 
@@ -76,11 +86,8 @@ With the knowledge of the affected files and the time of attack, it is possible 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update throughput capacity for and then select *Manage*. 
 . From the file system overview, select the *Volumes* tab. 
 . Select *Analyze attacks* from the Autonomous Ransomware Protection tile.
-. Download the attack events report to review if any files or folders were compromised and then decide if an attack has occurred. 
-. If no attack occurred, select *False alarm* for the volume in the table and then select *Close*
 . If an attack has occurred, select *Real attack* for the volume in the table. 
 . In the Restore compromised volume data dialog, follow the instructions to restore at the file-level or at the volume-level. In most cases, you'll restore files rather than an entire volume.  
 . After you complete the restore, select *Close*. 
