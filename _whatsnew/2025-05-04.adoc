@@ -3,6 +3,11 @@ Protect your data with Autonomous Ransomware Protection (ARP), a feature that us
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Protect your data with Autonomous Ransomware Protection]
 
+=== FlexGroup volume rebalance enhancement
+BlueXP workload factory introduces the FlexGroup volume rebalance wizard with several layout options for rebalancing the data in a FlexGroup volume. Rebalancing redistributes data evenly to the member volumes.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Rebalance the capacity in a FlexGroup volume]
+
 === Implement best practices for an FSx for ONTAP file system
 
 BlueXP workload factory provides a dashboard where you can review the well-architected status of your file system configurations. You can leverage this analysis to implement best practices for your FSx for ONTAP file systems. File system configuration analysis includes the following configurations: SSD capacity threshold, scheduled local snapshots, scheduled FSx for ONTAP backups, data tiering, and remote data replication.
@@ -31,6 +36,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[R
 ==== Multiple volume selection
 
 Multiple volume selection is available so you can select exactly the volumes you want to replicate.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
+
+==== Long-term retention policy labels
+
+When you enable long-term retention for a replication relationship, source and target volumes labels must match exactly. Now BlueXP workload factory can automatically create missing source volume labels for you. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
 
