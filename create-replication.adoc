@@ -47,6 +47,14 @@ You can replicate one source (read/write) volume or one data protection (DP) vol
 ** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
 ** Archive: replicates data for long-term storage and compliance
 * Other
++
+Additionally, the use case selection determines the replication policy, or SnapMirror policy (ONTAP). The terms used to describe replication policies come from link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html[ONTAP 9 documentation^]. 
+
+** For migration and other, the replication policy is called _MirrorAllSnapshots_. _MirrorAllSnapshots_ is an asynchronous policy for mirroring all snapshots and the latest active file system.
+** For hot, cold, or archive disaster recovery, the replication policy is called _MirrorAndVault_. _MirrorAndVault_ is an asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots.
++
+For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
+
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
 +
 _Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses.
@@ -94,6 +102,13 @@ NOTE: Replicating a data protection volume is supported one time.
 ** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
 ** Archive: replicates data for long-term storage and compliance
 * Other
++
+Additionally, the use case selection determines the replication policy, or SnapMirror policy (ONTAP). The terms used to describe replication policies come from link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html[ONTAP 9 documentation^].
+
+** For migration and other, the replication policy is called _MirrorAllSnapshots_. _MirrorAllSnapshots_ is an asynchronous policy for mirroring all snapshots and the latest active file system.
+** For hot, cold, or archive disaster recovery, the replication policy is called _MirrorAndVault_. _MirrorAndVault_ is an asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots.
++
+For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
 +
 _Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
