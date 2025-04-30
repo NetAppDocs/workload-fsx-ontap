@@ -19,6 +19,8 @@ BlueXP workload factory provides a dashboard where you can review the well-archi
 
 You have the option to choose either NTFS or UNIX as the security style for a volume to determine the method that users and permissions access a volume.
 
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
+
 === Replication enhancements
 
 ==== Reverse replication supported from FSx for ONTAP to on-premises
@@ -29,7 +31,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html[R
 
 ==== Data protection volume replication 
 
-Data protection volumes now support cascading replication, when volumes replicate from replicated volumes.
+You can now replicate data protection volumes.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[Replicate a data protection volume]
 
@@ -75,7 +77,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html[R
 
 === Support for alternative ONTAP user credentials
 
-Workload factory now supports alternative sets of ONTAP credentials for creating file systems to minimize security risks for your file systems. Before you'd manage file systems using only the fsxadmin user. Now you can select a different set of ONTAP credentials or select not to provide a password for fsxadmin and vsaadmin users. 
+Workload factory now supports alternative sets of ONTAP credentials for creating file systems to minimize security risks. Instead of using only the fsxadmin user, you can select a different set of ONTAP credentials or choose not to provide a password for fsxadmin and vsaadmin users. 
 
 === Updated permissions terminology
 
