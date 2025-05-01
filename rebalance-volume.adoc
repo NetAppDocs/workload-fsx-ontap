@@ -61,7 +61,7 @@ NOTE: A workload factory admin can stop rebalancing during the operation.
 +
 * *Performance-optimized* (recommended): increases the number of FlexGroup member volumes and the provisioned size of the volume. Follows NetApp best practice.
 * *Restricted*: supports volumes in a replication relationship. The number of FlexGroup member volumes and the size of provisioned volumes remains the same. Selected by default if all selected volumes participate in a replication relationship.
-* *Manual*: Select the desired number of FlexGroup member volumes per volume and HA pair. Depending on your selection, the number of FlexGroup member volumes and the provisioned size of the volume might increase. 
+* *Manual*: Select the desired number of FlexGroup member volumes per HA pair. Depending on your selection, the number of FlexGroup member volumes and the provisioned size of the volume might increase. 
 . *Throttling*: Optional. Disabled by default. Enable throttling to limit the bandwidth of a volume move on your file system and to slow outgoing volume replication traffic. 
 +
 Enter the throttle value in MB/s.
