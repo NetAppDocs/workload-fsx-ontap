@@ -4,7 +4,7 @@ Protect your data with Autonomous Ransomware Protection (ARP), a feature that us
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Protect your data with Autonomous Ransomware Protection]
 
 === FlexGroup volume rebalance enhancement
-BlueXP workload factory introduces the FlexGroup volume rebalance wizard with several layout options for rebalancing the data in a FlexGroup volume. Rebalancing redistributes data evenly to the member volumes.
+BlueXP workload factory introduces the FlexGroup volume rebalance wizard with several layout options for rebalancing the data in a FlexGroup volume. Rebalancing redistributes data evenly to FlexGroup member volumes.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Rebalance the capacity in a FlexGroup volume]
 
