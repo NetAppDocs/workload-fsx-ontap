@@ -16,7 +16,7 @@ BlueXP analyzes Amazon FSx for NetApp ONTAP file system deployment configuration
 
 You have options to review the recommendations for configuration issues with your file systems and fix those issues from the storage inventory within the workload factory console. 
 
-What is scanned::
+What is analyzed::
 Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
 
 * SSD capacity threshold
@@ -26,7 +26,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Remote data replication 
 
 .Before you begin
-* You must have credentials with read or automate permissions.
+* You must have credentials with read-only or read/write permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant read-only permissions in your AWS account^].
 * Make sure you review each recommendation carefully before selecting to fix a setting or configuration. 
 
 NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration issue.
