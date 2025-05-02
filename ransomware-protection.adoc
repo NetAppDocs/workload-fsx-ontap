@@ -64,7 +64,7 @@ To enable ARP for a file system, you must link:manage-links.html[associate a lin
 
 == Validate ransomware attacks
 
-Validate whether an attack is a false alarm or a real ransomware attack. 
+Determine if an attack is a false alarm or a genuine ransomware incident.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
