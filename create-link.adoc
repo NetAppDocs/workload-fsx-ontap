@@ -83,8 +83,7 @@ Use CloudFormation to automatically create and register the link within workload
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
-. In the file system overview, select *Associate link*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
@@ -123,8 +122,7 @@ With this option, you extract the ARN for the link from AWS CloudFormation and r
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
-. In the file system overview, select *Associate link*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
