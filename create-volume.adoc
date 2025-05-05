@@ -66,7 +66,8 @@ If you selected an existing export policy, enter a new policy name.
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
 ... *CIFS share*: Provide the following: 
 .... *Name*: Enter the CIFS share name to provide SMB access. 
-.... *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username". 
+.... *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username".
+... *Security style*: For dual-protocol volumes, select either the UNIX or NTFS security style. UNIX is the default security style for dual-protocol volumes. For detailed guidance on user mapping in this context, refer to the AWS blog article link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Enabling multiprotocol workloads with Amazon FSx for NetApp ONTAP"^]. 
 +
 * *Block access*: allows hosts running critical business applications access to the volume using the iSCSI protocol. Block access is only available when the file system scale-out deployment has six HA pairs or fewer. 
 +
@@ -77,6 +78,7 @@ Complete the following fields to set up block access to the volume.
 .... Select the *Host operating system* from the dropdown menu. 
 .... Enter an *Initiator group name* for a new initiator group. 
 .... Under Host Initiators, add one or more iSCSI qualified name (IQN) host initiators.  
+
 . Under Efficiency and protection, provide the following details: 
 .. *Storage efficiency*: Disable or enable storage efficiency. 
 +
