@@ -36,7 +36,7 @@ sidebar:
           entries: 
             - title: Link overview
               url: /links-overview.html
-            - title: Create a link
+            - title: Connect to a file system with a link
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
