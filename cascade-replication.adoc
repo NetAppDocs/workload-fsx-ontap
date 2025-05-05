@@ -1,42 +1,36 @@
 ---
 sidebar: sidebar
-permalink: create-replication.html
-keywords: replication, replicate
-summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
+permalink: cascade-replication.html
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume
+summary: "Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems or migrate your data." 
 ---
-= Create a replication relationship in BlueXP workload factory
+= Replicate data protection volumes in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a replication relationship for an FSx for ONTAP file system in BlueXP workload factory to avoid data loss in case of an unforeseen disaster.
+Replicate data protection volumes, or cascade the replication of volume data, to extend data protection to tertiary systems or migrate your data. 
 
 .About this task
-Replication is an added layer of data protection which is essential in case the region where your data resides experiences a disaster. Data loss can be avoided if you use cross-region replication. 
+BlueXP workload factory supports replicating data protection volumes, also called _cascade deployments_. A _cascade deployment_ consists of a chain of relationships in which a source volume is mirrored to a secondary volume (first hop), and the secondary volume is mirrored to a tertiary volume (second hop). If the secondary volume becomes unavailable, you can synchronize the relationship between the primary and tertiary volumes without performing a new baseline transfer.
 
-This operation creates a replication relationship for one or all source volumes in an FSx for ONTAP file system. 
+This feature is supported for FSx for ONTAP file systems with ONTAP version 9.6 and higher. Refer to link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships[ONTAP documentation for compatible ONTAP versions^].
 
-Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
+Learn more about link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work[how cascade deployments work^].
 
 .Before you begin
-Make sure you meet the following prerequisites before you begin. 
+Consider the following before you begin: 
 
-* You must have two available file systems in your storage inventory to create a replication relationship.
-* The two file systems you use for the replication relationship must have an associated link. If the file systems don't have existing links, link:create-link.html[first create a link]. To link:manage-links.html[associate a link] in the file systems, select *Associate link* under *Account name*. Once the link associates in both file systems, return to this operation. 
-
-Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
-
-You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^]. 
+* Be aware that volumes that are part of a cascade configuration can take longer to resynchronize.
+* If the source volume of the relationship is a data protection volume and is a target of another relationship, reversing the replication relationship isn't supported.
+* One replica of a data protection volume (or a second hop) is supported. It isn't considered best practice to create a second replica of a data protection volume (or a third hop). 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume(s) to replicate and then select *Manage*.
-. Either replicate all volumes in a file system or replicate select volumes. 
-* To replicate all volumes in a file system: From the file system overview, select *Replicate data*.
-* To replicate select volumes: From the file system overview, select the *Volumes* tab.
-+
-In the Volumes table, select one or more volumes and then select *Replicate data*. 
+. From the file system overview, select the *Volumes* tab.
+. In the Volumes table, select one or more data protection volumes (DP/replicated volumes), and then select *Replicate data*. 
 . On the Replicate data page, under Replication target, provide the following: 
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
 .. *Storage VM name*: Select the storage VM from the dropdown menu.
@@ -48,14 +42,6 @@ In the Volumes table, select one or more volumes and then select *Replicate data
 ** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
 ** Archive: replicates data for long-term storage and compliance
 * Other
-+
-Additionally, the use case selection determines the replication policy, or SnapMirror policy (ONTAP). The terms used to describe replication policies come from link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html[ONTAP 9 documentation^]. 
-
-** For migration and other, the replication policy is called _MirrorAllSnapshots_. _MirrorAllSnapshots_ is an asynchronous policy for mirroring all snapshots and the latest active file system.
-** For hot, cold, or archive disaster recovery, the replication policy is called _MirrorAndVault_. _MirrorAndVault_ is an asynchronous and vault policy for mirroring the latest active file system and daily and weekly snapshots.
-+
-For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
-
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
 +
 _Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses.
@@ -83,5 +69,4 @@ NOTE: Matching source and target labels are required for long-term retention. If
 . Select *Create*. 
 
 .Result
-The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system.  
-
+The replicated volume or volumes replicate and appear in the *Replication relationships* tab in the target FSx for ONTAP file system.  

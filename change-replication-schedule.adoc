@@ -13,6 +13,8 @@ Change the replication schedule of the source volume in a replication relationsh
 
 Choose how frequently snapshots from the source volume are transferred to the replicated volume to match your required point objectives (RPOs). 
 
+When an on-premises ONTAP cluster is the target for the replication relationship, changing the replication schedule isn't supported. 
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 

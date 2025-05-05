@@ -1,0 +1,84 @@
+=== Autonomous Ransomware Protection for FSx for ONTAP file systems
+Protect your data with Autonomous Ransomware Protection (ARP), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP also creates new, immutable snapshots from which you can restore your data.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Protect your data with Autonomous Ransomware Protection]
+
+=== FlexGroup volume rebalance enhancement
+BlueXP workload factory introduces the FlexGroup volume rebalance wizard with several layout options for rebalancing the data in a FlexGroup volume. Rebalancing redistributes data evenly to FlexGroup member volumes.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Rebalance the capacity in a FlexGroup volume]
+
+=== Implement best practices for an FSx for ONTAP file system
+
+BlueXP workload factory provides a dashboard where you can review the well-architected status of your file system configurations. You can leverage this analysis to implement best practices for your FSx for ONTAP file systems. File system configuration analysis includes the following configurations: SSD capacity threshold, scheduled local snapshots, scheduled FSx for ONTAP backups, data tiering, and remote data replication.
+
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn about the well-architected analysis for file system configurations]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement best practices for your file systems]
+
+=== Dual-protocol volume security style options
+
+You have the option to choose either NTFS or UNIX as the security style for a volume to determine the method that users and permissions access a volume.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
+
+=== Replication enhancements
+
+==== Reverse replication supported from FSx for ONTAP to on-premises
+
+Reverse replication is now available from an FSx for ONTAP file system to an on-premises ONTAP cluster from within the workload factory console.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html[Reverse replication]
+
+==== Data protection volume replication 
+
+You can now replicate data protection volumes.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[Replicate a data protection volume]
+
+==== Multiple volume selection
+
+Multiple volume selection is available so you can select exactly the volumes you want to replicate.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
+
+==== Long-term retention policy labels
+
+When you enable long-term retention for a replication relationship, source and target volumes labels must match exactly. Now BlueXP workload factory can automatically create missing source volume labels for you. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
+
+=== FSx for ONTAP file name visible in volume creation
+We've improved the visibility of FSx for ONTAP file systems during volume creation. You'll see the FSx for ONTAP file system when you create a volume, so you'll know exactly where the volume is being created.
+
+=== AWS account visible across the Storage workload
+
+We've improved account visibility across the Storage workload. You'll see the AWS account when navigating to the *Volumes*, *Storage VMs*, and *Replication* tabs.
+
+=== Link association enhancements
+
+* You can quickly associate a link from an FSx for ONTAP file system in the Inventory tab.
+* BlueXP workload factory now supports the use of alternative ONTAP user credentials for link association. 
+
+=== Link authentication support for AWS Secrets Manager
+
+You now have the option to use secrets from AWS Secrets Manager to authenticate links so that you don't have to use credentials stored in BlueXP workload factory. 
+
+=== Tracker response support
+
+Tracker now provides API responses so that you can see the REST API output related to the task.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html[Monitor operations with Tracker]
+
+=== Capacity validation when restoring a volume from a backup
+
+When restoring a volume from a backup, BlueXP workload factory determines if you have enough capacity for the restore and can automatically add SSD storage tier capacity if you don't.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html[Restore a volume from a backup]
+
+=== Support for alternative ONTAP user credentials
+
+Workload factory now supports alternative sets of ONTAP credentials for creating file systems to minimize security risks. Instead of using only the fsxadmin user, you can select a different set of ONTAP credentials or choose not to provide a password for fsxadmin and vsaadmin users. 
+
+=== Updated permissions terminology
+
+The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.

@@ -9,7 +9,9 @@ summary: "Restore a volume from a backup to any FSx for ONTAP file system in you
 :imagesdir: ./media/
 
 [.lead]
-In BlueXP workload factory, you can restore a volume from a backup to any FSx for ONTAP file system in your AWS account.
+In BlueXP workload factory, you can restore a volume from a backup to any FSx for ONTAP file system in your AWS account. 
+
+Workload factory determines if you have enough capacity for the restore and can automatically add SSD storage tier capacity if you don't. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -23,4 +25,10 @@ In BlueXP workload factory, you can restore a volume from a backup to any FSx fo
 .. *Target storage VM*: Select the target storage VM from the dropdown menu. 
 .. *Backup name*: Select the backup name from the dropdown menu.
 .. *Restored volume name*: Enter the restored volume name. 
+. Verify file system capacity for the restore operation. 
++
+When file system capacity is limited, the following might occur: 
+
+* The restore can push used capacity over the threshold you specified. You can complete the restore operation. Consider link:increase-file-system-capacity.html[manually adding SSD storage tier capacity] or selecting for workload factory to automatically add SSD storage tier capacity.
+* The restore requires additional SSD capacity. You must select for workload factory to automatically add SSD storage tier capacity to proceed.
 . Select *Restore*. 
