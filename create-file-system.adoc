@@ -61,7 +61,9 @@ To provision iSCSI block volumes on the file system, select no more than six HA 
 . Under *Network & security*, in the *Region & VPC* field, select the region and VPC for the file system. 
 . Under *File system details*, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
-.. *ONTAP credentials*: Enter your ONTAP user name and password.  
+.. *ONTAP credentials*: Optional. Enter your ONTAP user name and password. The password can be set now or later.  
++
+If the user you provide is not the fsxadmin user, and later you need to reset the fsxadmin password, you'll be able to do this from the AWS console. 
 .. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
 ... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
 ... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
@@ -128,8 +130,10 @@ For a new security group, refer to <<Security group details,security group detai
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
 .. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*. 
 .. *Throughput capacity per HA pair*: Select throughput capacity per HA pair. 
-.. *ONTAP credentials*: Enter your ONTAP user name and password.
-.. *Storage VM Credentials*: Enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
+.. *ONTAP credentials*: Optional. Enter your ONTAP user name and password. The password can be set now or later.
++
+If the user you provide is not the fsxadmin user, and later you need to reset the fsxadmin password, you'll be able to do this from the AWS console. 
+.. *Storage VM Credentials*: Optional. Enter your user name. Password can be specific to this file system or you can use the same password entered for ONTAP credentials. The password can be set now or later.
 .. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
 ... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
 ... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 

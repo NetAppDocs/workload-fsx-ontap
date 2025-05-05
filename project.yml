@@ -36,7 +36,7 @@ sidebar:
           entries: 
             - title: Link overview
               url: /links-overview.html
-            - title: Create a link
+            - title: Connect to a file system with a link
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
@@ -76,6 +76,8 @@ sidebar:
                   url: /create-replication.html
                 - title: Initialize a replication relationship
                   url: /initialize-replication.html
+            - title: Protect data with Autonomous Ransomware Protection
+              url: /ransomware-protection.html   
             - title: Clone a volume
               url: /clone-volume.html  
             - title: Use on-premises ONTAP data
@@ -84,6 +86,12 @@ sidebar:
       entries:
         - title: Monitor operations with Tracker
           url: /monitor-operations.html
+        - title: Implement file system best practices
+          entries: 
+            - title: Configuration analysis for FSx for ONTAP
+              url: /configuration-analysis.html
+            - title: Implement well-architected file system configurations
+              url: /improve-configurations.html  
         - title: Volume administration
           entries:  
           #  - title: View volume details
@@ -148,6 +156,8 @@ sidebar:
                   url: /manage-backup-schedule.html
             - title: Replication
               entries: 
+                - title: Replicate a data protection volume
+                  url: /cascade-replication.html
                 - title: Reverse a replication relationship
                   url: /reverse-replication.html
                 - title: Change the replication schedule of a source volume
@@ -161,7 +171,7 @@ sidebar:
                 - title: Stop a replication relationship
                   url: /stop-replication.html
                 - title: Delete a replication relationship
-                  url: /delete-replication.html 
+                  url: /delete-replication.html    
         - title: Performance administration
           entries: 
             - title: Provision IOPS for a file system
