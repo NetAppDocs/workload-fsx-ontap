@@ -64,6 +64,9 @@ The Storage savings calculator doesn't calculate cost savings for the following 
 == System Manager  
 System Manager doesn't support links for FSx for ONTAP connectivity. 
 
+== AWS Secrets Manager support 
+AWS Secrets Manager isn't supported when using a Connector.
+
 
 Note:
 

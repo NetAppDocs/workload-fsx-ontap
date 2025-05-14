@@ -95,7 +95,7 @@ To switch to FSx for ONTAP, follow the instructions to <<Deploy FSx for ONTAP fi
 == Explore savings for detected storage environments
 
 .Before you begin
-For workload factory to detect Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server storage environments in your AWS account, make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _automate_ permissions^] in your AWS account.
+For workload factory to detect Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server storage environments in your AWS account, make sure you link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _read_ permissions^] in your AWS account.
 
 NOTE: This calculator option doesn't support calculations for EBS snapshots and FSx for Windows File Server shadow copies. When exploring savings via customization, you can provide EBS and FSx for Windows File Server snapshot details. 
 
