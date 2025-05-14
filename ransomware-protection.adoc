@@ -1,0 +1,96 @@
+---
+sidebar: sidebar
+permalink: ransomware-protection.html
+keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy
+summary: "Autonomous Ransomware Protection uses workload analysis in NAS environments to detect and warn about abnormal activity that might be a ransomware attack."  
+---
+= Protect your data with Autonomous Ransomware Protection
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Protect your data with Autonomous Ransomware Protection (ARP), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP also creates new, immutable snapshots from which you can restore your data. 
+
+.About this task
+Use ARP to protect against denial-of-service attacks where the attacker withholds data until a ransom is paid. ARP offers real-time ransomware detection based on: 
+
+* Identification of the incoming data as encrypted or plaintext.
+* Analytics that detect:
++
+** **Entropy**: An evaluation of the randomness of data in a file
+** **File extension types**: An extension that does not conform to the normal extension type
+** **File IOPS**: A surge in abnormal volume activity with data encryption 
+
+ARP can detect the spread of most ransomware attacks after only a small number of files are encrypted, take action automatically to protect data, and alert you that a suspected attack is happening.
+
+The ARP feature automatically updates according to the ONTAP version that Amazon FSx for NetApp ONTAP runs so you don't have to make manual updates. 
+
+Learning and active modes:::
+ARP operates first in _learning mode_ and then automatically switches to _active mode_. 
+
+* *Learning mode*: When you enable ARP it runs in _learning mode_. In learning mode, the FSx for ONTAP file system develops an alert profile based on the analytic areas: entropy, file extension types, and file IOPS. After the file system runs ARP in learning mode for enough time to assess workload characteristics, workload factory automatically switches to ARP to _active mode_ and starts protecting your data.
+
+* *Active mode*: After ARP switches to _active mode_, FSx for ONTAP creates ARP/AI snapshots to protect the data if a threat is detected.
++
+In active mode, if a file extension is flagged as abnormal, you should evaluate the alert. You can act on the alert to protect your data or you can mark the alert as a false positive. Marking an alert as a false positive updates the alert profile. For example, if the alert is triggered by a new file extension and you mark the alert as a false positive, you will not receive an alert the next time that file extension is observed.
+
+Unsupported configurations:::
+The following configurations don't support the use of ARP. 
+
+* SAN/Block volumes
+* iSCSI volumes
+* NVMe volumes
+
+== Enable Autonomous Ransomware Protection for a file system
+Enabling ARP for a file system adds protection for all existing NAS and newly created NAS volumes automatically. 
+
+After enabling ARP, if an attack occurs and you identify the attack is real, BlueXP workload factory automatically sets up a snapshot policy that takes up to six snapshots every four hours. Each snapshot is locked for 2-5 days.
+
+.Before you begin
+To enable ARP for a file system, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP and then select *Manage*. 
+. Under Information, select the pencil icon next to *Autonomous Ransomware Protection*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Autonomous Ransomware Protection* row. 
+. In the Autonomous Ransomware Protection dialog, enable or disable the feature. 
+. Accept the statement to proceed.
+. Select *Apply* to save the changes.
+
+//Update all terminology on the page starting with 9.16.1
+//NetApp Autonomous Ransomware Protection with AI (ARP/AI)
+// ARP/AI
+
+== Validate ransomware attacks
+
+Determine if an attack is a false alarm or a genuine ransomware incident.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*. 
+. From the file system overview, select the *Volumes* tab. 
+. Select *Analyze attacks* from the Autonomous Ransomware Protection tile.
+. Download the attack events report to review if any files or folders were compromised and then decide if an attack has occurred. 
+. If no attack occurred, select *False alarm* for the volume in the table and then select *Close*
+. If an attack has occurred, select *Real attack* for the volume in the table. The Restore compromised volume data dialog opens. You can proceed to <<Recover data after a ransomware attack,recover your data>> immediately or select *Close* and come back to complete the recovery process later. 
+
+== Recover data after a ransomware attack
+
+When an attack is suspected, the system takes a volume snapshot at that point in time and locks that copy. If the attack is confirmed later, the affected files or the entire volume can be restored using the ARP snapshot.
+
+Locked snapshots cannot be deleted until the retention period ends. However, if you decide later to mark the attack as a false positive, the locked copy will be deleted. 
+
+With the knowledge of the affected files and the time of attack, it is possible to selectively recover the affected files from various snapshots rather than simply reverting the whole volume to one of the snapshots. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*. 
+. From the file system overview, select the *Volumes* tab. 
+. Select *Analyze attacks* from the Autonomous Ransomware Protection tile.
+. If an attack has occurred, select *Real attack* for the volume in the table. 
+. In the Restore compromised volume data dialog, follow the instructions to restore at the file-level or at the volume-level. In most cases, you'll restore files rather than an entire volume.  
+. After you complete the restore, select *Close*. 
+
+.Result
+The compromised data has been restored.

@@ -1,0 +1,50 @@
+---
+sidebar: sidebar
+permalink: improve-configurations.html
+keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP
+summary: "BlueXP workload factory for Databases scans Microsoft SQL Server configurations providing insights and recommendations to help you achieve operational excellence." 
+---
+= Implement well-architected file system configurations
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Using configuration analysis insights and recommendations, leverage BlueXP workload factory to implement best practices for your FSx for ONTAP file systems. You can easily find issues and take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+
+.About this task
+BlueXP analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
+
+You have options to review the recommendations for configuration issues with your file systems and fix those issues from the storage inventory within the workload factory console. 
+
+What is analyzed::
+Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
+
+* SSD capacity threshold
+* Data tiering
+* Scheduled local snapshots
+* FSx for ONTAP backups, and 
+* Remote data replication 
+
+.Before you begin
+* You must have credentials with read-only or read/write permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions in your AWS account^].
+* Make sure you review each recommendation carefully before selecting to fix a setting or configuration. 
+
+NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration issue.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Databases tile, select *Go to Storage inventory*.
+. In the *FSx for ONTAP* tab, navigate to the *Well-architected status* column and select the issues for the file system to fix. 
+. In the well-architected dashboard for the file system, filter configuration issues by categories, subcategories, status, severity, and tags.  
+. Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
++ 
+The recommendation explains best practices and potential pitfalls of unoptimized configurations.
+. Select to *Fix*.
++
+When *View and fix* is an option, select the impacted volumes to fix. 
+. Review the summary and action items that appear in the dialog to learn what will happen if you choose to fix the issue. Some operations may cause instance downtimes or service interruptions. 
+. Select *Continue* to fix the configuration issue. 
+
+.Result
+The process to fix the issue initiates. Select the *Job monitoring* tab to view the status of the operation.
+
