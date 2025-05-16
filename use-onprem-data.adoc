@@ -17,7 +17,7 @@ To use data from an on-premises ONTAP cluster, you'll first need to discover the
 Use cases::
 Note that the primary use case for the GenAI workload is the focus of this series of tasks.
 
-* *GenAI workload*: Replicate on-premises-ONTAP volume data to an FSx for ONTAP file system so that the data can be used to link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html[enrich AI knowledge bases^]. 
+* *GenAI workload*: Replicate on-premises-ONTAP volume data to an FSx for ONTAP file system so that the data can be used to link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html[enrich AI knowledge bases^]. 
 * *Backup and migration to cloud*: Replicated on-premises ONTAP volume data to an FSx for ONTAP file system can be used as a backup in the cloud. 
 * *Data tiering*: After replication, infrequently accessed on-premises ONTAP volume data can be tiered from the SSD storage tier to the capacity pool storage tier. 
 

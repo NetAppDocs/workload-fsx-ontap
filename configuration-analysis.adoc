@@ -39,5 +39,5 @@ link:create-link.html[Learn how to create a link.]
 
 .What's next
 
-link:improve-configurations.html[Improve configurations for FSx for ONTAP deployments]
+link:improve-configurations.html[Implement well-architected file system configurations]
 
