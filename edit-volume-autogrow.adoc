@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: edit-volume-autogrow.html
 keywords: volume autogrow, increase volume capacity, enable autogrow
-summary: "Enable volume autogrow to let BlueXP workload factory manage volume capacity for you. You can disable it at any time." 
+summary: "Enable volume autogrow to let workload factory manage volume capacity for you. You can disable it at any time." 
 ---
-= Enable volume autogrow in BlueXP workload factory
+= Enable volume autogrow in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enable volume autogrow to let BlueXP workload factory manage volume capacity for you. You can disable it at any time. 
+Enable volume autogrow to let workload factory manage volume capacity for you. You can disable it at any time. 
 
 Optionally, you can manually increase the volume capacity of a volume at any time using the link:increase-volume-capacity.html[increase volume capacity feature]. 
 
@@ -24,6 +24,8 @@ To enable volume autogrow, you must link:manage-links.html[associate a link]. If
 . In the FSx for ONTAP tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu for the volume you want to modify. 
-. Select *Basic actions*, then *Edit volume autogrow*. 
-. In the Edit autogrow dialog, enable volume autogrow. 
+. Select *Basic actions*, then *Set volume autogrow*. 
+. In the Set autogrow dialog, enable volume autogrow to automatically expand the volume capacity until the volume reaches the maximum size. This feature accommodates increasing data usage, ensuring uninterrupted operations.
++
+Specify the maximum volume growth size and unit. The maximum growth size cannot be smaller than the current volume size.
 . Select *Apply*.

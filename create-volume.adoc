@@ -49,6 +49,9 @@ FlexGroup volume size depends on the number of constituents. 100 GiB is required
 .. *Volume size*: Enter the volume size and unit. 
 +
 Optionally, enable volume autogrow. This option is available when you select *File access* as the volume access type. 
+.. *Volume autogrow*: Optionally, enable volume autogrow to automatically expand volume capacity until the volume reaches the maximum size. This feature accommodates increasing data usage, ensuring uninterrupted operations.
++
+Specify the maximum volume growth size and unit. The maximum growth size cannot be smaller than the current volume size.
 .. *Tags*: Optionally, you can add up to 50 tags.
 . Under Access (only for file systems with associated links), provide the following details: 
 .. *Access type*: Select *File access* or *Block access*. Additional fields to configure volume access differ depending on your selection. 
