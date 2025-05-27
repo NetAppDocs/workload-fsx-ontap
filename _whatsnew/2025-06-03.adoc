@@ -1,0 +1,4 @@
+=== BlueXP workload factory notification service support
+The BlueXP workload factory notification service enables workload factory to send notifications to the BlueXP alerts service or to an Amazon SNS topic. Notifications sent to BlueXP alerts appear in the BlueXP alerts panel. When workload factory publishes notifications to an Amazon SNS topic, subscribers to the topic (such as people or other applications) receive the notifications at the endpoints configured for the topic (such as email or SMS messages).
+
+https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications]
