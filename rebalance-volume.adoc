@@ -9,46 +9,90 @@ summary: "Check and rebalance the capacity of a volume to avoid imbalances that 
 :imagesdir: ./media/
 
 [.lead]
-Check the balance of FlexGroup volume capacity and rebalance volume capacity to spread files evenly across all constituents so that all nodes participate in the workload of a single Flex Group volume.
+Check the balance of FlexVol or FlexGroup volume capacity and rebalance volume capacity to spread files evenly across all FlexVol volumes in a node or across all constituents so that all nodes participate in the workload of a single FlexGroup volume.
 
 .About this task
-FlexGroup volume capacity is spread across a number of constituents in a scale-out FSx for ONTAP file system with two or more high availability (HA) pairs. Each constituent is a container that dictates the maximum single file size. FSx for ONTAP spreads files across all constituents in an even way so all nodes participate in the workload of a single FlexGroup volume.
+Rebalancing volume capacity is supported for FlexVol volumes and FlexGroup volumes. Rebalancing a volume redistributes the capacity when imbalances develop over time due to the addition of new files and file growth. After you manually start the rebalance operation, we select the files and move them automatically and non-disruptively. Volume transfer operations consume file system resources.
 
+Each volume type and rebalancing operations differ as follows.
+
+FlexVol volumes:::
+FlexVol volumes are logical containers that offer flexibility in managing data, allowing for expansion, contraction, movement, and efficient copying. They can be used with NAS and SAN environments. 
++
+A FlexVol volume can be balanced in a relation to other FlexVol volumes within one node in an FSx for ONTAP file system. If the file system has only a single FlexVol volume, then rebalancing isn't possible. When the file system has more then one FlexVol volume per node, and a single FlexVol volume is selected, then the FlexVol volume is balanced in the context of all FlexVols but only the selected volume is allowed to move.
+
+FlexGroup volumes::: 
+FlexGroup volumes, on the other hand, are scalable NAS containers designed for high performance and automatic load distribution. They consist of multiple member volumes (constituents) that share traffic transparently. FlexGroup volumes provide massive capacity, exceeding FlexVol limits, with up to 60PB capacity and 400 billion files. They simplify management by offering a single namespace container.
++
+Capacity is spread across a number of constituents in a scale-out FSx for ONTAP file system with two or more high availability (HA) pairs. Each constituent is a container that dictates the maximum single file size. FSx for ONTAP spreads files across all constituents in an even way so all nodes participate in the workload of a single FlexGroup volume.
++
 When the constituents aren't distributed evenly across all nodes, FlexGroup volume performance decreases. 
-
++
 Checking the balance of FlexGroup volume capacity includes assessing the current layout of constituents. When you rebalance the volume's capacity, BlueXP workload factory designs a new constituent layout with an even number of constituents to spread the data evenly across all HA pairs. The service executes the rebalance plan which in turn improves read and write operations.
 
-Rebalancing a volume redistributes the capacity when imbalances develop over time due to the addition of new files and file growth. After you manually start the rebalance operation, we select the files and move them automatically and non-disruptively. Volume transfer operations consume file system resources.
+NOTE: Rebalancing is supported only for FlexVol volumes and FlexGroup volumes, but not for iSCSI or NVMe FlexGroup volumes.
 
-NOTE: Rebalancing is supported only for FlexGroup volumes, but not for iSCSI or NVMe FlexGroup volumes.
-
-== Check the balance of a FlexGroup volume
-Check the balance of an active FlexGroup volume. 
+== Check the balance of a volume
+Check the balance of an active FlexVol or FlexGroup volume. 
 
 .Before you begin
 * FlexGroup volume balance is available only for FSx for ONTAP file systems using a scale-out deployment with at least two HA pairs.
-* The volume style must be a FlexGroup volume.
-* To check the balance of a FlexGroup volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
+* To check the balance of a volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to rebalance and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
-. From the Volumes tab, select *Check FlexGroup balance* at the top of the table.
-. In the FlexGroup balance window, review the balance status of all FlexGroup volumes in the FSx for ONTAP file system.  
+. From the Volumes tab, select *Check volume balance* at the top of the table.
+. In the Volume balance window, review the balance status of:
+
+* FlexGroup volumes
+* FlexVol volumes  
 +
-When a FlexGroup volume is unbalanced, consider <<Rebalance a FlexGroup volume,rebalancing it>>.
+When a volume is unbalanced, consider <<Rebalance a volume,rebalancing it>>.
 
-== Rebalance a FlexGroup volume
-Rebalance one or more unbalanced volumes. Data redistributes across member volumes to rebalance the FlexGroup volume. Depending on the data distribution layout you prefer, the rebalance operation might add FlexGroup member volumes and increase the size of provisioned volumes. 
+== Rebalance a volume
+Rebalance one or more unbalanced volumes. 
 
-NOTE: A workload factory admin can stop rebalancing during the operation.
+NOTE: A workload factory admin can <<stop rebalancing,Stop a volume rebalance operation>> during the operation.
 
 .Before you begin
-* <<Check the balance of a FlexGroup volume,Check the balance of a FlexGroup volume>> before rebalancing volumes.
+* <<Check the balance of a volume,Check the balance of a volume>> before rebalancing volumes.
 * To rebalance a volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 * Note that existing snapshots on volumes you rebalance become partial and cannot be used to restore volume data, but new snapshots taken after rebalancing can be used to restore volume data. 
+* FlexVol volumes are best rebalanced altogether to balance it's resources evenly. Deselected volume won't actively participate in the balancing procedure.
+
+[role="tabbed-block"]
+====
+.FlexVol volume
+--
+A FlexVol volume can be balanced in a relation to other FlexVol volumes within one node in an FSx for ONTAP file system. When the file system has more then one FlexVol volume per node, and a single FlexVol volume is selected, then the FlexVol volume is balanced in the context of all FlexVols but only the selected volume is allowed to move.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In *Storage*, select *Go to storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to rebalance and then select *Manage*.
+. From the file system overview, select the *Volumes* tab. 
+. From the Volumes tab, select *Check volume balance* at the top of the table.
+. In the Volumes balance window, optionally select *Data distribution* in the FlexVol balance summary to view used capacity per aggregate.
+. Select *Rebalance* to rebalance one or more unbalanced volumes. 
+. In the Rebalance wizard, follow the steps. 
+.. *Max transfer rate*: Optional. Disabled by default. Enable throttling to limit the bandwidth of a volume move on your file system and to slow outgoing volume replication traffic. 
++
+Enter the throttle value in MB/s.
++ 
+Select *Next*.
+.. Review the current and proposed layouts of all FlexVol volumes, and then select *Next*. 
+.. Carefully review what will happen and the note before beginning the rebalance operation.
+. Select *Rebalance*. 
+
+.Result
+The FlexVol volume is rebalanced. When the operation completes, the file system will be throttled back to the original value. 
+--
+.FlexGroup volume
+--
+Data redistributes across member volumes to rebalance the FlexGroup volume. Depending on the data distribution layout you prefer, the rebalance operation might add FlexGroup member volumes and increase the size of provisioned volumes. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -74,4 +118,20 @@ Enter the throttle value in MB/s.
 . Select *Rebalance*. 
 
 .Result
-Depending on how many FlexGroup member volumes are added to the FlexGroup, one single FlexGroup volume member move operation occurs at a time. When the operation completes, the file system will be throttled back to the original value. 
+Depending on how many FlexGroup member volumes are added to the FlexGroup, one single FlexGroup volume member move operation occurs at a time. When the operation completes, the file system will be throttled back to the original value.
+--
+
+====
+
+== Stop a volume rebalance operation
+
+You can stop a rebalance operation after it begins. Stopping the operation aborts active volume moves.
+
+.Steps
+. After you begin the rebalance operation, from the Volume balance page, select *Stop rebalancing*.
+
+. In the Stop rebalancing dialog, select *Stop*.
+
+.Result
+
+The volume rebalance operation stops and active volume moves abort.
