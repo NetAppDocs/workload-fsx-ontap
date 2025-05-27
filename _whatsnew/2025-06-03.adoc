@@ -1,4 +1,29 @@
 === BlueXP workload factory notification service support
 The BlueXP workload factory notification service enables workload factory to send notifications to the BlueXP alerts service or to an Amazon SNS topic. Notifications sent to BlueXP alerts appear in the BlueXP alerts panel. When workload factory publishes notifications to an Amazon SNS topic, subscribers to the topic (such as people or other applications) receive the notifications at the endpoints configured for the topic (such as email or SMS messages).
 
-https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications]
+
+=== Volume autogrow enhancement
+Now you can set the autogrow size of your volumes so that volume size can grow beyond the provisioned size for business needs and application requirements.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[Enable volume autogrow]
+
+=== Well-architected analysis update
+Workload factory now analyzes your FSx for ONTAP file systems to check whether storage efficiencies including data compaction, compression, and deduplication are being utilized. Storage efficiencies measure how effectively the file systems use available space.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of storage efficiencies]
+
+=== Storage dashboard enhancements
+Starting today, when you open the Storage workload from the workload factory console, you'll view the *Dashboard*. The newly designed dashboard provides a holistic view of your FSx for ONTAP systems including the number of file systems, the total SSD capacity, savings opportunities, the well-architected status overview, the data protection overview, and replication relationship health. 
+
+=== Volumes tab enhancements
+The Storage workload made enhancements to the Volumes tab within an FSx for ONTAP file system in the workload factory console. The enhancements include: 
+
+* *New cards*: SSD capacity, Capacity pool, and Autonomous Ransomware Protection (ARP)
+* *New columns*: Capacity distribution, Used SSD capacity, Used capacity pool, and SSD efficiency
+
+=== FlexVol volume support for rebalancing volume capacity
+
+FlexVol volumes are discoverable within the workload factory console. You can check the balance of your FlexVol volumes and rebalance FlexVol volumes to redistribute the capacity when imbalances develop over time due to the addition of new files and file growth.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Rebalance the capacity of a FlexVol volume]
