@@ -16,3 +16,8 @@ The Storage workload made enhancements to the Volumes tab within an FSx for ONTA
 
 * *New cards*: SSD capacity, Capacity pool, and Autonomous Ransomware Protection (ARP)
 * *New columns*: Capacity distribution, Used SSD capacity, Used capacity pool, and SSD efficiency
+
+=== Storage efficiencies update for volume creation
+When creating a new volume, storage efficiencies including data compaction, compression, and deduplication are enabled by default. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a new volume in workload factory]
