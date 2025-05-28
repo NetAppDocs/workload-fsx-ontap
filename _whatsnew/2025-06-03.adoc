@@ -1,8 +1,3 @@
-=== BlueXP workload factory notification service support
-The BlueXP workload factory notification service enables workload factory to send notifications to the BlueXP alerts service or to an Amazon SNS topic. Notifications sent to BlueXP alerts appear in the BlueXP alerts panel. When workload factory publishes notifications to an Amazon SNS topic, subscribers to the topic (such as people or other applications) receive the notifications at the endpoints configured for the topic (such as email or SMS messages).
-
-link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications]
-
 === Volume autogrow enhancement
 Now you can set the autogrow size of your volumes so that volume size can grow beyond the provisioned size for business needs and application requirements.
 
@@ -21,9 +16,3 @@ The Storage workload made enhancements to the Volumes tab within an FSx for ONTA
 
 * *New cards*: SSD capacity, Capacity pool, and Autonomous Ransomware Protection (ARP)
 * *New columns*: Capacity distribution, Used SSD capacity, Used capacity pool, and SSD efficiency
-
-=== FlexVol volume support for rebalancing volume capacity
-
-FlexVol volumes are discoverable within the workload factory console. You can check the balance of your FlexVol volumes and rebalance FlexVol volumes to redistribute the capacity when imbalances develop over time due to the addition of new files and file growth.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Rebalance the capacity of a FlexVol volume]
