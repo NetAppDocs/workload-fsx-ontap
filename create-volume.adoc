@@ -2,17 +2,17 @@
 sidebar: sidebar
 permalink: create-volume.html
 keywords: create volume, FSx for ONTAP volume
-summary: "After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in BlueXP workload factory."
+summary: "After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in workload factory."
 ---
-= Create an FSx for ONTAP volume in BlueXP workload factory
+= Create an FSx for ONTAP volume in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in BlueXP workload factory.
+After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in workload factory as virtual resources for grouping your data.
 
 .About this task
-FSx for ONTAP volumes are virtual resources used for grouping data, determining how data is stored, and determining the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 
+FSx for ONTAP volumes group data virtually, determine how data is stored, and determine the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 
 
 The following protocols might be used for your volumes:
 
@@ -80,7 +80,7 @@ Complete the following fields to set up block access to the volume.
 .... Under Host Initiators, add one or more iSCSI qualified name (IQN) host initiators.  
 
 . Under Efficiency and protection, provide the following details: 
-.. *Storage efficiency*: Disable or enable storage efficiency. 
+.. *Storage efficiency*: Enabled by default. Select to disable the feature.
 +
 Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
 .. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data from being deleted or overwritten for a specified period of time. Enabling this feature is possible only during volume creation. After the feature is enabled, it cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
