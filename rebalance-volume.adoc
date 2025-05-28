@@ -30,9 +30,9 @@ When the constituents aren't distributed evenly across all nodes, FlexGroup volu
 +
 Checking the balance of FlexGroup volume capacity includes assessing the current layout of constituents. When you rebalance the volume's capacity, BlueXP workload factory designs a new constituent layout with an even number of constituents to spread the data evenly across all HA pairs. The service executes the rebalance plan which in turn improves read and write operations.
 
-NOTE: Rebalancing is supported only for FlexVol volumes and FlexGroup volumes, but not for iSCSI or NVMe FlexGroup volumes.
+NOTE: Rebalancing isn't supported for SAN volumes like iSCSI and NVMe.
 
-== Check the balance of a volume
+== Check volumes balance
 Check the balance of an active FlexVol or FlexGroup volume. 
 
 .Before you begin
@@ -42,7 +42,7 @@ Check the balance of an active FlexVol or FlexGroup volume.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to rebalance and then select *Manage*.
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains volumes to rebalance and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select *Check volume balance* at the top of the table.
 . In the Volume balance window, review the balance status of:
@@ -127,6 +127,8 @@ Depending on how many FlexGroup member volumes are added to the FlexGroup, one s
 
 You can stop a rebalance operation after it begins. Stopping the operation aborts active volume moves.
 
+You can start another rebalance operation later. 
+
 .Steps
 . After you begin the rebalance operation, from the Volume balance page, select *Stop rebalancing*.
 
@@ -134,4 +136,4 @@ You can stop a rebalance operation after it begins. Stopping the operation abort
 
 .Result
 
-The volume rebalance operation stops and active volume moves abort.
+The volume rebalance operation stops and active volume moves abort.  
