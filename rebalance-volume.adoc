@@ -32,8 +32,8 @@ Checking the balance of FlexGroup volume capacity includes assessing the current
 
 NOTE: Rebalancing isn't supported for SAN volumes like iSCSI and NVMe.
 
-== Check volumes balance
-Check the balance of an active FlexVol or FlexGroup volume. 
+== Check the balance of your volumes 
+Check the balance of FlexVol or FlexGroup volumes in an FSx for ONTAP file system. 
 
 .Before you begin
 * FlexGroup volume balance is available only for FSx for ONTAP file systems using a scale-out deployment with at least two HA pairs.
