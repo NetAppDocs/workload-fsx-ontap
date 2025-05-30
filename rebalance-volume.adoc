@@ -55,10 +55,10 @@ When a volume is unbalanced, consider <<Rebalance a volume,rebalancing it>>.
 == Rebalance a volume
 Rebalance one or more unbalanced volumes. 
 
-NOTE: A workload factory admin can <<stop rebalancing,Stop a volume rebalance operation>> during the operation.
+NOTE: A workload factory admin can <<Stop a volume rebalance operation,stop rebalancing>> during the operation.
 
 .Before you begin
-* <<Check the balance of a volume,Check the balance of a volume>> before rebalancing volumes.
+* <<Check the balance of your volumes,Check the balance of a volume>> before rebalancing volumes.
 * To rebalance a volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
 * Note that existing snapshots on volumes you rebalance become partial and cannot be used to restore volume data, but new snapshots taken after rebalancing can be used to restore volume data. 
 * FlexVol volumes are best rebalanced altogether to balance it's resources evenly. Deselected volume won't actively participate in the balancing procedure.
