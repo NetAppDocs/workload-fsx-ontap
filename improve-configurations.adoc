@@ -27,7 +27,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Storage efficiencies
 
 .Before you begin
-* You must have credentials with read-only or read/write permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions in your AWS account^].
+* You must have credentials with _read-only_ or _read/write_ permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions in your AWS account^].
 * Make sure you review each recommendation carefully before selecting to fix a setting or configuration. 
 
 NOTE: The remediation process may cause instance downtimes or service interruptions. Make sure you review the recommendation carefully before you choose to fix a configuration issue.

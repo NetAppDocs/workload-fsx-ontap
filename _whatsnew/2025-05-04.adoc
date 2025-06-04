@@ -81,4 +81,4 @@ Workload factory now supports alternative sets of ONTAP credentials for creating
 
 === Updated permissions terminology
 
-The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
+The workload factory user interface and documentation now use "read-only" to refer to read permissions and "read/write" to refer to automate permissions.
