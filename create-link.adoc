@@ -34,7 +34,7 @@ You have two options for creating links - automatically or manually. You'll need
 
 .Before you begin
 * You should consider which link creation option you'll use. 
-* You need to have at least one FSx for ONTAP file system in workload factory. To discover or create FSx for ONTAP file systems, you must have an AWS account with permissions for FSx for ONTAP instances and link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview[add credentials in workload factory^] with read-only or read-write permissions for Storage management. 
+* You need to have at least one FSx for ONTAP file system in workload factory. To discover or create FSx for ONTAP file systems, you must have an AWS account with permissions for FSx for ONTAP instances and link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview[add credentials in workload factory^] with _read-only_ or _read/write_ permissions for Storage management. 
 * You must have the following permissions in your AWS account when adding a link using a CloudFormation stack:
 +
 [%collapsible]

@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: clone-volume.html
 keywords: clone volume, clone, clone data 
-summary: "Clone a volume in BlueXP workload factory to make a read-write volume of the original volume for testing." 
+summary: "Clone a volume in BlueXP workload factory to make a read/write volume of the original volume for testing." 
 ---
 = Clone a volume in BlueXP workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Clone a volume in BlueXP workload factory to make a read-write volume of the original volume for testing. 
+Clone a volume in BlueXP workload factory to make a read/write volume of the original volume for testing. 
 
 The clone reflects the current, point-in-time state of the data. You can also use clones to give additional users access to data without giving them access to production data.
 

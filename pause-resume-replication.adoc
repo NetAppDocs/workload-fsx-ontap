@@ -9,12 +9,12 @@ summary: "Pause and resume a replication relationship so that the target volume 
 :imagesdir: ./media/
 
 [.lead]
-Pause a replication relationship to stop scheduled replication updates from the source volume to the target volume. The target volume transitions from read-only to read-write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.
+Pause a replication relationship to stop scheduled replication updates from the source volume to the target volume. The target volume transitions from read-only to read/write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.
 
 .About this task
 When paused, the replication relationship between source and target volume continues to exist. Data transfers pause and the volumes become independent. To re-enable the transfer of changes from source volume to destination volume, resume the replication. 
 
-When you resume a replication, all the changes to the target volume are undone and BlueXP workload factory re-enables the replication. The target volume transitions from read-write to read-only, and receives updates from the source volume at the scheduled replication interval again. When you resume a replication relationship, the target volume reverts back to the latest initial replication snapshot, at which point, the volume replication process starts over.
+When you resume a replication, all the changes to the target volume are undone and BlueXP workload factory re-enables the replication. The target volume transitions from read/write to read-only, and receives updates from the source volume at the scheduled replication interval again. When you resume a replication relationship, the target volume reverts back to the latest initial replication snapshot, at which point, the volume replication process starts over.
 
 .Before you begin
 If you pause when a transfer is in progress, the transfer is not affected, and the relationship becomes "Quiescing" until the transfer completes. If the current transfer aborts, it is now a future transfer and will not restart.
