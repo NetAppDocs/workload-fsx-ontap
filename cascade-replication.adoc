@@ -55,6 +55,8 @@ Without a limit, network and application performance may decline. Alternatively,
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. Long-term retention enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy.
 +
+Replications without long-term retention use the _MirrorAllSnapshots_ policy. Enabling long-term retention assigns the _MirrorAndVault_ policy to the replication.
++
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain. 
 +
 NOTE: Matching source and target labels are required for long-term retention. If desired, Workload factory can create missing labels for you. 
