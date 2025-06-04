@@ -22,8 +22,9 @@ Workload factory analyzes the well-architected status of the following configura
 * SSD capacity threshold
 * Data tiering
 * Scheduled local snapshots
-* FSx for ONTAP backups, and 
+* FSx for ONTAP backups
 * Remote data replication 
+* Storage efficiencies
 
 .Before you begin
 * You must have credentials with read-only or read/write permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions in your AWS account^].
