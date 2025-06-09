@@ -12,6 +12,10 @@ summary: "Learn what's new with Amazon FSx for NetApp ONTAP."
 Learn what's new with Amazon FSx for NetApp ONTAP.
 
 // tag::whats-new[]
+== 08 June 2025 
+
+include::_whatsnew/2025-06-08.adoc[]
+
 == 03 June 2025
 
 include::_whatsnew/2025-06-03.adoc[]
@@ -19,11 +23,12 @@ include::_whatsnew/2025-06-03.adoc[]
 == 04 May 2025
 
 include::_whatsnew/2025-05-04.adoc[]
+// end::whats-new[]
 
 == 30 March 2025
 
 include::_whatsnew/2025-03-30.adoc[]
-// end::whats-new[]
+
 == 02 March 2025
 
 include::_whatsnew/2025-03-02.adoc[]
