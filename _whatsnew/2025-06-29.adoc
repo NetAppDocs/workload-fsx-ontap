@@ -4,7 +4,9 @@ The BlueXP workload factory notification service enables workload factory to sen
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications]
 
 === Storage dashboard enhancements     
-The Storage dashboard in the workload factory console includes new cards for  savings opportunities. The card at the top of the dashboard displays the number of savings opportunities for storage environments running on Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server, and Amazon Elastic File Systems (EFS). At the bottom of the dashboard, three new cards display savings opportunities by Amazon storage service - EBS, FSx for Windows File Server, and EFS.
+The Storage dashboard in the workload factory console includes new cards for savings opportunities. The card at the top of the dashboard displays the number of savings opportunities for storage environments running on Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server, and Amazon Elastic File Systems (EFS). At the bottom of the dashboard, three new cards display savings opportunities by Amazon storage service - EBS, FSx for Windows File Server, and EFS. From all cards, you can explore the savings opportunities in more detail.
+
+From the FSx for ONTAP protection coverage card and replication relationship health card, you can investigate if there are any partially protected volumes in your FSx for ONTAP file systems as well as investigate issues with replication relationships. In both cases, you can take action to resolve the issues. 
 
 === Volume tab enhancements
 The Volumes tab in the workload factory console has been enhanced to provide a more comprehensive view of your FSx for ONTAP file systems. The enhancements include new cards for SSD capacity, Capacity pool, and NetApp Autonomous Ransomware Protection with AI (ARP/AI). These cards summarize capacity utilization and ARP/AI protection for all volumes in the file system.
