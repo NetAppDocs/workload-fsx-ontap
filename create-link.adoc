@@ -94,6 +94,20 @@ The link deployment stack adds the following default secret manager ARN regex to
 You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy.
 +
 *Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
+.. *Link permissions*: Select one of the following options for link permissions:
+
+* *Automatic*: Select this option so that AWS CloudFormation or Terraform code automatically creates the Lambda permission policy and execution role. 
+* *User-provided*: Select this option to assign a specified Lambda execution role and its attached policies to the Lambda link. The following permissions are required for the Lambda permission policy. The `secretsmanager:GetSecretValue` permission is required only if you enabled AWS Secrets Manager.
++
+[source,json]
+"ec2:CreateNetworkInterface",
+"ec2:DescribeNetworkInterfaces",
+"ec2:DeleteNetworkInterface",
+"ec2:AssignPrivateIpAddresses",
+"ec2:UnassignPrivateIpAddresses"
+"secretsmanager:GetSecretValue"
++
+Enter the Lambda execution role ARN in the text box.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 +
 The AWS account and the additional information for Account, Location, and Security group are retrieved automatically based on the FSx for ONTAP file system.
