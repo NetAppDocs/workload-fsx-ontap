@@ -86,6 +86,26 @@ Complete the following fields to set up block access to the volume.
 .. *Storage efficiency*: Enabled by default. Select to disable the feature.
 +
 Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
+.. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
++
+The following are default policies from AWS. For custom snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
++
+`default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
++
+* A maximum of six hourly snapshots taken five minutes past the hour.
+* A maximum of two daily snapshots taken Monday through Saturday at 10 minutes after midnight.
+* A maximum of two weekly snapshots taken every Sunday at 15 minutes after midnight.
++
+NOTE: Snapshot times are based on the file system's time zone, which defaults to Coordinated Universal Time (UTC). For information about changing the time zone, refer to link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html[Displaying and setting the system time zone^] in the NetApp Support documentation.
++
+
+`default-1weekly`::: This policy works in the same way as the `default` policy, except that it only retains one snapshot from the weekly schedule.
++
+`none`::: This policy doesn't take any snapshots. You can assign this policy to volumes to prevent automatic snapshots from being taken.
+
+.. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
++
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
 .. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data from being deleted or overwritten for a specified period of time. Enabling this feature is possible only during volume creation. After the feature is enabled, it cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
 +
 Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
@@ -124,26 +144,12 @@ You can't modify existing data in a WORM-protected file. However, immutable file
 ... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
 //... *Privileged delete*: Disable or enable. Enabling this feature allows an administrator to delete an unexpired WORM file, but it might prevent the file system from deletion for six months. 
 ... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
-.. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
-+
-The following are default policies from AWS. For custom snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
-+
-`default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
-+
-* A maximum of six hourly snapshots taken five minutes past the hour.
-* A maximum of two daily snapshots taken Monday through Saturday at 10 minutes after midnight.
-* A maximum of two weekly snapshots taken every Sunday at 15 minutes after midnight.
-+
-NOTE: Snapshot times are based on the file system's time zone, which defaults to Coordinated Universal Time (UTC). For information about changing the time zone, refer to link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html[Displaying and setting the system time zone^] in the NetApp Support documentation.
-+
+.. *ARP/AI*: Optional. Select to enable NetApp Autonomous Ransomware Protection with AI (ARP/AI) for the volume and accept the statement to proceed. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ARP/AI].
 
-`default-1weekly`::: This policy works in the same way as the `default` policy, except that it only retains one snapshot from the weekly schedule.
+A link must be associated with the file system to enable ARP/AI. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
 +
-`none`::: This policy doesn't take any snapshots. You can assign this policy to volumes to prevent automatic snapshots from being taken.
+NOTE: Volumes with immutable files, and volumes with iSCSI and NVMe protocols are not supported for ARP/AI.
 
-.. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
-+
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
 . Under Advance configuration, provide the following: 
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
