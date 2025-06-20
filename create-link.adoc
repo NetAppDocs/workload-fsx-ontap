@@ -104,7 +104,7 @@ You can either create secrets in alignment with the default permissions or assig
 "ec2:DescribeNetworkInterfaces",
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
-"ec2:UnassignPrivateIpAddresses"
+"ec2:UnassignPrivateIpAddresses",
 "secretsmanager:GetSecretValue"
 +
 Enter the Lambda execution role ARN in the text box.
