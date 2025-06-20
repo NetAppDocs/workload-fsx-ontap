@@ -28,7 +28,7 @@ Check the balance of an active FlexGroup volume.
 .Before you begin
 * FlexGroup volume balance is available only for FSx for ONTAP file systems using a scale-out deployment with at least two HA pairs.
 * The volume style must be a FlexGroup volume.
-* To check the balance of a FlexGroup volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
+* To check the balance of a FlexGroup volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -47,7 +47,7 @@ NOTE: A workload factory admin can stop rebalancing during the operation.
 
 .Before you begin
 * <<Check the balance of a FlexGroup volume,Check the balance of a FlexGroup volume>> before rebalancing volumes.
-* To rebalance a volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
+* To rebalance a volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.  
 * Note that existing snapshots on volumes you rebalance become partial and cannot be used to restore volume data, but new snapshots taken after rebalancing can be used to restore volume data. 
 
 .Steps

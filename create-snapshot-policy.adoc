@@ -27,7 +27,7 @@ Customizing a policy lets you specify when to create snapshots, how many copies 
 * Consider the following about snapshot capacity before you use snapshots:
 ** For most datasets, an additional capacity of 20% is enough to keep snapshots for up to four weeks. As data gets older, its use for restorations becomes less likely.
 ** Overwriting all the data in a snapshot consumes significant volume capacity, which factors into provisioning volume capacity.
-* To create a custom snapshot policy, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. Once the link associates, return to this operation. 
+* To create a custom snapshot policy, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
