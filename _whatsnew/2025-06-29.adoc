@@ -42,15 +42,16 @@ Additionally, volumes created on new storage VMs will also be protected accordin
 
 Workload factory supports replicating immutable volumes from one FSx for ONTAP system to another FSx for ONTAP file system to protect critical data from accidental deletion or malicious attacks like ransomware. The target volume and its host file system will be immutable, or locked, and any data in the target file system can't be modified or removed until the retention period ends. 
 
-link:create-replication-relationship.html[Learn how to create a replication relationship]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Learn how to create a replication relationship]
 
 === Link creation enhancements
+The following enhancements have been made to the link creation process in the workload factory console. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system with a Lambda link]
 
 ==== Manage IAM execution role and permissions during link creation
 
 Now you can manage the IAM execution role and its attached permission policy when you create a link in the workload factory console. A link establishes connectivity between your workload factory account and one or more FSx for ONTAP file systems. You have two options for assigning the IAM execution role and link permissions - automatically or user-provided. Managing the execution role and its attached permissions policy in workload factory means that you don't need to use third party code any longer.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system with a Lambda link]
 
 ==== Terraform support for link creation
 
