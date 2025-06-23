@@ -131,7 +131,7 @@ You can monitor the link creation status from the Events page. This should take 
 --
 .Create manually
 --
-With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload factory manually registers the link for you. 
+With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload factory manually registers the link for you. You can create a link using CloudFormation or Terraform from the Codebox.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -163,7 +163,7 @@ You can either create secrets in alignment with the default permissions or assig
 Enter the Lambda execution role ARN in the text box.
 
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
-.. *Link registration*: select on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service. Follow the instructions. 
+.. *Link registration*: select on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service or using Terraform. Follow the instructions. 
 +
 Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload factory uses these permissions when using links.
 +
