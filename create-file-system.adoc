@@ -103,13 +103,13 @@ You can also load a saved configuration.
 +
 *File system generation*: Select one of the following:
 ** *Second-generation*: This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS. 
-** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. Only first-generation file systems can increase capacity.  
+** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. First-generation file systems can only increase capacity.  
 +
 The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
 * Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
 + 
 ** *Second-generation*: This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. In a Multi-AZ and second-generation file system, capacity can increase or decrease to match workload demands. 
-** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. Only first-generation file systems can increase capacity.  
+** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. First-generation file systems can only increase capacity.  
 +
 The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation. 
 .. *Tags*: Optionally, you can add up to 50 tags. 
@@ -118,7 +118,7 @@ The availability of second-generation file system depends on the selected region
 +
 * For first-generation deployments, you can't decrease capacity after file system creation.
 * For second-generation deployments, you can adjust capacity.
-.. *Throughput capacity per HA pair*: Select throughput capacity per number of HA pairs. First-generation file systems support only 1 HA pair.
+.. *Throughput capacity per HA pair*: Select throughput capacity per number of HA pairs. First-generation file systems support only one HA pair.
 .. *Provisioned IOPS*: Select one of the following options: 
 +
 * *Automatic*: For automatic, for every GiB created, 3 IOPS are added. 
