@@ -11,9 +11,6 @@ From the FSx for ONTAP protection coverage card and replication relationship hea
 === Volume tab enhancements
 The Volumes tab in the workload factory console has been enhanced to provide a more comprehensive view of your FSx for ONTAP file systems. The enhancements include new cards for SSD capacity, Capacity pool, and NetApp Autonomous Ransomware Protection with AI (ARP/AI). These cards summarize capacity utilization and ARP/AI protection for all volumes in the file system.
 
-=== Explore savings enhancements    
-The Explore savings tab in the workload factory console has been enhanced to include an AWS account filter. This allows you to view savings opportunities for specific AWS accounts.
-
 === Support for second-generation Amazon FSx for NetApp ONTAP file systems
 
 Workload factory now supports second-generation Amazon FSx for NetApp ONTAP file systems. You can create, manage, and monitor second-generation file systems in the workload factory console. All new commercial regions are supported. 
