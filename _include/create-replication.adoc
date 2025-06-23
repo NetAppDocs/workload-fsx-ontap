@@ -37,8 +37,10 @@ NOTE: Matching source and target labels are required for long-term retention. If
 * *Choose an existing policy*: select an existing policy from the dropdown menu. 
 * *Create a new policy*: provide the following: 
 ** *Policy name*: Enter a policy name.
-** Optional: Enable immutable snapshots.
-*** Select *Enable immutable snapshots* to prevent snapshots taken in this policy from being deleted during the retention period.
-*** Set the *Retention period* in number of hours, days, months, or years. 
-** *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy. 
-. Select *Create*. 
+.. *Immutable snapshots*: Optional. Select *Enable immutable snapshots* to prevent snapshots taken in this policy from being deleted during the retention period.
++
+* Set the *Retention period* in number of hours, days, months, or years. 
+* *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy.
+
+
+Select *Create*. 
