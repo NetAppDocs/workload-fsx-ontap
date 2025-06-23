@@ -48,17 +48,17 @@ You can also load a saved configuration.
 .. *Deployment type*: Select a deployment type.
 +
 * Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
-** Second-generation
-** First-generation
-* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. Multi-AZ file systems support all the availability and durability features of Single-AZ file systems. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
-** Second-generation
-** First-generation
++
+This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS.
+* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
++
+This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. 
 .. *Tags*: Optionally, you can add up to 50 tags. 
 . Under *File system details*, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
 +
 * For first-generation deployments, you can't decrease capacity after file system creation.
-* For second-generation deployments, you can adjust capacity.
+* For second-generation deployments, you can increase capacity after file system creation.
 .. *ONTAP credentials*: Optional. Enter your ONTAP user name and password. The password can be set now or later.  
 +
 If the user you provide is not the fsxadmin user, and later you need to reset the fsxadmin password, you'll be able to do this from the AWS console. 
@@ -97,11 +97,21 @@ You can also load a saved configuration.
 .. *AWS credentials*: Select to add AWS credentials in workload factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Region & VPC*: Select the region and VPC for the file system. 
-.. *Deployment type*: Select a deployment type.
+.. *Deployment type*: Select a deployment type and file system generation.
 +
 * Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
 +
-* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. Multi-AZ file systems support all the availability and durability features of Single-AZ file systems. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
+*File system generation*: Select one of the following:
+** *Second-generation*: This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS. 
+** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. Only first-generation file systems can increase capacity.  
++
+The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
+* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
++ 
+** *Second-generation*: This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. In a Multi-AZ and second-generation file system, capacity can increase or decrease to match workload demands. 
+** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. Only first-generation file systems can increase capacity.  
++
+The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation. 
 .. *Tags*: Optionally, you can add up to 50 tags. 
 . Under File system details, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
