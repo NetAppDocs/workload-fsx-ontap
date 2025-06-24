@@ -52,7 +52,7 @@ Check the balance of FlexVol or FlexGroup volumes in an FSx for ONTAP file syste
 +
 When a volume is unbalanced, consider <<Rebalance a volume,rebalancing it>>.
 
-== Rebalance a volume
+== Rebalance volume capacity
 Rebalance one or more unbalanced volumes. 
 
 NOTE: A workload factory admin can <<Stop a volume rebalance operation,stop rebalancing>> during the operation.
