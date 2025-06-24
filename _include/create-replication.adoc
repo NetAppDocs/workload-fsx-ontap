@@ -44,6 +44,6 @@ NOTE: Matching source and target labels are required for long-term retention. If
 * Set the *Retention period* in number of hours, days, months, or years. 
 * *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy.
 
-[start=6]
+[start=7]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . Select *Create*. 
