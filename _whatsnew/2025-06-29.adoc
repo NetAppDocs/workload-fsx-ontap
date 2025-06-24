@@ -1,7 +1,7 @@
 === BlueXP workload factory notification service support
 The BlueXP workload factory notification service enables workload factory to send notifications to the BlueXP alerts service or to an Amazon SNS topic. Notifications sent to BlueXP alerts appear in the BlueXP alerts panel. When workload factory publishes notifications to an Amazon SNS topic, subscribers to the topic (such as people or other applications) receive the notifications at the endpoints configured for the topic (such as email or SMS messages).
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications^]
 
 === Storage dashboard enhancements     
 The Storage dashboard in the workload factory console includes new cards for savings opportunities. The card at the top of the dashboard displays the number of savings opportunities for storage environments running on Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server, and Amazon Elastic File Systems (EFS). At the bottom of the dashboard, three new cards display savings opportunities by Amazon storage service - EBS, FSx for Windows File Server, and EFS. From all cards, you can explore the savings opportunities in more detail.
