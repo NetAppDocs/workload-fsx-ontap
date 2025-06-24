@@ -122,9 +122,6 @@ NOTE:: Even after the retention period expires, you can't modify a WORM file. Yo
 +
 Autocommit:::
 You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. The files you want to autocommit must reside on a SnapLock volume.
-//+
-//Privileged delete:::
-//SnapLock administrator can turn on privileged delete on a SnapLock Enterprise volume to allow a file to be deleted before the file's retention period expires. This feature is disabled by default.
 +
 Volume append mode:::
 You can't modify existing data in a WORM-protected file. However, immutable files allows you to maintain protection for existing data using WORM-appendable files. For example, you can generate log files or preserve audio or video streaming data while writing data to them incrementally. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append[Learn more about volume-append mode^] in Amazon FSx for NetApp ONTAP documentation.
@@ -142,7 +139,6 @@ You can't modify existing data in a WORM-protected file. However, immutable file
 ** *Minimum*: Enter the number of seconds, minutes, hours, days, months, or years to set the minimum retention period.
 ** *Maximum*: Enter the number of seconds, minutes, hours, days, months, or years to set the maximum retention period.
 ... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
-//... *Privileged delete*: Disable or enable. Enabling this feature allows an administrator to delete an unexpired WORM file, but it might prevent the file system from deletion for six months. 
 ... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
 .. *ARP/AI*: Optional. Select to enable NetApp Autonomous Ransomware Protection with AI (ARP/AI) for the volume and accept the statement to proceed. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ARP/AI].
 
@@ -158,33 +154,3 @@ NOTE: Volumes with immutable files, and volumes with iSCSI and NVMe protocols ar
 
 .Result
 Volume creation is initiated. Once created, the new volume will appear in the Volumes tab. 
-
-//After b. Snapshot policy, add immutable files step and details when available
-//.. *Immutable files*: Disabled by default. Enabling immutable files is possible only during volume creation. Once enabled, this feature cannot be disabled.
-//+
-//Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
-//+
-//_Retention modes_
-//You can select from two retention modes - Enterprise or Compliance. 
-//* In Enterprise mode, an immutable files, or SnapLock, administrator can delete a file during its retention period. 
-//* In Compliance mode, a WORM file cannot be deleted before its retention period expires. Similarly, the immutable volume cannot be deleted until the retention periods for all files within the volume expire. 
-//+
-//_Retention period_
-//The retention period has two settings - retention policy and retention periods. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified) which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
-//+
-//_Autocommit_
-//You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. The files you want to autocommit must reside on a SnapLock volume.
-//... Select to enable *Immutable files powered by SnapLock*. 
-//... Select the box to agree and proceed.  
-//... Select *Enable*. 
-//... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
-//... *Retention period*: 
-//* Select the retention policy: 
-//** *Unspecified*: Sets the retention policy to 30 years.
-//** *Specify period*: Enter the number of seconds, hours, days, months, or years to set your own retention policy.  
-//* Select the minimum and maximum retention periods: 
-//** *Minimum*: Enter the number of seconds, hours, days, months, or years to set the minimum retention period.
-//** *Maximum*: Enter the number of seconds, hours, days, months, or years to set the maximum retention period.
-//... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
-//... *Privileged delete*: Disable or enable. Allows an administrator to delete an unexpired WORM file. 
-//... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
