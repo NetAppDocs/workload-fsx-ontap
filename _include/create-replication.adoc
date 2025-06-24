@@ -1,6 +1,7 @@
 .. *Storage VM name*: Select the storage VM from the dropdown menu. The storage VM you select is the target for all selected volumes in this replication relationship.
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
-.. *Use case*: Select one of the following use cases for the replication. Depending on the selected use case, workload factory fills in the form with recommended values in accordance with best practices. You can accept the recommended values or make changes as you complete the form.  
+.. *Use case*: Select one of the following use cases for the replication. Depending on the selected use case, workload factory fills in the form with recommended values in accordance with best practices. You can accept the recommended values or make changes as you complete the form.
++  
 * Migration: transfers your data to the target FSx for ONTAP file system
 * Hot disaster recovery: ensures high availability and rapid disaster recovery for critical workloads
 * Cold or archive disaster recovery: 
@@ -32,8 +33,9 @@ Replications without long-term retention use the _MirrorAllSnapshots_ policy. En
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain. 
 +
-NOTE: Matching source and target labels are required for long-term retention. If desired, Workload factory can create missing labels for you. 
+NOTE: Matching source and target labels are required for long-term retention. If desired, Workload factory can create missing labels for you.
 +
+
 * *Choose an existing policy*: select an existing policy from the dropdown menu. 
 * *Create a new policy*: provide the following: 
 ** *Policy name*: Enter a policy name.
@@ -42,5 +44,5 @@ NOTE: Matching source and target labels are required for long-term retention. If
 * Set the *Retention period* in number of hours, days, months, or years. 
 * *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy.
 
-
-Select *Create*. 
+[start=6]
+. Select *Create*. 
