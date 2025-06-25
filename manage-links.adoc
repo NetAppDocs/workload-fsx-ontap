@@ -2,17 +2,17 @@
 sidebar: sidebar
 permalink: manage-links.html
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing
-summary: "You can view links associated with your account, associate a link, and remove a link in BlueXP workload factory."  
+summary: "You can view links associated with your account, update passwords for link authentication, and remove a link in BlueXP workload factory."  
 ---
 
-= Manage BlueXP workload factory links
+= Manage workload factory links
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage links that you've associated with your BlueXP workload factory account. You can view links associated with an FSx for ONTAP file system, associate a link with an FSx for ONTAP file system, edit a link, and remove a link.
+Manage links that you've associated with your workload factory account. You can view links that are associated with an FSx for ONTAP file system, provide passwords used for link authentication, and remove links from the workload factory console.
 
-link:links-overview.html[Learn more about links] or link:create-link.html[create a link]. 
+link:links-overview.html[Learn more about links] or link:create-link.html[create and associate a link]. 
 
 == View the links associated with your account
 You can view the links that are currently associated with your account.
