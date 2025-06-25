@@ -27,13 +27,10 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Reba
 
 The term "Autonomous Ransomware Protection" (ARP) has been updated to "NetApp Autonomous Ransomware Protection with AI" (ARP/AI) in the workload factory console. 
 
-=== ARP/AI enabled by default for new storage VMs and volumes   
-When you create a new storage VM in the workload factory console, NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default if the file system has an ARP/AI policy. This means that the storage VM is automatically protected against ransomware attacks using AI-driven detection and response capabilities. 
+=== ARP/AI enabled by default for new volumes   
+When you create a new volume in the workload factory console, NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default if the file system has an ARP/AI policy. This means that the volume is automatically protected against ransomware attacks using AI-driven detection and response capabilities. 
 
-Additionally, volumes created on new storage VMs will also be protected according to the file system ARP/AI policy. This ensures that all data stored in the volume benefits from the same level of protection against ransomware threats.
-
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html[Create a storage VM in workload factory]
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume in workload factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume in workload factory]
 
 === Replication support for immutable files
 
