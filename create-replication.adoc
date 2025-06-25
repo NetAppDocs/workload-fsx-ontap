@@ -22,7 +22,7 @@ Replicated volumes in the target file system are data protection (DP) volumes an
 Make sure you meet the following prerequisites before you begin. 
 
 * You must have two available file systems in your storage inventory to create a replication relationship.
-* The two file systems you use for the replication relationship must have an associated link. If the file systems don't have existing links, link:create-link.html[first create a link]. To link:manage-links.html[associate a link] in the file systems, select *Associate link* under *Account name*. Once the link associates in both file systems, return to this operation. 
+* The two file systems you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 
 Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
 

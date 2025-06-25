@@ -25,8 +25,7 @@ The clone splitting operation involves the following:
 .Before you begin
 Consider the following before you split a cloned volume: 
 
-* To split a cloned volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation.  
-* You must be a cluster administrator.
+* To split a cloned volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * The FlexClone volume must be online when the split operation begins.
 * The parent volume must be online for the split to succeed.
 
