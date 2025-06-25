@@ -35,7 +35,7 @@ Configuration categories::: The file system configurations are organized into ca
 == Analysis requirements
 For a complete file system analysis, you must associate a link. Link connectivity lets workload factory analyze all file system configurations like data protection and performance.
 
-link:create-link.html[Learn how to create a link.]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
 
 .What's next
 

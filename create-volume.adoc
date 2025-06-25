@@ -26,7 +26,7 @@ Review the following prerequisites before you create a volume:
 * You must have an FSx for ONTAP file system in workload factory. 
 * You must have a storage VM. 
 * For protocol access, complete the following: 
-** To configure access to the volume, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
+** To configure access to the volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 ** You must configure access for the protocol you select, either CIFS, NFS, or iSCSI. 
 
 == Create a volume
@@ -126,7 +126,7 @@ You can't modify existing data in a WORM-protected file. However, immutable file
 ... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
-The following are default policies from AWS. For custom snapshot policies, you must associate a link. 
+The following are default policies from AWS. For custom snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
 +
 `default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
 +

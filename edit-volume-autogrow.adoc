@@ -16,7 +16,7 @@ Optionally, you can manually increase the volume capacity of a volume at any tim
 NOTE: Volume autogrow isn't supported for iSCSI volumes. 
 
 .Before you begin
-To enable volume autogrow, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
+To enable volume autogrow, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

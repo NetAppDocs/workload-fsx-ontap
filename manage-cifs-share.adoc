@@ -14,7 +14,7 @@ Managing a volume's CIFS share in BlueXP workload factory includes CIFS share cr
 .Before you begin
 Before you begin, do the following: 
 
-* To manage CIFS shares, you must link:manage-links.html[associate a link]. If you don't have an existing link, link:create-link.html[create a link]. To associate a link in the file system, select *Associate link* under *Account name*. After the link associates, return to this operation. 
+* To manage CIFS shares, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * Determine the users or groups to give access to and the level of permissions to give them. 
 
 == Create a CIFS share for a volume
