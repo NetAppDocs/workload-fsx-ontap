@@ -202,7 +202,7 @@ Issue::: The secret isn't in the right format.
 The secret should contain the following key valid pairs:
 
 * filesystemID = FSx_filesystem_id
-* user = FSx_user
+* username = FSx_user
 * password = user_password
 
 Issue::: The secret doesn't contain valid ONTAP credentials for file system authentication. 
