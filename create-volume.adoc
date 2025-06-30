@@ -23,7 +23,7 @@ The following protocols might be used for your volumes:
 .Before you begin
 Review the following prerequisites before you create a volume: 
 
-* You must have an FSx for ONTAP file system in workload factory. 
+* You must have an FSx for ONTAP file system in the workload factory console. 
 * You must have a storage VM. 
 * For protocol access, complete the following: 
 ** To configure access to the volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
@@ -45,13 +45,13 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 +
 FlexVol volume style is selected by default. 
 +
-FlexGroup volume size depends on the number of constituents. 100 GiB is required per constituent. 
+FlexGroup volume size depends on the number of constituents, requiring 100 GiB per constituent. 
 .. *Volume size*: Enter the volume size and unit. 
 +
 Optionally, enable volume autogrow. This option is available when you select *File access* as the volume access type. 
 .. *Volume autogrow*: Optionally, enable volume autogrow to automatically expand volume capacity until the volume reaches the maximum size. This feature accommodates increasing data usage, ensuring uninterrupted operations.
 +
-Specify the maximum volume growth size and unit. The maximum growth size cannot be smaller than the current volume size.
+Specify the maximum volume growth size and unit. You cannot set the maximum growth size smaller than the current volume size
 .. *Tags*: Optionally, you can add up to 50 tags.
 . Under Access (only for file systems with associated links), provide the following details: 
 .. *Access type*: Select *File access* or *Block access*. Additional fields to configure volume access differ depending on your selection. 
@@ -85,45 +85,7 @@ Complete the following fields to set up block access to the volume.
 . Under Efficiency and protection, provide the following details: 
 .. *Storage efficiency*: Enabled by default. Select to disable the feature.
 +
-Storage efficiency is achieved by utilizing the deduplication and compression features from ONTAP. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
-.. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data from being deleted or overwritten for a specified period of time. Enabling this feature is possible only during volume creation. After the feature is enabled, it cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
-+
-Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
-+
-Retention modes:::
-You can select from two retention modes - _Enterprise_ or _Compliance_. 
-* In _Enterprise_ mode, an immutable files, or SnapLock, administrator can delete a file during its retention period. 
-* In _Compliance_ mode, a WORM file cannot be deleted before its retention period expires. Similarly, the immutable volume cannot be deleted until the retention periods for all files within the volume expire. 
-+
-Retention period:::
-The retention period has two settings - _retention policy_ and _retention periods_. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified), which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
-+
-NOTE:: Even after the retention period expires, you can't modify a WORM file. You can only delete it or set a new retention period to turn on WORM protection again.
-+
-Autocommit:::
-You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. The files you want to autocommit must reside on a SnapLock volume.
-//+
-//Privileged delete:::
-//SnapLock administrator can turn on privileged delete on a SnapLock Enterprise volume to allow a file to be deleted before the file's retention period expires. This feature is disabled by default.
-+
-Volume append mode:::
-You can't modify existing data in a WORM-protected file. However, immutable files allows you to maintain protection for existing data using WORM-appendable files. For example, you can generate log files or preserve audio or video streaming data while writing data to them incrementally. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append[Learn more about volume-append mode^] in Amazon FSx for NetApp ONTAP documentation.
-+
-.Steps for immutable files
-... Select to enable *Immutable files powered by SnapLock*. 
-... Select the box to agree and proceed.  
-... Select *Enable*. 
-... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
-... *Retention period*: 
-* Select the retention policy: 
-** *Unspecified*: Sets the retention policy to 30 years.
-** *Specify period*: Enter the number of seconds, minutes, hours, days, months, or years to set your own retention policy.  
-* Select the minimum and maximum retention periods: 
-** *Minimum*: Enter the number of seconds, minutes, hours, days, months, or years to set the minimum retention period.
-** *Maximum*: Enter the number of seconds, minutes, hours, days, months, or years to set the maximum retention period.
-... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
-//... *Privileged delete*: Disable or enable. Enabling this feature allows an administrator to delete an unexpired WORM file, but it might prevent the file system from deletion for six months. 
-... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
+ONTAP achieves storage efficiency using deduplication and compression features. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
 The following are default policies from AWS. For custom snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
@@ -144,6 +106,48 @@ NOTE: Snapshot times are based on the file system's time zone, which defaults to
 .. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
 +
 _Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
+.. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data deletion or overwriting for a set period. Enabling this feature is possible only during volume creation. After the feature is enabled, it cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
++
+Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
++
+Retention modes:::
+You can select from two retention modes - _Enterprise_ or _Compliance_. 
+* In _Enterprise_ mode, an immutable files, or SnapLock, administrator can delete a file during its retention period. 
+* In _Compliance_ mode, a WORM file cannot be deleted before its retention period expires. Similarly, the immutable volume cannot be deleted until the retention periods for all files within the volume expire. 
++
+Retention period:::
+The retention period has two settings - _retention policy_ and _retention periods_. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified), which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
++
+NOTE:: Even after the retention period expires, you can't modify a WORM file. You can only delete it or set a new retention period to turn on WORM protection again.
++
+Autocommit:::
+You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. You must ensure that the files you want to autocommit reside on a SnapLock volume.
++
+Volume append mode:::
+You can't modify existing data in a WORM-protected file. However, immutable files allows you to maintain protection for existing data using WORM-appendable files. For example, you can generate log files or preserve audio or video streaming data while writing data to them incrementally. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append[Learn more about volume-append mode^] in Amazon FSx for NetApp ONTAP documentation.
++
+.Steps for immutable files
+... Select to enable *Immutable files powered by SnapLock*. 
+... Select the box to agree and proceed.  
+... Select *Enable*. 
+... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
+... *Retention period*: 
+* Select the retention policy: 
+** *Unspecified*: Sets the retention policy to 30 years.
+** *Specify period*: Enter the number of seconds, minutes, hours, days, months, or years to set your own retention policy.  
+* Select the minimum and maximum retention periods: 
+** *Minimum*: Enter the number of seconds, minutes, hours, days, months, or years to set the minimum retention period.
+** *Maximum*: Enter the number of seconds, minutes, hours, days, months, or years to set the maximum retention period.
+... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
+... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
+.. *ARP/AI*: NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default when a link is associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ARP/AI]. Accept the statement to proceed.
++
+If the feature is unavailable, it is because of one of the following reasons: 
++
+* A link is not associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* Volumes with immutable files, and volumes with iSCSI and NVMe protocols are not supported for ARP/AI.
+* The file system already has an ARP/AI policy.
+
 . Under Advance configuration, provide the following: 
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
@@ -151,34 +155,4 @@ _Balanced (Auto)_ is the default tiering policy when creating a volume using the
 . Select *Create*. 
 
 .Result
-Volume creation is initiated. Once created, the new volume will appear in the Volumes tab. 
-
-//After b. Snapshot policy, add immutable files step and details when available
-//.. *Immutable files*: Disabled by default. Enabling immutable files is possible only during volume creation. Once enabled, this feature cannot be disabled.
-//+
-//Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 
-//+
-//_Retention modes_
-//You can select from two retention modes - Enterprise or Compliance. 
-//* In Enterprise mode, an immutable files, or SnapLock, administrator can delete a file during its retention period. 
-//* In Compliance mode, a WORM file cannot be deleted before its retention period expires. Similarly, the immutable volume cannot be deleted until the retention periods for all files within the volume expire. 
-//+
-//_Retention period_
-//The retention period has two settings - retention policy and retention periods. The _retention policy_ defines how long to retain files in an immutable WORM state. You can specify your own retention policy or use the default retention policy (unspecified) which is 30 years. The minimum and maximum _retention periods_ define the range of time allowed for locking files.
-//+
-//_Autocommit_
-//You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. The files you want to autocommit must reside on a SnapLock volume.
-//... Select to enable *Immutable files powered by SnapLock*. 
-//... Select the box to agree and proceed.  
-//... Select *Enable*. 
-//... *Retention mode*: Select *Enterprise* or *Compliance* mode. 
-//... *Retention period*: 
-//* Select the retention policy: 
-//** *Unspecified*: Sets the retention policy to 30 years.
-//** *Specify period*: Enter the number of seconds, hours, days, months, or years to set your own retention policy.  
-//* Select the minimum and maximum retention periods: 
-//** *Minimum*: Enter the number of seconds, hours, days, months, or years to set the minimum retention period.
-//** *Maximum*: Enter the number of seconds, hours, days, months, or years to set the maximum retention period.
-//... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
-//... *Privileged delete*: Disable or enable. Allows an administrator to delete an unexpired WORM file. 
-//... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
+Workload factory initiates volume creation. Once created, the system displays the new volume in the Volumes tab.
