@@ -1,0 +1,55 @@
+=== BlueXP workload factory notification service support
+The BlueXP workload factory notification service enables workload factory to send notifications to the BlueXP alerts service or to an Amazon SNS topic. Notifications sent to BlueXP alerts appear in the BlueXP alerts panel. When workload factory publishes notifications to an Amazon SNS topic, subscribers to the topic (such as people or other applications) receive the notifications at the endpoints configured for the topic (such as email or SMS messages).
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure BlueXP workload factory notifications^]
+
+=== Storage dashboard enhancements     
+The Storage dashboard in the workload factory console includes new cards for savings opportunities. The card at the top of the dashboard displays the number of savings opportunities for storage environments running on Amazon Elastic Block Store (EBS), Amazon FSx for Windows File Server, and Amazon Elastic File Systems (EFS). At the bottom of the dashboard, three new cards display savings opportunities by Amazon storage service - EBS, FSx for Windows File Server, and EFS. From all cards, you can explore the savings opportunities in more detail.
+
+From the FSx for ONTAP protection coverage card and replication relationship health card, you can investigate if there are any partially protected volumes in your FSx for ONTAP file systems as well as investigate issues with replication relationships. In both cases, you can take action to resolve the issues. 
+
+=== Volume tab enhancements
+The Volumes tab in the workload factory console has been enhanced to provide a more comprehensive view of your FSx for ONTAP file systems. The enhancements include new cards for SSD capacity, Capacity pool, and NetApp Autonomous Ransomware Protection with AI (ARP/AI). These cards summarize capacity utilization and ARP/AI protection for all volumes in the file system.
+
+=== Support for second-generation Amazon FSx for NetApp ONTAP file systems
+
+Workload factory now supports second-generation Amazon FSx for NetApp ONTAP file systems. You can create, manage, and monitor second-generation file systems in the workload factory console. All new commercial regions are supported. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html[Create a second-generation file system in workload factory]
+
+=== FlexVol volume support for rebalancing volume capacity
+
+FlexVol volumes are discoverable within the workload factory console. You can check the balance of your FlexVol volumes and rebalance FlexVol volumes to redistribute the capacity when imbalances develop over time due to the addition of new files and file growth.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html[Rebalance the capacity of a FlexVol volume]
+
+=== Terminology update 
+
+The term "Autonomous Ransomware Protection" (ARP) has been updated to "NetApp Autonomous Ransomware Protection with AI" (ARP/AI) in the workload factory console. 
+
+=== ARP/AI enabled by default for new volumes   
+When you create a new volume in the workload factory console, NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default if the file system has an ARP/AI policy. This means that the volume is automatically protected against ransomware attacks using AI-driven detection and response capabilities. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume in workload factory]
+
+=== Replication support for immutable files
+
+Workload factory supports replicating immutable volumes from one FSx for ONTAP system to another FSx for ONTAP file system to protect critical data from accidental deletion or malicious attacks like ransomware. The target volume and its host file system will be immutable, or locked, and any data in the target file system can't be modified or removed until the retention period ends. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Learn how to create a replication relationship]
+
+=== Link creation enhancements
+The following enhancements have been made to the link creation process in the workload factory console. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system with a Lambda link]
+
+==== Manage IAM execution role and permissions during link creation
+
+Now you can manage the IAM execution role and its attached permission policy when you create a link in the workload factory console. A link establishes connectivity between your workload factory account and one or more FSx for ONTAP file systems. You have two options for assigning the IAM execution role and link permissions - automatically or user-provided. Managing the execution role and its attached permissions policy in workload factory means that you don't need to use third party code any longer.
+
+==== Terraform support for link creation
+
+You can now use Terraform from the Codebox to create a link to associate with an FSx for ONTAP file system. This functionality is for users who create links manually. 
+
+
+
