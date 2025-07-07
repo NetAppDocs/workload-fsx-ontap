@@ -104,7 +104,7 @@ sidebar:
               url: /manage-immutable-files.html  
             - title: Manage volume tags
               url: /manage-volume-tags.html
-            - title: Rebalance a volume's capacity
+            - title: Rebalance volume capacity
               url: /rebalance-volume.html
             - title: Change a tiering policy
               url: /change-tiering-policy.html   
