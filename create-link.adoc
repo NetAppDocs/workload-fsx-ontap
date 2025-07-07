@@ -152,7 +152,7 @@ You can either create secrets in alignment with the default permissions or assig
 *Configure VPC private endpoint to AWS Secrets Manager* is disabled by default. Selecting this option stores the secret using the VPC private endpoint instead of storing it locally.
 .. *Link permissions*: Select one of the following options for link permissions:
 
-* *Automatic*: Select this option so that AWS CloudFormation or Terraform code automatically creates the Lambda permission policy and execution role. 
+* *Automatic*: Select this option so that AWS CloudFormation code automatically creates the Lambda permission policy and execution role. 
 * *User-provided*: Select this option to assign a specified Lambda execution role and its attached policies to the Lambda link. The following permissions are required for the Lambda permission policy. The `secretsmanager:GetSecretValue` permission is required only if you enabled AWS Secrets Manager.
 +
 [source,json]
