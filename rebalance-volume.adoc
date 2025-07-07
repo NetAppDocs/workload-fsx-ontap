@@ -50,7 +50,7 @@ Check the balance of FlexVol or FlexGroup volumes in an FSx for ONTAP file syste
 * FlexGroup volumes
 * FlexVol volumes  
 +
-When a volume is unbalanced, consider <<Rebalance a volume,rebalancing it>>.
+When a volume is unbalanced, consider <<Rebalance volume capacity,rebalancing it>>.
 
 == Rebalance volume capacity
 Rebalance one or more unbalanced volumes. 
