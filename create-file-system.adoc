@@ -97,7 +97,7 @@ You can also load a saved configuration.
 .. *AWS credentials*: Select to add AWS credentials in workload factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Region & VPC*: Select the region and VPC for the file system. 
-.. *Deployment type*: Select a deployment type and file system generation. The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
+.. *Deployment type*: Select a deployment type and file system generation. The availability of a second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
 +
 * Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
 +
