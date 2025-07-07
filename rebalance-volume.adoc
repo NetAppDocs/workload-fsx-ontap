@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity
-summary: "Check and rebalance the capacity of a volume to avoid imbalances that develop over time."
+summary: "Check and rebalance volume capacity to avoid imbalances that develop over time."
 ---
-= Check and rebalance a volume's capacity
+= Check and rebalance volume capacity
 :icons: font
 :imagesdir: ./media/
 

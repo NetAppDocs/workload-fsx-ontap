@@ -9,7 +9,7 @@ summary: "Using BlueXP workload factory you can create an FSx for ONTAP file sys
 :imagesdir: ./media/
 
 [.lead]
-Using BlueXP workload factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services. 
+Using BlueXP workload factory you can create first and second-generation FSx for ONTAP file systems to add and manage volumes and additional data services. 
 
 .About this task
 A storage VM and a security group are created as part of file system creation. 
@@ -33,7 +33,7 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 --
 Quick create enables you to use a recommended best-practice configuration. You can change most settings after you create an FSx for ONTAP file system. 
 
-Second-generation FSx for ONTAP file systems are the default deployment type. The deployment type switches to first-generation when the region doesn't support second-generation FSx for ONTAP file systems.
+Second-generation FSx for ONTAP file systems are the default deployment type for quick create unless the selected region doesn't support second-generation FSx for ONTAP file systems.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -97,21 +97,21 @@ You can also load a saved configuration.
 .. *AWS credentials*: Select to add AWS credentials in workload factory or continue without credentials. 
 .. *File system name*: Enter a name for the file system. 
 .. *Region & VPC*: Select the region and VPC for the file system. 
-.. *Deployment type*: Select a deployment type and file system generation.
+.. *Deployment type*: Select a deployment type and file system generation. The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
 +
 * Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
 +
 *File system generation*: Select one of the following:
+
 ** *Second-generation*: This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS. 
 ** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. First-generation file systems can only increase capacity.  
-+
-The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
+
 * Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
 + 
+*File system generation*: Select one of the following:
+
 ** *Second-generation*: This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. In a Multi-AZ and second-generation file system, capacity can increase or decrease to match workload demands. 
 ** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. First-generation file systems can only increase capacity.  
-+
-The availability of second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation. 
 .. *Tags*: Optionally, you can add up to 50 tags. 
 . Under File system details, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
