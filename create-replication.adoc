@@ -43,6 +43,9 @@ In the Volumes table, select one or more volumes and then select *Replicate data
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
 include::_include/create-replication.adoc[]
 //Referenced in repo: bluexp-fsx-ontap in file: use/task-manage-working-environment.adoc
+
+[start=7]
+//Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . Select *Create*. 
 
 .Result
