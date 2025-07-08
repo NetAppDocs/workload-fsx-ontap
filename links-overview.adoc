@@ -14,6 +14,14 @@ A BlueXP workload factory link creates a trust relationship and connectivity bet
 
 You don't need a link to get started with workload factory, but in some cases you'll need to create a link to unlock all workload factory features and workload capabilities. 
 
+== Why links are beneficial
+Links are beneficial because they allow workload factory to perform operations that are not natively available through the Amazon FSx for ONTAP API. Links enable advanced ONTAP capabilities and automations, which enhance the management of FSx for ONTAP file systems.
+
+Here are some benefits of using links:
+ 
+* The link enables BlueXP to send ONTAP commands directly to your FSx for ONTAP file system, bringing advanced ONTAP features beyond what AWS offers natively.
+* Links leverage AWS Lambda to execute code in response to events. This serverless approach removes the dependency of an instance running in your VPC.
+
 == How links work
 
 Links leverage AWS Lambda. Lambda executes code in response to events and automatically manages the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
@@ -48,3 +56,6 @@ The features that require a link include:
 * Displaying additional metrics directly from ONTAP (default metrics are collected by Amazon CloudWatch)
 * Management of NFS export policies
 * Management of CIFS shares
+* NetApp Autonomous Ransomware Protection (ARP/AI)
+* Well-Architected Status
+* Inode management for automatic capacity management
