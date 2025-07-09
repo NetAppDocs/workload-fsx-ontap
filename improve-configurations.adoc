@@ -9,14 +9,14 @@ summary: "BlueXP workload factory for Databases scans Microsoft SQL Server confi
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your FSx for ONTAP file systems. You can easily find issues and take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage workload factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, and take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 link:configuration-analysis.html[Learn about the configuration analysis and well-architected status in workload factory.]
 
 .About this task
-Workload factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
+Workload factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
 
-You have options to review the recommendations for configuration issues with your file systems and fix those issues from the storage inventory within the workload factory console. 
+You have options to review the recommendations for configuration issues with your file systems and fix the issues from the storage inventory within the workload factory console. 
 
 What is analyzed::
 Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
