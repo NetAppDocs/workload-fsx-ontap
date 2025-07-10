@@ -1,6 +1,5 @@
 settings:
-  name: Amazon FSx for NetApp ONTAP
-  platform: cloud
+  name: Amazon FSx for NetApp ONTAP 
   internal:
     pdf_enabled: true
     termcheck_enabled: true
