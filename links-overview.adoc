@@ -14,15 +14,23 @@ A BlueXP workload factory link creates a trust relationship and connectivity bet
 
 You don't need a link to get started with workload factory, but in some cases you'll need to create a link to unlock all workload factory features and workload capabilities. 
 
+== Why links are beneficial
+Links are beneficial because they allow workload factory to perform operations that are not natively available through the Amazon FSx for ONTAP API. Links enable advanced ONTAP capabilities and automations, which enhance the management of FSx for ONTAP file systems.
+
+Here are some benefits of using links:
+ 
+* The link enables BlueXP to send ONTAP commands directly to your FSx for ONTAP file system, bringing advanced ONTAP features beyond what AWS offers natively.
+* Links leverage AWS Lambda to execute code in response to events. This serverless approach removes the dependency of an instance running in your VPC.
+
 == How links work
 
 Links leverage AWS Lambda. Lambda executes code in response to events and automatically manages the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
 
-After you have created a link you can associate it with one, or many, FSx for ONTAP file systems. Each file system can be associated only to one link in the same NetApp account. If you have multiple NetApp accounts, a single file system can be associated with additional links under different NetApp accounts.
+After creating a link, you can associate it with one, or many, FSx for ONTAP file systems. Each file system can be associated only to one link in the same NetApp account. If you have multiple NetApp accounts, a single file system can be associated with additional links under different NetApp accounts.
 
-You create links from the FSx for ONTAP file system pages in workload factory. link:create-link.html[Learn how to create links] for details.
+You create and associate links from the Storage workload in workload factory. 
 
-You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. Workload factory doesn't support changing authentication modes. 
+You can authenticate links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. Workload factory doesn't support changing authentication modes.
 
 == Costs
 
@@ -32,19 +40,20 @@ link:https://aws.amazon.com/lambda/pricing/[Learn more about the costs related t
 
 == When a link is required
 
-Workload factory requires a link to display some information and to perform some tasks. If you attempt to perform an operation that requires a link and you haven't associated a link with the FSx for ONTAP file system, you will see a message that the operation requires a link. You can add a new link, or associate the FSx for ONTAP file system with an existing link at that time so you can perform the operation.
+Workload factory requires a link to display some information and to perform some tasks. If you attempt to perform an operation that requires a link and you haven't associated a link with the FSx for ONTAP file system, workload factory notifies you that the operation requires a link. 
 
 The features that require a link include:
 
-* Displaying the version of ONTAP that is installed on an FSx for ONTAP file system
+* Well-architected status of FSx for ONTAP file system configurations for proactive maintenance, reliability, and cost-performance optimization
+* NetApp Autonomous Ransomware Protection (ARP/AI)
+* Enhanced holistic capacity observability across FSx for ONTAP file systems
+* Volume and storage VM data replication, management, and monitoring
+* SMB/CIFS shares and NFS export policy provisioning and management
 * Management of iSCSI volumes on an FSx for ONTAP file system
-* Autogrow feature for volumes
-* Creation and management of snapshot policies
-* Replication relationship configuration 
-* Volume replication between FSx for ONTAP file systems
-* Backup relationship configuration 
-* Volume data backups to cloud storage
-* Volume clones within an FSx for ONTAP file system
-* Displaying additional metrics directly from ONTAP (default metrics are collected by Amazon CloudWatch)
-* Management of NFS export policies
-* Management of CIFS shares
+* Creation and management of snapshot policies for custom protection SLA
+* Inode management enhancements for automatic capacity management
+* Volume autogrow for elastic scaling
+* Clone creation and management, for instant, in-place, data cloning
+* Displaying additional metrics directly from ONTAP such as the ONTAP version
+
+Learn how to link:create-link.html[connect a link to an FSx for ONTAP file system]. 
