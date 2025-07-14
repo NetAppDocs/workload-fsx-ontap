@@ -207,7 +207,7 @@ The secret ARN must include the following key valid pairs:
 ** user = FSx_user
 ** password = user_password
 +
-NOTE: Authentication with AWS Secrets Manager requires that you set the key valid pair for user to _user_ or use the `fsxadmin` user.
+NOTE: Authentication with AWS Secrets Manager requires that you set the _user_ to `fsxadmin` or another user that was created on the FSx for ONTAP file system.
 
 . Select *Apply*. 
 
