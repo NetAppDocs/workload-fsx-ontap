@@ -206,8 +206,8 @@ The secret ARN must include the following key valid pairs:
 ** filesystemID = FSx_filesystem_id
 ** user = FSx_user
 ** password = user_password
-+
-NOTE: Authentication with AWS Secrets Manager requires that you set the key to _user_ or use the `fsxadmin` user. 
+
+NOTE: Authentication with AWS Secrets Manager requires that you set the key valid pair for user to _user_ or use the `fsxadmin` user.
 
 . Select *Apply*. 
 
