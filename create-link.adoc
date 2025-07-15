@@ -18,9 +18,9 @@ link:links-overview.html[Learn more about links].
 
 Links leverage AWS Lambda to execute code in response to events and automatically manage the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
 
-You can create a link in your account when defining an FSx for ONTAP file system. That link will be used for that file system, and it can be used by other FSx for ONTAP file systems. You can also associate a link for a file system later. 
+You can create a link in your account when defining an FSx for ONTAP file system. The link is used for that file system, and it can be used for other FSx for ONTAP file systems. You can also associate a link for a file system later. 
 
-Links require authentication. You can authentic links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
+Links require authentication. You can authenticate links using credentials stored in the workload factory credentials service or with your credentials stored in AWS Secrets Manager. Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
 
 NOTE: AWS Secrets Manager isn't supported when using a Connector.
 
@@ -29,7 +29,7 @@ Associating a new link includes link creation and association.
 
 You have two options for creating links in this workflow - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
 
-* Automatically: Creates a link with automatic registration via workload factory. A link created automatically requires tokens for workload factory automation and the CloudFormation code is short-lived. It can only be used for up to six hours. 
+* Automatically: Creates a link with automatic registration via workload factory. This requires tokens for workload factory automation and the CloudFormation code is short-lived and usable for up to six hours. 
 * Manually: Creates a link with manual registration. The CloudFormation code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps that might first need to grant the permissions necessary to complete link creation.
 
 .Before you begin
@@ -92,7 +92,7 @@ Use CloudFormation to automatically create and register the link within workload
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Optional. Allows workload factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
-The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
+The link deployment stack automatically adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
 +
 You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy.
 +
@@ -113,10 +113,10 @@ You can either create secrets in alignment with the default permissions or assig
 Enter the Lambda execution role ARN in the text box.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 +
-The AWS account and the additional information for Account, Location, and Security group are retrieved automatically based on the FSx for ONTAP file system.
+Workload factory automatically retrieves the AWS account, location, and security group based on the FSx for ONTAP file system.
 . Select *Create*. 
 +
-The Redirect to CloudFormation dialog appears and explains how to create the link from the AWS CloudFormation service is displayed.
+The Redirect to CloudFormation dialog appears and explains how to create the link from the AWS CloudFormation service.
 . Select *Continue* to open the AWS Management Console, and then log in to the AWS account for this FSx for ONTAP file system.
 . On the Quick create stack page, under Capabilities, select *I acknowledge that AWS CloudFormation might create IAM resources*.
 +
@@ -129,7 +129,7 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 
 . Select *Create stack* and then Select *Continue*.
 +
-You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
+You can monitor the link creation status on the Events page. This should take no more than 5 minutes.
 . Return to the workload factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
 --
 .Create manually
@@ -145,7 +145,7 @@ With this option, you extract the ARN for the link from AWS CloudFormation and r
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Optional. Allows workload factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
-The link deployment stack adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
+The link deployment stack automatically adds the following default secret manager ARN regex to the Lambda permission policy: `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`. 
 +
 You can either create secrets in alignment with the default permissions or assign your custom permissions for the link policy.
 +
@@ -176,10 +176,10 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 "lambda:UpdateFunctionCode"
 +
 After you successfully create the stack, paste the Lambda ARN in the text box.
-.. The AWS account and the additional information for Account, Location, and Security group are retrieved automatically based on the FSx for ONTAP file system.
+.. Workload factory automatically retrieves the AWS account, location, and security group based on the FSx for ONTAP file system.
 . Select *Create*. 
 +
-You can monitor the link creation status from the Events page. This should take no more than 5 minutes.
+You can monitor the link creation status on the Events page. This should take no more than 5 minutes.
 . Return to the workload factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
 
 --
@@ -187,7 +187,7 @@ You can monitor the link creation status from the Events page. This should take 
 
 .Result
 
-The link you created is associated with the FSx for ONTAP file system. You can perform advanced ONTAP operations. 
+Workload factory associates the link with the FSx for ONTAP file system. You can perform advanced ONTAP operations. 
 
 == Associate an existing link with an FSx for ONTAP file system
 After you create a link, associate it with one or more FSx for ONTAP file system.
@@ -200,9 +200,9 @@ After you create a link, associate it with one or more FSx for ONTAP file system
 . Select the authentication mode. 
 * Workload Factory: enter the password twice. 
 * AWS Secrets Manager: enter the secret ARN.
-+
-The secret ARN must include the following key valid pairs: 
-+
+
+Ensure the secret ARN contains the following key valid pairs:
+
 ** filesystemID = FSx_filesystem_id
 ** user = FSx_user
 ** password = user_password
