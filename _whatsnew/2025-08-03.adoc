@@ -1,0 +1,9 @@
+=== Enhancements to Replication relationships tab   
+
+We've added several new columns to the replication relationships table to give you more information about your replication relationships in the *Replication relationships* tab. The table now includes the following columns:
+
+* SnapMirror policy
+* Source file system
+* Target file system
+* State of the relationship (healthy, failed, or initializing)
+* Last transfer time
