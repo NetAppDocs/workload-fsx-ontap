@@ -71,19 +71,15 @@ If you selected an existing export policy, enter a new policy name.
 .... *Name*: Enter the CIFS share name to provide SMB access. 
 .... *Path*: Either define the path using the default volume name or provide a share to an internal directory. 
 +
-Valid path inputs for volumes are as follows:
-+
-*Volume name* = 'avocado'
+Valid path inputs for volume name, for example 'avocado', are as follows:
 +
 ** /avocado
 ** /avocado/folder
 ** /avocado/folder/subfolder
 ** /avocado/file-name
 +
-Valid path inputs for share names are as follows:
-+
-*Share name* = 'Server'
-+
+Valid path inputs for share name, for example 'Server', are as follows:
+
 ** \\Server
 ** \\Server\Projects
 ** \\Server\Projects\Shared resources
