@@ -37,7 +37,7 @@ NOTE: The remediation process may cause instance downtimes or service interrupti
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Databases tile, select *Go to Storage inventory*.
+. In the Storage tile, select *Go to Storage inventory*.
 . In the *FSx for ONTAP* tab, navigate to the *Well-architected status* column and select the issues for the file system to fix. 
 . In the well-architected dashboard for the file system, filter configuration issues by categories, subcategories, status, severity, and tags.  
 . Select the dropdown arrow to view the recommendation for any configuration. Make sure you review the recommendation carefully. 
