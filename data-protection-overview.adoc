@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: data-protection-overview.html
 keywords: overview
-summary: "FSx for ONTAP supports snapshots, volume backups, and volume replication in BlueXP workload factory."
+summary: "FSx for ONTAP supports snapshots, NetApp Autonomous Ransomware with AI, volume replication, and backups in BlueXP workload factory."
 ---
 = Types of data protection in BlueXP Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-FSx for ONTAP supports snapshots, backups, and replication for data protection. We recommend that you use a combination of data protection types to prepare for the inevitable and safeguard your data.
+FSx for ONTAP supports snapshots, NetApp Autonomous Ransomware Protection with AI, replication, and backups for data protection. We recommend that you use a combination of data protection types to prepare for the inevitable and safeguard your data.
 
 == Types of data protection
 Data protection for your workloads helps ensure that you can recover from any data loss at any time. Learn about the types of data protection before you select the features you'll use. 
