@@ -33,8 +33,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Storage efficiencies
 * Automatic capacity management
 * NetApp Autonomous Ransomware Protection with AI (ARP/AI)
-* Volume file capacity threshold
-* Long-term retention data reliability
+* Data reliability for long-term retention
 
 .Before you begin
 * You must have credentials with _read-only_ or _read/write_ permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions in your AWS account^].
