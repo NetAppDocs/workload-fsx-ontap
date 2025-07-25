@@ -2,17 +2,17 @@
 sidebar: sidebar
 permalink: ransomware-protection.html
 keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy
-summary: "Autonomous Ransomware Protection uses workload analysis in NAS environments to detect and warn about abnormal activity that might be a ransomware attack."  
+summary: "NetApp Autonomous Ransomware Protection with AI (ARP/AI) uses workload analysis in NAS environments to detect and warn about abnormal activity that might be a ransomware attack."  
 ---
-= Protect your data with Autonomous Ransomware Protection
+= Protect your data with NetApp Autonomous Ransomware Protection with AI
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Protect your data with Autonomous Ransomware Protection (ARP), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP also creates new, immutable snapshots from which you can restore your data. 
+Protect your data with NetApp Autonomous Ransomware Protection with AI (ARP/AI), a feature that uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP/AI also creates new, immutable snapshots from which you can restore your data. 
 
 .About this task
-Use ARP to protect against denial-of-service attacks where the attacker withholds data until a ransom is paid. ARP offers real-time ransomware detection based on: 
+Use ARP/AI to protect against denial-of-service attacks where the attacker withholds data until a ransom is paid. ARP/AI offers real-time ransomware detection based on: 
 
 * Identification of the incoming data as encrypted or plaintext.
 * Analytics that detect:
@@ -21,46 +21,66 @@ Use ARP to protect against denial-of-service attacks where the attacker withhold
 ** **File extension types**: An extension that does not conform to the normal extension type
 ** **File IOPS**: A surge in abnormal volume activity with data encryption 
 
-ARP can detect the spread of most ransomware attacks after only a small number of files are encrypted, take action automatically to protect data, and alert you that a suspected attack is happening.
+ARP/AI can detect the spread of most ransomware attacks after only a small number of files are encrypted, take action automatically to protect data, and alert you that a suspected attack is happening.
 
-The ARP feature automatically updates according to the ONTAP version that Amazon FSx for NetApp ONTAP runs so you don't have to make manual updates. 
+The ARP/AI feature automatically updates according to the ONTAP version that Amazon FSx for NetApp ONTAP runs so you don't have to make manual updates. 
 
 Learning and active modes:::
-ARP operates first in _learning mode_ and then automatically switches to _active mode_. 
+ARP/AI operates first in _learning mode_ and then automatically switches to _active mode_. 
 
-* *Learning mode*: When you enable ARP it runs in _learning mode_. In learning mode, the FSx for ONTAP file system develops an alert profile based on the analytic areas: entropy, file extension types, and file IOPS. After the file system runs ARP in learning mode for enough time to assess workload characteristics, workload factory automatically switches to ARP to _active mode_ and starts protecting your data.
+* *Learning mode*: When you enable ARP/AI it runs in _learning mode_. In learning mode, the FSx for ONTAP file system develops an alert profile based on the analytic areas: entropy, file extension types, and file IOPS. After the file system runs ARP/AI in learning mode for enough time to assess workload characteristics, workload factory automatically switches to ARP/AI to _active mode_ and starts protecting your data.
 
-* *Active mode*: After ARP switches to _active mode_, FSx for ONTAP creates ARP/AI snapshots to protect the data if a threat is detected.
+* *Active mode*: After ARP/AI switches to _active mode_, FSx for ONTAP creates ARP/AI snapshots to protect the data if a threat is detected.
 +
 In active mode, if a file extension is flagged as abnormal, you should evaluate the alert. You can act on the alert to protect your data or you can mark the alert as a false positive. Marking an alert as a false positive updates the alert profile. For example, if the alert is triggered by a new file extension and you mark the alert as a false positive, you will not receive an alert the next time that file extension is observed.
 
 Unsupported configurations:::
-The following configurations don't support the use of ARP. 
+The following configurations don't support the use of ARP/AI. 
 
 * SAN/Block volumes
 * iSCSI volumes
 * NVMe volumes
 
-== Enable Autonomous Ransomware Protection for a file system
-Enabling ARP for a file system adds protection for all existing NAS and newly created NAS volumes automatically. 
+== Enable ARP/AI for a file system or a volume
+Enabling ARP/AI for a file system adds protection for all existing NAS and newly created NAS (NFS/SMB) volumes automatically. You can also enable ARP/AI for individual volumes.
 
-After enabling ARP, if an attack occurs and you identify the attack is real, BlueXP workload factory automatically sets up a snapshot policy that takes up to six snapshots every four hours. Each snapshot is locked for 2-5 days.
+After enabling ARP/AI, if an attack occurs and you identify the attack is real, workload factory automatically sets up a snapshot policy that takes up to six snapshots every four hours. Each snapshot is locked for 2-5 days.
 
 .Before you begin
-To enable ARP for a file system, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+To enable ARP/AI for a file system or a volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
 
+[role="tabbed-block"]
+====
+
+.Enable ARP/AI for a file system
+--
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP and then select *Manage*. 
-. Under Information, select the pencil icon next to *Autonomous Ransomware Protection*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Autonomous Ransomware Protection* row. 
-. In the Autonomous Ransomware Protection dialog, enable or disable the feature. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP/AI and then select *Manage*. 
+. Under Information, select the pencil icon next to *Autonomous Ransomware Protection*. The pencil icon appears next to the arrow when the mouse hovers over the *Autonomous Ransomware Protection* row. 
+. From the NetApp Autonomous Ransomware Protection with AI (ARP/AI) page, do the following: 
+.. Enable or disable the feature. 
+.. *Automatic snapshot creation*: Select the maximum number of snapshots to retain and the interval of time between taking snapshots. The default is 6 snapshots every 4 hours.
+.. *Immutable snapshots*: Select the default retention period in hours and the maximum number of days to retain immutable snapshots. Enable this option to ensure that snapshots cannot be deleted or modified until the specified retention period ends.
+.. *Detection*: Optionally, select any of the following parameters to automatically scan and detect anomalies.
 . Accept the statement to proceed.
 . Select *Apply* to save the changes.
 
-//Update all terminology on the page starting with 9.16.1
-//NetApp Autonomous Ransomware Protection with AI (ARP/AI)
-// ARP/AI
+--
+
+.Enable ARP/AI for a volume
+--
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In Storage, select *Go to Storage inventory*. 
+. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP/AI and then select *Manage*. 
+. From the Volumes tab, select the three-dot menu of the volume to enable ARP/AI, then *Data protection actions*, and then *Manage ARP/AI*.
+. In the Manage ARP/AI dialog, do the following: 
+.. Enable or disable the feature. 
+.. *Detection*: Optionally, select any of the following parameters to automatically scan and detect anomalies.
+. Accept the statement to proceed.
+. Select *Apply* to save the changes.
+--
 
 == Validate ransomware attacks
 
@@ -77,7 +97,7 @@ Determine if an attack is a false alarm or a genuine ransomware incident.
 
 == Recover data after a ransomware attack
 
-When an attack is suspected, the system takes a volume snapshot at that point in time and locks that copy. If the attack is confirmed later, the affected files or the entire volume can be restored using the ARP snapshot.
+When an attack is suspected, the system takes a volume snapshot at that point in time and locks that copy. If the attack is confirmed later, the affected files or the entire volume can be restored using the ARP/AI snapshot.
 
 Locked snapshots cannot be deleted until the retention period ends. However, if you decide later to mark the attack as a false positive, the locked copy will be deleted. 
 
