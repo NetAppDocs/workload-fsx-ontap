@@ -55,6 +55,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 .Enable ARP/AI for a file system
 --
 .Steps
+
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP/AI and then select *Manage*. 
@@ -71,6 +72,8 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 
 .Enable ARP/AI for a volume
 --
+.Steps
+
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable ARP/AI and then select *Manage*. 
@@ -81,6 +84,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 . Accept the statement to proceed.
 . Select *Apply* to save the changes.
 --
+====
 
 == Validate ransomware attacks
 
