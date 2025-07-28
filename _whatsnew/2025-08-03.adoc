@@ -8,6 +8,19 @@ We've added several new columns to the replication relationships table to give y
 * State of the relationship (healthy, failed, or initializing)
 * Last transfer time
 
+=== Enhancements to NetApp Autonomous Ransomware Protection with AI (ARP/AI)
+
+This release introduces the updated term "NetApp Autonomous Ransomware Protection with AI (ARP/AI)" to better reflect the integration of artificial intelligence in our ransomware protection capabilities.
+
+In addition, the following enhancements have been made to ARP/AI:
+
+* Volume-level ARP/AI: You can now enable ARP/AI at the volume level, allowing you to protect specific volumes within your FSx for ONTAP file systems.
+* Automatic snapshot creation: You can set the ARP/AI policy to take automatic snapshots and define how often snapshots are taken for volumes with ARP/AI enabled, enhancing your data protection strategy.
+* Immutable snapshots: ARP/AI now supports immutable snapshots, which cannot be deleted or modified, providing an additional layer of security against ransomware attacks.
+* Detection: includes various detection methods such as high entropy data rate at volume level, file create rate, file rename rate, file delete rate, and behavioral analysis, and never seen before file extension that help to detect anomalies and potential ransomware attacks.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Protect your data with NetApp Autonomous Ransomware Protection with AI (ARP/AI)]
+
 === Well-architected analysis updates
 
 Workload factory now analyzes your FSx for ONTAP file systems for the following configurations: 
