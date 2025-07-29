@@ -200,14 +200,14 @@ After you create a link, associate it with one or more FSx for ONTAP file system
 . Select the authentication mode. 
 * Workload Factory: enter the password twice. 
 * AWS Secrets Manager: enter the secret ARN.
++
+Ensure that the secret ARN contains the following key valid pairs, though the _filesystemID_ is optional.
 
-Ensure the secret ARN contains the following key valid pairs:
-
-** filesystemID = FSx_filesystem_id
+** filesystemID = FSx_filesystem_id (optional)
 ** user = FSx_user
 ** password = user_password
 +
-NOTE: Authentication with AWS Secrets Manager requires that you set the _user_ to `fsxadmin` or another user that was created on the FSx for ONTAP file system.
+NOTE: Authentication with AWS Secrets Manager requires a user, either the _FSx_user_ that you provide or another user that was created on the FSx for ONTAP file system. The default user is `fsxadmin` if you don't provide a user.
 
 . Select *Apply*. 
 
