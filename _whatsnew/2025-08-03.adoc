@@ -47,3 +47,9 @@ The following new regions are now supported for exploring savings for Amazon Ela
 
 * Mexico
 * Thailand
+
+=== CIFS share creation enhancement
+
+You can now create a CIFS share to an internal folder on existing volumes.
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume[Create a CIFS share for a volume]
