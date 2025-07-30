@@ -30,6 +30,20 @@ Follow the steps to create a CIFS share for a volume.
 . On the Manage CIFS share page, select *Create CIFS share*.
 . In the Create CIFS share dialog, provide the following: 
 .. *Name*: Enter the name of the CIFS share.
+.. *Path*: Either define the path using the default volume name or provide a share to an internal directory. 
++
+Valid path inputs for volume name, for example "avocado", are as follows:
++
+** /avocado
+** /avocado/folder
+** /avocado/folder/subfolder
+** /avocado/file-name
++
+Valid path inputs for share name, for example "Server", are as follows:
+
+** \\Server
+** \\Server\Projects
+** \\Server\Projects\Shared resources
 .. *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username".  
 . Select *Create*. 
 
