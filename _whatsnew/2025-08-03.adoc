@@ -5,7 +5,7 @@ We've added several new columns to the replication relationships table to give y
 * SnapMirror policy
 * Source file system
 * Target file system
-* State of the relationship (healthy, failed, or initializing)
+* State of the relationship
 * Last transfer time
 
 === Enhancements to NetApp Autonomous Ransomware Protection with AI (ARP/AI)
@@ -42,7 +42,7 @@ You can now use Terraform from the Codebox to create a link for association with
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system with a Lambda link]
 
-=== New region support for exploring savings 
+=== New region support for exploring savings in Storage
 
 The following new regions are now supported for exploring savings for Amazon Elastic Block Store (EBS), FSx for Windows File Server, and Elastic File Systems (EFS):
 
