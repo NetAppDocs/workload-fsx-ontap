@@ -25,8 +25,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 Workload factory now analyzes your FSx for ONTAP file systems for the following configurations: 
 
-* Long-term retention data reliability: checks whether labels assigned to the snapshot policy of source volume are identical to the labels assigned to the long-term retention policy. When labels are identical, data replication is reliable between source and destination volumes.
-* File capacity thresholds: checks whether the file capacity thresholds are set to 80% or lower. This helps you avoid running out of space on your file systems.
+* Long-term retention data reliability: checks whether labels assigned to the snapshot policy of the source volume are identical to the labels assigned to the long-term retention policy. When labels are identical, data replication is reliable between source and target volumes.
 * NetApp Autonomous Ransomware Protection with AI (ARP/AI): checks whether ARP/AI is enabled on your file systems. This feature helps you detect and recover from ransomware attacks.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
