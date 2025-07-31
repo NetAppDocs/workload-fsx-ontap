@@ -48,8 +48,10 @@ The following new regions are now supported for exploring savings for Amazon Ela
 * Mexico
 * Thailand
 
-=== CIFS share creation enhancement
+=== Enhancements to SMB/CIFS shares creation and management
 
-You can now create a CIFS share to an internal folder on existing volumes.
+You can now create SMB/CIFS shares which point to directories within a volume. Within the volume, you'll be able to see which shares exist, where the shares are the pointing to, and the permissions granted to specific users and groups. 
+
+For data protection volumes, the flow of creating an SMB/CIFS share now includes the creation of a junction path to the volume for mounting purposes.
 
 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume[Create a CIFS share for a volume]
