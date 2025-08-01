@@ -30,7 +30,7 @@ Associating a new link includes link creation and association.
 You have two options for creating links in this workflow - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
 
 * Automatically: Creates a link with automatic registration via workload factory. This requires tokens for workload factory automation and the CloudFormation code is short-lived and usable for up to six hours. 
-* Manually: Creates a link with manual registration. The CloudFormation code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps that might first need to grant the permissions necessary to complete link creation.
+* Manually: Creates a link with manual registration using either CloudFormation or Terraform from the Codebox. The code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps that might first need to grant the permissions necessary to complete link creation.
 
 .Before you begin
 * You should consider which link creation option you'll use. 
@@ -134,14 +134,14 @@ You can monitor the link creation status on the Events page. This should take no
 --
 .Create manually
 --
-With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload factory manually registers the link for you. 
+You can create a link using two Infrastructure-as-Code (IaC) tools from the Codebox: CloudFormation or Terraform. With this option, you extract the ARN for the link from AWS CloudFormation and report it here. Workload factory manually registers the link for you. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
-. On the Create Link page, provide the following: 
+. On the Create Link page, select CloudFormation or Terraform from the Codebox, and then provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Optional. Allows workload factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
@@ -166,7 +166,7 @@ You can either create secrets in alignment with the default permissions or assig
 Enter the Lambda execution role ARN in the text box.
 
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
-.. *Link registration*: select on the dropdown arrow to expand the instructions for how to register the link from the AWS CloudFormation service or using Terraform. Follow the instructions. 
+.. *Link registration*: Select CloudFormation or Terraform for the instructions for how to register the link, and follow the instructions. 
 +
 Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload factory uses these permissions when using links.
 +
