@@ -67,8 +67,24 @@ If you selected a custom export policy, select an existing policy name from the 
 +
 If you selected an existing export policy, enter a new policy name. 
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
+
 ... *SMB/CIFS share*: Provide the following: 
 .... *Name*: Enter the SMB/CIFS share name to provide access. 
+.... *Path*: Either define the path using the default volume name or provide a share to an internal directory. 
++
+Valid path inputs for volume name, for example "avocado", are as follows:
++
+** /avocado
+** /avocado/folder
+** /avocado/folder/subfolder
+** /avocado/file-name
++
+Valid path inputs for share name, for example "Server", are as follows:
+
+** \\Server
+** \\Server\Projects
+** \\Server\Projects\Shared resources
+
 .... *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username".
 ... *Security style*: For dual-protocol volumes, select either the UNIX or NTFS security style. UNIX is the default security style for dual-protocol volumes. For detailed guidance on user mapping in this context, refer to the AWS blog article link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["Enabling multiprotocol workloads with Amazon FSx for NetApp ONTAP"^]. 
 +
