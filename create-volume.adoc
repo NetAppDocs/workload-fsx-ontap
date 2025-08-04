@@ -16,7 +16,7 @@ FSx for ONTAP volumes group data virtually, determine how data is stored, and de
 
 The following protocols might be used for your volumes:
 
-* CIFS: file storage protocol for Windows operating systems
+* SMB/CIFS: file storage protocol for Windows operating systems
 * NFS: file storage protocol for Unix operating systems
 * iSCSI: block storage protocol 
 
@@ -27,7 +27,7 @@ Review the following prerequisites before you create a volume:
 * You must have a storage VM. 
 * For protocol access, complete the following: 
 ** To configure access to the volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
-** You must configure access for the protocol you select, either CIFS, NFS, or iSCSI. 
+** You must configure access for the protocol you select, either SMB/CIFS, NFS, or iSCSI. 
 
 == Create a volume
 You can create a volume using the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^].
@@ -67,8 +67,9 @@ If you selected a custom export policy, select an existing policy name from the 
 +
 If you selected an existing export policy, enter a new policy name. 
 .... *Add Export Policy Rule*: Optionally, for a custom export policy, you can add export policy rules to the policy. 
-... *CIFS share*: Provide the following: 
-.... *Name*: Enter the CIFS share name to provide SMB access. 
+
+... *SMB/CIFS share*: Provide the following: 
+.... *Name*: Enter the SMB/CIFS share name to provide access. 
 .... *Path*: Either define the path using the default volume name or provide a share to an internal directory. 
 +
 Valid path inputs for volume name, for example "avocado", are as follows:

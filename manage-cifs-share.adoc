@@ -1,24 +1,24 @@
 ---
 sidebar: sidebar
 permalink: manage-cifs-share.html
-keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share
-summary: "Managing a volume's CIFS share in BlueXP workload factory includes creation, determining user and group access, and deletion." 
+keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create
+summary: "Managing a volume's SMB/CIFS share in workload factory includes creation, determining user and group access, and deletion." 
 ---
-= Manage the CIFS share for a volume in BlueXP workload factory
+= Manage the SMB/CIFS share for a volume in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Managing a volume's CIFS share in BlueXP workload factory includes CIFS share creation, determining the users and groups to give access to and the level of permissions to give them, and CIFS share deletion.
+Managing a volume's SMB/CIFS share in workload factory includes SMB/CIFS share creation, determining the users and groups to give access to and the level of permissions to give them, and SMB/CIFS share deletion.
 
 .Before you begin
 Before you begin, do the following: 
 
-* To manage CIFS shares, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* To manage SMB/CIFS shares, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * Determine the users or groups to give access to and the level of permissions to give them. 
 
-== Create a CIFS share for a volume
-Follow the steps to create a CIFS share for a volume. 
+== Create an SMB/CIFS share for a volume
+Follow the steps to create an SMB/CIFS share for a volume. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -26,18 +26,29 @@ Follow the steps to create a CIFS share for a volume.
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to change the SMB share for. 
-. Select *Advanced actions*, then *Manage CIFS shares*. 
-. On the Manage CIFS share page, select *Create CIFS share*.
-. In the Create CIFS share dialog, provide the following: 
-.. *Name*: Enter the name of the CIFS share.
+. Select *Advanced actions*, then *Manage SMB/CIFS shares*. 
+. On the Manage SMB/CIFS shares page, select *Create SMB/CIFS share*.
+. In the Create SMB/CIFS share dialog, provide the following: 
+.. *Name*: Enter the name of the SMB/CIFS share.
+.. *Path*: Either define the path using the default volume name or provide a share to an internal directory. 
++
+Valid path inputs for volume name, for example "avocado", are as follows:
++
+** /avocado
+** /avocado/folder
+** /avocado/folder/subfolder
+** /avocado/file-name
++
+Valid path inputs for share name, for example "Server", are as follows:
+
+** \\Server
+** \\Server\Projects
+** \\Server\Projects\Shared resources
 .. *Permissions*: Select Full control, Read/Write, Read, or No access, and then enter the users or groups separated by a semicolon ( ; ). Users or groups are case sensitive and the user's domain must be included using the format "domain\username".  
 . Select *Create*. 
 
-.Result
-The CIFS share for the volume is created.
-
-== Change a CIFS share for a volume
-Follow the steps to change the CIFS share settings for a volume.
+== Change an SMB/CIFS share for a volume
+Follow the steps to change the SMB/CIFS share settings for a volume.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -45,19 +56,15 @@ Follow the steps to change the CIFS share settings for a volume.
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to change the SMB share for. 
-. Select *Advanced actions*, then *Manage CIFS shares*. 
-. On the Manage CIFS share page, hover over a CIFS share and select the pencil icon to make changes.
-. Change the CIFS access permissions, or the users or groups to give permissions to. 
+. Select *Advanced actions*, then *Manage SMB/CIFS shares*. 
+. On the Manage SMB/CIFS shares page, select *View and edit*.
+. Change the SMB/CIFS access permissions, or the users or groups to give permissions to. 
 +
-Changes might cause current users or groups to lose access to the CIFS share.
+Changes might cause current users or groups to lose access to the SMB/CIFS share.
 . Select *Apply* to save the changes.
 
-.Result
-
-The CIFS share for the volume is updated.
-
-== Delete a CIFS share for a volume
-Follow the steps to delete a CIFS share for a volume.
+== Delete an SMB/CIFS share for a volume
+Follow the steps to delete an SMB/CIFS share for a volume.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -65,12 +72,8 @@ Follow the steps to delete a CIFS share for a volume.
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to change the SMB share for. 
-. Select *Advanced actions*, then *Manage CIFS shares*. 
-. On the Manage CIFS share page, hover over a CIFS share and select the trash icon to delete it.
+. Select *Advanced actions*, then *Manage SMB/CIFS shares*. 
+. On the Manage SMB/CIFS shares page, select the three-dot menu of the SMB/CIFS share and then select *Delete*. 
 +
-Deleting the CIFS share makes it unavailable and inaccessible to any users who want to mount it.
-. Select *Delete* to confirm deletion.
-
-.Result
-
-The CIFS share for the volume is deleted.
+Deleting the SMB/CIFS share makes it unavailable and inaccessible to any users who want to mount it.
+. In the Delete SMB/CIFS share dialog, select *Delete* to confirm deletion.
