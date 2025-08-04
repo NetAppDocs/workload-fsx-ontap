@@ -1,0 +1,57 @@
+=== Enhancements to Replication relationships tab   
+
+We've added several new columns to the replication relationships table to give you more information about your replication relationships in the *Replication relationships* tab. The table now includes the following columns:
+
+* SnapMirror policy
+* Source file system
+* Target file system
+* State of the relationship
+* Last transfer time
+
+=== Enhancements to NetApp Autonomous Ransomware Protection with AI (ARP/AI)
+
+This release introduces the updated term "NetApp Autonomous Ransomware Protection with AI (ARP/AI)" to better reflect the integration of artificial intelligence in our ransomware protection capabilities.
+
+In addition, the following enhancements have been made to ARP/AI:
+
+* Volume-level ARP/AI: You can now enable ARP/AI at the volume level, allowing you to protect specific volumes within your FSx for ONTAP file systems.
+* Automatic snapshot creation: You can set the ARP/AI policy to take automatic snapshots and define how often snapshots are taken for volumes with ARP/AI enabled, enhancing your data protection strategy.
+* Immutable snapshots: ARP/AI now supports immutable snapshots, which cannot be deleted or modified, providing an additional layer of security against ransomware attacks.
+* Detection: includes various detection methods such as high entropy data rate at volume level, file create rate, file rename rate, file delete rate, and behavioral analysis, and never seen before file extension that help to detect anomalies and potential ransomware attacks.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Protect your data with NetApp Autonomous Ransomware Protection with AI (ARP/AI)]
+
+=== Well-architected analysis updates
+
+Workload factory now analyzes your FSx for ONTAP file systems for the following configurations: 
+
+* Long-term retention data reliability: checks whether labels assigned to the snapshot policy of the source volume are identical to the labels assigned to the long-term retention policy. When labels are identical, data replication is reliable between source and target volumes.
+* NetApp Autonomous Ransomware Protection with AI (ARP/AI): checks whether ARP/AI is enabled on your file systems. This feature helps you detect and recover from ransomware attacks.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
+
+=== Dismiss a configuration from the well-architected analysis
+You can now dismiss one or more configurations from the well-architected analysis. This allows you to ignore specific configurations that you don't want to address at the moment.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Dismiss a configuration from the well-architected analysis]
+
+=== Terraform support for link creation
+
+You can now use Terraform from the Codebox to create a link for association with an FSx for ONTAP file system. This functionality is for users who create links manually. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system with a Lambda link]
+
+=== New region support for exploring savings in Storage
+
+The following new regions are now supported for exploring savings for Amazon Elastic Block Store (EBS), FSx for Windows File Server, and Elastic File Systems (EFS):
+
+* Mexico
+* Thailand
+
+=== Enhancements to SMB/CIFS shares creation and management
+
+You can now create SMB/CIFS shares which point to directories within a volume. Within the volume, you'll be able to see which shares exist, where the shares are the pointing to, and the permissions granted to specific users and groups. 
+
+For data protection volumes, the flow of creating an SMB/CIFS share now includes the creation of a junction path to the volume for mounting purposes.
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume[Create a CIFS share for a volume]
