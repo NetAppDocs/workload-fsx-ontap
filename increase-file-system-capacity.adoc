@@ -16,6 +16,8 @@ Increase the SSD storage capacity of an FSx for ONTAP file system when the amoun
 Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so workload factory manages file system capacity for you. 
 
 .About this task
+With elastic file system capacity, you can dynamically adjust the capacity of your file systems to match the needs of your workloads.
+
 Adjusting file system capacity impacts IOPS for your FSx for ONTAP file system. 
 
 When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases or decreases by 3 IOPS with every 1 GiB increase or decrease in SSD capacity. 
