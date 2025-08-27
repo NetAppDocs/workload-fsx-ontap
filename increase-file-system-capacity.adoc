@@ -1,36 +1,39 @@
 ---
 sidebar: sidebar
 permalink: increase-file-system-capacity.html
-keywords: increase capacity, increase file system capacity, increase FSx capacity
-summary: "Manually increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify." 
+keywords: adjust capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity
+summary: "Manually adjust the SSD storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets."
 ---
-= Increase file system capacity in BlueXP workload factory
+= Adjust file system capacity in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manually increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify. 
+Manually adjust the solid-state drive (SSD) storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets.
+
+Increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify or decrease the SSD storage capacity when working sets are inactive to improve cost efficiency.  
 
 Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so workload factory manages file system capacity for you. 
 
 .About this task
-Increasing file system capacity impacts IOPS for your FSx for ONTAP file system. 
+Adjusting file system capacity impacts IOPS for your FSx for ONTAP file system. 
 
-When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases by 3 IOPS with every 1 GiB increase in SSD capacity. 
+When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases or decreases by 3 IOPS with every 1 GiB increase or decrease in SSD capacity. 
 
 When you link:provision-iops.html[provision IOPS] manually, you might need to increase your IOPS allocation to support the increased file system capacity. 
 
 For SSD storage capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
 .Before you begin
-To increase capacity for a file system, you must first link:enable-auto-capacity-management.html[disable automatic capacity management]. 
+To adjust capacity for a file system, you must first link:enable-auto-capacity-management.html[disable automatic capacity management]. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to increase capacity for. 
-. Select *Manage*. 
-. Under Information, select the pencil icon next to *Capacity distribution*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Capacity distribution* row. 
-. In the SSD storage size dialog, enter a number for *Provisioned capacity*. 
+. From the Dashboard, select *Adjust SSD capacity*. 
+. Select the file system you want to adjust capacity for and then select *Continue*.
++
+*Potential savings* is the recommendation for decreasing capacity.
+. In the Adjust SSD capacity dialog, enter a number for *Provisioned capacity*. 
 . Select the unit for the provisioned capacity.
 . Select *Apply*. 
