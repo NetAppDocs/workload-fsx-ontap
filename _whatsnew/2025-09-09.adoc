@@ -22,6 +22,10 @@ Additional items appear in Volume details under the Protection tab:
 
 image:screenshot-volume-details-protection.png["Screenshot that shows FSx for ONTAP volume details with protection tab open."]
 
+The new snapshot management screen is accessible from a volume; it provides information about the snapshot policy for the volume and all snapshots for the volume in a table that displays creation time, size, expiry time, immutable snapshot protection, and labels. From the management screen, you can change the snapshot policy for the volume, create a snapshot manually, and edit, access, restore, and delete snapshots. 
+
+image:screenshot-manage-snapshots-screen.png["Screenshot that shows the manage snapshots screen."]
+
 === SSD storage capacity decrease available
 
 Workload factory supports decreasing the solid-state drive (SSD) capacity of your first-generation and second-generation file systems so that you can run project-based workloads with varying active working sets more efficiently. 
