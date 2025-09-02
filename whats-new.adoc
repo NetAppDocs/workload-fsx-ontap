@@ -1,0 +1,78 @@
+---
+sidebar: sidebar
+permalink: whats-new.html
+keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx for netapp ontap, fsx for ontap
+summary: "Learn what's new with Amazon FSx for NetApp ONTAP."
+---
+= What's new with Amazon FSx for NetApp ONTAP
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Learn what's new with Amazon FSx for NetApp ONTAP.
+
+// tag::whats-new[]
+== 09 September 2025
+
+include::_whatsnew/2025-09-09.adoc[]
+
+== 03 August 2025
+
+include::_whatsnew/2025-08-03.adoc[]
+
+== 29 June 2025
+
+include::_whatsnew/2025-06-29.adoc[]
+// end::whats-new[]
+
+== 08 June 2025 
+
+include::_whatsnew/2025-06-08.adoc[]
+
+== 03 June 2025
+
+include::_whatsnew/2025-06-03.adoc[]
+
+== 04 May 2025
+
+include::_whatsnew/2025-05-04.adoc[]
+
+== 30 March 2025
+
+include::_whatsnew/2025-03-30.adoc[]
+
+== 02 March 2025
+
+include::_whatsnew/2025-03-02.adoc[]
+
+== 02 February 2025
+
+include::_whatsnew/2025-02-02.adoc[]
+
+== 05 January 2025
+
+include::_whatsnew/2025-01-05.adoc[]
+
+== 1 December 2024
+
+include::_whatsnew/2024-12-01.adoc[]
+
+== 3 November 2024
+
+include::_whatsnew/2024-11-03.adoc[]
+
+== 29 September 2024
+
+include::_whatsnew/2024-09-29.adoc[]
+
+== 1 September 2024
+
+include::_whatsnew/2024-09-01.adoc[]
+
+== 4 August 2024
+
+include::_whatsnew/2024-08-04.adoc[]
+
+== 7 July 2024
+
+include::_whatsnew/2024-07-07.adoc[]
