@@ -10,7 +10,7 @@ Workload factory has enhanced the data reported for your FSx for ONTAP file syst
 
 === Snapshot management enhancements
 
-Workload factory has made several enhancements to how view volume snapshot details and manage volume snapshots. These enhancements make it easier for you to understand the status of your snapshots and protect your data.
+Workload factory has made several enhancements to view volume snapshot details and manage volume snapshots. These enhancements make it easier for you to understand the status of your snapshots and protect your data.
 
 image:screenshot-menu-view-volume-details.png["Screenshot that shows FSx for ONTAP volume menu with basic actions and then view volume details."]
 
