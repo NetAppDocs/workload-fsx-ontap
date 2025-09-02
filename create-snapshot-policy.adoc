@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-snapshot-policy.html
 keywords: create
-summary: "Create a custom snapshot policy for a storage VM in BlueXP workload factory."
+summary: "Create a custom snapshot policy for a storage VM in workload factory."
 ---
-= Create a snapshot policy for storage VMs in BlueXP workload factory
+= Create a snapshot policy for storage VMs in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a custom snapshot policy for storage VMs in BlueXP workload factory. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
+Create a custom snapshot policy for storage VMs in workload factory to manage snapshot creation and retention. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
 
 .About this task
 You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
@@ -53,7 +53,4 @@ This label refers to the SnapMirror, or replication label that is used to select
 Enabling immutable snapshots locks all snapshots in this snapshot policy to prevent the snapshots from being deleted during the retention period. 
 . *Share across storage VMs*: Enabled by default. When enabled, the snapshot policy is shared across all storage VMs in the file system. Disable to create a snapshot policy for a single storage VM.
 . Select *Create*. 
-
-.Result
-The snapshot policy is created.
 
