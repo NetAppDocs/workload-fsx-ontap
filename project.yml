@@ -59,8 +59,6 @@ sidebar:
                   url: /create-snapshot-policy.html
                 - title: Restore a volume from a snapshot
                   url: /restore-volume-from-snapshot.html 
-                - title: Create a new volume from a snapshot
-                  url: /create-volume-from-snapshot.html
             - title: Use backups to object storage
               entries: 
                 - title: Create a manual backup
