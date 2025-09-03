@@ -34,7 +34,7 @@ Accept the statement regarding immutable snapshots.
 . Select *Apply*. 
 
 == Access a snapshot
-Enable snapshot directory access for the NFS or SMB/CIFS directory path for a volume snapshot.
+Enable snapshot directory access to give users the ability access snapshots autonomously.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -50,6 +50,11 @@ Enable snapshot directory access for the NFS or SMB/CIFS directory path for a vo
 * For SMB/CIFS volumes: Select *SMB access path* to view the SMB path for the snapshot.
 . Copy the access path.
 . Select *Apply*. 
+
+== Restore data from a snapshot
+You have the option to restore data from a snapshot to an existing volume or to a new volume.
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html[Restore a volume from a snapshot]
 
 == Delete a snapshot
 Delete a snapshot to free up space.
