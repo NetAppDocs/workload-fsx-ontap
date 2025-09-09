@@ -4,20 +4,26 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot
 summary: "Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files." 
 ---
-= Restore a volume from a snapshot in BlueXP workload factory
+= Restore a volume from a snapshot in workload factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-In BlueXP workload factory, you can restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files. 
+In workload factory, you can restore data from a snapshot to an existing volume or to a new volume. The restore operation enables point-in-time recovery when a volume contains deleted or corrupted files. 
 
 .About this task
-This operation restores data from a snapshot to a new volume. 
+You have the option to restore data from a snapshot to an existing volume or to a new volume.
+
+The creation of a new volume from a snapshot makes a copy of an entire volume within a few seconds independent of volume size. The newly created copy represents a new volume.
 
 .Before you begin
-You can only restore a volume from a snapshot if you have an existing snapshot copy of the volume. 
+Consider the following limitations before you create a volume from a snapshot:
 
-Make sure you have enough capacity to complete this operation. 
+* You can only restore a volume from a snapshot if you have an existing snapshot copy of the volume.
+
+* Changes to permission models: If you use this operation to switch the network-attached storage (NAS) protocol type, it might also switch the permission model that the security style provides. You might experience file access permission issues, which you can only fix manually with administrator access using the NAS client tools for permissions setting.
+
+* Increased volume consumption: After you create a volume from a snapshot, you have two independent volumes, and both consume capacity from the host file system. Make sure you have enough capacity to complete this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -25,7 +31,13 @@ Make sure you have enough capacity to complete this operation.
 . In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
 . From the *Volumes* tab, select the three-dot menu for the volume to restore from a snapshot.
-. Select *Data protection actions*, *Snapshots*, then *Restore volume from a snapshot*. 
-. In the Restore volume from a snapshot dialog, in the *Snapshot name* field, select the snapshot to restore from the dropdown menu.
-. In the *Restored volume name* field, enter a unique name for the volume to restore. 
+. Select *Data protection actions* and then *Manage snapshots*. 
+. From the Manage snapshots page, select the three-dot menu for the snapshot to restore, and then select *Restore*.
+. In the Restore volume from a snapshot dialog, select from the following options:
+* Toggle to select *Restore as a new volume*.
++
+In the *Restored volume name* field, enter a unique name for the volume to restore. 
+* Restore data from a snapshot to an existing volume. This operation permanently deletes any data that was modified after the snapshot creation time.
++ 
+Accept the statement to proceed. 
 . Select *Restore*. 
