@@ -29,7 +29,7 @@ Associating a new link includes link creation and association.
 
 You have two options for creating links in this workflow - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
 
-* Automatically: Creates a link with automatic registration via workload factory. A link created automatically requires tokens for workload factory automation and the CloudFormation code is short-lived. It can only be used for up to six hours. 
+* Automatically: Creates a link with automatic registration via workload factory. This requires tokens for workload factory automation and the CloudFormation code is short-lived and usable for up to six hours. 
 * Manually: Creates a link with manual registration using either CloudFormation or Terraform from the Codebox. The code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps that might first need to grant the permissions necessary to complete link creation.
 
 .Before you begin
