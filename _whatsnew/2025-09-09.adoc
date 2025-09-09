@@ -1,0 +1,33 @@
+=== Storage inventory report enhancements
+
+Workload factory has enhanced the data reported for your FSx for ONTAP file systems. The downloadable report from the FSx for ONTAP inventory page includes the following new columns:
+
+* SSD used: shows the value of SSD capacity used
+* SSD utilization: shows the percentage of SSD capacity in use
+* Throughput utilization: shows average and peak utilization for the last 30 days
+* IO utilization: shows average and peak IO utilization for the last 30 days
+* CPU utilization: shows average and peak CPU utilization for the last 30 days
+
+=== Snapshot management enhancements
+
+Workload factory has made several enhancements to view volume snapshot details and manage volume snapshots. These enhancements make it easier for you to understand the status of your snapshots and protect your data.
+
+image:screenshot-menu-view-volume-details.png["Screenshot that shows FSx for ONTAP volume menu with basic actions and then view volume details."]
+
+Additional items appear in Volume details under the Protection tab: 
+
+* Snapshot policy name
+* Snapshot space reservation
+* Snapshot space reservation capacity
+
+image:screenshot-volume-details-protection.png["Screenshot that shows FSx for ONTAP volume details with protection tab open."]
+
+The new snapshot management screen is accessible from a volume; it provides information about the snapshot policy for the volume and includes a table with all volume snapshots. The table displays the following snapshot details: creation time, size, expiry time, immutable snapshot protection, and labels. From the management screen, you can change the snapshot policy for the volume, create a snapshot manually, and edit, access, restore, and delete snapshots. 
+
+image:screenshot-manage-snapshots-screen.png["Screenshot that shows the manage snapshots screen."]
+
+=== SSD storage capacity decrease available
+
+Workload factory supports decreasing the solid-state drive (SSD) capacity of your first-generation and second-generation file systems. With elastic file system capacity, you can dynamically adjust the capacity of your file systems to match the needs of your workloads.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html[Adjust file system capacity]
