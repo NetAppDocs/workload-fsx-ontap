@@ -1,4 +1,4 @@
 ---
 permalink: create-volume-from-snapshot.html
-redirect: restore-volume-from-snapshot.html
+redirect: workload-fsx-ontap/restore-volume-from-snapshot.html
 ---
