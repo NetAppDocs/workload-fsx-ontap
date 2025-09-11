@@ -23,8 +23,6 @@ Consider the following limitations before you create a volume from a snapshot:
 
 * Changes to permission models: If you use this operation to switch the network-attached storage (NAS) protocol type, it might also switch the permission model that the security style provides. You might experience file access permission issues, which you can only fix manually with administrator access using the NAS client tools for permissions setting.
 
-* Increased volume consumption: After you create a volume from a snapshot, you have two independent volumes, and both consume capacity from the host file system. Make sure you have enough capacity to complete this operation. 
-
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to storage inventory*.  
