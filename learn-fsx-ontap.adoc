@@ -44,9 +44,15 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_incl
 == Cost
 AWS maintains your FSx for ONTAP account, not workload factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
 
-== Supported regions
-
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+== Regions
+Workload factory is supported in all commercial regions where FSx for ONTAP is supported. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+ 
+The following AWS regions aren't supported:
+ 
+* China regions
+* GovCloud (US) regions
+* Secret Cloud
+* Top Secret Cloud
 
 == Getting help
 Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.

@@ -11,6 +11,14 @@ summary: "Known limitations identify platforms, devices, or functions that are n
 [.lead]
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully. 
 
+== Region support
+The following AWS regions are not supported:
+
+* China regions
+* GovCloud (US) regions
+* Secret Cloud
+* Top Secret Cloud
+
 == Adding HA pairs limitations
 * This operation might take approximately 30 minutes to complete.
 * Adding HA pairs limits the following operations: adding more HA pairs, provisioning IOPS, increasing SSD capacity, and updating throughput capacity. 
