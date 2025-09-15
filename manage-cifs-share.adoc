@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: manage-cifs-share.html
 keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create
-summary: "Managing a volume's SMB/CIFS share in workload factory includes creation, determining user and group access, and deletion." 
+summary: "Managing a volume's SMB/CIFS share in Workload Factory includes creation, determining user and group access, and deletion." 
 ---
-= Manage the SMB/CIFS share for a volume in workload factory
+= Manage the SMB/CIFS share for a volume in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Managing a volume's SMB/CIFS share in workload factory includes SMB/CIFS share creation, determining the users and groups to give access to and the level of permissions to give them, and SMB/CIFS share deletion.
+Managing a volume's SMB/CIFS share in Workload Factory includes SMB/CIFS share creation, determining the users and groups to give access to and the level of permissions to give them, and SMB/CIFS share deletion.
 
 .Before you begin
 Before you begin, do the following: 
@@ -23,7 +23,8 @@ Follow the steps to create an SMB/CIFS share for a volume.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*.
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to change the SMB share for. 
 . Select *Advanced actions*, then *Manage SMB/CIFS shares*. 

@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity
 summary: "Manually adjust the SSD storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets."
 ---
-= Adjust file system capacity in workload factory
+= Adjust file system capacity in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -13,7 +13,7 @@ Manually adjust the solid-state drive (SSD) storage capacity of an FSx for ONTAP
 
 Increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify or decrease the SSD storage capacity when working sets are inactive to improve cost efficiency.  
 
-Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so workload factory manages file system capacity for you. 
+Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so Workload Factory manages file system capacity for you. 
 
 NOTE: Decreasing SSD storage capacity is only supported for second-generation file systems.
 

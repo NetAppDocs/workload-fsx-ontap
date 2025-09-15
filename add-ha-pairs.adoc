@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: add-ha-pairs.html
 keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap
-summary: "Add high-availability pairs to a file system in BlueXP workload factory to scale out the file system." 
+summary: "Add high-availability pairs to a file system in NetApp Workload Factory to scale out the file system." 
 ---
-= Add HA pairs to a file system in BlueXP workload factory
+= Add HA pairs to a file system in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Add high-availability (HA) pairs to scale out an FSx for ONTAP second-generation Single-AZ file system in BlueXP workload factory to increase performance and capacity. This expansion gives you more performance scalability and flexibility over first-generation file systems. 
+Add high-availability (HA) pairs to scale out an FSx for ONTAP second-generation Single-AZ file system in NetApp Workload Factory to increase performance and capacity. This expansion gives you more performance scalability and flexibility over first-generation file systems. 
 
 .About this task 
 The new HA pairs get added using the same SKU and same capacity per HA pair.
@@ -38,8 +38,9 @@ Do the following before you add HA pairs to a file system:
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.
-. In the *FSx for ONTAP* tab, under *Information*, select the pencil icon next to *HA pairs*.
+. In Storage, select *Go to storage inventory*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP* under *Information*, select the pencil icon next to *HA pairs*.
 . In the *Add HA pairs* dialog, select the number of HA pairs to add to the file system.
 . Select *Add* to confirm the addition of the HA pairs.
 

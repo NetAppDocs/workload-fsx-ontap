@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-volume.html
 keywords: create volume, FSx for ONTAP volume
-summary: "After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in workload factory."
+summary: "After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in Workload Factory."
 ---
-= Create an FSx for ONTAP volume in workload factory
+= Create an FSx for ONTAP volume in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in workload factory as virtual resources for grouping your data.
+After setting up your FSx for ONTAP file system, create FSx for ONTAP volumes in Workload Factory as virtual resources for grouping your data.
 
 .About this task
 FSx for ONTAP volumes group data virtually, determine how data is stored, and determine the type of access to your data. Volumes don't consume file system storage capacity. The data that is stored in a volume primarily consumes SSD storage. Depending on the volume's tiering policy, the data might also consume capacity pool storage. You set a volume's size when you create it, and you can change its size later. 
@@ -23,7 +23,7 @@ The following protocols might be used for your volumes:
 .Before you begin
 Review the following prerequisites before you create a volume: 
 
-* You must have an FSx for ONTAP file system in the workload factory console. 
+* You must have an FSx for ONTAP file system in the Workload Factory console. 
 * You must have a storage VM. 
 * For protocol access, complete the following: 
 ** To configure access to the volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
@@ -37,7 +37,8 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system you want to create a volume in, and select *Create volume*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system you want to create a volume in, and select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
 .. *Storage VM name*: Optionally, enter a storage VM name. 
@@ -105,7 +106,7 @@ NOTE: Snapshot times are based on the file system's time zone, which defaults to
 
 .. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
 +
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the workload factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the workload factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
 .. *Immutable files*: This feature, also known as SnapLock, is disabled by default. Enabling immutable files prevents data deletion or overwriting for a set period. Enabling this feature is possible only during volume creation. After the feature is enabled, it cannot be disabled. This is a premium feature for FSx for ONTAP that carries an additional charge. For more information, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html[How SnapLock works^] in Amazon FSx for NetApp ONTAP documentation. 
 +
 Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. 

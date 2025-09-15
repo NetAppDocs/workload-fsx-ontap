@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs
-summary: "Track FSx for ONTAP, credentials, and link operations and monitor job progress with Tracker in BlueXP workload factory for Storage."  
+summary: "Track FSx for ONTAP, credentials, and link operations and monitor job progress with Tracker in NetApp Workload Factory for Storage."  
 ---
-= Monitor storage operations with Tracker in BlueXP workload factory
+= Monitor storage operations with Tracker in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Monitor and track the execution of FSx for ONTAP, credentials, and link operations and monitor task progress with Tracker in BlueXP workload factory. 
+Monitor and track the execution of FSx for ONTAP, credentials, and link operations and monitor task progress with Tracker in NetApp Workload Factory. 
 
 .About this task 
 Workload factory provides Tracker, a monitoring feature, so you can monitor and track the progress and status of FSx for ONTAP, credentials, and link operations, review details for operation tasks and subtasks, and diagnose any issues or failures.
@@ -38,7 +38,7 @@ Track and monitor operations in BlueXP with Tracker.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*.
-. From storage inventory, select account settings menu and then select *Tracker*.
+. From the Storage menu, select *Administration* and then *Links*.
 +
 image:screenshot-menu-tracker-option.png["A screenshot of the account settings menu with the Tracker option highlighted."] 
 . In the Tracker tab, use the filters or search to narrow job results. You can also download a jobs report.  

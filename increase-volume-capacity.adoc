@@ -2,16 +2,16 @@
 sidebar: sidebar
 permalink: increase-volume-capacity.html
 keywords: increase capacity, volume capacity
-summary: "Manually increase the volume capacity of a volume in BlueXP workload factory at any time." 
+summary: "Manually increase the volume capacity of a volume in NetApp Workload Factory at any time." 
 ---
-= Increase volume capacity in BlueXP workload factory
+= Increase volume capacity in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manually increase the volume capacity of a volume at any time in BlueXP workload factory. 
+Manually increase the volume capacity of a volume at any time in NetApp Workload Factory. 
 
-Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature] to let workload factory manage volume capacity for you. 
+Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature] to let Workload Factory manage volume capacity for you. 
 
 .About this task
 For an iSCSI LUN, this operation increases the size of the host LUN. After the capacity increases, follow the procedure provided by your host operating system to discover the new size of the LUN and expand the file system of the LUN. 
@@ -22,7 +22,8 @@ To increase volume capacity, you must associate a link. link:https://docs.netapp
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to increase capacity for. 
 . Select *Basic actions*, then *Increase volume capacity*.

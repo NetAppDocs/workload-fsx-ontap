@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information
 summary: View volume details, distribution, consumption, access, and protection.
 ---
-= View volume details in BlueXP workload factory
+= View volume details in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

@@ -9,7 +9,7 @@ summary: "Replicating a storage VM to another FSx for ONTAP file system provides
 :imagesdir: ./media/
 
 [.lead]
-Replicating a storage VM to another FSx for ONTAP file system in BlueXP workload factory provides a protective layer of data access in case of data loss. This operation replicates all volumes in one storage VM to another FSx for ONTAP file system. 
+Replicating a storage VM to another FSx for ONTAP file system in NetApp Workload Factory provides a protective layer of data access in case of data loss. This operation replicates all volumes in one storage VM to another FSx for ONTAP file system. 
 
 .Before you begin
 To replicate a storage VM to another FSx for ONTAP file system, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
@@ -17,7 +17,8 @@ To replicate a storage VM to another FSx for ONTAP file system, you must associa
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the storage VM to replicate and then select *Manage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system with the storage VM to replicate and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
 . From the Storage VMs tab, select the three-dot menu of the storage VM to replicate an SVM for.
 . Select *Replicate storage VM*. 
@@ -27,7 +28,7 @@ To replicate a storage VM to another FSx for ONTAP file system, you must associa
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`.
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. 
 +
-_Auto_ is the default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
+_Auto_ is the default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance might decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 

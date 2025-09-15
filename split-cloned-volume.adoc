@@ -4,12 +4,12 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume
 summary: "Split a clone FlexVol volume from its parent volume to make the clone a normal read/write FlexVol volume." 
 ---
-= Split a cloned volume in BlueXP workload factory
+= Split a cloned volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Split a cloned FlexVol volume from its parent volume to make the clone a normal read/write FlexVol volume in BlueXP workload factory. 
+Split a cloned FlexVol volume from its parent volume to make the clone a normal read/write FlexVol volume in NetApp Workload Factory. 
 
 Data is accessible on the clone and the parent during the split. The split process only updates metadata and requires minimal IO. No data blocks are copied.
 
@@ -32,7 +32,9 @@ Consider the following before you split a cloned volume:
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. Select the *Volumes* tab. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume clone to split and then select *Manage*.  
+. From the file system overview, select the *Volumes* tab. 
 . In the Volumes tab, select the three-dot menu of the volume with the cloned volume to split. 
 . Select *Data protection actions*, then *Split cloned volume*. 
 . In the Split volume dialog, select *Delete*. 

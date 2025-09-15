@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-snapshot-policy.html
 keywords: create
-summary: "Create a custom snapshot policy for a storage VM in workload factory."
+summary: "Create a custom snapshot policy for a storage VM in Workload Factory."
 ---
-= Create a snapshot policy for storage VMs in workload factory
+= Create a snapshot policy for storage VMs in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a custom snapshot policy for storage VMs in workload factory to manage snapshot creation and retention. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
+Create a custom snapshot policy for storage VMs in Workload Factory to manage snapshot creation and retention. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
 
 .About this task
 You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
@@ -31,8 +31,9 @@ Customizing a policy lets you specify when to create snapshots, how many copies 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*. 
+. In Storage, select *Go to storage inventory*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*. 
 . In the file system overview, select the *Storage VMs* tab.
 . From the *Storage VMs* tab, select the three-dot menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
 . On the Snapshot policy management page, select *Create snapshot policy*. 

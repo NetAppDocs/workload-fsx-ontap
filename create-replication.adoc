@@ -4,12 +4,12 @@ permalink: create-replication.html
 keywords: replication, replicate
 summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
 ---
-= Create a replication relationship in BlueXP workload factory
+= Create a replication relationship in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a replication relationship for an FSx for ONTAP file system in BlueXP workload factory to avoid data loss in case of an unforeseen disaster.
+Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster.
 
 .About this task
 Replication is an added layer of data protection which is essential in case the region where your data resides experiences a disaster. Data loss can be avoided if you use cross-region replication. 
@@ -33,7 +33,8 @@ You can replicate one source (read/write) volume or one data protection (DP) vol
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume(s) to replicate and then select *Manage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system that contains the volume(s) to replicate and then select *Manage*.
 . Either replicate all volumes in a file system or replicate select volumes. 
 * To replicate all volumes in a file system: From the file system overview, select *Replicate data*.
 * To replicate select volumes: From the file system overview, select the *Volumes* tab.

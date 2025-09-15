@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
-summary: "Discover and replicate on-premises ONTAP data in BlueXP workload factory so it can be used to enrich AI knowledge bases."
+summary: "Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used to enrich AI knowledge bases."
 ---
-= Use on-premises ONTAP cluster data in BlueXP workload factory
+= Use on-premises ONTAP cluster data in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Discover and replicate on-premises ONTAP data in BlueXP workload factory so it can be used to enrich AI knowledge bases.
+Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used to enrich AI knowledge bases.
 
 .About this task
 To use data from an on-premises ONTAP cluster, you'll first need to discover the on-premises ONTAP cluster. After you've discovered an on-premises ONTAP cluster, you can use the data for any of the following use cases. 
@@ -22,7 +22,7 @@ Note that the primary use case for the GenAI workload is the focus of this serie
 * *Data tiering*: After replication, infrequently accessed on-premises ONTAP volume data can be tiered from the SSD storage tier to the capacity pool storage tier. 
 
 == Discover an on-premises ONTAP cluster
-Discover an on-premises ONTAP cluster in BlueXP workload factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
+Discover an on-premises ONTAP cluster in NetApp Workload Factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
 
 .Before you begin
 Make sure you have the following before you begin: 
@@ -42,7 +42,7 @@ image:screenshot-on-prem-connectivity.png["Screenshot that shows how an on-premi
 . Select *Discover*. 
 . Review the prerequisites and select *Next*. 
 . On the Discover ONTAP on-premises page, provide the following under *Cluster configuration*:
-.. *Link*: Select a link. The link will be associated with the on-premises cluster to create connectivity between the cluster and workload factory.
+.. *Link*: Select a link. The link will be associated with the on-premises cluster to create connectivity between the cluster and Workload Factory.
 +
 If you haven't created a link, follow the instructions and then return to this operation and select the link.
 .. *Cluster IP address*: Provide the IP address for the on-premises ONTAP cluster to replicate. 
@@ -66,7 +66,7 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. Select the *On-premises ONTAP* tab.
+. From the Storage menu, select *On-premises ONTAP*. 
 . To find volumes by storage VM, you can *Select storage VM* from the dropdown.  
 . Select one or more volumes to replicate and then select *Replicate*.
 . On the Create replication page, under Replication target, provide the following: 
@@ -75,7 +75,7 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering data*: Select the tiering policy for the data stored in the target volume. 
 +
-* *Auto*: The default tiering policy when creating a volume using the workload factory FSx for ONTAP user interface. Tiers all cold data that includes user data and snapshots to the capacity pool storage tier for a specific time period. 
+* *Auto*: The default tiering policy when creating a volume using the Workload Factory FSx for ONTAP user interface. Tiers all cold data that includes user data and snapshots to the capacity pool storage tier for a specific time period. 
 * *Snapshot only*: Tiers only snapshot data to the capacity pool storage tier. 
 * *None*: Keeps all your volume's data on the primary storage tier. 
 * *All*: Marks all user data and snapshot data as cold and stores it in the capacity pool storage tier. 
@@ -101,8 +101,8 @@ If you enable long-term retention, then select an existing policy or create a ne
 .Result
 The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system.  
 
-== Remove an on-premises ONTAP cluster from BlueXP workload factory
-Remove an on-premises ONTAP cluster from BlueXP workload factory when needed. 
+== Remove an on-premises ONTAP cluster from NetApp Workload Factory
+Remove an on-premises ONTAP cluster from NetApp Workload Factory when needed. 
 
 .Before you begin
 You must link:delete-replication.html[delete all existing replication relationships] for any volumes in the on-premises ONTAP cluster before removing the cluster so that no broken relationships remain.
@@ -110,9 +110,9 @@ You must link:delete-replication.html[delete all existing replication relationsh
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to storage inventory*. 
-. Select the *On-premises ONTAP* tab.
+. From the Storage menu, select *On-premises ONTAP*. 
 . Select the on-premises ONTAP cluster to remove. 
 . Select the three-dots menu and select *Remove from Workload Factory*. 
 
 .Result
-The on-premises ONTAP cluster is removed from BlueXP workload factory. 
+The on-premises ONTAP cluster is removed from NetApp Workload Factory. 

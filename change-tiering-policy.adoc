@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: change-tiering-policy.html
 keywords: tiering policy, change tier, change tiers, tier policy update
-summary: "Change the tiering policy in BlueXP workload factory to re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier."
+summary: "Change the tiering policy in NetApp Workload Factory to re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier."
 ---
-= Change the tiering policy of a volume in BlueXP workload factory
+= Change the tiering policy of a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-In BlueXP workload factory, you can change the tiering policy to automatically re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier. 
+In NetApp Workload Factory, you can change the tiering policy to automatically re-allocate data from the high-performance primary storage tier to the secondary capacity pool storage tier. 
 
 .About this task
 You can change the tiering policy of a volume at any time. The tiering policy is defined per volume. 
@@ -35,8 +35,9 @@ Note that some tiering policies have an associated minimum cooling period which 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
+. In Storage, select *Go to storage inventory*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the three-dot menu of the volume to change the tiering policy for. 
 . Select *Advanced actions*, then *Change tiering policy*.  

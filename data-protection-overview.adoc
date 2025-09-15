@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: data-protection-overview.html
 keywords: overview
-summary: "FSx for ONTAP supports snapshots, NetApp Autonomous Ransomware with AI, volume replication, and backups in BlueXP workload factory."
+summary: "FSx for ONTAP supports snapshots, NetApp Autonomous Ransomware with AI, volume replication, and backups in NetApp Workload Factory."
 ---
-= Types of data protection in BlueXP Workload Factory
+= Types of data protection in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: enable-auto-capacity-management.html
 keywords: auto capacity, automatic capacity management, file system capacity
-summary: "Enabling this feature lets workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time."  
+summary: "Enabling this feature lets Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time."  
 ---
 = Enable automatic capacity management for an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enabling automatic capacity management lets BlueXP workload factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity manually and mitigates the risk of impactful application data reads and writes. 
+Enabling automatic capacity management lets NetApp Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity manually and mitigates the risk of impactful application data reads and writes. 
 
 .About this task 
 A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, or the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
@@ -21,14 +21,15 @@ The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is
 .Before you begin
 Consider the following before you begin: 
 
-* You must have credentials with _read/write_ permissions in workload factory to complete this task.
+* You must have credentials with _read/write_ permissions in Workload Factory to complete this task.
 * To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * You shouldn't enable this feature during data migration because AWS imposes a minimum six-hour cool down period between SSD capacity increases. This restriction might delay adjustments, so plan accordingly.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to enable automatic capacity management for. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system to enable automatic capacity management for. 
 . Select *Manage*. 
 . Under Information, select the pencil icon next to *Automatic capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic capacity management* row. 
 . In the *Automatic capacity management* dialog, provide the following: 
