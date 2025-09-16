@@ -15,7 +15,7 @@ Volume details appear only after a volume has been created in a file system.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage*. 
+. In the Storage tile, select *Go to Storage*. 
 . In the Volumes tab, select the three-dot menu for the volume you wish to modify. 
 . Select *Basic actions* then *View volume details*. 
 . In *Volume details*, select the tabs to view the following volume details: 

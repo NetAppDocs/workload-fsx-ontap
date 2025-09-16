@@ -41,7 +41,7 @@ NOTE: Only one authentication method is supported per link. For example, if you 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage*. 
+. In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Authenticate the link*.
@@ -59,7 +59,7 @@ When the administrative password is invalid, update the password to connect the 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage*. 
+. In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to associate a link to and then select *Manage*. 
 . In the file system overview, select *Update password*.
@@ -76,7 +76,7 @@ Note that the link is only deleted from Workload Factory - it is not deleted fro
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage*.
+. In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *Administration* and then *Links*.
 +
 Existing links appear on the Links page.

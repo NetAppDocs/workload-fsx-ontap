@@ -22,7 +22,7 @@ For information about IOPS limits, refer to link:https://docs.aws.amazon.com/fsx
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage*. 
+. In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to provision IOPS for and then select *Manage*. 
 . Under Information, select the pencil icon that appears next to the dropdown arrow when the mouse hovers over the *IOPS allocation* row. 

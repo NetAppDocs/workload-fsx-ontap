@@ -15,7 +15,7 @@ For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/la
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage*. 
+. In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to update throughput capacity for and then select *Manage*. 
 . Under Information, select the pencil icon next to *Throughput capacity*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Throughput capacity* row. 

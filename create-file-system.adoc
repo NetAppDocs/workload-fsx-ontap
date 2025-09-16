@@ -37,7 +37,7 @@ Second-generation FSx for ONTAP file systems are the default deployment type for
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Create FSx for ONTAP*.  
+. In the Storage tile, select *Create FSx for ONTAP*.  
 . On the Create FSx for ONTAP page, select *Quick create*. 
 +
 You can also load a saved configuration.
@@ -89,7 +89,7 @@ With Advanced create, you set all of the configuration options, including availa
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Create FSx for ONTAP*.  
+. In the Storage tile, select *Create FSx for ONTAP*.  
 . On the Create FSx for ONTAP page, select *Advanced create*. 
 +
 You can also load a saved configuration.
