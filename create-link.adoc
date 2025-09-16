@@ -86,7 +86,8 @@ Use CloudFormation to automatically create and register the link within Workload
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
@@ -139,7 +140,8 @@ You can create a link using two Infrastructure-as-Code (IaC) tools from the Code
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the three-dot menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
 . On the Create Link page, select CloudFormation or Terraform from the Codebox, and then provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
