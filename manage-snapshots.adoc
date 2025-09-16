@@ -16,7 +16,7 @@ Edit the name, label, and retention period of a snapshot. If the snapshot isn't 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*.  
+. In *Storage*, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
@@ -39,7 +39,7 @@ Enable snapshot directory access to give users the ability access snapshots auto
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*.  
+. In *Storage*, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
@@ -65,7 +65,7 @@ Immutable snapshots cannot be deleted until the retention period ends.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*.  
+. In *Storage*, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.

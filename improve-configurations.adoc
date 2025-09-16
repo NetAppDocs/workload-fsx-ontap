@@ -20,7 +20,7 @@ Workload factory analyzes Amazon FSx for NetApp ONTAP file system deployment con
 
 Link connectivity allows Workload Factory to scan for issues with performance, data protection, and configurations. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
 
-You have options to review the recommendations for configuration issues with your file systems and fix the issues from the storage inventory within the Workload Factory console. 
+You have options to review the recommendations for configuration issues with your file systems and fix the issues from the Storage within the Workload Factory console. 
 
 Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. When a specific configuration analysis is dismissed, the configuration isn't included in the total optimization score.
 
@@ -47,7 +47,7 @@ You can fix configuration issues for an FSx for ONTAP file system or for selecte
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage inventory*.
+. In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to update and then select *Manage*.  
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
@@ -76,7 +76,7 @@ Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage inventory*.
+. In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
@@ -89,7 +89,7 @@ Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage inventory*.
+. In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
@@ -119,7 +119,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage inventory*.
+. In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
@@ -132,7 +132,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage inventory*.
+. In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 

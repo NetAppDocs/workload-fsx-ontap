@@ -17,7 +17,7 @@ Note that enabling immutable files is only possible during link:create-volume.ht
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.  
+. In Storage, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system with the volume to update and then select *Manage*. 
 . In the Volumes tab, select the three-dot menu of the volume to clone. 
@@ -53,7 +53,7 @@ Note that enabling immutable files is only possible during link:create-volume.ht
 //Consider the retention mode and retention period for the files in the volume before you begin. 
 //.Steps
 //. Log in to the link:https://console.workloads.netapp.com/[Workload Factory console^]. 
-//. In Storage, select *Go to storage inventory*. 
+//. In Storage, select *Go to Storage*. 
 //. Select the *Volumes* tab. 
 //. In the Volumes tab, select the three-dot menu of the volume to clone. 
 //. Select *Data protection actions*, then *Manage immutable files*. 
@@ -82,7 +82,7 @@ Note that enabling immutable files is only possible during link:create-volume.ht
 //Follow the steps to disable the immutable files features for any volume. 
 //.Steps
 //. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-//. In Storage, select *Go to storage inventory*. 
+//. In Storage, select *Go to Storage*. 
 //. Select the *Volumes* tab. 
 //. In the Volumes tab, select the three-dot menu of the volume to clone. 
 //. Select *Data protection actions*, then *Manage immutable files*. 

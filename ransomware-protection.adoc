@@ -57,7 +57,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*.
+. In Storage, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to enable ARP/AI and then select *Manage*. 
 . Under Information, select the pencil icon next to *Autonomous Ransomware Protection*. The pencil icon appears next to the arrow when the mouse hovers over the *Autonomous Ransomware Protection* row. 
@@ -76,7 +76,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to enable ARP/AI and then select *Manage*. 
 . From the Volumes tab, select the three-dot menu of the volume to enable ARP/AI, then *Data protection actions*, and then *Manage ARP/AI*.
@@ -94,7 +94,7 @@ Determine if an attack is a false alarm or a genuine ransomware incident.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*.
+. In Storage, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the file system to validate ransomware attacks for. 
 . From the file system overview, select the *Volumes* tab. 
@@ -113,7 +113,7 @@ With the knowledge of the affected files and the time of attack, it is possible 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the file system to recover data for.
 . From the file system overview, select the *Volumes* tab. 

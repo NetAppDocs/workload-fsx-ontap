@@ -38,7 +38,7 @@ Do the following before you add HA pairs to a file system:
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP* under *Information*, select the pencil icon next to *HA pairs*.
 . In the *Add HA pairs* dialog, select the number of HA pairs to add to the file system.

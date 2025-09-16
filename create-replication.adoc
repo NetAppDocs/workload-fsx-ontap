@@ -23,7 +23,7 @@ When replicating a source volume with immutable files, the target volume and fil
 .Before you begin
 Make sure you meet the following prerequisites before you begin. 
 
-* You must have two available file systems in your storage inventory to create a replication relationship.
+* You must have two available file systems in your Storage to create a replication relationship.
 * The two file systems you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 
 Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
@@ -32,7 +32,7 @@ You can replicate one source (read/write) volume or one data protection (DP) vol
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system that contains the volume(s) to replicate and then select *Manage*.
 . Either replicate all volumes in a file system or replicate select volumes. 

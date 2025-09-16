@@ -19,7 +19,7 @@ Consider when you choose to complete this operation. Initialization can be time-
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab.

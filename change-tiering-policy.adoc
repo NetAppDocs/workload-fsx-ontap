@@ -35,7 +35,7 @@ Note that some tiering policies have an associated minimum cooling period which 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 

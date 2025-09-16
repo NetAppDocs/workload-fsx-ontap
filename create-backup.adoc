@@ -23,7 +23,7 @@ To take backups of your volumes, both your volume and your file system must have
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
+. In Storage, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.

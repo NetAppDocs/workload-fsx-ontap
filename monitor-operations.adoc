@@ -37,7 +37,7 @@ Track and monitor operations in BlueXP with Tracker.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*.
+. In Storage, select *Go to Storage*.
 . From the Storage menu, select *Administration* and then *Links*.
 +
 image:screenshot-menu-tracker-option.png["A screenshot of the account settings menu with the Tracker option highlighted."] 
