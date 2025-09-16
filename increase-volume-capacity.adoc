@@ -30,4 +30,4 @@ To increase volume capacity, you must associate a link. link:https://docs.netapp
 . In the Increase volume capacity dialog, provide the following:  
 .. Select a larger size.
 .. Change the unit if needed.  
-. select *Increase*.
+. Select *Increase* to apply the change.
