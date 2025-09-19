@@ -1,0 +1,3 @@
+=== VS Code extension available for FSx for ONTAP
+
+The VS Code extension for Amazon FSx for NetApp ONTAP, "netapp-fsx-ontap", allows you to access and manage your FSx for ONTAP file system resources. With the extension, you can use Secure Shell (SSH) to connect to the terminal with EC2 Instance Connect or connect directly from your computer. GitHub Copilot is integrated with the extension. You can ask GitHub Copilot questions about your resources and take actions without using the Workload Factory console or ONTAP CLI.
