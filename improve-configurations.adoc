@@ -36,6 +36,9 @@ Workload factory analyzes the well-architected status of the following configura
 * Automatic capacity management
 * NetApp Autonomous Ransomware Protection with AI (ARP/AI)
 * Data reliability for long-term retention
+* Volume file capacity utilization threshold
+* Volume utilization nearing full
+* Unauthorized access to volume
 
 == Fix a configuration issue
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
