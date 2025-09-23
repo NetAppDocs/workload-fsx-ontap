@@ -113,7 +113,7 @@ sidebar:
               url: /delete-volume.html
         - title: File system administration
           entries: 
-            - title: Increase file system capacity
+            - title: Adjust file system capacity
               url: /increase-file-system-capacity.html
             - title: Enable automatic capacity management
               url: /enable-auto-capacity-management.html

@@ -34,14 +34,14 @@ Workload factory now analyzes your FSx for ONTAP file systems for the following 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
 
 ==== Improvements to actions for configuration issues
-From the *Well-architected analysis* tab for an FSx for ONTAP file system, you can select to view only dismissed configurations in the configurations list. You can also select one or more volumes within a file system to fix, dismiss, or reactivate. 
+From the *Well-architected analysis* tab in the dashboard for an FSx for ONTAP file system, you can select to view only dismissed configurations in the configurations list. You can also select one or more volumes within a file system to fix, dismiss, or reactivate. 
 
 === Additional notifications for Storage
 
 The NetApp Workload Factory notification service includes notifications for the following:
 
 * Automatic capacity management
-* Well-architected issues
+* Well-architected configuration issues
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html#notification-types-and-messages[Notification types and messages in the Workload Factory setup and administration documentation]
 
