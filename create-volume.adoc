@@ -124,6 +124,9 @@ NOTE:: Even after the retention period expires, you can't modify a WORM file. Yo
 Autocommit:::
 You'll have the option to enable the autocommit feature. The autocommit feature commits a file to WORM state on a SnapLock volume if the file did not change for the autocommit period duration. The autocommit feature is disabled by default. You must ensure that the files you want to autocommit reside on a SnapLock volume.
 +
+Privileged delete:::
+A SnapLock administrator can turn on privileged delete on a SnapLock Enterprise volume to allow a file to be deleted before the file's retention period expires. This feature is disabled by default.
++
 Volume append mode:::
 You can't modify existing data in a WORM-protected file. However, immutable files allows you to maintain protection for existing data using WORM-appendable files. For example, you can generate log files or preserve audio or video streaming data while writing data to them incrementally. link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append[Learn more about volume-append mode^] in Amazon FSx for NetApp ONTAP documentation.
 +

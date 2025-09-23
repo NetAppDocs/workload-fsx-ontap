@@ -30,7 +30,7 @@ Note that enabling immutable files is only possible during link:create-volume.ht
 *** *Retention policy*: This period must be greater than or equal to the minimum retention period and less than or equal to the maximum retention period. 
 *** *Minimum and maximum periods*: Set the minimum and maximum periods to commit files in this volume to an immutable WORM state. 
 * *Autocommit*: enable or disable the feature to automatically commit files to WORM that haven't been modified during the Autocommit period.
-//* *Privileged delete*: enable or disable the feature. Enabling the feature allows a SnapLock administrator to delete an unexpired WORM volume. This feature is only supported in Enterprise retention mode. 
+* *Privileged delete*: Enable or disable the feature. Enabling the feature allows a SnapLock administrator to delete an unexpired WORM volume. This feature is only supported in Enterprise retention mode. 
 * *Volume append mode*: enable or disable the feature. Enabling volume append mode enables you to add new content to WORM files. 
 . Click *Apply*. 
 
