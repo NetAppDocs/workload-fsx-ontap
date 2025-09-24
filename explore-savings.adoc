@@ -128,7 +128,7 @@ Follow the steps under the tab for your storage selection.
 . In the *Amazon FSx for Windows File Server* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the deployment type of the instance(s) you selected:  
 .. *Use case*: The use case for your configuration. You can change the use case if needed.
-.. *Selected file systems
+.. *Selected file systems*
 .. *Total storage amount (TiB)*
 .. *Provisioned SSD IOPS*
 .. *Throughput (MiB/s)* 
