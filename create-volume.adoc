@@ -149,9 +149,9 @@ _Balanced (Auto)_ is the default tiering policy when creating a volume using the
 * Select the minimum and maximum retention periods: 
 ** *Minimum*: Enter the number of seconds, minutes, hours, days, months, or years to set the minimum retention period.
 ** *Maximum*: Enter the number of seconds, minutes, hours, days, months, or years to set the maximum retention period.
-... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period. 
+... *Autocommit*: Disable or enable autocommit. If you enable autocommit, set the autocommit period.
+... *Privileged delete*: Disable or enable. If you enable privileged delete, a SnapLock administrator can delete a file before its retention period expires. 
 ... *Volume append mode*: Disable or enable. Enables you to add new content to WORM files.
-... *Privileged delete*: Disable or enable. If you enable privileged delete, a SnapLock administrator can delete a file before its retention period expires.
 .. *ARP/AI*: NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default when a link is associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ARP/AI]. Accept the statement to proceed.
 +
 If the feature is unavailable, it is because of one of the following reasons: 
