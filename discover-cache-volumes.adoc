@@ -16,7 +16,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html[Lear
 .About this task
 Link association is required to discover FlexCache relationships.
 
-A FlexCache relationship can exist in a single file system, from volume to volume.
+A FlexCache relationship can exist between volumes on two different file systems or in a single file system, from volume to volume.
 
 .Before you begin
 Consider the following before you begin. 
