@@ -71,6 +71,8 @@ sidebar:
                   url: /create-replication.html
                 - title: Initialize a replication relationship
                   url: /initialize-replication.html
+                - title: Discover and view cache volumes
+                  url: /discover-cache-volumes.html  
             - title: Protect data with Autonomous Ransomware Protection
               url: /ransomware-protection.html   
             - title: Clone a volume

@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: discover-cache-volumes.html
+keywords: discover cache volume, FlexCache, FSx for ONTAP volume
+summary: "Discover and view cache, or FlexCache, volumes in Workload Factory."
+---
+= Discover cache volumes in Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Discover and view _cache_, or _FlexCache_, volumes that are associated with FlexCache relationships in an FSx for ONTAP file system without leaving the NetApp Workload Factory console. FlexCache is NetApp ONTAP's remote caching capability that accelerates data access, reduces WAN latency, bandwidth and costs for read-intensive workloads, especially where clients need to access the same data repeatedly.
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html[Learn more about replicating data with FlexCache.^]
+
+.About this task
+Link association is required to discover FlexCache relationships.
+
+A FlexCache relationship can exist in a single file system, from volume to volume.
+
+.Before you begin
+Consider the following before you begin. 
+
+* You must associate a link to discover FlexCache relationships on a file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* You must have an existing FlexCache relationship.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.  
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the *Cache relationships* tab. 
+. Your cache volumes appear in the table. The table includes the following information about each cache volume:
+
+* *Origin cluster*: The origin, or source, cluster of the FlexCache relationship.
+* *Origin volume*: The origin, or source, volume of the FlexCache relationship.
+* *Origin storage VM*: The origin, or source, storage VM of the volume.
+* *Cache volume*: The cache, or target, volume of the FlexCache relationship.
+* *Cache storage VM*: The cache, or target, storage VM of the volume.
+* *Status*: The status of the FlexCache relationship. 
+* *Available storage on cache*: The amount of available storage on the cache volume.
+* *Cache file system*: The file system of the cache volume.
+* *Write modes*: The write mode of the FlexCache relationship. 
+* *DR cache*: Indicates whether the FlexCache relationship is a disaster recovery (DR) cache. 
+* *Export policy*: The export policy of the cache volume.
