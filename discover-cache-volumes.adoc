@@ -1,28 +1,28 @@
 ---
 sidebar: sidebar
 permalink: discover-cache-volumes.html
-keywords: discover cache volume, FlexCache, FSx for ONTAP volume
-summary: "Discover and view cache, or FlexCache, volumes in Workload Factory."
+keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume
+summary: "Discover and view cache volumes that are associated with cache relationships without leaving the NetApp Workload Factory console."
 ---
 = Discover cache volumes in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Discover and view _cache_, or _FlexCache_, volumes that are associated with FlexCache relationships in an FSx for ONTAP file system without leaving the NetApp Workload Factory console. FlexCache is NetApp ONTAP's remote caching capability that accelerates data access, reduces WAN latency, bandwidth and costs for read-intensive workloads, especially where clients need to access the same data repeatedly.
+Discover and view _cache_ volumes that are associated with cache relationships without leaving the NetApp Workload Factory console. Cache relationships are also known as ONTAP FlexCache relationships. Workload Factory discovers existing cache relationships using FlexCache technology, which is NetApp ONTAP's remote caching capability that accelerates data access, reduces WAN latency, bandwidth and costs for read-intensive workloads, especially where clients need to access the same data repeatedly.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html[Learn more about replicating data with FlexCache.^]
 
 .About this task
-Link association is required to discover FlexCache relationships.
+Link association is required to discover cache relationships.
 
-A FlexCache relationship can exist between volumes on two different file systems or in a single file system, from volume to volume.
+A cache relationship can exist between volumes on two ONTAP systems such as one FSx for ONTAP file system and one Cloud Volumes ONTAP system. A cache relationship can also exist within a single FSx for ONTAP file system, from volume to volume.
 
 .Before you begin
 Consider the following before you begin. 
 
-* You must associate a link to discover FlexCache relationships on a file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
-* You must have an existing FlexCache relationship.
+* You must associate a link to discover cache relationships on a file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* You must have an existing cache relationship.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

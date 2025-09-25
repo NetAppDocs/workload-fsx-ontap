@@ -10,7 +10,7 @@ You can quickly navigate to an FSx for ONTAP file system resource screen by sele
 
 === Discover cache relationships in the Workload Factory console
 
-If you have _cache_ (NetApp ONTAP FlexCache) relationships between FSx for ONTAP file system and another type of ONTAP storage (on-premises system, Cloud Volumes ONTAP, and FSx for ONTAP), you can discover and view them from the Workload Factory console. This allows you to better understand data flows, optimize cache utilization, and improve efficiency across distributed environments.
+If you have _cache_ relationships between FSx for ONTAP file system and another type of ONTAP storage (on-premises system, Cloud Volumes ONTAP, and FSx for ONTAP), you can discover and view them from the Workload Factory console. This allows you to better understand data flows, optimize cache utilization, and improve efficiency across distributed environments.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.html[Discover and view cache relationships in the Workload Factory console]
 
@@ -26,17 +26,17 @@ Workload factory now analyzes your FSx for ONTAP file systems for the following 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
 
 ==== Improvements to actions for configuration issues
-From the *Well-architected analysis* tab in the dashboard for an FSx for ONTAP file system, you can select to view only dismissed configurations in the configurations list. You can also select one or more volumes within a file system to fix, dismiss, or reactivate. 
+From the *Well-architected analysis* tab in the dashboard for an FSx for ONTAP file system, instead of dismissing an entire configuration for a file system, you can also select one or more volumes within a file system to fix, dismiss, or reactivate.
 
 === Additional notifications for Storage
 
 The NetApp Workload Factory notification service includes notifications for the following:
 
-* Automatic capacity management
-* Well-architected configuration issues
+* Automatic capacity management (condition-based)
+* Well-architected configuration issues (weekly)
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html#notification-types-and-messages[Notification types and messages in the Workload Factory setup and administration documentation]
 
 === Immutable files support privileged delete
 
-With this feature, you can configure privileged delete access for immutable files in your FSx for ONTAP file systems. This allows you to protect critical data from accidental or malicious deletion while still enabling authorized users to manage these files as needed. Enabling privileged delete is available during volume creation or for existing volumes.
+With this feature, you can configure privileged delete access for immutable files in your FSx for ONTAP file systems. This allows you to protect critical data from accidental or malicious deletion while still enabling authorized users to override the lock and delete these files as needed. Enabling privileged delete is available during volume creation or for existing volumes.
