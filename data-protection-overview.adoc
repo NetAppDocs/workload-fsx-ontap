@@ -21,11 +21,9 @@ A snapshot creates a read-only, point-in-time image of a volume within the sourc
 NetApp Autonomous Ransomware Protection with AI (ARP/AI) uses workload analysis in NAS (NFS/SMB) environments to detect and warn about abnormal activity that might be a ransomware attack. When an attack is suspected, ARP/AI also creates new, immutable snapshots in addition to the existing protection provided by scheduled snapshots.
 
 .Replication
-Two types of volume replication are available for Amazon FSx for NetApp ONTAP: replication using ONTAP SnapMirror technology and ONTAP FlexCache technology.
+Replication creates a secondary copy of your data on another FSx for ONTAP file system and continually updates the secondary data. Your data is kept current and remains available whenever you need it, such as for disaster recovery.
 
-Replication using ONTAP SnapMirror technology creates a secondary copy of your data on another FSx for ONTAP file system and continually updates the secondary data. Your data is kept current and remains available whenever you need it, such as for disaster recovery.
-
-Replication using ONTAP FlexCache technology creates a writable cache volume that provides low-latency access to data stored in an origin, or source, volume. The cache can be located in a different, optionally remote, file system. Instead of copying all data from the origin volume, FlexCache copies data only as needed. FlexCache volumes are ideal for read-intensive workflows with infrequent data changes; any changes to the origin data require the cache to be refreshed.
+You can choose to create both replicated volumes on another FSx for ONTAP file system and backup files in the cloud. Or you can choose just to create replicated volumes or backup files - it's your choice.
 
 .Backups
 You can create backups of your data to the cloud for protection and for long-term retention purposes. If necessary, you can restore a volume, folder, or individual files from the backup to the same, or different, working file system.

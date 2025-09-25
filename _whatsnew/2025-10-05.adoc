@@ -1,13 +1,3 @@
-=== VS Code extension available for FSx for ONTAP
-
-The VS Code extension for Amazon FSx for NetApp ONTAP, "netapp-fsx-ontap", allows you to access and manage your FSx for ONTAP file system resources. With the extension, you can use Secure Shell (SSH) to connect to the terminal with EC2 Instance Connect or connect directly from your computer. GitHub Copilot is integrated with the extension. You can ask GitHub Copilot questions about your resources and take actions without using the Workload Factory console or ONTAP CLI.
-
-=== Support for ONTAP S3 endpoints
-
-With this feature, you can create volumes using S3 endpoints, or access points, from the Workload Factory console. Using an S3 access point, you can access file data residing on SMB/CIFS or NFS volumes via the AWS S3 APIs. This allows you to integrate your existing data with GenAI, ML, and analytics from AWS services that support S3 access points.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume]
-
 === Optimize savings in the Storage calculator for Amazon Elastic Block Store (EBS) 
 
 Workload Factory can analyze your EBS performance usage and then suggest the best and most cost-efficient FSx for ONTAP configuration so that you can save more by switching to FSx for ONTAP.
@@ -20,7 +10,9 @@ You can quickly navigate to an FSx for ONTAP file system resource screen by sele
 
 === Discover cache relationships in the Workload Factory console
 
-If you have _FlexCache_, or _cache_, relationships in an FSx for ONTAP file system, you can discover and view them from the Workload Factory console. This allows you to better understand data flows, optimize cache utilization, and improve efficiency across distributed environments.
+If you have _cache_ (NetApp ONTAP FlexCache) relationships between FSx for ONTAP file system and another type of ONTAP storage (on-premises system, Cloud Volumes ONTAP, and FSx for ONTAP), you can discover and view them from the Workload Factory console. This allows you to better understand data flows, optimize cache utilization, and improve efficiency across distributed environments.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.html[Discover and view cache relationships in the Workload Factory console]
 
 === Well-architected analysis updates
 
