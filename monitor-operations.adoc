@@ -33,7 +33,7 @@ Events retention:::
 Events are retained in the user interface for 30 days. 
 
 == Track and monitor operations
-Track and monitor operations in BlueXP with Tracker.
+Track and monitor operations in the NetApp Console with Tracker.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

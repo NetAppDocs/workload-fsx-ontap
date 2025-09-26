@@ -19,7 +19,7 @@ Links are beneficial because they allow Workload Factory to perform operations t
 
 Here are some benefits of using links:
  
-* The link enables BlueXP to send ONTAP commands directly to your FSx for ONTAP file system, bringing advanced ONTAP features beyond what AWS offers natively.
+* The link enables the NetApp Console to send ONTAP commands directly to your FSx for ONTAP file system, bringing advanced ONTAP features beyond what AWS offers natively.
 * Links leverage AWS Lambda to execute code in response to events. This serverless approach removes the dependency of an instance running in your VPC.
 
 == How links work
