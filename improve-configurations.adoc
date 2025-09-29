@@ -52,7 +52,7 @@ You can fix configuration issues for an FSx for ONTAP file system or for selecte
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system to update and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
 . Optionally, filter configuration issues by categories, subcategories, status, severity, and tags.  
 . Select *View Recommendation* for any configuration. Make sure you review the recommendation carefully. 
@@ -81,7 +81,7 @@ Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
+. From *FSx for ONTAP*, select the actions menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
 . Under *Configurations*, identify the configuration you want to dismiss and select *Dismiss*.  
 . Select *Dismiss* to stop the analysis for the configuration.
@@ -94,12 +94,12 @@ Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
+. From *FSx for ONTAP*, select the actions menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
 . Under *Configurations*, identify the configuration to dismiss for selected volumes and select *View and fix*. 
 . Identify the volume(s) to dismiss from the configuration analysis. 
 +
-* For one volume: select the three-dot menu and then select *Dismiss volume*.
+* For one volume: select the actions menu and then select *Dismiss volume*.
 * For multiple volumes: select the volumes and then select *Dismiss* next to Bulk action.
 . Select *Dismiss* to stop the analysis for the configuration.
 . In the Dismiss volumes dialog, select *Dismiss* to confirm.
@@ -124,7 +124,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
+. From *FSx for ONTAP*, select the actionsenu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
 . Next to *Configurations*, select *Dismissed configurations*. 
 . Identify the configuration you want to reactivate and select *Reactivate*.  
@@ -137,12 +137,12 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system and then *Manage*. 
+. From *FSx for ONTAP*, select the actions menu of the file system and then *Manage*. 
 . Navigate from the FSx for ONTAP file system overview to the *Well-architected status* tab. 
 . Under *Configurations*, identify the configuration to reactivate for selected volumes and select *View and fix*. 
 . Identify the volume(s) to reactivate from the configuration analysis. 
 +
-* For one volume: select the three-dot menu and then select *Reactivate volume*.
+* For one volume: select the actionsenu and then select *Reactivate volume*.
 * For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.
 
 --

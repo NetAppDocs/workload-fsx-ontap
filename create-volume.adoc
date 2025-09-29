@@ -57,7 +57,7 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system you want to create a volume in, and select *Create volume*. 
+. From *FSx for ONTAP*, select the actions menu of the file system you want to create a volume in, and select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
 .. *Storage VM name*: Optionally, enter a storage VM name. 

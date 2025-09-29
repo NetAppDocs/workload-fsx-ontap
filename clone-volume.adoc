@@ -24,9 +24,9 @@ For a cloned volume to contain all data from the parent volume and any new data 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the FSx for ONTAP file system which contains the volume to clone then select *Manage*. 
+. From *FSx for ONTAP*, select the actions menu of the FSx for ONTAP file system which contains the volume to clone then select *Manage*. 
 . From the Overview tab of the file system, select the *Volumes* tab.  
-. In the Volumes tab, select the three-dot menu of the volume to clone. 
+. In the Volumes tab, select the actions menu of the volume to clone. 
 . Select *Data protection actions*, then *Clone volume*. 
 . In the Clone volume dialog, enter a name for the volume clone. 
 . Select *Clone*. 

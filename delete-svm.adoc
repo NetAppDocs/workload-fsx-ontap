@@ -21,9 +21,9 @@ Review the following before you delete a storage VM:
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system to update and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Storage VMs* tab. 
-. In the Storage VMs tab, select the three-dot menu of the storage VM to configure Active Directory for.
+. In the Storage VMs tab, select the actions menu of the storage VM to configure Active Directory for.
 . Select *Delete storage VM*. 
 . In the Delete storage VM dialog, type “delete” to delete the storage VM. 
 . Select *Delete* to confirm. 

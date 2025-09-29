@@ -23,9 +23,9 @@ Consider how much bandwidth to allocate for replication.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system to update and then select *Manage*.  
+. From *FSx for ONTAP*, select the actionsenu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to limit the max transfer rate for. 
+. In the Replication relationships tab, select the actionsenu of the replication relationship to limit the max transfer rate for. 
 . Select *Edit max transfer rate*. 
 . In the Edit max transfer rate dialog, select *Limited* and enter the max transfer limit in MB/s. 
 +

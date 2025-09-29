@@ -14,9 +14,9 @@ To delete a file system in NetApp Workload Factory, you must first delete any vo
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the FSx for ONTAP file system you want to delete. 
+. From *FSx for ONTAP*, select the actions menu of the FSx for ONTAP file system you want to delete. 
 . Select *Manage*.
-. In the *Overview* tab, select the three-dot menu. 
+. In the *Overview* tab, select the actions menu. 
 . Select *Delete*.  
 . In the Delete FSx for ONTAP file system dialog, enter the name of the FSx for ONTAP file system to delete. 
 . Select *Delete* to confirm. 

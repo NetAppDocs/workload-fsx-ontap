@@ -15,9 +15,9 @@ Stop a replication relationship in NetApp Workload Factory. When you stop a repl
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system to update and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to stop. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to stop. 
 . Select *Break*. 
 . In the Break replication dialog, select *Break*.
 

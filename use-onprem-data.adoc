@@ -112,7 +112,7 @@ You must link:delete-replication.html[delete all existing replication relationsh
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *On-premises ONTAP*. 
 . Select the on-premises ONTAP cluster to remove. 
-. Select the three-dots menu and select *Remove from Workload Factory*. 
+. Select the actions menu and select *Remove from Workload Factory*. 
 
 .Result
 The on-premises ONTAP cluster is removed from NetApp Workload Factory. 

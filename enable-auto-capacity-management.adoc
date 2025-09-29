@@ -29,7 +29,7 @@ Consider the following before you begin:
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system to enable automatic capacity management for. 
+. From *FSx for ONTAP*, select the actions menu of the file system to enable automatic capacity management for. 
 . Select *Manage*. 
 . Under Information, select the pencil icon next to *Automatic capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic capacity management* row. 
 . In the *Automatic capacity management* dialog, provide the following: 

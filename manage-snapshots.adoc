@@ -18,11 +18,11 @@ Edit the name, label, and retention period of a snapshot. If the snapshot isn't 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume with the snapshot to edit.
+. From the *Volumes* tab, select the actions menu for the volume with the snapshot to edit.
 . Select *Data protection actions* and then *Manage snapshots*. 
-. From the Manage snapshots page, select the three-dot menu for the snapshot to edit, and then select *Edit*.
+. From the Manage snapshots page, select the actions menu for the snapshot to edit, and then select *Edit*.
 . In the Edit a snapshot dialog, you may edit the following: 
 .. Change the name. 
 .. Change the label. 
@@ -41,11 +41,11 @@ Enable snapshot directory access to give users the ability access snapshots auto
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume with the snapshot to access.
+. From the *Volumes* tab, select the actions menu for the volume with the snapshot to access.
 . Select *Data protection actions* and then *Manage snapshots*. 
-. From the Manage snapshots page, select the three-dot menu for the snapshot to access, and then select *Access*.
+. From the Manage snapshots page, select the actions menu for the snapshot to access, and then select *Access*.
 . In the Access snapshot dialog, select to *Enable snapshot directory access* to access this volume snapshot and all snapshots of the volume.
 
 * For NFS volumes: Select *NFS access path* to view the NFS path for the snapshot.
@@ -67,11 +67,11 @@ Immutable snapshots cannot be deleted until the retention period ends.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to Storage*.  
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume with the snapshot to delete.
+. From the *Volumes* tab, select the actions menu for the volume with the snapshot to delete.
 . Select *Data protection actions* and then *Manage snapshots*. 
-. From the Manage snapshots page, select the three-dot menu for the snapshot to delete, and then select *Delete*.
+. From the Manage snapshots page, select the actions menu for the snapshot to delete, and then select *Delete*.
 . In the Delete snapshot dialog, type "delete".
 . Select *Delete* to confirm deletion.
 

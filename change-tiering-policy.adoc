@@ -37,9 +37,9 @@ Note that some tiering policies have an associated minimum cooling period which 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume to update and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
-. From the Volumes tab, select the three-dot menu of the volume to change the tiering policy for. 
+. From the Volumes tab, select the actions menu of the volume to change the tiering policy for. 
 . Select *Advanced actions*, then *Change tiering policy*.  
 . On the Change tiering policy page, select to copy the tiering policy of the source volume or select one of the following tiering policies: 
 +

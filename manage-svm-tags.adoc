@@ -15,9 +15,9 @@ Tags can help you categorize your resources. You can add, edit, and remove tags 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the storage VM to update and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
-. From the Storage VMs tab, select the three-dot menu of the storage VM to edit tags for.
+. From the Storage VMs tab, select the actions menu of the storage VM to edit tags for.
 . Select *Edit storage VM tags*. 
 . On the Edit storage VM tags page, add, edit, or remove tags. 
 +

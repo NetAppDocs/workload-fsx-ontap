@@ -33,9 +33,9 @@ Customizing a policy lets you specify when to create snapshots, how many copies 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the volume and then select *Manage*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*. 
 . In the file system overview, select the *Storage VMs* tab.
-. From the *Storage VMs* tab, select the three-dot menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. From the *Storage VMs* tab, select the actions menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
 . On the Snapshot policy management page, select *Create snapshot policy*. 
 . In the *Snapshot policy name* field, enter a name for the snapshot policy. 
 . Optionally, enter a description for the snapshot policy.

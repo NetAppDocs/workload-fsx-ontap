@@ -43,7 +43,7 @@ Check the balance of FlexVol or FlexGroup volumes in an FSx for ONTAP file syste
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system that contains volumes to rebalance and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system that contains volumes to rebalance and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select *Check volume balance* at the top of the table.
 . In the Volume balance window, review the balance status of:
@@ -74,7 +74,7 @@ A FlexVol volume can be balanced in relation to other FlexVol volumes within one
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system that contains the volume to rebalance and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system that contains the volume to rebalance and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select *Check volume balance* at the top of the table.
 . In the Volumes balance window, optionally select *Data distribution* in the FlexVol balance summary to view used capacity per aggregate.
@@ -100,7 +100,7 @@ Data redistributes across member volumes to rebalance the FlexGroup volume. Base
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In *Storage*, select *Go to Storage
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system that contains the volume to rebalance and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system that contains the volume to rebalance and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select *Check FlexGroup balance* at the top of the table.
 . In the FlexGroup balance window, select *Rebalance* to rebalance one or more unbalanced volumes. 

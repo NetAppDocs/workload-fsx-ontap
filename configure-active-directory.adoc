@@ -18,9 +18,9 @@ The same steps apply for configuring and updating Active Directory for a storage
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the three-dot menu of the file system with the storage VM to update and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
-. From the Storage VMs tab, select the three-dot menu of the storage VM to configure Active Directory for.
+. From the Storage VMs tab, select the actions menu of the storage VM to configure Active Directory for.
 . Select *Manage AD configuration*. 
 . On the Manage AD configuration page, provide the following: 
 .. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. 
