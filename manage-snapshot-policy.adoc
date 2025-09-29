@@ -71,9 +71,6 @@ You must associate a link to assign a snapshot policy. link:https://docs.netapp.
 . In the *FSx for ONTAP* tab, select the actions menu of the file system that contains the volume to assign a snapshot policy to and then select *Manage*. 
 . In the file system overview, select the *Storage VMs* tab.
 . From the *Storage VMs* tab, select the actions menu for the storage VM containing the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
-//. In the file system overview, select the *Volumes* tab.
-//. From the *Volumes* tab, select the actions menu for the volume to protect. 
-//. Select *Data protection actions*, *Snapshots*, then *Assign snapshot policy*. 
 . On the Snapshot policy management page, select the actions menu of the snapshot policy and then select *Assign policy to volume*.
 . In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
 +
