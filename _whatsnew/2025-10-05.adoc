@@ -14,26 +14,19 @@ If you have _cache_ relationships between FSx for ONTAP file system and another 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.html[Discover and view cache relationships in the Workload Factory console]
 
-=== Well-architected analysis updates
+=== Well-architected analysis update
+Workload factory now analyzes your FSx for ONTAP file systems for the following configuration: 
 
-==== Additional analyses 
-Workload factory now analyzes your FSx for ONTAP file systems for the following configurations: 
-
-* Unauthorized access to volume: checks whether clients allow NAS access to volumes as well as access using the iSCSI protocol. Only one type of access should be permitted. 
-* Volume file capacity utilization threshold: checks whether the file capacity thresholds are set to 80% or lower. This helps you avoid running out of space on your file systems.
-* Volume utilization nearing full: checks whether any volumes are using 80% or more of their file capacity. This helps you identify volumes that may need additional capacity.
+Volume file capacity utilization threshold: checks whether the file capacity thresholds are set to 80% or lower. This helps you avoid running out of space on your file systems.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
 
 ==== Improvements to actions for configuration issues
 From the *Well-architected analysis* tab in the dashboard for an FSx for ONTAP file system, instead of dismissing an entire configuration for a file system, you can also select one or more volumes within a file system to fix, dismiss, or reactivate.
 
-=== Additional notifications for Storage
+=== Additional notification for Storage
 
-The NetApp Workload Factory notification service includes notifications for the following:
-
-* Automatic capacity management (condition-based)
-* Well-architected configuration issues (weekly)
+The NetApp Workload Factory notification service includes the notification for well-architected configuration issues on a weekly basis.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html#notification-types-and-messages[Notification types and messages in the Workload Factory setup and administration documentation]
 
