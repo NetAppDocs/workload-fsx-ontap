@@ -4,7 +4,7 @@ permalink: pause-resume-replication.html
 keywords: pause replication, quiesce replication, resume replication
 summary: "Pause and resume a replication relationship so that the target volume becomes the source volume." 
 ---
-= Pause and resume a replication relationship in BlueXP workload factory
+= Pause and resume a replication relationship in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -14,7 +14,7 @@ Pause a replication relationship to stop scheduled replication updates from the 
 .About this task
 When paused, the replication relationship between source and target volume continues to exist. Data transfers pause and the volumes become independent. To re-enable the transfer of changes from source volume to destination volume, resume the replication. 
 
-When you resume a replication, all the changes to the target volume are undone and BlueXP workload factory re-enables the replication. The target volume transitions from read/write to read-only, and receives updates from the source volume at the scheduled replication interval again. When you resume a replication relationship, the target volume reverts back to the latest initial replication snapshot, at which point, the volume replication process starts over.
+When you resume a replication, all the changes to the target volume are undone and NetApp Workload Factory re-enables the replication. The target volume transitions from read/write to read-only, and receives updates from the source volume at the scheduled replication interval again. When you resume a replication relationship, the target volume reverts back to the latest initial replication snapshot, at which point, the volume replication process starts over.
 
 .Before you begin
 If you pause when a transfer is in progress, the transfer is not affected, and the relationship becomes "Quiescing" until the transfer completes. If the current transfer aborts, it is now a future transfer and will not restart.
@@ -23,10 +23,11 @@ If you pause when a transfer is in progress, the transfer is not affected, and t
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to pause. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to pause. 
 . Select *Pause (Quiesce)*. 
 . In the *Quiesce relationship* dialog, select *Quiesce*. 
 
@@ -40,10 +41,11 @@ NOTE: Any data written to the original source volume between the last data repli
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to resume. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to resume. 
 . Select *Resume*. 
 . In the Resume relationship dialog, select *Resume*. 
 

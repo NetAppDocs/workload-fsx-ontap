@@ -4,12 +4,12 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication
 summary: "Initialize a replication relationship between source and target volumes." 
 ---
-= Initialize a replication relationship in BlueXP workload factory
+= Initialize a replication relationship in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Initialize a replication relationship between source and target volumes to transfer the snapshot and all data blocks in BlueXP workload factory. 
+Initialize a replication relationship between source and target volumes to transfer the snapshot and all data blocks in NetApp Workload Factory. 
 
 .About this task
 Initialization performs a _baseline_ transfer: it makes a snapshot of the source volume, then transfers the snapshot and all the data blocks it references to the target volume. 
@@ -19,9 +19,10 @@ Consider when you choose to complete this operation. Initialization can be time-
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab.
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to initialize. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to initialize. 
 . Select *Initialize*. 
 . In the Initialize relationship dialog, select *Initialize*. 

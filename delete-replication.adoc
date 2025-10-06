@@ -2,22 +2,23 @@
 sidebar: sidebar
 permalink: delete-replication.html
 keywords: delete replication
-summary: "Delete a replication relationship in BlueXP workload factory as needed." 
+summary: "Delete a replication relationship in NetApp Workload Factory as needed." 
 ---
-= Delete a replication relationship in BlueXP workload factory
+= Delete a replication relationship in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Delete a replication relationship in BlueXP workload factory. When you delete a replication relationship, it removes the replication relationship between the source and target volume. After the replication relationship deletes, both volumes continue to exist independently with the current data they contain.
+Delete a replication relationship in NetApp Workload Factory. When you delete a replication relationship, it removes the replication relationship between the source and target volume. After the replication relationship deletes, both volumes continue to exist independently with the current data they contain.
 
 When you delete a replication relationship, FSx for ONTAP also deletes the common replication snapshots of the source and target volume. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to delete. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to delete. 
 . Select *Delete*. 
 . In the Delete relationship dialog, select *Delete*. 

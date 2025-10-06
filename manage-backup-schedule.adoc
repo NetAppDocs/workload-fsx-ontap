@@ -2,19 +2,20 @@
 sidebar: sidebar
 permalink: manage-backup-schedule.html
 keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup
-summary: "Manage the backup schedule for an FSx for ONTAP file system in BlueXP workload factory when needed." 
+summary: "Manage the backup schedule for an FSx for ONTAP file system in NetApp Workload Factory when needed." 
 ---
 = Manage the backup schedule for an FSx for ONTAP file system 
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage the backup schedule for an FSx for ONTAP file system in BlueXP workload factory. 
+Manage the backup schedule for an FSx for ONTAP file system in NetApp Workload Factory. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update the backup schedule for and then select *Manage*. 
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update the backup schedule for and then select *Manage*. 
 . Under Information, select the pencil icon next to *FSx for ONTAP backup*. The pencil icon appears next to the dropdown arrow when the mouse hovers over the *FSx for ONTAP backup* row. 
 . In the *FSx for ONTAP backup* dialog, provide the following: 
 .. *Daily automatic backups*: Enable or disable the feature. If you disable the feature, select *Apply*. If you enable the feature, complete the following steps.  

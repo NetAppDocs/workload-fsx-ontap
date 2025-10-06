@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: manage-nfs-export-policy.html
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy
-summary: "Manage the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types in BlueXP workload factory." 
+summary: "Manage the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types in NetApp Workload Factory." 
 ---
-= Manage the NFS export policy for a volume in BlueXP workload factory
+= Manage the NFS export policy for a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types in BlueXP workload factory. 
+Manage the NFS export policy for a volume that uses NFSv3 or NFSv4.1 protocol types in NetApp Workload Factory. 
 
 .About this task
 Managing a volume's export policy involves adding export policy rules that detail client specifications, access control, super user access, and NFS version. You can add more than one export policy and prioritize them. 
@@ -26,10 +26,11 @@ Determine the client specifications for the export policy rules. Valid values fo
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*.
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume to update and then select *Manage*.
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
-. From the Volumes tab, select the three-dot menu for the volume to change the NFS export policy for. 
+. From the Volumes tab, select the actions menu for the volume to change the NFS export policy for. 
 . Select *Advanced actions*, then *Edit NFS export policy*. 
 . On the Edit NFS export policy page, provide the following: 
 .. *Access control*: Select *Custom export policy* or *Existing export policy*. 

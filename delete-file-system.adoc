@@ -2,21 +2,21 @@
 sidebar: sidebar
 permalink: delete-file-system.html
 keywords: file system, delete file system, file system deletion
-summary: "To delete a file system in BlueXP workload factory, you must first delete any volumes, storage VMs, or replication relationships associated with the file system." 
+summary: "To delete a file system in NetApp Workload Factory, you must first delete any volumes, storage VMs, or replication relationships associated with the file system." 
 ---
-= Delete a file system in BlueXP workload factory
+= Delete a file system in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-To delete a file system in BlueXP workload factory, you must first delete any volumes, storage VMs, or replication relationships associated with the file system. 
+To delete a file system in NetApp Workload Factory, you must first delete any volumes, storage VMs, or replication relationships associated with the file system. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the FSx for ONTAP file system you want to delete. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the FSx for ONTAP file system you want to delete. 
 . Select *Manage*.
-. In the *Overview* tab, select the three-dot menu. 
+. In the *Overview* tab, select the actions menu. 
 . Select *Delete*.  
 . In the Delete FSx for ONTAP file system dialog, enter the name of the FSx for ONTAP file system to delete. 
-. Select *Delete*. 
+. Select *Delete* to confirm. 

@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: create-backup.html
 keywords: create backup, volume backup, back up a volume
-summary: "Create a manual backup of a volume in BlueXP workload factory outside regularly scheduled backups."
+summary: "Create a manual backup of a volume in NetApp Workload Factory outside regularly scheduled backups."
 ---
-= Create a manual backup of a volume in BlueXP workload factory
+= Create a manual backup of a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a manual backup of a volume outside regularly scheduled backups in BlueXP workload factory. 
+Create a manual backup of a volume outside regularly scheduled backups in NetApp Workload Factory. 
 
 .About this task
 
@@ -23,10 +23,11 @@ To take backups of your volumes, both your volume and your file system must have
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume to back up. 
+. From the *Volumes* tab, select the actionsenu for the volume to back up. 
 . Select *Data protection actions*, *FSx for ONTAP backup*, and then *Manual backup*. 
 . In the Manual backup dialog, enter a name for the backup. 
 . Select *Back up*. 

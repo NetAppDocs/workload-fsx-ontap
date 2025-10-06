@@ -4,12 +4,12 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication
 summary: "Reverse a replication relationship so that the target volume becomes the source volume." 
 ---
-= Reverse a replication relationship in BlueXP workload factory
+= Reverse a replication relationship in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Reverse a replication relationship in BlueXP workload factory so that the target volume becomes the source volume. 
+Reverse a replication relationship in NetApp Workload Factory so that the target volume becomes the source volume. 
 
 Reverse operations are supported for the following:
 
@@ -28,9 +28,10 @@ Make sure that you know the current and future roles of your source and target v
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to reverse. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to reverse. 
 . Select *Reverse relationship*. 
 . In the Reverse relationship dialog, select *Reverse*. 

@@ -39,6 +39,8 @@ sidebar:
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
+        - title: Discover and view cache volumes
+          url: /discover-cache-volumes.html  
         - title: Manage volumes
           entries:
             - title: Create a volume
@@ -63,8 +65,6 @@ sidebar:
               entries: 
                 - title: Create a manual backup
                   url: /create-backup.html
-              #  - title: Set up a backup policy
-              #    url: /set-backup-policy.html  
                 - title: Restore a volume from a backup
                   url: /restore-from-backup.html
             - title: Use replication
@@ -91,8 +91,6 @@ sidebar:
               url: /improve-configurations.html  
         - title: Volume administration
           entries:  
-          #  - title: View volume details
-          #    url: /view-volume-details.html
             - title: Edit volume autogrow
               url: /edit-volume-autogrow.html
             - title: Increase volume capacity
@@ -117,7 +115,7 @@ sidebar:
               url: /delete-volume.html
         - title: File system administration
           entries: 
-            - title: Increase file system capacity
+            - title: Adjust file system capacity
               url: /increase-file-system-capacity.html
             - title: Enable automatic capacity management
               url: /enable-auto-capacity-management.html
@@ -147,8 +145,6 @@ sidebar:
                   url: /enable-snapshots-long-term.html 
                 - title: Manage snapshots
                   url: /manage-snapshots.html  
-         #  - title: Delete a snapshot
-          #    url: /delete-snapshot.html 
             - title: Backups
               entries: 
                 - title: Manage FSx for ONTAP backup schedule
@@ -195,5 +191,5 @@ sidebar:
       url: /legal-notices.html
 
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family

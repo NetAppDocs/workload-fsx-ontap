@@ -9,13 +9,14 @@ summary: "Manually update snapshot data transferred between source and target vo
 :imagesdir: ./media/
 
 [.lead]
-A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes in BlueXP workload factory at any time. 
+A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes in NetApp Workload Factory at any time. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system to update and then select *Manage*.  
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
-. In the Replication relationships tab, select the three-dot menu of the replication relationship to update. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to update. 
 . Select *Update now*. 
 . In the Update dialog, select *Update now*. 

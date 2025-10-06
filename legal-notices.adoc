@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: # no keywords
 summary: # no summary
 ---
-= Legal notices for BlueXP workload factory
+= Legal notices for NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

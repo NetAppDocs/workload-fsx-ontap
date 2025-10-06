@@ -2,24 +2,25 @@
 sidebar: sidebar
 permalink: configure-active-directory.html
 keywords: configure AD, configure active directory, update ad, edit active directory
-summary: "Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in BlueXP workload factory."
+summary: "Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in NetApp Workload Factory."
 ---
 = Configure and update Active Directory for a storage VM
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in BlueXP workload factory.
+Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in NetApp Workload Factory.
 
 .About this task
 The same steps apply for configuring and updating Active Directory for a storage VM. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the storage VM to update and then select *Manage*.
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
-. From the Storage VMs tab, select the three-dot menu of the storage VM to configure Active Directory for.
+. From the Storage VMs tab, select the actions menu of the storage VM to configure Active Directory for.
 . Select *Manage AD configuration*. 
 . On the Manage AD configuration page, provide the following: 
 .. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. 
