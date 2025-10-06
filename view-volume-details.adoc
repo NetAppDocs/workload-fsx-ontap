@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information
 summary: View volume details, distribution, consumption, access, and protection.
 ---
-= View volume details in BlueXP workload factory
+= View volume details in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -15,8 +15,8 @@ Volume details appear only after a volume has been created in a file system.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the Volumes tab, select the three-dot menu for the volume you wish to modify. 
+. In the Storage tile, select *Go to Storage*. 
+. In the Volumes tab, select the actions menu for the volume you wish to modify. 
 . Select *Basic actions* then *View volume details*. 
 . In *Volume details*, select the tabs to view the following volume details: 
 .. *General details*: includes volume name, volume UUID, volume ID, creation time, state, volume type (read/write/data protection (RW/DP) or read only), snapshot policy name, hosting storage VM (SVM), and tags. 

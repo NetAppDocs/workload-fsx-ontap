@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: monitor-operations.html 
 keywords: monitor databases, monitor jobs, track storage jobs, track jobs
-summary: "Track FSx for ONTAP, credentials, and link operations and monitor job progress with Tracker in BlueXP workload factory for Storage."  
+summary: "Track FSx for ONTAP, credentials, and link operations and monitor job progress with Tracker in NetApp Workload Factory for Storage."  
 ---
-= Monitor storage operations with Tracker in BlueXP workload factory
+= Monitor storage operations with Tracker in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Monitor and track the execution of FSx for ONTAP, credentials, and link operations and monitor task progress with Tracker in BlueXP workload factory. 
+Monitor and track the execution of FSx for ONTAP, credentials, and link operations and monitor task progress with Tracker in NetApp Workload Factory. 
 
 .About this task 
 Workload factory provides Tracker, a monitoring feature, so you can monitor and track the progress and status of FSx for ONTAP, credentials, and link operations, review details for operation tasks and subtasks, and diagnose any issues or failures.
@@ -33,12 +33,12 @@ Events retention:::
 Events are retained in the user interface for 30 days. 
 
 == Track and monitor operations
-Track and monitor operations in BlueXP with Tracker.
+Track and monitor operations in the NetApp Console with Tracker.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to Storage inventory*.
-. From storage inventory, select account settings menu and then select *Tracker*.
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *Administration* and then *Links*.
 +
 image:screenshot-menu-tracker-option.png["A screenshot of the account settings menu with the Tracker option highlighted."] 
 . In the Tracker tab, use the filters or search to narrow job results. You can also download a jobs report.  
@@ -48,7 +48,7 @@ View the API request in the Codebox for a task in Tracker.
 
 .Steps
 . In Tracker, select a task. 
-. Select the three-dot menu and then select *View API request*.
+. Select the actions menu and then select *View API request*.
 
 == Retry a failed operation
 Retry a failed operation in Tracker. You can also copy the error message of a failed operation. 
@@ -57,7 +57,7 @@ NOTE: Only x number of retries are allowed for a failed operation.
 
 .Steps
 . In Tracker, select a failed operation.
-. Select the three-dot menu and then select *Retry*. 
+. Select the actions menu and then select *Retry*. 
 
 .Result
 The operation is re-initiated.
@@ -67,7 +67,7 @@ Edit the parameters of the failed operation and retry the operation outside Trac
 
 .Steps
 . In Tracker, select a failed operation.
-. Select the three-dot menu and then select *Edit and retry*.
+. Select the actions menu and then select *Edit and retry*.
 +
 You are redirected to the operation page where you can edit the parameters and retry the operation.
 

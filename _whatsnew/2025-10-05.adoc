@@ -1,0 +1,35 @@
+=== Optimize savings in the Storage calculator for Amazon Elastic Block Store (EBS) 
+
+Workload Factory can analyze your EBS performance usage and then suggest the best and most cost-efficient FSx for ONTAP configuration so that you can save more by switching to FSx for ONTAP.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html#explore-savings-for-detected-storage-environments[Explore savings for detected storage environments in the Workload Factory console]
+
+=== Quick access to resource screen from file system inventory
+
+You can quickly navigate to an FSx for ONTAP file system resource screen by selecting the file system name, now a hyperlink, from the FSx for ONTAP inventory.
+
+=== Discover cache relationships in the Workload Factory console
+
+If you have _cache_ relationships between FSx for ONTAP file system and another type of ONTAP storage (on-premises system, Cloud Volumes ONTAP, and FSx for ONTAP), you can discover and view them from the Workload Factory console. This allows you to better understand data flows, optimize cache utilization, and improve efficiency across distributed environments.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.html[Discover and view cache relationships in the Workload Factory console]
+
+=== Well-architected analysis update
+Workload factory now analyzes your FSx for ONTAP file systems for the following configuration: 
+
+Volume file capacity utilization threshold: checks whether the file capacity thresholds are set to 80% or lower. This helps you avoid running out of space on your file systems.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
+
+==== Improvements to actions for configuration issues
+From the *Well-architected analysis* tab in the dashboard for an FSx for ONTAP file system, instead of dismissing an entire configuration for a file system, you can also select one or more volumes within a file system to fix, dismiss, or reactivate.
+
+=== Additional notification for Storage
+
+The NetApp Workload Factory notification service includes the notification for well-architected configuration issues on a weekly basis.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html#notification-types-and-messages[Notification types and messages in the Workload Factory setup and administration documentation]
+
+=== Immutable files support privileged delete
+
+With this feature, you can configure privileged delete access for immutable files in your FSx for ONTAP file systems. This allows you to protect critical data from accidental or malicious deletion while still enabling authorized users to override the lock and delete these files as needed. Enabling privileged delete is available during volume creation or for existing volumes.

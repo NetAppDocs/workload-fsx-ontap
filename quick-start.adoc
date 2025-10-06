@@ -2,24 +2,24 @@
 sidebar: sidebar
 permalink: quick-start.html
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
-summary: "You can get started with FSx for ONTAP in BlueXP workload factory in just a few steps." 
+summary: "You can get started with FSx for ONTAP in NetApp Workload Factory in just a few steps." 
 ---
-= Quick start for Amazon FSx for NetApp ONTAP in BlueXP workload factory
+= Quick start for Amazon FSx for NetApp ONTAP in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-With Amazon FSx for NetApp ONTAP in BlueXP workload factory, you can get started immediately in _basic_ mode. 
+With Amazon FSx for NetApp ONTAP in NetApp Workload Factory, you can get started immediately in _basic_ mode. 
 
-If you'd like to use workload factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account and credentials to get started. 
+If you'd like to use Workload Factory to create a file system, manage resources, and more, you can get started in a few steps. In this case, you need an AWS account and credentials to get started. 
 
 Follow these steps to get started. 
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to workload factory
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Log in to Workload Factory
 
 [role="quick-margin-para"]
 
-You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with workload factory^] and link:https://console.workloads.netapp.com[log in^] 
+You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html[set up an account with Workload Factory^] and link:https://console.workloads.netapp.com[log in^] 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add credentials and permissions
 
@@ -28,7 +28,7 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 Choose between _basic_, _read-only_, and _read/write_ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[operational modes^] 
 
 [role="quick-margin-para"]
-If you choose to operate in _basic_ mode, you don't need to go any further. You can start using workload factory for FSx for ONTAP to copy partially completed code samples. 
+If you choose to operate in _basic_ mode, you don't need to go any further. You can start using Workload Factory for FSx for ONTAP to copy partially completed code samples. 
 
 [role="quick-margin-para"]
 If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[add credentials to an account manually^] that includes selecting workload capabilities, such as Databases and AI, and creating the IAM policies to ensure you have the correct permissions for operating in _read-only_ or _read/write_ mode.
@@ -37,7 +37,7 @@ If you operate in _read-only_ or _read/write_ mode, you'll need to link:https://
 
 [role="quick-margin-para"]
 
-You'll create an FSx file system to begin managing your storage and FSx for ONTAP resources in workload factory. In the link:https://console.workloads.netapp.com[workload factory console^], in Storage, select *Create file system*. link:create-file-system.html[Learn how to create a file system]. 
+You'll create an FSx file system to begin managing your storage and FSx for ONTAP resources in Workload Factory. In the link:https://console.workloads.netapp.com[Workload Factory console^], in Storage, select *Create file system*. link:create-file-system.html[Learn how to create a file system]. 
 
 [role="quick-margin-para"]
 

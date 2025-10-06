@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: data-protection-overview.html
 keywords: overview
-summary: "FSx for ONTAP supports snapshots, NetApp Autonomous Ransomware with AI, volume replication, and backups in BlueXP workload factory."
+summary: "FSx for ONTAP supports snapshots, NetApp Autonomous Ransomware with AI, volume replication, and backups in NetApp Workload Factory."
 ---
-= Types of data protection in BlueXP Workload Factory
+= Types of data protection in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -32,7 +32,6 @@ The following diagram shows a visual representation of data protection for FSx f
 
 image:diagram-fsx-data-protection.png["Screenshot shows data protection for FSx for ONTAP storage using snapshots, replication across regions, and backup to object storage."]
 
-
 == Best practices for protecting your workload data
 FSx for ONTAP offers multiple data protection options which can be combined to achieve your selected recovery point and time objectives. For the best possible protection, we recommend that you use both volume snapshots and volume backups. 
 
@@ -53,6 +52,7 @@ Volume backups provide independent point-in-time copies of your volume. They can
 == Recommendations for protecting your workload data
 Consider the following recommendations for protecting your workload data. 
 
+* Use volume replication for disaster recovery: if your application requires a low RTO, consider using volume replication to replicate your data to another region.
 * Use volume backups in conjunction with snapshots: using the two features together ensures that you're able to restore your files from snapshots and perform full restores in case of volume loss using backups.
 * Define a volume backup policy: make sure that the backup policy satisfies your company requirements for backup age and frequency. We recommend keeping a minimum of two daily backups for each volume.
 * Define a snapshot schedule: older snapshots are less likely to be used to restore data. We recommend that you define a snapshot schedule that takes into consideration the diminishing returns of keeping older snapshots against the cost for additional snapshot capacity.

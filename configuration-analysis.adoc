@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: configuration-analysis.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
-summary: "BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues."  
+summary: "NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues."  
 ---
 = Configuration analysis for FSx for ONTAP file systems
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-BlueXP workload factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues. When issues are found, workload factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
+NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues. When issues are found, Workload Factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -20,7 +20,7 @@ Key capabilities include:
 * AWS Well-Architected Framework advisor
 
 == Well-architected status
-In the workload factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
+In the Workload Factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
 
 Well-architected score::: The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
 
@@ -33,7 +33,7 @@ Configuration categories::: The file system configurations are organized into ca
 * _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
 
 == Analysis requirements
-For a complete file system analysis, you must associate a link. Link connectivity lets workload factory analyze all file system configurations like data protection and performance.
+For a complete file system analysis, you must associate a link. Link connectivity lets Workload Factory analyze all file system configurations like data protection and performance.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
 

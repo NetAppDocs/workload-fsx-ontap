@@ -4,12 +4,12 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot
 summary: "Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files." 
 ---
-= Restore a volume from a snapshot in workload factory
+= Restore a volume from a snapshot in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-In workload factory, you can restore data from a snapshot to an existing volume or to a new volume. The restore operation enables point-in-time recovery when a volume contains deleted or corrupted files. 
+In Workload Factory, you can restore data from a snapshot to an existing volume or to a new volume. The restore operation enables point-in-time recovery when a volume contains deleted or corrupted files. 
 
 .About this task
 You have the option to restore data from a snapshot to an existing volume or to a new volume.
@@ -25,12 +25,13 @@ Consider the following limitations before you create a volume from a snapshot:
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*.  
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the volume and then select *Manage*.  
+. In *Storage*, select *Go to Storage*.  
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume to restore from a snapshot.
+. From the *Volumes* tab, select the actions menu for the volume to restore from a snapshot.
 . Select *Data protection actions* and then *Manage snapshots*. 
-. From the Manage snapshots page, select the three-dot menu for the snapshot to restore, and then select *Restore*.
+. From the Manage snapshots page, select the actions menu for the snapshot to restore, and then select *Restore*.
 . In the Restore volume from a snapshot dialog, select from the following options:
 * Toggle to select *Restore as a new volume*.
 +

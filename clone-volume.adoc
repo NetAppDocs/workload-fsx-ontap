@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: clone-volume.html
 keywords: clone volume, clone, clone data 
-summary: "Clone a volume in BlueXP workload factory to make a read/write volume of the original volume for testing." 
+summary: "Clone a volume in NetApp Workload Factory to make a read/write volume of the original volume for testing." 
 ---
-= Clone a volume in BlueXP workload factory
+= Clone a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Clone a volume in BlueXP workload factory to make a read/write volume of the original volume for testing. 
+Clone a volume in NetApp Workload Factory to make a read/write volume of the original volume for testing. 
 
 The clone reflects the current, point-in-time state of the data. You can also use clones to give additional users access to data without giving them access to production data.
 
@@ -22,10 +22,11 @@ For a cloned volume to contain all data from the parent volume and any new data 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. From Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the FSx for ONTAP file system which contains the volume to clone then select *Manage*. 
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the FSx for ONTAP file system which contains the volume to clone then select *Manage*. 
 . From the Overview tab of the file system, select the *Volumes* tab.  
-. In the Volumes tab, select the three-dot menu of the volume to clone. 
+. In the Volumes tab, select the actions menu of the volume to clone. 
 . Select *Data protection actions*, then *Clone volume*. 
 . In the Clone volume dialog, enter a name for the volume clone. 
 . Select *Clone*. 

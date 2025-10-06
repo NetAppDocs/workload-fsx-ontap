@@ -4,19 +4,20 @@ permalink: manage-svm-tags.html
 keywords: edit storage vm tags, vm tags, svm tags
 summary: "Add, update, or remove storage VM tags for a storage VM at any time." 
 ---
-= Manage storage VM tags in BlueXP workload factory
+= Manage storage VM tags in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Tags can help you categorize your resources. You can add, edit, and remove tags for a storage VM at any time in BlueXP workload factory. 
+Tags can help you categorize your resources. You can add, edit, and remove tags for a storage VM at any time in NetApp Workload Factory. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In Storage, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system with the storage VM to update and then select *Manage*.
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the storage VM to update and then select *Manage*.
 . From the file system overview, select the *Storage VMs* tab.
-. From the Storage VMs tab, select the three-dot menu of the storage VM to edit tags for.
+. From the Storage VMs tab, select the actions menu of the storage VM to edit tags for.
 . Select *Edit storage VM tags*. 
 . On the Edit storage VM tags page, add, edit, or remove tags. 
 +
