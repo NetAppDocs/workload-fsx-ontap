@@ -98,7 +98,7 @@ Data redistributes across member volumes to rebalance the FlexGroup volume. Base
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to Storage
+. In *Storage*, select *Go to Storage*
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system that contains the volume to rebalance and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
