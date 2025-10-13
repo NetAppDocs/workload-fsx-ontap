@@ -34,6 +34,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capac
 
 === New notification for Storage
 
-The NetApp Workload Factory notification service includes success and failure notifications for automatic capacity management for Storage.
+The workload factory notification service includes success and failure notifications for automatic capacity management for Storage.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Notifications for NetApp Workload Factory^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Notifications for BlueXP workload factory^]
