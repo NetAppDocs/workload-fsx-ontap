@@ -31,3 +31,9 @@ image:screenshot-manage-snapshots-screen.png["Screenshot that shows the manage s
 Workload factory supports decreasing the solid-state drive (SSD) capacity of your second-generation file systems. With elastic file system capacity, you can dynamically adjust the capacity of your file systems to match the needs of your workloads.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html[Adjust file system capacity]
+
+=== New notification for Storage
+
+The workload factory notification service includes success and failure notifications for automatic capacity management for Storage.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Notifications for BlueXP workload factory^]
