@@ -93,8 +93,8 @@ sidebar:
           entries:  
             - title: Edit volume autogrow
               url: /edit-volume-autogrow.html
-            - title: Increase volume capacity
-              url: /increase-volume-capacity.html
+            - title: Adjust volume capacity
+              url: /adjust-volume-capacity.html
             - title: Manage immutable files 
               url: /manage-immutable-files.html  
             - title: Manage volume tags

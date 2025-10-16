@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: adjust-volume-capacity.html
+keywords: increase capacity, volume capacity
+summary: "Manually adjust the volume capacity of a volume in NetApp Workload Factory at any time." 
+---
+= Adjust volume capacity in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manually adjust the volume capacity of a volume at any time in NetApp Workload Factory. 
+
+Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature] to let Workload Factory manage volume capacity for you. 
+
+.About this task
+For an iSCSI LUN, increasing the size of the volume also increases the size of the host LUN. After you increase volume capacity, follow the procedure provided by your host operating system to discover the new size of the LUN and expand the file system of the LUN. 
+
+.Before you begin
+To adjust volume capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.  
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update and then select *Manage*.
+. From the file system overview, select the *Volumes* tab. 
+. From the Volumes tab, select the actions menu of the volume to adjust capacity for. 
+. Select *Basic actions*, then *Adjust volume capacity*.
+. In the Adjust volume capacity dialog, set the *Provisioned capacity* and unit.  
+. Select *Adjust* to apply the changes.
+
+.Related information
+
+* link:edit-volume-autogrow.html[Enable volume autogrow in Workload Factory]
+* link:rebalance-volume.html[Rebalance a volume in Workload Factory]
