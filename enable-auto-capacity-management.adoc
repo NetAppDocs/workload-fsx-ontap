@@ -44,7 +44,11 @@ Alternatively, disable the feature. If you need to increase file system capacity
 +
 The warning threshold setting is available only if you link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enabled the Workload Factory notification service^]. 
 .. *Threshold increase*: Enter the maximum percentage increase for the FSx for ONTAP file system. The default is 80%.
++
+This is the threshold at which Workload Factory triggers a job to increase the capacity. For example, if the file system reaches 80% of capacity, then Workload Factory will increase capacity. 
 .. *Incremental increase*: Enter the percentage to increase capacity incrementally. The default is 10%.
++
+This is the percentage we increase capacity each time the threshold is reached. For example, if the file system is 80% full and the incremental increase is set to 10%, then Workload Factory increases the capacity by 10%.
 . Select *Apply*. 
 
 .Result
