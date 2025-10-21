@@ -4,12 +4,12 @@ permalink: enable-auto-capacity-management.html
 keywords: auto capacity, automatic capacity management, inodes management, file system capacity
 summary: "Enabling this feature lets Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time."  
 ---
-= Enable automatic capacity and inodes management for a file system
+= Enable automatic capacity and inode management for a file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enabling automatic capacity and inodes management lets NetApp Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity and inodes manually and mitigates the risk of impactful application data reads and writes. 
+Enabling automatic capacity and inode management lets NetApp Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity and inodes manually and mitigates the risk of impactful application data reads and writes. 
 
 == About this task 
 A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, or the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
@@ -50,10 +50,10 @@ The warning threshold setting is available only if you link:https://docs.netapp.
 .Result
 A file system scan occurs every 30 minutes to determine if the file system needs additional capacity.
 
-== Enable automatic inodes management
-Enable automatic inodes management to make sure that the file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
+== Enable automatic inode management
+Enable automatic inode management to make sure that the file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
 
-NOTE: *Terraform users*: Terraform has a limitation that requires that all operations are completed within Terraform. Inode management isn't supported in Terraform, but you can enable automatic inodes management in the Workload Factory console.
+NOTE: *Terraform users*: Terraform has a limitation that requires that all operations are completed within Terraform. Inode management isn't supported in Terraform, but you can enable automatic inode management in the Workload Factory console.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
