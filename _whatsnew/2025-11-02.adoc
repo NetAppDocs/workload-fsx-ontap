@@ -1,6 +1,8 @@
 === Automatic inode management available    
 You can now enable automatic inode management without the need to enable automatic capacity management. 
 
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Enable automatic inode management^]
+
 === Threshold warning setting for capacity and inode usage
 You can now set threshold warnings for both capacity and inode usage when enabling automatic capacity or inode management. This allows for more granular monitoring and alerting based on your specific needs. To use this setting, you'll need to configure notifications using the link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[NetApp Workload Factory notification service^]. 
 
