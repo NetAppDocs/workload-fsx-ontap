@@ -1,3 +1,15 @@
+=== Cache volume management
+You can perform the following cache volume management operations from within the Workload Factory console:
+
+* Edit the cache name
+* Increase the capacity of a cache volume
+* Edit the mount path or export policy for a cache volume
+* Change the caching method, or mode, for a cache volume
+* Prepopulate a cache volume
+* Delete a cache volume
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[Manage cache volumes^]
+
 === Automatic inode management available    
 You can now enable automatic inode management without the need to enable automatic capacity management. 
 
@@ -23,8 +35,6 @@ Workload factory analyzes your FSx for ONTAP file systems for the following conf
 
 * Delete unnecessary snapshots: checks whether volumes have outdated and unnecessary snapshots that can be deleted to reduce costs. 
 * Volume utilization nearing full: checks whether any volumes are using 80% or more of their file capacity. This helps you identify volumes that may need additional capacity.
-
-=== Cost feature
 
 
 
