@@ -19,16 +19,16 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 You can now set threshold warnings for both capacity and inode usage when enabling automatic capacity or inode management. This allows for more granular monitoring and alerting based on your specific needs. To use this setting, you'll need to configure notifications using the link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[NetApp Workload Factory notification service^]. 
 
 === Volume size decrease available
-You can now decrease the size of volumes in NetApp Workload Factory. This feature allows for better management of storage resources by enabling you to reduce the size of volumes that are no longer needed at their current capacity.
+You can now decrease the size of NFS and SMB/CIFS volumes in NetApp Workload Factory. This feature allows for better management of storage resources by enabling you to reduce the size of volumes that are no longer needed at their current capacity.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.html[Decrease the capacity of a volume^]
 
 === Enhanced FSx for ONTAP resource state
-Previously, when viewing your FSx for ONTAP resources like file systems, volumes, or storage VMs from the inventory screen, you'd see "misconfigured" as the state for resources that had issues without explanation. Workload Factory has enhanced the "misconfigured" resource state to include an explanation of the actual issue for the resource.
+Workload Factory has enhanced the "misconfigured" resource state to include an explanation of the actual issue for the resource.
 
-=== Well-architected menu item added
+=== _Analysis_ menu item added
 
-A new _Well-architected_ menu item has been added to the Storage menu. From this menu item, you can access the well-architected dashboard, which provides an overview of the well-architected score for your FSx for ONTAP file system deployments, along with detailed information about configuration issues and recommendations for improving your storage configurations.
+The new _Analysis_ menu item has been added to the Storage menu. This menu item provides quick access to the analysis of events that show on your file systems. 
 
 === Well-architected analysis updates
 Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
