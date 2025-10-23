@@ -1,26 +1,21 @@
 ---
 sidebar: sidebar
-permalink: create-cyber-vault.html
-keywords: create cyber vault, volume cyber vault, back up a volume
-summary: "Create a cyber vault to protect data in NetApp Workload Factory."
+permalink: reference-cyber-vault.html
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup
+summary: "Learn about NetApp cyber vaults and how to implement cyber vault architecture to protect your data from ransomware and cyber threats."
 ---
-= Create a cyber vault volume to protect data in NetApp Workload Factory
+= Protecting data with a cyber vault
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
 A cyber vault volume is an isolated, secure storage location used to store backup copies of your data, protecting it from ransomware attacks and other cyber threats. As part of vault creation, you'll create a cyber vault volume, disable all client protocols, and set up a replication relationship between the source volume and the cyber vault volume, and create immutable snapshots on the cyber vault volume.
 
-.About this task
-Replication and vault tamper proof snapshots at the edge
-With additional security related modifications to scope down administrative access and disable all client protocols
-This is all on a different region/network/AWS account  or more
-It’s an architecture reference or a use case example
+.How to create a cyber vault
+Air-gapping with cyber vault includes using a separate data replication network outside of standard data access networks to replicate snapshots to an indelible destination. This might be achieved through replication to a different AWS region, account, or VPC.
 
-For an overview about cyber vaults, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault overview^].
+Additional steps beyond air-gapped networks involve disabling all data access and replication protocols on the cyber vault when they are not needed. This prevents data access or data exfiltration at the destination site. With SnapLock Compliance, physical separation is not required. SnapLock Compliance protects your vaulted, point-in-time, read-only Snapshot copies, resulting in rapid data recovery, thats safe from deletion, and immutable.
 
-.Before you begin
-no prereqs?
+For more information about about cyber vaults and how to set up this architecture, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault documentation^].
 
-.Steps
 
