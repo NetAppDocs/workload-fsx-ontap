@@ -36,6 +36,20 @@ Workload factory analyzes your FSx for ONTAP file systems for the following conf
 * Delete unnecessary snapshots: checks whether volumes have outdated and unnecessary snapshots that can be deleted to reduce costs. 
 * Volume utilization nearing full: checks whether any volumes are using 80% or more of their file capacity. This helps you identify volumes that may need additional capacity.
 
+=== Permissions changes for Workload Factory for Storage
+
+Workload Factory provides more clarity about the permissions it requires for specific actions. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permission policies as follows: 
+
+* _View, planning, and analysis_: View FSx for ONTAP file systems, learn about system health, get the well-architected analysis for your systems, and explore savings.
+
+* _Operations and remediation_: Perform operational tasks like adjust file system capacity and fix issues for your file system configurations.
+
+* _File system creation and deletion_: Create and delete FSx for ONTAP file systems and storage VMs.
+
+When adding credentials, you can select one or more of these permission policies based on the level of access you want to provide to Workload Factory.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
+
 
 
 
