@@ -34,7 +34,7 @@ You have two options for creating links in this workflow - automatically or manu
 
 .Before you begin
 * You should consider which link creation option you'll use. 
-* You need to have at least one FSx for ONTAP file system in Workload Factory. To discover or create FSx for ONTAP file systems, you must have an AWS account with permissions for FSx for ONTAP instances and link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview[add credentials in Workload Factory^] with _read-only_ or _read/write_ permissions for Storage management. 
+* You need to have at least one FSx for ONTAP file system in Workload Factory. To discover FSx for ONTAP file systems, you must have an AWS account with permissions for FSx for ONTAP instances and link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview[add credentials in Workload Factory^] with _view, planning, and analysis_ permissions for Storage management. 
 * The following ports must be open in the security group associated with the FSx for ONTAP file system for link connectivity. 
 ** For the Workload Factory console: port 443 (HTTPS)
 ** For CloudShell: port 22(SSH)
