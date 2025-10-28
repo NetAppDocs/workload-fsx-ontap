@@ -14,7 +14,7 @@ A cyber vault volume is an isolated, secure storage location used to store backu
 .How to create a cyber vault
 Air-gapping with cyber vault includes using a separate data replication network outside of standard data access networks to replicate snapshots to an indelible destination. This might be achieved through replication to a different AWS region, account, or VPC.
 
-Additional steps beyond air-gapped networks involve disabling all data access and replication protocols on the cyber vault when they are not needed. This prevents data access or data exfiltration at the destination site. With SnapLock Compliance, physical separation is not required. SnapLock Compliance protects your vaulted, point-in-time, read-only Snapshot copies, resulting in rapid data recovery, thats safe from deletion, and immutable.
+Additional steps beyond air-gapped networks involve disabling all data access and replication protocols on the cyber vault when they are not needed. This prevents data access or data exfiltration at the destination site. 
 
 For more information about about cyber vaults and how to set up this architecture, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault documentation^].
 
