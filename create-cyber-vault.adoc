@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar
-permalink: reference-cyber-vault.html
+permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup
 summary: "Learn about NetApp cyber vaults and how to implement cyber vault architecture to protect your data from ransomware and cyber threats."
 ---
-= Protecting data with a cyber vault
+= Protect your data with a cyber vault
 :icons: font
 :imagesdir: ./media/
 
