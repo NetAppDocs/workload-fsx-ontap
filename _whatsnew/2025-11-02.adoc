@@ -26,10 +26,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.htm
 === Enhanced FSx for ONTAP resource state
 Workload Factory has enhanced the "misconfigured" resource state to include an explanation of the actual issue for the resource.
 
-=== _Analysis_ menu item added
-
-The new _Analysis_ menu item has been added to the Storage menu. This menu item provides quick access to the analysis of events that show on your file systems. 
-
 === Well-architected analysis updates
 Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
  
