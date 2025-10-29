@@ -38,7 +38,7 @@ Workload factory analyzes your FSx for ONTAP file systems for the following conf
 
 === Permissions changes for Workload Factory for Storage
 
-Workload Factory provides more clarity about the permissions it requires for specific actions. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permission policies as follows: 
+Workload Factory provides more clarity about the permissions it requires for specific actions and granularity for selecting only the permissions you need. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permission policies as follows: 
 
 * _View, planning, and analysis_: View FSx for ONTAP file systems, learn about system health, get the well-architected analysis for your systems, and explore savings.
 
