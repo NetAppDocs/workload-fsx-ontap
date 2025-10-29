@@ -9,10 +9,10 @@ summary: "Enabling this feature lets Workload Factory automatically add incremen
 :imagesdir: ./media/
 
 [.lead]
-Enabling automatic capacity and inode management lets NetApp Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity and inodes manually and mitigates the risk of impactful application data reads and writes. 
+Enabling automatic capacity and inode management lets NetApp Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity and inodes manually. 
 
 == About this task 
-A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, or the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
+A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
 
 Only one account can manage this feature. 
 
@@ -63,8 +63,7 @@ Consider the following before you begin:
 
 * To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
 * Automatic inode management can be set up with a _warning threshold_ that triggers a notification from the Workload Factory notification service. To use this feature, you must link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enable the Workload Factory notification service^] first.
-* You must have credentials with the ______ permission policy in Workload Factory to complete this task (includes fsx::DescibeFileSystems). 
-warning  field for  nofiication  is enabled only if notification is configured in the account. Ether bluexp or sns.
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
