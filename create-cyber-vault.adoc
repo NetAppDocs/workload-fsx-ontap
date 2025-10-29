@@ -11,10 +11,20 @@ summary: "Learn about NetApp cyber vaults and how to implement cyber vault archi
 [.lead]
 A cyber vault volume is an isolated, secure storage location used to store backup copies of your data, protecting it from ransomware attacks and other cyber threats. As part of vault creation, you'll create a cyber vault volume, disable all client protocols, and set up a replication relationship between the source volume and the cyber vault volume, and create immutable snapshots on the cyber vault volume.
 
-.How to create a cyber vault
-Air-gapping with cyber vault includes using a separate data replication network outside of standard data access networks to replicate snapshots to an indelible destination. This might be achieved through replication to a different AWS region, account, or VPC.
+.What is a cyber vault?
+A cyber vault is a specific data protection technique that involves storing critical data in an isolated environment, separate from the primary IT infrastructure.
 
-Additional steps beyond air-gapped networks involve disabling all data access and replication protocols on the cyber vault when they are not needed. This prevents data access or data exfiltration at the destination site. 
+The cyber vault is an "air-gapped", immutable, and indelible data repository that is immune to threats affecting the main network, such as malware, ransomware, or even insider threats. A cyber vault can be achieved with immutable and indelible snapshots.
+
+Air-gapping backups that use traditional methods involve creating space and physically separating the primary and secondary media. By moving the media offsite and/or severing connectivity, bad actors have no access to the data. This protects the data but can lead to slower recovery times.
+
+.FSx for ONTAP cyber vaults
+Amazon FSx for NetApp ONTAP is supported as a cyber vault source and target. 
+
+.Implementation
+Workload Factory provides assistance in creating a cyber vault architecture. After you contact NetApp support to express your interest in implementing a cyber vault, a NetApp specialist contacts you to discuss your requirements. 
+
+Send an email to ng-ontap-cyber-vault@netapp.com to get started. 
 
 For more information about about cyber vaults and how to set up this architecture, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault documentation^].
 
