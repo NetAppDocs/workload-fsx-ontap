@@ -14,14 +14,25 @@ Manually adjust the volume capacity of a volume at any time from the NetApp Work
 Optionally, you can link:edit-volume-autogrow.html[enable the autogrow feature] to let Workload Factory manage volume capacity for you. 
 
 .About this task
-You can adjust volume capacity by increasing or decreasing the provisioned size of a volume. The following are the minimum and maximum volume sizes: 
+You can adjust volume capacity by increasing or decreasing the provisioned size of a volume. The following table shows the minimum and maximum volume sizes by volume type:
 
-* The minimum volume size is 20 MiB. 
-* The maximum volume size is 800 GiB. 
+[cols="1,1,1",options="header"]
+|===
+| Volume type | Minimum size | Maximum size
+
+| FlexVol volume
+| 20 MiB
+| 300 TiB
+
+| FlexGroup volume
+| 800 GiB
+| 2 PiB
+
+|=== 
 
 For an iSCSI LUN, increasing the size of the volume also increases the size of the host LUN. After you increase volume capacity, follow the procedure provided by your host operating system to discover the new size of the LUN and expand the file system of the LUN.  
 
-Decreasing volume size isn't supported for iSCSI volumes. 
+Decreasing volume size is supported only for NFS and SMB/CIFS volumes. 
 
 .Before you begin
 To adjust volume capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.  
