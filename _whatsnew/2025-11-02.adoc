@@ -32,9 +32,9 @@ The new _Analysis_ menu item has been added to the Storage menu. This menu item 
 
 === Well-architected analysis updates
 Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
-
-* Delete unnecessary snapshots: checks whether volumes have outdated and unnecessary snapshots that can be deleted to reduce costs. 
+ 
 * Volume utilization nearing full: checks whether any volumes are using 80% or more of their file capacity. This helps you identify volumes that may need additional capacity.
+* Unauthorized access to volumes: checks whether an iSCSI volume is accessible using an NFS or SMB/CIFS mount path and allows you to remove unauthorized access to the volume to avoid security risks.
 
 === Permissions changes for Workload Factory for Storage
 
