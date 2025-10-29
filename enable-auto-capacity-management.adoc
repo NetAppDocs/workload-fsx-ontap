@@ -24,7 +24,7 @@ Enable automatic capacity management to automatically add incremental storage up
 .Before you begin
 Consider the following before you begin: 
 
-* You must have credentials with the _______ permission policy in Workload Factory to complete this task (includes for auto capacity we need: fsx::DescribeFileSystems, fsx::UpdateFileSystem, cloudwatch::GetMetricStatistics.).
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
 * You shouldn't enable this feature during data migration because AWS imposes a minimum six-hour cool down period between SSD capacity increases. This restriction might delay adjustments, so plan accordingly.
 
 .Steps
