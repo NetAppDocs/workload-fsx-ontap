@@ -19,12 +19,16 @@ The cyber vault is an "air-gapped", immutable, and indelible data repository tha
 Air-gapping backups that use traditional methods involve creating space and physically separating the primary and secondary media. By moving the media offsite and/or severing connectivity, bad actors have no access to the data. This protects the data but can lead to slower recovery times.
 
 .FSx for ONTAP cyber vaults
+
 Amazon FSx for NetApp ONTAP is supported as a cyber vault source and target. 
 
 .Implementation
+
 Workload Factory provides assistance in creating a cyber vault architecture. After you contact NetApp support to express your interest in implementing a cyber vault, a NetApp specialist contacts you to discuss your requirements. 
 
 Send an email to ng-ontap-cyber-vault@netapp.com to get started. 
+
+.Related information
 
 For more information about about cyber vaults and how to set up this architecture, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault documentation^].
 
