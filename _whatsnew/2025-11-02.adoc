@@ -1,0 +1,56 @@
+=== Cache volume management
+You can perform the following cache volume management operations from within the Workload Factory console:
+
+* Edit the cache name
+* Increase the capacity of a cache volume
+* Edit the mount path or export policy for a cache volume
+* Change the caching method, or mode, for a cache volume
+* Prepopulate a cache volume
+* Delete a cache volume
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[Manage cache volumes^]
+
+=== Automatic inode management available    
+You can enable automatic inode management without the need to enable automatic capacity management. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Enable automatic inode management^]
+
+=== Threshold warning setting for capacity and inode usage
+Threshold warnings are available for both capacity and inode usage. You can set these thresholds to when enabling automatic capacity or inode management. To use this setting, you'll need to configure notifications using the link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[NetApp Workload Factory notification service^].
+
+=== Volume size decrease available
+You can decrease the size of NFS and SMB/CIFS volumes in NetApp Workload Factory. This feature allows for better management of storage resources by enabling you to reduce the size of volumes that are no longer needed at their current capacity.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.html[Decrease the capacity of a volume^]
+
+=== Enhanced FSx for ONTAP resource state
+Workload Factory has enhanced the "misconfigured" resource state to include an explanation of the actual issue for the resource.
+
+=== Well-architected analysis updates
+Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
+ 
+* Volume utilization nearing full: checks whether any volumes are using 80% or more of their file capacity. This helps you identify volumes that may need additional capacity.
+* Unauthorized access to volumes: checks whether an iSCSI volume is accessible using an NFS or SMB/CIFS mount path and allows you to remove unauthorized access to the volume to avoid security risks.
+
+=== Permissions changes for Workload Factory for Storage
+
+Workload Factory provides more clarity about the permissions it requires for specific actions and granularity for selecting only the permissions you need. When you add credentials, you'll have three permissions options to choose from instead of the previous permissions model which was _read-only_ and _read/write_. The new permissions model breaks up the permission policies as follows: 
+
+* _View, planning, and analysis_: View FSx for ONTAP file systems, learn about system health, get the well-architected analysis for your systems, and explore savings.
+
+* _Operations and remediation_: Perform operational tasks like adjust file system capacity and fix issues for your file system configurations.
+
+* _File system creation and deletion_: Create and delete FSx for ONTAP file systems and storage VMs.
+
+When adding credentials, you can select one or more of these permission policies based on the level of access you want to provide to Workload Factory.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[Workload Factory permissions reference^]
+
+=== FSx for ONTAP cyber vault support
+You can create a cyber vault using FSx for ONTAP as a source or target in the cyber vault architecture. Cyber vaults provide a secure and isolated environment for storing critical data, protecting it from ransomware and other cyber threats.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-cyber-vault.html[Set up a cyber vault with FSx for ONTAP^]
+
+
+
+

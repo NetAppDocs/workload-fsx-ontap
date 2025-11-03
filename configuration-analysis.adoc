@@ -33,9 +33,14 @@ Configuration categories::: The file system configurations are organized into ca
 * _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
 
 == Analysis requirements
-For a complete file system analysis, you must associate a link. Link connectivity lets Workload Factory analyze all file system configurations like data protection and performance.
+For a complete file system analysis, you must do the following: 
 
+* Associate a link. Link connectivity lets Workload Factory analyze all file system configurations like data protection and performance.
++
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
+* Grant _view, planning, and analysis_ permissions in your AWS account. 
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
 
 .What's next
 

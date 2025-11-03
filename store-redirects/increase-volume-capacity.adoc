@@ -1,0 +1,4 @@
+---
+permalink: increase-volume-capacity.html
+redirect: workload-fsx-ontap/adjust-volume-capacity.html
+---
