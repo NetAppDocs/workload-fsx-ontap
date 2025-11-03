@@ -36,7 +36,7 @@ Workload factory analyzes the well-architected status of the following configura
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
 
 .Before you begin
-* You must have credentials with _read-only_ or _read/write_ permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions in your AWS account^].
+* You must link:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
 * The remediation process may cause instance downtimes or service interruptions. Make sure you review each recommendation carefully before selecting to fix a configuration issue. 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
 

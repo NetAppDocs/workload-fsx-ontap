@@ -25,6 +25,7 @@ Enable automatic capacity management to automatically add incremental storage up
 Consider the following before you begin: 
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
+* To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * You shouldn't enable this feature during data migration because AWS imposes a minimum six-hour cool down period between SSD capacity increases. This restriction might delay adjustments, so plan accordingly.
 
 .Steps
