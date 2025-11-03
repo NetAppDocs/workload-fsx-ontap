@@ -30,6 +30,6 @@ Send an email to ng-FSx-CyberVault@netapp.com to get started.
 
 .Related information
 
-For more information about about cyber vaults and how to set up this architecture, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault documentation^].
+For more information about cyber vaults and how to set up this architecture, refer to the link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html[ONTAP cyber vault documentation^].
 
 
