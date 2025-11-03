@@ -119,7 +119,7 @@ sidebar:
           entries: 
             - title: Adjust file system capacity
               url: /increase-file-system-capacity.html
-            - title: Enable automatic capacity management
+            - title: Enable automatic capacity and inodes management
               url: /enable-auto-capacity-management.html
             - title: Reset fsxadmin password
               url: /reset-fsxadmin-password.html
