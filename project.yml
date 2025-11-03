@@ -95,12 +95,14 @@ sidebar:
               url: /edit-volume-autogrow.html
             - title: Increase volume capacity
               url: /increase-volume-capacity.html
+            - title: Rebalance volume capacity
+              url: /rebalance-volume.html
             - title: Manage immutable files 
               url: /manage-immutable-files.html  
             - title: Manage volume tags
               url: /manage-volume-tags.html
-            - title: Rebalance volume capacity
-              url: /rebalance-volume.html
+            - title: Manage cache volumes
+              url: /manage-cache-volumes.html
             - title: Change a tiering policy
               url: /change-tiering-policy.html   
             - title: Update storage efficiency
