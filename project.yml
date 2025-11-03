@@ -79,6 +79,8 @@ sidebar:
               url: /clone-volume.html  
             - title: Use on-premises ONTAP data
               url: /use-onprem-data.html
+            - title: Create a cyber vault to protect data
+              url: /create-cyber-vault.html  
     - title: Administer and monitor
       entries:
         - title: Monitor operations with Tracker
