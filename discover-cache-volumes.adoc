@@ -42,3 +42,7 @@ Consider the following before you begin.
 * *Write modes*: The write mode of the FlexCache relationship. 
 * *DR cache*: Indicates whether the FlexCache relationship is a disaster recovery (DR) cache. 
 * *Export policy*: The export policy of the cache volume.
+
+.Related information
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[Manage cache volumes]
