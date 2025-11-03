@@ -1,28 +1,30 @@
 ---
 sidebar: sidebar
 permalink: enable-auto-capacity-management.html
-keywords: auto capacity, automatic capacity management, file system capacity
-summary: "Enabling this feature lets Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time."  
+keywords: auto capacity, automatic capacity management, inodes management, file system capacity
+summary: "Enabling this feature lets Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time."  
 ---
-= Enable automatic capacity management for an FSx for ONTAP file system
+= Enable automatic capacity and inode management for a file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enabling automatic capacity management lets NetApp Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity manually and mitigates the risk of impactful application data reads and writes. 
+Enabling automatic capacity and inode management lets NetApp Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity and inodes manually. 
 
-.About this task 
-A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, or the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
+== About this task 
+A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  
 
 Only one account can manage this feature. 
 
 The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is 524,288 GiB. To request a quota increase, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
+== Enable automatic capacity management
+Enable automatic capacity management to automatically add incremental storage up to the maximum size limit for an FSx for ONTAP file system.
+
 .Before you begin
 Consider the following before you begin: 
 
-* You must have credentials with _read/write_ permissions in Workload Factory to complete this task.
-* To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
 * You shouldn't enable this feature during data migration because AWS imposes a minimum six-hour cool down period between SSD capacity increases. This restriction might delay adjustments, so plan accordingly.
 
 .Steps
@@ -37,10 +39,50 @@ Consider the following before you begin:
 .. Select the enable button to *Enable automatic capacity management*. 
 +
 Alternatively, disable the feature. If you need to increase file system capacity, you must first disable automatic capacity management. 
-.. *Threshold increase*: Enter the maximum size for the FSx for ONTAP file system.
-.. *Incremental increase*: Enter the percentage to increase capacity incrementally. 
-.. Optional: Enable automatic inodes management to make sure that file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
+.. *Warning threshold*: Set the warning threshold lower than the threshold increase to trigger a notification from the Workload Factory notification service. The default is 70%. 
++
+The warning threshold setting is available only if you link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enabled the Workload Factory notification service^]. 
+.. *Threshold increase*: Enter the maximum percentage increase for the FSx for ONTAP file system. The default is 80%.
++
+This is the threshold at which Workload Factory triggers a job to increase the capacity. For example, if the file system reaches 80% of capacity, then Workload Factory will increase capacity. 
+.. *Incremental increase*: Enter the percentage to increase capacity incrementally. The default is 10%.
++
+This is the percentage we increase capacity each time the threshold is reached. For example, if the file system is 80% full and the incremental increase is set to 10%, then Workload Factory increases the capacity by 10%.
 . Select *Apply*. 
 
 .Result
 A file system scan occurs every 30 minutes to determine if the file system needs additional capacity.
+
+== Enable automatic inode management
+Enable automatic inode management to make sure that the file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
+
+NOTE: *Terraform users*: Terraform has a limitation that requires that all operations are completed within Terraform. Inode management isn't supported in Terraform, but you can enable automatic inode management in the Workload Factory console.
+
+.Before you begin
+Consider the following before you begin:
+
+* To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* Automatic inode management can be set up with a _warning threshold_ that triggers a notification from the Workload Factory notification service. To use this feature, you must link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enable the Workload Factory notification service^] first.
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to enable automatic inodes management for. 
+. Select *Manage*. 
+. Under Information, select the pencil icon next to *Automatic inodes management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic inodes management* row. 
+. In the *Automatic inodes management* dialog, provide the following: 
+.. *Credentials*: Select credentials with _Automate_ permissions from the dropdown menu. 
+.. Select the enable button to *Enable automatic inodes management*. 
++
+Alternatively, disable the feature. If you need to increase the number of inodes, you must first disable automatic inodes management. 
+.. *Warning threshold*: Set the warning threshold lower than the threshold increase to trigger a notification from the Workload Factory notification service. The default is 70%. 
++
+The warning threshold setting is available only if you link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enabled the Workload Factory notification service^]. 
+.. *Threshold increase*: Enter the maximum percentage increase for the number of inodes (files) per volume. The default is 80%.
+.. *Incremental increase*: Enter the percentage to increase the number of inodes (files) incrementally. The default is 10%.
+. Select *Apply*. 
+
+.Result
+A file system scan occurs every 30 minutes to determine if the volumes need additional inodes (files) per volume.
