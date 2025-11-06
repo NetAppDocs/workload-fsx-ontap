@@ -64,8 +64,8 @@ This permission enables Workload Factory to invoke Bedrock models for proactive 
 + 
 These permissions verify model availability.
 
-== Analyze error logs
-Use the Workload Factory console to analyze SQL Server error logs.
+== Analyze FSx for ONTAP events
+Use the Workload Factory console to analyze FSx for ONTAP events.
 
 .Steps
 
