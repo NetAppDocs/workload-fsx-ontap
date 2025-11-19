@@ -31,8 +31,8 @@ sidebar:
       entries:
         - title: Explore savings
           url: /explore-savings.html
-        - title: Track usage and costs
-          url: /track-usage-costs.html
+        - title: Track and analyze FSx for ONTAP costs
+          url: /track-costs.html
         - title: Use links
           entries: 
             - title: Learn about links
