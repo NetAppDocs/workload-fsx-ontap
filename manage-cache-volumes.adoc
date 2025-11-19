@@ -4,12 +4,12 @@ permalink: manage-cache-volumes.html
 keywords: cache volumes, manage cache, FSx for ONTAP cache
 summary: "Manage the cache volumes for an FSx for ONTAP file system in NetApp Workload Factory when needed." 
 ---
-= Manage the cache volumes for an FSx for ONTAP file system 
+= Manage FSx for ONTAP cache volumes with NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-From the NetApp Workload Factory console, you can manage the cache volumes for your FSx for ONTAP file systems. Management tasks include editing the cache name, increasing cache capacity, editing the export policy, changing the caching method, pre-populating the cache, and deleting the cache volume when it is no longer needed.
+From the NetApp Workload Factory console, you can manage the cache volumes for your FSx for ONTAP file systems. Management tasks include editing the cache name, adjusting cache capacity, editing the export policy, changing the caching method, pre-populating the cache, and deleting the cache volume when it is no longer needed.
 
 .About this task
 You can manage cache volumes that are associated with cache relationships without leaving the NetApp Workload Factory console. 
@@ -31,8 +31,8 @@ Change the name of an existing cache volume at any time.
 . Select the actions menu for the cache volume you want to modify and then select *Edit cache name*.
 . In the *Edit cache name* dialog, enter the new name for the cache volume and then select *Apply*.
 
-== Increase the capacity of a cache volume
-Should you need to increase the capacity of an existing cache volume, you can do so at any time.
+== Adjust the capacity of a cache volume
+Should you need to adjust the capacity of an existing cache volume, you can do so at any time.
 
 .Steps
 
@@ -41,8 +41,8 @@ Should you need to increase the capacity of an existing cache volume, you can do
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
-. Select the actions menu for the cache volume you want to modify and then select *Increase cache capacity*.
-. In the *Increase cache capacity* dialog, enter the new capacity for the cache volume by percentage or by unit and then select *Apply*.
+. Select the actions menu for the cache volume you want to modify and then select *Adjust cache capacity*.
+. In the *Adjust cache capacity* dialog, enter the new capacity for the cache volume by percentage or by unit and then select *Apply*.
 
 == Edit the cache volume export policy
 Change the mount path or the export policy assigned to an existing cache volume. 
