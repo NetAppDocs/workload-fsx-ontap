@@ -31,6 +31,8 @@ sidebar:
       entries:
         - title: Explore savings
           url: /explore-savings.html
+        - title: Track and analyze FSx for ONTAP costs
+          url: /track-costs.html
         - title: Use links
           entries: 
             - title: Learn about links
@@ -105,6 +107,8 @@ sidebar:
               url: /manage-volume-tags.html
             - title: Manage cache volumes
               url: /manage-cache-volumes.html
+            - title: Manage block devices
+              url: /manage-block-devices.html
             - title: Change a tiering policy
               url: /change-tiering-policy.html   
             - title: Update storage efficiency

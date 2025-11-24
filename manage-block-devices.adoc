@@ -1,0 +1,48 @@
+---
+sidebar: sidebar
+permalink: manage-block-devices.html
+keywords: block devices, manage luns, manage iscsi
+summary: "Manage block devices for an FSx for ONTAP file system in NetApp Workload Factory." 
+---
+= Manage the block devices for an FSx for ONTAP file system 
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+From the NetApp Workload Factory console, you can manage the block devices for your FSx for ONTAP file systems. Management tasks include viewing block device details and increasing capacity.
+
+.About this task
+Block devices, or LUNs (logical unit numbers), are volumes that contain file systems in a SAN environment and can be accessed by hosts over a network.
+
+You can manage block devices for FSx for ONTAP file systems that use the iSCSI protocol.
+
+.Before you begin
+* You must associate a link to manage cache volumes and relationships. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
+* You must have an existing block device to view or manage.
+
+== View block device details
+View details for an existing block device at any time.
+
+.Steps  
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Navigate to the actions menu for block device and then select *View details*.
++ 
+General details, consumption, access, and protection information for the block device are displayed.
+
+== Increase the capacity of a block device
+Increase the capacity of an existing block device at any time.    
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Navigate to the actions menu for the block device and then select *Increase capacity*.
+. Enter the new capacity for the block device and select the unit. 
+. Select *Increase* to apply the changes.
+
+NOTE: After you increase the size of the block device, follow the procedure provided by your host operating system to discover the new size of the block device and expand the file system on it.
+
