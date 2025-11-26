@@ -16,9 +16,6 @@ Cost and usage data for your FSx for ONTAP file system resources is extracted fr
 
 * `ce:GetCostAndUsage`
 * `ce:GetTags`
-* `ce:GetCostAndUsageWithResources`
-* `ce:GetCostForecast`
-* `ce:GetUsageForecast`
 
 .Before you begin
 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to track FSx for ONTAP costs.
