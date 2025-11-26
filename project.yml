@@ -107,8 +107,6 @@ sidebar:
               url: /manage-volume-tags.html
             - title: Manage cache volumes
               url: /manage-cache-volumes.html
-            - title: Manage block devices
-              url: /manage-block-devices.html
             - title: Change a tiering policy
               url: /change-tiering-policy.html   
             - title: Update storage efficiency
@@ -121,6 +119,10 @@ sidebar:
               url: /split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
+        - title: Block device administration
+          entries:
+            - title: Manage block devices
+              url: /manage-block-devices.html
         - title: File system administration
           entries: 
             - title: Adjust file system capacity
