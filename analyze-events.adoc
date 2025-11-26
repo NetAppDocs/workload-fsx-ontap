@@ -4,18 +4,18 @@ permalink: analyze-events.html
 keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP
 summary: "Analyze EMS events within NetApp Workload Factory for FSx for ONTAP."
 ---
-= Analyze events for FSx for ONTAP file systems in Workload Factory
+= Analyze FSx for ONTAP EMS events in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Use the smart event analyzer to automatically extract and analyze Event Management System (EMS) events for FSx for ONTAP file systems so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
+Use the smart event analyzer to automatically extract and analyze Event Management System (EMS) events for FSx for ONTAP file systems in NetApp Workload Factory so that you can quickly identify and resolve issues. The Agentic AI-based analysis requires Amazon Bedrock integration.
 
 == About this task 
 
-Storage administrators often respond to EMS events for FSx for ONTAP only after customer complaints or by creating custom scripts and alarms. This reactive approach slows down fixing issues, increases downtime, and makes operations less efficient.
+Storage administrators often respond to FSx for ONTAP EMS events only after customer complaints or by creating custom scripts and alarms. This reactive approach slows down fixing issues, increases downtime, and makes operations less efficient.
 
-The event analyzer extracts EMS events for FSx for ONTAP and analyzes them to help you maintain the health and performance of FSx for ONTAP file systems. 
+The event analyzer extracts FSx for ONTAP EMS events and analyzes them to help you maintain the health and performance of FSx for ONTAP file systems. 
 
 Key benefits include:
 
@@ -43,6 +43,7 @@ Customer data is not used to train or improve models. Amazon Bedrock processes e
 To use the event analyzer, you must meet the following prerequisites:
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account to view events for FSx for ONTAP file systems. 
+* You must link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connect to an FSx for ONTAP file system using a link] to use the EMS events analyzer.
 * You also need to meet the following requirements. The system prompts you to complete these steps when you analyze log errors.
 
 ** *Amazon Bedrock activation* 
