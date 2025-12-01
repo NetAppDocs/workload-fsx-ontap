@@ -25,7 +25,7 @@ You'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-s
 
 [role="quick-margin-para"]
 
-Choose the link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[permission policies^] to meet your needs.
+Choose the link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html[permission policies^] to meet your needs.
 
 [role="quick-margin-para"]
 If you choose not to grant permissions, you can start using Workload Factory for FSx for ONTAP to copy partially completed code samples.

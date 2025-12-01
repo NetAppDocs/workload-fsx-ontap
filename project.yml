@@ -31,6 +31,8 @@ sidebar:
       entries:
         - title: Explore savings
           url: /explore-savings.html
+        - title: Track and analyze FSx for ONTAP costs
+          url: /track-costs.html
         - title: Use links
           entries: 
             - title: Learn about links
@@ -90,7 +92,9 @@ sidebar:
             - title: Configuration analysis for FSx for ONTAP
               url: /configuration-analysis.html
             - title: Implement well-architected file system configurations
-              url: /improve-configurations.html  
+              url: /improve-configurations.html 
+        - title: Analyze FSx for ONTAP events      
+          url: /analyze-events.html
         - title: Volume administration
           entries:  
             - title: Edit volume autogrow
@@ -117,12 +121,18 @@ sidebar:
               url: /split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
+        - title: Block device administration
+          entries:
+            - title: Manage block devices
+              url: /manage-block-devices.html
         - title: File system administration
           entries: 
             - title: Adjust file system capacity
               url: /increase-file-system-capacity.html
             - title: Enable automatic capacity and inodes management
               url: /enable-auto-capacity-management.html
+            - title: Manage file system tags
+              url: /manage-fsx-tags.html
             - title: Reset fsxadmin password
               url: /reset-fsxadmin-password.html
             - title: Delete a file system

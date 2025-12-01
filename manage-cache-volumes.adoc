@@ -4,18 +4,18 @@ permalink: manage-cache-volumes.html
 keywords: cache volumes, manage cache, FSx for ONTAP cache
 summary: "Manage the cache volumes for an FSx for ONTAP file system in NetApp Workload Factory when needed." 
 ---
-= Manage the cache volumes for an FSx for ONTAP file system 
+= Manage FSx for ONTAP cache volumes with NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-From the NetApp Workload Factory console, you can manage the cache volumes for your FSx for ONTAP file systems. Management tasks include editing the cache name, increasing cache capacity, editing the export policy, changing the caching method, pre-populating the cache, and deleting the cache volume when it is no longer needed.
+Use the NetApp Workload Factory console to manage cache volumes for FSx for ONTAP file systems. Caching, a method for temporarily storing data, improves data access performance by reducing retrieval time. You can edit the cache name, adjust capacity, change the export policy, select a caching method, pre-populate the cache, or delete cache volumes.
 
 .About this task
-You can manage cache volumes that are associated with cache relationships without leaving the NetApp Workload Factory console. 
+You can manage cache volumes that are associated with cache relationships in the NetApp Workload Factory console. 
 
 .Before you begin
-* You must associate a link to manage cache volumes and relationships. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* You must associate a link to manage cache volumes and relationships. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
 * You must have an existing cache volume to edit.
 
 == Edit the cache volume name
@@ -31,8 +31,8 @@ Change the name of an existing cache volume at any time.
 . Select the actions menu for the cache volume you want to modify and then select *Edit cache name*.
 . In the *Edit cache name* dialog, enter the new name for the cache volume and then select *Apply*.
 
-== Increase the capacity of a cache volume
-Should you need to increase the capacity of an existing cache volume, you can do so at any time.
+== Adjust the capacity of a cache volume
+You can adjust the capacity of an existing cache volume at any time.
 
 .Steps
 
@@ -41,8 +41,8 @@ Should you need to increase the capacity of an existing cache volume, you can do
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
-. Select the actions menu for the cache volume you want to modify and then select *Increase cache capacity*.
-. In the *Increase cache capacity* dialog, enter the new capacity for the cache volume by percentage or by unit and then select *Apply*.
+. Select the actions menu for the cache volume you want to modify and then select *Adjust cache capacity*.
+. In the *Adjust cache capacity* dialog, enter the new capacity for the cache volume by percentage or by unit and then select *Apply*.
 
 == Edit the cache volume export policy
 Change the mount path or the export policy assigned to an existing cache volume. 
@@ -58,7 +58,7 @@ Change the mount path or the export policy assigned to an existing cache volume.
 . Select *Apply*.
 
 == Change the caching method for a cache volume
-Change the caching method, or mode, for an existing cache volume to write-around or write-back. 
+You can change how the cache works for an existing cache volume to write-around or write-back.
 
 Learn more about link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html[write modes^].
 
@@ -72,7 +72,7 @@ Learn more about link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-fl
 . In the *Change caching method* dialog, select the new caching method and then select *Apply*.
 
 == Prepopulate a cache volume
-Prepopulate a cache volume with data from the origin volume before you request it to speed up access to cached data. 
+Fill the cache volume with data from the origin volume before you use it to make cached data available faster. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -84,7 +84,7 @@ Prepopulate a cache volume with data from the origin volume before you request i
 . In the *Prepopulate cache* dialog, specify the path to the data set to use for prepopulation and then select *Apply*.
 
 == Delete a cache volume
-Deleting a cache volume deletes the cache relationship between the origin volume and the cache volume. After deletion, cached data is no longer available.
+When you delete a cache volume, you remove its cache relationship. Cached data is no longer available.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
