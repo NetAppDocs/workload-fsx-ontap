@@ -16,7 +16,7 @@ indexpage:
       links:
         - title: Explore savings
           url: /explore-savings.html
-        - title: Track and analyze FSx for ONTAP costs
+        - title: Track costs and usage for FSx for ONTAP resources
           url: /track-costs.html    
         - title: Connect to a file system with a link
           url: /create-link.html   
