@@ -10,18 +10,26 @@ indexpage:
           url: /learn-fsx-ontap.html
         - title: Quick start
           url: /quick-start.html
+        - title: Create an FSx for ONTAP file system
+          url: /create-file-system.html   
     - title: Use FSx for ONTAP
       links:
         - title: Explore savings
           url: /explore-savings.html
-        - title: Create an FSx for ONTAP file system
-          url: /create-file-system.html
-        - title: View the well-architected status of your FSx for ONTAP file systems 
-          url: /improve-configurations.html
-        - title: Create an FSx for ONTAP volume
-          url: /create-volume.html
+        - title: Track costs and usage for FSx for ONTAP resources
+          url: /track-costs.html    
+        - title: Connect to a file system with a link
+          url: /create-link.html   
         - title: Protect your data
           url: /data-protection-overview.html     
+    - title: Administer and monitor
+      links:
+        - title: Monitor operations with Tracker
+          url: /monitor-operations.html
+        - title: View the well-architected status of your FSx for ONTAP file systems 
+          url: /improve-configurations.html  
+        - title: Analyze FSx for ONTAP EMS events      
+          url: /analyze-events.html
     - title: Knowledge and support
       links:
         - title: Register for support
