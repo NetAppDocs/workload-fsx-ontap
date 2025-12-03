@@ -93,7 +93,7 @@ sidebar:
               url: /configuration-analysis.html
             - title: Implement well-architected file system configurations
               url: /improve-configurations.html 
-        - title: Analyze FSx for ONTAP events      
+        - title: Analyze FSx for ONTAP EMS events      
           url: /analyze-events.html
         - title: Volume administration
           entries:  
