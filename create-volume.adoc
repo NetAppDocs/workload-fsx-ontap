@@ -166,3 +166,4 @@ If the feature is unavailable, it is because of one of the following reasons:
 
 .Result
 Workload factory initiates volume creation. Once created, the system displays the new volume in the Volumes tab.
+
