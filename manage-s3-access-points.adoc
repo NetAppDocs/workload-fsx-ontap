@@ -28,19 +28,19 @@ You must have an existing volume with attached S3 access points.
 
 .Create and attach S3 access points to an existing volume
 --
-. Select *Create and attach S3 access point*. 
-. In the *Create and attach S3 access point* dialog, provide the following information:
+8. Select *Create and attach S3 access point*. 
+9 In the *Create and attach S3 access point* dialog, provide the following information:
 
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
-. Select *Create and attach*. 
+10. Select *Create and attach*. 
 --
 
 .Delete existing S3 access points from a volume
 --
-. Select the actions menu for the S3 access point to delete and then select *Detach*.
-. In the *Detach and remove an S3 access point* dialog, select *Detach and remove* to delete the S3 access point from the volume.
+8. Select the actions menu for the S3 access point to delete and then select *Detach*.
+9. In the *Detach and remove an S3 access point* dialog, select *Detach and remove* to delete the S3 access point from the volume.
 
 --
 
