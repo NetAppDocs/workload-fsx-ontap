@@ -12,7 +12,7 @@ summary: "Manage the S3 access points for a volume in NetApp Workload Factory."
 Manage the S3 access points for a volume in NetApp Workload Factory. You can use the Workload Factory console to assign S3 access points to existing volumes or delete S3 access points. 
 
 .Before you begin
-You must have an existing volume.
+You must have an existing volume with an S3 access point.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
