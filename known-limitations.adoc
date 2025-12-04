@@ -74,6 +74,10 @@ System Manager doesn't support links for FSx for ONTAP connectivity.
 == AWS Secrets Manager support 
 AWS Secrets Manager isn't supported when using a Console agent.
 
+== Amazon S3 access points limitation
+
+The limit for the number of S3 access points per storage VM is 4,000.
+
 
 Note:
 
