@@ -1,3 +1,4 @@
+---
 sidebar: sidebar
 permalink: manage-s3-access-points.html
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points
@@ -8,10 +9,7 @@ summary: "Manage the S3 access points for a volume in NetApp Workload Factory."
 :imagesdir: ./media/
 
 [.lead]
-Manage the S3 access points for a volume in NetApp Workload Factory.
-
-.About this task
-Managing a volume's S3 access points involves assigning S3 access points to existing volumes or deleting S3 access points. 
+Manage the S3 access points for a volume in NetApp Workload Factory. You can use the Workload Factory console to assign S3 access points to existing volumes or delete S3 access points. 
 
 .Before you begin
 You must have an existing volume with attached S3 access points.
@@ -20,7 +18,7 @@ You must have an existing volume with attached S3 access points.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Go to Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
-. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update and then select *Manage*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
 . From the file system overview, select the *Volumes* tab.
 . From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
 . On the Manage S3 access points page, you can create and attach access points or delete existing access points.
@@ -42,7 +40,7 @@ You must have an existing volume with attached S3 access points.
 .Delete existing S3 access points from a volume
 --
 . Select the actions menu for the S3 access point to delete and then select *Detach*.
-. In the *Detach and remove an S3 access point* dialog, select *Detach and remove*. This action deletes the S3 access point from the volume.
+. In the *Detach and remove an S3 access point* dialog, select *Detach and remove* to delete the S3 access point from the volume.
 
 --
 
