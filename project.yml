@@ -117,6 +117,8 @@ sidebar:
               url: /manage-nfs-export-policy.html  
             - title: Manage SMB/CIFS shares
               url: /manage-cifs-share.html 
+            - title: Manage S3 access points 
+              url: /manage-s3-access-points.html 
             - title: Split a cloned volume
               url: /split-cloned-volume.html    
             - title: Delete a volume

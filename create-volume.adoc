@@ -164,6 +164,9 @@ If the feature is unavailable, it is because of one of the following reasons:
 
 . Select *Create*. 
 
-.Result
-Workload factory initiates volume creation. Once created, the system displays the new volume in the Volumes tab.
+.Related information
+
+* link:adjust-volume-capacity.html[Adjust volume capacity in Workload Factory]
+* link:change-tiering-policy.html[Change volume tiering policy in Workload Factory]
+* link:manage-s3-access-points.html[Manage S3 access points in Workload Factory]
 
