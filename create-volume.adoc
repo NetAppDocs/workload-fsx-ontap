@@ -20,6 +20,8 @@ The following protocols might be used for your volumes:
 * NFS: file storage protocol for Unix operating systems
 * iSCSI: block storage protocol 
 
+S3 endpoints can be attached to an FSx for ONTAP volume. Using an S3 access point, you can access file data residing on SMB/CIFS or NFS volumes via the AWS S3 APIs. This allows you to integrate your existing data with GenAI, ML, and analytics from AWS services that support S3 access points.
+
 === Details for volume settings
 
 .Immutable files
@@ -103,9 +105,9 @@ Complete the following fields to set up block access to the volume.
 .... Under Host Initiators, add one or more iSCSI qualified name (IQN) host initiators.
 + 
 
-.. *S3 endpoint*: Optionally, attach an S3 endpoint to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
+.. *S3 access point*: Optionally, attach an S3 access point to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
 
-* *S3 endpoint name*: Enter the name of the S3 endpoint.
+* *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
 . Under Efficiency and protection, provide the following details: 
@@ -164,3 +166,4 @@ If the feature is unavailable, it is because of one of the following reasons:
 
 .Result
 Workload factory initiates volume creation. Once created, the system displays the new volume in the Volumes tab.
+
