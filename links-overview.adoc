@@ -45,6 +45,7 @@ Workload factory requires a link to display some information and to perform some
 The features that require a link include:
 
 * Well-architected status of FSx for ONTAP file system configurations for proactive maintenance, reliability, and cost-performance optimization
+* ONTAP EMS event monitoring and alerting
 * NetApp Autonomous Ransomware Protection (ARP/AI)
 * Enhanced holistic capacity observability across FSx for ONTAP file systems
 * Volume and storage VM data replication, management, and monitoring

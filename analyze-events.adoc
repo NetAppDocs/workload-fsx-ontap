@@ -43,6 +43,8 @@ Customer data is not used to train or improve models. Amazon Bedrock processes e
 To use the event analyzer, you must meet the following prerequisites:
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account to view events for FSx for ONTAP file systems. 
+* The following port must be open in the security group associated with the FSx for ONTAP file system for the EMS events analysis.
+** Port 22 (SSH)
 * You must link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connect to an FSx for ONTAP file system using a link] to use the EMS events analyzer.
 * You also need to meet the following requirements. The system prompts you to complete these steps when you analyze log errors.
 
