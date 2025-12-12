@@ -28,9 +28,9 @@ Because requirements for storage configurations vary, you can dismiss the analys
 Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
 
 * Reliability: SSD capacity threshold, scheduled local snapshots, FSx for ONTAP backups, remote data replication, and data reliability for long-term retention
-* Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) and unauthorized access to volumes
-* Operational excellence: automatic capacity management, volume file capacity utilization threshold, and volume utilization nearing full
-* Cost optimization: storage efficiencies, data tiering, and unnecessary snapshot deletion
+* Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
+* Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, and cache relationship write mode
+* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion
 * Performance optimization: FlexGroup volumes rebalance
 
 == Fix a configuration issue
