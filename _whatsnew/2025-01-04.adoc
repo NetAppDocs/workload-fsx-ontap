@@ -1,0 +1,5 @@
+=== Support for on-premises data replication using an S3 access point
+
+Workload Factory supports replicating on-premises ONTAP data to the cloud for integration with AWS GenAI, ML, and analytics. You can replicate your on-premises data to an NFS or SMB/CIFS volume using an S3 access point.
+
+link:create-replication.adoc[Replicate on-premises ONTAP data to the cloud using an S3 access point]
