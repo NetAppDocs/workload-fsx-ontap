@@ -3,3 +3,12 @@
 Workload Factory supports replicating on-premises ONTAP data to the cloud for integration with AWS GenAI, ML, and analytics. You can replicate your on-premises data to an NFS or SMB/CIFS volume using an S3 access point.
 
 link:create-replication.adoc[Replicate on-premises ONTAP data to the cloud using an S3 access point]
+
+=== Well-architected analysis updates
+Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
+
+* NetApp Autonomous Ransomware Protection (ARP/AI) disabled includes block devices: checks whether ARP/AI is disabled on block device volumes
+* Cache relationship write mode: checks whether the write mode is optimal for the cache volume workload
+* Unnecessary backup deletion: checks whether backups are outdated or unnecessary that can be deleted to reduce costs
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
