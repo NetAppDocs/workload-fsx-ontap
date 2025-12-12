@@ -43,3 +43,9 @@ NOTE: Matching source and target labels are required for long-term retention. If
 +
 * Set the *Retention period* in number of hours, days, months, or years. 
 * *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy.
+.. *S3 access point*: Optionally, attach an S3 access point to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
++
+* *S3 access point name*: Enter the name of the S3 access point.
+* *User*: Select an existing user with access to the volume or create a new user.
+* *User type*: Select *UNIX* or *Windows* as the user type.
+* *Enable metadata*: Enabling metadata creates an S3 table containing all objects accessible by the S3 access point, which you can use for auditing, governance, automatic, analysis, and optimization.
