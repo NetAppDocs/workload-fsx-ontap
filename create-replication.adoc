@@ -9,22 +9,23 @@ summary: "Create a replication relationship for an FSx for ONTAP file system to 
 :imagesdir: ./media/
 
 [.lead]
-Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster.
+Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster. Replication is supported between two FSx for ONTAP file systems and between an on-premises ONTAP system and an FSx for ONTAP file system.
 
 .About this task
 Replication is an added layer of data protection which is essential in case the region where your data resides experiences a disaster. Data loss can be avoided if you use cross-region replication. 
 
-This operation replicates data for one or all source volumes in an on-premises ONTAP system or an FSx for ONTAP file system. 
-
-Replication is supported between two FSx for ONTAP file systems and between an on-premises ONTAP system and an FSx for ONTAP file system.
-
-NOTE: For replication between an on-premises ONTAP system and an FSx for ONTAP file system, only single-volume replication is supported.
+This operation replicates data for one or all source volumes in an FSx for ONTAP file system.
 
 Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
 
 When replicating a source volume with immutable files, the target volume and file system  become locked until the retention period of the immutable files in the source volume ends. The immutable files feature is available when you link:create-volume.html[create a volume] for an FSx for ONTAP file system. 
 
-Replication isn't supported for block volumes using iSCSI or NVMe protocols.
+[NOTE]
+===============================
+* Only single-volume replication is supported for replication between an on-premises ONTAP system and an FSx for ONTAP file system.
+
+* Replication isn't supported for block volumes using iSCSI or NVMe protocols.
+===============================
 
 .Before you begin
 Make sure you meet the following prerequisites before you begin. 
