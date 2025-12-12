@@ -5,7 +5,7 @@ Workload Factory supports replicating on-premises ONTAP data to the cloud for in
 link:create-replication.adoc[Replicate on-premises ONTAP data to the cloud using an S3 access point]
 
 === Well-architected analysis updates
-Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
+Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
 
 * NetApp Autonomous Ransomware Protection (ARP/AI) disabled includes block devices: checks whether ARP/AI is disabled on block device volumes
 * Cache relationship write mode: checks whether the write mode is optimal for the cache volume workload
