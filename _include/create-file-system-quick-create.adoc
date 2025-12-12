@@ -1,0 +1,41 @@
+. On the Create FSx for ONTAP page, select *Quick create*. 
++
+You can also load a saved configuration.
+. Under File system general configuration, provide the following: 
+.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
+.. *File system name*: Enter a name for the file system. 
+.. *Region & VPC*: Select the region and VPC for the file system.
+.. *Deployment type*: Select a deployment type.
++
+* Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
++
+This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS.
+* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
++
+This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. 
+.. *Tags*: Optionally, you can add up to 50 tags. 
+. Under *File system details*, provide the following: 
+.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
++
+* For first-generation deployments, you can't decrease capacity after file system creation.
+* For second-generation deployments, you can increase capacity after file system creation.
+.. *ONTAP credentials*: Optional. Enter your ONTAP user name and password. The password can be set now or later.  
++
+If the user you provide is not the fsxadmin user, and later you need to reset the fsxadmin password, you'll be able to do this from the AWS console. 
+.. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
+... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
+... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
+... *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this storage VM in the Active Directory.
+... *User name*: Enter the user name of the service account in your existing Active Directory. 
++
+Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
+... *Password*: Enter the password for the service account. 
+... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. The OU is the distinguished path name of the organizational unit to which you want to join the file system. 
+... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
++
+If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
++
+If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
+
+. Open the *Summary* to review the configuration that you defined. If needed, you can change any setting at this time before saving or creating the file system. 
+. Save or create the file system. 
