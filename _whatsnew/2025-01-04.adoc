@@ -12,3 +12,10 @@ Workload Factory analyzes your FSx for ONTAP file systems for the following conf
 * Unnecessary backup deletion: checks whether backups are outdated or unnecessary that can be deleted to reduce costs
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
+
+=== Home page integration
+
+The Workload Factory console home page embeds the Ask me AI assistant so that you can ask questions and learn more about Workload Factory without leaving the Workload Factory console. The redesigned home page displays Storage, Databases, and VMware tiles with details about workload resources and easy navigation to the respective workloads. The new *Focus* tile displays any FSx for ONTAP EMS events and well-architected issues for storage and database workloads that require your attention.
+
+=== Analysis navigation change
+Previously, the Analysis tab was accessible from an FSx for ONTAP file system overview. With the new navigation, the *Analysis* tab has moved to the Storage menu on the left side of the Workload Factory console. 
