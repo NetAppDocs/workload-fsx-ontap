@@ -19,3 +19,12 @@ The Workload Factory console home page embeds the Ask me AI assistant so that yo
 
 === Analysis navigation change
 Previously, the Analysis tab was accessible from an FSx for ONTAP file system overview. With the new navigation, the *Analysis* tab has moved to the Storage menu on the left side of the Workload Factory console. 
+
+=== Block device enhancements in NetApp Workload Factory
+The following enhancements have been made for block devices. 
+
+==== Block device creation
+NetApp Workload Factory supports creating block devices using the iSCSI protocol on FSx for ONTAP file systems so that you can better support your line of business (LOB) applications from the Workload Factory console. 
+
+==== Support for FlexVol volumes containing block devices
+You can enable ARP/AI on FlexVol volumes that contain block devices. Enabling ARP detects ransomware attacks using AI and aids in data recovery. 
