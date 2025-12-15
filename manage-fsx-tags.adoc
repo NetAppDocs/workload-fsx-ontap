@@ -13,7 +13,7 @@ Tags can help you categorize your resources. You can add, edit, and remove tags 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. In the Storage tile, select *Manage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage file system tags*.
 . In the *Manage file system tags* dialog, add, edit, or remove tags as needed.

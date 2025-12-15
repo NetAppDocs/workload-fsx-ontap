@@ -76,7 +76,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. In the Storage tile, select *Manage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to enable ARP/AI and then select *Manage*. 
 . From the Volumes tab, select the actions menu of the volume to enable ARP/AI, then *Data protection actions*, and then *Manage ARP/AI*.
@@ -113,7 +113,7 @@ With the knowledge of the affected files and the time of attack, it is possible 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. In the Storage tile, select *Manage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the file system to recover data for.
 . From the file system overview, select the *Volumes* tab. 

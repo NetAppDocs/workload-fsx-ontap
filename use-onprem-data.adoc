@@ -37,7 +37,7 @@ image:screenshot-on-prem-connectivity.png["Screenshot that shows how an on-premi
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. In the Storage tile, select *Manage*.
 . Select the *On-premises ONTAP* tab.
 . Select *Discover*. 
 . Review the prerequisites and select *Next*. 
@@ -65,7 +65,7 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. In the Storage tile, select *Manage*.
 . From the Storage menu, select *On-premises ONTAP*. 
 . To find volumes by storage VM, you can *Select storage VM* from the dropdown.  
 . Select one or more volumes to replicate and then select *Replicate*.
@@ -109,7 +109,7 @@ You must link:delete-replication.html[delete all existing replication relationsh
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. In the Storage tile, select *Manage*.
 . From the Storage menu, select *On-premises ONTAP*. 
 . Select the on-premises ONTAP cluster to remove. 
 . Select the actions menu and select *Remove from Workload Factory*. 

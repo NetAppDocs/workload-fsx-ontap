@@ -15,7 +15,7 @@ Note that enabling immutable files is only possible during link:create-volume.ht
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.  
+. In the Storage tile, select *Manage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system with the volume to update and then select *Manage*. 
 . In the Volumes tab, select the actions menu of the volume to clone. 

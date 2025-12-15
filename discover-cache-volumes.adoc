@@ -26,7 +26,7 @@ Consider the following before you begin.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.  
+. In the Storage tile, select *Manage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the *Cache relationships* tab. 
 . Your cache volumes appear in the table. The table includes the following information about each cache volume:
