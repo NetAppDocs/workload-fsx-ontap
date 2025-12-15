@@ -33,11 +33,12 @@ ARP/AI operates first in _learning mode_ and then automatically switches to _act
 * *Active mode*: After ARP/AI switches to _active mode_, FSx for ONTAP creates ARP/AI snapshots to protect the data if a threat is detected.
 +
 In active mode, if a file extension is flagged as abnormal, you should evaluate the alert. You can act on the alert to protect your data or you can mark the alert as a false positive. Marking an alert as a false positive updates the alert profile. For example, if the alert is triggered by a new file extension and you mark the alert as a false positive, you will not receive an alert the next time that file extension is observed.
++
+FlexVol volumes containing a block device start ARP/AI in active mode.
 
 Unsupported configurations:::
 The following configurations don't support the use of ARP/AI. 
 
-* SAN/Block volumes
 * iSCSI volumes
 * NVMe volumes
 
