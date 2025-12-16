@@ -24,7 +24,7 @@ Change the name of an existing cache volume at any time.
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
@@ -37,7 +37,7 @@ You can adjust the capacity of an existing cache volume at any time.
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
@@ -49,7 +49,7 @@ Change the mount path or the export policy assigned to an existing cache volume.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
@@ -64,7 +64,7 @@ Learn more about link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-fl
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
@@ -76,7 +76,7 @@ Fill the cache volume with data from the origin volume before you use it to make
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.
@@ -88,7 +88,7 @@ When you delete a cache volume, you remove its cache relationship. Cached data i
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select FSx for ONTAP.
 . From FSx for ONTAP, select the actions menu of the file system with the cache volume and then select *Manage*.
 . From the file system overview, select the *Cache relationships* tab.

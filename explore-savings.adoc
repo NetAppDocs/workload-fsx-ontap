@@ -34,7 +34,7 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Manage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
 . From the Storage menu, select *Explore savings*, and then select the *Amazon Elastic Block Store (EBS)* tab. 
 . In the Storage savings calculator, provide the following details: 
 .. *Use case*: Required. Select a use case from the dropdown menu. The selected use case determines the FSx for ONTAP file system characteristics for comparison. 
@@ -52,7 +52,7 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Manage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
 . From the Storage menu, select *Explore savings*, and then select the *Amazon Elastic Block Store (EBS)* tab. 
 . In the Storage savings calculator, provide the following details: 
 .. *Use case*: Required. Select a use case from the dropdown menu. The selected use case determines the FSx for ONTAP file system characteristics for comparison. 
@@ -72,7 +72,7 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Manage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
 . From the Storage menu, select *Explore savings*, and then select the *Amazon Elastic Block Store (EBS)* tab. 
 . In the Storage savings calculator, provide the following details: 
 .. *Use case*: Required. Select a use case from the dropdown menu. The selected use case determines the FSx for ONTAP file system characteristics for comparison. 
@@ -111,7 +111,7 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Manage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
 . From the Storage menu, select *Explore savings*, and then select the *Amazon Elastic Block Store (EBS)* tab. 
 . In the *Elastic Block Store (EBS)* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the instance(s) you selected:  
@@ -126,7 +126,7 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Manage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
 . From the Storage menu, select *Explore savings*, and then select the *Amazon FSx for Windows File Server* tab.
 . In the *Amazon FSx for Windows File Server* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the deployment type of the instance(s) you selected:  
@@ -142,7 +142,7 @@ Follow the steps under the tab for your storage selection.
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Manage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
 . From the Storage menu, select *Explore savings*, and then select the *Amazon Elastic File System (EFS)* tab. 
 . In the *Elastic File System (EFS)* tab, select the instance(s) to compare with FSx for ONTAP and select *Explore savings*.
 . The Storage savings calculator appears. The following storage system characteristics are pre-filled based on the instance(s) you selected:  
