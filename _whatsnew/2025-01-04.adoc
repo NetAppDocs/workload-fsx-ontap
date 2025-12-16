@@ -5,6 +5,7 @@ Workload Factory supports replicating on-premises ONTAP data to the cloud for in
 link:create-replication.adoc[Replicate on-premises ONTAP data to the cloud using an S3 access point]
 
 === Well-architected analysis updates
+
 Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
 
 * NetApp Autonomous Ransomware Protection (ARP/AI) disabled includes block devices: checks whether ARP/AI is disabled on block device volumes
@@ -17,13 +18,16 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 The Workload Factory console home page now embeds the Ask me AI assistant, enabling you to ask questions about your own storage estate and get personalized insights directly from your environment. You can interact with Ask me to understand your workloads, troubleshoot issues, and learn more about Workload Factory — all without leaving the console.
 
-=== Analysis navigation change
-Previously, the Analysis tab was accessible from an FSx for ONTAP file system overview. With the new navigation, the *Analysis* tab has moved to the Storage menu on the left side of the Workload Factory console. 
+=== Analysis screen added for the AI analyzer for EMS events
+
+A new _Analysis_ screen has been added to the Storage menu. From this screen, you can use the AI analyzer for EMS events feature.
 
 === Block device enhancements in NetApp Workload Factory
+
 The following enhancements have been made for block devices. 
 
 ==== Block device creation
+
 NetApp Workload Factory supports creating block devices using the iSCSI protocol on FSx for ONTAP file systems so that you can better support your line of business (LOB) applications from the Workload Factory console. 
 
 ==== Support for FlexVol volumes containing block devices
