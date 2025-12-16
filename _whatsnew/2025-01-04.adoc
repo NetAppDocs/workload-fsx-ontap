@@ -30,6 +30,14 @@ The following enhancements have been made for block devices.
 
 NetApp Workload Factory supports creating block devices using the iSCSI protocol on FSx for ONTAP file systems so that you can better support your line of business (LOB) applications from the Workload Factory console. 
 
+==== Block device management enhancements
+
+NetApp Workload Factory includes the following enhancements for link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html[managing block devices]. You can now perform the following tasks from the Workload Factory console:
+
+* Manage client access
+* Archive block device data
+* Delete a block device
+
 ==== Support for FlexVol volumes containing block devices
 You can enable ARP/AI on FlexVol volumes that contain block devices. Enabling ARP detects ransomware attacks using AI and aids in data recovery. 
 
