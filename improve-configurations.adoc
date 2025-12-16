@@ -31,7 +31,6 @@ Workload factory analyzes the well-architected status of the following configura
 * Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
 * Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, and cache relationship write mode
 * Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion
-* Performance optimization: FlexGroup volumes rebalance
 
 == Fix a configuration issue
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
