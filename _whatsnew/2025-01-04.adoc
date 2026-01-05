@@ -1,9 +1,3 @@
-=== Support for on-premises data replication using an S3 access point
-
-Workload Factory supports replicating on-premises ONTAP data to the cloud for integration with AWS GenAI, ML, and analytics. You can replicate your on-premises data to an NFS or SMB/CIFS volume using an S3 access point.
-
-link:create-replication.adoc[Replicate on-premises ONTAP data to the cloud using an S3 access point]
-
 === Well-architected analysis updates
 
 Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
@@ -16,11 +10,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 === Ask me AI assistant home page integration
 
-The Workload Factory console home page now embeds the Ask me AI assistant, enabling you to ask questions about your own storage estate and get personalized insights directly from your environment. You can interact with Ask me to understand your workloads, troubleshoot issues, and learn more about Workload Factory — all without leaving the console.
+The Workload Factory console home page embeds the Ask me AI assistant, enabling you to ask questions about your own storage estate, get personalized insights directly from your environment, and refer to previous conversations. You can interact with Ask me to understand your workloads, troubleshoot issues, and learn more about Workload Factory — all without leaving the console. 
+
+=== Use of IAM user principal in Lambda link resource-based permission policies
+Lambda links that are used to connect between your Workload Factory account and one or more FSx for ONTAP file systems to perform advanced ONTAP operations, now use the IAM user principal for resource-based policy permissions. This change provides better alignment with industry best practices for AWS resource access.
 
 === Analysis screen added for the AI analyzer for EMS events
 
-A new _Analysis_ screen has been added to the Storage menu. From this screen, you can use the AI analyzer for EMS events feature.
+A new _Analysis_ screen has been added to the Storage menu. From this screen, you can use the AI analyzer for FSx for ONTAP EMS events feature.
 
 === Block device enhancements in NetApp Workload Factory
 
@@ -38,8 +35,5 @@ NetApp Workload Factory includes the following enhancements for link:https://doc
 * Archive block device data
 * Delete a block device
 
-==== Support for FlexVol volumes containing block devices
-You can enable ARP/AI on FlexVol volumes that contain block devices. Enabling ARP detects ransomware attacks using AI and aids in data recovery. 
-
-=== Use of IAM user principal in Lambda link resource-based permission policies
-Lambda links that are used to connect between your Workload Factory account and one or more FSx for ONTAP file systems to perform advanced ONTAP operations, now use the IAM user principal for resource-based policy permissions. This change provides better alignment with industry best practices for AWS resource access.
+==== Support for ARP/AI on FlexVol volumes containing block devices
+You can enable link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[NetApp Autonomous Ransomware Protection with AI (ARP/AI)] on FlexVol volumes that contain block devices. Enabling ARP/AI detects ransomware attacks using AI and aids in data recovery. 
