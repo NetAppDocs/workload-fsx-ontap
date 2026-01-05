@@ -1,0 +1,82 @@
+---
+sidebar: sidebar
+permalink: create-block-device.html
+keywords: create block device, create lun, iscsi protocol
+summary: "Create block devices to support your line of business (LOB) application requirements." 
+---
+= Create a block device for a file system in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Create block devices to support your line of business (LOB) application requirements.
+
+.About this task
+Only FlexVol volumes are supported for block devices in NetApp Workload Factory. You can create block devices using the iSCSI protocol.
+
+The block size must be smaller than the available FlexVol volume size.
+
+.Before you begin
+* You must associate a link to create block devices. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Select *Create block device*.
+. Under *Volume details*, do the following: 
+.. *Volume name*: Select one of the following options. 
++
+* Create a new volume and enter the name of the volume.
+* Select an existing volume.
+.. *Storage VM*: Select a storage VM. 
+.. *Volume style*: The default volume style is *FlexVol*.
+.. *Volume size*: Enter the size of the volume and select the unit. The maximum size per FlexVol volume is 100 TiB. 
+.. *Volume autogrow*: Optionally, enable volume autogrow to allow the volume to automatically increase in size when it reaches capacity. The maximum growth size is 300 TiB.
+.. *Tags*: Optionally, add tags to help organize and categorize your block device.
+. Under *Block device details*, do the following:
+.. *Block device name*: Enter a name for the block device.
+.. *Block device size*: Enter the size of the block device and select the unit. The block device size must be smaller than the available volume size.
+. Under *Access*, do the following: 
+.. *iSCSI configuration*: Select one of the following options.
++
+* *Create new initiator group*: Provide the host operating system, initiator group name, and add one or more iSCSI qualified name (IQN) host initiators. 
+* *Map existing initiator group*: Select an existing initiator group, provide the host operating system, and select one or more iSCSI qualified name (IQN) host initiators.
+. Under *Efficiency and protection*, do the following:
+.. *Storage efficiency*: Enabled by default. Select to disable the feature.
++
+ONTAP achieves storage efficiency using deduplication and compression features. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
+.. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
++
+The following are default policies from AWS. To display existing snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
++
+`default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
++
+* A maximum of six hourly snapshots taken five minutes past the hour.
+* A maximum of two daily snapshots taken Monday through Saturday at 10 minutes after midnight.
+* A maximum of two weekly snapshots taken every Sunday at 15 minutes after midnight.
++
+NOTE: Snapshot times are based on the file system's time zone, which defaults to Coordinated Universal Time (UTC). For information about changing the time zone, refer to link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html[Displaying and setting the system time zone^] in the NetApp Support documentation.
++
+
+`default-1weekly`::: This policy works in the same way as the `default` policy, except that it only retains one snapshot from the weekly schedule.
++
+`none`::: This policy doesn't take any snapshots. You can assign this policy to volumes to prevent automatic snapshots from being taken.
+
+.. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
++
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload Factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
+.. *ARP/AI*: NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default when a link is associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ARP/AI]. Accept the statement to proceed.
++
+If the feature is unavailable, it is because of one of the following reasons: 
++
+* A link is not associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* Volumes with immutable files and volumes with the NVMe protocol are not supported for ARP/AI.
+* The file system already has an ARP/AI policy.
+
+. Select *Create*.
+
+.Related information
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html[Manage the block devices for an FSx for ONTAP file system]

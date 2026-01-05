@@ -4,12 +4,12 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi
 summary: "Manage block devices for an FSx for ONTAP file system in NetApp Workload Factory." 
 ---
-= Manage the block devices for an FSx for ONTAP file system 
+= Manage the block devices for a file system in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-From the NetApp Workload Factory console, you can manage the block devices for your FSx for ONTAP file systems. Management tasks include viewing block device details and increasing capacity.
+From the NetApp Workload Factory console, you can manage the block devices for your FSx for ONTAP file systems. Management tasks include viewing block device details, increasing capacity, managing client access, archiving block device data, and deleting block devices.
 
 .About this task
 Block devices, or LUNs (logical unit numbers), are volumes that contain file systems in a SAN environment and can be accessed by hosts over a network.
@@ -25,7 +25,7 @@ View details for an existing block device at any time.
 
 .Steps  
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Navigate to the actions menu for block device and then select *View details*.
@@ -37,7 +37,7 @@ Increase the capacity of an existing block device at any time.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Navigate to the actions menu for the block device and then select *Increase capacity*.
@@ -46,3 +46,48 @@ Increase the capacity of an existing block device at any time.
 
 NOTE: After you increase the size of the block device, follow the procedure provided by your host operating system to discover the new size of the block device and expand the file system on it.
 
+== Manage client access for a block device
+You can manage client access for an existing block device at any time by creating igroups, and adding or removing block devices and host initiators.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Navigate to the actions menu for the block device and then select *Manage client access*.
+. If no igroup exists, create a new igroup by selecting *Create igroup*, and then do the following: 
+.. *Block device name*: Enter a block device name. You can select multiple block devices to associate with the igroup.
+.. *Operating system type*: Select the operating system type.
+.. *igroup name*: Enter an igroup name.
+.. *igroup description*: Optionally, enter an igroup description.
+.. *Host initiators*: Enter one or more host initiators. These initiators must follow iSCSI qualified (IQN) format.
+.. Select *Create*.
+. If an igroup already exists, select *Edit client access* to add or remove block devices and host initiators from the igroup and then select *Apply*.
+
+== Archive the data of an orphaned block device
+Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as orphaned block devices. You can archive the data of an orphaned block device to the capacity pool tier to reclaim SSD capacity.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Under Orphan devices, select *View and reclaim capacity*.
+. On the Reclaim space for unused block devices screen, select one or more block devices to archive the data and reclaim the capacity.
+. Select *Archive*. 
+
+== Delete a block device
+Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as orphaned block devices. This operation unmaps and deletes the selected block device. If the host FlexVol volume doesn't contain any block devices, Workload Factory also deletes it.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. In the Storage tile, select *Go to Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Under Orphan devices, select *View and reclaim capacity*.
+. On the Reclaim space for unused block devices screen, select one or more block devices to archive the data and reclaim the capacity.
+. Select *Delete*. 
+
+== Related information
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device for an FSx for ONTAP file system]

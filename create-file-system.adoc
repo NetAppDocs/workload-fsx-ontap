@@ -37,7 +37,8 @@ Second-generation FSx for ONTAP file systems are the default deployment type for
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Create FSx for ONTAP*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage dashboard, select *Create file system*.
 include::_include/create-file-system-quick-create.adoc[]
 
 If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.

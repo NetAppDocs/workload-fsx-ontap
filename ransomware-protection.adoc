@@ -33,11 +33,12 @@ ARP/AI operates first in _learning mode_ and then automatically switches to _act
 * *Active mode*: After ARP/AI switches to _active mode_, FSx for ONTAP creates ARP/AI snapshots to protect the data if a threat is detected.
 +
 In active mode, if a file extension is flagged as abnormal, you should evaluate the alert. You can act on the alert to protect your data or you can mark the alert as a false positive. Marking an alert as a false positive updates the alert profile. For example, if the alert is triggered by a new file extension and you mark the alert as a false positive, you will not receive an alert the next time that file extension is observed.
++
+FlexVol volumes containing a block device start ARP/AI in active mode.
 
 Unsupported configurations:::
 The following configurations don't support the use of ARP/AI. 
 
-* SAN/Block volumes
 * iSCSI volumes
 * NVMe volumes
 
@@ -57,7 +58,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to enable ARP/AI and then select *Manage*. 
 . Under Information, select the pencil icon next to *Autonomous Ransomware Protection*. The pencil icon appears next to the arrow when the mouse hovers over the *Autonomous Ransomware Protection* row. 
@@ -76,7 +77,7 @@ To enable ARP/AI for a file system or a volume, you must associate a link. link:
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to enable ARP/AI and then select *Manage*. 
 . From the Volumes tab, select the actions menu of the volume to enable ARP/AI, then *Data protection actions*, and then *Manage ARP/AI*.
@@ -94,7 +95,7 @@ Determine if an attack is a false alarm or a genuine ransomware incident.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the file system to validate ransomware attacks for. 
 . From the file system overview, select the *Volumes* tab. 
@@ -113,7 +114,7 @@ With the knowledge of the affected files and the time of attack, it is possible 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the file system to recover data for.
 . From the file system overview, select the *Volumes* tab. 
