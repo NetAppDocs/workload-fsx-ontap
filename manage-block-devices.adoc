@@ -87,3 +87,7 @@ Block devices that are no longer mapped to a client or unused for seven consecut
 . Under Orphan devices, select *View and reclaim capacity*.
 . On the Reclaim space for unused block devices screen, select one or more block devices to archive the data and reclaim the capacity.
 . Select *Delete*. 
+
+== Related information
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device for an FSx for ONTAP file system]
