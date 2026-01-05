@@ -1,0 +1,39 @@
+=== Well-architected analysis updates
+
+Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
+
+* NetApp Autonomous Ransomware Protection (ARP/AI) disabled includes block devices: checks whether ARP/AI is disabled on block device volumes
+* Cache relationship write mode: checks whether the write mode is optimal for the cache volume workload
+* Unnecessary backup deletion: checks whether backups are outdated or unnecessary that can be deleted to reduce costs
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems]
+
+=== Ask me AI assistant home page integration
+
+The Workload Factory console home page embeds the Ask me AI assistant, enabling you to ask questions about your own storage estate, get personalized insights directly from your environment, and refer to previous conversations. You can interact with Ask me to understand your workloads, troubleshoot issues, and learn more about Workload Factory — all without leaving the console. 
+
+=== Use of IAM user principal in Lambda link resource-based permission policies
+Lambda links that are used to connect between your Workload Factory account and one or more FSx for ONTAP file systems to perform advanced ONTAP operations, now use the IAM user principal for resource-based policy permissions. This change provides better alignment with industry best practices for AWS resource access.
+
+=== Analysis screen added for the AI analyzer for EMS events
+
+A new _Analysis_ screen has been added to the Storage menu. From this screen, you can use the AI analyzer for FSx for ONTAP EMS events feature.
+
+=== Block device enhancements in NetApp Workload Factory
+
+The following enhancements have been made for block devices. 
+
+==== Block device creation
+
+NetApp Workload Factory supports creating block devices using the iSCSI protocol on FSx for ONTAP file systems so that you can better support your line of business (LOB) applications from the Workload Factory console. 
+
+==== Block device management enhancements
+
+NetApp Workload Factory includes the following enhancements for link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html[managing block devices]. You can now perform the following tasks from the Workload Factory console:
+
+* Manage client access
+* Archive block device data
+* Delete a block device
+
+==== Support for ARP/AI on FlexVol volumes containing block devices
+You can enable link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[NetApp Autonomous Ransomware Protection with AI (ARP/AI)] on FlexVol volumes that contain block devices. Enabling ARP/AI detects ransomware attacks using AI and aids in data recovery. 
