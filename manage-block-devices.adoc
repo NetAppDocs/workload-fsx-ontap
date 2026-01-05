@@ -25,7 +25,7 @@ View details for an existing block device at any time.
 
 .Steps  
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Navigate to the actions menu for block device and then select *View details*.
@@ -37,7 +37,7 @@ Increase the capacity of an existing block device at any time.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Navigate to the actions menu for the block device and then select *Increase capacity*.
