@@ -4,7 +4,7 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi
 summary: "Manage block devices for an FSx for ONTAP file system in NetApp Workload Factory." 
 ---
-= Manage the block devices for file system in NetApp Workload Factory
+= Manage the block devices for a file system in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
