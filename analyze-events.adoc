@@ -24,7 +24,7 @@ Key benefits include:
 
 When using the event analyzer, you maintain full control over your environment while benefiting from advanced AI analysis.
 
-To use the event analyzer, you need to activate Amazon Bedrock, select the model Workload Factory uses, create a private endpoint to connect to Amazon Bedrock, add permissions, and create an enterprise license. 
+To use the event analyzer, you need to activate Amazon Bedrock, select the model Workload Factory uses, create a private endpoint to connect to Amazon Bedrock, add permissions, and create an enterprise license.
 
 link:https://aws.amazon.com/bedrock/pricing/[Amazon Bedrock pricing^]
 
@@ -50,7 +50,7 @@ To use the event analyzer, you must meet the following prerequisites:
 
 ** *Amazon Bedrock activation* 
 +
-The event analyzer uses Amazon Bedrock APIs to provide AI-based insights for FSx for ONTAP events.
+The event analyzer uses Amazon Bedrock APIs to provide AI-based insights for FSx for ONTAP events. Amazon Bedrock configuration should be done for each AWS account separately.
 +
 Recommended model: Amazon Bedrock Model (anthropic.claude-sonnet-4-20250514-v1:0). You must provide the Inference profile ARN for this model in the selected region. 
 
