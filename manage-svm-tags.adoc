@@ -16,9 +16,8 @@ Tags can help you categorize your resources. You can add, edit, and remove tags 
 . In the Storage tile, select *Go to Storage*. 
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system with the storage VM to update and then select *Manage*.
-. From the file system overview, select the *Storage VMs* tab.
-. From the Storage VMs tab, select the actions menu of the storage VM to edit tags for.
-. Select *Edit storage VM tags*. 
+. In the file system overview under Storage VMs, select *Manage*.
+. From the Manage storage VMs screen, select the actions menu of the storage VM to edit tags for, then select *Basic actions* > *Edit storage VM tags*. 
 . On the Edit storage VM tags page, add, edit, or remove tags. 
 +
 The maximum number of tags you can apply to a storage VM is 50.

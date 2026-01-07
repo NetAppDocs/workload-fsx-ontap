@@ -37,48 +37,8 @@ Second-generation FSx for ONTAP file systems are the default deployment type for
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Create FSx for ONTAP*.  
-. On the Create FSx for ONTAP page, select *Quick create*. 
-+
-You can also load a saved configuration.
-. Under File system general configuration, provide the following: 
-.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
-.. *File system name*: Enter a name for the file system. 
-.. *Region & VPC*: Select the region and VPC for the file system.
-.. *Deployment type*: Select a deployment type.
-+
-* Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
-+
-This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS.
-* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
-+
-This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. 
-.. *Tags*: Optionally, you can add up to 50 tags. 
-. Under *File system details*, provide the following: 
-.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
-+
-* For first-generation deployments, you can't decrease capacity after file system creation.
-* For second-generation deployments, you can increase capacity after file system creation.
-.. *ONTAP credentials*: Optional. Enter your ONTAP user name and password. The password can be set now or later.  
-+
-If the user you provide is not the fsxadmin user, and later you need to reset the fsxadmin password, you'll be able to do this from the AWS console. 
-.. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
-... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
-... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
-... *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this storage VM in the Active Directory.
-... *User name*: Enter the user name of the service account in your existing Active Directory. 
-+
-Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
-... *Password*: Enter the password for the service account. 
-... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. The OU is the distinguished path name of the organizational unit to which you want to join the file system. 
-... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
-+
-If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
-+
-If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
-
-. Open the *Summary* to review the configuration that you defined. If needed, you can change any setting at this time before saving or creating the file system. 
-. Save or create the file system. 
+. In the Storage tile, select *Create FSx for ONTAP*. 
+include::_include/create-file-system-quick-create.adoc[]
 
 If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.
 --
@@ -90,74 +50,7 @@ With Advanced create, you set all of the configuration options, including availa
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . In the Storage tile, select *Create FSx for ONTAP*.  
-. On the Create FSx for ONTAP page, select *Advanced create*. 
-+
-You can also load a saved configuration.
-. Under File system general configuration, provide the following: 
-.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
-.. *File system name*: Enter a name for the file system. 
-.. *Region & VPC*: Select the region and VPC for the file system. 
-.. *Deployment type*: Select a deployment type and file system generation. The availability of a second-generation file system depends on the selected region. If the selected region doesn't support second-generation FSx for ONTAP file systems, the deployment type switches to first-generation.
-+
-* Single Availability Zone (Single-AZ) deployment: provides availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
-+
-*File system generation*: Select one of the following:
-
-** *Second-generation*: This configuration is recommended for high performance workloads or when workloads start small and incrementally scale out to 72 GB/s of throughput and 2.4 million IOPS. 
-** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. First-generation file systems can only increase capacity.  
-
-* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
-+ 
-*File system generation*: Select one of the following:
-
-** *Second-generation*: This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. In a Multi-AZ and second-generation file system, capacity can increase or decrease to match workload demands. 
-** *First-generation*: This configuration is ideal for workloads that require up to 4 GB/s or 160,000 IOPS. First-generation file systems can only increase capacity.  
-.. *Tags*: Optionally, you can add up to 50 tags. 
-. Under File system details, provide the following: 
-.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
-+
-* For first-generation deployments, you can't decrease capacity after file system creation.
-* For second-generation deployments, you can adjust capacity.
-.. *Throughput capacity per HA pair*: Select throughput capacity per number of HA pairs. First-generation file systems support only one HA pair.
-.. *Provisioned IOPS*: Select one of the following options: 
-+
-* *Automatic*: For automatic, for every GiB created, 3 IOPS are added. 
-* *User-provisioned*: For user-provisioned, enter the IOPS value.
-.. *ONTAP credentials*: Optional. Enter your ONTAP user name and password. The password can be set now or later.
-+
-If the user you provide is not the fsxadmin user, and later you need to reset the fsxadmin password, you'll be able to do this from the AWS console. 
-.. *Storage VM Credentials*: Optional. Enter your user name. Password can be specific to this file system or you can use the same password entered for ONTAP credentials. The password can be set now or later.
-.. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
-... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
-... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
-... *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this storage VM in the Active Directory.
-... *User name*: Enter the user name of the service account in your existing Active Directory. 
-+
-Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
-... *Password*: Enter the password for the service account. 
-... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. The OU is the distinguished path name of the organizational unit to which you want to join the file system. 
-... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
-+
-If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
-+
-If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
-. Under Network & security, provide the following: 
-.. *Security group*: Create or use an existing security group. 
-+
-For a new security group, refer to <<Security group details,security group details>> for a description of the security group protocols, ports, and roles.
-.. *Availability Zones*: Select availability zones and subnets.
-+
-* For Cluster configuration node 1: Select an availability zone and subnet. 
-* For Cluster configuration node 2: Select an availability zone and subnet. 
-.. *VPC route tables*: Select the VPC route table to enable client access to volumes. 
-.. *Endpoint IP address range*: Select *Floating IP address range outside your VPC* or *Enter an IP address range* and enter an IP address range. 
-.. *Encryption*: Select the encryption key name from the dropdown.
-. Under Backup and maintenance, provide the following: 
-.. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. Disable if desired. 
-... *Automatic backup retention period*: Enter the number of days to retain automatic backups. 
-... *Daily automatic backup window*: Select either *No preference* (a daily backup start time is selected for you) or *Select start time for daily backups* and specify a start time. 
-.. *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time is selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  
-. Save or create the file system. 
+include::_include/create-file-system-advanced-create.adoc[]
 
 If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.
 --
