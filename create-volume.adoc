@@ -116,7 +116,7 @@ Complete the following fields to set up block access to the volume.
 ONTAP achieves storage efficiency using deduplication and compression features. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
-The following are default policies from AWS. To display existing snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
+The following are default policies from AWS. To display existing snapshot policies, you must link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
 +
 `default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
 +
