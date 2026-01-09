@@ -51,7 +51,7 @@ You can manage client access for an existing block device at any time by creatin
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Navigate to the actions menu for the block device and then select *Manage client access*.
@@ -69,7 +69,7 @@ Block devices that are no longer mapped to a client or unused for seven consecut
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Under Orphan devices, select *View and reclaim capacity*.
@@ -81,7 +81,7 @@ Block devices that are no longer mapped to a client or unused for seven consecut
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Under Orphan devices, select *View and reclaim capacity*.
