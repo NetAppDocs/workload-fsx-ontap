@@ -79,9 +79,10 @@ Use the Workload Factory console to view and analyze EMS events for FSx for ONTA
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. Select the FSx for ONTAP file system to analyze and then select *Manage*.
-. Select the *Analysis* tab.
-. If needed, complete the *AI analysis setup requirements* by following the on-screen prompts to meet any missing prerequisites.
-. Find the FSx for ONTAP file system you want to analyze and then select *View events*. 
+. From the Storage menu, select *Analysis*. 
+. From the Analysis screen, select the AWS accounts, credentials, and regions that contain the FSx for ONTAP file systems you want to analyze.
++
+Only FSx for ONTAP file systems with events display on the screen.
+. If needed, complete the AI analysis setup requirements by following the on-screen prompts to meet any missing prerequisites.
+. Find the FSx for ONTAP file system you want to analyze and then select *View events*.
 . Review the detailed event information.
