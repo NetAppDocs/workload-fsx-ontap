@@ -37,8 +37,7 @@ You have two options for creating links in this workflow - automatically or manu
 * You need to have at least one FSx for ONTAP file system in Workload Factory. To discover FSx for ONTAP file systems, you must have an AWS account with permissions for FSx for ONTAP instances and link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview[add credentials in Workload Factory^] with _view, planning, and analysis_ permissions for Storage management. 
 * The following ports must be open in the security group associated with the FSx for ONTAP file system for link connectivity. 
 ** For the Workload Factory console: port 443 (HTTPS)
-** For CloudShell: port 22(SSH)
-* The link must be able to connect to the following endpoint: \https://api.workloads.netapp.com. The web-based console contacts this endpoint to interact with the Workload Factory APIs to manage and operate FSx for ONTAP workloads. 
+** For CloudShell and FSx for ONTAP Emergency Management System (EMS) events analysis: port 22 (SSH)
 * You must have the following permissions in your AWS account when adding a link using a CloudFormation stack:
 +
 [%collapsible]
@@ -86,7 +85,7 @@ Use CloudFormation to automatically create and register the link within Workload
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
@@ -140,7 +139,7 @@ You can create a link using two Infrastructure-as-Code (IaC) tools from the Code
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actionsenu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link dialog, select *Create a new link* and select *Continue*.
@@ -197,7 +196,7 @@ After you create a link, associate it with one or more FSx for ONTAP file system
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to associate a link to and then select *Associate link*. 
 . In the Associate link page, select *Associate an existing link*, select the link, and select *Continue*.

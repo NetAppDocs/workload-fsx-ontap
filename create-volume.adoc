@@ -20,6 +20,8 @@ The following protocols might be used for your volumes:
 * NFS: file storage protocol for Unix operating systems
 * iSCSI: block storage protocol 
 
+S3 endpoints can be attached to an FSx for ONTAP volume. Using an S3 access point, you can access file data residing on SMB/CIFS or NFS volumes via the AWS S3 APIs. This allows you to integrate your existing data with GenAI, ML, and analytics from AWS services that support S3 access points.
+
 === Details for volume settings
 
 .Immutable files
@@ -55,7 +57,7 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system you want to create a volume in, and select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
@@ -103,9 +105,9 @@ Complete the following fields to set up block access to the volume.
 .... Under Host Initiators, add one or more iSCSI qualified name (IQN) host initiators.
 + 
 
-.. *S3 endpoint*: Optionally, attach an S3 endpoint to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
+.. *S3 access point*: Optionally, attach an S3 access point to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
 
-* *S3 endpoint name*: Enter the name of the S3 endpoint.
+* *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
 . Under Efficiency and protection, provide the following details: 
@@ -114,7 +116,7 @@ Complete the following fields to set up block access to the volume.
 ONTAP achieves storage efficiency using deduplication and compression features. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
-The following are default policies from AWS. For custom snapshot policies, you must link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
+The following are default policies from AWS. To display existing snapshot policies, you must link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
 +
 `default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
 +
@@ -131,7 +133,7 @@ NOTE: Snapshot times are based on the file system's time zone, which defaults to
 
 .. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
 +
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload Factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
 .. *Immutable files*: Enabling the immutable files feature permanently commits files in this volume to an immutable WORM (write-once-read-many) state. Provide the following details:
 ... Select to enable *Immutable files powered by SnapLock*. 
 ... Select the box to agree and proceed.  
@@ -159,8 +161,11 @@ If the feature is unavailable, it is because of one of the following reasons:
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
 .. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
+. Select *Create*.
 
-. Select *Create*. 
+.Related information
 
-.Result
-Workload factory initiates volume creation. Once created, the system displays the new volume in the Volumes tab.
+* link:adjust-volume-capacity.html[Adjust volume capacity in Workload Factory]
+* link:change-tiering-policy.html[Change volume tiering policy in Workload Factory]
+* link:manage-s3-access-points.html[Manage S3 access points in Workload Factory]
+

@@ -20,8 +20,7 @@ Get the mount point for a volume to mount a share on a CIFS share or NFS client.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
-. From the Storage menu, select *FSx for ONTAP*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.
 . From the file system overview, select the *Volumes* tab. 
 . From the Volumes tab, select the actions menu for the volume, then *Basic actions*, and then *View mount command*. 
