@@ -1,0 +1,5 @@
+=== Home page includes well-architected issues for Storage
+
+The home page includes a Focus tile where well-architected issues appear for your workloads. From there, you can navigate to the Storage Well-Architected screen to view the well-architected status of all FSx for ONTAP file systems in your storage environment and remediate issues.
+
+=== 
