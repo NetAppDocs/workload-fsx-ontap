@@ -64,17 +64,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how
 ** *AWS IAM permissions* 
 +
 Add the following permissions to the Workload Factory IAM role associated policy.
-+
-* `bedrock:InvokeModel`
-* `bedrock:InvokeModelWithResponseStream`
+
+*** Permissions: `bedrock:InvokeModel` and `bedrock:InvokeModelWithResponseStream`
 + 
-These permissions allow Workload Factory to invoke Bedrock models for proactive error investigation and remediation. This profile also ensures secure AI access for tailored insights.
-+
-Also ensure that AWS credentials have the following permissions associated with Workload Factory. 
-+
-* `bedrock:GetInferenceProfile`
-* `bedrock:ListInferenceProfiles`
-+
+These permissions allow Workload Factory to invoke Bedrock models for error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
+
+*** AWS credentials associated with Workload Factory: `bedrock:GetInferenceProfile` and `bedrock:ListInferenceProfiles` permissions
++ 
 These permissions verify model availability.
 
 == View and analyze EMS events for FSx for ONTAP
