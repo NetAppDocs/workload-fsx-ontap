@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: analyze-events.html
-keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP
+keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP
 summary: "Analyze EMS events within NetApp Workload Factory for FSx for ONTAP."
 ---
 = Analyze FSx for ONTAP EMS events in NetApp Workload Factory
@@ -9,7 +9,7 @@ summary: "Analyze EMS events within NetApp Workload Factory for FSx for ONTAP."
 :imagesdir: ./media/
 
 [.lead]
-Quickly identify and resolve FSx for ONTAP file system issues with the smart event analyzer in NetApp Workload Factory. The event analyzer automatically extracts and analyzes Event Management System (EMS) events, leveraging Agentic AI with Amazon Bedrock integration.
+Quickly identify and resolve FSx for ONTAP file system issues with the smart event analyzer in NetApp Workload Factory. The event analyzer automatically extracts and analyzes FSx for ONTAP Event Management System (EMS) events, leveraging Agentic AI with Amazon Bedrock integration.
 
 == About this task 
 
@@ -19,16 +19,14 @@ The event analyzer automatically extracts error, warning, and emergency EMS even
 
 With Amazon Bedrock integration, Workload Factory uses AI to analyze events and provide actionable insights to maintain the health and performance of your FSx for ONTAP file systems. Events are displayed for 72 hours before removal.
 
-With Amazon Bedrock integration, Workload Factory uses AI to analyze the events and provide insights to help you maintain the health and performance of FSx for ONTAP file system. Workload Factory displays error, warning, and emergency events. Events are displayed for 72 hours before removal.
-
 Key benefits include:
 
-* Advanced troubleshooting: AI automatically identifies and analyzes events, reducing manual investigation time.
+* Advanced troubleshooting: AI automatically identifies, analyzes, and provides insights to fix FSx for ONTAP EMS events, reducing manual investigation time.
 * Best-practice remediation: The event analyzer gives clear, actionable steps to resolve FSx for ONTAP EMS events.
 
-The event analyzer gives you full control of your environment while benefiting from advanced AI analysis.
+When using the event analyzer, you have full control of your environment while benefiting from advanced AI analysis.
 
-To allow Workload Factory to analyze events, you need to activate Amazon Bedrock, select the model Workload Factory uses, create a private endpoint to connect to Amazon Bedrock, add permissions, and create an enterprise license.
+To allow Workload Factory to analyze events, you must activate Amazon Bedrock, select the model Workload Factory uses, create a private endpoint to connect to Amazon Bedrock, add permissions, and create an enterprise license.
 
 link:https://aws.amazon.com/bedrock/pricing/[Amazon Bedrock pricing^]
 
@@ -65,11 +63,15 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how
 +
 Add the following permissions to the Workload Factory IAM role associated policy.
 
-*** Permissions: `bedrock:InvokeModel` and `bedrock:InvokeModelWithResponseStream`
+*** `bedrock:InvokeModel`
+*** `bedrock:InvokeModelWithResponseStream`
 + 
 These permissions allow Workload Factory to invoke Bedrock models for error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
 
-*** AWS credentials associated with Workload Factory: `bedrock:GetInferenceProfile` and `bedrock:ListInferenceProfiles` permissions
+Also add the following permissions for AWS credentials associated with Workload Factory: 
+
+*** `bedrock:GetInferenceProfile`
+*** `bedrock:ListInferenceProfiles`
 + 
 These permissions verify model availability.
 
