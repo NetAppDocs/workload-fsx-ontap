@@ -21,7 +21,10 @@ After the S3 access point is attached, it appears in the AWS Management Console 
 You can attach multiple S3 access points to a single FSx for ONTAP volume, each with its own unique access level, allowing you to connect to as many AWS services as required.
 
 .Before you begin
-You must have an existing volume with an S3 access point.
+Ensure that you meet the following requirements: 
+
+* You must have an existing volume with an S3 access point.
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task.
 
 == Create and attach S3 access points to an existing volume
 
