@@ -70,6 +70,19 @@ Change the user and user type for an existing S3 access point attached to a volu
 . From the *Manage S3 access points* screen, select the actions menu and then select *Edit access point*.
 . Make updates and then select *Apply*. 
 
+== Manage S3 access point tags
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
+. From the file system overview, select the *Volumes* tab.
+. From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
+. From the *Manage S3 access points* screen, select the actions menu and then select *Manage tags*.
+. In the Manage S3 access point tags dialog, you can add up to 50 tags or remove tags for the S3 access point.
+. Select *Apply*.
+
 == Delete existing S3 access points from a volume
 
 .Steps
