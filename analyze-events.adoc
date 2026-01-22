@@ -15,9 +15,9 @@ Quickly identify and resolve FSx for ONTAP file system issues with the smart eve
 
 Storage administrators often respond to FSx for ONTAP EMS events only after customer complaints, or by maintaining custom scripts and alarms. This reactive approach can reduce efficiency, delay issue resolution, and increase downtime.
 
-The event analyzer automatically extracts error, warning, and emergency EMS events from FSx for ONTAP file systems. You can view these events by link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connecting to the file system using a link] and by link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[granting _view, planning, and analysis_ permissions^] in your AWS account.
+The event analyzer automatically extracts error, warning, and emergency EMS events from FSx for ONTAP file systems. You can view these events by link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connecting to the file system using a link] and by link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[granting _view, planning, and analysis_ permissions^] in your AWS account. Events are displayed for 72 hours before removal.
 
-With Amazon Bedrock integration, Workload Factory uses AI to analyze events and provide actionable insights to maintain the health and performance of your FSx for ONTAP file systems. Events are displayed for 72 hours before removal.
+With Amazon Bedrock integration, Workload Factory uses AI to analyze events and provide actionable insights to maintain the health and performance of your FSx for ONTAP file systems. 
 
 Key benefits include:
 
