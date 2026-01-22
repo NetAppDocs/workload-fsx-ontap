@@ -67,7 +67,7 @@ Add the following permissions to the Workload Factory IAM role associated policy
 *** `bedrock:InvokeModelWithResponseStream`
 + 
 These permissions allow Workload Factory to invoke Bedrock models for error investigation and remediation guidance. This profile also ensures secure AI access for tailored insights. 
-
++
 Also add the following permissions for AWS credentials associated with Workload Factory: 
 
 *** `bedrock:GetInferenceProfile`
