@@ -22,6 +22,6 @@ Workload Factory analyzes your FSx for ONTAP file systems for the following conf
 
 * Optimize cache volume size: checks whether volume autosize and scrubbing are enabled on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
 * Orphaned block devices: recommends archiving block device data or deleting a block device if it hasn't been used for seven consecutive days.
-* Storage VM logical reporting: checks whether the default reporting setting for a storage VM is set to logical which provides better visibility into storage usage at the volume level is reported accurately. 
+* Storage VM logical reporting: checks whether the default reporting setting for a storage VM is set to logical which provides better visibility into storage usage at the volume level. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected file system configurations]
