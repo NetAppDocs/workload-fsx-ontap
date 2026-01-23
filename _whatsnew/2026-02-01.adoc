@@ -7,7 +7,7 @@ Several enhancements have been made to the S3 access point management capabiliti
 
 ==== S3 bucket details available in Storage
 
-With NetApp Workload Factory, you can schedule automatic scanning of your AWS S3 buckets and populate S3 tables to give you a clear snapshot of all objects, their metadata, attributes, and tags. Access to these details helps you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead.
+With metadata enabled for S3 access points, NetApp Workload Factory automatically scans your AWS S3 buckets and populates S3 tables to give you a clear snapshot of all objects, their metadata, attributes, and tags. Access to these details helps you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[View details for S3 access points in FSx for ONTAP file systems^]
 
