@@ -24,4 +24,9 @@ Workload Factory analyzes your FSx for ONTAP file systems for the following conf
 * Orphaned block devices: recommends archiving block device data or deleting a block device if it hasn't been used for seven consecutive days.
 * Storage VM logical reporting: checks whether the default reporting setting for a storage VM is set to logical which provides better visibility into storage usage at the volume level. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected file system configurations]
+=== Additional cards for block devices
+Three new cards have been added to the Block devices tab in the Storage workload to provide quick insights into block device usage and protection status:
+
+* Storage efficiencies: displays used and available storage capacity; used capacity is broken down by SSD and capacity pool storage tiers.
+* Protected devices: displays the percentage of block devices with snapshots, remote replication, NetApp Autonomous Ransomware Protection (ARP/AI), and backups.
+* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively.
