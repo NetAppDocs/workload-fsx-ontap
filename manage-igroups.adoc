@@ -1,0 +1,56 @@
+---
+sidebar: sidebar
+permalink: manage-igroups.html
+keywords: igroup, manage igroups, manage client access, delete igroup
+summary: "Manage igroups for an FSx for ONTAP file system in NetApp Workload Factory." 
+---
+= Manage the igroups for a file system in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+From the NetApp Workload Factory console, you can manage the igroups for your FSx for ONTAP file systems. Management tasks include viewing igroup details, managing client access, and deleting igroups.
+
+.About this task
+Igroups, or initiator groups, are collections of host initiators that can access block devices in a SAN environment.
+
+You can manage igroups for FSx for ONTAP file systems that use the iSCSI protocol.
+
+.Before you begin
+* You must associate a link to manage block devices. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
+* You must have an existing block device to view and manage.
+
+== Manage client access for an igroup
+You can manage client access for an existing igroup at any time.
+
+
+.Steps  
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+. Navigate to the actions menu for the block device and then select *Manage client access*.
+. If no igroup exists, create a new igroup by selecting *Create igroup*, and then do the following: 
+.. *Block device name*: Enter a block device name. You can select multiple block devices to associate with the igroup.
+.. *Operating system type*: Select the operating system type.
+.. *igroup name*: Enter an igroup name.
+.. *igroup description*: Optionally, enter an igroup description.
+.. *Host initiators*: Enter one or more host initiators. These initiators must follow iSCSI qualified (IQN) format.
+.. Select *Create*.
+. If an igroup already exists, select *Edit client access* to add or remove block devices and host initiators from the igroup and then select *Apply*.
+
+
+== Delete an igroup 
+Increase the capacity of an existing block device at any time.    
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the *Block devices* tab. 
+
+
+== Related information
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html[Create an igroup for an FSx for ONTAP file system]
