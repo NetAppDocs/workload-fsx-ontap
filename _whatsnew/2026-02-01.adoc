@@ -1,6 +1,6 @@
-=== Home page includes well-architected issues for Storage
+=== Home page includes well-architected issues and EMS events for Storage
 
-The NetApp Workload Factory home page includes a Focus tile where well-architected issues appear for your workloads. From there, you can navigate to the Storage Well-Architected screen to view the well-architected status of all FSx for ONTAP file systems in your storage environment and remediate issues.
+The NetApp Workload Factory home page includes a Focus tile where well-architected issues and FSx for ONTAP Emergency Management System (EMS) events appear for your workloads. From there, you can navigate to the Storage workload to view the well-architected status or the events of all FSx for ONTAP file systems in your storage environment.
 
 === S3 access point enhancements in Storage
 Several enhancements have been made to the S3 access point management capabilities in the Storage workload for NetApp Workload Factory. You can input network configuration details for your S3 access points and add S3 access point tags. Additional enhancements include the ability to view S3 bucket details and perform more actions for managing S3 access points.
