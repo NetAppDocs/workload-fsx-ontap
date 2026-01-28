@@ -40,6 +40,6 @@ Ensure that you meet the following requirements:
 .. *Credentials*: Select credentials with _view, planning, and analysis_ permissions.
 .. *Regions*: Select the AWS regions you want to view cost data for.
 .. *Cost data range*: Select the time range for cost data to view.
-.. *Allocation tags*: (Optional) Specify AWS allocation tag keys to filter cost data.
-.. *Allocation tag values*: (Optional) Specify AWS allocation tag values.
+.. *Allocation tag key*: (Optional) Select an allocation tag key and its value to generate a detailed cost report for all FSx for ONTAP file systems associated with the AWS tag.
+.. *Allocation tag values*: (Optional) Select the allocation tag key value that is associated with the allocation tag key to generate a detailed cost report for all FSx for ONTAP file systems associated with the AWS tag.
 . View the *Cost Details* for your FSx for ONTAP resources.
