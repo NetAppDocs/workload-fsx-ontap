@@ -42,7 +42,7 @@ You must have an existing volume with an S3 access point.
 . Select the actions menu for the S3 access point and then select *Manage tags*.
 . In the Manage S3 access point tags dialog, you can add up to 50 tags.
 --
-
+--
 .Delete existing S3 access points from a volume
 --
 . Select the actions menu for the S3 access point to delete and then select *Delete access point*.
