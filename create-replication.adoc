@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: create-replication.html
-keywords: replication, replicate
+keywords: replication, replicate, data protection, disaster recovery, data loss
 summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
 ---
 = Create a replication relationship in NetApp Workload Factory
