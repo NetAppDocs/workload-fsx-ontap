@@ -11,8 +11,8 @@ With metadata enabled for S3 access points, NetApp Workload Factory automaticall
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[View details for S3 access points in FSx for ONTAP file systems^]
 
-==== Additional actions provided for managing S3 access points
-NetApp Workload Factory now provides additional actions for managing S3 access points in FSx for ONTAP file systems. You can view access point details, modify existing S3 access points, and add or remove S3 access point tags from the NetApp Workload Factory interface, streamlining your object storage management tasks.
+==== Additional management operations for S3 access points
+NetApp Workload Factory provides additional management operations for S3 access points. You can view access point details, modify existing S3 access points, and add or remove S3 access point tags from the NetApp Workload Factory interface, streamlining your object storage management tasks.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[Manage S3 access points in NetApp Workload Factory^]
 
