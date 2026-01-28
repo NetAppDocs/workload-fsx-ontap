@@ -21,7 +21,7 @@ You must have an existing volume with an S3 access point.
 . From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
 . From the file system overview, select the *Volumes* tab.
 . From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
-. On the Manage S3 access points page, you can create and attach access points or delete existing access points.
+. On the Manage s3 access points page, you can create and attach access points, manage tags, or delete existing access points.
 +
 [role="tabbed-block"]
 ====
@@ -34,14 +34,19 @@ You must have an existing volume with an S3 access point.
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
-. Select *Create and attach*. 
+* *Network configuration*: Select *Internet* or *Virtual private cloud (VPC)*. The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC.
+* *Enable metadata*: Enabling metadata creates an S3 table containing all objects accessible by the S3 access point, which you can use for auditing, governance, automatic, analysis, and optimization. Enabling metadata incurs additional AWS costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+. Select *Create*. 
+--
+.Manage S3 access point tags
+. Select the actions menu for the S3 access point and then select *Manage tags*.
+. In the Manage S3 access point tags dialog, you can add up to 50 tags.
 --
 
 .Delete existing S3 access points from a volume
 --
-. Select the actions menu for the S3 access point to delete and then select *Detach*.
-. In the *Detach and remove an S3 access point* dialog, select *Detach and remove* to delete the S3 access point from the volume.
-
+. Select the actions menu for the S3 access point to delete and then select *Delete access point*.
+. In the *Delete an S3 access point* dialog, select *Delete* to delete the S3 access point from the volume.
 --
 
 ====
