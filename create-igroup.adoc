@@ -9,14 +9,12 @@ summary: "Create initiator groups to manage host access to block devices in NetA
 :imagesdir: ./media/
 
 [.lead]
-With NetApp Workload Factory, create initiator groups to manage host access to block devices for your SAN environments.
+Use NetApp Workload Factory to create initiator groups and manage host access to SAN block devices.
 
 .About this task
-Initiator groups, or igroups, connect block devices (LUNs) to the compute resources that are allowed to access them. Unlike NFS or CIFS, where a volume is broadly accessible and user permissions control access, block storage permissions operate at the machine level and typically allow access to only one system at a time. 
+Initiator groups, or igroups, connect block devices (LUNs) to the compute resources that are allowed to access them. Unlike NFS or CIFS, where a volume is broadly accessible and user permissions control access, block storage permissions operate at the machine level. Typically, only one system can access a block device at a time.
 
 An igroup acts as a permission layer for block storage. When a server connects to the storage system, it identifies itself using its iSCSI qualified (IQN) host initiator. If that IQN belongs to one or more igroups, then the server gains access to all LUNs associated with those igroups. Both an igroup and an iSCSI host connection are required for iSCSI to function properly.
-
-In cases where multiple hosts are involved, they must coordinate how they write to the shared devices; otherwise, they risk overwriting each other's data and causing corruption.
 
 .Before you begin
 * You must associate a link to create igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.

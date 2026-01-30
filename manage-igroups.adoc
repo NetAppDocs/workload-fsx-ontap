@@ -9,7 +9,7 @@ summary: "Manage igroups for an FSx for ONTAP file system in NetApp Workload Fac
 :imagesdir: ./media/
 
 [.lead]
-Use the NetApp Workload Factory console to manage the igroups for your FSx for ONTAP file systems and control client access to your block devices in a SAN environment. Management tasks include viewing igroup details, managing client access, and deleting igroups.
+Use the NetApp Workload Factory console to manage igroups and control client access for FSx for ONTAP block devices. You can view igroup details, manage client access, and delete igroups.
 
 .Before you begin
 * You must associate a link to manage igroups. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
@@ -24,7 +24,7 @@ You can manage client access for an existing igroup at any time.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Select the resource type *Initiator groups (igroups)* to view existing igroups.
-. Navigate to the actions menu for the block device and then select *Manage client access*.
+. Go to the actions menu for the block device and select *Manage client access*.
 . Review the client access details displayed for the igroup.
 . To make changes to client access, select *Edit client access*.
 . In the *Edit client access* dialog, you can edit the following:
@@ -38,7 +38,7 @@ You can manage client access for an existing igroup at any time.
 . Select *Apply*.
 
 == Delete an igroup 
-Increase the capacity of an existing block device at any time.    
+You can delete an existing igroup when it is no longer needed.    
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
