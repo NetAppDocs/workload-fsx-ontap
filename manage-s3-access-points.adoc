@@ -29,13 +29,13 @@ You must have an existing volume with an S3 access point.
 .Create and attach S3 access points to an existing volume
 --
 . Select *Create and attach S3 access point*. 
-. In the *Create and attach S3 access point* dialog, provide the following information:
+. In the *Create and attach S3 access point* dialog, provide the following details:
 
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
 * *Network configuration*: Select *Internet* or *Virtual private cloud (VPC)*. The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC.
-* *Enable metadata*: Enabling metadata creates an S3 table containing all objects accessible by the S3 access point, which you can use for auditing, governance, automatic, analysis, and optimization. Enabling metadata incurs additional AWS costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+* *Enable metadata*: When you enable metadata, the system creates an S3 table of objects accessible by the S3 access point for auditing and analysis. Enabling metadata costs extra on AWS. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for details.
 . Select *Create*. 
 --
 .Manage S3 access point tags
