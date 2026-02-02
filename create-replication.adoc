@@ -22,9 +22,7 @@ When replicating a source volume with immutable files, the target volume and fil
 
 [NOTE]
 ===============================
-* Only single-volume replication is supported for replication between an on-premises ONTAP system and an FSx for ONTAP file system.
-
-* Replication isn't supported for block volumes using iSCSI or NVMe protocols.
+Replication isn't supported for block volumes using iSCSI or NVMe protocols.
 ===============================
 
 .Before you begin
