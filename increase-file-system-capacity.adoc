@@ -33,11 +33,9 @@ To adjust capacity for a file system, you must first link:enable-auto-capacity-m
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Dashboard, select *Adjust SSD capacity*. 
 . Select the file system you want to adjust capacity for and then select *Continue*.
-+
-*Potential savings* is the recommendation for decreasing capacity.
 . In the Adjust SSD capacity dialog, enter a number for *Provisioned capacity*. 
 . Select the unit for the provisioned capacity.
 . Select *Apply*. 

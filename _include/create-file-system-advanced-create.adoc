@@ -1,4 +1,4 @@
-. On the Create FSx for ONTAP page, select *Advanced create*. 
+. On the Create FSx for ONTAP file system page, select *Advanced create*. 
 +
 You can also load a saved configuration.
 . Under File system general configuration, provide the following: 

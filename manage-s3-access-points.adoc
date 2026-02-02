@@ -9,39 +9,94 @@ summary: "Manage the S3 access points for a volume in NetApp Workload Factory."
 :imagesdir: ./media/
 
 [.lead]
-Manage the S3 access points for a volume in NetApp Workload Factory. You can use the Workload Factory console to assign S3 access points to existing volumes or delete S3 access points. 
+Manage the S3 access points for a volume in NetApp Workload Factory. You can use the Workload Factory console to assign S3 access points to existing volumes, view details for your S3 buckets, make changes to existing access points, or delete S3 access points. 
+
+.About this task
+Amazon FSx for NetApp ONTAP supports S3 data access to NFS and SMB file systems, enabling their integration with dozens of S3-based AWS services such as Amazon Bedrock, SageMaker, Athena, AWS Glue, and more. You can connect AWS services to all of your object storage data.
+
+By attaching S3 access points to NFS and SMB volumes in an FSx for ONTAP file system, files stored in these volumes can be accessed by any AWS services as if they were in an S3 bucket. When attaching the access point, you define its unique id, specify the file access type (UNIX or Windows) and add a username for authorizing file access requests by the access point. 
+
+After the S3 access point is attached, it appears in the AWS Management Console and has a unique access point alias. This alias is used as the S3 bucket name provided to the AWS services to which you want to connect. For example, you can provide the alias to an Amazon Bedrock knowledge base, and it will then use the files in the FSx for ONTAP volume to provide contextual answers to queries.
+
+You can attach multiple S3 access points to a single FSx for ONTAP volume, each with its own unique access level, allowing you to connect to as many AWS services as required.
 
 .Before you begin
-You must have an existing volume with an S3 access point.
+Ensure that you meet the following requirements: 
+
+* You must have an existing volume with an S3 access point.
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task.
+
+== Create and attach S3 access points to an existing volume
+Create and attach S3 access points to an existing volume in NetApp Workload Factory.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In the Storage tile, select *Go to Storage*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the file system with the volume to update.
+. From the file system overview, select the *Volumes* tab.
+. From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
+. Select *Create and attach S3 access point*. 
+. In the *Create and attach S3 access point* dialog, provide the following information:
++
+* *S3 access point name*: Enter the name of the S3 access point.
+* *User*: Select an existing user with access to the volume or create a new user.
+* *User type*: Select *UNIX* or *Windows* as the user type.
+* *Enable metadata catalog*: Select to enable metadata on the volume to generate metadata inventory for all objects accessible to the S3 access point. This feature incurs AWS costs for S3 requests. 
+. Select *Create and attach*. 
+
+== View details 
+Alias, ARN, and S3 URI are available access point details without metadata enabled. 
+
+With metadata enabled on the volume, you can view access point, inventory table, and table bucket details of existing S3 access points attached to the volume. A link to the inventory table in the AWS Management Console is also provided.
+
+Access point details are copiable for use in other applications.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
 . From the file system overview, select the *Volumes* tab.
 . From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
-. On the Manage S3 access points page, you can create and attach access points or delete existing access points.
-+
-[role="tabbed-block"]
-====
+. From the *Manage S3 access points* screen, select the actions menu and then select *View details*. 
 
-.Create and attach S3 access points to an existing volume
---
-. Select *Create and attach S3 access point*. 
-. In the *Create and attach S3 access point* dialog, provide the following information:
+== Edit access point
+Change the user and user type for an existing S3 access point attached to a volume. You can also enable or disable metadata for the access point.
 
-* *S3 access point name*: Enter the name of the S3 access point.
-* *User*: Select an existing user with access to the volume or create a new user.
-* *User type*: Select *UNIX* or *Windows* as the user type.
-. Select *Create and attach*. 
---
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
+. From the file system overview, select the *Volumes* tab.
+. From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
+. From the *Manage S3 access points* screen, select the actions menu and then select *Edit access point*.
+. Make updates and then select *Apply*. 
 
-.Delete existing S3 access points from a volume
---
+== Manage S3 access point tags
+Add or remove tags for an existing S3 access point attached to a volume.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
+. From the file system overview, select the *Volumes* tab.
+. From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
+. From the *Manage S3 access points* screen, select the actions menu and then select *Manage tags*.
+. In the Manage S3 access point tags dialog, you can add up to 50 tags or remove tags for the S3 access point.
+. Select *Apply*.
+
+== Delete existing S3 access points from a volume
+Delete existing S3 access points from a volume in NetApp Workload Factory.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
+. From the file system overview, select the *Volumes* tab.
+. From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
 . Select the actions menu for the S3 access point to delete and then select *Detach*.
 . In the *Detach and remove an S3 access point* dialog, select *Detach and remove* to delete the S3 access point from the volume.
-
---
-
-====

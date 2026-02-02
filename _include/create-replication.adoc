@@ -48,4 +48,6 @@ NOTE: Matching source and target labels are required for long-term retention. If
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
+* *Network configuration*: Select *Internet* or *Virtual private cloud (VPC)*. The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC.
 * *Enable metadata*: Enabling metadata creates an S3 table containing all objects accessible by the S3 access point, which you can use for auditing, governance, automatic, analysis, and optimization. Enabling metadata incurs additional AWS costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+.. *S3 access point tags*:  Optionally, you can add up to 50 tags.

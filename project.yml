@@ -49,6 +49,12 @@ sidebar:
               url: /create-volume.html
             - title: Access your data
               url: /access-data.html
+        - title: Create block storage resources
+          entries: 
+            - title: Create an igroup
+              url: /create-igroup.html
+            - title: Create a block device  
+              url: /create-block-device.html      
         - title: Create a storage VM
           url: /create-storage-vm.html                
         - title: Protect your data
@@ -123,8 +129,10 @@ sidebar:
               url: /split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
-        - title: Block device administration
+        - title: Block storage administration
           entries:
+            - title: Manage igroups
+              url: /manage-igroups.html
             - title: Manage block devices
               url: /manage-block-devices.html
         - title: File system administration
