@@ -14,7 +14,7 @@ Create a replication relationship for an FSx for ONTAP file system in NetApp Wor
 .About this task
 Replication is an added layer of data protection which is essential in case the region where your data resides experiences a disaster. Data loss can be avoided if you use cross-region replication. 
 
-This operation replicates data for one or all source volumes in an FSx for ONTAP file system.
+This operation creates a replication relationship for one or all source volumes in an FSx for ONTAP file system or on-premises ONTAP system. 
 
 Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
 
@@ -22,14 +22,15 @@ When replicating a source volume with immutable files, the target volume and fil
 
 [NOTE]
 ===============================
-Replication isn't supported for block volumes using iSCSI or NVMe protocols.
+* Replication isn't supported for block volumes using iSCSI or NVMe protocols.
+* You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^].
 ===============================
 
 .Before you begin
-Make sure you meet the following prerequisites before you begin. 
+Consider the following before you begin.
 
 * You must have one FSx for ONTAP file system to use for the target in the replication relationship.
-* The two file systems you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 
 Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
