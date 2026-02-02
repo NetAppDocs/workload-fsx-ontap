@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: create-replication.html
-keywords: replication, replicate
+keywords: replication, replicate, data protection, disaster recovery, data loss
 summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
 ---
 = Create a replication relationship in NetApp Workload Factory
@@ -9,26 +9,31 @@ summary: "Create a replication relationship for an FSx for ONTAP file system to 
 :imagesdir: ./media/
 
 [.lead]
-Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster.
+Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster. Replication is supported between two FSx for ONTAP file systems, and between Cloud Volumes ONTAP or an on-premises ONTAP system and an FSx for ONTAP file system.
 
 .About this task
-Replication is an added layer of data protection which is essential in case the region where your data resides experiences a disaster. Data loss can be avoided if you use cross-region replication. 
+Replication adds protection against data loss if the region where your data resides experiences a disaster. 
 
-This operation creates a replication relationship for one or all source volumes in an FSx for ONTAP file system. 
+This operation creates a replication relationship for source volumes in an FSx for ONTAP file system, on-premises ONTAP system, or Cloud Volumes ONTAP system. 
 
 Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
 
-When replicating a source volume with immutable files, the target volume and file system  become locked until the retention period of the immutable files in the source volume ends. The immutable files feature is available when you link:create-volume.html[create a volume] for an FSx for ONTAP file system. 
+When you replicate a source volume with immutable files, the target volume and file system stay locked until the retention period of the immutable files in the source volume ends. The immutable files feature is available when you link:create-volume.html[create a volume] for an FSx for ONTAP file system. 
+
+[NOTE]
+===============================
+* Replication isn't supported for block volumes using iSCSI or NVMe protocols.
+* You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^].
+===============================
 
 .Before you begin
-Make sure you meet the following prerequisites before you begin. 
+Consider the following before you begin.
 
-* You must have two available file systems in your Storage to create a replication relationship.
-* The two file systems you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* You must have one FSx for ONTAP file system to use for the target in the replication relationship.
+* The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
+* For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 
-Complete the following steps to replicate select volumes or replicate all volumes in a file system. 
-
-You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^]. 
+Follow these steps to replicate specific or all volumes in a file system.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -41,11 +46,10 @@ You can replicate one source (read/write) volume or one data protection (DP) vol
 +
 In the Volumes table, select one or more volumes and then select *Replicate data*. 
 . On the Replicate data page, under Replication target, provide the following: 
-.. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
 include::_include/create-replication.adoc[]
 //Referenced in repo: bluexp-fsx-ontap in file: use/task-manage-working-environment.adoc
 
-[start=7]
+[start=8]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . Select *Create*. 
 

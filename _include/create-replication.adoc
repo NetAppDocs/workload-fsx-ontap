@@ -1,5 +1,3 @@
-.. *Storage VM name*: Select the storage VM from the dropdown menu. The storage VM you select is the target for all selected volumes in this replication relationship.
-.. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Use case*: Select one of the following use cases for the replication. Depending on the selected use case, Workload Factory fills in the form with recommended values in accordance with best practices. You can accept the recommended values or make changes as you complete the form.
 +  
 * Migration: transfers your data to the target FSx for ONTAP file system
@@ -16,6 +14,9 @@ Additionally, the use case selection determines the replication policy, or SnapM
 +
 For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
 
+.. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
+.. *Storage VM name*: Select the storage VM from the dropdown menu. The storage VM you select is the target for all selected volumes in this replication relationship.
+.. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
 +
 _Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses.
@@ -42,3 +43,11 @@ NOTE: Matching source and target labels are required for long-term retention. If
 +
 * Set the *Retention period* in number of hours, days, months, or years. 
 * *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy.
+.. *S3 access point*: Optionally, attach an S3 access point to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
++
+* *S3 access point name*: Enter the name of the S3 access point.
+* *User*: Select an existing user with access to the volume or create a new user.
+* *User type*: Select *UNIX* or *Windows* as the user type.
+* *Network configuration*: Select *Internet* or *Virtual private cloud (VPC)*. The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC.
+* *Enable metadata*: Enabling metadata creates an S3 table containing all objects accessible by the S3 access point, which you can use for auditing, governance, automatic, analysis, and optimization. Enabling metadata incurs additional AWS costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+.. *S3 access point tags*:  Optionally, you can add up to 50 tags.
