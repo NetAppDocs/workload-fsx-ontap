@@ -15,7 +15,7 @@ You can also dismiss the analysis of specific storage configurations that don't 
 
 link:configuration-analysis.html[Learn about the configuration analysis and well-architected status in Workload Factory.]
 
-.About this task
+== About this task
 Workload factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
 
 Link connectivity allows Workload Factory to scan for issues with performance, data protection, and configurations. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
@@ -29,16 +29,17 @@ Workload factory analyzes the well-architected status of the following configura
 
 * Reliability: SSD capacity threshold, scheduled local snapshots, FSx for ONTAP backups, remote data replication, and data reliability for long-term retention
 * Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
-* Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, and cache relationship write mode
-* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion
+* Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, cache relationship write mode, optimize cache volume size, and volume logical capacity reporting
+* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, and orphaned block devices
 
-== Fix a configuration issue
-You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
+== Before you begin
 
-.Before you begin
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
 * The remediation process may cause instance downtimes or service interruptions. Make sure you review each recommendation carefully before selecting to fix a configuration issue. 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
+
+== Fix a configuration issue
+You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
