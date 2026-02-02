@@ -49,7 +49,7 @@ In the Volumes table, select one or more volumes and then select *Replicate data
 include::_include/create-replication.adoc[]
 //Referenced in repo: bluexp-fsx-ontap in file: use/task-manage-working-environment.adoc
 
-[start=7]
+[start=8]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . Select *Create*. 
 

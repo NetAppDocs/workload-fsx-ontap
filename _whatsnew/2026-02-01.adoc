@@ -5,7 +5,7 @@ The NetApp Workload Factory home page includes a Focus tile where well-architect
 === Support for on-premises data replication using an S3 access point
 Workload Factory supports replicating on-premises ONTAP data to the cloud for integration with AWS GenAI, ML, and analytics. You can replicate your on-premises data to an NFS or SMB/CIFS volume using an S3 access point.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Replicate on-premises data using Nan S3 access point]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Replicate on-premises data using an S3 access point]
 
 === S3 access point enhancements in Storage
 Several enhancements have been made to the S3 access point management capabilities in the Storage workload for NetApp Workload Factory. You can input network configuration details for your S3 access points and add S3 access point tags. Additional enhancements include the ability to view S3 bucket details and perform more actions for managing S3 access points.
