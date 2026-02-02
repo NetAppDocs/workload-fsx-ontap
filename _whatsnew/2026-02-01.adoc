@@ -14,12 +14,12 @@ Several enhancements have been made to the S3 access point management capabiliti
 
 With metadata enabled for S3 access points, NetApp Workload Factory automatically scans your AWS S3 buckets and populates S3 tables to give you a clear snapshot of all objects, their metadata, attributes, and tags. Access to these details helps you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[View details for S3 access points in FSx for ONTAP file systems^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[View details for S3 access points in FSx for ONTAP file systems]
 
 ==== Additional management operations for S3 access points
 NetApp Workload Factory provides additional management operations for S3 access points. You can view access point details, modify existing S3 access points, and add or remove S3 access point tags from the NetApp Workload Factory interface, streamlining your object storage management tasks.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[Manage S3 access points in NetApp Workload Factory^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[Manage S3 access points in NetApp Workload Factory]
 
 === Well-architected analysis updates
 
@@ -34,10 +34,10 @@ Three new cards have been added to the Block devices tab in the Storage workload
 
 * Storage efficiencies: displays used and available storage capacity; used capacity is broken down by SSD and capacity pool storage tiers.
 * Protected devices: displays the percentage of block devices with snapshots, remote replication, NetApp Autonomous Ransomware Protection (ARP/AI), and backups.
-* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively. From here, you can link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#view-block-device-details[reclaim space for unused block devices].
+* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively. From here, you can link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-orphaned-block-device[reclaim space for unused block devices].
 
 === Support for initiator group creation and management 
 NetApp Workload Factory supports creating and managing initiator groups (igroups) for block storage in FSx for ONTAP file systems. Initiator groups connect block devices (LUNs) to the compute resources that are allowed to access them, providing a permission layer for block storage in SAN environments.
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html[Create an initiator group in NetApp Workload Factory^]
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html[Manage existing initiator groups in NetApp Workload Factory^]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html[Create an initiator group in NetApp Workload Factory]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html[Manage existing initiator groups in NetApp Workload Factory]
