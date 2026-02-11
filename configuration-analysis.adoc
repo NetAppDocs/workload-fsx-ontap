@@ -21,7 +21,7 @@ Key capabilities include:
 
 == How it works 
 
-Workload Factory analyzes Amazon FSx for NetApp ONTAP file systems, Microsoft SQL Server, and Oracle database deployments daily. The analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices and operate efficiently.
+Workload Factory analyzes Amazon FSx for NetApp ONTAP file systems daily. The analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices and operate efficiently.
 
 After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Workload Factory, while others require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
 
@@ -30,19 +30,6 @@ You can dismiss the analysis of configurations that do not apply to your environ
 == Why it matters
 
 Workload Factory applies best practices to large storage or database environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes reduce human error, ensure uniform management, and maintain performance and reliability. Fixes applied in the Workload Factory console reduce human error and ensure uniform management. Automation ensures configurations are applied correctly and maintained, preserving performance and reliability across your workload infrastructures.
-
-== Well-architected status
-In the Workload Factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
-
-Well-architected score::: The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
-
-Configuration categories::: The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
-
-* _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
-* _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies.
-* _Operational excellence_: Focuses on delivering the most optimal architecture and business value.
-* _Cost optimization_: Aims to deliver business value while minimizing costs.
-* _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
 
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
@@ -53,10 +40,8 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how
 * Grant _view, planning, and analysis_ permissions in your AWS account. 
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
-// Start snippet: collapsible block (closed on page load)
-.Best practices and recommendations for storage workloads
-[%collapsible]
-====
+
+== Best practices and recommendations for storage workloads
 
 Workload Factory assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
 
@@ -149,7 +134,6 @@ Snapshots and backups that are no longer needed should be deleted to reduce cost
 * *Orphaned block devices*
 +
 After a block device isn't used for seven days, Workload Factory recommends archiving block device data or deleting the unused block device to reduce costs. 
-====
 
 
 .What's next
