@@ -3,12 +3,6 @@
 * Migration: transfers your data to the target FSx for ONTAP file system
 +
 *Replicate storage VM configuration*: Optionally, select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and configuration settings simultaneously, ensure that the last replication for the volume completed in the last 24 hours. All volumes in the same storage VM must be selected to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases. 
-+
-The following features are disabled when replicating storage VM data and configuration settings:
-
-** Edit long-term relationship
-** Reverse relationship
-
 * Hot disaster recovery: ensures high availability and rapid disaster recovery for critical workloads
 * Cold or archive disaster recovery: 
 ** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
