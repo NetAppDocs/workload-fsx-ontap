@@ -59,8 +59,8 @@ include::_include/create-replication.adoc[]
 .Result
 The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system. 
 
-== Cut over replication
-Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. After cutover, the source volume becomes read-only and the target volume becomes read/write. 
+== Cut over replication (for migration use cases)
+This operation is required to complete migration of storage VM data and configuration settings to a target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. After cutover, the source volume becomes read-only and the target volume becomes read/write. 
 
 .Before you begin
 Review these requirements before you begin.
