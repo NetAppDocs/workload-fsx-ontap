@@ -11,20 +11,25 @@ summary: "Create a replication relationship for an FSx for ONTAP file system to 
 [.lead]
 Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster. Replication is supported between two FSx for ONTAP file systems, and an on-premises ONTAP system and an FSx for ONTAP file system.
 
-.About this task
-Replication protects your data if a disaster affects your region.
+For migration use cases, you can replicate storage VM data and configuration settings from an on-premises ONTAP system or a first-generation FSx for ONTAP file system to a second-generation FSx for ONTAP file system. This allows for a more seamless transition to the new file system with minimal downtime and disruption to users and applications.
 
-This operation creates a replication relationship for source volumes in an FSx for ONTAP file system or an on-premises ONTAP system. 
+== About this task
+Replication is supported between two FSx for ONTAP file systems, and an on-premises ONTAP system and an FSx for ONTAP file system. 
 
 Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
 
 When you replicate a source volume with immutable files, the target volume and file system stay locked until the retention period of the immutable files in the source volume ends. The immutable files feature is available when you link:create-volume.html[create a volume] for an FSx for ONTAP file system. 
+
+To migrate storage VM data and configuration settings, first <<create a replication relationship,create a replication relationship>> and then <<cut over replication,cut over replication>> to permanently migrate data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. 
 
 [NOTE]
 ===============================
 * Replication isn't supported for block volumes using iSCSI or NVMe protocols.
 * You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^].
 ===============================
+
+== Create a replication relationship
+Follow these steps to replicate specific or all volumes in a file system.
 
 .Before you begin
 Review these requirements before you begin.
@@ -33,13 +38,11 @@ Review these requirements before you begin.
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 
-Follow these steps to replicate specific or all volumes in a file system.
-
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system that contains the volume(s) to replicate and then select *Manage*.
+. From *FSx for ONTAP*, select the file system that contains the volume(s) to replicate.
 . Either replicate all volumes in a file system or replicate select volumes. 
 * To replicate all volumes in a file system: From the file system overview, select *Replicate data*.
 * To replicate select volumes: From the file system overview, select the *Volumes* tab.
@@ -47,12 +50,38 @@ Follow these steps to replicate specific or all volumes in a file system.
 In the Volumes table, select one or more volumes and then select *Replicate data*. 
 . On the Replicate data page, under Replication target, provide the following: 
 include::_include/create-replication.adoc[]
-//Referenced in repo: bluexp-fsx-ontap in file: use/task-manage-working-environment.adoc
+//Referenced in repo: bluexp-fsx-ontap in file: use/task-replicate-data.adoc
 
 [start=8]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
 . Select *Create*. 
 
 .Result
-The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system.  
+The replication relationship appears in the *Replication relationships* tab in the target FSx for ONTAP file system. 
 
+== Cut over replication
+Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. After cutover, the source volume becomes read-only and the target volume becomes read/write. 
+
+.Before you begin
+Review these requirements before you begin.
+
+* Stop any client access to your storage VM before you cut over replication.
+* Ensure that all source volumes are not serving any data before you cut over replication.
+* The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the file system that contains the volume(s) to replicate.
+. Select the *Replication relationships* tab.
+. In the Replication relationships table, select the replication relationship to cut over and then select *Cut over replication*.
+. Review the information in the Cut over replication dialog and then type _cut over_ to confirm.
+. Select *Cut over*.
+
+.Result
+After cutover, the source volumes are deleted and the target volumes become read/write.
+
+== Related information
+
+*What might we suggest here?*

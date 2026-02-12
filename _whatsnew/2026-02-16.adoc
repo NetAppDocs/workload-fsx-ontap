@@ -1,0 +1,5 @@
+=== Support for storage VM disaster recovery 
+NetApp Workload Factory now supports storage VM disaster recovery (DR). This feature allows migration of ONTAP storage system data and configurations from on-premises ONTAP systems or first-generation FSx for ONTAP to second-generation FSx for ONTAP so your application and users can continue their work effectively without needing to reconfigure volume hierarchy, SMB/CIFS shares, NFS exports, and permissions. Select "migration" as the use case to use this feature. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Learn how to create a replication relationship for storage VM DR.]
+
