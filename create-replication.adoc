@@ -18,7 +18,7 @@ Replicated volumes in the target file system are data protection (DP) volumes an
 
 When you replicate a source volume with immutable files, the target volume and file system stay locked until the retention period of the immutable files in the source volume ends. The immutable files feature is available when you link:create-volume.html[create a volume] for an FSx for ONTAP file system. 
 
-To migrate storage VM data and configuration settings, you must complete two operations. First <<Create a replication relationship,Create a replication relationship>>. Then <<Cut over replication,Cut over replication>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
+To migrate storage VM data and configuration settings, you must complete two operations. First <<create a replication relationship,Create a replication relationship>>. Then <<cut over replication,Cut over replication>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
 [NOTE]
 ===============================
