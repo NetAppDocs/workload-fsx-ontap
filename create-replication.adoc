@@ -4,7 +4,7 @@ permalink: create-replication.html
 keywords: replication, replicate, data protection, disaster recovery, data loss
 summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
 ---
-= Create a replication relationship in NetApp Workload Factory
+= Replicate data to FSx for ONTAP in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -14,6 +14,7 @@ Create a replication relationship for an FSx for ONTAP file system in NetApp Wor
 For migration use cases, you must complete the cut over operation immediately after you create a replication relationship. 
 
 == About this task
+
 Replication protects your data if a disaster affects your region; it can also be used for migration purposes. 
 
 Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
@@ -26,7 +27,8 @@ When you replicate a source volume with immutable files, the target volume and f
 * You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^].
 ===============================
 
-=== Migration use case 
+=== Migration use cases
+
 When you select the migration use case, you can optionally select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and configuration settings simultaneously, ensure that the last replication for the volume completed in the last 24 hours. All volumes in the same storage VM must be selected to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases.
 
 Workload Factory supports the following source systems for migration replication. 
@@ -50,6 +52,7 @@ Review these requirements before you begin.
 * You must have one FSx for ONTAP file system to use for the target in the replication relationship.
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
+* Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
 * For migration use cases ensure that the last replication for the volume completed in the last 24 hours before you create a replication relationship with storage VM data and configuration settings.
 
 .Steps
@@ -64,7 +67,7 @@ Review these requirements before you begin.
 In the Volumes table, select one or more volumes and then select *Replicate data*. 
 . On the Replicate data page, under Replication target, provide the following: 
 include::_include/create-replication.adoc[]
-//Referenced in repo: bluexp-fsx-ontap in file: use/task-replicate-data.adoc
+//Referenced in repo: storage-management-fsx-ontap in file: use/task-replicate-data.adoc
 
 [start=8]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
@@ -75,7 +78,8 @@ The replication relationship appears in the *Replication relationships* tab in t
 
 If you selected the migration use case for replication, you must cut over all the volumes that started this process together with their storage VM to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. 
 
-== Cut over replication (for migration use cases)
+== Cut over replication for migration use cases
+
 After creating a replication relationship for a migration use case, you must immediately cut over replication to complete migration of storage VM data and configuration settings to a target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source volume(s) are deleted after cutover completes. The operation is irreversible. 
 
 .Before you begin
@@ -88,12 +92,5 @@ Review these requirements before you begin.
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the file system that contains the volume(s) to replicate.
-. Select the *Replication relationships* tab.
-. In the Replication relationships table, select the replication relationship to cut over and then select *Cut over replication*.
-. Review the information in the Cut over replication dialog and then type _cut over_ to confirm.
-. Select *Cut over*.
-
-.Result
-After cutover, the source volumes are deleted and the target volumes become read/write. You can link:change-tiering-policy.html[modify the tiering policy] for the target volume(s) after cutover.
+include::_include/cutover-replication.adoc[]
+//Referenced in repo: storage-management-fsx-ontap in file: use/task-replicate-data.adoc
