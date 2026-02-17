@@ -1,0 +1,5 @@
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the file system that contains the volume(s) to replicate.
+. Select the *Replication relationships* tab.
+. In the Replication relationships table, select the replication relationship to cut over and then select *Cut over replication*.
+. Review the information in the Cut over replication dialog and then type _cut over_ to confirm.
