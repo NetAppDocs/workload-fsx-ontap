@@ -43,7 +43,7 @@ Workload Factory supports migration replication between the following storage sy
 To migrate storage VM data and configuration settings, you must complete two operations.
 
 1. <<Create a replication relationship,Create a replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*. 
-2. <<Cut over replication,cut over replication>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
+2. <<Cut over replication for migration use cases,Cut over replication for migration use cases>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
 == Create a replication relationship
 Replicate data between two FSx for ONTAP file systems, or between an on-premises ONTAP system and an FSx for ONTAP file system.
