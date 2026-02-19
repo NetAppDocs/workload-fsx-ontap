@@ -1,0 +1,31 @@
+=== Well-architected analysis updates
+
+Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
+
+* Underutilized SSD capacity: checks whether the SSD capacity tier is underutilized and recommends decreasing SSD capacity to optimize costs.
+* Inactive NAS volumes: checks whether NAS volumes are inactive and recommends archiving NAS volume data or deleting inactive NAS volumes.
+* Schedule volume backups: enhances the configuration recommendation and includes options to use FSx for ONTAP backup or AWS Backup. FSx for ONTAP backup provides a default policy for all volumes in a file system that includes daily volume backups with a retention period of up to 90 days; AWS Backup provides flexibility like selecting varying retention periods for different volumes in the backup plan for individual volumes.
+
+=== Workload Factory supports AI & ML use case for replication
+Workload Factory enables you to replicate on-premises ONTAP data to FSx for ONTAP and create S3 access points to use for AWS Artificial Intelligence (AI) and machine learning (ML) services. This replication improves usability and accelerates AI/ML workflows.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Replicate on-premises data for AI & ML use cases]
+
+=== Editing existing S3 access points
+
+Change the user and user type for an existing S3 access point attached to a volume. You can also enable or disable metadata for the access point.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[Edit S3 access points in NetApp Workload Factory]
+
+=== Update to automatic capacity management feature
+The update separates the feature into two distinct features: automatic capacity management and capacity notifications. The automatic capacity management feature automatically manages the capacity of your file systems by adding or removing capacity as needed to maintain optimal performance. New is the choice between incremental and adaptive modes. Incremental increases capacity by a fixed amount when thresholds are reached, while adaptive mode uses historical data and trends to predict capacity needs and adjust accordingly.
+
+The capacity notifications feature sends alerts when your file systems reach certain capacity thresholds, allowing you to take proactive measures to manage your storage resources effectively.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Learn about automatic capacity management and capacity notifications in NetApp Workload Factory]
+
+== Cost enhancements
+
+NetApp Workload Factory introduces optional page-level filters - file system allocation tag key and key value, file system, and volume - to improve the results for cost analysis for your resources across all AWS accounts. You can use these filters to analyze costs for specific file systems, volumes, or allocation tags, helping you identify cost-saving opportunities and optimize your storage expenses effectively.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Use filters for cost analysis in NetApp Workload Factory]
