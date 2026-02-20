@@ -64,8 +64,8 @@ You can manage client access for an existing block device at any time by creatin
 .. Select *Create*.
 . If an igroup already exists, select *Edit client access* to add or remove block devices and host initiators from the igroup and then select *Apply*.
 
-== Archive the data of an orphaned block device
-Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as orphaned block devices. You can archive the data of an orphaned block device to the capacity pool tier to reclaim SSD capacity.
+== Archive the data of an inactive block device
+Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. You can archive the data of an inactive block device to the capacity pool tier to reclaim SSD capacity.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -77,7 +77,7 @@ Block devices that are no longer mapped to a client or unused for seven consecut
 . Select *Archive*. 
 
 == Delete a block device
-Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as orphaned block devices. This operation unmaps and deletes the selected block device. If the host FlexVol volume doesn't contain any block devices, Workload Factory also deletes it.
+Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. This operation unmaps and deletes the selected block device. If the host FlexVol volume doesn't contain any block devices, Workload Factory also deletes it.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

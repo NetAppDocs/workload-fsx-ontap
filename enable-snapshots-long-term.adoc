@@ -17,11 +17,13 @@ The same steps apply for enabling and editing snapshots for long-term retention.
 
 When an on-premises ONTAP cluster is the target for the replication relationship, changing snapshots for long-term retention isn't supported. 
 
+NOTE: Editing long-term retention isn't available when replicating storage VM data and configuration settings.
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actionsenu of the file system to update and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
 . In the Replication relationships tab, select the actions menu of the replication relationship schedule to change. 
 . Select *Edit long-term retention*. 
