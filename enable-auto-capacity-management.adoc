@@ -4,12 +4,12 @@ permalink: enable-auto-capacity-management.html
 keywords: auto capacity, automatic capacity management, inodes management, file system capacity
 summary: "Enabling this feature lets Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time."  
 ---
-= Enable automatic capacity and inode management for a file system
+= Enable capacity management for a file system
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enabling automatic capacity and inode management lets NetApp Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity and inodes manually. 
+Enabling capacity management lets NetApp Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity manually. 
 
 == About this task 
 A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds.  

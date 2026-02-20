@@ -1,0 +1,50 @@
+---
+sidebar: sidebar
+permalink: enable-inode-management.html
+keywords: inode management, file system capacity
+summary: "Enabling this feature lets Workload Factory automatically add incremental inodes to an FSx for ONTAP file system as capacity needs change over time."  
+---
+= Enable inode management for a file system
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Enabling inode management lets NetApp Workload Factory automatically add incremental inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor inodes manually. 
+
+.About this task
+Enable automatic inode management to make sure that the file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
+
+A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental inodes need to be added and to check for available volume inodes, the maximum number of files and folders in a volume, so that their count increases according to the configured automatic inode management thresholds.  
+
+NOTE: *Terraform users*: Terraform has a limitation that requires that all operations are completed within Terraform. Inode management isn't supported in Terraform, but you can enable automatic inode management in the Workload Factory console.
+
+Only one account can manage this feature. 
+
+.Before you begin
+Consider the following before you begin:
+
+* To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* Automatic inode management can be set up with a _warning threshold_ that triggers a notification from the Workload Factory notification service. To use this feature, you must link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enable the Workload Factory notification service^] first.
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to enable automatic inodes management for. 
+. Select *Manage*. 
+. Under Information, select the pencil icon next to *Automatic inodes management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic inodes management* row. 
+. In the *Automatic inodes management* dialog, provide the following: 
+.. *Credentials*: Select credentials with _Automate_ permissions from the dropdown menu. 
+.. Select the enable button to *Enable automatic inodes management*. 
++
+Alternatively, disable the feature. If you need to increase the number of inodes, you must first disable automatic inodes management. 
+.. *Warning threshold*: Set the warning threshold lower than the threshold increase to trigger a notification from the Workload Factory notification service. The default is 70%. 
++
+The warning threshold setting is available only if you link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enabled the Workload Factory notification service^]. 
+.. *Threshold increase*: Enter the maximum percentage increase for the number of inodes (files) per volume. The default is 80%.
+.. *Incremental increase*: Enter the percentage to increase the number of inodes (files) incrementally. The default is 10%.
+. Select *Apply*. 
+
+.Result
+A file system scan occurs every 30 minutes to determine if the volumes need additional inodes (files) per volume.
