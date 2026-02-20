@@ -162,6 +162,7 @@ If the feature is unavailable, it is because of one of the following reasons:
 
 . Under Advance configuration, provide the following: 
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
+.. *Aggregate name*: Select the aggregate to host the new volume.
 .. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
 .. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
 . Select *Create*.
