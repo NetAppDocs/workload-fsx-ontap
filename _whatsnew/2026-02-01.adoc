@@ -26,7 +26,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.ht
 Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
 
 * Optimize cache volume size: checks whether volume autosize and scrubbing are enabled on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
-* Orphaned block devices: recommends archiving block device data or deleting a block device if it hasn't been used for seven consecutive days.
+* Inactive block devices: recommends archiving block device data or deleting a block device if it hasn't been used for seven consecutive days.
 * Storage VM logical reporting: checks whether the default reporting setting for a storage VM is set to logical which provides better visibility into storage usage at the volume level. 
 
 === Additional cards for block devices
@@ -34,7 +34,7 @@ Three new cards have been added to the Block devices tab in the Storage workload
 
 * Storage efficiencies: displays used and available storage capacity; used capacity is broken down by SSD and capacity pool storage tiers.
 * Protected devices: displays the percentage of block devices with snapshots, remote replication, NetApp Autonomous Ransomware Protection (ARP/AI), and backups.
-* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively. From here, you can link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-orphaned-block-device[reclaim space for unused block devices].
+* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively. From here, you can link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-inactive-block-device[reclaim space for unused block devices].
 
 === Support for initiator group creation and management 
 NetApp Workload Factory supports creating and managing initiator groups (igroups) for block storage in FSx for ONTAP file systems. Initiator groups connect block devices (LUNs) to the compute resources that are allowed to access them, providing a permission layer for block storage in SAN environments.
