@@ -139,8 +139,8 @@ sidebar:
           entries: 
             - title: Adjust file system capacity
               url: /increase-file-system-capacity.html
-            - title: Enable automatic capacity
-              url: /enable-auto-capacity-management.html
+            - title: Manage file system capacity automatically
+              url: /manage-capacity-automatically.html
             - title: Enable inode management
               url: /enable-inode-management.html  
             - title: Manage file system tags
