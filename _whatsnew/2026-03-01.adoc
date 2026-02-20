@@ -4,7 +4,7 @@ Workload Factory analyzes your FSx for ONTAP file systems for the following conf
 
 * Underutilized SSD capacity: checks whether the SSD capacity tier is underutilized and recommends decreasing SSD capacity to optimize costs.
 * Inactive NAS volumes: checks whether NAS volumes are inactive and recommends archiving NAS volume data or deleting inactive NAS volumes.
-* Schedule volume backups: enhances the configuration recommendation and includes options to enable FSx for ONTAP backup or AWS Backup. FSx for ONTAP backup provides a default policy for all volumes in a file system that includes daily volume backups with a retention period of up to 90 days; AWS Backup provides flexibility like selecting varying retention periods for different volumes in the backup plan for individual volumes.
+* Schedule volume backups: Workload Factory improves the configuration recommendation and adds options to turn on FSx for ONTAP backup or AWS Backup. FSx for ONTAP backup applies a default policy to all volumes in a file system, creating daily backups kept for up to 90 days. AWS Backup lets you choose different retention periods for each volume in the backup plan.
 
 === Workload Factory supports AI & ML use case for replication
 Workload Factory supports replicating on-premises ONTAP data to FSx for ONTAP and creating S3 access points for AWS Artificial Intelligence (AI) and machine learning (ML) services to accelerate AI/ML workflows.
@@ -20,9 +20,9 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.ht
 === Update to automatic capacity management feature
 The update separates the feature into two distinct features: automatic capacity management and capacity notifications. 
 
-Automatic capacity management adds or removes file system capacity to maintain optimal performance. New options include incremental and adaptive modes. Incremental increases capacity by a fixed amount at thresholds; adaptive uses historical data to predict and adjust capacity.
+Automatic capacity management automatically adds or removes file system capacity to maintain optimal performance. New options include incremental and adaptive modes. In incremental mode, the system increases capacity by a fixed amount at thresholds; in adaptive mode, it uses historical data to predict and adjust capacity.
 
-The capacity notifications feature sends alerts when your file systems reach certain capacity limits, so you can manage your storage before issues arise.
+Capacity notifications alert you whenever a capacity adjustment occurs and when file systems reach set limits, so you can manage storage before issues arise.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Learn about automatic capacity management and capacity notifications in NetApp Workload Factory]
 
