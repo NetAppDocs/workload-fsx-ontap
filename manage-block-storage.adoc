@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
-permalink: manage-igroups.html
-keywords: igroup, manage igroups, manage client access, delete igroup
-summary: "Manage igroups for an FSx for ONTAP file system in NetApp Workload Factory." 
+permalink: manage-block-storage.html
+keywords: block storage, manage block storage, igroups, block devices, client access, delete block device
+summary: "Manage block storage for an FSx for ONTAP file system in NetApp Workload Factory." 
 ---
 = Manage block storage for a file system in NetApp Workload Factory
 :icons: font
@@ -14,7 +14,7 @@ Use NetApp Workload Factory to simplify managing your block storage resources, i
 .About this task
 From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices, and manage block devices by viewing details, increasing capacity, managing client access, archiving data for inactive block devices, and deleting block devices.
 
-Refer to the igroup diagram to check for the following: 
+Refer to the block storage diagram to check for the following: 
 
 * Client connections
 * Block device status
