@@ -26,7 +26,12 @@ Capacity notifications alert you whenever a capacity adjustment occurs and when 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Learn about automatic capacity management and capacity notifications in NetApp Workload Factory]
 
-== Cost enhancements
+=== Added block storage diagram
+To help you better manage your block storage, you can view a block storage diagram that shows how your block devices are connected to nodes and igroups. The diagram provides a visual representation of your block storage architecture, making it easier to understand and manage your block storage resources.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
+
+=== Cost enhancements
 
 NetApp Workload Factory adds optional page-level filters for file system allocation tag key and value, file system, and volume. Use these filters to analyze costs for specific resources, find ways to save money, and manage your storage costs.
 
