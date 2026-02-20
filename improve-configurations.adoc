@@ -30,7 +30,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Reliability: SSD capacity threshold, scheduled local snapshots, FSx for ONTAP backups, remote data replication, and data reliability for long-term retention
 * Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
 * Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, cache relationship write mode, optimize cache volume size, and volume logical capacity reporting
-* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, and orphaned block devices
+* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, and inactive block devices
 
 == Before you begin
 
