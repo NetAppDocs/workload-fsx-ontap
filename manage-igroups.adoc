@@ -12,7 +12,7 @@ summary: "Manage igroups for an FSx for ONTAP file system in NetApp Workload Fac
 Use NetApp Workload Factory to simplify managing your block storage resources, including igroups and block devices, and control client access for FSx for ONTAP block devices to provide optimal performance and minimize costs. 
 
 .About this task
-From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices, and manage block devices to view details, increase capacity, manage client access, archive data for inactive block devices, and delete block devices.
+From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices, and manage block devices by viewing details, increasing capacity, managing client access, archiving data for inactive block devices, and deleting block devices.
 
 Refer to the igroup diagram to check for the following: 
 
@@ -137,4 +137,5 @@ Block devices that are no longer mapped to a client or unused for seven consecut
 
 == Related information
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html[Create an igroup for an FSx for ONTAP file system]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html[Create an igroup for an FSx for ONTAP file system]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device for an FSx for ONTAP file system]
