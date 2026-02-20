@@ -131,10 +131,8 @@ sidebar:
               url: /delete-volume.html
         - title: Block storage administration
           entries:
-            - title: Manage igroups
-              url: /manage-igroups.html
-            - title: Manage block devices
-              url: /manage-block-devices.html
+            - title: Manage block storage
+              url: /manage-block-storage.html
         - title: File system administration
           entries: 
             - title: Adjust file system capacity
