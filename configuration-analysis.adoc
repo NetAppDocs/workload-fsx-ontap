@@ -26,7 +26,7 @@ Well-architected score::: The score includes all currently analyzed configuratio
 
 Configuration categories::: The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
 
-* _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
+* _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is scheduled volume backup.
 * _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies.
 * _Operational excellence_: Focuses on delivering the most optimal architecture and business value.
 * _Cost optimization_: Aims to deliver business value while minimizing costs.
