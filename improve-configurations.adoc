@@ -27,10 +27,10 @@ Because requirements for storage configurations vary, you can dismiss the analys
 .What is analyzed
 Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
 
-* Reliability: SSD capacity threshold, scheduled local snapshots, scheduled volume backup, remote data replication, and data reliability for long-term retention
+* Reliability: SSD capacity threshold, scheduled local snapshots, scheduled volume backups, remote data replication, and data reliability for long-term retention
 * Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
 * Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, cache relationship write mode, optimize cache volume size, and volume logical capacity reporting
-* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, and inactive block devices
+* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, inactive block devices, underutilized SSD capacity, and inactive NAS volumes
 
 == Before you begin
 
@@ -56,41 +56,6 @@ When *View and fix* is an option, select the impacted volumes to fix.
 
 .Result
 The process to fix the issue initiates. Select the account settings menu and then select *Tracker* to view the status of the operation.
-
-=== Fix the scheduled volume backup configuration
-The scheduled volume backup configuration is analyzed at the volume level. When one or more volumes are not protected by either FSx backup or AWS backup, the configuration is marked as non-optimized. Bulk fix is supported, allowing you to remediate multiple volumes in a single operation.
-
-FSx backup is a generic mechanism that applies a daily backup policy with up to 90 days retention for all volumes at once. AWS backup supports a more flexible approach, allowing different granular backup policies with different frequencies and retention periods on a per-volume basis. If you are using both backups, consider removing any unnecessary redundancy.
-
-If you are enabling a backup that was not previously in use, the other backup could now be redundant. Consider disabling the alternate backup.
-
-To fix non-optimized volumes, two alternatives are available to you:
-
-[role="tabbed-block"]
-====
-.Enable FSx backup (recommended)
---
-FSx backup provides a daily backup policy with a configurable retention period for all volumes in the file system at once. Data protection (DP) volumes are not supported and cannot be selected.
-
-. Select the applicable volumes.
-. Set the *Daily backup retention period* (up to 90 days).
-. Select *Fix*.
-
-NOTE: FSx backup is a file-system-wide mechanism. All volumes on the file system will be backed up even if not all volumes are explicitly selected during this operation.
---
-
-.Add volumes to AWS backup
---
-AWS backup supports flexible, per-volume backup policies with different frequencies and retention periods. This alternative requires an existing AWS backup policy and a service role ARN. It is not available if no existing AWS backup policy has been configured.
-
-. Select the non-optimized volumes to add to AWS backup.
-. Select an existing *AWS backup policy*. If only one policy exists, it is selected by default. You cannot create a new policy through this operation.
-. Enter the *AWS backup service role ARN*. You cannot create a new role through this operation.
-. Select *Fix*.
-
-NOTE: A single policy and role ARN applies to all volumes selected in this operation.
---
-====
 
 == Dismiss a configuration analysis
 Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file system or for selected volumes in a file system. You can restart the analysis when needed.

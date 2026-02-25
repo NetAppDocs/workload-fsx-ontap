@@ -19,17 +19,7 @@ Key capabilities include:
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-== How it works 
-
-Workload Factory analyzes Amazon FSx for NetApp ONTAP file systems daily. The analysis provides well-architected status, insights, and recommendations. You can automatically fix configuration issues to meet best practices and operate efficiently.
-
-After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find the total optimization score, configuration issues by category, and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Workload Factory, while others require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
-
-You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, Workload Factory does not include the configuration in the total optimization score.
-
-== Why it matters
-
-Workload Factory applies best practices to large storage or database environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes reduce human error, ensure uniform management, and maintain performance and reliability. Fixes applied in the Workload Factory console reduce human error and ensure uniform management. Automation ensures configurations are applied correctly and maintained, preserving performance and reliability across your workload infrastructures.
+include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/well-architected-workloads.adoc[]
 
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
@@ -50,9 +40,9 @@ The well-architected analysis categorizes configurations in the following pillar
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
  
-* *Schedule FSx for ONTAP backups*
+* *Schedule volume backups*
 +
-FSx for ONTAP: Backing up your volumes helps support data retention and compliance needs. Use FSx for ONTAP backup to set up automated backups and retention for your data.
+Backing up your volumes helps support data retention and compliance needs. Use volume backups to set up automated backups and retention for your data.
 
 * *Schedule local snapshots*
 +
@@ -131,10 +121,17 @@ Storage efficiencies should be enabled - compaction, compression, and deduplicat
 +
 Snapshots and backups that are no longer needed should be deleted to reduce costs.
 
-* *Orphaned block devices*
+* *Inactive block devices*
 +
 After a block device isn't used for seven days, Workload Factory recommends archiving block device data or deleting the unused block device to reduce costs. 
 
+* *Underutilized SSD capacity*
++
+An underutilized SSD capacity tier may be incurring unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and other file system operations are not supported during this time.
+
+* *Inactive NAS volumes*
++
+After a NAS volume isn't used for thirty one days, Workload Factory recommends archiving volume data or deleting the unused volume to reduce costs.
 
 .What's next
 
