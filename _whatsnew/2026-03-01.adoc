@@ -37,8 +37,10 @@ NetApp Workload Factory adds optional page-level filters for file system allocat
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Use filters for cost analysis in NetApp Workload Factory]
 
-=== New Ask me bookmark available in Workload Factory
-
-We have added a new Ask me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask me whenever you need help. Ask me is our AI assistant, enabling you to ask questions about your own database estate, get personalized insights directly from your environment, and refer to previous conversations.
-
-You can open Ask me from any page by clicking the new bookmark. It launches Ask me in a side panel without interrupting your current work and offers quick explanations and recommendations related to what you're currently doing.
+=== New Ask Me bookmark available in Workload Factory
+ 
+We added a new Ask Me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask Me whenever you need help. Ask Me is our AI assistant, enabling you to ask questions about your own workload environments, get personalized insights directly from your environment, and refer to previous conversations.
+ 
+You can open Ask Me from any page by clicking the new bookmark. It launches Ask Me in a side panel without interrupting your current work and offers quick explanations and recommendations related to what you're currently doing.
+ 
+link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features[Learn more about Ask Me^]
