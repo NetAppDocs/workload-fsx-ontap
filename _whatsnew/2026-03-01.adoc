@@ -18,7 +18,7 @@ You can change the user and user type for an existing S3 access point attached t
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[Edit S3 access points in NetApp Workload Factory]
 
 === Update to automatic capacity management feature
-The update separates the feature into two distinct features: automatic capacity management and capacity notifications. 
+This update separates the feature into two distinct features: automatic capacity management and capacity notifications.
 
 Automatic capacity management automatically adds or removes file system capacity to maintain optimal performance. New options include incremental and adaptive modes. In incremental mode, the system increases capacity by a fixed amount at thresholds; in adaptive mode, it uses historical data to predict and adjust capacity.
 
@@ -27,7 +27,7 @@ Capacity notifications alert you whenever a capacity adjustment occurs and when 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Learn about automatic capacity management and capacity notifications in NetApp Workload Factory]
 
 === Added block storage diagram
-To help you better manage your block storage, you can view a block storage diagram that shows how your block devices are connected to nodes and igroups. The diagram provides a visual representation of your block storage architecture, making it easier to understand and manage your block storage resources.
+If you're using block storage, you can view the block storage diagram to visualize how block devices connect to nodes and igroups. The diagram helps you understand and manage your block storage. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
 
@@ -39,8 +39,8 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Use filte
 
 === New Ask Me bookmark available in Workload Factory
  
-We added a new Ask Me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask Me whenever you need help. Ask Me is our AI assistant, enabling you to ask questions about your own workload environments, get personalized insights directly from your environment, and refer to previous conversations.
- 
+We added a new Ask Me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask Me whenever you need help. Ask Me is our AI assistant. You can ask questions about your workload environments, get personalized insights, and review previous conversations.
+
 You can open Ask Me from any page by clicking the new bookmark. It launches Ask Me in a side panel without interrupting your current work and offers quick explanations and recommendations related to what you're currently doing.
  
 link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html#features[Learn more about Ask Me^]
