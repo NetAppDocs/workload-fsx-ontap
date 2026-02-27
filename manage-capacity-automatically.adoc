@@ -12,9 +12,9 @@ summary: "Enabling this feature lets Workload Factory automatically add incremen
 Enabling capacity management lets NetApp Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity manually. 
 
 == About this task 
-A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental storage needs to be added and to check for available volume inodes, the maximum number of files and folders in a volume, so that their count increases according to the configured automatic capacity management thresholds. 
+The system scans the FSx for ONTAP file system every 30 minutes. It checks if incremental storage needs to be added and verifies available volume inodes. The count increases based on automatic capacity management thresholds.
 
-Enabling inode management lets NetApp Workload Factory automatically add incremental inodes to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor inodes manually. 
+Enabling inode management lets NetApp Workload Factory automatically add incremental inodes to an FSx for ONTAP file system as capacity needs change. This feature removes the need for manual inode monitoring.
 
 Only one account can manage this feature. 
 
@@ -36,7 +36,7 @@ Consider the following before you begin:
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to enable automatic capacity management for. 
 . Select *Manage*. 
-. Under Information, select the pencil icon next to *Capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Capacity management* row. 
+. Under Information, select the pencil icon next to *Capacity management*. The pencil icon appears next to the drop down arrow when you hover the mouse over the *Capacity management* row.
 . In the *Capacity management* dialog, provide the following: 
 .. *Credentials*: Select credentials with _Automate_ permissions from the dropdown menu. 
 .. Select the enable button to *Enable automatic capacity management*. 
@@ -51,15 +51,15 @@ Alternatively, disable the feature. If you need to increase file system capacity
 The warning threshold setting is available only if you link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enabled the Workload Factory notification service^]. 
 ** *Threshold increase*: Enter the maximum percentage increase for the FSx for ONTAP file system. The default is 80%.
 +
-This is the threshold at which Workload Factory triggers a job to increase the capacity. For example, if the file system reaches 80% of capacity, then Workload Factory will increase capacity.
-* *Adaptive mode*: predicts and adjusts capacity based on historical data. 
+This is the threshold at which Workload Factory triggers a job to increase the capacity. For example, if the file system reaches 80% of capacity, then Workload Factory increases capacity.
+* *Adaptive mode*: predicts and changes capacity based on historical data. 
 +
 ** *Analysis period*: Set the analysis period in hours to determine how much historical data to consider for capacity predictions. The default is 120 hours.
 ** *Planned buffer time*: Set the buffer time in hours to ensure capacity is increased before it's actually needed. The default is 48 hours.
 . Select *Apply*. 
 
 .Result
-A file system scan occurs every 30 minutes to determine if the file system needs additional capacity.
+A file system scan occurs every 30 minutes to determine whether it needs additional capacity.
 
 == Enable capacity notifications
 
@@ -74,15 +74,15 @@ You must link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notif
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to enable automatic capacity management for. 
 . Select *Manage*. 
-. Under Information, select the pencil icon next to *Capacity management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Capacity management* row. 
+. Under Information, select the pencil icon next to *Capacity management*. The pencil icon appears next to the drop down arrow when you hover the mouse over the *Capacity management* row.
 . In the *Capacity management* dialog, select *Enable capacity notifications* to turn on notifications when capacity reaches the threshold and whenever Workload Factory performs an automatic capacity increase.
 . Set the *Notification threshold* to receive notifications when the file system reaches a certain capacity percentage. The default is 70%.
 . Select *Apply*. 
 
 == Enable inode management for a file system
-Enable automatic inode management to make sure that the file capacity per volume scales up by increasing the number of inodes (files) up to the allowable limit.
+Enable automatic inode management to increase the number of inodes (files) per volume up to the allowable limit.
 
-A scan of the FSx for ONTAP file system occurs every 30 minutes to determine whether incremental inodes need to be added and to check for available volume inodes, the maximum number of files and folders in a volume, so that their count increases according to the configured automatic inode management thresholds.  
+A scan of the FSx for ONTAP file system occurs every 30 minutes. It verifies available volume inodes and checks if incremental inodes need to be added. The count increases based on automatic inode management thresholds.
 
 NOTE: *Terraform users*: Terraform has a limitation that requires that all operations are completed within Terraform. Inode management isn't supported in Terraform, but you can enable automatic inode management in the Workload Factory console.
 

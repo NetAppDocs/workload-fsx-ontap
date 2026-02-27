@@ -137,12 +137,10 @@ sidebar:
               url: /manage-block-devices.html
         - title: File system administration
           entries: 
-            - title: Adjust file system capacity
+            - title: Adjust file system capacity manually
               url: /increase-file-system-capacity.html
             - title: Manage file system capacity automatically
               url: /manage-capacity-automatically.html
-            - title: Enable inode management
-              url: /enable-inode-management.html  
             - title: Manage file system tags
               url: /manage-fsx-tags.html
             - title: Reset fsxadmin password
