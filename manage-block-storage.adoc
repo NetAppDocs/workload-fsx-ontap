@@ -12,9 +12,9 @@ summary: "Manage block storage for an FSx for ONTAP file system in NetApp Worklo
 Use NetApp Workload Factory to simplify managing your block storage resources, including igroups and block devices, and control client access for FSx for ONTAP block devices to provide optimal performance and minimize costs. 
 
 .About this task
-From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices, and manage block devices by viewing details, increasing capacity, managing client access, archiving data for inactive block devices, and deleting block devices.
+From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices. You can also view block device details, increase capacity, manage client access, archive data for inactive block devices, and delete block devices.
 
-Refer to the block storage diagram to check for the following: 
+Check the block storage diagram to check for the following: 
 
 * Client connections
 * Block device status
@@ -29,7 +29,7 @@ Refer to the block storage diagram to check for the following:
 You can view igroup details, manage client access, and delete igroups.
 
 === Manage client access for an igroup
-You can manage client access for an existing igroup at any time.
+Manage client access for an existing igroup at any time.
  
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -51,7 +51,7 @@ You can manage client access for an existing igroup at any time.
 . Select *Apply*.
 
 === Delete an igroup 
-You can delete an existing igroup when it is no longer needed.    
+Delete an igroup when it is no longer needed.    
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -59,11 +59,11 @@ You can delete an existing igroup when it is no longer needed.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Select the resource type *Initiator groups (igroups)* to view existing igroups.
-. Navigate to the actions menu for the block device and then select *Delete initiator group*.
+. Go to the actions menu for the block device and then select *Delete initiator group*.
 . In the Delete initiator group (igroup) dialog, type "delete" to confirm that you want to delete the igroup, and then select *Delete*.
 
 == Manage block devices for an igroup
-Block devices, or LUNs (logical unit numbers), are volumes that contain file systems in a SAN environment and can be accessed by hosts over a network.
+Block devices, or LUNs (logical unit numbers), are volumes with file systems in a SAN environment, accessible to hosts over a network.
 
 You can manage block devices for FSx for ONTAP file systems that use the iSCSI protocol.
 
@@ -91,7 +91,7 @@ Increase the capacity of an existing block device at any time.
 . Enter the new capacity for the block device and select the unit. 
 . Select *Increase* to apply the changes.
 
-NOTE: After you increase the size of the block device, follow the procedure provided by your host operating system to discover the new size of the block device and expand the file system on it.
+NOTE: After increasing the size of the block device, follow the procedure your host operating system provides to discover the new size and expand the file system.
 
 === Manage client access for a block device
 You can manage client access for an existing block device at any time by creating igroups, and adding or removing block devices and host initiators.
@@ -124,7 +124,7 @@ Block devices that are no longer mapped to a client or unused for seven consecut
 . Select *Archive*. 
 
 === Delete a block device
-Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. This operation unmaps and deletes the selected block device. If the host FlexVol volume doesn't contain any block devices, Workload Factory also deletes it.
+Block devices that are not mapped to a client or are unused for seven days are inactive block devices. This operation unmaps and deletes the selected block device. If the host FlexVol volume does not contain any block devices, Workload Factory deletes it.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
