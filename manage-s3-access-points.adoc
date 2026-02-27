@@ -42,7 +42,7 @@ Create and attach S3 access points to an existing volume in NetApp Workload Fact
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
-* *Enable metadata catalog*: Select to enable metadata on the volume to generate metadata inventory for all objects accessible to the S3 access point. This feature incurs AWS costs for S3 requests. 
+* *Enable inventory table*: Enabling the inventory table on the volume generates metadata inventory for all objects accessible to the S3 access point. This feature incurs AWS costs for S3 requests. 
 . Select *Create and attach*. 
 
 == View details 
