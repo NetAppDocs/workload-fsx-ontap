@@ -21,6 +21,15 @@ If you're using block storage, you can view the block storage diagram to visuali
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
 
+=== Update to automatic capacity management feature
+This update separates the feature into two distinct features: automatic capacity management and capacity notifications. 
+
+Automatic capacity management automatically adds or removes file system capacity to maintain optimal performance. New options include incremental and adaptive modes. In incremental mode, the system increases capacity by a fixed amount at thresholds; in adaptive mode, it uses historical data to predict and adjust capacity.
+
+Capacity notifications alert you whenever a capacity adjustment occurs and when file systems reach set limits, so you can manage storage before issues arise.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-management.html[Learn about automatic capacity management and capacity notifications in NetApp Workload Factory]
+
 === New Ask Me bookmark available in Workload Factory
  
 We added a new Ask Me bookmark on every screen in Workload Factory console. This improvement makes it easier and faster for you to access Ask Me whenever you need help. Ask Me is our AI assistant. You can ask questions about your workload environments, get personalized insights, and review previous conversations.
