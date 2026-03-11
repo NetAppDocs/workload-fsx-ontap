@@ -129,10 +129,6 @@ After a block device isn't used for seven days, Workload Factory recommends arch
 +
 An underutilized SSD capacity tier may be incurring unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and other file system operations are not supported during this time.
 
-* *Inactive NAS volumes*
-+
-After a NAS volume isn't used for thirty one days, Workload Factory recommends archiving volume data or deleting the unused volume to reduce costs.
-
 .What's next
 
 link:improve-configurations.html[Implement well-architected file system configurations]
