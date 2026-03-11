@@ -1,0 +1,4 @@
+---
+permalink: manage-block-devices.html
+redirect: workload-fsx-ontap/manage-block-storage.html
+---
