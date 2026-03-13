@@ -65,12 +65,15 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 .. *Storage VM name*: Optionally, enter a storage VM name. 
 .. *Volume style*: Select *FlexVol* or *FlexGroup* volume. 
 +
-FlexVol volume style is selected by default. 
+* A _FlexVol volume_ is a type of logical storage in ONTAP that allows you to manage data. FlexVol volumes can be moved between aggregates or nodes within the same storage virtual machine (SVM) without disrupting client access. The FlexVol volume style is selected by default. 
 +
-FlexGroup volume size depends on the number of constituents, requiring 100 GiB per constituent. 
+* A _FlexGroup_ volume is a scale-out NAS container that provides high performance along with automatic load distribution and scalability. It consists of several member volumes (constituents), which are underlying FlexVol volumes that share traffic transparently. 
 .. *Volume size*: Enter the volume size and unit. 
 +
 Optionally, enable volume autogrow. This option is available when you select *File access* as the volume access type. 
++
++
+FlexGroup volume size depends on the number of constituents, requiring 100 GiB per constituent.
 .. *Volume autogrow*: Optionally, enable volume autogrow to automatically expand volume capacity until the volume reaches the maximum size. This feature accommodates increasing data usage, ensuring uninterrupted operations.
 +
 Specify the maximum volume growth size and unit. You cannot set the maximum growth size smaller than the current volume size
@@ -160,11 +163,11 @@ If the feature is unavailable, it is because of one of the following reasons:
 * Volumes with immutable files, and volumes with iSCSI and NVMe protocols are not supported for ARP/AI.
 * The file system already has an ARP/AI policy.
 
-. Under Advance configuration, provide the following: 
+. Under Advance configuration, enter the following details. The fields under this section differ based on the volume style you select. 
 .. *Junction path*: Enter the location in the storage VM's namespace where the volume gets mounted. The default junction path is `/<volume-name>`.
-.. *Aggregate name*: Select the aggregate to host the new volume.
-//.. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
-//.. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
+.. *Aggregate name*: Only for FlexVol volumes. Select the aggregate to host the new volume.
+.. *Aggregates list*: Only for FlexGroup volumes. Add or remove aggregates. The minimum number of aggregates is one. 
+.. *Number of constituents*: Only for FlexGroup volumes. Enter the number of constituents per aggregate. 100 GiB is required per constituent.
 . Select *Create*.
 
 .Related information
