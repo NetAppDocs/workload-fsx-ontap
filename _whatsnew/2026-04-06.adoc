@@ -1,0 +1,20 @@
+=== Well-architected analysis updates
+
+Workload Factory analyzes your FSx for ONTAP file systems for the following configurations: 
+
+* Inactive NAS volumes: identifies NAS volumes that are not actively used and recommends actions to optimize storage utilization.``
+* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and recommends connecting hosts to the failover node for reliability.
+* Connect host to preferred node: checks whether hosts are connected to the preferred node in a high-availability deployment model and recommends connecting hosts to the preferred node for performance efficiency.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
+
+=== Cost enhancements
+
+NetApp Workload Factory introduces new optional page-level filters: file system allocation tag key and key value, file system, and volume to improve the results for cost analysis for your resources across all AWS accounts.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Use filters for cost analysis in NetApp Workload Factory]
+
+=== Track replication lags in Workload Factory
+With NetApp Workload Factory, you can track replication lags for your FSx for ONTAP file systems that are configured with remote replication. Replication lags indicate the time delay between when data is written to the source file system and when it is replicated to the destination file system. Tracking replication lags helps you monitor the health of your replication setup and identify potential issues that could impact data consistency and recovery point objectives (RPOs).
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-replication.html[Track replication lags in NetApp Workload Factory]
