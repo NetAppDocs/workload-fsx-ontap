@@ -47,7 +47,7 @@ Consider how much bandwidth to allocate for replication.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actionsenu of the file system to update and then select *Manage*.  
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
 . From the file system overview, select the *Replication relationships* tab. 
 . In the Replication relationships tab, select the actionsenu of the replication relationship to limit the max transfer rate for. 
 . Select *Edit max transfer rate*. 
@@ -105,7 +105,7 @@ If you pause when a transfer is in progress, the transfer is not affected, and t
 The relationship pauses and its status shows as "Paused". 
 
 == Resume a paused replication relationship
-When you resume a replication relationship, any changes to the destination volume while the replication was stopped are deleted. The target volume transitions from read/write to read-only, and receives updates from the source volume at the scheduled replication interval again. When you resume a replication relationship, the target volume reverts back to the latest initial replication snapshot, at which point, the volume replication process starts over.
+When you resume a replication relationship, any changes to the destination volume while the replication was stopped are deleted. The target volume transitions from read/write to read-only, and receives updates from the source volume at the scheduled replication interval again. 
 
 NOTE: Any data written to the original source volume between the last data replication and the time that the source volume is disabled is not preserved.
 
