@@ -80,4 +80,4 @@ If the feature is unavailable, it is because of one of the following reasons:
 
 .Related information
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html[Manage the block devices for an FSx for ONTAP file system]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage the block storage for an FSx for ONTAP file system]

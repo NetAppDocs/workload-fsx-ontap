@@ -1,7 +1,7 @@
 === Block device support in NetApp Workload Factory
 Manage your block devices more effectively with the newly introduced block device support in NetApp Workload Factory. This feature allows you to view details and increase capacity for iSCSI LUNs, providing enhanced flexibility for your storage needs.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html[Manage block devices in Workload Factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block devices in Workload Factory]
 
 === Well-architected analysis updates
 Workload factory analyzes your FSx for ONTAP file systems for the following configurations: 
