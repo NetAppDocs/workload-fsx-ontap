@@ -1,0 +1,4 @@
+---
+permalink: limit-transfer-rate.html
+redirect: workload-fsx-ontap/manage-replication.html
+---
