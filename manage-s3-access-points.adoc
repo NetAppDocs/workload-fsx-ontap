@@ -47,9 +47,11 @@ Create and attach S3 access points to an existing volume in NetApp Workload Fact
 . Select *Create and attach*. 
 
 == View details 
-You can view the alias, ARN, and S3 URI as access point details when the inventory table is not enabled.
+Several details are available for S3 access points. You can view the alias, ARN, and S3 URI as access point details when the inventory table is not enabled.
 
 With the inventory table enabled on the volume, you can view access point, inventory table, and table bucket details of existing S3 access points attached to the volume. The system also provides a link to the inventory table in the AWS Management Console.
+
+When the journal table is enabled, Workload Factory generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, the CloudWatch S3 Table, and more. For more details about AWS CloudTrail, refer to link:https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html[CloudTrail documentation^].
 
 You can copy access point details for use in other applications.
 
