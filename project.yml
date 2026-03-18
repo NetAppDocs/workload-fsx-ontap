@@ -31,6 +31,8 @@ sidebar:
       entries:
         - title: Explore savings
           url: /explore-savings.html
+        - title: Track and analyze FSx for ONTAP costs
+          url: /track-costs.html
         - title: Use links
           entries: 
             - title: Learn about links
@@ -39,12 +41,20 @@ sidebar:
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
+        - title: Discover and view cache volumes
+          url: /discover-cache-volumes.html  
         - title: Manage volumes
           entries:
             - title: Create a volume
               url: /create-volume.html
             - title: Access your data
               url: /access-data.html
+        - title: Create block storage resources
+          entries: 
+            - title: Create an igroup
+              url: /create-igroup.html
+            - title: Create a block device  
+              url: /create-block-device.html      
         - title: Create a storage VM
           url: /create-storage-vm.html                
         - title: Protect your data
@@ -63,8 +73,6 @@ sidebar:
               entries: 
                 - title: Create a manual backup
                   url: /create-backup.html
-              #  - title: Set up a backup policy
-              #    url: /set-backup-policy.html  
                 - title: Restore a volume from a backup
                   url: /restore-from-backup.html
             - title: Use replication
@@ -79,6 +87,8 @@ sidebar:
               url: /clone-volume.html  
             - title: Use on-premises ONTAP data
               url: /use-onprem-data.html
+            - title: Create a cyber vault to protect data
+              url: /create-cyber-vault.html  
     - title: Administer and monitor
       entries:
         - title: Monitor operations with Tracker
@@ -88,21 +98,23 @@ sidebar:
             - title: Configuration analysis for FSx for ONTAP
               url: /configuration-analysis.html
             - title: Implement well-architected file system configurations
-              url: /improve-configurations.html  
+              url: /improve-configurations.html 
+        - title: Analyze FSx for ONTAP EMS events      
+          url: /analyze-events.html
         - title: Volume administration
           entries:  
-          #  - title: View volume details
-          #    url: /view-volume-details.html
             - title: Edit volume autogrow
               url: /edit-volume-autogrow.html
-            - title: Increase volume capacity
-              url: /increase-volume-capacity.html
+            - title: Adjust volume capacity
+              url: /adjust-volume-capacity.html
+            - title: Rebalance volume capacity
+              url: /rebalance-volume.html
             - title: Manage immutable files 
               url: /manage-immutable-files.html  
             - title: Manage volume tags
               url: /manage-volume-tags.html
-            - title: Rebalance volume capacity
-              url: /rebalance-volume.html
+            - title: Manage cache volumes
+              url: /manage-cache-volumes.html
             - title: Change a tiering policy
               url: /change-tiering-policy.html   
             - title: Update storage efficiency
@@ -111,16 +123,24 @@ sidebar:
               url: /manage-nfs-export-policy.html  
             - title: Manage SMB/CIFS shares
               url: /manage-cifs-share.html 
+            - title: Manage S3 access points 
+              url: /manage-s3-access-points.html 
             - title: Split a cloned volume
               url: /split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
+        - title: Block storage administration
+          entries:
+            - title: Manage block storage
+              url: /manage-block-storage.html
         - title: File system administration
           entries: 
-            - title: Increase file system capacity
+            - title: Adjust file system capacity manually
               url: /increase-file-system-capacity.html
-            - title: Enable automatic capacity management
-              url: /enable-auto-capacity-management.html
+            - title: Manage file system capacity automatically
+              url: /manage-capacity-automatically.html
+            - title: Manage file system tags
+              url: /manage-fsx-tags.html
             - title: Reset fsxadmin password
               url: /reset-fsxadmin-password.html
             - title: Delete a file system
@@ -147,11 +167,9 @@ sidebar:
                   url: /enable-snapshots-long-term.html 
                 - title: Manage snapshots
                   url: /manage-snapshots.html  
-         #  - title: Delete a snapshot
-          #    url: /delete-snapshot.html 
             - title: Backups
               entries: 
-                - title: Manage FSx for ONTAP backup schedule
+                - title: Manage volume backup schedule
                   url: /manage-backup-schedule.html
             - title: Replication
               entries: 
@@ -195,5 +213,5 @@ sidebar:
       url: /legal-notices.html
 
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family

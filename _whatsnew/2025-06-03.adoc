@@ -9,10 +9,10 @@ Workload factory now analyzes your FSx for ONTAP file systems to check whether s
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of storage efficiencies]
 
 === Storage dashboard enhancements
-Starting today, when you open the Storage workload from the workload factory console, you'll view the *Dashboard*. The newly designed dashboard provides a holistic view of your FSx for ONTAP systems including the number of file systems, the total SSD capacity, the well-architected status overview, the data protection overview, and replication relationship health. 
+Starting today, when you open the Storage workload from the Workload Factory console, you'll view the *Dashboard*. The newly designed dashboard provides a holistic view of your FSx for ONTAP systems including the number of file systems, the total SSD capacity, the well-architected status overview, the data protection overview, and replication relationship health. 
 
 === Volumes tab enhancements
-The Storage workload made enhancements to the Volumes tab within an FSx for ONTAP file system in the workload factory console. The enhancements include: 
+The Storage workload made enhancements to the Volumes tab within an FSx for ONTAP file system in the Workload Factory console. The enhancements include: 
 
 * *New cards*: SSD capacity, Capacity pool, and Autonomous Ransomware Protection (ARP)
 * *New columns*: Capacity distribution, Used SSD capacity, Used capacity pool, and SSD efficiency
@@ -20,4 +20,4 @@ The Storage workload made enhancements to the Volumes tab within an FSx for ONTA
 === Storage efficiencies update for volume creation
 When creating a new volume, storage efficiencies including data compaction, compression, and deduplication are enabled by default. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a new volume in workload factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a new volume in Workload Factory]

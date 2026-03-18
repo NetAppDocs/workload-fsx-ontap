@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx for netapp ontap, fsx for ontap
+keywords: what's new, features, new, release notes, enhancements, fixes, new features, Workload Factory, amazon fsx for netapp ontap, fsx for ontap
 summary: "Learn what's new with Amazon FSx for NetApp ONTAP."
 ---
 = What's new with Amazon FSx for NetApp ONTAP
@@ -11,7 +11,42 @@ summary: "Learn what's new with Amazon FSx for NetApp ONTAP."
 [.lead]
 Learn what's new with Amazon FSx for NetApp ONTAP.
 
-// tag::whats-new[]
+== 01 March 2026
+
+include::_whatsnew/2026-03-01.adoc[]
+
+== 16 February 2026
+
+include::_whatsnew/2026-02-16.adoc[]
+
+== 01 February 2026
+
+include::_whatsnew/2026-02-01.adoc[]
+
+== 04 January 2026
+
+include::_whatsnew/2026-01-04.adoc[]
+
+== 04 December 2025
+
+include::_whatsnew/2025-12-04.adoc[]
+
+== 27 November 2025
+
+include::_whatsnew/2025-11-27.adoc[]
+
+== 02 November 2025
+
+include::_whatsnew/2025-11-02.adoc[]
+
+== 06 October 2025
+
+include::_whatsnew/2025-10-06.adoc[]
+
+== 05 October 2025
+
+include::_whatsnew/2025-10-05.adoc[]
+
 == 09 September 2025
 
 include::_whatsnew/2025-09-09.adoc[]
@@ -23,7 +58,6 @@ include::_whatsnew/2025-08-03.adoc[]
 == 29 June 2025
 
 include::_whatsnew/2025-06-29.adoc[]
-// end::whats-new[]
 
 == 08 June 2025 
 

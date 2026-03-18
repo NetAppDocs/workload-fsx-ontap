@@ -25,7 +25,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create 
 
 ==== Reverse replication supported from FSx for ONTAP to on-premises
 
-Reverse replication is now available from an FSx for ONTAP file system to an on-premises ONTAP cluster from within the workload factory console.
+Reverse replication is now available from an FSx for ONTAP file system to an on-premises ONTAP cluster from within the Workload Factory console.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html[Reverse replication]
 
@@ -43,7 +43,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Cr
 
 ==== Long-term retention policy labels
 
-When you enable long-term retention for a replication relationship, source and target volumes labels must match exactly. Now BlueXP workload factory can automatically create missing source volume labels for you. 
+When you enable long-term retention for a replication relationship, source and target volumes labels must match exactly. Now BlueXP workload factory can automatically create missing source volume labels for you.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Create a replication relationship]
 
@@ -81,4 +81,4 @@ Workload factory now supports alternative sets of ONTAP credentials for creating
 
 === Updated permissions terminology
 
-The workload factory user interface and documentation now use "read-only" to refer to read permissions and "read/write" to refer to automate permissions.
+The Workload Factory user interface and documentation now use "read-only" to refer to read permissions and "read/write" to refer to automate permissions.

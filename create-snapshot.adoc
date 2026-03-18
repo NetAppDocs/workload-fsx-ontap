@@ -2,30 +2,31 @@
 sidebar: sidebar
 permalink: create-snapshot.html
 keywords: create snapshot, snapshot 
-summary: "Create a manual snapshot of an FSx for ONTAP volume in BlueXP workload factory. Snapshots are point-in-time versions of your volume's content."
+summary: "Create a manual snapshot of an FSx for ONTAP volume in NetApp Workload Factory. Snapshots are point-in-time versions of your volume's content."
 ---
 = Create a manual snapshot of an FSx for ONTAP volume
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Create a manual snapshot of an FSx for ONTAP volume in BlueXP workload factory. Snapshots are point-in-time versions of your volume's content.
+Create a manual snapshot of an FSx for ONTAP volume in NetApp Workload Factory. Snapshots are point-in-time versions of your volume's content.
 
 Snapshots are resources of volumes and are instant captures of your data that consume space only for modified data. Because data changes over time, snapshots usually consume more space as they get older. 
 
 FSx for ONTAP volumes use just-in-time copy-on-write so that any unmodified files in snapshots don't consume any of the volume's capacity.
 
-NOTE: Snapshots aren't copies of your data. If you want to make copies of your data, consider using the FSx for ONTAP backups or volume replication features. 
+NOTE: Snapshots aren't copies of your data. If you want to make copies of your data, consider using the volume backups or volume replication features. 
 
 .Before you begin
 You must associate a link to create a manual snapshot of a volume. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.  
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. In *Storage*, select *Go to storage inventory*. 
-. In the *FSx for ONTAP* tab, select the three-dot menu of the file system that contains the volume to create a snapshot for and then select *Manage*.  
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system that contains the volume to create a snapshot for and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the three-dot menu for the volume to protect with snapshots. 
+. From the *Volumes* tab, select the actions menu for the volume to protect with snapshots. 
 . Select *Data protection actions* and then *Manage snapshots*. 
 . From the Manage snapshots page, select *Create snapshot*.
 . In the Create a snapshot dialog, do the following: 

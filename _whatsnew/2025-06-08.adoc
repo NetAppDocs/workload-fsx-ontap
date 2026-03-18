@@ -1,7 +1,7 @@
 === New well-architected analysis and support for fixing issues 
 Automatic capacity management for FSx for ONTAP file systems is now included as a configuration analysis in the well-architected status dashboard.
 
-Additionally, workload factory now supports fixing the following configuration issues:
+Additionally, Workload Factory now supports fixing the following configuration issues:
 
 * SSD capacity threshold
 * Data tiering
