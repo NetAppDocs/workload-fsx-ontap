@@ -20,6 +20,12 @@ After you attach the S3 access point, it appears in the AWS Management Console w
 
 You can attach multiple S3 access points to a single FSx for ONTAP volume, each with a unique access level, to connect to multiple AWS services.
 
+.Additional features to use with S3 access points
+
+* *Inventory table*: When you create and attach an S3 access point to a volume, you can optionally enable the inventory table and the journal table features. The inventory table generates metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+
+* *Journal table*: When you create and attach an S3 access point to a volume, you can optionally enable the journal table feature. The journal table generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. For more details about AWS CloudTrail, refer to link:https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html[CloudTrail documentation^]. Several steps are necessary to set up the architecture for AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, and AWS Identity and Access Management (IAM), ObservabilityAdmin, and AWS S3 Tables to enable the journal table feature. This includes creating a CloudTrail trail to log events, setting up CloudWatch log groups to store logs, and configuring IAM roles and policies to allow Workload Factory to access the necessary resources.
+
 .Before you begin
 Ensure that you meet the following requirements: 
 
@@ -27,7 +33,23 @@ Ensure that you meet the following requirements:
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task.
 
 == Create and attach S3 access points to an existing volume
-Create and attach S3 access points to an existing volume in NetApp Workload Factory.
+Create and attach S3 access points to an existing volume in NetApp Workload Factory. 
+
+.Before you begin
+The following requirements are necessary to enable the journal table feature.
+
+To set up the journal table feature, you must deploy the CloudFormation template within your AWS environment to set up and validate the journal architecture and IAM permissions for the journal table feature in Workload Factory. The template creates the necessary resources and permissions for the journal table feature, including a CloudTrail trail to log events, CloudWatch log groups to store logs, and IAM roles and policies to allow Workload Factory to access the necessary resources. You must have the required permissions to deploy the CloudFormation stack in your AWS account.
+
+. Obtain the template.
+. Deploy the CloudFormation stack in your own AWS account using the generated template.
+.. Save the template JSON to a file.
+.. Deploy the template using the AWS CLI or AWS Management Console.
+.. Wait for the stack to reach `CREATE_COMPLETE` status.
+.. Get the Trail ARN from the stack outputs and copy it for later use.
+. Initiate the journal.
+. Validate the seed (test) event.
+
+If any of the steps fail, refer to the troubleshooting section of the documentation or contact NetApp support for assistance.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -42,7 +64,9 @@ Create and attach S3 access points to an existing volume in NetApp Workload Fact
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
-* *Enable inventory table*: When you enable the inventory table on the volume, the system generates metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+* *Network configuration*: Select Internet or Virtual private cloud (VPC). The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC. To use the journal table feature, you must select Internet as the network configuration.
+* *Enable inventory table*: Optional. When you enable the inventory table on the volume, the system generates metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
+* *Enable journal table*: Optional. When you enable the journal table on the volume, Workload Factory generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. For Workload Factory to generate the journal table, you must set up the architecture for several AWS services and resources correctly, and add the required permissions.
 .. *S3 access point tags*: Optionally, you can add up to 50 tags or remove tags.
 . Select *Create and attach*. 
 
