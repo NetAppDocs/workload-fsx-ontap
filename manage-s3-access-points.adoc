@@ -65,8 +65,10 @@ If any of the steps fail, refer to the troubleshooting section of the documentat
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
 * *Network configuration*: Select Internet or Virtual private cloud (VPC). The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC. To use the journal table feature, you must select Internet as the network configuration.
-* *Enable inventory table*: Optional. When you enable the inventory table on the volume, the system generates metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information.
-* *Enable journal table*: Optional. When you enable the journal table on the volume, Workload Factory generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. For Workload Factory to generate the journal table, you must set up the architecture for several AWS services and resources correctly, and add the required permissions.
+* *Inventory table*: Optional. Requires the `getObject` permission.Enable the inventory table on the volume to generate metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information. The table updates every 24 hours.
+* *Journal table*: Optional. Requires internet network configuration. Enable the journal table on the volume to generate logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. The journal table syncs every six hours to record user actions and audit activity for the access point. 
++
+For Workload Factory to generate the journal table, you must set up the architecture for several AWS services and resources correctly, and add the required permissions. Refer to the Before you begin section for more information.
 .. *S3 access point tags*: Optionally, you can add up to 50 tags or remove tags.
 . Select *Create and attach*. 
 
