@@ -1,0 +1,41 @@
+---
+sidebar: sidebar
+permalink: setup-journal-table.html
+keywords: S3, s3, access points, journal table, setup journal table, NetApp Workload Factory
+summary: "Set up the Journal table infrastructure for S3 access points in NetApp Workload Factory." 
+---
+= Set up the Journal table infrastructure for NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+The journal table generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. Several steps are necessary to set up the infrastructure for AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, and AWS Identity and Access Management (IAM), ObservabilityAdmin, and AWS S3 Tables to enable the journal table feature. This includes creating a CloudTrail trail to log events, setting up CloudWatch log groups to store logs, and configuring IAM roles and policies to allow Workload Factory to access the necessary resources.
+
+== About this task
+
+== Before you begin
+
+
+* *Journal table requirements*: To enable the journal table feature, you must do the following: 
+** Select *Internet* as the network configuration when creating and attaching the S3 access point or when editing the access point. 
+** Add the following IAM policy permissions to your AWS credentials used for Workload Factory.
+** Set up the architecture for AWS services and resources. To complete the requirements, go to ??? (Should these requirements go here?)
++
+. Download the CloudFormation template.
+. Deploy the CloudFormation stack in your AWS account.
+.. Save the template JSON to a file.
+.. Deploy the template using the AWS CLI or AWS Management Console.
+.. Wait for the stack to reach `CREATE_COMPLETE` status.
+.. Get the CloudTrail ARN from the stack outputs.
+. Return to the Workload Factory console and back to the volume to manage S3 access points for. 
+. Select *View details* from the volume actions menu. 
+. In the *Journal table* tab, enter the CloudTrail ARN to connect the journal table to the created infrastructure. (initiate journal)
+
+If any of the steps fail, refer to the troubleshooting section of the documentation or contact NetApp support for assistance.
+
+== Set up the journal table infrastructure 
+
+.Steps
+
+
+== Troubleshoot the infrastructure setup for the journal table
