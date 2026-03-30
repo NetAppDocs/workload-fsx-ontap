@@ -22,4 +22,6 @@ You can also enable or disable the *Inventory table* for the access point. The i
 . From the Volumes tab, select the actions menu for the volume you want to manage S3 access points for, then select *Advanced actions*, and then *Manage S3 access points*.
 . From the *Manage S3 access points* screen, select the actions menu and then select *Edit access point*.
 . Make updates and then select *Apply*. 
++
+To set up the infrastructure for the journal table feature, you must select *Internet* as the network configuration for the S3 access point. link:setup-journal-table.adoc[Learn how to set up the Journal table infrastructure for NetApp Workload Factory].
 

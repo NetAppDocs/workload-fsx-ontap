@@ -9,18 +9,132 @@ summary: "Set up the Journal table infrastructure for S3 access points in NetApp
 :imagesdir: ./media/
 
 [.lead]
-The journal table generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. Several steps are necessary to set up the infrastructure for AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, and AWS Identity and Access Management (IAM), ObservabilityAdmin, and AWS S3 Tables to enable the journal table feature. This includes creating a CloudTrail trail to log events, setting up CloudWatch log groups to store logs, and configuring IAM roles and policies to allow Workload Factory to access the necessary resources.
+Set up the Journal table infrastructure to generate logs on access points in a table to audit user access events and operations on objects in your AWS S3 buckets. The Journal table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. Several steps are necessary to set up the infrastructure for AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, and AWS Identity and Access Management (IAM), ObservabilityAdmin, and AWS S3 Tables to enable the journal table feature. This includes creating a CloudTrail trail to log events, setting up CloudWatch log groups to store logs, and configuring IAM roles and policies to allow Workload Factory to access the necessary resources.
 
 == About this task
 
 == Before you begin
+To enable the journal table feature, you must do the following: 
 
+* You must have an existing volume with an S3 access point.
+* Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
+* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task and add the following IAM policy permissions to your AWS credentials used for Workload Factory.
 
-* *Journal table requirements*: To enable the journal table feature, you must do the following: 
-** Select *Internet* as the network configuration when creating and attaching the S3 access point or when editing the access point. 
-** Add the following IAM policy permissions to your AWS credentials used for Workload Factory.
-** Set up the architecture for AWS services and resources. To complete the requirements, go to ??? (Should these requirements go here?)
-+
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CFNStack",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents"
+            ],
+            "Resource": "arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*"
+        },
+        {
+            "Sid": "StarResources",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:GetTemplateSummary",
+                "cloudtrail:DescribeTrails",
+                "logs:DescribeLogGroups",
+                "logs:ListSourcesForS3TableIntegration",
+                "observabilityadmin:CreateS3TableIntegration",
+                "observabilityadmin:GetS3TableIntegration",
+                "observabilityadmin:TagResource",
+                "observabilityadmin:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3Bucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:PutBucketPolicy",
+                "s3:PutBucketTagging"
+            ],
+            "Resource": "arn:aws:s3:::netapp-metadata-*"
+        },
+        {
+            "Sid": "IAMRoles",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:TagRole",
+                "iam:GetRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*"
+        },
+        {
+            "Sid": "PassRole",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": [
+                        "cloudtrail.amazonaws.com",
+                        "logs.amazonaws.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "CloudTrail",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:CreateTrail",
+                "cloudtrail:StartLogging",
+                "cloudtrail:AddTags",
+                "cloudtrail:PutEventSelectors"
+            ],
+            "Resource": "arn:aws:cloudtrail:*:*:trail/netapp-metadata-*"
+        },
+        {
+            "Sid": "CWLogGroup",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup",
+                "logs:PutRetentionPolicy",
+                "logs:TagResource",
+                "logs:AssociateSourceToS3TableIntegration"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:netapp-metadata-*"
+        },
+        {
+            "Sid": "S3Table",
+            "Effect": "Allow",
+            "Action": [
+                "s3tables:CreateTableBucket",
+                "s3tables:PutTableBucketEncryption",
+                "s3tables:PutTableBucketPolicy"
+            ],
+            "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        }
+    ]
+}
+----
+
+== Set up the journal table infrastructure 
+Set up the architecture to connect infrastructure to the S3 access point and create a path for events from AWS services to be captured in the journal table. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*.
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume to update, then select *Manage*.
+. From the file system overview, select the *Volumes* tab.
+. From the Volumes tab, select the actions menu for the volume you want to manage S3 access points for, then select *Advanced actions*, and then *Manage S3 access points*.
+. From the *Manage S3 access points* screen, select the actions menu and then select *Edit access point*.
+. In the *Edit S3 access point* dialog, ensure that the network configuration is set to *Internet*.
+. Follow the instructions in the dialog to set up the infrastructure for the journal table feature.
 . Download the CloudFormation template.
 . Deploy the CloudFormation stack in your AWS account.
 .. Save the template JSON to a file.
@@ -29,13 +143,7 @@ The journal table generates logs on access points in a table for your reference.
 .. Get the CloudTrail ARN from the stack outputs.
 . Return to the Workload Factory console and back to the volume to manage S3 access points for. 
 . Select *View details* from the volume actions menu. 
-. In the *Journal table* tab, enter the CloudTrail ARN to connect the journal table to the created infrastructure. (initiate journal)
 
-If any of the steps fail, refer to the troubleshooting section of the documentation or contact NetApp support for assistance.
-
-== Set up the journal table infrastructure 
-
-.Steps
-
+If any of the steps fail, <<troubleshoot the infrastructure setup,Troubleshoot the infrastructure setup for the journal table>> or contact NetApp support for assistance.
 
 == Troubleshoot the infrastructure setup for the journal table
