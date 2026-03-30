@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: manage-s3-access-points.html
+permalink: edit-s3-access-points.html
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points
 summary: "Edit the S3 access points for a volume in NetApp Workload Factory." 
 ---

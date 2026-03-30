@@ -131,10 +131,8 @@ sidebar:
                   url: /edit-s3-access-points.html
                 - title: Set up the journal table infrastructure
                   url: /setup-journal-table.html
-                - title: Enable advanced features for S3 access points
-                  url: /enable-advanced-s3-access-points.html
                 - title: View details about S3 access points
-                  url: /view-s3-access-point-details.html
+                  url: /view-s3-details.html
                 - title: Delete S3 access points
                   url: /delete-s3-access-points.html           
             - title: Split a cloned volume
