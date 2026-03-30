@@ -12,6 +12,44 @@ summary: "Set up the Journal table infrastructure for S3 access points in NetApp
 Set up the Journal table infrastructure to generate logs on access points in a table to audit user access events and operations on objects in your AWS S3 buckets. The Journal table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. Several steps are necessary to set up the infrastructure for AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, and AWS Identity and Access Management (IAM), ObservabilityAdmin, and AWS S3 Tables to enable the journal table feature. This includes creating a CloudTrail trail to log events, setting up CloudWatch log groups to store logs, and configuring IAM roles and policies to allow Workload Factory to access the necessary resources.
 
 == About this task
+The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx S3 access points. It uses a chain of AWS services deployed into the customer's account: 
+
+[cols="1,1,1",options="header"]
+|===
+|AWS service |Resource name pattern | Purpose
+
+|AWS CloudFormation
+|netapp-metadata-* 
+|Deploys all infrastructure as a stack 
+
+|AWS S3 bucket
+|netapp-metadata-cloudtrail-events-logs-{uuid} 
+|Stores raw CloudTrail log files 
+
+|AWS CloudTrail
+|netapp-metadata-journal-data-events-trail-{uuid} 
+|Captures S3 data events for specific access points 
+
+|AWS CloudWatch log group
+|netapp-metadata-journal-data-events-{uuid} 
+|Receives CloudTrail events as structured log entries 
+
+|IAM roles
+a|
+* netapp-metadata-cloudtrail-cw-role-{uuid} 
+* netapp-metadata-s3table-integration-role-{uuid} 
+|Active integration
+
+|ObservabilityAdmin 
+|S3TableIntegration 
+|Bridges CloudWatch Logs into an S3 Tables table 
+
+|S3 Tables
+|aws-cloudwatch bucket → logs.aws_cloudtrail__data 
+|Stores structured, queryable CloudTrail events (Iceberg format) 
+|===
+
+The {uuid} is a random 8-character identifier generated when the template is created. 
 
 == Before you begin
 To enable the journal table feature, you must do the following: 
