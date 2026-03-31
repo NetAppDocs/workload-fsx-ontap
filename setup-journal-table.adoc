@@ -12,7 +12,7 @@ summary: "Set up the Journal table infrastructure for S3 access points in NetApp
 Set up the Journal table infrastructure to generate logs on access points in a table to audit user access events and operations on objects in your AWS S3 buckets. Several steps are necessary to set up the infrastructure for AWS services like AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM), and AWS S3 Tables so that the log events travel through the pipeline correctly and are read by Workload Factory. 
 
 == About this task
-The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx for ONTAP S3 access points. It uses a chain of AWS services deployed into your AWS account. When set up correctly, the infrastructure connects to the S3 access point and creates a path for events from AWS services to be captured in the journal table. 
+The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx for ONTAP S3 access points. It uses a chain of AWS services deployed into your AWS account. When you set up the infrastructure correctly, it connects to the S3 access point and creates a path so AWS service events can be captured in the journal table.
 
 [cols="1,1,1",options="header"]
 |===
@@ -52,7 +52,7 @@ a|
 The {uuid} is a random 8-character identifier generated when the template is created. 
 
 == Before you begin
-To enable the journal table feature, you must do the following: 
+To enable the journal table feature, complete these steps: 
 
 * Have an existing volume with an S3 access point.
 * Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
@@ -168,7 +168,7 @@ To enable the journal table feature, you must do the following:
 ====
 
 == Set up the journal table infrastructure 
-Set up the architecture to connect infrastructure to the S3 access point and create a path for events from AWS services to be captured in the journal table. 
+Set up the infrastructure to capture AWS service events from the S3 access point in the journal table. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -196,7 +196,7 @@ If any of the steps fail, <<Troubleshoot the infrastructure setup,troubleshoot t
 == Troubleshoot the infrastructure setup for the journal table
 You can use the AWS Management Console or the AWS CLI to troubleshoot the CloudFormation stack deployment and the resources it creates.
 
-After you resolve the issue, you must submit the CloudTrail ARN again to restart the journal table initiation process.
+After resolving the issue, submit the CloudTrail ARN again to restart journal table setup.
 
 === Common CloudFormation deployment failures
 
@@ -228,7 +228,7 @@ aws cloudtrail describe-trails \
 If the account already has an S3TableIntegration for the aws_cloudtrail data source, the LogsToS3TableIntegration resource will fail.
 
 .Resolution
-Remove the `LogsToS3TableIntegration` and `S3TableIntegrationRole` resources from the template before deploying the CloudFormation stack again. The existing integration will be used automatically as long as it is configured for aws_cloudtrail data events.
+Remove the `LogsToS3TableIntegration` and `S3TableIntegrationRole` resources from the template before deploying the CloudFormation stack again. The system automatically uses the existing integration as long as you configure it for aws_cloudtrail data events.
 
 To check for an existing integration:
 
@@ -264,9 +264,9 @@ If the test validation fails, you might get one of the following error messages:
 |Error message |Meaning
 
 | Table aws_cloudtrail__data was not created in {bucket}. Verify s3table permissions.
-| The S3TableIntegration never created the CloudWatch-managed table. Pipeline is broken between CloudWatch Logs and S3 Tables.
+| S3TableIntegration did not create the CloudWatch-managed table. The pipeline between CloudWatch Logs and S3 Tables is broken.
 
-| Table exists, but the journal seed event did not appear. Verify CloudTrail and CloudWatch permissions.
+| Table exists, but the journal seed event does not appear. Verify CloudTrail and CloudWatch permissions.
 | The table exists but the specific seed event never arrived. Pipeline is broken between CloudTrail and the S3 Tables table.
 
 | Failed to initiate journal setup. ...
@@ -307,7 +307,7 @@ The S3TableIntegration automatically creates a table bucket called aws-cloudwatc
 .. Navigate to the aws-cloudwatch table bucket → aws_cloudtrail__data table, and use the *Preview* button to run a quick query directly in the browser. 
 .. If the event is present in the table but the journal still shows `FAILED`, then the polling window may have expired before the event arrived. 
 
-After you resolve the issue — whether by fixing a missing permission, removing a conflicting resource from the template, or re-deploying the stack — return to the Workload Factory console, and retry <<Set up the journal table infrastructure,initiating the journal table setup>> by submitting the Trail ARN again.
+After resolving the issue, return to the Workload Factory console. Retry <<Set up the journal table infrastructure,initiating the journal table setup>> by submitting the Trail ARN again.
 
 . If setup continues to fail, contact NetApp support for assistance.
 
@@ -420,7 +420,7 @@ cloudformation:GetTemplateSummary	*	Pre-flight template validation
 
 |logs:DeleteLogGroup	
 |arn:aws:logs:*:*:log-group:netapp-metadata-*	
-|Idempotent create path
+|Clean up log group if creation failed
 
 |logs:PutRetentionPolicy	
 |arn:aws:logs:*:*:log-group:netapp-metadata-*	
