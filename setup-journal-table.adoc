@@ -58,10 +58,6 @@ To enable the journal table feature, complete these steps:
 * Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task and add the following IAM policy permissions to your AWS credentials used for Workload Factory.
 +
-// Start snippet: collapsible block (closed on page load)
-.IAM policy permissions for journal table setup
-[%collapsible]
-====
 
 [source, json]
 ----
@@ -164,8 +160,6 @@ To enable the journal table feature, complete these steps:
     ]
 }
 ----
-
-====
 
 == Set up the journal table infrastructure 
 Set up the infrastructure to capture AWS service events from the S3 access point in the journal table. 
