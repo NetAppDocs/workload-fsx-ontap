@@ -308,6 +308,177 @@ After you resolve the issue — whether by fixing a missing permission, removing
 
 . If setup continues to fail, contact NetApp support for assistance.
 
+== Permissions reference for the journal table setup
+The IAM role that deploys the CloudFormation stack to enable the Journal table feature needs the following permissions. Refer to <<Before you begin,Before you begin>> for a copiable JSON policy with the required permissions.
 
+=== Stack Operations
 
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|cloudformation:CreateStack	
+|arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*	
+|Create the stack
+
+|cloudformation:DescribeStacks	
+|arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*	
+|Monitor stack status
+
+|cloudformation:DescribeStackEvents	
+|arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*	
+|Diagnose resource-level failures
+cloudformation:GetTemplateSummary	*	Pre-flight template validation
+|===
+
+=== CloudTrail
+
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|cloudtrail:CreateTrail	
+|arn:aws:cloudtrail:*:*:trail/netapp-metadata-*	
+|Create the trail
+
+|cloudtrail:StartLogging	
+|arn:aws:cloudtrail:*:*:trail/netapp-metadata-*	
+|Enable logging
+
+|cloudtrail:AddTags	
+|arn:aws:cloudtrail:*:*:trail/netapp-metadata-*	
+|Apply identification tag
+
+|cloudtrail:PutEventSelectors	
+|arn:aws:cloudtrail:*:*:trail/netapp-metadata-*	
+|Configure data event capture
+
+|cloudtrail:DescribeTrails	
+|*	
+|Resolve trail ARN for stack output
+
+|===
+
+=== S3
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|s3:CreateBucket	
+|arn:aws:s3:::netapp-metadata-*	
+|Create the CloudTrail log bucket
+
+|s3:PutBucketPolicy	
+|arn:aws:s3:::netapp-metadata-*	
+|Allow CloudTrail to write logs
+
+|s3:PutBucketTagging	
+|arn:aws:s3:::netapp-metadata-*	
+|Apply identification tag
+|===
+
+=== IAM
+
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|iam:CreateRole	
+|arn:aws:iam::*:role/netapp-metadata-*	
+|Create both IAM roles
+
+|iam:PutRolePolicy	
+|arn:aws:iam::*:role/netapp-metadata-*	
+|Attach inline policies
+
+|iam:TagRole	
+|arn:aws:iam::*:role/netapp-metadata-*	
+|Apply identification tag
+
+|iam:GetRole	
+|arn:aws:iam::*:role/netapp-metadata-*	
+|Confirm role is active
+
+|iam:PassRole	
+|arn:aws:iam::*:role/netapp-metadata-*
+(condition: PassedToService = cloudtrail.amazonaws.com, logs.amazonaws.com)
+|Pass roles to CloudTrail and CloudWatch Logs
+|===
+
+=== CloudWatch Logs
+
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|logs:CreateLogGroup	
+|arn:aws:logs:*:*:log-group:netapp-metadata-*	
+|Create the log group
+
+|logs:DeleteLogGroup	
+|arn:aws:logs:*:*:log-group:netapp-metadata-*	
+|Idempotent create path
+
+|logs:PutRetentionPolicy	
+|arn:aws:logs:*:*:log-group:netapp-metadata-*	
+|Set 30-day retention
+
+|logs:TagResource	
+|arn:aws:logs:*:*:log-group:netapp-metadata-*	
+|Apply identification tag
+
+|logs:AssociateSourceToS3TableIntegration	
+|arn:aws:logs:*:*:log-group:netapp-metadata-*	
+|Link CloudTrail source to S3 Tables
+
+|logs:DescribeLogGroups	
+|*	
+|Check log group existence
+
+|logs:ListSourcesForS3TableIntegration	
+|*	
+|Confirm integration association
+|===
+
+=== ObservabilityAdmin
+
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|observabilityadmin:CreateS3TableIntegration	
+|*	
+|Create the CloudWatch → S3 Tables bridge
+
+|observabilityadmin:GetS3TableIntegration	
+|*	
+|Confirm integration is active
+
+|observabilityadmin:TagResource	
+|*	
+|Apply identification tag
+
+|observabilityadmin:ListTagsForResource	
+|*	
+|Drift detection
+|===
+
+=== S3 Tables
+
+[cols="1,1,1",options="header"]
+|===
+| Permission | Resource | Why
+
+|s3tables:CreateTableBucket	
+|arn:aws:s3tables:*:*:bucket/aws-cloudwatch	
+|Create the S3 Tables bucket (via integration role)
+
+|s3tables:PutTableBucketEncryption	
+|arn:aws:s3tables:*:*:bucket/aws-cloudwatch	
+|Set AES256 encryption
+
+|s3tables:PutTableBucketPolicy	
+|arn:aws:s3tables:*:*:bucket/aws-cloudwatch	
+|Allow CloudWatch Logs access
+|===
 
