@@ -252,7 +252,7 @@ aws iam delete-role \
 ----
 
 === Failures after Journal table enablement
-After submitting the CloudTrail ARN, Workload Factory validates a _seed_, or test, event automatically. The test takes approximately 10 minutes. 
+After submitting the CloudTrail ARN, Workload Factory validates the entire pipeline by sending a _seed_, or test, event automatically. If successful, the seed event arrives in the S3 Tables table. The test takes approximately 10 minutes. 
 
 If the test validation fails, you might get one of the following error messages: 
 
