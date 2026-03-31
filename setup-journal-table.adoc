@@ -9,10 +9,10 @@ summary: "Set up the Journal table infrastructure for S3 access points in NetApp
 :imagesdir: ./media/
 
 [.lead]
-Set up the Journal table infrastructure to generate logs on access points in a table to audit user access events and operations on objects in your AWS S3 buckets. The Journal table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. Several steps are necessary to set up the infrastructure for AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, and AWS Identity and Access Management (IAM), ObservabilityAdmin, and AWS S3 Tables to enable the journal table feature. This includes creating a CloudTrail trail to log events, setting up CloudWatch log groups to store logs, and configuring IAM roles and policies to allow Workload Factory to access the necessary resources.
+Set up the Journal table infrastructure to generate logs on access points in a table to audit user access events and operations on objects in your AWS S3 buckets. Several steps are necessary to set up the infrastructure for AWS services like AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM), and AWS S3 Tables so that the log events travel through the pipeline correctly and are read by Workload Factory. 
 
 == About this task
-The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx S3 access points. It uses a chain of AWS services deployed into the customer's account: 
+The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx for ONTAP S3 access points. It uses a chain of AWS services deployed into your AWS account. When set up correctly, the infrastructure connects to the S3 access point and creates a path for events from AWS services to be captured in the journal table. 
 
 [cols="1,1,1",options="header"]
 |===
@@ -54,14 +54,15 @@ The {uuid} is a random 8-character identifier generated when the template is cre
 == Before you begin
 To enable the journal table feature, you must do the following: 
 
-* You must have an existing volume with an S3 access point.
+* Have an existing volume with an S3 access point.
 * Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
-* You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task and add the following IAM policy permissions to your AWS credentials used for Workload Factory.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task and add the following IAM policy permissions to your AWS credentials used for Workload Factory.
 +
 // Start snippet: collapsible block (closed on page load)
-.Title
+.IAM policy permissions for journal table setup
 [%collapsible]
 ====
+
 [source, json]
 ----
 {
@@ -163,6 +164,7 @@ To enable the journal table feature, you must do the following:
     ]
 }
 ----
+
 ====
 
 == Set up the journal table infrastructure 
@@ -189,7 +191,7 @@ Set up the architecture to connect infrastructure to the S3 access point and cre
 . In the *Journal table* tab, enter the CloudTrail ARN.
 . Select *Apply*.  
 
-If any of the steps fail, <<troubleshoot the infrastructure setup,Troubleshoot the infrastructure setup for the journal table>> or contact NetApp support for assistance.
+If any of the steps fail, <<Troubleshoot the infrastructure setup,troubleshoot the infrastructure setup for the journal table>> or contact NetApp support for assistance.
 
 == Troubleshoot the infrastructure setup for the journal table
 You can use the AWS Management Console or the AWS CLI to troubleshoot the CloudFormation stack deployment and the resources it creates.
@@ -229,6 +231,7 @@ If the account already has an S3TableIntegration for the aws_cloudtrail data sou
 Remove the `LogsToS3TableIntegration` and `S3TableIntegrationRole` resources from the template before deploying the CloudFormation stack again. The existing integration will be used automatically as long as it is configured for aws_cloudtrail data events.
 
 To check for an existing integration:
+
 [source,cli]
 ----
 aws observabilityadmin list-s3-table-integrations --region <your-region>
@@ -252,7 +255,7 @@ aws iam delete-role \
 ----
 
 === Failures after Journal table enablement
-After submitting the CloudTrail ARN, Workload Factory validates the entire pipeline by sending a _seed_, or test, event automatically. If successful, the seed event arrives in the S3 Tables table. The test takes approximately 10 minutes. 
+After submitting the CloudTrail ARN, Workload Factory validates the entire resource pipeline by sending a _seed_, or test, event automatically. If successful, the seed event arrives in the S3 Tables table. The test takes approximately 10 minutes. 
 
 If the test validation fails, you might get one of the following error messages: 
 
