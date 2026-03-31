@@ -41,10 +41,14 @@ Complete the following requirements before you begin.
 * *User type*: Select *UNIX* or *Windows* as the user type.
 * *Network configuration*: Select Internet or Virtual private cloud (VPC). The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC. To use the journal table feature, you must select Internet as the network configuration.
 * *Inventory table*: Optional. Requires the `getObject` permission. Enable the inventory table on the volume to generate metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information. The table updates every 24 hours.
-.. *S3 access point tags*: Optionally, you can add up to 50 tags or remove tags.
+* *S3 access point tags*: Optionally, you can add up to 50 tags or remove tags.
 . Select *Create and attach*. 
 
 .Related information
 
+Optionally, you can use the Journal table feature with S3 access points in Workload Factory. The journal table provides a log of access point events, which can be useful for monitoring and troubleshooting. To enable the journal table feature, you need to set up the necessary AWS infrastructure, including AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log groups, and AWS Identity and Access Management (IAM) roles and policies. For more details on setting up the journal table infrastructure, refer to link:setup-journal-table.adoc[Set up the journal table infrastructure for NetApp Workload Factory^].
+
+Other related topics include: 
+
 * link:edit-s3-access-points.html[Edit S3 access points for a volume in NetApp Workload Factory]
-* 
+* link:delete-s3-access-points.html[Delete S3 access points for a volume in NetApp Workload Factory]
