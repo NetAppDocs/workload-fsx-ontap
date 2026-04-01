@@ -9,10 +9,10 @@ summary: "Set up the Journal table infrastructure for S3 access points in NetApp
 :imagesdir: ./media/
 
 [.lead]
-Set up the Journal table infrastructure to generate logs on access points in a table to audit user access events and operations on objects in your AWS S3 buckets. Several steps are necessary to set up the infrastructure for AWS services like AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM), and AWS S3 Tables so that the log events travel through the pipeline correctly and are read by Workload Factory. 
+Set up the Journal table infrastructure to capture and store audit logs of user access events and object operations across Amazon FSx for ONTAP volume access points. Several steps are necessary to set up the infrastructure for AWS services like AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log group, AWS Identity and Access Management (IAM), and AWS S3 Tables so that the log events travel through the pipeline correctly and are read by Workload Factory. 
 
 == About this task
-The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx for ONTAP S3 access points. It uses a chain of AWS services deployed into your AWS account. When you set up the infrastructure correctly, it connects to the S3 access point and creates a path so AWS service events can be captured in the journal table.
+The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx for ONTAP S3 access points. It uses a chain of AWS services deployed into your AWS account. When you set up the infrastructure correctly, it connects to the FSx for ONTAP volume access point and establishes the pipeline that captures user access and object operation audit events in the Journal table.
 
 [cols="1,1,1",options="header"]
 |===
@@ -56,7 +56,7 @@ To enable the journal table feature, complete these steps:
 
 * Have an existing volume with an S3 access point.
 * Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant credentials with the _operations and remediation_ permission policy^] in Workload Factory to complete this task and add the following IAM policy permissions to your AWS credentials used for Workload Factory.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant the _operations and remediation_ permissions^] to the AWS account used to run the CloudFormation deployment and add the following IAM policy permissions.
 +
 
 [source, json]
