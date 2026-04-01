@@ -195,7 +195,7 @@ Set up the infrastructure to capture AWS service events from the S3 access point
 If any of the steps fail, <<Troubleshoot the infrastructure setup,troubleshoot the infrastructure setup for the journal table>> or contact NetApp support for assistance.
 
 == Troubleshoot the infrastructure setup for the journal table
-You can use the AWS Management Console or the AWS CLI to troubleshoot the CloudFormation stack deployment and the resources it creates.
+You can use the AWS Management Console or the AWS CLI to troubleshoot failures during the CloudFormation stack deployment and the resources it creates.
 
 After resolving the issue, submit the CloudTrail ARN again to restart journal table setup.
 
