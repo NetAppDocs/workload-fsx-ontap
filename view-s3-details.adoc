@@ -9,10 +9,10 @@ summary: "View the details of S3 access points for a volume in NetApp Workload F
 :imagesdir: ./media/
 
 [.lead]
-View S3 access point details like the alias, ARN, and S3 URI. With inventory and journal tables enabled, you can view metadata and event logging details for S3 access points.
+View S3 access point details like the alias, ARN, and S3 URI. With inventory and journal tables enabled, you can view metadata and audit logs of user access events and object operations across S3 access points.
 
 .About this task
-With the inventory table enabled on the volume, you can view access point, inventory table, and table bucket details of existing S3 access points attached to the volume. The system also provides a link to the inventory table in the AWS Management Console.
+When the inventory table is enabled on the volume, you can view access point, inventory table, and table bucket details of existing S3 access points attached to the volume. The system also provides a link to the inventory table in the AWS Management Console.
 
 When the journal table is enabled, Workload Factory generates logs on access points in a table for your reference. The table includes CloudTrail events, trails (a record of AWS activities), CloudTrail filters, CloudWatch log groups, and more. 
 
@@ -22,13 +22,12 @@ You can copy access point details for use in other applications.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
-. From the Volumes tab, select the actions menu for the volume you want to manage S3 access points for, then select *Advanced actions*, and then *Manage S3 access points*.
+. From *FSx for ONTAP*, select the file system with the volume to view details for.
 . From the file system overview, select the *Volumes* tab.
-. From the Volumes tab, select the actions menu for the volume to manage the S3 access points for and then select *Advanced actions*, then *Manage S3 access points*.
-. From the *Manage S3 access points* screen, select the actions menu and then select *View details*.
+. From the Volumes tab, select the actions menu for the volume to view details for, then select *Advanced actions*, and then *View details*.
 +
 Details appear under four tabs: *Access point*, *Inventory table*, *Journal table*, and *Table bucket*.  
-. If the status for inventory or journal tables is enabled but requires the `get:Object` permission, follow the instructions in the dialog to add the required permissions.
+. If the status for inventory or journal tables is enabled, but you're missing the `get:Object` permission, follow the instructions in the dialog to add the required permission.
 . When the journal table status is pending, you must provide the CloudTrail ARN to connect the journal table to the created infrastructure. Follow the instructions to deploy the CloudFormation stack using the AWS CLI or AWS Management Console and then return to the Workload Factory console to enter the CloudTrail ARN. 
 
 .Related information
