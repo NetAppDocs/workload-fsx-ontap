@@ -56,11 +56,10 @@ The {uuid} is a random 8-character identifier generated when the template is cre
 == Before you begin
 To enable the journal table feature, complete these steps: 
 
-* Have an existing volume with an S3 access point.
+* Have an existing volume with an S3 access point. link:create-volume.html[Create a volume with an S3 access point]
 * Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant the _operations and remediation_ permissions^] to the AWS account used to run the CloudFormation deployment and add the following IAM policy permissions.
 +
-// Start snippet: collapsible block (closed on page load)
 .IAM policy permissions for journal table setup
 [%collapsible]
 ====
