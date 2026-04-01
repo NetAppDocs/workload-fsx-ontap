@@ -14,6 +14,8 @@ Set up the Journal table infrastructure to capture and store audit logs of user 
 == About this task
 The Journal feature captures S3 data-plane events (PutObject, GetObject, DeleteObject, etc.) for monitored FSx for ONTAP S3 access points. It uses a chain of AWS services deployed into your AWS account. When you set up the infrastructure correctly, it connects to the FSx for ONTAP volume access point and establishes the pipeline that captures user access and object operation audit events in the Journal table.
 
+The following table lists the AWS services that are part of the infrastructure, their respective resource name patterns, and the purpose of the service in the pipeline.
+
 [cols="1,1,1",options="header"]
 |===
 |AWS service |Resource name pattern | Purpose
@@ -46,7 +48,7 @@ a|
 
 |S3 Tables
 |aws-cloudwatch bucket → logs.aws_cloudtrail__data 
-|Stores structured, queryable CloudTrail events (Iceberg format) 
+|Stores structured, queryable CloudTrail events in Iceberg format 
 |===
 
 The {uuid} is a random 8-character identifier generated when the template is created. 
@@ -58,6 +60,10 @@ To enable the journal table feature, complete these steps:
 * Set network configuration to *Internet* for the S3 access point. link:edit-s3-access-point.adoc[Edit network configuration for the S3 access point].
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Grant the _operations and remediation_ permissions^] to the AWS account used to run the CloudFormation deployment and add the following IAM policy permissions.
 +
+// Start snippet: collapsible block (closed on page load)
+.IAM policy permissions for journal table setup
+[%collapsible]
+====
 
 [source, json]
 ----
@@ -160,6 +166,8 @@ To enable the journal table feature, complete these steps:
     ]
 }
 ----
+
+====
 
 == Set up the journal table infrastructure 
 Set up the infrastructure to capture AWS service events from the S3 access point in the journal table. 
