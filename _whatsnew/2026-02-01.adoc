@@ -34,7 +34,7 @@ Three new cards have been added to the Block devices tab in the Storage workload
 
 * Storage efficiencies: displays used and available storage capacity; used capacity is broken down by SSD and capacity pool storage tiers.
 * Protected devices: displays the percentage of block devices with snapshots, remote replication, NetApp Autonomous Ransomware Protection (ARP/AI), and backups.
-* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively. From here, you can link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-inactive-block-device[reclaim space for unused block devices].
+* Orphan devices: displays if any block devices haven't been used for seven consecutive days, helping you identify and manage unused resources effectively. From here, you can link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html#archive-the-data-of-an-inactive-block-device[reclaim space for unused block devices].
 
 === Support for initiator group creation and management 
 NetApp Workload Factory supports creating and managing initiator groups (igroups) for block storage in FSx for ONTAP file systems. Initiator groups connect block devices (LUNs) to the compute resources that are allowed to access them, providing a permission layer for block storage in SAN environments.

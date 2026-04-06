@@ -61,7 +61,7 @@ For a new security group, refer to <<Security group details,security group detai
 .. *Endpoint IP address range*: Select *Floating IP address range outside your VPC* or *Enter an IP address range* and enter an IP address range. 
 .. *Encryption*: Select the encryption key name from the dropdown.
 . Under Backup and maintenance, provide the following: 
-.. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. Disable if desired. 
+.. *Volume backups*: Daily automatic backups are enabled by default. Disable if desired. 
 ... *Automatic backup retention period*: Enter the number of days to retain automatic backups. 
 ... *Daily automatic backup window*: Select either *No preference* (a daily backup start time is selected for you) or *Select start time for daily backups* and specify a start time. 
 .. *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time is selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  

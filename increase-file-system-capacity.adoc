@@ -4,23 +4,23 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity
 summary: "Manually adjust the SSD storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets."
 ---
-= Adjust file system capacity in Workload Factory
+= Manually adjust file system capacity in Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
 Manually adjust the solid-state drive (SSD) storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets.
 
-Increase the SSD storage capacity of an FSx for ONTAP file system when the amount of used SSD storage capacity exceeds a threshold that you specify or decrease the SSD storage capacity when working sets are inactive to improve cost efficiency.  
+Increase SSD storage capacity when usage exceeds your specified threshold. Reduce SSD storage capacity when you are not using the working sets to save money.
 
-Alternatively, you can link:enable-auto-capacity-management.html[enable the automatic capacity management feature] so Workload Factory manages file system capacity for you. 
+Alternatively, you can link:manage-capacity-automatically.html[enable automatic capacity management] so Workload Factory manages file system capacity for you. 
 
 NOTE: Decreasing SSD storage capacity is only supported for second-generation file systems.
 
 .About this task
 With elastic file system capacity, you can dynamically adjust the capacity of your file systems to match the needs of your workloads.
 
-Adjusting file system capacity impacts IOPS for your FSx for ONTAP file system. 
+Changing file system capacity impacts IOPS for your FSx for ONTAP file system. 
 
 When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases or decreases by 3 IOPS with every 1 GiB increase or decrease in SSD capacity. 
 
@@ -29,7 +29,7 @@ When you link:provision-iops.html[provision IOPS] manually, you might need to in
 For SSD storage capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
 
 .Before you begin
-To adjust capacity for a file system, you must first link:enable-auto-capacity-management.html[disable automatic capacity management]. 
+To adjust capacity for a file system, you must first link:manage-capacity-automatically.html[disable automatic capacity management]. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
