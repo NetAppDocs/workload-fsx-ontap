@@ -32,4 +32,4 @@ Details appear under four tabs: *Access point*, *Inventory table*, *Journal tabl
 
 .Related information
 
-* link:setup-journal-table.html[Set up the journal table infrastructure and troubleshoot setup issues for the journal table in NetApp Workload Factory.]
+* link:setup-journal-table.html[Set up the journal table infrastructure] 
