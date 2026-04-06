@@ -15,7 +15,7 @@ Snapshots are resources of volumes and are instant captures of your data that co
 
 FSx for ONTAP volumes use just-in-time copy-on-write so that any unmodified files in snapshots don't consume any of the volume's capacity.
 
-NOTE: Snapshots aren't copies of your data. If you want to make copies of your data, consider using the FSx for ONTAP backups or volume replication features. 
+NOTE: Snapshots aren't copies of your data. If you want to make copies of your data, consider using the volume backups or volume replication features. 
 
 .Before you begin
 You must associate a link to create a manual snapshot of a volume. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.  

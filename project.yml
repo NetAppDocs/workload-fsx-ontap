@@ -169,7 +169,7 @@ sidebar:
                   url: /manage-snapshots.html  
             - title: Backups
               entries: 
-                - title: Manage FSx for ONTAP backup schedule
+                - title: Manage volume backup schedule
                   url: /manage-backup-schedule.html
             - title: Replication
               entries: 
