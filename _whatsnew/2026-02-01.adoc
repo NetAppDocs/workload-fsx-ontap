@@ -14,7 +14,7 @@ Several enhancements have been made to the S3 access point management capabiliti
 
 The new Inventory table automatically scans your AWS S3 buckets and populates S3 tables to give you a clear snapshot of all objects, their metadata, attributes, and tags. Access to these details helps you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead. You can turn on the feature when creating and attaching S3 access points or when editing existing access points.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-s3-access-point.html[Create and attach an S3 access point for a volume in NetApp Workload Factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-s3-access-points.html[Create and attach an S3 access point for a volume in NetApp Workload Factory]
 
 ==== Additional management operations for S3 access points
 NetApp Workload Factory provides additional management operations for S3 access points. You can view access point details, modify existing S3 access points, and add or remove S3 access point tags from the NetApp Workload Factory interface, streamlining your object storage management tasks.
