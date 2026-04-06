@@ -46,7 +46,7 @@ Complete the following requirements before you begin.
 
 .Related information
 
-Optionally, you can use the Journal table feature with S3 access points in Workload Factory. The Journal table infrastructure captures and stores audit logs of user access events and object operations across Amazon FSx for ONTAP volume access points. To enable the Journal table feature, you must set up the necessary AWS infrastructure, including AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log groups, and AWS Identity and Access Management (IAM) roles and policies. link:setup-journal-table.adoc[Set up the journal table infrastructure for NetApp Workload Factory^].
+Optionally, you can use the Journal table feature with S3 access points in Workload Factory. The Journal table infrastructure captures and stores audit logs of user access events and object operations across Amazon FSx for ONTAP volume access points. To enable the Journal table feature, you must set up the necessary AWS infrastructure, including AWS CloudTrail, AWS CloudWatch, AWS S3 Buckets, AWS CloudWatch log groups, and AWS Identity and Access Management (IAM) roles and policies. link:setup-journal-table.html[Set up the journal table infrastructure for NetApp Workload Factory^].
 
 Other related topics: 
 
