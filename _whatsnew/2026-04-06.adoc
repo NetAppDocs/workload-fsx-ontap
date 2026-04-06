@@ -4,14 +4,8 @@ Workload Factory analyzes your FSx for ONTAP file systems for *inactive NAS volu
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
 
-=== Cost enhancements
-
-NetApp Workload Factory introduces new optional page-level filters: file system allocation tag key and key value, file system, and volume to improve the results for cost analysis for your resources across all AWS accounts.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Use filters for cost analysis in NetApp Workload Factory]
-
 === Journal table feature for S3 access points
-The Journal table feature provides a way to manage FSx ONTAP S3 object storage at scale, allowing you to easily audit user access events and operations on objects in your buckets. With Workload Factory, you can schedule automatic scanning of your buckets and populate S3 tables to create a Journal of events, providing a clear snapshot of all objects, their metadata, attributes, and tags alongside user-triggered events. These capabilities let you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead.
+The Journal table feature provides a way to manage FSx ONTAP S3 object storage at scale, allowing you to easily audit user access events and operations on objects in your buckets. With Workload Factory, you can schedule automatic scanning of your buckets and populate S3 tables to create a journal of events, providing a clear snapshot of all objects, their metadata, attributes, and tags alongside user-triggered events. These capabilities let you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/setup-journal-table.html[Set up the journal table infrastructure for NetApp Workload Factory]
 
