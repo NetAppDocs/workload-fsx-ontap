@@ -124,7 +124,17 @@ sidebar:
             - title: Manage SMB/CIFS shares
               url: /manage-cifs-share.html 
             - title: Manage S3 access points 
-              url: /manage-s3-access-points.html 
+              entries: 
+                - title: Create and attach S3 access points
+                  url: /create-s3-access-points.html
+                - title: Edit S3 access points
+                  url: /edit-s3-access-points.html
+                - title: Set up the journal table infrastructure
+                  url: /setup-journal-table.html
+                - title: View details about S3 access points
+                  url: /view-s3-details.html
+                - title: Delete S3 access points
+                  url: /delete-s3-access-points.html           
             - title: Split a cloned volume
               url: /split-cloned-volume.html    
             - title: Delete a volume
@@ -206,9 +216,7 @@ sidebar:
         - title: Register for support
           url: /support-registration.html
         - title: Get help
-          url: /get-help.html
-        - title: Troubleshooting
-          url: /troubleshooting.html          
+          url: /get-help.html     
     - title: Legal notices
       url: /legal-notices.html
 
