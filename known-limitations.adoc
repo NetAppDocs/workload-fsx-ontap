@@ -74,6 +74,9 @@ AWS Secrets Manager isn't supported when using a Console agent.
 
 The limit for the number of S3 access points per storage VM is 4,000.
 
+== Cutover replication for migration use cases
+Cut over replication for storage VM migration use cases isn't supported for volumes with S3 access points.
+
 
 Note:
 
