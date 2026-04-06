@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: configuration-analysis.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
-summary: "NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues."  
+summary: "NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any configuration issues."  
 ---
 = Configuration analysis for FSx for ONTAP file systems
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any issues. When issues are found, Workload Factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
+NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any configuration issues. When issues are found, Workload Factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -19,18 +19,7 @@ Key capabilities include:
 * Insights to action
 * AWS Well-Architected Framework advisor
 
-== Well-architected status
-In the Workload Factory console at the file-system level, well-architected status is listed for all FSx for ONTAP file systems. Well-architected statuses are categorized as "issues", "not analyzed", or "well-architected". Selecting the well-architected status redirects you to the well-architected status tab within the file system where you can find the well-architected score, configuration categories, all configurations for the file system.
-
-Well-architected score::: The score includes all currently analyzed configurations and appears as a percentage. A 25% score means that 25% of the file system configurations are well-architected. 
-
-Configuration categories::: The file system configurations are organized into categories aligned with the following five pillars of the AWS Well-Architected Framework.
-
-* _Reliability_: Ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. An example configuration is FSx for ONTAP backups.
-* _Security_: Emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies.
-* _Operational excellence_: Focuses on delivering the most optimal architecture and business value.
-* _Cost optimization_: Aims to deliver business value while minimizing costs.
-* _Performance efficiency_: Focuses on using resources efficiently to meet system requirements and to maintain optimal performance as demands change.
+include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/well-architected-workloads.adoc[]
 
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
@@ -41,6 +30,109 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how
 * Grant _view, planning, and analysis_ permissions in your AWS account. 
 +
 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
+
+== Best practices and recommendations for storage workloads
+
+Workload Factory assesses storage configurations to provide an in-depth view of ONTAP configuration best practices and for compliance with the AWS Well-Architected Framework. The assessment also recommends improvements and fixes.  
+
+The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
+
+=== Reliability 
+Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
+ 
+* *Schedule volume backups*
++
+Backing up your volumes helps support data retention and compliance needs. Use volume backups to set up automated backups and retention for your data.
+
+* *Schedule local snapshots*
++
+Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. 
+
+* *Cross-region replication*
++
+Cross-region replication ensures that your data is replicated to another AWS region, providing enhanced data durability and availability. Workload Factory recommends setting up cross-region replication to help with disaster recovery and compliance. 
+
+* *Set up data replication*
++
+To extend data reliability, data can be replicated to an FSx for ONTAP file system in the same region or in another region. Set up data replication to support migration, disaster recovery, and long-term retention across file systems. 
+
+* *Increase SSD capacity threshold*
++
+The SSD storage tier capacity should not exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your capacity pool storage tier and impact the throughput capacity of your file system. Running out of capacity might result in data volumes becoming read-only, and services trying to write new data might fail. 
+
+* *Match labels to ensure data reliability*
++
+The snapshot policy labels of the source volume and the replication policy labels must match to ensure data reliability. 
+
+* *Increase file capacity threshold* 
++
+The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends staying below 80% utilization of the available file capacity on an ongoing basis. Available file capacity is required to create new files in the volume. 
+
+=== Security 
+Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
+
+* *Enable ARP/AI* 
++
+NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps protect your volumes from ransomware threats. Workload Factory recommends enabling ARP/AI for all volumes.
+
+* *Unauthorized access to volumes*
++
+Volumes serving application data using iSCSI should not allow NAS access in parallel. Workload Factory recommends that volumes accessed via the iSCSI protocol should be restricted to any additional protocols.
+
+=== Operational excellence
+Operational excellence focuses on delivering the most optimal architecture and business value. 
+
+* *Enable automatic capacity management* 
++
+Automatic capacity management should be enabled to regularly ensure that the SSD tier doesn't exceed the threshold. 
+
+* *Volume capacity utilization threshold*
++
+Workload Factory recommends that volume capacity doesn't exceed 80% utilization on an ongoing basis. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
+
+* *Volume utilization nearing full*
++
+When a volume is nearing full capacity, Workload Factory recommends taking action to increase the volume capacity to avoid potential application disruptions.
+
+* *Cache relationship write mode*
++
+For optimal performance, Workload Factory recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, whereas write-back mode provides better performance for write-heavy workloads with large files.
+
+* *Optimize cache volume size*
++
+Workload Factory recommends enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
+
+* *Storage VM logical reporting*
++
+Workload Factory recommends that the default reporting setting is set to logical for a storage VM to provide better visibility into storage usage at the volume level.
+
+=== Cost optimization
+Cost optimization helps you get the most value for your business while keeping costs low.
+
+* *Optimize TCO by tiering cold data* 
++
+Cold data tiering should be enabled to reduce SSD storage tier utilization. Applying a tiering policy to every volume is recommended. FSx for ONTAP scans the data continuously to detect cold data and move it to the capacity storage pool tier without disruption. 
+
+* *Enable storage efficiencies* 
++
+Storage efficiencies should be enabled - compaction, compression, and deduplication - to optimize storage utilization and reduce the SSD tier cost. 
+
+* *Unnecessary snapshot and backup deletion*
++
+Snapshots and backups that are no longer needed should be deleted to reduce costs.
+
+* *Inactive block devices*
++
+After a block device isn't used for seven days, Workload Factory recommends archiving block device data or deleting the unused block device to reduce costs. 
+
+* *Underutilized SSD capacity*
++
+An underutilized SSD capacity tier may be incurring unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer above current used capacity. A decrease operation can take several hours to several days, and other file system operations are not supported during this time.
+
+* *Inactive NAS volumes*
++
+The configuration analysis identifies NAS volumes that are not actively used and recommends deleting or archiving the volumes to reduce costs.
+
 
 .What's next
 
