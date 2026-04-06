@@ -115,7 +115,7 @@ include::_include/cutover-replication.adoc[]
 .Result
 After cutover, the source storage VM goes offline. 
 
-== Update configuration settings after cutover 
+=== Update configuration settings after cutover 
 After you cut over replication for migration use cases, update the following storage VM configuration settings on the target storage VM. 
 
 * For iSCSI: 
