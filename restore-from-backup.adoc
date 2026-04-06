@@ -20,7 +20,7 @@ Workload factory determines if you have enough capacity for the restore and can 
 . From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
 . From the *Volumes* tab, select the actions menu for the volume to restore from a backup. 
-. Select *Data protection actions*, *FSx for ONTAP backup*, and then *Restore from a backup*. 
+. Select *Data protection actions*, *Volume backups*, and then *Restore from a backup*. 
 . In the Restore from a backup dialog, provide the following: 
 .. *Target file system*: Select the target file system from the dropdown menu. 
 .. *Target storage VM*: Select the target storage VM from the dropdown menu. 
