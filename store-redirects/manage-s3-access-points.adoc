@@ -1,0 +1,4 @@
+---
+permalink: manage-s3-access-points.html
+redirect: workload-fsx-ontap/edit-s3-access-points.html
+---
