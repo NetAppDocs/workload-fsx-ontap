@@ -1,0 +1,21 @@
+=== Well-architected analysis updates
+
+Workload Factory analyzes your FSx for ONTAP file systems for *inactive NAS volumes*. The configuration analysis identifies NAS volumes that are not actively used and recommends actions to optimize storage utilization.``
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
+
+=== Journal table feature for S3 access points
+
+The Journal table feature provides a way to manage FSx ONTAP S3 object storage at scale, allowing you to easily audit user access events and operations on objects in your buckets. With Workload Factory, you can set up automatic scans of your buckets and S3 tables to keep a record of events, showing all objects, their details, and user actions.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/setup-journal-table.html[Set up the journal table infrastructure for NetApp Workload Factory]
+
+=== Support for managing existing igroups
+Workload Factory supports managing existing igroups, allowing you add or remove block devices and host initiators to deliver your deployed workload on time.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
+
+=== Support for specifying the aggregate for FlexVol volumes
+Workload Factory supports creating FlexVol volumes on a chosen aggregate, allowing you to split the capacity and performance load across all the file system resources.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a FlexVol volume in NetApp Workload Factory]
