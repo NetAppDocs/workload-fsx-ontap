@@ -5,7 +5,8 @@ Workload Factory analyzes your FSx for ONTAP file systems for *inactive NAS volu
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
 
 === Journal table feature for S3 access points
-The Journal table feature provides a way to manage FSx ONTAP S3 object storage at scale, allowing you to easily audit user access events and operations on objects in your buckets. With Workload Factory, you can schedule automatic scanning of your buckets and populate S3 tables to create a journal of events, providing a clear snapshot of all objects, their metadata, attributes, and tags alongside user-triggered events. These capabilities let you maintain control, visibility, and trust in the data you're responsible for, while reducing operational overhead.
+
+The Journal table feature provides a way to manage FSx ONTAP S3 object storage at scale, allowing you to easily audit user access events and operations on objects in your buckets. With Workload Factory, you can set up automatic scans of your buckets and S3 tables to keep a record of events, showing all objects, their details, and user actions.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/setup-journal-table.html[Set up the journal table infrastructure for NetApp Workload Factory]
 
