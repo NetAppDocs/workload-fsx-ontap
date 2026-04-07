@@ -85,17 +85,18 @@ If you created a replication relationship for migration purposes, you must cut o
 After creating a replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to a target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline after cutover completes.
 
 === Plan for the cutover operation
-Consider the following when planning the cutover operation for migration use cases.
+Consider the following when planning for the cutover operation for migration use cases.
 
 * Storage VM configuration settings: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, Broadcast-domain MTU, ONTAP native S3 and S3AP, and DNS settings do not migrate. After cutover, you must manually update these settings on the target storage VM. For more details, refer to the <<Update configuration settings post cutover,Update configuration settings post cutover>> section.
 
 * Clones: Clones get migrated as individual volumes, and therefore, take up double the amount of space in the target FSx for ONTAP file system. Consider deleting these clones before cutover. 
 
-* Volumes with S3 access points: Cut over replication for migration use cases isn't supported for volumes with S3 access points. Consider deleting the S3 access points before cutover.
+* Volumes with S3 access points: Cut over replication for migration use cases isn't supported for volumes with S3 access points. 
 
 .Before you begin
 Review these requirements before you begin.
 
+* Delete any S3 access points on the source volume before you cut over replication.
 * Stop any client access to your storage VM before you cut over replication.
 * Ensure all source volumes are not serving any data before you cut over replication.
 * Ensure the data is synced between the source and target volumes before you cut over replication. 
@@ -114,6 +115,19 @@ include::_include/cutover-replication.adoc[]
 
 .Result
 After cutover, the source storage VM goes offline. 
+
+== Update configuration settings after cutover 
+After you cut over replication for migration use cases, update the following storage VM configuration settings on the target storage VM. 
+
+* For iSCSI: 
+** Update the iSCSI target IQN 
+** Update LUN serial numbers
+** Recreate the igroup 
+** Update LUN mapping 
+** Log in to each SAN client and update iSCSI/MPIO settings for the new target and remove the old vserver target IPs
+* Update broadcast-domain MTU settings
+* Update ONTAP native S3 and S3AP settings
+* Update DNS settings
 
 .Related information
 
