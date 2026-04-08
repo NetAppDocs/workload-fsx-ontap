@@ -82,14 +82,14 @@ If you created a replication relationship for migration purposes, you must cut o
 
 == Cut over replication for migration use cases
 
-After creating a replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline after cutover completes.
+After creating a replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
 
 === Plan for the cutover operation
 Consider the following when planning for the cutover operation for migration use cases.
 
 * Storage VM configuration settings: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings post cutover,Update configuration settings post cutover>> section.
 
-* Clones: Clones get migrated as individual volumes, and therefore, take up double the amount of space in the target FSx for ONTAP file system. Delete these clones before cutover if you want to avoid using double the amount of space in the target FSx for ONTAP file system.
+* Clones: Clones get migrated as individual volumes, and therefore, will consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
 
 * AWS S3 access points: Cutover replication for migration use cases isn't supported for volumes with S3 access points. Delete S3 access points from the source volume to avoid migration failures.
 
@@ -115,7 +115,7 @@ include::_include/cutover-replication.adoc[]
 . Select *Cut over*.
 
 .Result
-After cutover, the source storage VM goes offline. 
+After initiating cutover, the source storage VM goes offline. 
 
 == Update configuration settings after cutover 
 After you cut over replication for migration use cases, update the following storage VM configuration settings on the target storage VM. 
