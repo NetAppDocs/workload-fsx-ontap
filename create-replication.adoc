@@ -91,12 +91,13 @@ Consider the following when planning for the cutover operation for migration use
 
 * Clones: Clones get migrated as individual volumes, and therefore, take up double the amount of space in the target FSx for ONTAP file system. Consider deleting these clones before cutover. 
 
-* Volumes with S3 access points: Cut over replication for migration use cases isn't supported for volumes with S3 access points. 
+* AWS S3 access points: Cutover replication for migration use cases isn't supported for volumes with S3 access points. Delete S3 access points from the source volume to avoid migration failures.
+
+* ONTAP S3 configurations: Cutover replication for migration use cases isn't supported for vservers with ONTAP S3 configurations. Remove ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the vserver to avoid migration failures.
 
 .Before you begin
 Review these requirements before you begin.
 
-* Delete any S3 access points on the source volume before you cut over replication.
 * Stop any client access to your storage VM before you cut over replication.
 * Ensure all source volumes are not serving any data before you cut over replication.
 * Ensure the data is synced between the source and target volumes before you cut over replication. 
@@ -128,6 +129,6 @@ After you cut over replication for migration use cases, update the following sto
 * Validate broadcast-domain MTU settings are as expected
 * Validate DNS settings are as expected
 
-.Related information
+== Related information
 
 link:change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
