@@ -11,7 +11,7 @@ summary: "Create a replication relationship for an FSx for ONTAP file system to 
 [.lead]
 Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster. You can replicate data between two FSx for ONTAP file systems, or between an on-premises ONTAP system and an FSx for ONTAP file system.
 
-For storage VM migration, you must complete the cut over operation right after you create a replication relationship. 
+For storage VM migration, complete the cut over operation immediately after you create a replication relationship. 
 
 == About this task
 
@@ -29,7 +29,7 @@ If you replicate a source volume with immutable files, the target volume and fil
 
 === Migration use cases
 
-When you select the migration use case, you can optionally select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and configuration settings simultaneously, ensure that the last replication for the volume completed in the last 24 hours. All volumes in the same storage VM must be selected to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases.
+For migration, you can choose to replicate storage VM data and configuration settings for one storage VM. If you migrate data and configuration settings together, make sure the last replication for the volume finished within the last 24 hours. You must select all volumes in the same storage VM to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases.
 
 Workload Factory supports migration replication between the following storage systems. 
 
@@ -51,7 +51,7 @@ Replicate data between two FSx for ONTAP file systems, or between an on-premises
 .Before you begin
 Review these requirements before you begin.
 
-* You must have one FSx for ONTAP file system to use for the target in the replication relationship.
+* Ensure that one FSx for ONTAP file system is available to use for the target in the replication relationship.
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
@@ -82,18 +82,18 @@ If you created a replication relationship for migration purposes, you must cut o
 
 == Cut over replication for migration use cases
 
-After creating a replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to a target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline after cutover completes.
+After creating a replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline after cutover completes.
 
 === Plan for the cutover operation
 Consider the following when planning for the cutover operation for migration use cases.
 
-* Storage VM configuration settings: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. After cutover, you must manually update these settings on the target storage VM. For more details, refer to the <<Update configuration settings post cutover,Update configuration settings post cutover>> section.
+* Storage VM configuration settings: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings post cutover,Update configuration settings post cutover>> section.
 
-* Clones: Clones get migrated as individual volumes, and therefore, take up double the amount of space in the target FSx for ONTAP file system. Consider deleting these clones before cutover. 
+* Clones: Clones get migrated as individual volumes, and therefore, take up double the amount of space in the target FSx for ONTAP file system. Delete these clones before cutover if you want to avoid using double the amount of space in the target FSx for ONTAP file system.
 
 * AWS S3 access points: Cutover replication for migration use cases isn't supported for volumes with S3 access points. Delete S3 access points from the source volume to avoid migration failures.
 
-* ONTAP S3 configurations: Cutover replication for migration use cases isn't supported for vservers with ONTAP S3 configurations. Remove ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the vserver to avoid migration failures.
+* ONTAP S3 configurations: Cutover replication for migration use cases isn't supported for vservers with ONTAP S3 configurations. Remove ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the vserver, to avoid migration failures.
 
 .Before you begin
 Review these requirements before you begin.
