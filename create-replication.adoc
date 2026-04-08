@@ -131,4 +131,5 @@ After you cut over replication for migration use cases, update the following sto
 
 == Related information
 
-link:change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
+* link:initialize-replication.html[Initialize replication] for a new replication relationship.
+* link:change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
