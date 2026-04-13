@@ -91,7 +91,7 @@ Consider the following when planning for the cutover operation for migration use
 
 * *Clones*: Clones get migrated as individual volumes, and therefore, will consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
 
-* *Cache (ONTAP FlexCache 9.17.x or below) volumes*: Source storage VMs that contain cache volumes aren't supported for cutover. Remove the ONTAP FlexCache relationship before cutover to avoid migration failures.
+* *Cache volumes*: For ONTAP FlexCache 9.17.x or below. Source storage VMs that contain cache volumes aren't supported for cutover. Remove the ONTAP FlexCache relationship before cutover to avoid migration failures.
 
 * *AWS S3 access points*: Cutover replication for migration use cases isn't supported for volumes with S3 access points. Delete S3 access points from the source volume to avoid migration failures.
 
