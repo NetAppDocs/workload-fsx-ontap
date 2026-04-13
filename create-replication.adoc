@@ -91,9 +91,13 @@ Consider the following when planning for the cutover operation for migration use
 
 * Clones: Clones get migrated as individual volumes, and therefore, will consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
 
+* Cache (ONTAP FlexCache) volumes: Source storage VMs that contain cache volumes aren't supported for cutover. Remove the ONTAP FlexCache relationship before cutover to avoid migration failures.
+
 * AWS S3 access points: Cutover replication for migration use cases isn't supported for volumes with S3 access points. Delete S3 access points from the source volume to avoid migration failures.
 
 * ONTAP S3 configurations: Cutover replication for migration use cases isn't supported for vservers with ONTAP S3 configurations. Remove ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the vserver, to avoid migration failures.
+
+* LUN serial numbers: LUN serial numbers change during cutover. 
 
 .Before you begin
 Review these requirements before you begin.
@@ -122,12 +126,12 @@ After you cut over replication for migration use cases, update the following sto
 
 * For iSCSI: 
 ** Update the iSCSI target IQN 
-** Update LUN serial numbers
 ** Recreate the igroup 
 ** Update LUN mapping 
 ** Log in to each SAN client and update iSCSI/MPIO settings for the new target and remove the old vserver target IPs
 * Validate broadcast-domain MTU settings are as expected
 * Validate DNS settings are as expected
+* Recreate cache relationships (ONTAP FlexCache relationships) if there were cache volumes in the source storage VM.
 
 == Related information
 
