@@ -87,7 +87,7 @@ After creating a replication relationship for a migration use case, you must cut
 === Plan for the cutover operation
 Consider the following when planning for the cutover operation for migration use cases.
 
-* *Storage VM configuration settings*: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings post cutover,Update configuration settings post cutover>> section.
+* *Storage VM configuration settings*: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings after cutover,Update configuration settings after cutover>> section.
 
 * *Clones*: Clones get migrated as individual volumes, and therefore, will consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
 
