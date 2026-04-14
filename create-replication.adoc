@@ -31,13 +31,12 @@ If you replicate a source volume with immutable files, the target volume and fil
 
 For migration, you can choose to replicate storage VM data and configuration settings for one storage VM. If you migrate data and configuration settings together, make sure the last replication for the volume finished within the last 24 hours. You must select all volumes in the same storage VM to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases.
 
-Workload Factory supports migration replication between the following storage systems. 
+Workload Factory supports migration replication for storage VMs between the following storage systems. 
 
 * On-premises ONTAP systems and FSx for ONTAP file systems 
 * Cloud Volumes ONTAP and FSx for ONTAP file systems
 * FSx for ONTAP and FSx for ONTAP file systems
 ** First to first generation 
-** First to second generation 
 ** Second to second generation
 
 To migrate storage VM data and configuration settings, you must complete two operations.
