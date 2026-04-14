@@ -41,14 +41,12 @@ sidebar:
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
+        - title: Create a volume
+          url: /create-volume.html
         - title: Discover and view cache volumes
           url: /discover-cache-volumes.html  
-        - title: Manage volumes
-          entries:
-            - title: Create a volume
-              url: /create-volume.html
-            - title: Access your data
-              url: /access-data.html
+        - title: Access your data
+          url: /access-data.html
         - title: Create block storage resources
           entries: 
             - title: Create an igroup
