@@ -74,6 +74,12 @@ AWS Secrets Manager isn't supported when using a Console agent.
 
 The limit for the number of S3 access points per storage VM is 4,000.
 
+== Limitations for storage VM migration replication
+
+* Workload Factory doesn't support migration replication for storage VMs between first and second generation FSx for ONTAP file systems.
+
+* Cut over replication isn't supported for volumes with S3 access points or ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the vserver.
+
 
 Note:
 
