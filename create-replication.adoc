@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: create-replication.html
-keywords: replication, replicate, data protection, disaster recovery, data loss
+keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync
 summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
 ---
 = Replicate data to FSx for ONTAP in NetApp Workload Factory
@@ -11,11 +11,13 @@ summary: "Create a replication relationship for an FSx for ONTAP file system to 
 [.lead]
 Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster. You can replicate data between two FSx for ONTAP file systems, or between an on-premises ONTAP system and an FSx for ONTAP file system.
 
-For storage VM migration, complete the cut over operation immediately after you create a replication relationship. 
+When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cut over operation.
 
 == About this task
 
 Replication protects your data if a disaster affects your region; it can also be used for migration purposes. 
+
+Replication includes creating and initializing a replication relationship. To set up replication, create the replication relationship. To transfer the data between the source and target storage systems, initialize the replication relationship. When migrating storage VM data and configuration settings, you must also complete the cutover operation.
 
 Replicated volumes in the target file system are data protection (DP) volumes and follow the naming format: `{OriginalVolumeName}_copy`.
 
@@ -23,8 +25,7 @@ If you replicate a source volume with immutable files, the target volume and fil
 
 [NOTE]
 ===============================
-* Replication isn't supported for block volumes using iSCSI or NVMe protocols.
-* You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^].
+You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html[cascading replication^].
 ===============================
 
 === Migration use cases
@@ -39,12 +40,13 @@ Workload Factory supports migration replication for storage VMs between the foll
 ** First to first generation 
 ** Second to second generation
 
-To migrate storage VM data and configuration settings, you must complete two operations.
+To migrate storage VM data and configuration settings, you must complete three operations.
 
-1. <<Create a replication relationship,Create a replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*. 
-2. <<Cut over replication for migration use cases,Cut over replication for migration use cases>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
+1. <<Step 1: Create the replication relationship,Create the replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*.
+2. <<Step 2: Initialize the replication relationship,Initialize the replication relationship>> to transfer the data from the source to the target storage system.
+3. <<Step 3: Cut over replication for migration use cases,Cut over replication for migration use cases>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
-== Create a replication relationship
+== Step 1: Create the replication relationship
 Replicate data between two FSx for ONTAP file systems, or between an on-premises ONTAP system and an FSx for ONTAP file system.
 
 .Before you begin
@@ -79,12 +81,35 @@ The replication relationship appears in the *Replication relationships* tab in t
 
 If you created a replication relationship for migration purposes, you must cut over all the volumes and their associated storage VM to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system.
 
-== Cut over replication for migration use cases
+== Step 2: Initialize the replication relationship
 
-After creating a replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
+Initialize a replication relationship between source and target volumes to transfer the snapshot and all data blocks in NetApp Workload Factory. 
+
+Initialization performs a _baseline_ transfer: it makes a snapshot of the source volume, then transfers the snapshot and all the data blocks it references to the target volume. 
+
+.Before you begin
+Consider when you choose to complete this operation. Initialization can be time-consuming. You might want to run the baseline transfer in off-peak hours.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab.
+. In the Replication relationships tab, select the actions menu of the replication relationship to initialize. 
+. Select *Initialize*. 
+. In the Initialize relationship dialog, select *Initialize*. 
++
+When the replication status shows *Idle*, the data transfer is complete. 
+
+== Step 3: Cut over replication for migration use cases 
+
+After creating the replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
 
 === Plan for the cutover operation
 Consider the following when planning for the cutover operation for migration use cases.
+
+* *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source system is running ONTAP version 9.18.1, then the target system must also run a version of 9.18.1.
 
 * *Storage VM configuration settings*: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings after cutover,Update configuration settings after cutover>> section.
 
@@ -133,5 +158,4 @@ After you cut over replication for migration use cases, update the following sto
 
 == Related information
 
-* link:initialize-replication.html[Initialize replication] for a new replication relationship.
-* link:change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
+link:change-tiering-policy.html[Modify the tiering policy] for the target volume(s) after cutover.
