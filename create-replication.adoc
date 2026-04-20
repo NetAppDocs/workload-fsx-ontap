@@ -109,7 +109,7 @@ After creating the replication relationship for a migration use case, you must c
 === Plan for the cutover operation
 Consider the following when planning for the cutover operation for migration use cases.
 
-* *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source file system is running ONTAP version 9.18.1, then the target file system must also run a version of 9.18.1.
+* *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source system is running ONTAP version 9.18.1, then the target system must also run a version of 9.18.1.
 
 * *Storage VM configuration settings*: The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings after cutover,Update configuration settings after cutover>> section.
 
