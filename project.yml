@@ -75,10 +75,8 @@ sidebar:
                   url: /create-backup.html
                 - title: Restore a volume from a backup
                   url: /restore-from-backup.html
-            - title: Use replication
-              entries:
-                - title: Replicate data
-                  url: /create-replication.html
+            - title: Replicate data
+              url: /create-replication.html
             - title: Protect data with Autonomous Ransomware Protection
               url: /ransomware-protection.html   
             - title: Clone a volume
