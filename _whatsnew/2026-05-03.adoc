@@ -1,0 +1,28 @@
+=== Block device clones
+
+Workload Factory offers clones for your block devices so that you can provision writable test/dev copies quickly while controlling capacity, access, and lifecycle.
+
+=== ONTAP credential deletion
+
+You can now delete ONTAP credentials that are assigned to an FSx for ONTAP file system. This gives you the flexibility to adjust permissions as your needs change, assign temporary credentials for evaluations or specific projects, and transition between authentication modes. Deleting credentials ensures that managed secrets are completely removed from Workload Factory when they're no longer needed.
+
+=== Export well-architected alerts
+
+You can now export your well-architected alerts to PDF and Excel formats. This makes it easy to share optimization recommendations and best-practices compliance status with your team, and analyze configuration gaps across your FSx for ONTAP file systems.
+
+=== EC2 tags on block devices
+
+The block device table now includes a column that shows tags of the EC2 hosts which are consuming each block device. This makes it easier to correlate usage to the responsible host when you're troubleshooting or auditing your storage resources. 
+
+To create tags, run the EC2 user data script to launch an AWS EC2 instance with user data that creates an FSx for ONTAP volume and LUN, mounts them to the instance, and installs required libraries and resources. 
+
+link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount[EC2 user data script for creating and mounting iSCSI]
+
+=== Well-architected analysis updates
+
+Workload Factory analyzes your FSx for ONTAP file systems for the following configurations:
+
+* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and recommends connecting hosts to the failover node for reliability.
+* Connect host to preferred node: checks whether hosts are connected to the preferred node in a high-availability deployment model and recommends connecting hosts to the preferred node for performance efficiency.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
