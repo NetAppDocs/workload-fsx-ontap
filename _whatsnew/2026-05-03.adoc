@@ -2,17 +2,11 @@
 
 Workload Factory offers clones for your block devices so that you can provision writable test/dev copies quickly while controlling capacity, access, and lifecycle.
 
-=== ONTAP credential deletion
-
-You can now delete ONTAP credentials that are assigned to an FSx for ONTAP file system. This gives you the flexibility to adjust permissions as your needs change, assign temporary credentials for evaluations or specific projects, and transition between authentication modes. Deleting credentials ensures that managed secrets are completely removed from Workload Factory when they're no longer needed.
-
-=== Export well-architected alerts
-
-You can now export your well-architected alerts to PDF and Excel formats. This makes it easy to share optimization recommendations and best-practices compliance status with your team, and analyze configuration gaps across your FSx for ONTAP file systems.
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
 
 === EC2 tags on block devices
 
-The block device table now includes a column that shows tags of the EC2 hosts which are consuming each block device. This makes it easier to correlate usage to the responsible host when you're troubleshooting or auditing your storage resources. 
+The block device table now includes a column that shows tags of the EC2 hosts which are consuming each block device. This helps you identify which host uses each block device during troubleshooting or audits.
 
 To create tags on each block device, deploy an EC2 instance using our provided user script.
 
