@@ -9,7 +9,7 @@ summary: "Create a replication relationship for an FSx for ONTAP file system to 
 :imagesdir: ./media/
 
 [.lead]
-Create a replication relationship for an FSx for ONTAP file system in NetApp Workload Factory to avoid data loss in case of an unforeseen disaster. You can replicate data between two FSx for ONTAP file systems, or between an on-premises ONTAP system and an FSx for ONTAP file system.
+Replicate data in NetApp Workoad Factory to protect against data loss if the region where your data resides experiences a disaster. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. 
 
 When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cut over operation.
 
@@ -47,7 +47,7 @@ To migrate storage VM data and configuration settings, you must complete three o
 3. <<Step 3: Cut over replication for migration use cases,Cut over replication for migration use cases>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
 == Step 1: Create the replication relationship
-Replicate data between two FSx for ONTAP file systems, or between an on-premises ONTAP system and an FSx for ONTAP file system.
+Replicate data between two FSx for ONTAP file systems, between an on-premises ONTAP system and an FSx for ONTAP file system, or between Cloud Volumes ONTAP and an FSx for ONTAP file system.
 
 .Before you begin
 Review these requirements before you begin.
@@ -93,11 +93,9 @@ Consider when you choose to complete this operation. Initialization can be time-
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
-. From the file system overview, select the *Replication relationships* tab.
-. In the Replication relationships tab, select the actions menu of the replication relationship to initialize. 
-. Select *Initialize*. 
+include::_include/initialize-replication.adoc[]
+//Referenced in repo: storage-management-fsx-ontap in file: use/task-replicate-data.adoc
+
 . In the Initialize relationship dialog, select *Initialize*. 
 +
 When the replication status shows *Idle*, the data transfer is complete. 
