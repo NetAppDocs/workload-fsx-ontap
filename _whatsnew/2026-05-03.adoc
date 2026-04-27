@@ -1,6 +1,6 @@
 === Block device clones
 
-Workload Factory offers clones for your block devices so that you can provision writable test/dev copies quickly while controlling capacity, access, and lifecycle.
+Workload Factory offers clones for your block devices so that you can provision writable and efficient copies of your data quickly while controlling capacity, access, and lifecycle.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
 
@@ -17,6 +17,6 @@ link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Ut
 Workload Factory analyzes your FSx for ONTAP file systems for the following configurations:
 
 * Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and recommends connecting hosts to the failover node for reliability.
-* Connect host to preferred node: checks whether hosts are connected to the preferred node in a high-availability deployment model and recommends connecting hosts to the preferred node for performance efficiency.
+* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and recommends connecting hosts to the preferred node for performance efficiency.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
