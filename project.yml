@@ -141,6 +141,8 @@ sidebar:
           entries:
             - title: Manage block storage
               url: /manage-block-storage.html
+            - title: Apply ONTAP-level tags to block storage resources
+              url: /apply-block-storage-tags.html  
         - title: File system administration
           entries: 
             - title: Adjust file system capacity manually

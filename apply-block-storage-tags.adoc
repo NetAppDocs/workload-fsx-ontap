@@ -1,0 +1,13 @@
+---
+sidebar: sidebar
+permalink: apply-block-storage-tags.html
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block storage resources
+summary: "Apply ONTAP-level tags to your block storage devices to automate tag resource management in NetApp Workload Factory." 
+---
+= Apply ONTAP-level tags to block devices in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use a native EC2 user data script to automate block device tagging on your AWS EC2 instances. Automation happens when you add the EC2 user data script to the Launch Wizard from the AWS Console for EC2 instance deployment. After deployment, NetApp Workload Factory uses the metadata collected from the script to apply ONTAP-level tags to your block storage devices. The tags help you simplify organizing and categorizing your block storage resources for FSx for ONTAP file systems.
+
