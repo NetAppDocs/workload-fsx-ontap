@@ -24,7 +24,7 @@ Go to our GitHub repository FSx-ONTAP-sample-scripts to get the link:https://git
 . Launch the instance. 
 +
 The EC2 user data script automatically applies ONTAP-level tags to new block storage devices hosted on the EC2 instance.
-. To apply tags to existing block devices, you must reboot the host EC2 instance to apply the tags.
+. To apply tags to existing block devices, you must reboot the host EC2 instance.
 
 .Result
 
