@@ -1,0 +1,39 @@
+---
+sidebar: sidebar
+permalink: apply-block-device-tags.html
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block storage resources
+summary: "Apply ONTAP-level tags to your block storage devices to automate tag resource management in NetApp Workload Factory." 
+---
+= Apply ONTAP-level tags to block devices in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use the NetApp Workload Factory native EC2 user data script to automate block device tagging on your AWS EC2 instances for storage management. Automation happens when you add the EC2 user data script to the launch instance wizard from the AWS EC2 Console for EC2 instance deployment. After deployment, NetApp Workload Factory uses the metadata collected from the script to apply ONTAP-level tags to your block storage devices. The tags help you simplify organizing and categorizing your block storage resources for FSx for ONTAP file systems.
+
+.About this task
+
+When tags are applied to Amazon EC2 instances, _EC2 tags_ appear in the block device table within an FSx for ONTAP file system. EC2 tags are ONTAP-level tags that are created during EC2 instance deployment when you use the Workload Factory native EC2 user data script. The script collects metadata about your block storage devices and applies ONTAP-level tags to them, which are then visible in the Workload Factory console.
+
+An EC2 tag contains the EC2 name, the EC2 ID, and the mount path for the block device(s) within the EC2 instance. 
+
+.Steps
+. Follow the Amazon Elastic Compute Cloud instructions for launching an EC2 instance using the launch instance wizard in the AWS EC2 Console.
+. Add the EC2 user data script to the launch instance wizard template to automate block device tagging. 
++
+Go to our GitHub repository FSx-ONTAP-sample-scripts to get the link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount[EC2 user data script].
+. Launch the instance. 
++
+. After the instance launches, the EC2 user data script automatically applies ONTAP-level tags to new block storage devices hosted on the EC2 instance.
++
+For existing EC2 instances, you must reboot each EC2 instance to apply the tags.
+
+.Result
+
+EC2 tags appear in the block device table for block devices hosted on the EC2 instance. 
+
+.Related information
+
+* link:create-block-device.html[Create block devices for a file system in NetApp Workload Factory]
+* link:create-igroup.html[Create initiator groups (igroups) for a file system in NetApp Workload Factory]
+* link:manage-block-storage.html[Manage block storage for a file system in NetApp Workload Factory]
