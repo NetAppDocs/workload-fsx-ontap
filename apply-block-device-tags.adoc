@@ -23,13 +23,12 @@ An EC2 tag contains the EC2 name, the EC2 ID, and the mount path for the block d
 Go to our GitHub repository FSx-ONTAP-sample-scripts to get the link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount[EC2 user data script].
 . Launch the instance. 
 +
-. After the instance launches, the EC2 user data script automatically applies ONTAP-level tags to new block storage devices hosted on the EC2 instance.
-+
-For existing EC2 instances, you must reboot each EC2 instance to apply the tags.
+After the instance launches, the EC2 user data script automatically applies ONTAP-level tags to new block storage devices hosted on the EC2 instance.
+. To apply tags to existing block devices, you must reboot the host EC2 instance to apply the tags.
 
 .Result
 
-EC2 tags appear in the block device table for block devices hosted on the newly deployed or existing EC2 instance. 
+EC2 tags appear in the block device table within the associated FSx for ONTAP file system. 
 
 .Related information
 
