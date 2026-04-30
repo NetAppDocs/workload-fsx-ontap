@@ -3,6 +3,3 @@
 . From the file system overview, select the *Replication relationships* tab.
 . In the Replication relationships tab, select the actions menu of the replication relationship to initialize. 
 . Select *Initialize*. 
-. In the Initialize relationship dialog, select *Initialize*. 
-+
-When the replication status shows *Idle*, the data transfer is complete. 
