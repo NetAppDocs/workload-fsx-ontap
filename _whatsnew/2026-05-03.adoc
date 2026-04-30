@@ -11,12 +11,3 @@ The block device table now includes a column that shows tags of the EC2 hosts wh
 To create tags on each block device, deploy an EC2 instance using our provided user script.
 
 link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount[EC2 user data script to assign tags to block devices]
-
-=== Well-architected analysis updates
-
-Workload Factory analyzes your FSx for ONTAP file systems for the following configurations:
-
-* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and recommends connecting hosts to the failover node for reliability.
-* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and recommends connecting hosts to the preferred node for performance efficiency.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
