@@ -102,14 +102,14 @@ You can manage client access for an existing block device at any time by creatin
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Navigate to the actions menu for the block device and then select *Manage client access*.
-. If no igroup exists, create a new igroup by selecting *Create igroup*, and then do the following: 
+. If no igroup exists, create a new igroup by selecting *Map igroup > Create igroup*, and then do the following: 
 .. *Block device name*: Enter a block device name. You can select multiple block devices to associate with the igroup.
 .. *Operating system type*: Select the operating system type.
 .. *igroup name*: Enter an igroup name.
 .. *igroup description*: Optionally, enter an igroup description.
 .. *Host initiators*: Enter one or more host initiators. These initiators must follow iSCSI qualified (IQN) format.
 .. Select *Create*.
-. If an igroup already exists, select *Edit client access* to add or remove block devices and host initiators from the igroup and then select *Apply*.
+. If an igroup already exists, select *Map igroup > Map existing igroup* to add or remove block devices and host initiators from the igroup and then select *Map*.
 
 === Archive the data of an inactive block device
 Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. You can archive the data of an inactive block device to the capacity pool tier to reclaim SSD capacity.

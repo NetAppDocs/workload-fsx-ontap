@@ -14,7 +14,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Re
 
 You can change the user and user type for an existing S3 access point attached to a volume. You can also enable or disable metadata for the access point.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html[Edit S3 access points in NetApp Workload Factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-s3-access-points.html[Edit S3 access points in NetApp Workload Factory]
 
 === Added block storage diagram
 If you're using block storage, you can view the block storage diagram to visualize how block devices connect to nodes and igroups. The diagram helps you understand and manage your block storage. 
