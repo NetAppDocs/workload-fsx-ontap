@@ -30,6 +30,7 @@ The block size must be smaller than the available FlexVol volume size.
 +
 * Create a new volume and enter the name of the volume.
 * Select an existing volume.
+.. *Aggregate name*: Select the aggregate to host the new volume.
 .. *Storage VM*: Select a storage VM. 
 .. *Volume style*: The default volume style is *FlexVol*.
 .. *Volume size*: Enter the size of the volume and select the unit. The maximum size per FlexVol volume is 100 TiB. 
