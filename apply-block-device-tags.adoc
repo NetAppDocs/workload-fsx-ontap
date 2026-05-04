@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: apply-block-device-tags.html
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices
+summary: "Apply ONTAP-level tags to your block devices automatically for resource management in NetApp Workload Factory." 
+---
+= Apply ONTAP-level tags to block devices in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Use the native EC2 user data script from NetApp Workload Factory to automatically create and tag block devices during AWS EC2 instance deployment. Add the EC2 user data script to the launch instance wizard template when deploying an EC2 instance from the AWS EC2 Console. After deployment, Workload Factory uses the metadata collected from the script to apply ONTAP-level tags to your block devices. These tags help you see which host is consuming each block device so that you can quickly correlate usage to the responsible host when troubleshooting or auditing.
+
+.About this task
+The EC2 user data script creates block devices and applies ONTAP-level EC2 tags to the block devices during EC2 instance deployment. 
+
+The _EC2 tag_ that is applied to the block device contains the EC2 name, the EC2 ID, and the mount path for the block device(s) within the EC2 instance. 
+
+.Steps
+. Follow link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html[the Amazon Elastic Compute Cloud instructions for launching an EC2 instance] using the launch instance wizard in the AWS EC2 Console.
+. Add the EC2 user data script to the launch instance wizard template to automatically create and tag block devices. 
++
+Go to our GitHub repository FSx-ONTAP-sample-scripts to get the link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount[EC2 user data script].
+. Launch the instance. 
++
+The EC2 user data script automatically applies ONTAP-level tags to new block storage devices hosted on the EC2 instance.
+. For existing EC2 instances, user data scripts take effect only after a reboot. 
+
+.Result
+
+EC2 tags appear in the block device table within the associated FSx for ONTAP file system. 
+
+.Related information
+
+* link:create-igroup.html[Create initiator groups (igroups) for a file system in NetApp Workload Factory]
+* link:manage-block-storage.html[Manage block storage for a file system in NetApp Workload Factory]
