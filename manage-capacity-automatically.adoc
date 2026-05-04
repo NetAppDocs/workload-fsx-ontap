@@ -54,6 +54,8 @@ This is the threshold at which Workload Factory triggers a job to increase the c
 +
 Alternatively, disable the feature. If you need to increase file system capacity, you must first disable automatic capacity management.  
 . Select *Enable capacity notifications* to turn on notifications when capacity reaches the threshold you set and whenever Workload Factory performs an automatic capacity increase. The default is 70%.
++
+The capacity notification setting is available only if you link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enabled the Workload Factory notification service^] and when automatic capacity management is enabled.
 . Select *Apply*. 
 
 .Result
