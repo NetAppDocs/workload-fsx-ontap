@@ -1,0 +1,19 @@
+=== Block device clones
+
+Workload Factory offers clones for your block devices so that you can provision writable and efficient copies of your data quickly while controlling capacity, access, and lifecycle.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[Manage block storage in NetApp Workload Factory]
+
+=== EC2 tags on block devices
+
+The block device table now includes a column that shows tags of the EC2 hosts which are consuming each block device. This helps you identify which host uses each block device during troubleshooting or audits.
+
+To create tags on each block device, deploy an EC2 instance using our provided user script.
+
+link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount[EC2 user data script to assign tags to block devices]
+
+=== Capacity trends for FSx for ONTAP file systems
+
+Learn about SSD capacity trends directly from the overview for your FSx for ONTAP file systems. The new card for capacity management provides a comprehensive view of usage trends from the previous month. This analysis includes a comparison between the actual capacity used and the allocated capacity, allowing for a clear assessment of resource utilization. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-capacity-automatically.html[Manage capacity automatically in NetApp Workload Factory]
