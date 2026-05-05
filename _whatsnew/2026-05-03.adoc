@@ -14,6 +14,10 @@ link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Ut
 
 === Capacity trends for FSx for ONTAP file systems
 
-Learn about SSD capacity trends directly from the overview for your FSx for ONTAP file systems. The new card for capacity management provides a comprehensive view of usage trends from the previous month. This analysis includes a comparison between the actual capacity used and the allocated capacity, allowing for a clear assessment of resource utilization. 
+Learn about SSD capacity trends directly from the overview for your FSx for ONTAP file systems. The new card for capacity management shows usage trends from the previous month. This analysis compares actual and allocated capacity, making it easy to assess resource use.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-capacity-automatically.html[Manage capacity automatically in NetApp Workload Factory]
+
+=== PDF report of the well-architected status of FSx for ONTAP file systems
+
+After analysis, you can download a PDF report of the well-architected status of your FSx for ONTAP file systems for your records or to share with your teams. link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems in NetApp Workload Factory.]
