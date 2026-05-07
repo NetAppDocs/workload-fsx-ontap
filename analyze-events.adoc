@@ -47,7 +47,7 @@ To use the event analyzer, ensure the following:
 
 Additional requirements (the system will prompt you during log error analysis):
 
-** *Amazon Bedrock activation* 
+** *Amazon Bedrock model* 
 +
 Configure Amazon Bedrock APIs for each AWS account. Amazon BedRock APIs are used to provide insights for FSx for ONTAP events. 
 +
