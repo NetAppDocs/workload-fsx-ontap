@@ -53,7 +53,7 @@ Replicate data between two FSx for ONTAP file systems, between an on-premises ON
 Review these requirements before you begin.
 
 * Ensure that one FSx for ONTAP file system is available to use for the target in the replication relationship.
-* Make sure to open up TCP ports 11105 and 11105 to enable secure data transfer and management between storage systems.  
+* Make sure to open up TCP ports 11104 and 11105 to enable secure data transfer and management between storage systems.  
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
