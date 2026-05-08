@@ -24,7 +24,7 @@ Consider the following before you begin:
 * Be aware that volumes that are part of a cascade configuration can take longer to resynchronize.
 * If the source volume of the relationship is a data protection volume and is a target of another relationship, reversing the replication relationship isn't supported.
 * One replica of a data protection volume (or a second hop) is supported. It isn't considered best practice to create a second replica of a data protection volume (or a third hop). 
-* Make sure to open up TCP ports 11104 and 11105 to enable secure data transfer and management between storage systems.  
+* Open TCP ports 11104 and 11105 for secure data transfer and management between storage systems. ICMP is optional, but can help with network checks and troubleshooting.  
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
