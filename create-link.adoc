@@ -27,7 +27,7 @@ NOTE: AWS Secrets Manager isn't supported when using a Console agent.
 == Associate a new link
 Associating a new link includes link creation and association. 
 
-You have two options for creating links in this workflow - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
+With a AWS GovCloud account, you must create a new link manually. If you aren't using a GovCloud account, you have two options for creating links in this workflow - automatically or manually. You'll need to launch an AWS CloudFormation stack in your AWS account to create the link. 
 
 * Automatically: Creates a link with automatic registration via Workload Factory. A link created automatically requires tokens for Workload Factory automation and the CloudFormation code is short-lived. It can only be used for up to six hours. 
 * Manually: Creates a link with manual registration using either CloudFormation or Terraform from the Codebox. The code persists giving you more time to complete the operation. This is useful when working with different teams like Security and DevOps that might first need to grant the permissions necessary to complete link creation.
@@ -81,7 +81,9 @@ You have two options for creating links in this workflow - automatically or manu
 
 .Create automatically
 --
-Use CloudFormation to automatically create and register the link within Workload Factory. 
+Use CloudFormation to automatically create and register the link within Workload Factory.
+
+NOTE: Automatic link creation isn't supported for AWS GovCloud accounts.
 
 .Steps
 
