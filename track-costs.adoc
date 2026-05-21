@@ -14,6 +14,8 @@ Track FSx for ONTAP file system costs and usage in a consolidated view in the Ne
 == About this task
 Workload Factory tracks FSx for ONTAP file system costs and usage by getting cost data from AWS Cost Explorer. The following cost details are tracked: usage type, usage SKU, deployment type, usage, and total cost. 
 
+For unique resources, Workload Factory calculates costs by combining the actual performance tier usage, a proportional share of performance tier costs allocated to provisioned but unused space, performance allocations distributed by capacity, and capacity pool usage. Each component is multiplied by its price per unit for that dimension, and the results are summed to determine the total cost for each resource.
+
 In the Cost dashboard, you can filter cost and usage data by AWS accounts, credentials, one or more regions, and time ranges so that you can understand your FSx for ONTAP file system consumption. Data is always shown at a monthly rate.
 
 We get cost and usage data for your FSx for ONTAP file system resources from AWS Cost Explorer using the following permissions: `ce:GetCostAndUsage`and `ce:GetTags`. We calculate the total cost using the AWS cost API and our estimates. `
