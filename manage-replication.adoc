@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: manage-replication.html
-keywords: data protection, pause, stop, break, delete, track replication
+keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication
 summary: "Manage replication relationships in NetApp Workload Factory." 
 ---
 = Manage your replication relationships in NetApp Workload Factory
@@ -9,7 +9,7 @@ summary: "Manage replication relationships in NetApp Workload Factory."
 :imagesdir: ./media/
 
 [.lead]
-Manage your replication relationships in NetApp Workload Factory. You can pause, resume, reverse, stop, and delete replication relationships between source and target volumes. You can also change the replication schedule of the source volume, limit the max transfer rate, and track replication lags for your replication relationships.
+Manage your replication relationships in NetApp Workload Factory. You can pause, resume, reverse, stop, and delete replication relationships between source and target volumes. You can also change the replication schedule of the source volume, and limit the max transfer rate for your replication relationships.
 
 == Change the replication schedule of a source volume
 Change the replication schedule of the source volume in a replication relationship in NetApp Workload Factory. 
@@ -68,22 +68,6 @@ A replication relationship has a set replication schedule, but you can manually 
 . In the Replication relationships tab, select the actions menu of the replication relationship to update. 
 . Select *Update*. 
 . In the Update dialog, select *Update*. 
-
-== Track replication lags
-Enable tracking to monitor lags for all replication relationships in your account. Workload Factory monitors replication delay using thresholds. By default, we set a threshold of 150% of the replication interval to allow normal transfer time and avoid false-positive alerts. You can customize the threshold based on your RPO. You can receive notifications when lag exceeds the threshold.
-
-.Steps
-. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
-. From the file system overview, select the *Replication relationships* tab. 
-. Select *Enable tracking*.
-. In the Enable replication lag history dialog, select *Enable*. 
-. Back in the Replication lag history tile, select *Customize threshold* to set your preferred threshold.
-. In the Customize lag time threshold dialog, enter the threshold in hours and minutes. 
-. Optionally, select *Enable lag time notifications* to receive notifications when replication lags exceed the threshold.
-. Select *Apply*. 
 
 == Pause a replication relationship
 Pause a replication relationship to stop scheduled replication updates from the source volume to the target volume. The target volume transitions from read-only to read/write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.

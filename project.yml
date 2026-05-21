@@ -181,6 +181,8 @@ sidebar:
               entries: 
                 - title: Replicate a data protection volume
                   url: /cascade-replication.html
+                - title: Track replication delays
+                  url: /track-replication-delays.html  
                 - title: Manage replication relationships
                   url: /manage-replication.html
         - title: Performance administration

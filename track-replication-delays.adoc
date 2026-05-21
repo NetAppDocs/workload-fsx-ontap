@@ -1,0 +1,25 @@
+---
+sidebar: sidebar
+permalink: track-replication-delays.html
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification
+summary: "Enable tracking to monitor delays for all replication relationships in your account." 
+---
+= Track replication delays
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Enable tracking to monitor delays for all replication relationships in your account. Workload Factory monitors replication delay using thresholds. By default, we set a threshold of 150% of the replication interval to allow normal transfer time and avoid false-positive alerts. You can customize the threshold based on your RPO. You can receive notifications when delay exceeds the threshold.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. Select *Enable tracking*.
+. In the Enable replication lag history dialog, select *Enable*. 
+. Back in the Replication lag history tile, select *Customize threshold* to set your preferred threshold.
+. In the Customize lag time threshold dialog, enter the threshold in hours and minutes. 
+. Optionally, select *Enable lag time notifications* to receive notifications when replication lags exceed the threshold.
+. Select *Apply*. 
