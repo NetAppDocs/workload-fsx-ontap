@@ -30,7 +30,7 @@ If you selected the migration use case, Workload Factory automatically selects t
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
-.. *Initialize replication relationship*: Choose to initialize the replication relationship immediately after creating the replication or later. Note that initialization can be time-consuming, and you might want to run the baseline transfer in off-peak hours.
+.. *Initialize replication relationship*: Choose to initialize the replication relationship immediately after creating the replication relationship or later. Note that initialization can be time-consuming, and you might want to run the baseline transfer in off-peak hours.
 + 
 To initialize later manually, refer to the instructions in <<Step 2: Initialize the replication relationship,Step 2: Initialize the replication relationship>>.
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
