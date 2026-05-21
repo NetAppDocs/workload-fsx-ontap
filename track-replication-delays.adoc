@@ -23,3 +23,7 @@ Enable tracking to monitor delays for all replication relationships in your acco
 . In the Customize lag time threshold dialog, enter the threshold in hours and minutes. 
 . Optionally, select *Enable lag time notifications* to receive notifications when replication lags exceed the threshold.
 . Select *Apply*. 
+
+.Related information
+
+link:manage-replication.html[Manage replication relationships^]
