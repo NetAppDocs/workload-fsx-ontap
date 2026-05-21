@@ -8,8 +8,8 @@ With NetApp Workload Factory, you can track replication lags for your FSx for ON
 
 Workload Factory identifies the hosts that consume storage and the types of workloads that are associated with host activity. Workload definitions are AI-generated based on AWS tags and metadata. You can view host details and workload definitions from the file system, volume, and block device resource screens in Workload Factory.
 
-=== LIF addresses available in NetApp Workload Factory
-We display all storage VM and cluster LIFs directly in the Overview tab for a file system. Direct LIF visibility within the Workload Factory console makes it easier to monitor network access, endpoints, and failover status without using the CLI or CloudShell. To display LIF details, you'll need to associate a link with the file system.
+=== LIF details available in NetApp Workload Factory
+We display all file system and storage VM endpoints directly in the Overview tab for a file system. Direct endpoint visibility within the Workload Factory console makes it easier to monitor network access, endpoints, and failover status without using the CLI or CloudShell. To display LIF details including roles, endpoints, nodes, IP addresses, and status, you'll need to associate a link with the file system.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate a link with your file system in NetApp Workload Factory].
 
