@@ -1,8 +1,10 @@
 === Support for AWS GovCloud (US) in NetApp Workload Factory
 NetApp Workload Factory supports AWS GovCloud (US) accounts. Using a GovCloud account, you can deploy and manage storage workloads in the AWS GovCloud (US) regions.
 
-=== Track replication lags in Workload Factory
-With NetApp Workload Factory, you can track replication lags for your FSx for ONTAP file systems that are configured with remote replication. Replication lags indicate the time delay between when data is written to the source file system and when it is replicated to the destination file system. Tracking replication lags helps you monitor the health of your replication setup and identify potential issues that could impact data consistency and recovery point objectives (RPOs).
+=== Track replication delays in Workload Factory
+With NetApp Workload Factory, you can track replication delays for your FSx for ONTAP file systems that are configured with remote replication. Replication delays indicate the time delay between when data is written to the source file system and when it is replicated to the destination file system. Tracking replication delays helps you monitor the health of your replication setup and identify potential issues that could impact data consistency and recovery point objectives (RPOs).
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays in NetApp Workload Factory]
 
 === Host identification and workload definitions in NetApp Workload Factory
 
