@@ -1,6 +1,6 @@
 === View and analyze latency events
 
-Workload Factory now supports viewing and analyzing latency events for FSx for ONTAP volumes. You can view latency events without an FSx for ONTAP file system link connection, making it easier to monitor performance issues. With a link and AI configuration, you can analyze latency events to receive insights and recommendations, including current latency values, thresholds, QoS response analysis, and remediation guidance.
+Workload Factory now supports viewing and analyzing latency events for FSx for ONTAP volumes. You can view latency events without a link connection, making it easier to monitor performance issues. To analyze latency events and receive AI-powered insights and recommendations, you must connect to the file system using a link. Analysis provides current latency values, thresholds, QoS response analysis, and remediation guidance.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html[Analyze FSx for ONTAP events in NetApp Workload Factory]
 
