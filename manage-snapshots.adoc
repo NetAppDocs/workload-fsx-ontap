@@ -56,7 +56,7 @@ Enable snapshot directory access to give users the ability access snapshots auto
 == Restore data from a snapshot
 You have the option to restore data from a snapshot to an existing volume or to a new volume.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html[Restore a volume from a snapshot]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html[Restore a volume from a snapshot]
 
 == Delete a snapshot
 Delete a snapshot to free up space.
