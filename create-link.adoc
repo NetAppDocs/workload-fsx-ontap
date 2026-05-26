@@ -169,25 +169,16 @@ You can either create secrets in alignment with the default permissions or assig
 Enter the Lambda execution role ARN in the text box.
 
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
-.. *Link registration*: 
+.. *Link registration*: Select CloudFormation or Terraform for the instructions for how to register the link, and follow the instructions. 
 +
-* GovCloud accounts: 
-... Copy the CloudFormation or Terraform code. 
-... Open the AWS Management Console, paste and run the code to get the Lambda ARN. 
-... In the Workload Factory console, paste the Lambda ARN in the text box. 
-... Select *Create*.
-
-* All other accounts: 
-... Select CloudFormation or Terraform for the instructions for how to register the link, and follow the instructions. 
-+
-Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload factory uses these permissions when using links.
+Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload Factory uses these permissions when using links.
 +
 [source,json]
 "lambda:InvokeFunction",
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 
-... After you successfully create the stack, paste the Lambda ARN in the text box in the Workload Factory console. Workload factory automatically retrieves the AWS account, location, and security group based on the FSx for ONTAP file system.
+... After you successfully create the stack, paste the Lambda ARN in the text box in the Workload Factory console. Workload Factory automatically retrieves the AWS account, location, and security group based on the FSx for ONTAP file system.
 ... Select *Create*. 
 +
 You can monitor the link creation status on the Events page. This should take no more than 5 minutes.
@@ -197,7 +188,7 @@ You can monitor the link creation status on the Events page. This should take no
 
 .Result
 
-Workload factory associates the link with the FSx for ONTAP file system. You can perform advanced ONTAP operations. 
+Workload Factory associates the link with the FSx for ONTAP file system. You can perform advanced ONTAP operations. 
 
 == Associate an existing link with an FSx for ONTAP file system
 After you create a link, associate it with one or more FSx for ONTAP file system.
