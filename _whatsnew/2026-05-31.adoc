@@ -32,3 +32,9 @@ During data replication setup, you can now schedule replication initialization f
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Replicate data in NetApp Workload Factory]
 
+=== Excel report of the well-architected status of FSx for ONTAP file systems
+
+After analysis, you can download an Excel report of the well-architected status of your FSx for ONTAP file systems for your records or to share with your teams. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems in NetApp Workload Factory]
+
