@@ -103,6 +103,8 @@ sidebar:
               url: /edit-volume-autogrow.html
             - title: Adjust volume capacity
               url: /adjust-volume-capacity.html
+            - title: Set volume latency thresholds
+              url: /set-volume-latency-thresholds.html
             - title: Rebalance volume capacity
               url: /rebalance-volume.html
             - title: Manage immutable files 
