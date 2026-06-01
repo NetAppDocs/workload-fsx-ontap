@@ -54,4 +54,4 @@ You can now create SMB/CIFS shares which point to directories within a volume. W
 
 For data protection volumes, the flow of creating an SMB/CIFS share now includes the creation of a junction path to the volume for mounting purposes.
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume[Create a CIFS share for a volume]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume[Create a CIFS share for a volume]
