@@ -20,4 +20,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-capacity-automatica
 
 === PDF report of the well-architected status of FSx for ONTAP file systems
 
-After analysis, you can download a PDF report of the well-architected status of your FSx for ONTAP file systems for your records or to share with your teams. link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems in NetApp Workload Factory.]
+After analysis, you can download a PDF report of the well-architected status of your FSx for ONTAP file systems for your records or to share with your teams. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems in NetApp Workload Factory]

@@ -1,0 +1,4 @@
+---
+permalink: stop-replication.html
+redirect: workload-fsx-ontap/manage-replication.html
+---

@@ -1,0 +1,51 @@
+=== Support for AWS GovCloud (US) in NetApp Workload Factory
+NetApp Workload Factory supports AWS GovCloud (US) accounts. Using a GovCloud account, you can deploy and manage storage workloads in the AWS GovCloud (US) regions.
+
+=== Set volume latency thresholds in NetApp Workload Factory
+
+You can configure latency thresholds on a per-volume basis to monitor performance and receive alerts when latency values exceed your defined limits. Workload Factory monitors both read and write latency and generates alerts when either threshold is exceeded.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/set-volume-latency-thresholds.html[Set volume latency thresholds in NetApp Workload Factory]
+
+=== Track replication delays in NetApp Workload Factory
+With NetApp Workload Factory, you can track replication delays for your FSx for ONTAP file systems that are configured with remote replication. Replication delays indicate the time delay between when data is written to the source file system and when it is replicated to the destination file system. Tracking replication delays helps you monitor the health of your replication setup and identify potential issues that could impact data consistency and recovery point objectives (RPOs).
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays in NetApp Workload Factory]
+
+=== Host identification and workload definitions in NetApp Workload Factory
+
+Workload Factory identifies the hosts that consume storage and the types of workloads that are associated with host activity. Workload definitions are AI-generated based on AWS tags and metadata. You can view host details and workload definitions from the file system, volume, and block device resource screens in Workload Factory.
+
+=== LIF details available in NetApp Workload Factory
+We display all file system and storage VM endpoints directly in the Overview tab for a file system. Direct endpoint visibility within the Workload Factory console makes it easier to monitor network access, endpoints, and failover status without using the CLI or CloudShell. To display LIF details including roles, endpoints, nodes, IP addresses, and status, you'll need to associate a link with the file system.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate a link with your file system in NetApp Workload Factory].
+
+=== Cost enhancements
+
+New optional page-level filters are available to improve the results for cost analysis for your resources across all AWS accounts. You can select multiple regions and use file system allocation tag key and key values to filter the cost analysis results and get resource-specific cost details for your FSx for ONTAP file systems and volumes. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Use filters for cost analysis in NetApp Workload Factory] 
+
+=== Replication initialization scheduling available in NetApp Workload Factory
+During data replication setup, you can now schedule replication initialization for your FSx for ONTAP file systems. The options are to initialize the replication relationship immediately or at a specified time. Replication initialization is the process of creating a baseline for replication by copying data from the source file system to the destination file system. Scheduling replication initialization allows you to automate this process and ensure that your replication setup is up to date without manual intervention.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Replicate data in NetApp Workload Factory]
+
+=== Excel report of the well-architected status of FSx for ONTAP file systems
+
+After analysis, you can download an Excel report of the well-architected status of your FSx for ONTAP file systems for your records or to share with your teams. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[View the well-architected status of your FSx for ONTAP file systems in NetApp Workload Factory]
+
+=== View and analyze latency events
+
+Workload Factory now supports viewing and analyzing latency events for FSx for ONTAP volumes. You can view latency events without a link connection, making it easier to monitor performance issues. To analyze latency events and receive AI-powered insights and recommendations, you must connect to the file system using a link. Analysis provides current latency values, thresholds, QoS response analysis, and remediation guidance.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html[Analyze FSx for ONTAP events in NetApp Workload Factory]
+
+=== Set volume latency thresholds
+
+You can now configure latency thresholds on a per-volume basis to monitor performance and receive alerts when read or write latency exceeds your defined limits. Latency monitoring helps you proactively identify performance issues before they impact your workloads.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/set-volume-latency-thresholds.html[Set volume latency thresholds in NetApp Workload Factory]
