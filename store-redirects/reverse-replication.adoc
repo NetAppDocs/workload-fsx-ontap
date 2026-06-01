@@ -1,0 +1,4 @@
+---
+permalink: reverse-replication.html
+redirect: workload-fsx-ontap/manage-replication.html
+---
