@@ -32,6 +32,8 @@ You create and associate links from the Storage workload in Workload Factory.
 
 You can authenticate links using credentials stored in the Workload Factory credentials service or with your credentials stored in AWS Secrets Manager. Workload factory doesn't support changing authentication modes.
 
+Link connectivity for GovCloud accounts is supported. Workload Factory uses GovCloud authentication keys, allowing secure, agentless access to FSx for ONTAP operations through GovCloud-approved mechanisms.
+
 == Costs
 
 Each transaction that Lambda performs incurs a charge. Because Lambda acts as a proxy between the two systems, there is a charge when Lambda sends a request to the ONTAP REST API on a file system, and when it sends the response back to Workload Factory.
