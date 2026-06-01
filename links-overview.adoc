@@ -58,5 +58,6 @@ The features that require a link include:
 * Volume autogrow for elastic scaling
 * Clone creation and management, for instant, in-place, data cloning
 * Displaying additional metrics directly from ONTAP such as the ONTAP version
+* Displaying storage VM and cluster LIF details including roles, endpoints, nodes, IP addresses, and status
 
 Learn how to link:create-link.html[connect a link to an FSx for ONTAP file system]. 
