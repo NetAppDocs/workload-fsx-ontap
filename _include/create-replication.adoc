@@ -3,7 +3,11 @@
 * Artificial Intelligence (AI) and machine learning (ML): replicate your on-premises ONTAP data to FSx for ONTAP and create S3 access points to support AI and ML training in the cloud
 * Migration: transfers your data to the target FSx for ONTAP file system
 +
-*Replicate storage VM configuration*: Optionally, select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and configuration settings simultaneously, ensure that the last replication for the volume completed in the last 24 hours. All volumes in the same storage VM must be selected to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases. 
+*Replicate storage VM configuration*: Optionally, select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and settings, all volumes must finish replication in the last 24 hours and then cut over at the same time.
++
+The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases.
++
+During migration, clients access data from the source ONTAP file system. After cutover, volumes are available through the target FSx for ONTAP file system IP addresses. Update any clients or resources that still use the old IP address.
 * Hot disaster recovery: ensures high availability and rapid disaster recovery for critical workloads
 * Cold or archive disaster recovery: 
 ** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
@@ -18,7 +22,9 @@ Additionally, the use case selection determines the replication policy, or SnapM
 For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
 
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
-.. *Storage VM name*: Select the storage VM from the dropdown menu. The storage VM you select is the target for all selected volumes in this replication relationship.
+.. *Storage VM name*: Select the storage VM. The storage VM you select is the target for all selected volumes in this replication relationship.
++
+When the source and target storage VM names are identical, we create a file system alias for the target storage VM names to avoid peering conflicts.
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
 +
@@ -30,6 +36,9 @@ If you selected the migration use case, Workload Factory automatically selects t
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
+.. *Initialize replication relationship*: Choose to initialize the replication relationship immediately after creating the replication relationship or later. Note that initialization can be time-consuming, and you might want to run the baseline transfer in off-peak hours.
++ 
+To initialize later manually, refer to the instructions in <<Step 2: Initialize the replication relationship,Step 2: Initialize the replication relationship>>.
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. Long-term retention enables business services to continue operating even through a complete site failure, supporting applications to fail over transparently using a secondary copy.
 +
@@ -37,10 +46,10 @@ Replications without long-term retention use the _MirrorAllSnapshots_ policy. En
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain. 
 +
-NOTE: Matching source and target labels are required for long-term retention. If desired, Workload factory can create missing labels for you.
+NOTE: Matching source and target labels are required for long-term retention. If desired, Workload Factory can create missing labels for you.
 +
 
-* *Choose an existing policy*: select an existing policy from the dropdown menu. 
+* *Choose an existing policy*: select an existing policy. 
 * *Create a new policy*: enter a *policy name*.
 .. *Immutable snapshots*: Optional. Select *Enable immutable snapshots* to prevent snapshots taken in this policy from being deleted during the retention period.
 +

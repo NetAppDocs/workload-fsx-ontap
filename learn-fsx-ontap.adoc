@@ -50,7 +50,6 @@ Workload factory is supported in all commercial regions where FSx for ONTAP is s
 The following AWS regions aren't supported:
  
 * China regions
-* GovCloud (US) regions
 * Secret Cloud
 * Top Secret Cloud
 
