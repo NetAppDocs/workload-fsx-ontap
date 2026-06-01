@@ -15,7 +15,6 @@ Known limitations identify platforms, devices, or functions that are not support
 The following AWS regions are not supported:
 
 * China regions
-* GovCloud (US) regions
 * Secret Cloud
 * Top Secret Cloud
 
