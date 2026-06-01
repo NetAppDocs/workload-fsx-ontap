@@ -3,7 +3,11 @@
 * Artificial Intelligence (AI) and machine learning (ML): replicate your on-premises ONTAP data to FSx for ONTAP and create S3 access points to support AI and ML training in the cloud
 * Migration: transfers your data to the target FSx for ONTAP file system
 +
-*Replicate storage VM configuration*: Optionally, select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and configuration settings simultaneously, ensure that the last replication for the volume completed in the last 24 hours. All volumes in the same storage VM must be selected to use this feature. The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases. 
+*Replicate storage VM configuration*: Optionally, select to replicate storage VM data and configuration settings for a single storage VM. When migrating data and settings, all volumes must finish replication in the last 24 hours and then cut over at the same time.
++
+The tiering policy for all volumes defaults to the tiering policy of the source volume, which is recommended for migration use cases.
++
+During migration, clients access data from the source ONTAP file system. After cutover, volumes are available through the target FSx for ONTAP file system IP addresses. Update any clients or resources that still use the old IP address.
 * Hot disaster recovery: ensures high availability and rapid disaster recovery for critical workloads
 * Cold or archive disaster recovery: 
 ** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
@@ -18,7 +22,9 @@ Additionally, the use case selection determines the replication policy, or SnapM
 For all use cases, if you enable snapshots for long-term retention, the default replication policy is _MirrorAndVault_. 
 
 .. *FSx for ONTAP file system*: Select credentials, region, and FSx for ONTAP file system name for the target FSx for ONTAP file system.
-.. *Storage VM name*: Select the storage VM from the dropdown menu. The storage VM you select is the target for all selected volumes in this replication relationship.
+.. *Storage VM name*: Select the storage VM. The storage VM you select is the target for all selected volumes in this replication relationship.
++
+When the source and target storage VM names are identical, we create a file system alias for the target storage VM names to avoid peering conflicts.
 .. *Volume name*: The target volume name is generated automatically with the following format `{OriginalVolumeName}_copy`. You can use the auto-generated volume name or enter another volume name. 
 .. *Tiering policy*: Select the tiering policy for the data stored in the target volume. The tiering policy defaults to the recommended tiering policy for the use case you selected.
 +
@@ -43,7 +49,7 @@ If you enable long-term retention, then select an existing policy or create a ne
 NOTE: Matching source and target labels are required for long-term retention. If desired, Workload Factory can create missing labels for you.
 +
 
-* *Choose an existing policy*: select an existing policy from the dropdown menu. 
+* *Choose an existing policy*: select an existing policy. 
 * *Create a new policy*: enter a *policy name*.
 .. *Immutable snapshots*: Optional. Select *Enable immutable snapshots* to prevent snapshots taken in this policy from being deleted during the retention period.
 +
