@@ -1,0 +1,35 @@
+=== New well-architected dashboard available
+The well-architected analysis is now available for FSx for ONTAP file systems from the new *Well-architected* dashboard in NetApp Workload Factory. You can analyze the configurations of your file systems to identify potential issues and receive recommendations to optimize performance, reliability, and cost-efficiency. 
+
+The current well-architected analysis is still available from a file system and the Well-architected menu in Storage, but they will eventually be removed. The new dashboard provides a centralized view of all your file systems and their configurations in one place. You'll get a popup notification to check out the new dashboard when you visit the Well-architected tab from a file system. 
+
+=== Volumes explorer
+
+The new Volumes explorer gives you an estate-wide, easy-to-navigate, and easy-to-search view of your volumes in NetApp Workload Factory. You can quickly distinguish block-serving and file-serving volumes and perform the relevant operations for each volume type from one place. You can also identify which volumes are connected through host services to specific workloads, so you can understand dependencies faster and manage storage with greater confidence.
+
+=== Enhanced replication delay email notifications
+
+Email notifications for replication-delay threshold breaches have been updated to include clearer relationship details. This updated notification content helps you quickly identify and investigate the affected relationship without needing to navigate into the system.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays]
+
+=== Block device creation enhancement 
+
+Workload Factory supports block device creation from a volume snapshot. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device from a volume snapshot in Workload Factory]
+
+=== Link upgrade support
+
+Lambda link logic is implemented as a Docker image. Docker images are updated periodically. We’ll notify you if links are out of date so that you can keep your links up to date with the latest Docker image.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-links.html[Manage links in Workload Factory]
+
+=== New recommendations in the well-architected analysis
+Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
+
+* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and recommends connecting hosts to the failover node for reliability.
+* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and recommends connecting hosts to the preferred node for performance efficiency.
+* ARP detection gap: checks whether volumes with Autonomous Ransomware Protection with AI (ARP/AI) contain two or more block devices and recommends putting block devices in dedicated volumes. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Implement well-architected FSx for ONTAP file systems]
