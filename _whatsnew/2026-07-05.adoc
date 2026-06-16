@@ -19,11 +19,11 @@ Workload Factory supports block device creation from a volume snapshot.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device from a volume snapshot in Workload Factory]
 
-=== Link upgrade support
+=== Link version notifications and upgrade guidance
 
-Lambda link logic is implemented as a Docker image. Docker images are updated periodically. We’ll notify you if links are out of date so that you can keep your links up to date with the latest Docker image.
+Workload Factory now notifies you when a newer version of a Lambda link image is available. Notifications appear in the Link management screen for all version updates and on the FSx dashboard for major version updates. You can view the upgrade procedure and copy the AWS CLI command to update your link.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-links.html[Manage links in Workload Factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-links.html[Manage Workload Factory links]
 
 === New recommendations in the well-architected analysis
 Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
