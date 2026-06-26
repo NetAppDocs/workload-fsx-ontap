@@ -7,9 +7,9 @@ You can still access the well-architected analysis for a specific file system an
 
 The new Volumes explorer gives you an estate-wide, easy-to-navigate, and easy-to-search view of your volumes in NetApp Workload Factory. You can quickly distinguish block-serving and file-serving volumes and perform the relevant operations for each volume type from one place. You can also identify which volumes are connected through host services to specific workloads, so you can understand dependencies faster and manage storage with greater confidence.
 
-=== Enhanced email alerts for replication delays
+=== Enhanced email notifications for replication delays
 
-Email alerts for replication delays now include clearer relationship details. This helps you quickly identify and investigate the affected relationship without opening the system.
+Email notifications for replication delays now include clearer relationship details. This helps you quickly identify and investigate the affected relationship without opening the system.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays]
 
