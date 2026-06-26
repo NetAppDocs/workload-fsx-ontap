@@ -57,31 +57,69 @@ Note that some fix operations are only available for specific operations and not
 The process to fix the issue initiates. Select the account settings menu and then select *Tracker* to view the status of the operation.
 
 == Dismiss a configuration analysis
-Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file system or for selected volumes in a file system. You can restart the analysis when needed.
+Stop a configuration analysis indefinitely. You can stop the analysis for one or more configurations or resources. You can restart the analysis when needed.
 
 Dismiss to stop configuration analysis for one or more FSx for ONTAP file systems or volumes. You can restart the analysis anytime.
+ 
+[role="tabbed-block"]
+====
+
+.Dismiss a configuration analysis for configurations
+--
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.  
 . Under Configurations, identify the configuration that doesn't apply to your environment.
-. Select image:icon-action.png[The actions menu icon] and then select *Dismiss*.
+. Select image:icon-action.png[the actions menu icon] and then select *Dismiss*.
 . In the Dismiss configuration dialog, select *Dismiss* to stop the analysis for the configuration.
+--
 
-.Result
-The configuration analysis stops for the selected resources. 
+.Dismiss a configuration analysis for your resources
+--
 
-You can reactivate the analysis at any time. The configuration is no longer included in the total optimization score.
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.     
+. In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.
+. On the configuration page, select the resource(s) to dismiss from the configuration analysis. 
++
+* For one resource: select image:action-icon.png[the actions menu icon] and then select *Dismiss*.
+* For multiple resources: select the resources and then select *Dismiss* next to Bulk action.
+. In the Dismiss resources dialog, select *Dismiss* to stop the analysis.
+--
+====
 
 == Reactivate a dismissed configuration analysis
 
-Reactivate a dismissed configuration analysis at any time. You can select one or more configurations to reactivate.
+Reactivate a dismissed configuration analysis at any time. You can select one or more configurations or resources to reactivate.
 
+[role="tabbed-block"]
+====
+
+.Reactivate a configuration analysis for configurations
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.   
 . Select *Dismissed configurations*. 
 . Identify the configuration(s) you want to reactivate and select *Reactivate*.  
+
+--
+.Reactivate a configuration analysis for your resources
+--
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.  
+. In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.
+. On the configuration page, select *Dismissed configurations*. 
+. Select the resource(s) to reactivate. 
+
+* For one resource: select image:action-icon.png[the actions menu icon] and then select *Reactivate*.
+* For multiple resources: select the resources and then select *Reactivate* next to Bulk action.
+
+--
+====
 
 .Result
 The configuration analysis is reactivated. A new analysis occurs daily moving forward.
