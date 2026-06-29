@@ -85,7 +85,7 @@ Dismiss to stop configuration analysis for one or more FSx for ONTAP file system
 . In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.
 . On the configuration page, select the resource(s) to dismiss from the configuration analysis. 
 +
-* For one resource: select image:action-icon.png[the actions menu icon] and then select *Dismiss*.
+* For one resource: select image:icon-action.png[the actions menu icon] and then select *Dismiss*.
 * For multiple resources: select the resources and then select *Dismiss* next to Bulk action.
 . In the Dismiss resources dialog, select *Dismiss* to stop the analysis.
 --
@@ -121,7 +121,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 . On the configuration page, select *Dismissed configurations*. 
 . Select the resource(s) to reactivate. 
 
-* For one resource: select image:action-icon.png[the actions menu icon] and then select *Reactivate*.
+* For one resource: select image:icon-action.png[the actions menu icon] and then select *Reactivate*.
 * For multiple resources: select the resources and then select *Reactivate* next to Bulk action.
 
 --
