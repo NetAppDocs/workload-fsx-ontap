@@ -22,7 +22,7 @@ Link connectivity allows Workload Factory to scan for issues with performance, d
 
 You have options to review the recommendations for configuration issues with your file systems and fix the issues. 
 
-Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. When a specific configuration analysis is dismissed, the configuration isn't included in the total optimization score.
+Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. When you dismiss a specific configuration analysis, Workload Factory excludes the configuration from the total optimization score.
 
 .What is analyzed
 Workload Factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
@@ -35,11 +35,12 @@ Workload Factory analyzes the well-architected status of the following configura
 == Before you begin
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
-* The remediation process may cause instance downtimes or service interruptions. Make sure you review each recommendation carefully before selecting to fix a configuration issue. 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
 
 == Fix a configuration issue
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
+
+Fix operations can cause instance downtimes or service interruptions. Review each recommendation carefully before fixing a configuration issue.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -49,15 +50,15 @@ You can fix configuration issues for an FSx for ONTAP file system or for selecte
 The recommendation explains best practices and potential pitfalls of unoptimized configurations.
 . Select resources and then *Fix*. 
 +
-Note that some fix operations are only available for specific operations and not always for more than one resource. For example, you can fix the configuration for a single volume but not for multiple volumes.
-. Review the information about the fix operation for the configuration in the dialog. Some operations may cause instance downtimes or service interruptions. 
+Some fix operations are only available for specific operations and not always for more than one resource. For example, you can fix the configuration for a single volume but not for multiple volumes.
+. Review the information about the fix operation for the configuration in the dialog. Some operations can cause instance downtimes or service interruptions. 
 . Select *Fix* if you want Workload Factory to apply the recommended changes. 
 
 .Result
-The process to fix the issue initiates. Select the account settings menu and then select *Tracker* to view the status of the operation.
+The fix process starts. Select the account settings menu and then select *Tracker* to view the status of the operation.
 
 == Dismiss a configuration analysis
-Stop a configuration analysis indefinitely. You can stop the analysis for one or more configurations or resources. You can restart the analysis when needed.
+Stop a configuration analysis indefinitely for one or more resources. You can restart the analysis when needed.
 
 Dismiss to stop configuration analysis for one or more FSx for ONTAP file systems or volumes. You can restart the analysis anytime.
  
@@ -122,4 +123,4 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 ====
 
 .Result
-The configuration analysis is reactivated. A new analysis occurs daily moving forward.
+Workload Factory reactivates the configuration analysis and runs a new analysis every day. 
