@@ -9,7 +9,7 @@ summary: "Workload Factory scans Amazon FSx for NetApp ONTAP configurations prov
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, and take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 You can also dismiss the analysis of specific storage configurations that don't apply to your storage environment to avoid unnecessary alerts and inaccurate optimization results.
 
@@ -90,6 +90,9 @@ Dismiss to stop configuration analysis for one or more FSx for ONTAP file system
 . In the Dismiss resources dialog, select *Dismiss* to stop the analysis.
 --
 ====
+
+.Result
+Workload Factory stops the configuration analysis for selected configurations. 
 
 == Reactivate a dismissed configuration analysis
 
