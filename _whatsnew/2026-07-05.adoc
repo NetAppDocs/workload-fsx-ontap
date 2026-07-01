@@ -3,6 +3,12 @@ The well-architected analysis is now available for FSx for ONTAP file systems fr
 
 You can still access the well-architected analysis for a specific file system and from the *Well-architected* menu option in Storage. 
 
+=== New recommendations in the well-architected analysis
+Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
+
+* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and recommends connecting hosts to the failover node for reliability.
+* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and recommends connecting hosts to the preferred node for performance efficiency.
+
 === Volumes explorer
 
 Volumes Explorer gives you a simple, searchable view of all your volumes in NetApp Workload Factory. Quickly see which volumes serve block or file workloads. View each volume's logical size, physical used capacity, and whether it uses storage efficiency features (compression, deduplication, and compaction). Filter and sort by name, status (available/failed), latency, size, used capacity, and protection features. 
