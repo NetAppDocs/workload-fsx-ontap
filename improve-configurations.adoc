@@ -31,7 +31,7 @@ Workload factory analyzes the well-architected status of the following configura
 * Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
 * Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, cache relationship write mode, optimize cache volume size, and volume logical capacity reporting
 * Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, inactive block devices, underutilized SSD capacity, and inactive NAS volumes
-* Performance optimization: connect hosts to preferred node
+* Performance efficiency: connect hosts to preferred node
 
 == Before you begin
 
