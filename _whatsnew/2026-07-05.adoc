@@ -19,11 +19,13 @@ Volumes Explorer gives you a simple, searchable view of all your volumes in NetA
 
 Email notifications for replication delays now include more details about the affected relationship. The notification helps you quickly identify the affected relationship and look into it in the Workload Factory console. 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Enable notifications for replication delays]
 
 ==== Export replication delay data to CSV
 
 You can now export replication delay data to a CSV file to analyze the data in a spreadsheet and share it with others.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays]
 
 === Block device creation enhancement 
 
