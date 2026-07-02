@@ -58,8 +58,8 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Volumes explorer*. 
-. From *Volumes explorer*, select *Create volume*. 
+. From the Storage menu, select *Volume explorer*. 
+. From *Volume explorer*, select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
 .. *Storage VM name*: Optionally, enter a storage VM name. 
