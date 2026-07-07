@@ -1,0 +1,34 @@
+=== New well-architected dashboard available for all FSx for ONTAP systems
+The well-architected analysis is now available for FSx for ONTAP file systems from the new well-architected dashboard in NetApp Workload Factory. The new dashboard provides a centralized view of all your file systems across accounts and regions and their configurations in one place. A popup notification appears when you visit the *Well-architected* tab from a file system. Access the new dashboard by selecting *Well-architected* from the left navigation menu in Workload Factory. 
+
+You can still access the well-architected analysis for a specific file system and from the *Well-architected* menu option in Storage. 
+
+=== New recommendations in the well-architected analysis
+Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
+
+* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and suggests connecting hosts to the failover node for reliability.
+* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and suggests connecting hosts to the preferred node for performance efficiency.
+
+=== Volumes explorer
+
+Volumes Explorer gives you a simple, searchable view of all your volumes in NetApp Workload Factory. Quickly see which volumes serve block or file workloads. View each volume's logical size, physical used capacity, and whether it uses storage efficiency features (compression, deduplication, and compaction). Filter and sort by name, status (available/failed), latency, size, used capacity, and protection features. 
+
+=== Replication delay enhancements
+
+==== Enhanced email notifications for replication delays
+
+Email notifications for replication delays now include more details about the affected relationship. The notification helps you quickly identify the affected relationship and look into it in the Workload Factory console. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Enable notifications for replication delays]
+
+==== Export replication delay data to CSV
+
+You can now export replication delay data to a CSV file to analyze the data in a spreadsheet and share it with others.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays]
+
+=== Block device creation enhancement 
+
+Workload Factory supports block device creation from a volume snapshot.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device from a volume snapshot in Workload Factory]
