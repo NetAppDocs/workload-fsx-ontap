@@ -9,7 +9,7 @@ summary: "Create block devices to support your line of business (LOB) applicatio
 :imagesdir: ./media/
 
 [.lead]
-Create block devices to support your line of business (LOB) application requirements.
+Create block devices to support your line of business (LOB) application requirements. You can create block devices in an existing volume, create a new volume for the new block device, or create a new volume from a snapshot for the new block device. 
 
 .About this task
 Only FlexVol volumes are supported for block devices in NetApp Workload Factory. You can create block devices using the iSCSI protocol.
@@ -30,6 +30,7 @@ The block size must be smaller than the available FlexVol volume size.
 +
 * Create a new volume and enter the name of the volume.
 * Select an existing volume.
+* Create from a volume snapshot. Select the source volume name and snapshot name. Only volumes without block devices are available. 
 .. *Aggregate name*: Select the aggregate to host the new volume.
 .. *Storage VM*: Select a storage VM. 
 .. *Volume style*: The default volume style is *FlexVol*.
