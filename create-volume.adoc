@@ -160,7 +160,7 @@ _Balanced (Auto)_ is the default tiering policy when creating a volume using the
 If the feature is unavailable, it is because of one of the following reasons: 
 +
 * A link is not associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
-* Volumes with immutable files, and volumes with iSCSI and NVMe protocols are not supported for ARP/AI.
+* Volumes with immutable files and volumes with the NVMe protocol are not supported for ARP/AI. iSCSI volumes are supported beginning with ONTAP 9.17.1.
 * The file system already has an ARP/AI policy.
 
 . Under Advance configuration, enter the following details. The fields under this section differ based on the volume style you select. 
