@@ -1,8 +1,3 @@
-=== New well-architected dashboard available for all FSx for ONTAP systems
-The well-architected analysis is now available for FSx for ONTAP file systems from the new well-architected dashboard in NetApp Workload Factory. The new dashboard provides a centralized view of all your file systems across accounts and regions and their configurations in one place. A popup notification appears when you visit the *Well-architected* tab from a file system. Access the new dashboard by selecting *Well-architected* from the left navigation menu in Workload Factory. 
-
-You can still access the well-architected analysis for a specific file system and from the *Well-architected* menu option in Storage. 
-
 === Volumes explorer
 
 Volumes Explorer gives you a simple, searchable view of all your volumes in NetApp Workload Factory. Quickly see which volumes serve block or file workloads. View each volume's logical size, physical used capacity, and whether it uses storage efficiency features (compression, deduplication, and compaction). Filter and sort by name, status (available/failed), latency, size, used capacity, and protection features. 
