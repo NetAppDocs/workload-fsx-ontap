@@ -61,7 +61,7 @@ To analyze EMS and latency events and receive AI-powered insights and recommenda
 
 Additional requirements (the system will prompt you during event analysis):
 
-** *Amazon Bedrock activation* 
+** *Amazon Bedrock model* 
 +
 Configure Amazon Bedrock APIs for each AWS account. Amazon Bedrock APIs are used to provide insights for FSx for ONTAP events. 
 +
