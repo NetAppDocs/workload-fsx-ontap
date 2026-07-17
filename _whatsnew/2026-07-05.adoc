@@ -13,3 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.h
 Workload Factory supports block device creation from a volume snapshot.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device from a volume snapshot in Workload Factory]
+
+=== Workload tagging for volumes and block devices
+
+Workload Factory now identifies and tags volumes and block devices by their primary workload or application. You can assign predefined workload tags such as Microsoft SQL Server or Oracle Database, or create custom tags for your applications. Tags can be applied to individual resources or inherited by connected storage resources. This helps you align storage configurations with workload requirements, understand incident impact, and troubleshoot more effectively.
