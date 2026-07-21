@@ -1,0 +1,4 @@
+=== Explore savings snapshot calculation improvement    
+Explore savings now uses a consistent snapshot-capacity calculation, so FSx for ONTAP savings estimates correctly account for the additional snapshot capacity pool requirement.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Explore savings for your storage environments on Amazon Elastic Block Store, FSx for Windows File Server, and Elastic File System.]
