@@ -1,6 +1,6 @@
 === Volumes explorer
 
-Volumes Explorer gives you a simple, searchable view of all your volumes in NetApp Workload Factory. Quickly see which volumes serve block or file workloads. View each volume's logical size, physical used capacity, and whether it uses storage efficiency features (compression, deduplication, and compaction). Filter and sort by name, status (available/failed), latency, size, used capacity, and protection features. 
+Volumes explorer gives you a simple, searchable view of all your volumes in NetApp Workload Factory. Quickly see which volumes serve block or file workloads. View each volume's logical size, physical used capacity, and whether it uses storage efficiency features (compression, deduplication, and compaction). Filter and sort by name, status (available/failed), latency, size, used capacity, and protection features. 
 
 === Enhanced email notifications for replication delays
 
