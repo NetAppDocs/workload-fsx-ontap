@@ -3,6 +3,32 @@ The well-architected analysis is now available for FSx for ONTAP file systems fr
 
 You can still access the well-architected analysis for a specific file system and from the *Well-architected* menu option in Storage. 
 
+=== New widgets added to the Storage dashboard
+
+The Storage dashboard now includes two new widgets to help you understand how you use storage and find ways to optimize it.
+
+* *Top discovered workloads*
+Shows workload data found by the tagging service across your environment. View workloads with a confidence score above 80% that include associated FSx resources, such as volumes and block devices. Each workload shows its name, number of resources, provisioned capacity, and used capacity. Sort by resource count (default), provisioned capacity, or used capacity to quickly identify your largest workloads and understand storage usage patterns.
+
+* *AI-powered insights and observations*
+Shows AI-generated insights for your managed assets. The widget reviews your estate data within the selected scope and highlights the top three findings in key areas, including capacity, performance, data protection, replication, cost savings, and storage trends.
+
+Each insight includes a summary, detailed findings, and recommended actions. Expand an insight to see more details and prioritize issues based on severity, performance improvements, and cost-saving opportunities.
+
+=== Workload tagging
+
+==== AWS Systems Manager integration for workload tagging
+
+The workload tagging service now works with AWS Systems Manager to add more details to host inventory data. Workload Factory can now collect and process SSM inventory information to better identify and classify workloads. AWS SSM attributes are also included in the tagging process to improve workload discovery accuracy.
+
+Every volume-related configuration in the well-architected dashboard now includes the *Workload* column in the resource table. This column shows the workload that Workload Factory associates with each volume.
+
+=== Workload tagging and AI features
+
+Workloads are not tagged when an administrator disables AI features. If AI features are turned off in your Workload Factory account settings, the tagging service will not identify or classify workloads on your storage resources.
+
+link:manage-genai-features.html[Learn about AI administration].
+
 === Volumes explorer updates
 
 ==== ONTAP features in table
@@ -13,9 +39,6 @@ All volume actions are available directly from Volumes explorer that you can als
 
 ==== Volume latency
 Volumes explorer displays volume latency status with the following statuses: not configured, within threshold, and exceeded. This helps you find and fix performance bottlenecks at the volume level.
-
-=== Workload tagging support
-Every volume-related configuration in the well-architected dashboard now includes the *Workload* column in the resource table. This column shows the workload that Workload Factory associates with each volume.
 
 === Explore savings snapshot calculation improvement    
 Explore savings now uses a consistent snapshot-capacity calculation, so FSx for ONTAP savings estimates correctly account for the additional snapshot capacity pool requirement.
