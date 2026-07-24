@@ -3,7 +3,27 @@ The well-architected analysis is now available for FSx for ONTAP file systems fr
 
 You can still access the well-architected analysis for a specific file system and from the *Well-architected* menu option in Storage. 
 
+=== Volumes explorer updates
+
+==== ONTAP features display 
+Volumes explorer now includes ONTAP features in the table. These features provide more detailed insights into the configuration and status of your volumes, like protection coverage, Autonomous Ransomware Protection (ARP/AI) status, storage efficiency, tiering policy, and volume autogrow. 
+
+==== Volume actions available
+All volume actions are available directly from Volumes explorer that you can also access from the Volumes tab in an FSx for ONTAP file system overview. This makes it quicker to perform volume-level operations. Some such actions include, but are not limited to, modifying volume settings, managing snapshots, and performing volume-level operations without navigating away from the Volumes explorer view.
+
+==== Volume latency
+Volume latency status is displayed in Volumes explorer with the following statuses: not configured, within threshold, and exceeded. This helps in identifying and troubleshooting performance bottlenecks at the volume level.
+
+== Workload tagging support
+Every volume-related configuration in the well-architected dashboard now includes the *Workload* column in the resource table. This column shows the workload identified for the volume so you know the workloads consuming volumes.
+
 === Explore savings snapshot calculation improvement    
 Explore savings now uses a consistent snapshot-capacity calculation, so FSx for ONTAP savings estimates correctly account for the additional snapshot capacity pool requirement.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Explore savings for your storage environments on Amazon Elastic Block Store, FSx for Windows File Server, and Elastic File System.]
+
+==== Export replication delay data to CSV
+
+You can now export replication delay data to a CSV file to analyze the data in a spreadsheet and share it with others.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Track replication delays]
