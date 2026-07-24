@@ -5,17 +5,17 @@ You can still access the well-architected analysis for a specific file system an
 
 === Volumes explorer updates
 
-==== ONTAP features display 
+==== ONTAP features in table
 Volumes explorer now includes ONTAP features in the table. These features provide more detailed insights into the configuration and status of your volumes, like protection coverage, Autonomous Ransomware Protection (ARP/AI) status, storage efficiency, tiering policy, and volume autogrow. 
 
 ==== Volume actions available
-All volume actions are available directly from Volumes explorer that you can also access from the Volumes tab in an FSx for ONTAP file system overview. This makes it quicker to perform volume-level operations. Some such actions include, but are not limited to, modifying volume settings, managing snapshots, and performing volume-level operations without navigating away from the Volumes explorer view.
+All volume actions are available directly from Volumes explorer that you can also access from the Volumes tab in an FSx for ONTAP file system overview. This makes it quicker to perform volume-level operations. Actions include modifying volume settings, managing snapshots, and performing volume-level operations without leaving Volumes explorer.
 
 ==== Volume latency
-Volume latency status is displayed in Volumes explorer with the following statuses: not configured, within threshold, and exceeded. This helps in identifying and troubleshooting performance bottlenecks at the volume level.
+Volumes explorer displays volume latency status with the following statuses: not configured, within threshold, and exceeded. This helps you find and fix performance bottlenecks at the volume level.
 
-== Workload tagging support
-Every volume-related configuration in the well-architected dashboard now includes the *Workload* column in the resource table. This column shows the workload identified for the volume so you know the workloads consuming volumes.
+=== Workload tagging support
+Every volume-related configuration in the well-architected dashboard now includes the *Workload* column in the resource table. This column shows the workload that Workload Factory associates with each volume.
 
 === Explore savings snapshot calculation improvement    
 Explore savings now uses a consistent snapshot-capacity calculation, so FSx for ONTAP savings estimates correctly account for the additional snapshot capacity pool requirement.
