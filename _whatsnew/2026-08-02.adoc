@@ -27,7 +27,7 @@ Every volume-related configuration in the well-architected dashboard now include
 
 Workloads are not tagged when an administrator disables AI features. If AI features are turned off in your Workload Factory account settings, the tagging service will not identify or classify workloads on your storage resources.
 
-link:manage-genai-features.html[Learn about AI administration].
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-genai-features.html[Learn about AI administration^].
 
 === Volumes explorer updates
 
