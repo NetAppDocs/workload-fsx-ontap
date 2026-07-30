@@ -54,12 +54,16 @@ All primary content (`.adoc` files) lives at the repository root. There is no su
 
 ### Typical user workflows
 
-**Initial setup:** Log in to Workload Factory → Add AWS credentials and permissions → Create FSx for ONTAP file system (Quick create or Advanced create) → Create storage VM → Create volumes
+**Initial setup:** Log in to Workload Factory → Add AWS credentials and permissions → Create FSx for ONTAP file system (Quick create or Advanced create)
 
-**Enable data protection:** Associate a link with the file system → Enable ARP/AI for the file system → Create or assign a snapshot policy → Set up cross-region replication → Configure volume backup schedule
+**Associate a link with a file system:** Create a link → Associate the link with an FSx for ONTAP file system to perform advanced ONTAP operations
+
+**Enable data protection:** Enable ARP/AI for the file system → Create or assign a snapshot policy → Set up cross-region replication → Configure volume backup schedule
 
 **Storage VM migration:** Create replication relationship (select Migration use case, enable Replicate storage VM configuration) → Initialize replication relationship (baseline transfer) → Verify data sync → Stop client access → Cut over replication → Update configuration settings on the target SVM
 
 **Explore storage savings:** Navigate to Storage in Workload Factory → Use the storage savings calculator to compare Amazon EBS, EFS, and FSx for Windows File Server costs against FSx for ONTAP
 
 **Set up block storage:** Create a storage VM → Create a volume with block access → Create an igroup → Create a block device → Map igroup to block device → Connect iSCSI clients
+
+**Review well-architected status:** Discover file systems in Workload Factory → Wait for automatic daily scan → Open Well-architected status tab → Review findings by configuration area → Follow step-by-step remediation procedures
