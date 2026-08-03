@@ -29,17 +29,6 @@ Workloads are not tagged when an administrator disables AI features. If AI featu
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-genai-features.html[Learn about AI administration^].
 
-=== Volumes explorer updates
-
-==== ONTAP features in table
-Volumes explorer now includes ONTAP features in the table. These features provide more detailed insights into the configuration and status of your volumes, like protection coverage, Autonomous Ransomware Protection (ARP/AI) status, storage efficiency, tiering policy, and volume autogrow. 
-
-==== Volume actions available
-All volume actions are available directly from Volumes explorer that you can also access from the Volumes tab in an FSx for ONTAP file system overview. This makes it quicker to perform volume-level operations. Actions include modifying volume settings, managing snapshots, and performing volume-level operations without leaving Volumes explorer.
-
-==== Volume latency
-Volumes explorer displays volume latency status with the following statuses: not configured, within threshold, and exceeded. This helps you find and fix performance bottlenecks at the volume level.
-
 === Explore savings snapshot calculation improvement    
 Explore savings now uses a consistent snapshot-capacity calculation, so FSx for ONTAP savings estimates correctly account for the additional snapshot capacity pool requirement.
 
