@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: improve-configurations.html
 keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP
-summary: "Workload Factory scans Amazon FSx for NetApp ONTAP configurations providing insights and recommendations to help you achieve operational excellence."
+summary: "Workload Factory scans Amazon FSx for NetApp ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
 ---
 = Implement well-architected file system configurations
 :icons: font
@@ -36,7 +36,6 @@ Workload Factory analyzes the well-architected status of the following configura
 == Before you begin
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account. 
-* The remediation process may cause instance downtimes or service interruptions. Make sure you review each recommendation carefully before selecting to fix a configuration issue. 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
 
 == Fix a configuration issue
@@ -59,12 +58,11 @@ Some fix operations are only available for specific operations and not always fo
 .Result
 The fix process starts. Select the account settings menu and then select *Tracker* to view the status of the operation.
 
-
 == Dismiss a configuration analysis
 Stop a configuration analysis indefinitely for one or more resources. You can restart the analysis when needed.
 
 Dismiss to stop configuration analysis for one or more FSx for ONTAP file systems or volumes. You can restart the analysis anytime.
-
+ 
 [role="tabbed-block"]
 ====
 
@@ -73,9 +71,9 @@ Dismiss to stop configuration analysis for one or more FSx for ONTAP file system
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
-. Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.
-. Select image:icon-action.png[the actions menu icon] and then select *Dismiss*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.  
+. Under Configurations, identify the configuration that doesn't apply to your environment.
+. Select image:icon-action.png[the actions menu icon] and then select *Dismiss*.
 . In the Dismiss configuration dialog, select *Dismiss* to stop the analysis for the configuration.
 --
 
@@ -84,10 +82,9 @@ Dismiss to stop configuration analysis for one or more FSx for ONTAP file system
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
-. In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.  
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.     
+. In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.
 . On the configuration page, select the resource(s) to dismiss from the configuration analysis. 
-. Identify the volume(s) to dismiss from the configuration analysis. 
 +
 * For one resource: select image:icon-action.png[the actions menu icon] and then select *Dismiss*.
 * For multiple resources: select the resources and then select *Dismiss* next to Bulk action.
@@ -107,11 +104,12 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 
 .Reactivate a configuration analysis for configurations
 --
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.   
 . Select *Dismissed configurations*. 
-. Identify the configuration(s) you want to reactivate and select *Reactivate*.
+. Identify the configuration(s) you want to reactivate and select *Reactivate*.  
 
 --
 .Reactivate a configuration analysis for your resources
@@ -119,7 +117,7 @@ Reactivate a dismissed configuration analysis at any time. You can select one or
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.  
 . In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.
 . On the configuration page, select *Dismissed configurations*. 
 . Select the resource(s) to reactivate. 
