@@ -12,7 +12,7 @@ summary: "Track FSx for ONTAP, credentials, and link operations and monitor job 
 Monitor and track the execution of FSx for ONTAP, credentials, and link operations and monitor task progress with Tracker in NetApp Workload Factory. 
 
 .About this task 
-Workload factory provides Tracker, a monitoring feature, so you can monitor and track the progress and status of FSx for ONTAP, credentials, and link operations, review details for operation tasks and subtasks, and diagnose any issues or failures.
+Workload Factory provides Tracker, a monitoring feature, so you can monitor and track the progress and status of FSx for ONTAP, credentials, and link operations, review details for operation tasks and subtasks, and diagnose any issues or failures.
 
 Several actions are available in Tracker. You can filter jobs by time frame (last 24 hours, 7 days, 14 days, or 30 days), workload, status, and user; find jobs using the search function; and download the jobs table as a CSV file. You can refresh Tracker at any time. And you can quickly retry a failed operation or edit parameters for a failed operation and try the operation again. 
 

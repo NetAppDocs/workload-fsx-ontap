@@ -2,35 +2,36 @@
 sidebar: sidebar
 permalink: improve-configurations.html
 keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP
-summary: "Workload factory scans Amazon FSx for NetApp ONTAP configurations providing insights and recommendations to help you achieve operational excellence." 
+summary: "Workload Factory scans Amazon FSx for NetApp ONTAP configurations providing insights and recommendations to help you achieve operational excellence."
 ---
 = Implement well-architected file system configurations
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
+Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, and take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 You can also dismiss the analysis of specific storage configurations that don't apply to your storage environment to avoid unnecessary alerts and inaccurate optimization results.
 
-link:configuration-analysis.html[Learn about the configuration analysis and well-architected status in Workload Factory.]
+link:configuration-analysis.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-Workload factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
+Workload Factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
 
 Link connectivity allows Workload Factory to scan for issues with performance, data protection, and configurations. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Connect to an FSx for ONTAP file system using a link] for the most comprehensive analysis of your file system resources.
 
-You have options to review the recommendations for configuration issues with your file systems and fix the issues from the Storage within the Workload Factory console. 
+You have options to review the recommendations for configuration issues with your file systems and fix the issues. 
 
-Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. When a specific configuration analysis is dismissed, the configuration isn't included in the total optimization score.
+Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. 
 
 .What is analyzed
-Workload factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:  
+Workload Factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:
 
-* Reliability: SSD capacity threshold, scheduled local snapshots, schedule volume backups, remote data replication, and data reliability for long-term retention
-* Security: NetApp Autonomous Ransomware Protection with AI (ARP/AI) disabled and unauthorized access to volumes
-* Operational excellence: automatic capacity management, volume file capacity utilization threshold, volume utilization nearing full, cache relationship write mode, optimize cache volume size, and volume logical capacity reporting
-* Cost optimization: storage efficiencies, data tiering, unnecessary snapshot and backup deletion, inactive block devices, underutilized SSD capacity, and inactive NAS volumes
+* Reliability: volume backups, snapshot policy, cross-region replication, SSD capacity headroom, replication policy labels, and file object capacity
+* Security: Ransomware Protection (ARP/AI) and unauthorized iSCSI volume access
+* Operational excellence: automatic capacity management, volume file capacity headroom, FlexCache write mode, FlexCache replica size, host-visible capacity reporting, OS type, block device space management, and thin provisioning
+* Cost optimization: cold data tiering, storage efficiencies, backup expiration, snapshot expiration, inactive block devices, overprovisioned SSD capacity, and inactive NAS volumes
+* Performance efficiency: FlexGroup volumes rebalance and FlexVol volumes rebalance
 
 == Before you begin
 
@@ -41,96 +42,93 @@ Workload factory analyzes the well-architected status of the following configura
 == Fix a configuration issue
 You can fix configuration issues for an FSx for ONTAP file system or for selected volumes in a file system. You can select one or more configurations to fix.
 
+Fix operations can cause instance downtimes or service interruptions. Review each recommendation carefully before fixing a configuration issue.
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.  
-. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. Select *View and fix* for any configuration. Make sure you review the recommendation carefully. 
 + 
 The recommendation explains best practices and potential pitfalls of unoptimized configurations.
-. Select to *Fix*.
+. Select resources and then *Fix*.
 +
-When *View and fix* is an option, select the impacted volumes to fix. 
-. Review the summary and action items that appear in the dialog to learn what will happen if you choose to fix the issue. Some operations may cause instance downtimes or service interruptions. 
-. Select *Continue* to fix the configuration issue. 
+Some fix operations are only available for specific operations and not always for more than one resource. For example, you might be able to fix the configuration for a single volume but not for multiple volumes.
+. Review the information about the fix operation for the configuration in the dialog. Some operations can cause instance downtimes or service interruptions. 
+. Select *Fix* if you want Workload Factory to apply the recommended changes. 
 
 .Result
-The process to fix the issue initiates. Select the account settings menu and then select *Tracker* to view the status of the operation.
+The fix process starts. Select the account settings menu and then select *Tracker* to view the status of the operation.
+
 
 == Dismiss a configuration analysis
-Dismiss to stop a configuration analysis indefinitely for an FSx for ONTAP file system or for selected volumes in a file system. You can restart the analysis when needed.
+Stop a configuration analysis indefinitely for one or more resources. You can restart the analysis when needed.
+
+Dismiss to stop configuration analysis for one or more FSx for ONTAP file systems or volumes. You can restart the analysis anytime.
 
 [role="tabbed-block"]
 ====
 
-.Dismiss a configuration analysis for a file system
+.Dismiss a configuration analysis for configurations
 --
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.  
-. Select *View issues* for any configuration. Make sure you review the recommendation carefully. 
-+ 
-The recommendation explains best practices and potential pitfalls of unoptimized configurations.
-. Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.  
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. Under Configurations, identify the configuration that doesn't apply to your environment and then select *Dismiss*.
+. Select image:icon-action.png[the actions menu icon] and then select *Dismiss*. 
 . In the Dismiss configuration dialog, select *Dismiss* to stop the analysis for the configuration.
 --
 
-.Dismiss a configuration analysis for a volume
+.Dismiss a configuration analysis for your resources
 --
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
-. Under Configurations, identify the configuration to dismiss for selected volumes and then select *View and fix*. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.  
+. On the configuration page, select the resource(s) to dismiss from the configuration analysis. 
 . Identify the volume(s) to dismiss from the configuration analysis. 
 +
-* For one volume: select the actions menu and then select *Dismiss volume*.
-* For multiple volumes: select the volumes and then select *Dismiss* next to Bulk action.
-. Select *Dismiss* to stop the analysis for the configuration.
-. In the Dismiss volumes dialog, select *Dismiss* to confirm.
+* For one resource: select image:icon-action.png[the actions menu icon] and then select *Dismiss*.
+* For multiple resources: select the resources and then select *Dismiss* next to Bulk action.
+. In the Dismiss resources dialog, select *Dismiss* to stop the analysis.
 --
 ====
 
 .Result
-The configuration analysis stops for the file system or selected volumes. 
-
-You can reactivate the analysis at any time. The configuration is no longer included in the total optimization score.
+Workload Factory stops the configuration analysis for selected configurations. 
 
 == Reactivate a dismissed configuration analysis
 
-Reactivate a dismissed configuration analysis at any time. You can select one or more configurations to reactivate.
+Reactivate a dismissed configuration analysis at any time. You can select one or more configurations or resources to reactivate.
 
 [role="tabbed-block"]
 ====
 
-.Reactivate a configuration analysis for a file system
+.Reactivate a configuration analysis for configurations
 --
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.   
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
 . Select *Dismissed configurations*. 
-. Identify the configuration you want to reactivate and select *Reactivate*.  
+. Identify the configuration(s) you want to reactivate and select *Reactivate*.
 
 --
-.Reactivate a configuration analysis for a volume
+.Reactivate a configuration analysis for your resources
 --
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *Well-architected*.
-. Select *Dismissed configurations*. 
-. Identify the volume(s) to reactivate from the configuration analysis. 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. In the FSx for ONTAP well-architected dashboard, under Configurations, select the configuration that doesn't apply to your environment.
+. On the configuration page, select *Dismissed configurations*. 
+. Select the resource(s) to reactivate. 
 
-* For one volume: select the actions menu and then select *Reactivate volume*.
-* For multiple volumes: select the volumes and then select *Reactivate* next to Bulk action.
+* For one resource: select image:icon-action.png[the actions menu icon] and then select *Reactivate*.
+* For multiple resources: select the resources and then select *Reactivate* next to Bulk action.
 
 --
 ====
 
 .Result
-The configuration analysis is reactivated. A new analysis occurs daily moving forward.
+Workload Factory reactivates the configuration analysis and runs a new analysis every day. 
