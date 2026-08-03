@@ -9,7 +9,7 @@ summary: "Enable tracking to monitor delays for all replication relationships in
 :imagesdir: ./media/
 
 [.lead]
-Enable tracking to monitor delays for all replication relationships in your account. Workload Factory monitors replication delay using thresholds. By default, we set a threshold of 150% of the replication interval to allow normal transfer time and avoid false-positive alerts. You can customize the threshold based on your RPO. You can receive notifications when delay exceeds the threshold.
+Turn on tracking to monitor replication delays across your account. Workload Factory alerts you when delays go beyond a set threshold. By default, the threshold is 150% of the replication interval to allow normal transfer time and reduce false alarms. You can adjust the threshold to match your RPO and get notifications when delays exceed it. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -21,7 +21,18 @@ Enable tracking to monitor delays for all replication relationships in your acco
 . In the Enable replication lag history dialog, select *Enable*. 
 . Back in the Replication lag history tile, select *Customize threshold* to set your preferred threshold.
 . In the Customize lag time threshold dialog, enter the threshold in hours and minutes. 
-. Optionally, select *Enable lag time notifications* to receive notifications when replication lags exceed the threshold.
+. Optionally, select *Enable lag time notifications* to receive notifications when replication lags 
+exceed the threshold. 
++
+Notifications come in an email and include:
++
+* Source file system
+* Source volume
+* Target file system
+* Target volume
+* Lag time threshold that was exceeded
+* Link to the replication relationship
+
 . Select *Apply*. 
 
 .Related information
