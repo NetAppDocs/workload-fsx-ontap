@@ -36,6 +36,8 @@ To allow Workload Factory to analyze events, you must activate Amazon Bedrock, s
 
 link:https://aws.amazon.com/bedrock/pricing/[Amazon Bedrock pricing^]
 
+NOTE: If your account admin has turned off AI features, you'll see a message and won't be able to use AI analysis. Contact your administrator or https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
+
 === Data privacy and security
 Your data privacy and security are protected through: 
 
@@ -47,12 +49,12 @@ For more details, refer to the link:https://docs.aws.amazon.com/bedrock/latest/u
 
 == Before you begin
 
-=== View events
-To view latency events, you must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account.
+To view latency events you must do the following: 
 
-To view EMS events, you must also link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connect to the file system using a link].
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account.
 
-=== Analyze events
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[connect to the file system using a link].
+
 To analyze EMS and latency events and receive AI-powered insights and recommendations, ensure the following:
 
 * You have link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[_operations and remediation_ permissions^] in your AWS account. 
