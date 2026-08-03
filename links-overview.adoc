@@ -42,7 +42,7 @@ link:https://aws.amazon.com/lambda/pricing/[Learn more about the costs related t
 
 == When a link is required
 
-Workload factory requires a link to display some information and to perform some tasks. If you attempt to perform an operation that requires a link and you haven't associated a link with the FSx for ONTAP file system, Workload Factory notifies you that the operation requires a link. 
+Workload Factory requires a link to display some information and to perform some tasks. If you attempt to perform an operation that requires a link and you haven't associated a link with the FSx for ONTAP file system, Workload Factory notifies you that the operation requires a link. 
 
 The features that require a link include:
 

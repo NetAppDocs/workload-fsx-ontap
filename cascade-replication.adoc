@@ -61,7 +61,7 @@ Replications without long-term retention use the _MirrorAllSnapshots_ policy. En
 +
 If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain. 
 +
-NOTE: Matching source and target labels are required for long-term retention. If desired, Workload factory can create missing labels for you. 
+NOTE: Matching source and target labels are required for long-term retention. If desired, Workload Factory can create missing labels for you. 
 +
 * *Choose an existing policy*: select an existing policy from the dropdown menu. 
 * *Create a new policy*: provide the following: 
