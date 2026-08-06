@@ -41,14 +41,12 @@ sidebar:
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
+        - title: Create a volume
+          url: /create-volume.html
         - title: Discover and view cache volumes
           url: /discover-cache-volumes.html  
-        - title: Manage volumes
-          entries:
-            - title: Create a volume
-              url: /create-volume.html
-            - title: Access your data
-              url: /access-data.html
+        - title: Access your data
+          url: /access-data.html
         - title: Create block storage resources
           entries: 
             - title: Create an igroup
@@ -75,10 +73,8 @@ sidebar:
                   url: /create-backup.html
                 - title: Restore a volume from a backup
                   url: /restore-from-backup.html
-            - title: Use replication
-              entries:
-                - title: Replicate data
-                  url: /create-replication.html
+            - title: Replicate data
+              url: /create-replication.html
             - title: Protect data with Autonomous Ransomware Protection
               url: /ransomware-protection.html   
             - title: Clone a volume
@@ -105,6 +101,8 @@ sidebar:
               url: /edit-volume-autogrow.html
             - title: Adjust volume capacity
               url: /adjust-volume-capacity.html
+            - title: Set volume latency thresholds
+              url: /set-volume-latency-thresholds.html
             - title: Rebalance volume capacity
               url: /rebalance-volume.html
             - title: Manage immutable files 
@@ -141,6 +139,8 @@ sidebar:
           entries:
             - title: Manage block storage
               url: /manage-block-storage.html
+            - title: Apply tags to block devices
+              url: /apply-block-device-tags.html  
         - title: File system administration
           entries: 
             - title: Adjust file system capacity manually
@@ -183,20 +183,10 @@ sidebar:
               entries: 
                 - title: Replicate a data protection volume
                   url: /cascade-replication.html
-                - title: Reverse a replication relationship
-                  url: /reverse-replication.html
-                - title: Change the replication schedule of a source volume
-                  url: /change-replication-schedule.html
-                - title: Limit the max transfer rate of a replication relationship
-                  url: /limit-transfer-rate.html
-                - title: Manual update of snapshot data in a replication relationship
-                  url: /update-snapshot-replication.html
-                - title: Pause and resume a replication relationship
-                  url: /pause-resume-replication.html 
-                - title: Stop a replication relationship
-                  url: /stop-replication.html
-                - title: Delete a replication relationship
-                  url: /delete-replication.html    
+                - title: Track replication delays
+                  url: /track-replication-delays.html  
+                - title: Manage replication relationships
+                  url: /manage-replication.html
         - title: Performance administration
           entries: 
             - title: Provision IOPS for a file system

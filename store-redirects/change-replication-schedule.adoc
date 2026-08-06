@@ -1,0 +1,4 @@
+---
+permalink: change-replication-schedule.html
+redirect: workload-fsx-ontap/manage-replication.html
+---

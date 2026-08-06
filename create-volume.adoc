@@ -58,8 +58,8 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system you want to create a volume in, and select *Create volume*. 
+. From the Storage menu, select *Volume explorer*. 
+. From *Volume explorer*, select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
 .. *Storage VM name*: Optionally, enter a storage VM name. 
@@ -160,7 +160,7 @@ _Balanced (Auto)_ is the default tiering policy when creating a volume using the
 If the feature is unavailable, it is because of one of the following reasons: 
 +
 * A link is not associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
-* Volumes with immutable files, and volumes with iSCSI and NVMe protocols are not supported for ARP/AI.
+* Volumes with immutable files and volumes with the NVMe protocol are not supported for ARP/AI. iSCSI volumes are supported beginning with ONTAP 9.17.1.
 * The file system already has an ARP/AI policy.
 
 . Under Advance configuration, enter the following details. The fields under this section differ based on the volume style you select. 

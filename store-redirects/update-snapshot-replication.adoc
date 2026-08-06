@@ -1,0 +1,4 @@
+---
+permalink: update-snapshot-replication.html
+redirect: workload-fsx-ontap/manage-replication.html
+---

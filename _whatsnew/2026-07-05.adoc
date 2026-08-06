@@ -1,0 +1,19 @@
+=== Volumes explorer
+
+Volumes Explorer gives you a simple, searchable view of all your volumes in NetApp Workload Factory. Quickly see which volumes serve block or file workloads. View each volume's logical size, physical used capacity, and whether it uses storage efficiency features (compression, deduplication, and compaction). Filter and sort by name, status (available/failed), latency, size, used capacity, and protection features. 
+
+=== Enhanced email notifications for replication delays
+
+Email notifications for replication delays now include more details about the affected relationship. The notification helps you quickly identify the affected relationship and look into it in the Workload Factory console. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html[Enable notifications for replication delays]
+
+=== Block device creation enhancement 
+
+Workload Factory supports block device creation from a volume snapshot.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html[Create a block device from a volume snapshot in Workload Factory]
+
+=== Workload tagging for volumes and block devices
+
+Workload Factory now identifies and tags volumes and block devices by their primary workload or application. You can assign predefined workload tags such as Microsoft SQL Server or Oracle Database, or create custom tags for your applications. Tags can be applied to individual resources or inherited by connected storage resources. This helps you align storage configurations with workload requirements, understand incident impact, and troubleshoot more effectively.

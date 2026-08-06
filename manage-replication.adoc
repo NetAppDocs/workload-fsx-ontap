@@ -1,0 +1,170 @@
+---
+sidebar: sidebar
+permalink: manage-replication.html
+keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication
+summary: "Manage replication relationships in NetApp Workload Factory." 
+---
+= Manage your replication relationships in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manage your replication relationships in NetApp Workload Factory. You can pause, resume, reverse, stop, and delete replication relationships between source and target volumes. You can also change the replication schedule of the source volume, and limit the max transfer rate for your replication relationships.
+
+== Change the replication schedule of a source volume
+Change the replication schedule of the source volume in a replication relationship in NetApp Workload Factory. 
+
+Choose how frequently snapshots from the source volume are transferred to the replicated volume to match your required point objectives (RPOs). 
+
+When an on-premises ONTAP cluster is the target for the replication relationship, changing the replication schedule isn't supported. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actionsenu of the replication relationship schedule to change. 
+. Select *Edit replication interval*. 
+. In the Edit replication interval dialog, select the frequency of snapshot transfer from the source volume. You may select between the following frequencies: 
++
+* Every 5 minutes
+* Hourly
+* Every 8 hours
+* Daily
+* Weekly
+. Select *Apply*. 
+
+== Limit the max transfer rate of a replication relationship 
+Limiting the max transfer rate is optional but recommended. Without a limit, network and application performance might decline. 
+
+Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+
+.Before you begin
+Consider how much bandwidth to allocate for replication.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actionsenu of the replication relationship to limit the max transfer rate for. 
+. Select *Edit max transfer rate*. 
+. In the Edit max transfer rate dialog, select *Limited* and enter the max transfer limit in MB/s. 
++
+Alternatively, select *Unlimited*.
+. Select *Apply*.
+
+== Manually update snapshot data in a replication relationship
+A replication relationship has a set replication schedule, but you can manually update snapshot data transferred between source and target volumes in NetApp Workload Factory at any time. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to update. 
+. Select *Update*. 
+. In the Update dialog, select *Update*. 
+
+== Pause a replication relationship
+Pause a replication relationship to stop scheduled replication updates from the source volume to the target volume. The target volume transitions from read-only to read/write. Both volumes continue to share the latest replication snapshot as a new baseline for later resynchronization.
+
+.Before you begin
+If you pause when a transfer is in progress, the transfer is not affected, and the relationship becomes "Quiescing" until the transfer completes. If the current transfer aborts, it is now a future transfer and will not restart.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to pause. 
+. Select *Pause (Quiesce)*. 
+. In the *Quiesce relationship* dialog, select *Quiesce*. 
+
+.Result
+The relationship pauses and its status shows as "Paused". 
+
+== Resume a paused replication relationship
+When you resume a replication relationship, any changes to the destination volume while the replication was stopped are deleted. The target volume transitions from read/write to read-only, and receives updates from the source volume at the scheduled replication interval again. 
+
+NOTE: Any data written to the original source volume between the last data replication and the time that the source volume is disabled is not preserved.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to resume. 
+. Select *Resume*. 
+. In the Resume relationship dialog, select *Resume*. 
+
+.Result
+The relationship resumes and its status shows as "Replicated". 
+
+== Reverse a replication relationship
+Reverse a replication relationship so that the target volume becomes the source volume. 
+
+Reverse operations are supported for the following:
+
+* Two FSx for ONTAP file systems
+* One FSx for ONTAP file system and one on-premises ONTAP system
+
+After you stop replication and make changes to the target volume, you can replicate those changes back to the source volume. This process is common in a disaster recovery scenario in which you operate on the target volume for a while and want to switch roles of the volumes.
+
+When you reverse and resume a replication, it switches the source and target roles of your volumes; the target volume becomes the new source volume, and the source volume becomes the new target volume. The reverse operation also overwrites the contents of the new target volume with the contents of the new source volume. If you reverse a replication twice, the original replication direction re-establishes.
+
+====================================================================
+NOTE: 
+
+* Any data written to the original source volume between the last data replication and the time that the source volume is disabled is not preserved.
+* Reversing replication isn't available when replicating storage VM data and configuration settings.
+====================================================================
+
+.Before you begin
+Make sure that you know the current and future roles of your source and target volumes because changes on the new target volume are overwritten with the new source volume. If used incorrectly, you can experience unintended data loss.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to reverse. 
+. Select *Reverse relationship*. 
+. In the Reverse relationship dialog, select *Reverse*. 
+
+== Stop a replication relationship
+Stop a replication relationship in NetApp Workload Factory. When you stop a replication relationship, scheduled replication updates from the source volume to the target volume pause. The target volume transitions from read-only to read/write. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to stop. 
+. Select *Break*. 
+. In the Break replication dialog, select *Break*.
+
+.Result
+The replication status of the volume changes to *Broken*. The target volume becomes writable.
+
+== Delete a replication relationship
+Delete a replication relationship in NetApp Workload Factory. When you delete a replication relationship, it removes the replication relationship between the source and target volume. After the replication relationship deletes, both volumes continue to exist independently with the current data they contain.
+
+When you delete a replication relationship, FSx for ONTAP also deletes the common replication snapshots of the source and target volume. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship to delete. 
+. Select *Delete*. 
+. In the Delete relationship dialog, select *Delete*. 
