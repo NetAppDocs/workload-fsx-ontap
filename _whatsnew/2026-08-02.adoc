@@ -44,3 +44,7 @@ You can now send S3 access point events to the SNS topic on a set schedule. Each
 
 To set up notifications for S3 events, link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-s3-access-points.html[edit S3 access points] and select *Send S3 events by SNS* under the *Journal table* section.
 
+
+=== ONTAP features displayed in Volumes explorer
+
+Volumes explorer now includes ONTAP features in the volumes table. These features provide more detailed insights into the configuration and status of your volumes, like protection coverage, Autonomous Ransomware Protection (ARP/AI) status, storage efficiency, tiering policy, and volume autogrow. 
