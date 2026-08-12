@@ -4,7 +4,7 @@ permalink: create-backup.html
 keywords: create backup, volume backup, back up a volume, FSx for ONTAP backup, manual backup
 summary: "Create a manual backup of a volume in NetApp Workload Factory outside regularly scheduled backups."
 ---
-= Create a manual backup of a volume in NetApp Workload Factory
+= Create an on-demand backup of a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

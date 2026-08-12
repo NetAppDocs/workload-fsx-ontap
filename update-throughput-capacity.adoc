@@ -4,7 +4,7 @@ permalink: update-throughput-capacity.html
 keywords: update throughput, change throughput, throughput capacity
 summary: "Update throughput capacity for an FSx for ONTAP file system in NetApp Workload Factory as needed." 
 ---
-= Update throughput capacity for a file system
+= Update throughput capacity for an FSx for ONTAP file system
 :icons: font
 :imagesdir: ./media/
 
