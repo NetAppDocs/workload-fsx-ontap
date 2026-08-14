@@ -1,0 +1,3 @@
+=== Volume actions available in Volumes explorer
+
+All volume actions are directly available from Volumes explorer for one or more volumes. This makes it quicker to perform volume-level operations. Volume actions include modifying volume settings, managing snapshots, and doing other volume tasks without leaving Volumes explorer. You can also access these actions from the Volumes tab in the FSx for ONTAP file system overview.
