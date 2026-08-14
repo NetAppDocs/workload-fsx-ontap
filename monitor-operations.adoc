@@ -6,7 +6,8 @@ summary: "Track workload operations and monitor job progress with Tracker in Net
 ---
 = Monitor FSx for ONTAP operations with Tracker
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
-//Cross-repo include for tracker usage
-include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/tracker-use.adoc[]
+[.lead]
+
+include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/monitor-operations.adoc[]
