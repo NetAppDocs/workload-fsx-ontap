@@ -4,7 +4,7 @@ permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
 summary: "Manage snapshot policies for FSx for ONTAP volumes in Workload Factory. A snapshot policy defines how the system creates snapshots for a volume."
 ---
-= Manage snapshot policies for FSx for ONTAP volumes
+= Manage snapshot policies for volumes in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

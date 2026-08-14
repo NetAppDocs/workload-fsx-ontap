@@ -4,7 +4,7 @@ permalink: rebalance-volume.html
 keywords: rebalance capacity, volume capacity, redistribute capacity
 summary: "Check and rebalance volume capacity to avoid imbalances that develop over time."
 ---
-= Check and rebalance FSx for ONTAP volume capacity
+= Check and rebalance volume capacity in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
