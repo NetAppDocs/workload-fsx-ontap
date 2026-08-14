@@ -11,7 +11,7 @@ summary: "Restore a volume from a backup to any FSx for ONTAP file system in you
 [.lead]
 In NetApp Workload Factory, you can restore a volume from a backup to any FSx for ONTAP file system in your AWS account. 
 
-Workload factory determines if you have enough capacity for the restore and can automatically add SSD storage tier capacity if you don't. 
+Workload Factory determines if you have enough capacity for the restore and can automatically add SSD storage tier capacity if you don't. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

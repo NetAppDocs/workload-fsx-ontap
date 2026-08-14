@@ -2,22 +2,20 @@
 sidebar: sidebar
 permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
-summary: "Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used to enrich AI knowledge bases."
+summary: "Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used as a backup in the cloud."
 ---
 = Use on-premises ONTAP cluster data in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used to enrich AI knowledge bases.
+Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used as a backup in the cloud.
 
 .About this task
 To use data from an on-premises ONTAP cluster, you'll first need to discover the on-premises ONTAP cluster. After you've discovered an on-premises ONTAP cluster, you can use the data for any of the following use cases. 
 
 Use cases::
-Note that the primary use case for the GenAI workload is the focus of this series of tasks.
 
-* *GenAI workload*: Replicate on-premises-ONTAP volume data to an FSx for ONTAP file system so that the data can be used to link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html[enrich AI knowledge bases^]. 
 * *Backup and migration to cloud*: Replicated on-premises ONTAP volume data to an FSx for ONTAP file system can be used as a backup in the cloud. 
 * *Data tiering*: After replication, infrequently accessed on-premises ONTAP volume data can be tiered from the SSD storage tier to the capacity pool storage tier. 
 

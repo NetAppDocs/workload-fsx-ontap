@@ -45,5 +45,5 @@ Do the following before you add HA pairs to a file system:
 . Select *Add* to confirm the addition of the HA pairs.
 
 .Result
-Workload factory initiates the process to add the HA pair(s) to the file system. The file system isn't available for other operations like volume creation until the HA pairs are added. You can monitor the progress of the operation in the *Tracker* tab.
+Workload Factory initiates the process to add the HA pair(s) to the file system. The file system isn't available for other operations like volume creation until the HA pairs are added. You can monitor the progress of the operation in the *Tracker* tab.
 
