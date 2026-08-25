@@ -16,13 +16,11 @@ Workload Factory tracks FSx for ONTAP file system costs and usage by getting cos
 
 For unique resources, Workload Factory calculates costs by combining the actual performance tier usage, a proportional share of performance tier costs allocated to provisioned but unused space, performance allocations distributed by capacity, and capacity pool usage. Each component is multiplied by its price per unit for that dimension, and the results are summed to determine the total cost for each resource.
 
-In the Cost dashboard, you can filter cost and usage data by AWS accounts, credentials, one or more regions, and time ranges so that you can understand your FSx for ONTAP file system consumption. Data is always shown at a monthly rate.
+In the Cost dashboard, you can filter cost and usage data by AWS accounts, credentials, one or more regions, and time ranges so that you can understand your FSx for ONTAP file system consumption. Data is always shown at a monthly rate. You can also filter by one or more file systems and one or more volumes within a file system. AWS cost allocation tag keys and tag key values add an additional layer of filtering to pinpoint specific costs. A _tag_ consists of a key and a value. To filter by tag keys and tag key values, assign tags to your FSx for ONTAP file systems. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html[Learn more about AWS cost allocation tags.^]
 
-We get cost and usage data for your FSx for ONTAP file system resources from AWS Cost Explorer using the following permissions: `ce:GetCostAndUsage`and `ce:GetTags`. We calculate the total cost using the AWS cost API and our estimates. `
+We get cost and usage data for your FSx for ONTAP file system resources from AWS Cost Explorer using the following permissions: `ce:GetCostAndUsage`and `ce:GetTags`. We calculate the total cost using the AWS cost API and our estimates.
 
-AWS allocation tag keys and tag key values add an additional layer of filtering to pinpoint specific costs. A _tag_ consists of a key and a value. To filter by tag keys and tag key values, assign tags to your FSx for ONTAP file systems. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html[Learn more about AWS cost allocation tags.^]
-
-In addition to the cost data that appears in the Cost dashboard, you can generate cost reports for your FSx for ONTAP file system resources. The data in the cost report shows information for specific file systems and volumes. The report is a downloadable PDF file that you can share with stakeholders. 
+In addition to the cost data that appears in the Cost dashboard, you can generate cost reports for your FSx for ONTAP file system resources. The report is a downloadable CSV file that you can share with stakeholders. 
 
 == Track costs
 The costs shown in the Workload Factory console in the Cost dashboard are based on the data from AWS Cost Explorer, which is updated every 24 hours. 
