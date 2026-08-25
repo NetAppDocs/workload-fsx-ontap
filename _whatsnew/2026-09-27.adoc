@@ -1,0 +1,4 @@
+=== Initiator group diagram enhancements    
+The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When hovering over a host in the diagram, you'll see the host name, instance ID, workload type, region, and IQN. 
+
+=== 
