@@ -1,4 +1,13 @@
 === Initiator group diagram enhancements    
-The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When hovering over a host in the diagram, you'll see the host name, instance ID, workload type, region, and IQN. 
+The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When hovering over a host in the diagram, host details including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN) appear. 
 
-=== 
+=== Cost dashboard enhancements
+The cost dashboard now includes a cost executive summary section that provides an overview of your organization's spending, helping you quickly understand and manage costs. Ask Me, the AI assistant for Workload Factory, can provide additional insights and recommendations based on your cost data. You can interact with Ask Me to get detailed explanations and suggestions for optimizing your costs. 
+
+In addition, you can filter the cost data by one or more file systems and one or more volumes within a file system. When filters are applied, Workload Factory displays:
+
+* Estimated total cost per month
+* Estimated cost per GiB/month
+* Detailed cost breakdown by service
+
+All cost information comes directly from the AWS Cost Explorer API except for file system and volume-level cost allocation; these costs are estimated by Workload Factory.
