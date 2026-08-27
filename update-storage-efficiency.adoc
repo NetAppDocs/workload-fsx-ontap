@@ -4,7 +4,7 @@ permalink: update-storage-efficiency.html
 keywords: storage efficiency change, update storage efficiency
 summary: "In NetApp Workload Factory, you can update the storage efficiency setting after volume creation."
 ---
-= Update storage efficiency setting of a volume
+= Update volume storage efficiency in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
