@@ -93,7 +93,7 @@ NOTE: Automatic link creation isn't supported for AWS GovCloud accounts.
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Administration*.
 . From the Administration menu, select *Links*. 
-. In *Links*, select *Create and associate*. 
+. On the Links page, select *Create and associate*. 
 . In the Associate Link dialog, select the file system to associate with the link and select *Continue*.
 . Select *Create a new link* and then select *Continue*.
 . On the Create Link page, select *Create automatically* and then provide the following: 
@@ -147,7 +147,7 @@ You can create a link using two Infrastructure-as-Code (IaC) tools from the Code
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Administration*.
 . From the Administration menu, select *Links*. 
-. In *Links*, select *Create and associate*. 
+. On the Links page, select *Create and associate*. 
 . In the Associate Link dialog, select the file system to associate with the link and select *Continue*.
 . Select *Create a new link* and then select *Continue*.
 . On the Create Link page, select *Create manually* and then select CloudFormation or Terraform from the Codebox.
