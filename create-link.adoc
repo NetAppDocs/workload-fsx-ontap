@@ -91,11 +91,12 @@ NOTE: Automatic link creation isn't supported for AWS GovCloud accounts.
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system to associate a link to and then select *Associate link*. 
-. In the Associate link dialog, select *Create a new link* and select *Continue*.
-. On the Create Link page, provide the following: 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Administration*.
+. From the Administration menu, select *Links*. 
+. In *Links*, select *Create and associate*. 
+. In the Associate Link dialog, select the file system to associate with the link and select *Continue*.
+. Select *Create a new link* and then select *Continue*.
+. On the Create Link page, select *Create automatically* and then provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Optional. Allows Workload Factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
@@ -107,7 +108,7 @@ You can either create secrets in alignment with the default permissions or assig
 .. *Link permissions*: Select one of the following options for link permissions:
 
 * *Automatic*: Select this option so that AWS CloudFormation code automatically creates the Lambda permission policy and execution role. 
-* *User-provided*: Select this option to assign a specified Lambda execution role and its attached policies to the Lambda link. The following permissions are required for the Lambda permission policy. The `secretsmanager:GetSecretValue` permission is required only if you enabled AWS Secrets Manager.
+* *User-provided execution role*: Select this option to assign a specified Lambda execution role and its attached policies to the Lambda link. The following permissions are required for the Lambda permission policy. The `secretsmanager:GetSecretValue` permission is required only if you enabled AWS Secrets Manager.
 +
 [source,json]
 "ec2:CreateNetworkInterface",
@@ -115,7 +116,6 @@ You can either create secrets in alignment with the default permissions or assig
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
 "ec2:UnassignPrivateIpAddresses",
-"secretsmanager:GetSecretValue"
 +
 Enter the Lambda execution role ARN in the text box.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
@@ -145,11 +145,13 @@ You can create a link using two Infrastructure-as-Code (IaC) tools from the Code
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system to associate a link to and then select *Associate link*. 
-. In the Associate link dialog, select *Create a new link* and select *Continue*.
-. On the Create Link page, select CloudFormation or Terraform from the Codebox, and then provide the following: 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Administration*.
+. From the Administration menu, select *Links*. 
+. In *Links*, select *Create and associate*. 
+. In the Associate Link dialog, select the file system to associate with the link and select *Continue*.
+. Select *Create a new link* and then select *Continue*.
+. On the Create Link page, select *Create manually* and then select CloudFormation or Terraform from the Codebox.
+. Under Details and credentials, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Always enabled for GovCloud accounts. Optional for other accounts. Allows Workload Factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
@@ -167,7 +169,6 @@ You can either create secrets in alignment with the default permissions or assig
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
 "ec2:UnassignPrivateIpAddresses"
-"secretsmanager:GetSecretValue"
 +
 Enter the Lambda execution role ARN in the text box.
 
