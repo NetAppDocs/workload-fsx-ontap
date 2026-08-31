@@ -4,7 +4,7 @@ permalink: enable-snapshots-long-term.html
 keywords: snapshot long-term retention, enable long-term retention
 summary: "Enable snapshots for long-term retention, which lets you replicate specific snapshots for long-term disaster recovery." 
 ---
-= Enable and edit snapshots for long-term retention
+= Enable long-term snapshot retention in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
