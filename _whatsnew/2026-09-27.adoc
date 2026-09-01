@@ -11,3 +11,9 @@ In addition, you can filter the cost data by one or more file systems and one or
 * Detailed cost breakdown by service
 
 All cost information comes directly from the AWS Cost Explorer API except for file system and volume-level cost allocation; these costs are estimated by Workload Factory.
+
+=== New recommendations in the well-architected analysis
+Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
+
+* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and suggests connecting hosts to the failover node for reliability.
+* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and suggests connecting hosts to the preferred node for performance efficiency.
