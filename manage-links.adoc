@@ -5,7 +5,7 @@ keywords: links, accounts, lambda, creating, associating, disassociating, deleti
 summary: "You can view links associated with your account, update passwords for link authentication, and remove a link in NetApp Workload Factory."  
 ---
 
-= Manage Workload Factory links
+= Manage NetApp Workload Factory links
 :icons: font
 :imagesdir: ./media/
 

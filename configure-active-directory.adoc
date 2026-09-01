@@ -4,7 +4,7 @@ permalink: configure-active-directory.html
 keywords: configure AD, configure active directory, update ad, edit active directory
 summary: "Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in NetApp Workload Factory."
 ---
-= Configure and update Active Directory for a storage VM
+= Configure and update AD for a storage VM in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
