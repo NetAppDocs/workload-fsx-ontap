@@ -21,3 +21,11 @@ Workload Factory now includes the following configurations in the well-architect
 === Volumes explorer supports workload selection
 
 Workload Factory selects a workload by default based on the characteristics of the volume and its usage patterns. Now you can change the workload for one or more volumes from Volumes explorer.
+
+=== Email notification for unhealthy replication relationships
+When the status of a replication relationship is *unhealthy*, Workload Factory will send an email notification every 24 hours while the relationship remains unhealthy. Reminder notifications will stop when the relationship returns to a healthy state.
+
+=== Well-architected dashboard access
+Access to the well-architected dashboard is available from the main menu in the Workload Factory console and from within a file system. To find the well-architected dashboard from the main menu, select the main menu and then select *Well-architected*.
+
+image:well-architected-menu-option.png[Well-architected menu option in the Workload Factory console] 
