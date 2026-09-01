@@ -4,7 +4,7 @@ permalink: known-limitations.html
 keywords: limitations, fsx, ontap 
 summary: "Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it."
 ---
-= Known limitations of Amazon FSx for NetApp ONTAP in NetApp Workload Factory
+= Known limitations of FSx for ONTAP in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

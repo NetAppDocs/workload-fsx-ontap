@@ -4,7 +4,7 @@ permalink: view-s3-details.html
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points
 summary: "View the details of S3 access points for a volume in NetApp Workload Factory." 
 ---
-= View the details of S3 access points for a volume in NetApp Workload Factory
+= View S3 access point details for a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

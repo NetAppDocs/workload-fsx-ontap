@@ -4,7 +4,7 @@ permalink: create-snapshot-policy.html
 keywords: create
 summary: "Create a custom snapshot policy for a storage VM in Workload Factory."
 ---
-= Create a snapshot policy for storage VMs in Workload Factory
+= Create a snapshot policy for storage VMs in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

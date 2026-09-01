@@ -4,7 +4,7 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot
 summary: "Restore an FSx for ONTAP volume from a snapshot when the volume contains deleted or corrupted files." 
 ---
-= Restore a volume from a snapshot in Workload Factory
+= Restore a volume from a snapshot in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

@@ -16,9 +16,9 @@ link:links-overview.html[Learn more about links].
 
 .About this task
 
-Links leverage AWS Lambda to execute code in response to events and automatically manage the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
+Links use AWS Lambda to execute code in response to events and automatically manage the computing resources required by that code. The links that you create are part of your NetApp account and they are associated with an AWS account.
 
-You can create a link in your account when defining an FSx for ONTAP file system. The link is used for that file system, and it can be used for other FSx for ONTAP file systems. You can also associate a link for a file system later. 
+You can create a link in your account when defining an FSx for ONTAP file system. You use the link for that file system, and you can use it for other FSx for ONTAP file systems. You can also associate a link for a file system later. 
 
 Links require authentication. You can authenticate links using credentials stored in the Workload Factory credentials service or with your credentials stored in AWS Secrets Manager. Only one authentication method is supported per link. For example, if you select link authentication with AWS Secrets Manager, you can't change the authentication method later.
 
@@ -91,11 +91,12 @@ NOTE: Automatic link creation isn't supported for AWS GovCloud accounts.
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system to associate a link to and then select *Associate link*. 
-. In the Associate link dialog, select *Create a new link* and select *Continue*.
-. On the Create Link page, provide the following: 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Administration*.
+. From the Administration menu, select *Links*. 
+. On the Links page, select *Create and associate*. 
+. In the Associate Link dialog, select the file system to associate with the link and select *Continue*.
+. Select *Create a new link* and then select *Continue*.
+. On the Create Link page, select *Create automatically* and then provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Optional. Allows Workload Factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
@@ -107,7 +108,7 @@ You can either create secrets in alignment with the default permissions or assig
 .. *Link permissions*: Select one of the following options for link permissions:
 
 * *Automatic*: Select this option so that AWS CloudFormation code automatically creates the Lambda permission policy and execution role. 
-* *User-provided*: Select this option to assign a specified Lambda execution role and its attached policies to the Lambda link. The following permissions are required for the Lambda permission policy. The `secretsmanager:GetSecretValue` permission is required only if you enabled AWS Secrets Manager.
+* *User-provided execution role*: Select this option to assign a specified Lambda execution role and its attached policies to the Lambda link. The following permissions are required for the Lambda permission policy. The `secretsmanager:GetSecretValue` permission is required only if you enabled AWS Secrets Manager.
 +
 [source,json]
 "ec2:CreateNetworkInterface",
@@ -115,7 +116,6 @@ You can either create secrets in alignment with the default permissions or assig
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
 "ec2:UnassignPrivateIpAddresses",
-"secretsmanager:GetSecretValue"
 +
 Enter the Lambda execution role ARN in the text box.
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
@@ -127,7 +127,7 @@ The Redirect to CloudFormation dialog appears and explains how to create the lin
 . Select *Continue* to open the AWS Management Console, and then log in to the AWS account for this FSx for ONTAP file system.
 . On the Quick create stack page, under Capabilities, select *I acknowledge that AWS CloudFormation might create IAM resources*.
 +
-Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload Factory uses these permissions when using links.
+The CloudFormation template grants Lambda three permissions when you launch it. Workload Factory uses these permissions when using links.
 +
 [source,json]
 "lambda:InvokeFunction",
@@ -136,7 +136,7 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 
 . Select *Create stack* and then Select *Continue*.
 +
-You can monitor the link creation status on the Events page. This should take no more than 5 minutes.
+You can monitor the link creation status on the Events page. This should take no more than five minutes.
 . Return to the Workload Factory interface and you'll see that the link is associated with the FSx for ONTAP file system.
 --
 .Create manually
@@ -145,11 +145,13 @@ You can create a link using two Infrastructure-as-Code (IaC) tools from the Code
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. From the Storage menu, select *FSx for ONTAP*. 
-. From *FSx for ONTAP*, select the actions menu of the file system to associate a link to and then select *Associate link*. 
-. In the Associate link dialog, select *Create a new link* and select *Continue*.
-. On the Create Link page, select CloudFormation or Terraform from the Codebox, and then provide the following: 
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Administration*.
+. From the Administration menu, select *Links*. 
+. On the Links page, select *Create and associate*. 
+. In the Associate Link dialog, select the file system to associate with the link and select *Continue*.
+. Select *Create a new link* and then select *Continue*.
+. On the Create Link page, select *Create manually* and then select CloudFormation or Terraform from the Codebox.
+. Under Details and credentials, provide the following: 
 .. *Link name*: Enter the name that you want to use for this link. The name must be unique within your account.
 .. *AWS Secrets Manager*: Always enabled for GovCloud accounts. Optional for other accounts. Allows Workload Factory to fetch FSx for ONTAP access credentials from your AWS Secrets Manager. 
 +
@@ -167,14 +169,13 @@ You can either create secrets in alignment with the default permissions or assig
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
 "ec2:UnassignPrivateIpAddresses"
-"secretsmanager:GetSecretValue"
 +
 Enter the Lambda execution role ARN in the text box.
 
 .. *Tags*: Optionally, add any tags that you want to associate with this link so you can more easily categorize your resources. For example, you could add a tag that identifies this link as being used by FSx for ONTAP file systems.
 .. *Link registration*: Select CloudFormation or Terraform for the instructions for how to register the link, and follow the instructions. 
 +
-Note that three permissions are granted to Lambda when you launch the CloudFormation template. Workload Factory uses these permissions when using links.
+The CloudFormation template grants Lambda three permissions when you launch it. Workload Factory uses these permissions when using links.
 +
 [source,json]
 "lambda:InvokeFunction",
@@ -184,7 +185,7 @@ Note that three permissions are granted to Lambda when you launch the CloudForma
 ... After you successfully create the stack, paste the Lambda ARN in the text box in the Workload Factory console. Workload Factory automatically retrieves the AWS account, location, and security group based on the FSx for ONTAP file system.
 ... Select *Create*. 
 +
-You can monitor the link creation status on the Events page. This should take no more than 5 minutes.
+You can monitor the link creation status on the Events page. This should take no more than five minutes.
 
 --
 ====
@@ -194,7 +195,7 @@ You can monitor the link creation status on the Events page. This should take no
 Workload Factory associates the link with the FSx for ONTAP file system. You can perform advanced ONTAP operations. 
 
 == Associate an existing link with an FSx for ONTAP file system
-After you create a link, associate it with one or more FSx for ONTAP file system.
+After you create a link, associate it with one or more FSx for ONTAP file systems.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -206,7 +207,7 @@ After you create a link, associate it with one or more FSx for ONTAP file system
 * Workload Factory: enter the password twice. 
 * AWS Secrets Manager: enter the secret ARN.
 +
-Ensure that the secret ARN contains the following key valid pairs, though the _filesystemID_ is optional.
+Verify that the secret ARN contains the following key-value pairs, though the _filesystemID_ is optional.
 
 ** filesystemID = FSx_filesystem_id (optional)
 ** user = FSx_user
@@ -240,7 +241,7 @@ Issue::: The secret isn't in the right format.
 +
 *Resolution*: Go to AWS Secrets Manager and edit the format.
 +
-The secret should contain the following key valid pairs:
+The secret should contain the following key-value pairs:
 
 * filesystemID = FSx_filesystem_id
 * username = FSx_user
