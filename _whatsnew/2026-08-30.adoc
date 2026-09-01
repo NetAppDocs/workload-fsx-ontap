@@ -1,5 +1,11 @@
 === Link creation available from Links page
 
-You can now create links directly from the Links page in the Administration menu, in addition to the FSx for ONTAP inventory page and the file system overview page. 
+You can now create links directly from the Links page in the Administration menu, in addition to the FSx for ONTAP inventory page and the file system overview page.
 
 link:create-link.html[Learn more about creating links].
+
+=== Workload identification
+
+* Workload Factory now identifies workloads for hosts connected to FSx for ONTAP storage deployed in a different region.
+
+* Improved workload detection logic now discovers additional workload types and improves findings accuracy.
