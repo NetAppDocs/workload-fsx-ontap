@@ -4,7 +4,7 @@ permalink: create-snapshot.html
 keywords: create snapshot, snapshot 
 summary: "Create a manual snapshot of an FSx for ONTAP volume in NetApp Workload Factory. Snapshots are point-in-time versions of your volume's content."
 ---
-= Create a manual snapshot of an FSx for ONTAP volume
+= Create an on-demand snapshot of a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
