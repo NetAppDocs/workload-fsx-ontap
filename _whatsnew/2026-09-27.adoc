@@ -34,3 +34,6 @@ image:well-architected-menu-option.png[Well-architected menu option in the Workl
 Workload Factory added the *Workloads* field to volume creation so that you can select the workload to associate with the volume. This ensures that the volume is optimized for the intended workload from the moment it is created.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume in the Workload Factory console]
+
+=== FlexCache write mode improvement
+Workload Factory now recognizes the preferred FlexCache write mode for volumes and recommends changing it if necessary to optimize performance.
