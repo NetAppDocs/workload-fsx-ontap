@@ -1,17 +1,69 @@
 ---
 sidebar: sidebar
-permalink: rebalance-volume.html
-keywords: rebalance capacity, volume capacity, redistribute capacity
-summary: "Check and rebalance volume capacity to avoid imbalances that develop over time."
+permalink: manage-volume-capacity.html
+keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume
+summary: "Learn how to manage volume capacity, including adjusting volume size manually and using volume autogrow in Workload Factory."
 ---
-= Check and rebalance volume capacity in NetApp Workload Factory
+= Manage volume capacity in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Check the balance of FlexVol or FlexGroup volume capacity and rebalance volume capacity to spread files evenly across all FlexVol volumes in a node or across all constituents so that all nodes participate in the workload of a single FlexGroup volume.
+Volume capacity should be adjusted as needs change. You can adjust volume size manually or turn on volume autogrow to let Workload Factory manage volume capacity for you. Check the balance of FlexVol or FlexGroup volume capacity and rebalance volume capacity to spread files evenly across all FlexVol volumes in a node or across all constituents so that all nodes participate in the workload of a single FlexGroup volume.
 
-== About this task
+== Edit volume autogrow
+Turn on volume autogrow to let Workload Factory manage volume capacity for you. You can disable it at any time.
+
+NOTE: Volume autogrow isn't supported for iSCSI volumes. 
+
+.Before you begin
+To enable volume autogrow, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Volumes explorer*. 
+. Select the actions menu for the volume you want to modify. 
+. Select *Basic actions*, then *Set volume autogrow*. 
+. In the Set autogrow dialog, enable volume autogrow to automatically expand the volume capacity until the volume reaches the maximum size. This feature accommodates increasing data usage, ensuring uninterrupted operations.
++
+Specify the maximum volume growth size and unit. The maximum growth size cannot be smaller than the current volume size.
+. Select *Apply*.
+
+== Adjust volume capacity manually 
+You can adjust volume capacity by increasing or decreasing the provisioned size of a volume. The following table shows the minimum and maximum volume sizes by volume type:
+
+[cols="1,1,1",options="header"]
+|===
+| Volume type | Minimum size | Maximum size
+
+| FlexVol volume
+| 20 MiB
+| 300 TiB
+
+| FlexGroup volume
+| 800 GiB
+| 2 PiB
+
+|=== 
+
+For an iSCSI LUN, increasing the size of the volume also increases the size of the host LUN. After you increase volume capacity, follow the procedure provided by your host operating system to discover the new size of the LUN and expand the file system of the LUN.  
+
+Decreasing volume size is supported only for NFS and SMB/CIFS volumes. 
+
+.Before you begin
+To adjust volume capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.  
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Volumes explorer*. 
+. Select the actions menu for the volume you want to modify. 
+. Select *Basic actions*, then *Adjust volume capacity*.
+. In the Adjust volume capacity dialog, set the *Provisioned capacity* and unit.  
+. Select *Adjust* to apply the changes.
+
+== Rebalance volume capacity for FlexVol and FlexGroup volumes
 Rebalancing volume capacity is supported for FlexVol volumes and FlexGroup volumes. Rebalancing a volume redistributes the capacity when imbalances develop over time due to the addition of new files and file growth. After you manually start the rebalance operation, we select the files and move them automatically and non-disruptively. Volume transfer operations consume file system resources.
 
 Each volume type and rebalancing operations differ as follows.
@@ -32,7 +84,7 @@ Checking the balance of FlexGroup volume capacity includes assessing the current
 
 NOTE: Rebalancing isn't supported for SAN volumes like iSCSI and NVMe.
 
-== Check the balance of your volumes 
+=== Check the balance of your volumes 
 Check the balance of FlexVol or FlexGroup volumes in an FSx for ONTAP file system. 
 
 .Before you begin
@@ -53,7 +105,7 @@ Check the balance of FlexVol or FlexGroup volumes in an FSx for ONTAP file syste
 +
 When a volume is unbalanced, consider <<Rebalance volume capacity,rebalancing it>>.
 
-== Rebalance volume capacity
+=== Rebalance volume capacity
 Rebalance one or more unbalanced volumes. 
 
 NOTE: A Workload Factory admin can <<Stop a volume rebalance operation,stop rebalancing>> during the operation.
@@ -126,7 +178,7 @@ FlexGroup member volumes are moved one at a time during rebalancing. When the op
 
 ====
 
-== Stop a volume rebalance operation
+=== Stop a volume rebalance operation
 
 Stop a rebalance operation at any time; it isn't disruptive. Stopping the operation aborts active volume moves.
 

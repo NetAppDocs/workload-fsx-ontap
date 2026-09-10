@@ -25,14 +25,24 @@ sidebar:
           url: /learn-fsx-ontap.html
         - title: Quick start
           url: /quick-start.html
-        - title: Create an FSx for ONTAP file system
-          url: /create-file-system.html
     - title: Use Amazon FSx for NetApp ONTAP
       entries:
         - title: Explore savings
           url: /explore-savings.html
-        - title: Track and analyze FSx for ONTAP costs
-          url: /track-costs.html
+        - title: Create storage resources
+          entries: 
+            - title: Create a storage VM
+              url: /create-storage-vm.html 
+            - title: Create an FSx for ONTAP file system
+              url: /create-file-system.html
+            - title: Create a volume
+              url: /create-volume.html  
+            - title: Create an igroup
+              url: /create-igroup.html
+            - title: Create a block device  
+              url: /create-block-device.html     
+        - title: Discover and view cache volumes
+          url: /discover-cache-volumes.html  
         - title: Use links
           entries: 
             - title: Learn about links
@@ -41,38 +51,18 @@ sidebar:
               url: /create-link.html
             - title: Manage links
               url: /manage-links.html    
-        - title: Create a volume
-          url: /create-volume.html
-        - title: Discover and view cache volumes
-          url: /discover-cache-volumes.html  
         - title: Access your data
-          url: /access-data.html
-        - title: Create block storage resources
-          entries: 
-            - title: Create an igroup
-              url: /create-igroup.html
-            - title: Create a block device  
-              url: /create-block-device.html      
-        - title: Create a storage VM
-          url: /create-storage-vm.html                
+          url: /access-data.html  
+        - title: Track and analyze FSx for ONTAP costs
+          url: /track-costs.html                        
         - title: Protect your data
           entries:
             - title: Data protection overview 
               url: /data-protection-overview.html
-            - title: Use snapshots
-              entries:
-                - title: Create a snapshot
-                  url: /create-snapshot.html
-                - title: Create a snapshot policy
-                  url: /create-snapshot-policy.html
-                - title: Restore a volume from a snapshot
-                  url: /restore-volume-from-snapshot.html 
+            - title: Use snapshots to protect data
+              url: /use-snapshots.html
             - title: Use backups to object storage
-              entries: 
-                - title: Create a manual backup
-                  url: /create-backup.html
-                - title: Restore a volume from a backup
-                  url: /restore-from-backup.html
+              url: /use-backups.html
             - title: Replicate data
               url: /create-replication.html
             - title: Protect data with Autonomous Ransomware Protection
@@ -97,24 +87,16 @@ sidebar:
           url: /analyze-events.html
         - title: Volume administration
           entries:  
-            - title: Edit volume autogrow
-              url: /edit-volume-autogrow.html
-            - title: Adjust volume capacity
-              url: /adjust-volume-capacity.html
+            - title: Manage volume capacity
+              url: /manage-volume-capacity.html
             - title: Set volume latency thresholds
               url: /set-volume-latency-thresholds.html
-            - title: Rebalance volume capacity
-              url: /rebalance-volume.html
-            - title: Manage immutable files 
-              url: /manage-immutable-files.html  
-            - title: Manage volume tags
-              url: /manage-volume-tags.html
+            - title: Manage volume settings
+              url: /manage-volume-settings.html  
             - title: Manage cache volumes
               url: /manage-cache-volumes.html
             - title: Change a tiering policy
               url: /change-tiering-policy.html   
-            - title: Update storage efficiency
-              url: /update-storage-efficiency.html
             - title: Manage NFS export policies
               url: /manage-nfs-export-policy.html  
             - title: Manage SMB/CIFS shares

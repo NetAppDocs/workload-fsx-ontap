@@ -1,0 +1,70 @@
+---
+sidebar: sidebar
+permalink: manage-volume-settings.html
+keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency
+summary: "Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes." 
+---
+= Manage volume settings in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Customize FSx for ONTAP volume settings in NetApp Workload Factory to fit your organization's needs. You can manage volume tags to categorize resources, update storage efficiency settings to optimize space and cost savings, and manage immutable files settings to control data retention and protect against unauthorized changes.
+
+== Manage volume tags
+Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes in NetApp Workload Factory. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Volumes explorer*. 
+. Select the actions menu for the volume to modify tags for. 
+. Select *Basic actions* then *Edit volume tags*. 
+. On the Edit volume tags page, add, edit, or remove tags. 
++
+The maximum number of tags you can apply to a volume is 50.
+. Select *Apply*. 
+
+== Update volume storage efficiency 
+Update the storage efficiency setting after volume creation. 
+
+The storage efficiency feature includes deduplication, data compression, and data compaction to achieve optimal space savings on a FlexVol volume. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. Data compaction stores more data in less space to increase storage efficiency. 
+
+If you chose not to enable storage efficiency when you created a volume, you can enable the setting for potential space and cost savings at any time. 
+
+Volumes use thin provisioning whether you enable or disable storage efficiency. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Volumes explorer*. 
+. Select the actions menu of the volume to update the storage efficiency setting for. 
+. Select *Advanced actions*, then *Set storage efficiency*.  
+. Choose to enable or disable volume storage efficiency.
+. Select *Apply* to save the change. 
+
+== Manage immutable files for a volume in NetApp Workload Factory
+You can update certain immutable files settings for a volume when the feature is enabled, such as the retention policy and periods, the autocommit period, and volume append mode.
+
+Note that enabling immutable files is only possible during link:create-volume.html[volume creation].
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
+. From the Storage menu, select *Volumes explorer*. 
+. Select the actions menu of the volume to update. 
+. Select *Data protection actions*, then *Manage immutable files*.
+. On the Manage Immutable files page, you can update the following:  
+* *Retention period*: select *Unspecified* or *Specify period*. 
++
+** *Unspecified*: The default minimum period is "0" years and the default maximum period is "30 years".
+** *Specify period*: Option to define the retention policy, minimum and maximum periods, the autocommit feature, and the volume append mode feature. Provide the following details: 
+*** *Retention policy*: This period must be greater than or equal to the minimum retention period and less than or equal to the maximum retention period. 
+*** *Minimum and maximum periods*: Set the minimum and maximum periods to commit files in this volume to an immutable WORM state. 
+* *Autocommit*: enable or disable the feature to automatically commit files to WORM that haven't been modified during the Autocommit period.
+* *Privileged delete*: Enable or disable the feature. Enabling the feature allows a SnapLock administrator to delete an unexpired WORM volume. This feature is only supported in Enterprise retention mode. 
+* *Volume append mode*: enable or disable the feature. Enabling volume append mode enables you to add new content to WORM files. 
+. Click *Apply*. 
+
+.Result
+The updates now apply to the volume. 
