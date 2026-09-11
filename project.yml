@@ -69,6 +69,8 @@ sidebar:
               url: /create-replication.html
             - title: Replicate a data protection volume
               url: /cascade-replication.html
+            - title: Replicate a storage VM to another file system
+              url: /replicate-svm-to-file-system.html              
             - title: Track replication delays
               url: /track-replication-delays.html  
             - title: Manage replication relationships
@@ -143,14 +145,10 @@ sidebar:
               url: /delete-file-system.html
         - title: Manage storage VMs
           entries: 
-            - title: Replicate a storage VM to another file system
-              url: /replicate-svm-to-file-system.html
             - title: Configure and update Active Directory for a storage VM
               url: /configure-active-directory.html
-            - title: Manage storage VM tags
-              url: /manage-svm-tags.html
-            - title: Reset storage VM password
-              url: /reset-svm-password.html
+            - title: Manage storage VM settings
+              url: /manage-svm-settings.html
             - title: Delete a storage VM 
               url: /delete-svm.html
         - title: Manage performance
