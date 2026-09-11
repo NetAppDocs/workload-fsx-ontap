@@ -46,9 +46,7 @@ sidebar:
         - title: Discover and view cache volumes
           url: /discover-cache-volumes.html     
         - title: Access your data
-          url: /access-data.html  
-        - title: Track and analyze FSx for ONTAP costs
-          url: /track-costs.html                        
+          url: /access-data.html                         
     - title: Protect your data
       entries:
         - title: Data protection overview 
@@ -97,6 +95,8 @@ sidebar:
               url: /improve-configurations.html 
         - title: Analyze FSx for ONTAP EMS events      
           url: /analyze-events.html
+        - title: Track and analyze FSx for ONTAP costs
+          url: /track-costs.html           
         - title: Manage volumes
           entries:  
             - title: Manage volume capacity

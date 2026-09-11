@@ -15,11 +15,13 @@ indexpage:
     - title: Use FSx for ONTAP
       links:
         - title: Explore savings
-          url: /explore-savings.html
-        - title: Track costs and usage for FSx for ONTAP resources
-          url: /track-costs.html    
+          url: /explore-savings.html  
         - title: Connect to a file system with a link
           url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
+        - title: Create a storage VM
+          url: /create-storage-vm.html
+        - title: Create a volume
+          url: /create-volume.html
     - title: Protect your data
       links:
         - title: Learn about data protection in Workload Factory 
