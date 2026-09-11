@@ -85,16 +85,14 @@ sidebar:
           url: /create-cyber-vault.html  
     - title: Manage FSx for ONTAP in Workload Factory
       entries:
-        - title: Monitor operations with Tracker
-          url: /monitor-operations.html
+        - title: Analyze FSx for ONTAP EMS events      
+          url: /analyze-events.html
         - title: Implement file system best practices
           entries: 
             - title: Configuration analysis for FSx for ONTAP
               url: /configuration-analysis.html
             - title: Implement well-architected file system configurations
               url: /improve-configurations.html 
-        - title: Analyze FSx for ONTAP EMS events      
-          url: /analyze-events.html
         - title: Track and analyze FSx for ONTAP costs
           url: /track-costs.html           
         - title: Manage volumes
@@ -151,6 +149,8 @@ sidebar:
               url: /manage-svm-settings.html
             - title: Delete a storage VM 
               url: /delete-svm.html
+        - title: Monitor operations with Tracker
+          url: /monitor-operations.html              
     - title: Reference
       entries: 
         - title: Performance for FSx for ONTAP
