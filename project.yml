@@ -40,7 +40,9 @@ sidebar:
             - title: Create an igroup
               url: /create-igroup.html
             - title: Create a block device  
-              url: /create-block-device.html     
+              url: /create-block-device.html  
+        - title: Learn about links
+          url: /learn-about-links.html
         - title: Discover and view cache volumes
           url: /discover-cache-volumes.html     
         - title: Access your data
