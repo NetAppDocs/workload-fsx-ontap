@@ -31,10 +31,10 @@ sidebar:
           url: /explore-savings.html
         - title: Create storage resources
           entries: 
-            - title: Create a storage VM
-              url: /create-storage-vm.html 
             - title: Create an FSx for ONTAP file system
               url: /create-file-system.html
+            - title: Create a storage VM
+              url: /create-storage-vm.html 
             - title: Create a volume
               url: /create-volume.html  
             - title: Create an igroup
@@ -137,26 +137,18 @@ sidebar:
           entries: 
             - title: Adjust file system capacity
               url: /adjust-file-system-capacity.html
-            - title: Manage file system tags
-              url: /manage-fsx-tags.html
-            - title: Reset fsxadmin password
-              url: /reset-fsxadmin-password.html
+            - title: Manage file system settings
+              url: /manage-file-system-settings.html
+            - title: Provision IOPS for a file system
+              url: /provision-iops.html              
             - title: Delete a file system
               url: /delete-file-system.html
         - title: Manage storage VMs
           entries: 
-            - title: Configure and update Active Directory for a storage VM
-              url: /configure-active-directory.html
             - title: Manage storage VM settings
               url: /manage-svm-settings.html
             - title: Delete a storage VM 
               url: /delete-svm.html
-        - title: Manage performance
-          entries: 
-            - title: Provision IOPS for a file system
-              url: /provision-iops.html
-            - title: Update throughput capacity for a file system
-              url: /update-throughput-capacity.html  
     - title: Reference
       entries: 
         - title: Performance for FSx for ONTAP
