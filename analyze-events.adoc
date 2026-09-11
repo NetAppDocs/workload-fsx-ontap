@@ -53,7 +53,7 @@ To view latency events you must do the following:
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _view, planning, and analysis_ permissions^] in your AWS account.
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[connect to the file system using a link^].
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Connect to the file system using a link^].
 
 To analyze EMS and latency events and receive AI-powered insights and recommendations, ensure the following:
 
