@@ -26,10 +26,10 @@ For a complete file system analysis, you must do the following:
 
 * Associate a link. Link connectivity lets Workload Factory analyze all file system configurations like data protection and performance.
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. 
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. 
 * Grant _view, planning, and analysis_ permissions in your AWS account. 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^].
 
 include::https://raw.githubusercontent.com/NetAppDocs/console-well-architected/main/_include/fsx-configurations.adoc[]
 

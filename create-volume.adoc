@@ -47,7 +47,7 @@ Review the following prerequisites before you create a volume:
 * You must have an FSx for ONTAP file system in the Workload Factory console. 
 * You must have a storage VM. 
 * For protocol access, complete the following: 
-** To configure access to the volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+** To configure access to the volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
 ** You must configure access for the protocol you select, either SMB/CIFS, NFS, or iSCSI. 
 
 == Create a volume
@@ -122,7 +122,7 @@ Complete the following fields to set up block access to the volume.
 ONTAP achieves storage efficiency using deduplication and compression features. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. 
 .. *Snapshot policy*: Select the snapshot policy to specify the frequency and retention of snapshots. 
 +
-The following are default policies from AWS. To display existing snapshot policies, you must link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[associate a link]. 
+The following are default policies from AWS. To display existing snapshot policies, you must link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[associate a link^]. 
 +
 `default`::: This policy automatically creates snapshots on the following schedule, with the oldest snapshot copies deleted to make room for newer copies:
 +
@@ -159,7 +159,7 @@ _Balanced (Auto)_ is the default tiering policy when creating a volume using the
 +
 If the feature is unavailable, it is because of one of the following reasons: 
 +
-* A link is not associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* A link is not associated with the file system. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation.
 * Volumes with immutable files and volumes with the NVMe protocol are not supported for ARP/AI. iSCSI volumes are supported beginning with ONTAP 9.17.1.
 * The file system already has an ARP/AI policy.
 

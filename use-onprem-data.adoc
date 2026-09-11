@@ -62,7 +62,7 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 
 * You must discover an on-premises ONTAP cluster to replicate its volume data.
 * You must have an available FSx for ONTAP file system to be the target for the replication.
-* Both the on-premises ONTAP cluster and the FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* Both the on-premises ONTAP cluster and the FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

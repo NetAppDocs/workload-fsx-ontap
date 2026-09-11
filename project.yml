@@ -42,38 +42,46 @@ sidebar:
             - title: Create a block device  
               url: /create-block-device.html     
         - title: Discover and view cache volumes
-          url: /discover-cache-volumes.html  
-        - title: Use links
-          entries: 
-            - title: Learn about links
-              url: /links-overview.html
-            - title: Connect to a file system with a link
-              url: /create-link.html
-            - title: Manage links
-              url: /manage-links.html    
+          url: /discover-cache-volumes.html     
         - title: Access your data
           url: /access-data.html  
         - title: Track and analyze FSx for ONTAP costs
           url: /track-costs.html                        
-        - title: Protect your data
-          entries:
-            - title: Data protection overview 
-              url: /data-protection-overview.html
+    - title: Protect your data
+      entries:
+        - title: Data protection overview 
+          url: /data-protection-overview.html
+        - title: Use snapshots to protect data
+          entries: 
             - title: Use snapshots to protect data
               url: /use-snapshots.html
-            - title: Use backups to object storage
-              url: /use-backups.html
+            - title: Manage snapshot policies
+              url: /manage-snapshot-policy.html
+            - title: Enable and edit snapshots for long-term retention
+              url: /enable-snapshots-long-term.html 
+            - title: Manage snapshots
+              url: /manage-snapshots.html    
+        - title: Use backups to object storage
+          url: /use-backups.html
+        - title: Use replication to protect data
+          entries: 
             - title: Replicate data
               url: /create-replication.html
-            - title: Protect data with Autonomous Ransomware Protection
-              url: /ransomware-protection.html   
-            - title: Clone a volume
-              url: /clone-volume.html  
-            - title: Use on-premises ONTAP data
-              url: /use-onprem-data.html
-            - title: Create a cyber vault to protect data
-              url: /create-cyber-vault.html  
-    - title: Administer and monitor
+            - title: Replicate a data protection volume
+              url: /cascade-replication.html
+            - title: Track replication delays
+              url: /track-replication-delays.html  
+            - title: Manage replication relationships
+              url: /manage-replication.html  
+        - title: Protect data with Autonomous Ransomware Protection
+          url: /ransomware-protection.html   
+        - title: Clone a volume
+          url: /clone-volume.html  
+        - title: Use on-premises ONTAP data
+          url: /use-onprem-data.html
+        - title: Create a cyber vault to protect data
+          url: /create-cyber-vault.html  
+    - title: Manage FSx for ONTAP in Workload Factory
       entries:
         - title: Monitor operations with Tracker
           url: /monitor-operations.html
@@ -85,7 +93,7 @@ sidebar:
               url: /improve-configurations.html 
         - title: Analyze FSx for ONTAP EMS events      
           url: /analyze-events.html
-        - title: Volume administration
+        - title: Manage volumes
           entries:  
             - title: Manage volume capacity
               url: /manage-volume-capacity.html
@@ -117,25 +125,23 @@ sidebar:
               url: /split-cloned-volume.html    
             - title: Delete a volume
               url: /delete-volume.html
-        - title: Block storage administration
+        - title: Manage block storage
           entries:
             - title: Manage block storage
               url: /manage-block-storage.html
             - title: Apply tags to block devices
               url: /apply-block-device-tags.html  
-        - title: File system administration
+        - title: Manage file systems
           entries: 
-            - title: Adjust file system capacity manually
-              url: /increase-file-system-capacity.html
-            - title: Manage file system capacity automatically
-              url: /manage-capacity-automatically.html
+            - title: Adjust file system capacity
+              url: /adjust-file-system-capacity.html
             - title: Manage file system tags
               url: /manage-fsx-tags.html
             - title: Reset fsxadmin password
               url: /reset-fsxadmin-password.html
             - title: Delete a file system
               url: /delete-file-system.html
-        - title: Storage VM administration
+        - title: Manage storage VMs
           entries: 
             - title: Replicate a storage VM to another file system
               url: /replicate-svm-to-file-system.html
@@ -147,29 +153,7 @@ sidebar:
               url: /reset-svm-password.html
             - title: Delete a storage VM 
               url: /delete-svm.html
-        - title: Data protection administration
-          entries:
-            - title: Snapshots
-              entries: 
-                - title: Manage snapshot policies
-                  url: /manage-snapshot-policy.html
-                - title: Enable and edit snapshots for long-term retention
-                  url: /enable-snapshots-long-term.html 
-                - title: Manage snapshots
-                  url: /manage-snapshots.html  
-            - title: Backups
-              entries: 
-                - title: Manage volume backup schedule
-                  url: /manage-backup-schedule.html
-            - title: Replication
-              entries: 
-                - title: Replicate a data protection volume
-                  url: /cascade-replication.html
-                - title: Track replication delays
-                  url: /track-replication-delays.html  
-                - title: Manage replication relationships
-                  url: /manage-replication.html
-        - title: Performance administration
+        - title: Manage performance
           entries: 
             - title: Provision IOPS for a file system
               url: /provision-iops.html

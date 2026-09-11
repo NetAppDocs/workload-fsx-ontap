@@ -1,33 +1,60 @@
 ---
 sidebar: sidebar
-permalink: manage-capacity-automatically.html
-keywords: auto capacity, automatic capacity management, inodes management, file system capacity
-summary: "Enabling this feature lets Workload Factory automatically add incremental storage or inodes to an FSx for ONTAP file system as capacity needs change over time."  
+permalink: increase-file-system-capacity.html
+keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity
+summary: "Manually adjust the SSD storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets."
 ---
-= Manage capacity and inodes automatically in NetApp Workload Factory
+= Adjust file system capacity in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Enabling capacity management lets NetApp Workload Factory automatically add incremental storage to an FSx for ONTAP file system as capacity needs change over time. Additionally, enabling this feature removes the need to monitor capacity manually. 
+Adjust the solid-state drive (SSD) storage capacity of an FSx for ONTAP file system to match the needs of workloads with varying active working sets in NetApp Workload Factory. Manually increase capacity when usage exceeds your threshold, or reduce it when you're not using the working sets to save money. Alternatively, enable automatic capacity management so Workload Factory adds incremental storage as needs change over time, removing the burden of manual monitoring.
 
-== About this task 
-The system scans the FSx for ONTAP file system every 30 minutes. It checks if incremental storage needs to be added and verifies available volume inodes. The count increases based on automatic capacity management thresholds.
+NOTE: Decreasing SSD storage capacity is only supported for second-generation file systems.
 
-Enabling inode management lets NetApp Workload Factory automatically add incremental inodes to an FSx for ONTAP file system as capacity needs change. This feature removes the need for manual inode monitoring.
+== Adjust file system capacity manually
+With elastic file system capacity, you can dynamically adjust the capacity of your file systems to match the needs of your workloads.
 
-Only one account can manage this feature. 
+.About this task
+Changing file system capacity impacts IOPS for your FSx for ONTAP file system. 
+
+When you automatically link:provision-iops.html[provision IOPS] for a file system, IOPS increases or decreases by 3 IOPS with every 1 GiB increase or decrease in SSD capacity. 
+
+When you link:provision-iops.html[provision IOPS] manually, you might need to increase your IOPS allocation to support the increased file system capacity. 
+
+For SSD storage capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
+
+.Before you begin
+To adjust capacity for a file system, you must first link:manage-capacity-automatically.html[disable automatic capacity management]. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Dashboard, select *Adjust SSD capacity*. 
+. Select the file system you want to adjust capacity for and then select *Continue*.
+. In the Adjust SSD capacity dialog, enter a number for *Provisioned capacity*. 
+. Select the unit for the provisioned capacity.
+. Select *Apply*. 
+
+== Enable automatic capacity and inode management
+Enable capacity and inode management to let NetApp Workload Factory automatically add incremental storage an FSx for ONTAP file system and inodes (files) to a volume as capacity needs change over time. These features remove the need to monitor capacity and inodes manually. 
+
+Only one account can manage these features. 
+
+=== Enable automatic capacity management and capacity notifications
+Enable automatic capacity management to automatically add incremental storage up to the maximum size limit for an FSx for ONTAP file system. Set up notifications to get alerts when the file system reaches a certain capacity threshold.
+
+.About this task 
+Workload Factory scans the FSx for ONTAP file system every 30 minutes to check if incremental storage needs to be added.
 
 The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is 524,288 GiB. To request a quota increase, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation. 
-
-== Enable automatic capacity management and capacity notifications
-Enable automatic capacity management to automatically add incremental storage up to the maximum size limit for an FSx for ONTAP file system. Set up notifications to get alerts when the file system reaches a certain capacity threshold.
 
 .Before you begin
 Consider the following before you begin: 
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
-* To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
 * You shouldn't enable this feature during data migration because AWS imposes a minimum six-hour cool down period between SSD capacity increases. This restriction might delay adjustments, so plan accordingly.
 
 .Steps
@@ -61,17 +88,18 @@ The capacity notification setting is available only if you link:https://docs.net
 .Result
 A file system scan occurs every 30 minutes to determine whether it needs additional capacity.
 
-== Enable inode management for a file system
-Enable automatic inode management to increase the number of inodes (files) per volume up to the allowable limit.
+=== Enable inode management for a file system
+Enable automatic inode management to increase the number of inodes (files) per volume up to the allowable limit. 
 
-A scan of the FSx for ONTAP file system occurs every 30 minutes. It verifies available volume inodes and checks if incremental inodes need to be added. The count increases based on automatic inode management thresholds.
+.About this task
+Workload Factory scans the FSx for ONTAP file system every 30 minutes to verify available volume inodes and to check if incremental inodes need to be added. The count increases based on automatic inode management thresholds.
 
 NOTE: *Terraform users*: Terraform has a limitation that requires that all operations are completed within Terraform. Inode management isn't supported in Terraform, but you can enable automatic inode management in the Workload Factory console.
 
 .Before you begin
 Consider the following before you begin:
 
-* To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
 * Automatic inode management can be set up with a _warning threshold_ that triggers a notification from the Workload Factory notification service. To use this feature, you must link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enable the Workload Factory notification service^] first.
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
 
