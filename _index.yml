@@ -19,10 +19,18 @@ indexpage:
         - title: Track costs and usage for FSx for ONTAP resources
           url: /track-costs.html    
         - title: Connect to a file system with a link
-          url: /create-link.html   
-        - title: Protect your data
-          url: /data-protection-overview.html     
-    - title: Administer and monitor
+          url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
+    - title: Protect your data
+      links:
+        - title: Learn about data protection in Workload Factory 
+          url: /data-protection-overview.html
+        - title: Use snapshots to protect data
+          url: /use-snapshots.html
+        - title: Use backups to protect data
+          url: /use-backups.html
+        - title: Use replication to protect data
+          url: /create-replication.html
+    - title: Manage FSx for ONTAP
       links:
         - title: Monitor operations with Tracker
           url: /monitor-operations.html

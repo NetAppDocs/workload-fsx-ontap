@@ -26,7 +26,7 @@ Discover an on-premises ONTAP cluster in NetApp Workload Factory so that you can
 Make sure you have the following before you begin: 
 
 * An FSx for ONTAP file system for replication.
-* A connected link to associate with the discovered on-premises cluster. If you don't have a link, you'll need to link:create-link.html[create one]. 
+* A connected link to associate with the discovered on-premises cluster. If you don't have a link, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[create one^]. 
 * ONTAP user credentials with required permissions. 
 * On-premises ONTAP version 9.8 and above.
 * Connectivity as shown in the following diagram. 

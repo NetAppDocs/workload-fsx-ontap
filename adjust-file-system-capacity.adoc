@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: increase-file-system-capacity.html
+permalink: adjust-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity
 summary: "Manually adjust the SSD storage capacity of an FSx for ONTAP file system to meet the needs of your project-based workloads with varying active working sets."
 ---
@@ -54,7 +54,7 @@ The maximum amount of SSD storage capacity for all FSx for ONTAP file systems is
 Consider the following before you begin: 
 
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
-* To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation. 
+* To make sure volume inodes increase along with storage capacity, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
 * You shouldn't enable this feature during data migration because AWS imposes a minimum six-hour cool down period between SSD capacity increases. This restriction might delay adjustments, so plan accordingly.
 
 .Steps
@@ -99,7 +99,7 @@ NOTE: *Terraform users*: Terraform has a limitation that requires that all opera
 .Before you begin
 Consider the following before you begin:
 
-* To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* To manage volume inodes automatically, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation.
 * Automatic inode management can be set up with a _warning threshold_ that triggers a notification from the Workload Factory notification service. To use this feature, you must link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[enable the Workload Factory notification service^] first.
 * You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant credentials with the _view, planning, and analysis_ permission policy^] in Workload Factory to complete this task.
 

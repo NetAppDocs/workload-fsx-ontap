@@ -19,7 +19,7 @@ Workload Factory identifies the hosts that consume storage and the types of work
 === LIF details available in NetApp Workload Factory
 We display all file system and storage VM endpoints directly in the Overview tab for a file system. Direct endpoint visibility within the Workload Factory console makes it easier to monitor network access, endpoints, and failover status without using the CLI or CloudShell. To display LIF details including roles, endpoints, nodes, IP addresses, and status, you'll need to associate a link with the file system.
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^[Learn how to associate a link with your file system in NetApp Workload Factory].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate a link with your file system in NetApp Workload Factory^].
 
 === Cost enhancements
 
