@@ -6,7 +6,7 @@ summary: "Protect your volume data from accidental deletion, corruption, and oth
 ---
 = Use backups to protect data in NetApp Workload Factory
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ./media/
 
 [.lead]
 Protect your volume data from accidental deletion, corruption, and other data loss events by creating and restoring backups in NetApp Workload Factory. You can set up a backup schedule, create an on-demand backup of a volume outside your regularly scheduled backups, and you can restore a volume from an existing backup to any FSx for ONTAP file system in your AWS account.
