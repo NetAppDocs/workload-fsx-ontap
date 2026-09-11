@@ -32,12 +32,14 @@ indexpage:
           url: /create-replication.html
     - title: Manage FSx for ONTAP
       links:
-        - title: Monitor operations with Tracker
-          url: /monitor-operations.html
-        - title: View the well-architected status of your FSx for ONTAP file systems 
+        - title: Change the tiering policy of a volume
+          url: /change-tiering-policy.html
+        - title: Improve FSx for ONTAP file system configurations
           url: /improve-configurations.html  
-        - title: Analyze FSx for ONTAP EMS events      
-          url: /analyze-events.html
+        - title: Manage the snapshot policy of a volume
+          url: /manage-snapshot-policy.html
+        - title: Manage volume capacity
+          url: /manage-volume-capacity.html
     - title: Knowledge and support
       links:
         - title: Register for support
