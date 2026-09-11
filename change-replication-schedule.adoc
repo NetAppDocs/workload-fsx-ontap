@@ -11,7 +11,7 @@ summary: "Change the replication schedule of the source volume in a replication 
 [.lead]
 Change the replication schedule of the source volume in a replication relationship in NetApp Workload Factory. 
 
-Choose how frequently snapshots from the source volume are transferred to the replicated volume to match your required point objectives (RPOs). 
+Choose how frequently snapshots from the source volume are transferred to the replicated volume to match your required point objectives (RPOs).  
 
 When an on-premises ONTAP cluster is the target for the replication relationship, changing the replication schedule isn't supported. 
 
