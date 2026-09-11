@@ -69,6 +69,8 @@ sidebar:
               url: /create-replication.html
             - title: Replicate a data protection volume
               url: /cascade-replication.html
+            - title: Replicate on-premises ONTAP data to FSx for ONTAP
+              url: /use-onprem-data.html              
             - title: Replicate a storage VM to another file system
               url: /replicate-svm-to-file-system.html              
             - title: Track replication delays
@@ -79,8 +81,6 @@ sidebar:
           url: /ransomware-protection.html   
         - title: Clone a volume
           url: /clone-volume.html  
-        - title: Use on-premises ONTAP data
-          url: /use-onprem-data.html
         - title: Create a cyber vault to protect data
           url: /create-cyber-vault.html  
     - title: Manage FSx for ONTAP in Workload Factory
