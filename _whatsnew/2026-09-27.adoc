@@ -36,7 +36,7 @@ Workload Factory selects a workload by default based on the characteristics of t
 
 ==== Volumes explorer displays volume latency
 
-Volumes explorer now displays volume latency information in the table, allowing you to monitor and analyze the performance of your volumes more effectively.
+Volumes explorer displays volume latency status with the following statuses: not configured, within threshold, and exceeded. This helps you find and fix performance bottlenecks at the volume level.
 
 ==== Volumes explorer displays ARP/AI status for volumes across all file systems
 
@@ -68,11 +68,3 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 All link documentation is now covered in the Workload Factory setup and administration documentation. You can still refer to the link:links-overview.html[Learn about NetApp Workload Factory links] from the Workload Factory FSx for ONTAP documentation and find links to the relevant pages in the setup and administration documentation.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn more about configuring links in the Workload Factory console.^]
-
-=== Volumes explorer improvement
-
-The Volumes explorer screen now includes a card with NetApp Autonomous Ransomware Protection with AI (ARP/AI) status for volumes across all your file systems. The card displays the number of volumes that are protected and if any volumes are at risk. From the card, you can *Analyze attacks* to investigate potential ransomware threats and take appropriate actions to secure your data.
-
-image:volumes-explorer-arp-ai-card.png[Screenshot shows a new card on the Volumes explorer screen displaying ARP/AI status for volumes across all file systems. The card indicates the number of protected volumes and any volumes at risk. Users can select the text Analyze attacks to investigate suspected attacks and take appropriate actions to secure their data.]
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ransomware protection.]
