@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: manage-snapshot-policy.html
-keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
+keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
 summary: "Manage snapshot policies for FSx for ONTAP volumes in Workload Factory. A snapshot policy defines how the system creates snapshots for a volume."
 ---
 = Manage snapshot policies for volumes in NetApp Workload Factory
@@ -9,14 +9,34 @@ summary: "Manage snapshot policies for FSx for ONTAP volumes in Workload Factory
 :imagesdir: ./media/
 
 [.lead]
-Manage snapshot policies for FSx for ONTAP volumes in Workload Factory. A snapshot policy defines how the system creates snapshots for a volume.
+Manage snapshot policies for FSx for ONTAP volumes in Workload Factory. A snapshot policy defines how the system creates snapshots for a volume. 
 
-.About this task
 Snapshot management operations like assigning, changing, and deleting snapshot policies for volumes in an FSx for ONTAP file system are managed at the storage VM level. Snapshot policies can be shared with a single storage VM or with all storage VMs. 
 
 Some management tasks require you to associate a link with the FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/links-overview.html[Learn about Workload Factory links^]. 
 
 By default, every volume is associated with the file system's `default` snapshot policy. We recommend using this policy for most workloads.
+
+== Assign a snapshot policy to a volume
+You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume. 
+
+.Before you begin
+You must associate a link to assign a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. In the *FSx for ONTAP* tab, select the actions menu of the file system that contains the volume to assign a snapshot policy to and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the actions menu for the storage VM containing the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. On the Snapshot policy management page, select the actions menu of the snapshot policy and then select *Assign policy to volume*.
+. In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
++
+If the policy contains immutable snapshots, and you want use it, accept the statement. 
+. Select *Assign*. 
+
+.Result
+The snapshot policy is assigned to the volume. 
 
 == Change a snapshot policy
 You can change the snapshot policy name, schedule, and number of copies to retain, and enable or disable immutable snapshots. It isn't possible to enable or disable policy sharing across storage VMs. This option is available only during snapshot policy creation.
@@ -59,26 +79,34 @@ You must associate a link to enable immutable snapshots. link:https://docs.netap
 .Result
 The volume snapshot is now locked.
 
-== Assign a snapshot policy to a volume
-You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume. 
+== Enable long-term snapshot retention in NetApp Workload Factory
+In NetApp Workload Factory, you can enable snapshots for long-term retention, which lets you replicate specific snapshots for long-term disaster recovery. 
 
-.Before you begin
-You must associate a link to assign a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+Long-term retention enables business services to continue operating even in the event of a complete site failure, supporting transparent failover of applications using a secondary copy.
+
+The same steps apply for enabling and editing snapshots for long-term retention.
+
+When an on-premises ONTAP cluster is the target for the replication relationship, changing snapshots for long-term retention isn't supported. 
+
+NOTE: Editing long-term retention isn't available when replicating storage VM data and configuration settings.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
-. In the *FSx for ONTAP* tab, select the actions menu of the file system that contains the volume to assign a snapshot policy to and then select *Manage*. 
-. In the file system overview, select the *Storage VMs* tab.
-. From the *Storage VMs* tab, select the actions menu for the storage VM containing the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
-. On the Snapshot policy management page, select the actions menu of the snapshot policy and then select *Assign policy to volume*.
-. In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
-+
-If the policy contains immutable snapshots, and you want use it, accept the statement. 
-. Select *Assign*. 
-
-.Result
-The snapshot policy is assigned to the volume. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage*.  
+. From the file system overview, select the *Replication relationships* tab. 
+. In the Replication relationships tab, select the actions menu of the replication relationship schedule to change. 
+. Select *Edit long-term retention*. 
+. In the Edit long-term retention dialog, enable or disable snapshots for long-term retention. 
+. If you select to disable snapshots for long-term retention, select *Apply* to complete this operation. 
+. If you select to enable snapshots for long-term retention, choose between selecting an existing policy or creating a new policy. 
+.. To use an existing policy, select it from the dropdown menu. 
+.. To create a new policy, provide the following: 
+... *Policy name*: Enter a policy name. 
+... *Snapshot policies*: Select one or more snapshot policies. 
+... *Copies to retain*: Enter the number of snapshot copies to retain on the target file system. 
+. Select *Apply*. 
 
 == Remove a snapshot policy from a volume
 Remove a snapshot policy from a volume because you no longer want snapshots of the volume or because you want to delete a snapshot policy that is assigned to multiple volumes. To <<Delete a snapshot policy,delete a snapshot policy>> that is assigned to more than one volume, you must manually remove it from all volumes. 
