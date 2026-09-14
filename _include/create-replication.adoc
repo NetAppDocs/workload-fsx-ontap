@@ -35,6 +35,7 @@ If you selected the migration use case, Workload Factory automatically selects t
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
 Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+
 . Under Replication settings, provide the following: 
 .. *Initialize replication relationship*: Choose to initialize the replication relationship immediately after creating the replication relationship or later. Note that initialization can be time-consuming, and you might want to run the baseline transfer in off-peak hours.
 + 
