@@ -12,11 +12,20 @@ In addition, you can filter the cost data by one or more file systems and one or
 
 All cost information comes directly from the AWS Cost Explorer API except for file system and volume-level cost allocation; these costs are estimated by Workload Factory.
 
+=== Well-architected dashboard access
+Access to the well-architected dashboard is available from the main menu in the Workload Factory console and from within a file system. To find the well-architected dashboard from the main menu, select the main menu and then select *Well-architected*.
+
+image:well-architected-menu-option.png[Well-architected menu option in the Workload Factory console] 
+
 === New recommendations in the well-architected analysis
 Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
 
-* Connect host to failover node: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and suggests connecting hosts to the failover node for reliability.
-* Connect host to preferred node: checks whether hosts are connected to their block devices using the preferred node and suggests connecting hosts to the preferred node for performance efficiency.
+* *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and suggests connecting hosts to the failover node for reliability.
+* *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node and suggests connecting hosts to the preferred node for performance efficiency.
+* *Volume space management configuration*: recommends enabling coordinated volume space management for FSx for ONTAP volumes
+* *FSx integration to AWS MGN*: recommends applying the required AWS MGN readiness configuration to selected FSx for ONTAP file systems
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
 
 === Volumes explorer supports workload selection
 
@@ -24,11 +33,6 @@ Workload Factory selects a workload by default based on the characteristics of t
 
 === Email notification for unhealthy replication relationships
 When the status of a replication relationship is *unhealthy*, Workload Factory will send an email notification every 24 hours while the relationship remains unhealthy. Reminder notifications will stop when the relationship returns to a healthy state.
-
-=== Well-architected dashboard access
-Access to the well-architected dashboard is available from the main menu in the Workload Factory console and from within a file system. To find the well-architected dashboard from the main menu, select the main menu and then select *Well-architected*.
-
-image:well-architected-menu-option.png[Well-architected menu option in the Workload Factory console] 
 
 === Workload selection during volume creation  
 Workload Factory added the *Workloads* field to volume creation so that you can select the workload to associate with the volume. This ensures that the volume is optimized for the intended workload from the moment it is created.
