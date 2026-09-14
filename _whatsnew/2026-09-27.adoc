@@ -43,3 +43,9 @@ Workload Factory now recognizes the preferred FlexCache write mode for volumes a
 Workload Factory now reminds you to complete link association after credentials have been successfully added. While credentials enable resource discovery, advanced ONTAP features require a link to be associated with the discovered file systems. You'll receive the email notification once a week on Monday. 
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure notifications in the Workload Factory console]
+
+=== Volumes explorer improvement
+
+Volumes explorer includes a card with NetApp Autonomous Ransomware Protection with AI (ARP/AI) status for your volumes. The card displays the number of volumes that are protected and if any volumes are at risk. From the card, you can *Analyze attacks* to investigate potential ransomware threats and take appropriate actions to secure your data.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ransomware protection.]
