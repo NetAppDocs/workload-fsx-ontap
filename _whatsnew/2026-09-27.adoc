@@ -27,9 +27,19 @@ Workload Factory now includes the following configurations in the well-architect
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
 
-=== Volumes explorer supports workload selection
+=== Volumes explorer enhancements
+
+==== Volumes explorer supports workload selection
 
 Workload Factory selects a workload by default based on the characteristics of the volume and its usage patterns. Now you can change the workload for one or more volumes from Volumes explorer.
+
+==== Volumes explorer displays volume latency
+
+Volumes explorer now displays volume latency information, allowing you to monitor and analyze the performance of your volumes more effectively.
+
+==== Volumes explorer displays information about file shares and block devices
+
+Volumes explorer now displays information about file shares and block devices, letting you manage and analyze these resources more effectively.
 
 === Email notification for unhealthy replication relationships
 When the status of a replication relationship is *unhealthy*, Workload Factory will send an email notification every 24 hours while the relationship remains unhealthy. Reminder notifications will stop when the relationship returns to a healthy state.
@@ -50,6 +60,8 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 === Volumes explorer improvement
 
-Volumes explorer includes a card with NetApp Autonomous Ransomware Protection with AI (ARP/AI) status for your volumes. The card displays the number of volumes that are protected and if any volumes are at risk. From the card, you can *Analyze attacks* to investigate potential ransomware threats and take appropriate actions to secure your data.
+The Volumes explorer screen now includes a card with NetApp Autonomous Ransomware Protection with AI (ARP/AI) status for volumes across all your file systems. The card displays the number of volumes that are protected and if any volumes are at risk. From the card, you can *Analyze attacks* to investigate potential ransomware threats and take appropriate actions to secure your data.
+
+image:volumes-explorer-arp-ai-card.png[Screenshot shows a new card on the Volumes explorer screen displaying ARP/AI status for volumes across all file systems. The card indicates the number of protected volumes and any volumes at risk. Users can select the text Analyze attacks to investigate suspected attacks and take appropriate actions to secure their data.]
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ransomware protection.]
