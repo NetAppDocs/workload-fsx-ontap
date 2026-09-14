@@ -36,11 +36,9 @@ Consider the following before you begin:
 . On the Replicate data page, under Replication target, provide the following: 
 
 include::_include/create-replication.adoc[]
-//Referenced in repo: storage-management-fsx-ontap in file: use/task-replicate-data.adoc
 
 [start=8]
 //Rachel L: Added a hack to make the last step have a numbered step in the right order.
-. Select *Create*. 
 
 . Select *Create*. 
 
