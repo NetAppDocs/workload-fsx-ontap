@@ -59,9 +59,15 @@ Workload Factory now recognizes the preferred FlexCache write mode for volumes a
 
 === Link creation notification email
 
-Workload Factory now reminds you to complete link association after credentials have been successfully added. While credentials enable resource discovery, advanced ONTAP features require a link to be associated with the discovered file systems. You'll receive the email notification once a week on Monday. 
+Workload Factory now reminds you to complete link association after credentials have been successfully added. While credentials enable resource discovery, advanced ONTAP features require link association with the discovered file systems. You'll receive the email notification once a week on Monday. After you complete the link association, the notifications will stop.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure notifications in the Workload Factory console]
+
+=== Link documentation support
+
+All link documentation is now covered in the Workload Factory setup and administration documentation. You can still refer to the link:links-overview.html[Learn about NetApp Workload Factory links] from the Workload Factory FSx for ONTAP documentation and find links to the relevant pages in the setup and administration documentation.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn more about configuring links in the Workload Factory console.^]
 
 === Volumes explorer improvement
 
