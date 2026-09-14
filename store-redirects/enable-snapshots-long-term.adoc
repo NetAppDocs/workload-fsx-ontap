@@ -1,0 +1,5 @@
+---
+permalink: enable-snapshots-long-term.html
+redirect: workload-fsx-ontap/manage-snapshot-policy.html
+---
+

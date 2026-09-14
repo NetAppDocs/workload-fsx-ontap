@@ -15,7 +15,7 @@ Use the NetApp Workload Factory console to manage cache volumes for FSx for ONTA
 You can manage cache volumes that are associated with cache relationships in the NetApp Workload Factory console. 
 
 .Before you begin
-* You must associate a link to manage cache volumes and relationships. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After you associate the link, return to this operation.
+* You must associate a link to manage cache volumes and relationships. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
 * You must have an existing cache volume to edit.
 
 == Edit the cache volume name
