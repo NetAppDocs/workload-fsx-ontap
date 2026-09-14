@@ -66,5 +66,8 @@ Note that enabling immutable files is only possible during link:create-volume.ht
 * *Volume append mode*: enable or disable the feature. Enabling volume append mode enables you to add new content to WORM files. 
 . Click *Apply*. 
 
-.Result
-The updates now apply to the volume. 
+== Related information
+* link:create-volume.html[Create a volume in Workload Factory]
+* link:manage-volume-capacity.html[Manage volume capacity in Workload Factory]
+* link:change-tiering-policy.html[Change volume tiering policy in Workload Factory]
+* link:manage-s3-access-points.html[Manage S3 access points in Workload Factory]
