@@ -1,19 +1,19 @@
 ---
 sidebar: sidebar
 permalink: create-replication.html
-keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync
-summary: "Create a replication relationship for an FSx for ONTAP file system to avoid data loss in case of an unforeseen disaster."
+keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync, replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume
+summary: "Use replication to protect your data from data loss in case of an unforeseen disaster, to migrate your data, or to cascade replication for data protection volumes in an Amazon FSx for NetApp ONTAP file system"
 ---
 = Replicate data to FSx for ONTAP in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Replicate data in NetApp Workoad Factory to protect against data loss if the region where your data resides experiences a disaster. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. 
+Replicate data in NetApp Workload Factory to protect against data loss if the region where your data resides experiences a disaster. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. Workload Factory also supports cascading replication to extend data protection to tertiary systems or migrate your data. 
 
 When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cut over operation.
 
-== About this task
+== Standard replication
 
 Replication protects your data if a disaster affects your region; it can also be used for migration purposes. 
 
@@ -158,6 +158,40 @@ After you cut over replication for migration use cases, update the following sto
 * Validate broadcast-domain MTU settings are as expected
 * Validate DNS settings are as expected
 * Recreate cache relationships (ONTAP FlexCache relationships) if there were cache volumes in the source storage VM.
+
+If needed, link:change-tiering-policy.html[modify the tiering policy] for the target volume(s) after cutover.
+
+== Cascade replication for data protection volumes
+
+NetApp Workload Factory supports replicating data protection volumes, also called _cascade deployments_. A _cascade deployment_ consists of a chain of relationships in which a source volume is mirrored to a secondary volume (first hop), and the secondary volume is mirrored to a tertiary volume (second hop). If the secondary volume becomes unavailable, you can synchronize the relationship between the primary and tertiary volumes without performing a new baseline transfer.
+
+This feature is supported for FSx for ONTAP file systems with ONTAP version 9.6 and higher. Refer to link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships[ONTAP documentation for compatible ONTAP versions^].
+
+Learn more about link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work[how cascade deployments work^].
+
+.Before you begin
+Consider the following before you begin: 
+
+* Be aware that volumes that are part of a cascade configuration can take longer to resynchronize.
+* If the source volume of the relationship is a data protection volume and is a target of another relationship, reversing the replication relationship isn't supported.
+* One replica of a data protection volume (or a second hop) is supported. It isn't considered best practice to create a second replica of a data protection volume (or a third hop). 
+* Open TCP ports 11104 and 11105 for secure data transfer and management between storage systems. ICMP is optional, but can help with network checks and troubleshooting.  
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system that contains the volume(s) to replicate and then select *Manage*.
+. From the file system overview, select the *Volumes* tab.
+. In the Volumes table, select one or more data protection volumes (DP/replicated volumes), and then select *Replicate data*. 
+. On the Replicate data page, under Replication target, provide the following: 
+
+include::_include/create-replication.adoc[]
+
+. Select *Create*. 
+
+.Result
+The replicated volume or volumes replicate and appear in the *Replication relationships* tab in the target FSx for ONTAP file system.  
 
 == Related information
 
