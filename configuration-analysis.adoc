@@ -23,7 +23,7 @@ Key capabilities include:
 
 Workload Factory analyzes your workloads running on supported cloud storage systems deployments daily. The analysis provides well-architected status, insights, and recommendations. 
 
-After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find configuration issues by category and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Some issues can be fixed automatically by Workload Factory, while others require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find configuration issues by category and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Workload Factory can automatically fix some issues; other issues require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
 
 You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. 
 
@@ -31,7 +31,7 @@ You can also create custom rules in plain language to validate your environments
 
 == Why it matters
 
-Workload Factory applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes applied in the NetApp Console reduce human error, ensure uniform management, and preserve performance and reliability across your workload infrastructures.
+Workload Factory applies best practices to large storage, database, and VMware environments by combining ongoing assessment with recommendation insights and remediation. Automated fixes reduce human error, ensure uniform management, and preserve performance and reliability across your workload infrastructures.
 
 == Analysis requirements
 For a complete file system analysis, you must do the following: 
@@ -100,38 +100,38 @@ Automatic capacity management should be enabled to regularly ensure that the SSD
 
 * *Volume capacity headroom*
 +
-Workload Factory recommends that volume capacity doesn't exceed 80% utilization. This might impact data reads and writes to your application. Volume capacity increases can be manual or automatic using the volume autogrow feature. 
+Keep volume utilization below 80% to prevent potential application read/write impacts. You can increase capacity manually or with volume autogrow.
 
 * *FlexCache write mode*
 +
-For optimal performance, Workload Factory recommends the cache relationship write mode that best suits your workload. Write-around mode provides better performance for read-heavy workloads with small files, whereas write-back mode provides better performance for write-heavy workloads with large files.
+For optimal performance, set the cache relationship write mode to best suit your workload. Write-around mode provides better performance for read-heavy workloads with small files, whereas write-back mode provides better performance for write-heavy workloads with large files.
 
 * *FlexCache replica size*
 +
-Workload Factory recommends enabling volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
+Enable volume autosize and scrubbing on cache volumes to maintain optimal size and focus the cache on hot data for peak efficiency.
 
 * *Host-visible capacity reporting*
 +
-Workload Factory recommends enabling host-visible capacity reporting to provide better visibility into storage usage at the volume level.
+Enable host-visible capacity reporting to provide better visibility into storage usage at the volume level.
 
 * *Operating System (OS) type*
 +
-Workload Factory recommends ensuring that the ONTAP LUN operating system (OS) type value matches the operating system partitioning scheme to achieve I/O alignment. Incorrect configuration might reduce performance.
+Confirm that the ONTAP LUN operating system (OS) type value matches the operating system partitioning scheme to achieve I/O alignment. Incorrect configuration might reduce performance.
 
 * *Block device space management*
 + 
-Workload Factory recommends configuring block device space settings for LUNs used by database host instances to prevent write failures and improve space efficiency on FSx for ONTAP. This configuration applies to the recommended combination of settings for thin-provisioned volumes: space reservation, space allocation, and fractional reserve.
+Configure block device space settings for LUNs used by database host instances to prevent write failures and improve space efficiency on FSx for ONTAP. This configuration applies to the recommended combination of settings for thin-provisioned volumes: space reservation, space allocation, and fractional reserve.
 
 * *Thin provisioning*
 +
-Workload Factory recommends configuring thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
+Configure thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
 
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
 * *Cold data tiering* 
 +
-Enable cold data tiering to reduce SSD storage tier utilization. Workload Factory recommends applying a tiering policy to every volume focused on general data storage. For database volumes, we'll recommend enabling cold data tiering where appropriate. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
+Enable cold data tiering to reduce SSD storage tier utilization. Apply a tiering policy to every volume focused on general data storage. For database volumes, enable cold data tiering where appropriate. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
 
 * *Storage efficiencies* 
 +
@@ -139,34 +139,34 @@ Enable storage efficiencies — compaction, compression, and deduplication — t
 
 * *Backup expiration*
 +
-Workload Factory recommends deleting any manually created backups for volumes that were deleted, and any backups older than two weeks. These backups don't expire automatically, can increase costs, and add complexity if you no longer need them for SLA or recovery.
+Delete any manually created backups for volumes that were deleted, and any backups older than two weeks. These backups don't expire automatically, can increase costs, and add complexity if you no longer need them for SLA or recovery.
 
 * *Snapshot expiration*
 +
-Workload Factory recommends deleting old or manually created snapshots you no longer need. Removing them can lower costs and reduce clutter, especially if they aren't required for your SLA or recovery needs.
+Delete old or manually created snapshots you no longer need. Removing them can lower costs and reduce clutter, especially if they aren't required for your SLA or recovery needs.
 
 * *Inactive block devices*
 +
-After a block device isn't used for seven days, Workload Factory recommends archiving block device data or deleting the unused block device to reduce costs. 
+After a block device isn't used for seven days, archive block device data or delete the unused block device to reduce costs. 
 
 * *Overprovisioned SSD capacity*
 +
-An overprovisioned SSD capacity tier adds unnecessary costs. Workload Factory recommends reducing the SSD tier capacity while maintaining a 20% free space buffer. A decrease operation takes several hours to several days, and other file system operations are unsupported during this time.
+Excess SSD capacity adds unnecessary cost. Reduce the SSD tier while maintaining a 20% free space buffer. The operation may take hours to days, and no other file system operations are supported during that time.
 
 * *Inactive NAS volumes*
 +
-The configuration analysis identifies NAS volumes that are not actively used and recommends deleting or archiving the volumes to reduce costs.
+The configuration analysis identifies NAS volumes that are not actively used and suggests deleting or archiving the volumes to reduce costs.
 
 === Performance efficiency
 Performance efficiency helps you ensure that your storage resources are used effectively and that workloads perform optimally.
 
 * *FlexGroup volumes rebalance*
 +
-Workload Factory recommends rebalancing your FlexGroup volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
+Rebalance your FlexGroup volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
 
 * *FlexVol volumes rebalance*
 +
-Workload Factory recommends rebalancing your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
+Rebalance your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
 
 .What's next
 

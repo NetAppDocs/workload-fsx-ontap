@@ -9,20 +9,16 @@ summary: "Workload Factory scans Amazon FSx for NetApp ONTAP configurations prov
 :imagesdir: ./media/
 
 [.lead]
-Using configuration analysis insights and recommendations, leverage Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, and take action to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
-
-You can also dismiss the analysis of specific storage configurations that don't apply to your storage environment to avoid unnecessary alerts and inaccurate optimization results.
+Use Workload Factory to implement best practices for your FSx for ONTAP file systems. You can easily review the well-architected status, learn about issues with your configurations, and fix issues to improve the architecture of any systems that aren't optimized for reliability, security, efficiency, performance, and cost.
 
 link:configuration-analysis.html[Learn about the configuration analysis and well-architected status.]
 
 == About this task
-Workload Factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. The daily analysis provides the well-architected status, and insights and recommendations with options to automatically fix configuration issues so that your file system meets best practices. 
+Workload Factory analyzes Amazon FSx for NetApp ONTAP file system deployment configurations daily. 
+
+Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. 
 
 Link connectivity allows Workload Factory to scan for issues with performance, data protection, and configurations. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Connect to an FSx for ONTAP file system using a link^] for the most comprehensive analysis of your file system resources.
-
-You have options to review the recommendations for configuration issues with your file systems and fix the issues. 
-
-Because requirements for storage configurations vary, you can dismiss the analysis of specific configurations that don't apply to your storage environment. This helps you avoid unnecessary alerts and inaccurate optimization results. 
 
 .What is analyzed
 Workload Factory analyzes the well-architected status of the following configurations for FSx for ONTAP file systems:
@@ -52,7 +48,7 @@ The recommendation explains best practices and potential pitfalls of unoptimized
 . Select resources and then *Fix*.
 +
 Some fix operations are only available for specific operations and not always for more than one resource. For example, you might be able to fix the configuration for a single volume but not for multiple volumes.
-. Review the information about the fix operation for the configuration in the dialog. Some operations can cause instance downtimes or service interruptions. 
+. Review the action items to learn about consequences of this fix such as instance downtimes or service interruptions.
 . Select *Fix* if you want Workload Factory to apply the recommended changes. 
 
 .Result
