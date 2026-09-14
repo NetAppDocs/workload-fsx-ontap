@@ -57,8 +57,6 @@ sidebar:
               url: /use-snapshots.html
             - title: Manage snapshot policies
               url: /manage-snapshot-policy.html
-            - title: Enable and edit snapshots for long-term retention
-              url: /enable-snapshots-long-term.html 
             - title: Manage snapshots
               url: /manage-snapshots.html    
         - title: Use backups to object storage
@@ -67,8 +65,6 @@ sidebar:
           entries: 
             - title: Replicate data
               url: /create-replication.html
-            - title: Replicate a data protection volume
-              url: /cascade-replication.html
             - title: Replicate on-premises ONTAP data to FSx for ONTAP
               url: /use-onprem-data.html              
             - title: Replicate a storage VM to another file system

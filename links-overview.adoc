@@ -1,1 +1,12 @@
+---
+sidebar: sidebar
+permalink: links-overview.html
+keywords: links, accounts, lambda
+summary: "A Workload Factory link creates a trust relationship and connectivity between a Workload Factory account and one or more FSx for ONTAP file systems."
+---
+= Learn about NetApp Workload Factory links
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
 include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]
