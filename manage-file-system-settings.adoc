@@ -9,7 +9,7 @@ summary: "Add, update, or remove FSx for ONTAP file system tags for a file syste
 :imagesdir: ./media/
 
 [.lead]
-Manage the settings of an FSx for ONTAP file system in NetApp Workload Factory. You can manage tags for the file system, reset the fsxadmin password when necessary, and update throughput capacity as needed. 
+Manage the settings of an FSx for ONTAP file system in NetApp Workload Factory to keep your file system organized, secure, and appropriately sized for your workload. You can add or edit tags, manage ONTAP credentials, reset the fsxadmin password, and update throughput capacity at any time. 
 
 == Manage FSx for ONTAP file system tags 
 Tags can help you categorize your resources. You can add, edit, and remove tags for a file system at any time in NetApp Workload Factory. 
@@ -25,7 +25,7 @@ The maximum number of tags you can apply to a file system is 50.
 . Select *Apply*. 
 
 == Manage ONTAP credentials
-Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials - primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI features like Rule builder and Custom dashboards.You can optionally add a restricted credential set, and you can update either credential set at any time. 
+Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials: primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI features like Rule builder and Custom dashboards. You can optionally add a restricted credential set, and you can update either credential set at any time. 
 
 You can perform the following tasks:
 
@@ -40,7 +40,7 @@ Workload Factory handles restricted credentials as follows:
 * If you have already provided restricted credentials for a file system, those credentials are used for AI feature operations.
 
 .Before you begin
-You must associate a link to assign a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+You must associate a link to manage ONTAP credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -51,7 +51,7 @@ You must associate a link to assign a snapshot policy. link:https://docs.netapp.
 +
 image:screenshot-reset-fsxadmin-password.png["A screenshot of the actions menu in the overview tab for a file system."]
 . Select *Manage ONTAP credentials*.
-. Update the primary or restricted ONTAP credentials as needed.
+. Update the primary or restricted ONTAP credentials.
 . Select *Apply*. 
 
 == Reset the fsxadmin password of an FSx for ONTAP file system
