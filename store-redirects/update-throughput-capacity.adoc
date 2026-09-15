@@ -1,0 +1,4 @@
+---
+permalink: update-throughput-capacity.html
+redirect: workload-fsx-ontap/manage-file-system-settings.html
+--- 

@@ -15,21 +15,33 @@ indexpage:
     - title: Use FSx for ONTAP
       links:
         - title: Explore savings
-          url: /explore-savings.html
-        - title: Track costs and usage for FSx for ONTAP resources
-          url: /track-costs.html    
+          url: /explore-savings.html  
         - title: Connect to a file system with a link
-          url: /create-link.html   
-        - title: Protect your data
-          url: /data-protection-overview.html     
-    - title: Administer and monitor
+          url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
+        - title: Create a storage VM
+          url: /create-storage-vm.html
+        - title: Create a volume
+          url: /create-volume.html
+    - title: Protect your data
       links:
-        - title: Monitor operations with Tracker
-          url: /monitor-operations.html
-        - title: View the well-architected status of your FSx for ONTAP file systems 
+        - title: Learn about data protection in Workload Factory 
+          url: /data-protection-overview.html
+        - title: Use snapshots to protect data
+          url: /use-snapshots.html
+        - title: Use backups to protect data
+          url: /use-backups.html
+        - title: Use replication to protect data
+          url: /create-replication.html
+    - title: Manage FSx for ONTAP
+      links:
+        - title: Change the tiering policy of a volume
+          url: /change-tiering-policy.html
+        - title: Improve FSx for ONTAP file system configurations
           url: /improve-configurations.html  
-        - title: Analyze FSx for ONTAP EMS events      
-          url: /analyze-events.html
+        - title: Manage the snapshot policy of a volume
+          url: /manage-snapshot-policy.html
+        - title: Manage volume capacity
+          url: /manage-volume-capacity.html
     - title: Knowledge and support
       links:
         - title: Register for support

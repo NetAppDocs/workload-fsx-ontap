@@ -1,0 +1,4 @@
+---
+permalink: manage-capacity-automatically.html
+redirect: workload-fsx-ontap/adjust-file-system-capacity.html
+---
