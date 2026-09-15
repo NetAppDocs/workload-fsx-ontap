@@ -24,6 +24,36 @@ Tags can help you categorize your resources. You can add, edit, and remove tags 
 The maximum number of tags you can apply to a file system is 50.
 . Select *Apply*. 
 
+== Manage ONTAP credentials
+Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials - primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI features like Rule builder and Custom dashboards.You can optionally add a restricted credential set, and you can update either credential set at any time. 
+
+You can perform the following tasks:
+
+* Opt in to add a restricted credential set, using either a username and password or a secret ARN.
+* Change existing credentials, including the username and password, the password only, or the secret ARN.
+
+NOTE: Transitioning between the Workload Factory credentials service (username and password) and AWS Secrets Manager is not supported.
+
+Workload Factory handles restricted credentials as follows:
+
+* If you have not provided restricted credentials for a file system, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set.
+* If you have already provided restricted credentials for a file system, those credentials are used for AI feature operations.
+
+.Before you begin
+You must associate a link to assign a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to reset the fsxadmin password for and then select *Manage*. 
+. From the file system overview, select the actions menu. 
++
+image:screenshot-reset-fsxadmin-password.png["A screenshot of the actions menu in the overview tab for a file system."]
+. Select *Manage ONTAP credentials*.
+. Update the primary or restricted ONTAP credentials as needed.
+. Select *Apply*. 
+
 == Reset the fsxadmin password of an FSx for ONTAP file system
 Reset the fsxadmin password in NetApp Workload Factory when necessary.
 
