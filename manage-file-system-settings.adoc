@@ -1,0 +1,57 @@
+---
+sidebar: sidebar
+permalink: manage-file-system-settings.html
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password
+summary: "Add, update, or remove FSx for ONTAP file system tags for a file system at any time." 
+---
+= Manage FSx for ONTAP file system settings in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Manage the settings of an FSx for ONTAP file system in NetApp Workload Factory. You can manage tags for the file system, reset the fsxadmin password when necessary, and update throughput capacity as needed. 
+
+== Manage FSx for ONTAP file system tags 
+Tags can help you categorize your resources. You can add, edit, and remove tags for a file system at any time in NetApp Workload Factory. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update and then select *Manage file system tags*.
+. In the *Manage file system tags* dialog, add, edit, or remove tags as needed.
++
+The maximum number of tags you can apply to a file system is 50.
+. Select *Apply*. 
+
+== Reset the fsxadmin password of an FSx for ONTAP file system
+Reset the fsxadmin password in NetApp Workload Factory when necessary.
+
+If you provided an alternate user during file system creation, you can only reset the fsxadmin password in the AWS console. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to reset the fsxadmin password for and then select *Manage*. 
+. From the file system overview, select the actions menu. 
++
+image:screenshot-reset-fsxadmin-password.png["A screenshot of the actions menu in the overview tab for a file system."]
+. Select *Reset fsxadmin password*. 
+. In the Reset fsxadmin password dialog, enter a new fsxadmin password and re-enter it to confirm. 
+. Select *Apply*. 
+
+== Update throughput capacity for an FSx for ONTAP file system 
+
+Update throughput capacity for an FSx for ONTAP file system in NetApp Workload Factory as needed. 
+
+For throughput capacity limits, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html[Quotas^] in AWS FSx for NetApp ONTAP documentation.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system to update throughput capacity for and then select *Manage*. 
+. Under Information, select the pencil icon next to *Throughput capacity*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Throughput capacity* row. 
+. In the Throughput capacity dialog, select the throughput capacity you need. 
+. Select *Apply* to save the changes

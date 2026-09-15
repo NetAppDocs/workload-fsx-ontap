@@ -4,7 +4,7 @@ permalink: update-snapshot-replication.html
 keywords: update snapshot data, replication
 summary: "Manually update snapshot data transferred between source and target volumes in a replication relationship at any time." 
 ---
-= Update snapshot data in a replication relationship
+= Update replication snapshot data in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 

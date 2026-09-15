@@ -1,0 +1,4 @@
+---
+permalink: manage-svm-tags.html
+redirect: workload-fsx-ontap/manage-svm-settings.html
+---

@@ -4,7 +4,7 @@ permalink: discover-cache-volumes.html
 keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume
 summary: "Discover and view cache volumes that are associated with cache relationships without leaving the NetApp Workload Factory console."
 ---
-= Discover cache volumes in Workload Factory
+= Discover cache volumes in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -21,7 +21,7 @@ A cache relationship can exist between volumes on two ONTAP systems such as one 
 .Before you begin
 Consider the following before you begin. 
 
-* You must associate a link to discover cache relationships on a file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+* You must associate a link to discover cache relationships on a file system. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation.
 * You must have an existing cache relationship.
 
 .Steps

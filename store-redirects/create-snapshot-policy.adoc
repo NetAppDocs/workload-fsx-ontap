@@ -1,0 +1,4 @@
+---
+permalink: create-snapshot-policy.html
+redirect: workload-fsx-ontap/use-snapshots.html
+---

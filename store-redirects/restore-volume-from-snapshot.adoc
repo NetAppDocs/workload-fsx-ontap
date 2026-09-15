@@ -1,0 +1,4 @@
+---
+permalink: restore-volume-from-snapshot.html
+redirect: workload-fsx-ontap/use-snapshots.html
+---
