@@ -49,7 +49,7 @@ You must associate a link to manage ONTAP credentials. link:https://docs.netapp.
 . From *FSx for ONTAP*, select the actions menu of the file system to reset the fsxadmin password for and then select *Manage*. 
 . From the file system overview, select the actions menu. 
 +
-image:screenshot-reset-fsxadmin-password.png["A screenshot of the actions menu in the overview tab for a file system."]
+image:screenshot-manage-ontap-credentials.png["A screenshot of the actions menu in the overview tab for a file system."]
 . Select *Manage ONTAP credentials*.
 . Update the primary or restricted ONTAP credentials.
 . Select *Apply*. 
