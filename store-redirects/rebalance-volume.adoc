@@ -1,0 +1,4 @@
+---
+permalink: rebalance-volume.html
+redirect: workload-fsx-ontap/manage-volume-capacity.html
+---

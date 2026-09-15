@@ -1,0 +1,118 @@
+---
+sidebar: sidebar
+permalink: use-snapshots.html
+keywords: create snapshot, snapshot 
+summary: "Protect volume data from accidental deletion or corruption by creating and managing snapshots in NetApp Workload Factory."
+---
+= Use snapshots to protect data in NetApp Workload Factory
+:icons: font
+:imagesdir: ./media/
+
+[.lead]
+Protect volume data from accidental deletion or corruption by creating and managing snapshots in NetApp Workload Factory. You can create an on-demand snapshot of a volume, define a snapshot policy to automate snapshot creation and retention for storage VMs, and restore a volume from an existing snapshot to recover data at a specific point in time.
+
+== Create an on-demand snapshot of a volume
+Create a manual snapshot of an FSx for ONTAP volume in NetApp Workload Factory. Snapshots are point-in-time versions of your volume's content.
+
+Snapshots are resources of volumes and are instant captures of your data that consume space only for modified data. Because data changes over time, snapshots usually consume more space as they get older. 
+
+FSx for ONTAP volumes use just-in-time copy-on-write so that any unmodified files in snapshots don't consume any of the volume's capacity.
+
+NOTE: Snapshots aren't copies of your data. If you want to make copies of your data, consider using the volume backups or volume replication features. 
+
+.Before you begin
+You must associate a link to create a manual snapshot of a volume. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation.  
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system that contains the volume to create a snapshot for and then select *Manage*.  
+. In the file system overview, select the *Volumes* tab.
+. From the *Volumes* tab, select the actions menu for the volume to protect with snapshots. 
+. Select *Data protection actions* and then *Manage snapshots*. 
+. From the Manage snapshots page, select *Create snapshot*.
+. In the Create a snapshot dialog, do the following: 
+.. Enter a snapshot name in the *Snapshot name* field.
+.. Optionally, select a label or create a new label. 
+.. Set the *Retention period* as a number of hours, days, months, or years. 
+.. Optional: *Make this snapshot immutable* to prevent the snapshot from being deleted during the retention period. 
++
+Accept the statement regarding immutable snapshots.
+. Select *Create*. 
+
+== Create a snapshot policy for storage VMs 
+Create a custom snapshot policy for storage VMs in Workload Factory to manage snapshot creation and retention. A snapshot policy defines how the system creates snapshots for a storage VM. You can create a snapshot policy for a storage VM in an FSx for ONTAP file system. You can also share the policy across multiple storage VMs.
+
+You can create a custom snapshot policy that differs from the three built-in snapshot policies for FSx for ONTAP: 
+
+* `default`
+* `default-1weekly`
+* `none`
+
+By default, every volume is associated with the file system's `default` snapshot policy. We recommend using this policy for most workloads.
+
+Customizing a policy lets you specify when to create snapshots, how many copies to retain, and how to name them.
+
+.Before you begin 
+* Once a snapshot policy is created, its association with the storage VM(s) cannot be modified, but you can always add or remove the policy from volumes.
+* Consider the following about snapshot capacity before you use snapshots:
+** For most datasets, an additional capacity of 20% is enough to keep snapshots for up to four weeks. As data gets older, its use for restorations becomes less likely.
+** Overwriting all the data in a snapshot consumes significant volume capacity, which factors into provisioning volume capacity.
+* To create a custom snapshot policy, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*. 
+. In the file system overview, select the *Storage VMs* tab.
+. From the *Storage VMs* tab, select the actions menu for the volume to protect with scheduled snapshots, then *Advanced actions*, and then *Manage snapshot policies*.
+. On the Snapshot policy management page, select *Create snapshot policy*. 
+. In the *Snapshot policy name* field, enter a name for the snapshot policy. 
+. Optionally, enter a description for the snapshot policy.
+. Under *Policy schedule and copies*, select when to create snapshots. For example, every minute or hourly. 
++
+You can select more than one frequency. 
+. Under *Number of copies*, enter the number of copies to retain. 
++
+The maximum number of copies is 1,023. 
+. Optional: Under *Naming convention*, enter a *Prefix* for the policy. 
+. *Retention label* is automatically populated. 
++
+This label refers to the SnapMirror, or replication label that is used to select only specified snapshots for replication from the source to the target file system. 
+. Optional: Enable *Immutable snapshots* for any schedules you need, set the *Retention period* for each schedule, and accept the statement to continue. 
++
+Enabling immutable snapshots locks all snapshots in this snapshot policy to prevent the snapshots from being deleted during the retention period. 
+. *Share across storage VMs*: Enabled by default. When enabled, the snapshot policy is shared across all storage VMs in the file system. Disable to create a snapshot policy for a single storage VM.
+. Select *Create*. 
+
+== Restore a volume from a snapshot
+You can restore data from a snapshot to an existing volume or to a new volume. The restore operation enables point-in-time recovery when a volume contains deleted or corrupted files. 
+
+The creation of a new volume from a snapshot makes a copy of an entire volume within a few seconds independent of volume size. The newly created copy represents a new volume.
+
+.Before you begin
+Consider the following limitations before you create a volume from a snapshot:
+
+* You can only restore a volume from a snapshot if you have an existing snapshot copy of the volume.
+
+* Changes to permission models: If you use this operation to switch the network-attached storage (NAS) protocol type, it might also switch the permission model that the security style provides. You might experience file access permission issues, which you can only fix manually with administrator access using the NAS client tools for permissions setting.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*. 
+. From the Storage menu, select *FSx for ONTAP*. 
+. From *FSx for ONTAP*, select the actions menu of the file system with the volume and then select *Manage*.  
+. In the file system overview, select the *Volumes* tab.
+. From the *Volumes* tab, select the actions menu for the volume to restore from a snapshot.
+. Select *Data protection actions* and then *Manage snapshots*. 
+. From the Manage snapshots page, select the actions menu for the snapshot to restore, and then select *Restore*.
+. In the Restore volume from a snapshot dialog, select from the following options:
+* Toggle to select *Restore as a new volume*.
++
+In the *Restored volume name* field, enter a unique name for the volume to restore. 
+* Restore data from a snapshot to an existing volume. This operation permanently deletes any data that was modified after the snapshot creation time.
++ 
+Accept the statement to proceed. 
+. Select *Restore*. 
