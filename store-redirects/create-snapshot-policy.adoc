@@ -1,4 +1,4 @@
 ---
-permalink: create-volume-from-snapshot.html
+permalink: create-snapshot-policy.html
 redirect: workload-fsx-ontap/use-snapshots.html
 ---

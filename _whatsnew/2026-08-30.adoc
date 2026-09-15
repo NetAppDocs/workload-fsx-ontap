@@ -2,7 +2,7 @@
 
 You can now create links directly from the Links page in the Administration menu, in addition to the FSx for ONTAP inventory page and the file system overview page.
 
-link:create-link.html[Learn more about creating links].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn more about creating links^].
 
 === Workload identification
 

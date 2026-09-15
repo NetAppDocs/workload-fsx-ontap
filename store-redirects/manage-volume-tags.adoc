@@ -1,0 +1,4 @@
+---
+permalink: manage-volume-tags.html
+redirect: workload-fsx-ontap/manage-volume-settings.html
+---

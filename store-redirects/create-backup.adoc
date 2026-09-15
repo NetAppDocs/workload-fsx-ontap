@@ -1,0 +1,4 @@
+---
+permalink: create-backup.html
+redirect: workload-fsx-ontap/use-backups.html
+---

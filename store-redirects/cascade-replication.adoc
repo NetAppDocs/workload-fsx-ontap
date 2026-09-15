@@ -1,0 +1,4 @@
+---
+permalink: cascade-replication.html
+redirect: workload-fsx-ontap/create-replication.html
+---

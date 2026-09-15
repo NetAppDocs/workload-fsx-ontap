@@ -1,0 +1,4 @@
+---
+permalink: update-storage-efficiency.html
+redirect: workload-fsx-ontap/manage-volume-settings.html
+---
