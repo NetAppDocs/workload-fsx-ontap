@@ -1,0 +1,4 @@
+---
+permalink: manage-backup-schedule.html
+redirect: workload-fsx-ontap/use-backups.html
+---

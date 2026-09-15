@@ -1,0 +1,4 @@
+---
+permalink: create-snapshot.html
+redirect: workload-fsx-ontap/use-snapshots.html
+---

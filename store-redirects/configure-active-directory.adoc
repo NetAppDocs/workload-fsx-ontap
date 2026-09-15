@@ -1,0 +1,6 @@
+---
+permalink: configure-active-directory.html
+redirect: workload-fsx-ontap/manage-svm-settings.html
+---
+
+

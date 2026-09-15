@@ -1,0 +1,4 @@
+---
+permalink: manage-immutable-files.html
+redirect: workload-fsx-ontap/manage-volume-settings.html
+---

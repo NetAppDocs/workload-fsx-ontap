@@ -1,7 +1,7 @@
 === Volume autogrow enhancement
 Now you can set the autogrow size of your volumes so that volume size can grow beyond the provisioned size for business needs and application requirements.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[Enable volume autogrow]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html[Enable volume autogrow]
 
 === Well-architected analysis update
 Workload factory now analyzes your FSx for ONTAP file systems to check whether storage efficiencies including data compaction, compression, and deduplication are being utilized. Storage efficiencies measure how effectively the file systems use available space.
