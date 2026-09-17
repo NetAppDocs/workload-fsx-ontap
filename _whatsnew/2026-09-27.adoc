@@ -49,10 +49,10 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 === Email notification for unhealthy replication relationships
 When the status of a replication relationship is *unhealthy*, Workload Factory will send an email notification every 24 hours while the relationship remains unhealthy. Reminder notifications will stop when the relationship returns to a healthy state.
 
-=== Support for additional ONTAP credentials
+=== Support for restricted ONTAP credentials for AIOps
 Workload Factory now supports two types of ONTAP credentials for an FSx for ONTAP file system: primary and restricted. By default, a file system uses the primary ONTAP credentials. You can optionally add a restricted credential set, using either a username and password or a secret ARN, and update either credential set at any time.
 
-Restricted credentials are used only for AI features like Rule builder and Custom dashboards. If you have not provided restricted credentials for a file system, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set. If you have already provided restricted credentials for a file system, those credentials are used for AI feature operations.
+Restricted credentials are used only for AIOps features like Rule builder and Custom dashboards. If you have not provided restricted credentials for a file system, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set. If you have already provided restricted credentials for a file system, those credentials are used for AIOps feature operations.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html[Manage ONTAP credentials for an FSx for ONTAP file system]
 
