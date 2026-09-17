@@ -1,5 +1,5 @@
 === Initiator group diagram enhancements    
-The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When hovering over a host in the diagram, host details including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN) appear. 
+The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When you hover over a host in the diagram, host details appear, including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN).
 
 === Cost dashboard enhancements
 The cost dashboard now includes a cost executive summary section that provides an overview of your organization's spending, helping you quickly understand and manage costs. Ask Me, the AI assistant for Workload Factory, can provide additional insights and recommendations based on your cost data. You can interact with Ask Me to get detailed explanations and suggestions for optimizing your costs. 
@@ -10,10 +10,10 @@ In addition, you can filter the cost data by one or more file systems and one or
 * Estimated cost per GiB/month
 * Detailed cost breakdown by service
 
-All cost information comes directly from the AWS Cost Explorer API except for file system and volume-level cost allocation; these costs are estimated by Workload Factory.
+All cost information comes directly from the AWS Cost Explorer API except for file system and volume-level cost allocation; Workload Factory estimates file system- and volume-level cost allocation.
 
 === Well-architected dashboard access
-Access to the well-architected dashboard is available from the main menu in the Workload Factory console and from within a file system. To find the well-architected dashboard from the main menu, select the main menu and then select *Well-architected*.
+You can access the well-architected dashboard from the main menu in the Workload Factory console and from within a file system. To find the well-architected dashboard from the main menu, select the main menu and then select *Well-architected*.
 
 image:well-architected-menu-option.png[Well-architected menu option in the Workload Factory console] 
 
@@ -22,8 +22,8 @@ Workload Factory now includes the following configurations in the well-architect
 
 * *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and suggests connecting hosts to the failover node for reliability.
 * *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node and suggests connecting hosts to the preferred node for performance efficiency.
-* *Volume space management configuration*: recommends enabling coordinated volume space management for FSx for ONTAP volumes
-* *FSx integration to AWS MGN*: recommends applying the required AWS MGN readiness configuration to selected FSx for ONTAP file systems
+* *Volume space management configuration*: recommends enabling coordinated volume space management for FSx for ONTAP volumes.
+* *FSx integration to AWS MGN*: recommends applying the required AWS MGN readiness configuration to selected FSx for ONTAP file systems.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
 
@@ -36,28 +36,26 @@ Workload Factory selects a workload by default based on the characteristics of t
 
 ==== Volumes explorer displays volume latency
 
-Volumes explorer displays volume latency status with the following statuses: not configured, within threshold, and exceeded. This helps you find and fix performance bottlenecks at the volume level.
+Volumes explorer displays volume latency status with the following statuses: not configured, within threshold, and exceeded. These statuses help you find and fix performance bottlenecks at the volume level.
 
 ==== Volumes explorer displays ARP/AI status for volumes across all file systems
 
-The Volumes explorer screen now includes a card with NetApp Autonomous Ransomware Protection with AI (ARP/AI) status for volumes across all your file systems. The card displays the number of volumes that are protected and if any volumes are at risk. From the card, you can *Analyze attacks* to investigate potential ransomware threats and take appropriate actions to secure your data.
+The Volumes explorer screen now includes a card with NetApp Autonomous Ransomware Protection with AI (ARP/AI) status for volumes across all your file systems. The card displays the number of protected volumes and indicates whether any volumes are at risk. From the card, you can *Analyze attacks* to investigate potential ransomware threats and take appropriate actions to secure your data.
 
 image:volumes-explorer-arp-ai-card.png[Screenshot shows a new card on the Volumes explorer screen displaying ARP/AI status for volumes across all file systems. The card indicates the number of protected volumes and any volumes at risk. Users can select the text Analyze attacks to investigate suspected attacks and take appropriate actions to secure their data.]
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ransomware protection.]
 
 === Email notification for unhealthy replication relationships
-When the status of a replication relationship is *unhealthy*, Workload Factory will send an email notification every 24 hours while the relationship remains unhealthy. Reminder notifications will stop when the relationship returns to a healthy state.
+When the status of a replication relationship is *unhealthy*, Workload Factory sends an email notification every 24 hours while the relationship remains unhealthy. Reminder notifications stop when the relationship returns to a healthy state.
 
 === Support for restricted ONTAP credentials for AIOps
-Workload Factory now supports two types of ONTAP credentials for an FSx for ONTAP file system: primary and restricted. By default, a file system uses the primary ONTAP credentials. You can optionally add a restricted credential set, using either a username and password or a secret ARN, and update either credential set at any time.
-
-Restricted credentials are used only for AIOps features like Rule builder and Custom dashboards. If you have not provided restricted credentials for a file system, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set. If you have already provided restricted credentials for a file system, those credentials are used for AIOps feature operations.
+Workload Factory supports two types of ONTAP credentials for an FSx for ONTAP file system: primary and restricted. By default, a file system uses the primary ONTAP credentials. We use restricted credentials only for AI operations (AIOps) like Rule builder, Custom dashboards, and Ask Me, our AI assistant. Now you can add your own credentials, using either a username and password or a secret ARN, to restrict access for AIOps features. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html[Manage ONTAP credentials for an FSx for ONTAP file system]
 
 === Workload selection during volume creation  
-Workload Factory added the *Workloads* field to volume creation so that you can select the workload to associate with the volume. This ensures that the volume is optimized for the intended workload from the moment it is created.
+Workload Factory now includes a *Workloads* field in volume creation so that you can select the workload to associate with the volume. This ensures that the volume is optimized for the intended workload from the moment it is created.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Create a volume in the Workload Factory console]
 
@@ -66,7 +64,7 @@ Workload Factory now recognizes the preferred FlexCache write mode for volumes a
 
 === Link creation notification email
 
-Workload Factory now reminds you to complete link association after credentials have been successfully added. While credentials enable resource discovery, advanced ONTAP features require link association with the discovered file systems. You'll receive the email notification once a week on Monday. After you complete the link association, the notifications will stop.
+Workload Factory now reminds you to complete link association after you successfully add credentials. While credentials enable resource discovery, advanced ONTAP features require link association with the discovered file systems. You'll receive the email notification once a week on Monday. After you complete the link association, the notifications stop.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure notifications in the Workload Factory console]
 
