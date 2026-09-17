@@ -25,19 +25,19 @@ The maximum number of tags you can apply to a file system is 50.
 . Select *Apply*. 
 
 == Manage ONTAP credentials
-Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials: primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI features like Rule builder and Custom dashboards. You can optionally add a restricted credential set, and you can update either credential set at any time. 
+Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials: primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI operations (AIOps) like Ask Me, Rule builder, and Custom dashboards. You can optionally add a restricted credential set, and you can update either credential set at any time. 
 
 You can perform the following tasks:
 
 * Opt in to add a restricted credential set, using either a username and password or a secret ARN.
 * Change existing credentials, including the username and password, the password only, or the secret ARN.
 
-NOTE: Transitioning between the Workload Factory credentials service (username and password) and AWS Secrets Manager is not supported.
+Workload Factory supports transitioning between the Workload Factory credentials service (username and password) and AWS Secrets Manager.
 
 Workload Factory handles restricted credentials as follows:
 
-* If you have not provided restricted credentials for a file system, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set.
-* If you have already provided restricted credentials for a file system, those credentials are used for AI feature operations.
+* If you have not provided restricted credentials for a file system and then you create custom rules or dashboards or ask Ask Me questions, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set.
+* If you have already provided restricted credentials for a file system, those credentials are used for AIOps.
 
 .Before you begin
 You must associate a link to manage ONTAP credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
