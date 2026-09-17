@@ -16,6 +16,11 @@ indexpage:
       links:
         - title: Explore savings
           url: /explore-savings.html  
+<<<<<<< HEAD
+=======
+        - title: Learn about links
+          url: /links-overview.html
+>>>>>>> 62a6a458e16bef1377dcf8ae69e4ae315ffa044b
         - title: Connect to a file system with a link
           url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
         - title: Create a storage VM
