@@ -10,10 +10,6 @@ Workload Factory now supports finding connections between hosts and storage acro
 
 Workload Factory now more accurately identifies and classifies workloads and hosts in the workload tagging service. Updated detection methods reduce misclassification and provide more accurate tagging and classification results.
 
-=== Customer-managed Bedrock support for classification
-
-Workload Factory now lets customers use their own Amazon Bedrock setup for workload tagging classification. Customers can provide their own Bedrock endpoint and credentials so classification requests run through their own Bedrock configuration.
-
 === Improved file system visibility in the interface
 
-Workload Factory now gives you a clearer view of your file systems in the interface. You can see SSD capacity and usage trends, workload summaries, and detailed configuration information directly from the file system overview.
+Workload Factory now gives you a clearer view of your file systems in the interface. You can view SSD capacity and throughput usage trends, workload summaries, and detailed configuration information directly from the file system overview.

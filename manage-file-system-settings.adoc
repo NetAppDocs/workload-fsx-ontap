@@ -11,7 +11,7 @@ summary: "Add, update, or remove FSx for ONTAP file system tags for a file syste
 [.lead]
 Manage the settings of an FSx for ONTAP file system in NetApp Workload Factory. You can manage tags for the file system, reset the fsxadmin password when necessary, and update throughput capacity as needed. 
 
-The file system overview shows SSD capacity and usage trends, AI-generated summaries of the top workloads, and expandable file system configuration details.
+The file system overview shows SSD capacity and throughput usage trends, AI-generated summaries of the top workloads, and expandable file system configuration details.
 
 == Manage FSx for ONTAP file system tags 
 Tags can help you categorize your resources. You can add, edit, and remove tags for a file system at any time in NetApp Workload Factory. 
