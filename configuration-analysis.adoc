@@ -128,6 +128,10 @@ Configure block device space settings for LUNs used by database host instances t
 +
 Configure thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
 
+* *Configuration for AWS MGN*
++
+Configure FSx for ONTAP file systems with the required AWS Transform MGN (MGN) connectivity and API authentication settings before using them with AWS MGN. 
+
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
@@ -169,6 +173,10 @@ Rebalance your FlexGroup volumes to improve efficiency. After scaling out, capac
 * *FlexVol volumes rebalance*
 +
 Rebalance your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
+
+* *Volume space management*
++
+Enable coordinated volume space management to reduce the risk of a volume running out of space. Without it, unexpected data or snapshot growth can fill a volume, causing write failures and application impact.
 
 .What's next
 
