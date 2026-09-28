@@ -63,3 +63,10 @@ All link documentation is now covered in the Workload Factory setup and administ
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn more about configuring links in the Workload Factory console.^]
 
+=== Cross-region host-to-storage relationship discovery
+
+Workload Factory now supports finding connections between hosts and storage across multiple AWS regions as part of the workload tagging service. It can identify and link hosts and storage resources across regions, including mapping IP addresses between regions, so host-to-storage relationships are tagged and classified correctly.
+
+=== Improved workload and host identification accuracy
+
+Workload Factory now more accurately identifies and classifies workloads and hosts in the workload tagging service. Updated detection methods reduce misclassification and provide more accurate tagging and classification results.
