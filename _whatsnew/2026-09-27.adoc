@@ -1,3 +1,7 @@
+=== Expanded workload tagging discovery for AWS services
+
+Workload Factory now detects more AWS services for workload tagging, expanding support for resources that can be tagged. It can now find Amazon EKS and Amazon WorkSpaces resources and include them in the tagging system so they are available for tagging.
+
 === Cost dashboard enhancements
 The cost dashboard now includes a cost executive summary section that provides an overview of your organization's spending, helping you quickly understand and manage costs. Ask Me, the AI assistant for Workload Factory, can provide additional insights and recommendations based on your cost data. You can interact with Ask Me to get detailed explanations and suggestions for optimizing your costs. 
 
@@ -69,4 +73,9 @@ Workload Factory now supports finding connections between hosts and storage acro
 
 === Improved workload and host identification accuracy
 
+Workload Factory now more accurately identifies and classifies workloads and hosts in the workload tagging service. Updated detection methods reduce misclassification and provide more accurate tagging and classification results.
+
+=== Improved file system visibility in the interface
+
+Workload Factory now gives you a clearer view of your file systems in the interface. You can view SSD capacity and throughput usage trends, workload summaries, and detailed configuration information directly from the file system overview.
 Workload Factory now more accurately identifies and classifies workloads and hosts in the workload tagging service. Updated detection methods reduce misclassification and provide more accurate tagging and classification results.
