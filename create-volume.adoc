@@ -62,6 +62,7 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 . Select *Create volume*. 
 . On the Create volume page under General details, provide the following details: 
 .. *Volume name*: Enter a name for the volume. 
+.. *Workload*: Select the workload associated with the volume.
 .. *Storage VM name*: Optionally, enter a storage VM name. 
 .. *Volume style*: Select *FlexVol* or *FlexGroup* volume. 
 +

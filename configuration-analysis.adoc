@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: configuration-analysis.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
-summary: "NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any configuration issues."  
+summary: "NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if there are any configuration issues."  
 ---
 = Configuration analysis for FSx for ONTAP file systems
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if any there are any configuration issues. When issues are found, Workload Factory shows you what the issues are and explains what needs to change to ensure your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
+NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if there are any configuration issues. When issues are found, Workload Factory shows you what the issues are and explains what to change so your file system storage achieves peak performance, cost efficiency, and compliance with best practices. 
 
 Key capabilities include: 
 
@@ -21,9 +21,9 @@ Key capabilities include:
 
 == How it works 
 
-Workload Factory analyzes your workloads running on supported cloud storage systems deployments daily. The analysis provides well-architected status, insights, and recommendations. 
+Workload Factory analyzes your workloads on supported cloud storage deployments every day. The analysis provides well-architected status, insights, and recommendations. 
 
-After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find configuration issues by category and a list of configuration issues and recommendations. You can review the recommendations for configuration issues. Workload Factory can automatically fix some issues; other issues require manual intervention. In this case, Workload Factory provides detailed instructions to help you implement the recommended changes.
+After the daily analysis completes, configurations appear as "optimized" or "not optimized" in the Well-architected dashboard for the deployment. You'll find configuration issues organized by category, along with recommendations. Workload Factory can automatically fix some issues; for issues that require manual intervention, Workload Factory provides detailed instructions to help you implement the recommended changes.
 
 You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. 
 
@@ -49,6 +49,8 @@ The well-architected dashboard assesses storage configurations against ONTAP bes
 
 The well-architected analysis categorizes configurations in the following pillars of the framework: _reliability_, _security_, _operational excellence_, _cost optimization_, and _performance efficiency_.
 
+NOTE: Currently, Workload Factory doesn't provide workload-specific recommendations for all configurations. Tailor your configurations to specific workload needs. 
+
 === Reliability 
 Reliability ensures that workloads perform their intended functions correctly and consistently, even when there are disruptions. 
  
@@ -62,7 +64,7 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 
 * *Application-consistent snapshots*
 + 
-For database environments, use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This keeps your apps running smoothly and your data safe. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads.
+For database environments, use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This helps keep your applications running smoothly and your data protected. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads.
 
 * *Cross-region replication*
 +
@@ -126,6 +128,10 @@ Configure block device space settings for LUNs used by database host instances t
 +
 Configure thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
 
+* *Configuration for AWS MGN*
++
+Configure FSx for ONTAP file systems with the required AWS Transform MGN (MGN) connectivity and API authentication settings before using them with AWS MGN. 
+
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
@@ -151,7 +157,7 @@ After a block device isn't used for seven days, archive block device data or del
 
 * *Overprovisioned SSD capacity*
 +
-Excess SSD capacity adds unnecessary cost. Reduce the SSD tier while maintaining a 20% free space buffer. The operation may take hours to days, and no other file system operations are supported during that time.
+Excess SSD capacity adds unnecessary cost. Reduce the SSD tier while maintaining a 20% free space buffer. The operation might take hours to days, and no other file system operations are supported during that time.
 
 * *Inactive NAS volumes*
 +
@@ -167,6 +173,10 @@ Rebalance your FlexGroup volumes to improve efficiency. After scaling out, capac
 * *FlexVol volumes rebalance*
 +
 Rebalance your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
+
+* *Volume space management*
++
+Enable coordinated volume space management to reduce the risk of a volume running out of space. Without it, unexpected data or snapshot growth can fill a volume, causing write failures and application impact.
 
 .What's next
 
