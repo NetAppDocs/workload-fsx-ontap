@@ -63,7 +63,7 @@ Workload Factory now recognizes the preferred FlexCache write mode for volumes a
 
 === Link documentation support
 
-All link documentation is now covered in the Workload Factory setup and administration documentation. You can still refer to the link:links-overview.html[Learn about NetApp Workload Factory links] from the Workload Factory FSx for ONTAP documentation and find links to the relevant pages in the setup and administration documentation.
+All link documentation is now covered in the Workload Factory setup and administration documentation. You can still refer to the link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn about NetApp Workload Factory links] from the Workload Factory FSx for ONTAP documentation and find links to the relevant pages in the setup and administration documentation.
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn more about configuring links in the Workload Factory console.^]
 
