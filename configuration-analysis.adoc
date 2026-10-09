@@ -161,7 +161,7 @@ Excess SSD capacity adds unnecessary cost. Reduce the SSD tier while maintaining
 
 * *Inactive NAS volumes*
 +
-The configuration analysis identifies NAS volumes that are not actively used and suggests deleting or archiving the volumes to reduce costs.
+After a NAS volume isn't used for 31 days, archive or delete the unused NAS volume to reduce costs. 
 
 === Performance efficiency
 Performance efficiency helps you ensure that your storage resources are used effectively and that workloads perform optimally.
