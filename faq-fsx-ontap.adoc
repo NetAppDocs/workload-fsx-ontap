@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: faq-fsx-ontap.html
 keywords: faq, frequently asked questions, frequently asked questions about amazon fsx for netapp ontap, fsx for ontap, workload factory, storage, file system, volume, link, snapshot, replication, arp/ai, s3 access point, iscsi, flexcache, configuration analysis
-summary: "Frequently asked questions about Amazon FSx for NetApp ONTAP in NetApp Workload Factory."
+summary: "Find answers to common questions about FSx for ONTAP file systems, volumes, data protection, replication, ransomware protection, and block storage in NetApp Workload Factory."
 ---
 = FAQ for Amazon FSx for NetApp ONTAP
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: "Frequently asked questions about Amazon FSx for NetApp ONTAP in NetApp
 :imagesdir: ./media/
 
 [.lead]
-This FAQ answers common questions about Amazon FSx for NetApp ONTAP in NetApp Workload Factory. It focuses on concepts, behavior, and constraints that are useful when planning, protecting, and managing FSx for ONTAP file systems and storage.
+Common questions about Amazon FSx for NetApp ONTAP in NetApp Workload Factory cover the concepts, behavior, and constraints that affect how you plan, protect, and manage FSx for ONTAP file systems and storage.
 
 == Links
 
@@ -23,7 +23,7 @@ A link establishes a trust relationship between Workload Factory and one or more
 * Configuring volume protocol access
 * Managing snapshots and snapshot policies
 * Enabling NetApp Autonomous Ransomware Protection with AI (ARP/AI)
-* Volume autogrow and manual volume capacity changes
+* Managing volume autogrow and manual capacity changes
 * Managing igroups and cache volumes
 * Managing ONTAP credentials
 
@@ -49,7 +49,7 @@ To delete a file system, first delete its volumes, storage VMs, and replication 
 
 .What should I consider before adding HA pairs to scale out a file system?
 
-Adding HA pairs applies only to second-generation Single-AZ file systems, and HA pairs can't be removed once added. The operation takes about 30 minutes, during which the file system is unavailable for other operations such as volume creation. You must remove all iSCSI LUNs before you start. See link:add-ha-pairs.html[Add HA pairs].
+Adding HA pairs applies only to second-generation Single-AZ file systems, and HA pairs can't be removed after they're added. The operation takes about 30 minutes, during which the file system is unavailable for other operations such as volume creation. You must remove all iSCSI LUNs before you start. See link:add-ha-pairs.html[Add HA pairs].
 
 .What is the difference between primary and restricted ONTAP credentials?
 
@@ -59,7 +59,7 @@ A file system uses primary ONTAP credentials by default. Restricted credentials 
 
 .How does automatic capacity management work, and what should I watch out for?
 
-Workload Factory scans the file system every 30 minutes and adds SSD capacity using either an incremental mode (fixed increase at a threshold) or an adaptive mode (predicts need from historical data). While it's enabled, you must disable it before you can increase capacity manually. Avoid enabling it during data migration because AWS enforces a minimum six-hour cool down between SSD capacity increases. See link:adjust-file-system-capacity.html[Adjust file system capacity].
+Workload Factory scans the file system every 30 minutes and adds SSD capacity using either an incremental mode (fixed increase at a threshold) or an adaptive mode (predicts need from historical data). While it's enabled, you must disable it before you can increase capacity manually. Avoid enabling it during data migration because AWS enforces a minimum six-hour cooldown between SSD capacity increases. See link:adjust-file-system-capacity.html[Adjust file system capacity].
 
 .How does changing SSD capacity affect IOPS?
 
@@ -98,7 +98,7 @@ A clone is a writable volume created in seconds. Its data still resides on the p
 
 .Which data protection methods should I combine?
 
-A combination is recommended. Snapshots give an RPO as low as one hour and fast file-level restores. Backups give RPOs from one day and can be restored only as a whole volume, which can take hours to days. Replication keeps a copy in another region for low-RTO disaster recovery, but clients must be adjusted to use the replica. ARP/AI adds ransomware detection. See link:data-protection-overview.html[Types of data protection].
+A combination is recommended. Snapshots give an RPO as low as one hour and fast file-level restores. Backups give RPOs from one day and can be restored only as a whole volume, which can take hours to days. Replication keeps a copy in another region for low-RTO disaster recovery, but you must adjust clients to use the replica. ARP/AI adds ransomware detection. See link:data-protection-overview.html[Types of data protection].
 
 .How should I plan capacity for snapshots, and are snapshots a substitute for copies of my data?
 
@@ -126,17 +126,17 @@ Backups are per volume and incremental, so only data changed since the last back
 
 .What is a cyber vault and how do I get one?
 
-A cyber vault is an isolated, air-gapped, immutable repository for backup copies that protects against ransomware and insider threats. FSx for ONTAP is supported as a cyber vault source and target. Implementation is assisted by NetApp: contact the cyber vault team at ng-FSx-CyberVault@netapp.com, and a specialist follows up. See link:create-cyber-vault.html[Cyber vault].
+A cyber vault is an isolated, air-gapped, immutable repository for backup copies that protects against ransomware and insider threats. FSx for ONTAP is supported as a cyber vault source and target. NetApp assists with implementation: contact the cyber vault team at ng-FSx-CyberVault@netapp.com, and a specialist follows up. See link:create-cyber-vault.html[Cyber vault].
 
 == Ransomware protection
 
 .How does ARP/AI work, and what does it require?
 
-ARP/AI monitors NAS (NFS/SMB) and, starting with ONTAP 9.17.1, SAN (iSCSI) volumes. When it detects a threat, it creates immutable snapshots. Enabling it on a file system protects all current and new NAS volumes, and it requires an associated link. It isn't supported on NVMe volumes or on iSCSI volumes with ONTAP earlier than 9.17.1. NAS protection starts immediately, while SAN volumes go through a 2-4 week learning period but are still monitored. See link:ransomware-protection.html[ARP/AI].
+ARP/AI monitors NAS (NFS/SMB) and, starting with ONTAP 9.17.1, SAN (iSCSI) volumes. When it detects a threat, it creates immutable snapshots. Enabling it on a file system protects all current and new NAS volumes, and it requires an associated link. It isn't supported on NVMe volumes or on iSCSI volumes with ONTAP earlier than 9.17.1. NAS protection starts immediately, while SAN volumes go through a two- to four-week learning period but are still monitored. See link:ransomware-protection.html[ARP/AI].
 
 .What happens when ARP/AI flags an attack, and how are false alarms handled?
 
-ARP/AI creates a locked snapshot at that moment. By default, up to six snapshots every four hours are created, each locked for 2-5 days. If you confirm a real attack, you can restore affected files or the whole volume. If you mark it as a false alarm, the locked snapshot is deleted and the system updates its alert settings, so the same file extension won't alert next time.
+ARP/AI creates a locked snapshot at that moment. By default, ARP/AI creates up to six snapshots every four hours, each locked for two to five days. If you confirm a real attack, you can restore affected files or the whole volume. If you mark it as a false alarm, the locked snapshot is deleted and the system updates its alert settings, so the same file extension won't alert next time.
 
 == Replication and migration
 
@@ -170,11 +170,11 @@ Migration takes three operations: create the relationship (Migration use case wi
 
 .What are S3 access points, and what should I know before enabling features like the inventory or journal table?
 
-S3 access points attach to NFS and SMB volumes so AWS services such as Amazon Bedrock can read file data as if it were in an S3 bucket. You can attach multiple access points to one volume. The inventory table generates object metadata and incurs AWS S3 request costs. The journal table audit logging needs AWS infrastructure (CloudTrail, CloudWatch, S3, IAM) and requires the access point's network configuration to be *Internet*. See link:create-s3-access-points.html[Create S3 access points].
+S3 access points attach to NFS and SMB volumes so AWS services such as Amazon Bedrock can read file data as if it were in an S3 bucket. You can attach multiple access points to one volume. The inventory table generates object metadata and incurs AWS S3 request costs. Audit logging for the journal table needs AWS infrastructure (CloudTrail, CloudWatch, S3, IAM) and requires the access point's network configuration to be *Internet*. See link:create-s3-access-points.html[Create S3 access points].
 
 .What do I need to set up block (iSCSI) storage?
 
-You need a link, a FlexVol volume, and an igroup. Block access is available only on scale-out deployments with six HA pairs or fewer. An igroup grants hosts access by IQN, and both an igroup and an iSCSI host connection are required for iSCSI to work. Configuration analysis recommends that iSCSI volumes not allow NAS access at the same time. See link:create-block-device.html[Create a block device] and link:create-igroup.html[Create an igroup].
+You need a link, a FlexVol volume, and an igroup. Block access is available only on scale-out deployments with six HA pairs or fewer. An igroup grants hosts access by IQN, and you need both an igroup and an iSCSI host connection for iSCSI to work. Configuration analysis recommends that iSCSI volumes not allow NAS access at the same time. See link:create-block-device.html[Create a block device] and link:create-igroup.html[Create an igroup].
 
 .What happens to inactive block devices?
 
@@ -209,7 +209,7 @@ The calculator compares Amazon EBS, EFS, and FSx for Windows File Server costs w
 
 .Where does cost tracking data come from, and how current is it?
 
-Cost data comes from AWS Cost Explorer, using the `ce:GetCostAndUsage` and `ce:GetTags` permissions, and refreshes every 24 hours. Workload Factory also calculates per-resource costs with its own estimates. To filter by AWS cost allocation tags, your file systems must have tags assigned. See link:track-costs.html[Track costs].
+Cost data comes from AWS Cost Explorer, using the `ce:GetCostAndUsage` and `ce:GetTags` permissions, and refreshes every 24 hours. Workload Factory also calculates per-resource costs with its own estimates. To filter by AWS cost allocation tags, you must assign tags to your file systems. See link:track-costs.html[Track costs].
 
 .Who maintains the FSx for ONTAP account, and who provides support for file system issues?
 
