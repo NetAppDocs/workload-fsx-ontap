@@ -59,7 +59,7 @@ link:add-ha-pairs.html[Add HA pairs].
 
 .What is the difference between primary and restricted ONTAP credentials?
 
-A file system uses primary ONTAP credentials by default. ONTAP credentials are your main credentials for managing the file system. Restricted credentials are used only for AI operations such as Ask Me, Rule builder, and Custom dashboards. If you haven't provided restricted credentials, Workload Factory creates read-only ONTAP credentials for those operations. Managing credentials requires a link.
+A file system uses primary ONTAP credentials, your main credentials for managing the file system, by default. Restricted credentials are used only for AI operations such as Ask Me, Rule builder, and Custom dashboards. If you haven't provided restricted credentials, Workload Factory creates read-only ONTAP credentials for those operations. Managing credentials requires a link.
 
 link:manage-file-system-settings.html[Manage ONTAP credentials]
 
@@ -104,7 +104,7 @@ link:change-tiering-policy.html[Change tiering policy].
 
 .What happens to a cloned volume and its parent?
 
-A clone is a writable volume. It's data still resides on the parent volume, and only new writes reside on the clone. You can't delete a parent volume that has a clone until you split it. To split a clone, you must associate a link with the file system that contains the clone. Splitting only updates metadata, and can't be done if the clone is in a data protection relationship. After the split, the two volumes can't be rejoined and each requires full space allocation.
+A clone is a writable volume. Its data still resides on the parent volume, and only new writes reside on the clone. You can't delete a parent volume that has a clone until you split it. To split a clone, you must associate a link with the file system that contains the clone. Splitting only updates metadata, and can't be done if the clone is in a data protection relationship. After the split, the two volumes can't be rejoined and each requires full space allocation.
 
 == Data protection
 
@@ -130,7 +130,7 @@ link:manage-snapshot-policy.html[Manage snapshot policies].
 
 .What do immutable snapshots do, and how do they affect deleting snapshots or volumes?
 
-When creating a volume snapshot you can enable immutability so the snapshot cannot be changed or deleted during its retention period. Enabling immutable snapshots on a snapshot policy locks all snapshots in that policy. Volumes containing immutable files and snapshots can't be changed or deleted until the retention period ends.
+When creating a volume snapshot, you can enable immutability so the snapshot can't be changed or deleted during its retention period. Enabling immutable snapshots on a snapshot policy locks all snapshots in that policy. Volumes containing immutable files and snapshots can't be changed or deleted until the retention period ends.
 
 .What should I decide before enabling immutable files (SnapLock) on a volume?
 
@@ -196,7 +196,7 @@ link:manage-replication.html[Limit the max transfer rate of a replication relati
 
 .What should I plan for when migrating a storage VM and cutting over replication?
 
-Migration takes three operations: create the relationship (select *Migration* as the use case and *Replicate storage VM configuration*, initialize it, and cut over. Before cutover, stop client access and make sure the data is synced. Source and target must run the same major ONTAP version. After cutover, the source storage VM goes offline, LUN serial numbers and the iSCSI target IQN change, and you must manually update iSCSI, MTU, and DNS settings. 
+Migration takes three operations: create the relationship (select *Migration* as the use case and *Replicate storage VM configuration*), initialize it, and cut over. Before cutover, stop client access and make sure the data is synced. Source and target must run the same major ONTAP version. After cutover, the source storage VM goes offline, LUN serial numbers and the iSCSI target IQN change, and you must manually update iSCSI, MTU, and DNS settings. 
 
 link:create-replication.html[Replicate data].
 
