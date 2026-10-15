@@ -4,7 +4,7 @@ permalink: faq-fsx-ontap.html
 keywords: faq, frequently asked questions, frequently asked questions about amazon fsx for netapp ontap, fsx for ontap, workload factory, storage, file system, volume, link, snapshot, replication, arp, ai, s3 access point, iscsi, flexcache, configuration analysis
 summary: "Find answers to common questions about FSx for ONTAP file systems, volumes, data protection, replication, ransomware protection, and block storage in NetApp Workload Factory."
 ---
-= FAQ for Amazon FSx for NetApp ONTAP for NetAppWorkload Factory
+= FAQ for Amazon FSx for NetApp ONTAP for NetApp Workload Factory
 :hardbreaks:
 :nofooter:
 :icons: font
