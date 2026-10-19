@@ -80,6 +80,10 @@ The snapshot policy labels of the source volume and the replication policy label
 +
 The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80% to allow new file creation. 
 
+* *Connect host to failover node*
++
+Workload Factory recommends connecting hosts to the failover node to maintain connectivity and avoid disruptions during failovers.
+
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
 
@@ -167,6 +171,10 @@ Rebalance your FlexGroup volumes to improve efficiency. After scaling out, capac
 * *FlexVol volumes rebalance*
 +
 Rebalance your FlexVol volumes to improve efficiency. After scaling out, capacity and workload activity can become uneven across the volume. 
+
+* *Connect host to preferred node*
++ 
+In a high-availability FSx for ONTAP deployment model, hosts should be connected directly to the node that serves the block device to ensure direct access and optimal performance. 
 
 .What's next
 
