@@ -1,8 +1,19 @@
-=== New recommendations in the well-architected analysis
-Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
-
-* *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system and suggests connecting hosts to the failover node for reliability.
-* *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node and suggests connecting hosts to the preferred node for performance efficiency.
-
 === Initiator group diagram enhancements    
 The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When you hover over a host in the diagram, host details appear, including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN).
+
+=== Well-architected dashboard enhancements
+
+==== Workload and workload category filters
+You can now filter the well-architected dashboard by workload and workload category. This helps you focus on the configurations that are most relevant to your workloads.
+
+==== New recommendations in the well-architected analysis
+Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
+
+* *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system for reliability.
+* *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node for performance efficiency.
+* *QoS configuration*: checks whether Kubernetes persistent volumes are protected with an ONTAP QoS policy for performance efficiency.
+* *Dedicated Kubernetes storage VM*: checks whether the file system is using a dedicated storage VM for Kubernetes workloads to improve isolation and simplify storage management.
+* *SAP HANA snapshot policy*: checks whether the snapshot policy is set to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
+
+=== Cost forecasting
+You can now forecast costs for your FSx for ONTAP file systems using the cost forecasting feature. This helps you plan your budget and optimize your resources effectively.
