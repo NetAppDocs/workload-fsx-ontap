@@ -15,5 +15,10 @@ Workload Factory now includes the following configurations in the well-architect
 * *Dedicated Kubernetes storage VM*: checks whether the file system is using a dedicated storage VM for Kubernetes workloads to improve isolation and simplify storage management.
 * *SAP HANA snapshot policy*: checks whether the snapshot policy is set to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
 
-=== Cost forecasting
+=== Cost improvements
+
+==== Cost forecasting
 You can now forecast costs for your FSx for ONTAP file systems using the cost forecasting feature. This helps you plan your budget and optimize your resources effectively.
+
+==== AWS Cost and Usage Reports (CUR)
+Workload Factory now uses AWS Cost and Usage Reports (CUR) instead of AWS Cost Explorer toprovide detailed billing records delivered to customer-owned S3 buckets. CUR offers better cost granularity  and serves as the foundation for advanced FinOps, chargeback, and cost allocation use cases.
