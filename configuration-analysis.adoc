@@ -130,6 +130,10 @@ Configure block device space settings for LUNs used by database host instances t
 +
 Configure thin provisioning for FSx for ONTAP volumes hosting database instances. This approach allows more logical data to be stored than physically available.
 
+* *Dedicated Kubernetes storage VM*
++
+Use a dedicated storage VM for Kubernetes workloads. Keeping Kubernetes storage separate makes it easier to manage, simplifies policy setup, and helps ensure consistent storage settings.
+
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
@@ -175,6 +179,10 @@ Rebalance your FlexVol volumes to improve efficiency. After scaling out, capacit
 * *Connect host to preferred node*
 + 
 In a high-availability FSx for ONTAP deployment model, hosts should be connected directly to the node that serves the block device to ensure direct access and optimal performance. 
+
+* *QoS policy for Kubernetes persistent volumes*
++
+Protect Kubernetes persistent volumes with an ONTAP QoS policy to keep performance consistent and reduce the impact of other workloads using shared resources.
 
 .What's next
 
