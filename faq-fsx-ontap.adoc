@@ -1,0 +1,269 @@
+---
+sidebar: sidebar
+permalink: faq-fsx-ontap.html
+keywords: faq, frequently asked questions, frequently asked questions about amazon fsx for netapp ontap, fsx for ontap, workload factory, storage, file system, volume, link, snapshot, replication, arp, ai, s3 access point, iscsi, flexcache, configuration analysis
+summary: "Find answers to common questions about FSx for ONTAP file systems, volumes, data protection, replication, ransomware protection, and block storage in NetApp Workload Factory."
+---
+= FAQ for Amazon FSx for NetApp ONTAP for NetApp Workload Factory
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Common questions about Amazon FSx for NetApp ONTAP in NetApp Workload Factory cover the concepts, behavior, and constraints that affect how you plan, protect, and manage FSx for ONTAP file systems and storage.
+
+== Links
+
+.What is a link, and when do I need one for FSx for ONTAP?
+
+A link establishes a trust relationship between Workload Factory and one or more FSx for ONTAP file systems and uses AWS Lambda. Many operations require an associated link, including:
+
+* Configuring volume protocol access
+* Managing snapshots and snapshot policies
+* Enabling NetApp Autonomous Ransomware Protection with AI (ARP/AI)
+* Managing volume autogrow and manual capacity changes
+* Managing igroups and cache volumes
+* Managing ONTAP credentials
+
+link:learn-about-links.html[Learn more about links].
+
+.What happens if I don't associate a link with my file system?
+
+Features that depend on a link can be unavailable. For example, ARP/AI is unavailable without a link, you can't display existing snapshot policies when creating a volume, and you can't discover cache relationships. Without a link, configuration analysis can't scan data protection and performance settings, so the analysis is incomplete. You can still view latency events without a link, but you need a link to view and analyze EMS events and to analyze latency events.
+
+== File systems
+
+.Should I use Quick create or Advanced create for a new file system?
+
+Quick create applies a recommended best-practice configuration, and you can change most settings afterward. It defaults to a second-generation file system unless the region doesn't support it. Advanced create lets you set every option, including availability, security, backups, and maintenance. 
+
+link:create-file-system.html[Create a file system].
+
+.What resources are created automatically when I create a file system, and what permissions do I need?
+
+Creating a file system also creates a storage VM and a security group. You need credentials with file system creation and deletion permissions, plus the region and VPC details for where you'll deploy.
+
+.What must I do before I can delete a file system, storage VM, or volume?
+
+To delete a file system, first delete its volumes, storage VMs, and replication relationships. To delete a storage VM, stop application access and delete all non-root volumes. To delete a volume, delete its replication relationships first. Deleting a volume is irreversible and permanently deletes its snapshots, though volume backups remain. Volumes containing immutable files and snapshots can't be deleted until the retention period ends.
+
+link:delete-file-system.html[Delete a file system].
+
+.What should I consider before adding HA pairs to scale out a file system?
+
+Adding HA pairs applies only to second-generation Single-AZ file systems, and HA pairs can't be removed after they're added. The operation takes about 30 minutes, during which the file system is unavailable for other operations such as volume creation. You must remove all iSCSI LUNs before you start. 
+
+link:add-ha-pairs.html[Add HA pairs].
+
+.What is the difference between primary and restricted ONTAP credentials?
+
+A file system uses primary ONTAP credentials, your main credentials for managing the file system, by default. Restricted credentials are used only for AI operations such as Ask Me, Rule builder, and Custom dashboards. If you haven't provided restricted credentials, Workload Factory creates read-only ONTAP credentials for those operations. Managing credentials requires a link.
+
+link:manage-file-system-settings.html[Manage ONTAP credentials]
+
+== Capacity and performance
+
+.How does automatic capacity management work, and what should I watch out for?
+
+Workload Factory scans the file system every 30 minutes and adds SSD capacity using either an incremental mode (fixed increase at a threshold) or an adaptive mode (predicts need from historical data). While it's enabled, you must disable it before you can increase capacity manually. Avoid enabling it during data migration because AWS enforces a minimum six-hour cooldown between SSD capacity increases. 
+
+link:adjust-file-system-capacity.html[Adjust file system capacity].
+
+.How does changing SSD capacity affect IOPS?
+
+Changing file system capacity impacts IOPS. With automatic IOPS provisioning, IOPS changes by 3 per GiB of SSD capacity added or removed. With manual provisioning, you might need to raise IOPS before increasing capacity. Decreasing SSD capacity is supported only for second-generation file systems.
+
+.How much SSD headroom should I keep, and what happens if capacity runs out?
+
+Keep SSD tier utilization under 80%. When capacity runs out, volumes become read-only and writes fail. Volume and file (inode) utilization should also stay below 80%. Backups fail if the backup snapshot pushes the volume over 98% SSD utilization. link:adjust-file-system-capacity.html[Increase capacity to avoid running out of space].
+
+== Volumes and tiering
+
+.Do volumes consume file system capacity, and should I choose FlexVol or FlexGroup?
+
+Volumes group data virtually and don't themselves consume file system storage capacity. Their data primarily consumes SSD storage and, depending on the tiering policy, capacity pool storage. FlexVol is the default style. FlexGroup is a scale-out NAS container for high performance and large capacity, made of constituent volumes that share traffic. Sizing differs: FlexVol is 20 MiB to 300 TiB, and FlexGroup is 800 GiB to 2 PiB, requiring 100 GiB per constituent.
+
+.What is the impact of rebalancing a volume?
+
+Rebalancing is non-disruptive, but volume transfers consume file system resources. Existing snapshots on rebalanced volumes become partial and can't be used to restore volume data, while snapshots taken afterward can. Rebalancing isn't supported for SAN volumes (iSCSI and NVMe). FlexGroup rebalancing can add member volumes and increase provisioned size unless you choose the Restricted layout, which supports volumes in a replication relationship.
+
+.Which tiering policy should I choose for a volume?
+
+Policy choice affects cost and performance:
+
+* *Balanced (Auto)*: default; recommended for general primary workloads.
+* *Cost-optimized (All)*: recommended for secondary targets.
+* *Performance optimized (Snapshots only)*: recommended for low-latency workloads such as mission-critical databases.
+* *None*: keeps all data on SSD.
+
+The policy is set per volume and you can change it at any time. 
+
+link:change-tiering-policy.html[Change tiering policy].
+
+.What happens to a cloned volume and its parent?
+
+A clone is a writable volume. Its data still resides on the parent volume, and only new writes reside on the clone. You can't delete a parent volume that has a clone until you split it. To split a clone, you must associate a link with the file system that contains the clone. Splitting only updates metadata, and can't be done if the clone is in a data protection relationship. After the split, the two volumes can't be rejoined and each requires full space allocation.
+
+== Data protection
+
+.Which data protection methods should I use?
+
+A combination is recommended. Snapshots give an RPO as low as one hour and fast file-level restores. Backups give RPOs from one day and can be restored only as a whole volume, which can take hours to days. Replication keeps a copy in another region for low-RTO disaster recovery, but you must adjust clients to use the replica. ARP/AI adds ransomware detection. 
+
+link:data-protection-overview.html[Learn about the types of data protection].
+
+.How should I plan capacity for snapshots, and are snapshots a substitute for copies of my data?
+
+Snapshots aren't copies of your data. They only consume space for changed data, so they usually grow as they age. For most datasets, an additional 20% capacity is enough to keep snapshots for up to four weeks, but overwriting all the data consumes significant capacity. Use backups or replication if you need real copies.
+
+.What are the consequences of restoring a volume from a snapshot?
+
+Restoring to an existing volume permanently deletes any data modified after the snapshot was created. Restoring as a new volume creates a copy within seconds regardless of size. If a restore switches the NAS protocol type, it can also switch the permission model, which can cause file access issues that you can only fix manually with NAS client tools.
+
+.What do I need to know about snapshot policies?
+
+Every volume uses the file system's `default` snapshot policy unless you change it. Policies are managed at the storage VM level and can be shared among volumes. Snapshot times follow the file system's time zone, which defaults to UTC.
+
+link:manage-snapshot-policy.html[Manage snapshot policies].
+
+.What do immutable snapshots do, and how do they affect deleting snapshots or volumes?
+
+When creating a volume snapshot, you can enable immutability so the snapshot can't be changed or deleted during its retention period. Enabling immutable snapshots on a snapshot policy locks all snapshots in that policy. Volumes containing immutable files and snapshots can't be changed or deleted until the retention period ends.
+
+.What should I decide before enabling immutable files (SnapLock) on a volume?
+
+Immutable files can only be enabled at volume creation and can't be disabled afterward. It's a premium feature with an additional charge. Choose a retention mode: in Enterprise mode a SnapLock administrator can delete a file during retention, while in Compliance mode a WORM file can't be deleted before its retention period expires, nor can the volume. Replicating a source volume with immutable files keeps the target volume and file system locked until the source retention period ends. 
+
+link:create-volume.html[Enable immutable files when creating a volume].
+
+.How do volume backups work, and what can cause them to fail?
+
+Backups are per volume and incremental, so only data changed since the last backup is saved. They can fail if the backup snapshot would push the volume beyond 98% SSD utilization. You can restore a backup to any FSx for ONTAP file system in your AWS account, and Workload Factory can add SSD capacity if the restore needs it. Manually created backups don't expire automatically, so clean up old ones. 
+
+link:use-backups.html[Protect your data with backups].
+
+.What is a cyber vault and how do I get one?
+
+A cyber vault is an isolated, air-gapped, immutable repository for backup copies that protects against ransomware and insider threats. FSx for ONTAP is supported as a cyber vault source and target. NetApp assists with implementation: contact the cyber vault team at ng-FSx-CyberVault@netapp.com, and a specialist follows up.  
+
+link:create-cyber-vault.html[Learn more about cyber vault].
+
+== Ransomware protection
+
+.How does ARP/AI work, and what does it require?
+
+ARP/AI monitors NAS (NFS/SMB) and SAN (iSCSI) volumes. When it detects a threat, it creates immutable snapshots. Enabling it on a file system protects all current and new volumes, and it requires an associated link. It isn't supported on NVMe volumes or on iSCSI volumes with ONTAP earlier than 9.17.1. NAS protection starts immediately, while SAN volumes go through a two- to four-week learning period but are still monitored. 
+
+link:ransomware-protection.html[Ransomware protection with ARP/AI].
+
+.What happens when ARP/AI flags an attack, and how are false alarms handled?
+
+ARP/AI creates a locked snapshot at the time it detects a threat. By default, ARP/AI creates up to six snapshots every four hours, each locked for two to five days. If you confirm a real attack, you can restore affected files or the whole volume. If you mark it as a false alarm, the locked snapshot is deleted and the system updates its alert settings, so the same file extension won't alert next time.
+
+== Replication and migration
+
+.What do I need in place before creating a replication relationship?
+
+You need:
+
+* A target FSx for ONTAP file system with an associated link.
+* TCP ports 11104 and 11105 open between the storage systems.
+* A discovered on-premises ONTAP system if that is your source.
+
+Replication works between FSx for ONTAP file systems, on-premises ONTAP systems, and Cloud Volumes ONTAP. Replicated volumes are data protection volumes named `\{OriginalVolumeName}_copy`. 
+
+link:create-replication.html[Replicate data].
+
+.What happens to data when I pause, stop, resume, reverse, or delete a replication relationship?
+
+Pausing or stopping makes the target volume writable. Resuming deletes any changes made to the destination while it was writable and returns it to read-only. Reversing swaps source and target roles and overwrites the new target with the new source's contents. Deleting the relationship leaves both volumes independent but removes their common replication snapshots. Data written to the source after the last replication isn't preserved when you reverse or resume. 
+
+link:manage-replication.html[Manage replication].
+
+.How many hops does cascading replication support, and what are the trade-offs?
+
+Cascading replication supports one replica of a data protection volume (a second hop: source to secondary to tertiary). A third hop isn't supported and isn't considered best practice. Cascading lets you resynchronize the primary and tertiary volumes without a new baseline transfer if the secondary becomes unavailable. Cascaded volumes can take longer to resynchronize, and you can't reverse a relationship whose source is itself a data protection volume that is a target of another relationship.
+
+link:create-replication.html[Cascade replication for data protection volumes].
+
+.Should I limit the transfer rate of a replication relationship?
+
+Limiting the max transfer rate is optional but recommended, because without a limit network and application performance might decline. For critical workloads, such as file systems used primarily for disaster recovery, an unlimited transfer rate is recommended.
+
+link:manage-replication.html[Limit the max transfer rate of a replication relationship].
+
+.What should I plan for when migrating a storage VM and cutting over replication?
+
+Migration takes three operations: create the relationship (select *Migration* as the use case and *Replicate storage VM configuration*), initialize it, and cut over. Before cutover, stop client access and make sure the data is synced. Source and target must run the same major ONTAP version. After cutover, the source storage VM goes offline, LUN serial numbers and the iSCSI target IQN change, and you must manually update iSCSI, MTU, and DNS settings. 
+
+link:create-replication.html[Replicate data].
+
+== S3 access points, block storage, and cache volumes
+
+.What are S3 access points, and what should I know before enabling features like the inventory or journal table?
+
+S3 access points attach to NFS and SMB volumes so AWS services such as Amazon Bedrock can read file data as if it were in an S3 bucket. You can attach multiple access points to one volume. The inventory table generates object metadata and incurs AWS S3 request costs. Audit logging for the journal table needs AWS infrastructure (CloudTrail, CloudWatch, S3, IAM) and requires the access point's network configuration to be *Internet*. 
+
+link:create-s3-access-points.html[Create S3 access points].
+
+.What do I need to set up block (iSCSI) storage?
+
+You need a link, a FlexVol volume, and an igroup. Block access is available only on scale-out deployments with six HA pairs or fewer. An igroup grants hosts access by IQN, and you need both an igroup and an iSCSI host connection for iSCSI to work. Configuration analysis recommends that iSCSI volumes not allow NAS access at the same time. 
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Create a link^].
+* link:create-volume.html[Create a FlexVol volume].
+* link:create-igroup.html[Create an igroup].
+* link:create-block-device.html[Create a block device].
+
+.What happens to inactive block devices?
+
+A block device that isn't mapped to a client or is unused for seven consecutive days is classified as inactive. You can archive its data to the capacity pool tier to reclaim SSD capacity, or delete it. Configuration analysis flags inactive block devices as a cost optimization item.
+
+.How do I choose a cache write mode, and what is needed to manage cache volumes?
+
+Write-around mode performs better for read-heavy workloads with small files, and write-back performs better for write-heavy workloads with large files. Workload Factory discovers existing cache (FlexCache) relationships, and you must associate a link to discover or manage cache volumes. 
+
+link:manage-cache-volumes.html[Manage cache volumes].
+
+== Configuration analysis and monitoring
+
+.How does configuration analysis work, and is it safe to apply the fixes automatically?
+
+Workload Factory analyzes configurations daily against ONTAP best practices and the AWS Well-Architected Framework pillars (reliability, security, operational excellence, cost optimization, and performance efficiency). It can auto-fix some issues and gives manual steps for others. Fix operations can cause downtime or service interruptions, so review each recommendation first. You can dismiss checks that don't apply to your environment. 
+
+You must link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[grant _operations and remediation_ permissions^] in your AWS account to let Workload Factory analyze your configurations.
+
+link:improve-configurations.html[Assess your configurations].
+
+.What is needed to use AI-powered event analysis?
+
+You need:
+
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[_Operations and remediation_ permissions.^].
+* A link.
+* Port 22 open in the file system's security group.
+* Amazon Bedrock activated for the account, with the required Bedrock IAM permissions.
+
+Events are displayed for 72 hours before removal. Data stays in your AWS account and customer data isn't used to train models. If your account admin turned off AI features, analysis isn't available. 
+
+link:analyze-events.html[Analyze events].
+
+== Costs and support
+
+.How does the savings calculator work, and which permissions does it need?
+
+The calculator compares Amazon Elastic Block Store (EBS), Elastic File System (EFS), and FSx for Windows File Server costs with FSx for ONTAP. You can enter details manually, or let Workload Factory detect your environments automatically, which needs *view, planning, and analysis* permissions to detect them. Automatic detection doesn't support EBS snapshots or FSx for Windows File Server shadow copies. 
+
+link:explore-savings.html[Learn how to use the savings calculator].
+
+.Where does cost tracking data come from, and how current is it?
+
+Cost data comes from AWS Cost Explorer, using the `ce:GetCostAndUsage` and `ce:GetTags` permissions, and refreshes every 24 hours. Workload Factory also calculates per-resource costs with its own estimates. To filter by AWS cost allocation tags, you must assign tags to your file systems. 
+
+link:track-costs.html[Track costs].
+
+.Who maintains the FSx for ONTAP account, and who provides support for file system issues?
+
+AWS maintains your FSx for ONTAP account, not Workload Factory. For support issues with your file system or infrastructure, use the Support Center in your AWS Management Console to open an AWS support case and select the FSx for ONTAP service. For general Workload Factory questions, refer to the link:get-help.html[Get help page].

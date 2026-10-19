@@ -1,0 +1,4 @@
+---
+permalink: create-link.html
+redirect: workload-fsx-ontap/links-overview.html
+---
