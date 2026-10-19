@@ -135,7 +135,7 @@ You can create a clone of an existing block device at any time. A block device c
 === Archive the data of an inactive block device
 Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. You can archive the data of an inactive block device to the capacity pool tier to reclaim SSD capacity.
 
-NOTE: When archiving a cloned block device, Workload Factory does not check whether a cloned block device's parent is valid or available.
+NOTE: When archiving a cloned block device, Workload Factory archives only the cloned device and excludes the parent volume.
 
 .Before you begin
 
