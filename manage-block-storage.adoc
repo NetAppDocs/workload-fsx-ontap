@@ -135,6 +135,12 @@ You can create a clone of an existing block device at any time. A block device c
 === Archive the data of an inactive block device
 Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. You can archive the data of an inactive block device to the capacity pool tier to reclaim SSD capacity.
 
+NOTE: A volume with child clones cannot be deleted until all child clones are either deleted or separated into independent volumes.
+
+.Before you begin
+
+Make sure all block devices (LUNs) are inactive on the same volume before you archive the data. 
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
@@ -153,7 +159,7 @@ Block devices that are not mapped to a client or are unused for seven days are i
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Under Orphan devices, select *View and reclaim capacity*.
-. On the Reclaim space for unused block devices screen, select one or more block devices to archive the data and reclaim the capacity.
+. On the Reclaim space for unused block devices screen, select one or more block devices to reclaim the capacity.
 . Select *Delete*. 
 
 == Related information
