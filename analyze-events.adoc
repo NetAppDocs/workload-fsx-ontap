@@ -73,7 +73,7 @@ Recommended model: `anthropic.claude-sonnet-4-20250514-v1:0`. Provide the Infere
 +
 Create and associate a link with an FSx for ONTAP file system to enable AI-powered events analysis. A link establishes a trust relationship between Workload Factory and one or more FSx for ONTAP file systems and leverages AWS Lambda.
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^[Learn how to associate an existing link or to create and associate a new link]. After the link associates, return to this operation.
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation.
 
 ** *AWS IAM permissions* 
 +
