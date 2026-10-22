@@ -103,10 +103,41 @@ When the replication status shows *Idle*, the data transfer is complete.
 
 == Step 3: Cut over replication for migration use cases 
 
-After creating the replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
+Cutover is a multi-step process that includes testing that your environment is ready for cutover and then cutting over to production. 
+
+The test uses replicated data on the target file system and doesn't affect your source environment. 
+
+Cutting over to production permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
+
+=== Storage VM migration status in Workload Factory
+The *SVM migration status* indicates the current state of the storage VM migration in Workload Factory. You can find the status in the *Replication relationships* table from within a file system. The possible statuses are as follows:
+
+* Enabled | Ready to test cutover
++ 
+Means: Replication is fully synced, but the cutover test hasn't been performed yet.
+
+* Enabled | Cutover test in progress
++
+Means: Replication is fully synced, and the cutover test is in progress.
+
+* Enabled | Ready to cutover
++
+Means: Replication is fully synced, and a successful cutover test was marked.
+
+* Enabled | Cutover in progress
++
+Means: Replication is fully synced, and the cutover has been initiated.
+
+* Disabled
++
+Means: Not a storage VM migration
+
+* Unsynced
++
+Means: One or more volumes aren't synced yet. Cut over cannot be performed until all volumes are fully synced.
 
 === Plan for the cutover operation
-Consider the following when planning for the cutover operation for migration use cases.
+Consider the following before you test and cutover.
 
 * *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source system is running ONTAP version 9.18.1, then the target system must also run a version of 9.18.1.
 
@@ -129,11 +160,17 @@ Consider the following when planning for the cutover operation for migration use
 .Before you begin
 Review these requirements before you begin.
 
+* Check that the *SVM migration status* is *Enabled | Ready to test cutover* in the Replication relationships table from within the file system in Workload Factory.
 * Stop any client access to your storage VM before you cut over replication.
 * Ensure all source volumes are not serving any data before you cut over replication.
 * Ensure the data is synced between the source and target volumes before you cut over replication. 
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
 ** The following ports must be open in the security group associated with the FSx for ONTAP file system for link connectivity: port 443 (HTTPS) and port 22 (SSH).
+
+=== Cut over replication
+Workload Factory helps you manage the cutover process for replication in migration use cases. First, it tests your environment to ensure that the cutover can proceed without issues. Second, it performs the actual cutover to the target file system. 
+
+Follow the instructions to cut over replication for migration use cases. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
