@@ -24,7 +24,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html[Track cos
 === Manage FSx tags for a file system in NetApp Workload Factory
 Easily manage your FSx tags for a file system directly from the NetApp Workload Factory console. This feature allows you to add, edit, or remove tags, enabling better organization and categorization of your FSx for ONTAP file systems.
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html[Manage FSx tags in Workload Factory]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-file-system-settings.html[Manage FSx tags in Workload Factory]
 
 === Adjust cache capacity for FSx for ONTAP file systems
 You can increase and decrease capacity for cache volumes from the Workload Factory console. 

@@ -152,7 +152,9 @@ sidebar:
         - title: Performance for FSx for ONTAP
           url: /performance-reference.html
         - title: Security for FSx for ONTAP
-          url: /security-reference.html  
+          url: /security-reference.html 
+    - title: FAQ
+      url: /faq-fsx-ontap.html
     - title: Knowledge and support
       entries:
         - title: Register for support
