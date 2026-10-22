@@ -105,7 +105,6 @@ Volumes serving application data using iSCSI should not allow NAS access at the 
 + 
 ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
 
-
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value.
 
