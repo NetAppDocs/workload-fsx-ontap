@@ -170,7 +170,7 @@ Review these requirements before you begin.
 === Cut over replication
 Workload Factory helps you manage the cutover process for replication in migration use cases. First, it tests your environment to ensure that the cutover can proceed without issues. Second, it performs the actual cutover to the target file system. 
 
-Follow the instructions to cut over replication for migration use cases. 
+Follow the instructions to cut over replication for migration use cases. The user interface guides you through the cutover process step by step.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
