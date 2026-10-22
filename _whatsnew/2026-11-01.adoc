@@ -1,6 +1,9 @@
 === Initiator group diagram enhancements    
 The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When you hover over a host in the diagram, host details appear, including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN).
 
+=== Email enhancement for well-architected issues
+The new email design provides more details and context for configuration issues detected by Workload Factory. The email includes the number of analyzed resources and out of those how many are warning and critical issues and what they are. You'll find a link to the FSx for ONTAP well-architected dashboard to make it easy for you to address issues right away. 
+
 === Well-architected dashboard enhancements
 
 ==== Workload and workload category filters
