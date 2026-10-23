@@ -122,7 +122,7 @@ Means: Replication is fully synced, and the cutover test is in progress.
 
 * Enabled | Ready to cutover
 +
-Means: Replication is fully synced, and a successful cutover test was marked.
+Means: Replication is fully synced, and the cutover test was successful.
 
 * Enabled | Cutover in progress
 +
@@ -134,7 +134,7 @@ Means: Not a storage VM migration
 
 * Unsynced
 +
-Means: One or more volumes aren't synced yet. Cut over cannot be performed until all volumes are fully synced.
+Means: One or more volumes aren't synced yet. Cutover cannot be performed until all volumes are fully synced.
 
 === Plan for the cutover operation
 Consider the following before you test and cutover.
