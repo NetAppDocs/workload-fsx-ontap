@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-replication.html
 keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync, replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume
-summary: "Use replication to protect your data from data loss in case of an unforeseen disaster, to migrate your data, or to cascade replication for data protection volumes in an Amazon FSx for NetApp ONTAP file system"
+summary: "Use replication to protect your data from disaster, migrate your data, or cascade replication for data protection volumes in an Amazon FSx for NetApp ONTAP file system"
 ---
 = Replicate data to FSx for ONTAP in NetApp Workload Factory
 :icons: font
@@ -11,11 +11,11 @@ summary: "Use replication to protect your data from data loss in case of an unfo
 [.lead]
 Replicate data in NetApp Workload Factory to protect against data loss if the region where your data resides experiences a disaster. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. Workload Factory also supports cascading replication to extend data protection to tertiary systems or migrate your data. 
 
-When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cut over operation.
+When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cutover operation.
 
 == Standard replication
 
-Replication protects your data if a disaster affects your region; it can also be used for migration purposes. 
+Replication protects your data if a disaster affects your region. You can also use it for migration. 
 
 Replication includes creating and initializing a replication relationship. To set up replication, create the replication relationship. To transfer the data between the source and target storage systems, initialize the replication relationship. When migrating storage VM data and configuration settings, you must also complete the cutover operation.
 
@@ -52,12 +52,12 @@ Replicate data between two FSx for ONTAP file systems, between an on-premises ON
 .Before you begin
 Review these requirements before you begin.
 
-* Ensure that one FSx for ONTAP file system is available to use for the target in the replication relationship.
+* Confirm that one FSx for ONTAP file system is available to use for the target in the replication relationship.
 * Open TCP ports 11104 and 11105 for secure data transfer and management between storage systems. ICMP is optional, but can help with network checks and troubleshooting.   
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
-* For migration use cases ensure that the last replication for the volume completed in the last 24 hours before you create a replication relationship with storage VM data and configuration settings.
+* For migration use cases, confirm that the last replication for the volume completed in the last 24 hours before you create a replication relationship with storage VM data and configuration settings.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -107,7 +107,7 @@ Cutover is a multi-step process that includes testing that your environment is r
 
 The test uses replicated data on the target file system and doesn't affect your source environment. 
 
-Cutting over to production permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
+Cutting over to production permanently migrates data and storage VM configuration settings from the source file system to the target file system. During the cutover, Workload Factory replicates the data one last time. The source storage VM goes offline when the cutover begins.
 
 === Storage VM migration status in Workload Factory
 The *SVM migration status* indicates the current state of the storage VM migration in Workload Factory. You can find the status in the *Replication relationships* table from within a file system. The possible statuses are as follows:
@@ -147,13 +147,13 @@ Consider the following before you test and cutover.
 
 ** If your storage VM uses domain-tunnel authentication, set up and enable a domain tunnel on the target file system before you start the migration.
 
-* *Clones*: Clones get migrated as individual volumes, and therefore, will consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
+* *Clones*: Clones migrate as individual volumes and consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
 
 * *Cache volumes*: Source storage VMs that contain cache volumes aren't supported for cutover. Remove the ONTAP FlexCache relationship before cutover to avoid migration failures.
 
 * *AWS S3 access points*: Cutover replication for migration use cases isn't supported for volumes with S3 access points. Delete S3 access points from the source volume to avoid migration failures.
 
-* *ONTAP S3 configurations*: Cutover replication for migration use cases isn't supported for vservers with ONTAP S3 configurations. Remove ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the vserver, to avoid migration failures.
+* *ONTAP S3 configurations*: Cutover replication for migration use cases isn't supported for storage VMs with ONTAP S3 configurations. Remove ONTAP S3 configurations including object-store-server, buckets, users, groups, or policies on the storage VM, to avoid migration failures.
 
 * *LUN serial numbers and iSCSI target IQN*: LUN serial numbers and the iSCSI target IQN change during cutover. 
 
@@ -163,12 +163,12 @@ Review these requirements before you begin.
 * Check that the *SVM migration status* is *Enabled | Ready to test cutover* in the Replication relationships table from within the file system in Workload Factory.
 * Stop any client access to your storage VM before you cut over replication.
 * Ensure all source volumes are not serving any data before you cut over replication.
-* Ensure the data is synced between the source and target volumes before you cut over replication. 
+* Confirm that the data is synced between the source and target volumes before you cut over replication. 
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
 ** The following ports must be open in the security group associated with the FSx for ONTAP file system for link connectivity: port 443 (HTTPS) and port 22 (SSH).
 
 === Cut over replication
-Workload Factory helps you manage the cutover process for replication in migration use cases. First, it tests your environment to ensure that the cutover can proceed without issues. Second, it performs the actual cutover to the target file system. 
+Workload Factory helps you manage the cutover process for replication in migration use cases. First, it tests your environment to confirm that the cutover can proceed without issues. Second, it performs the actual cutover to the target file system. 
 
 Follow the instructions to cut over replication for migration use cases. The user interface guides you through the cutover process step by step.
 
@@ -191,7 +191,7 @@ After you cut over replication for migration use cases, update the following sto
 * For iSCSI: 
 ** Recreate the igroup 
 ** Update LUN mapping 
-** Log in to each SAN client and update iSCSI/MPIO settings for the new target and remove the old vserver target IPs
+** Log in to each SAN client and update iSCSI/MPIO settings for the new target and remove the old storage VM target IPs
 * Validate broadcast-domain MTU settings are as expected
 * Validate DNS settings are as expected
 * Recreate cache relationships (ONTAP FlexCache relationships) if there were cache volumes in the source storage VM.
@@ -209,7 +209,7 @@ Learn more about link:https://docs.netapp.com/us-en/ontap/data-protection/suppor
 .Before you begin
 Consider the following before you begin: 
 
-* Be aware that volumes that are part of a cascade configuration can take longer to resynchronize.
+* Volumes that are part of a cascade configuration can take longer to resynchronize.
 * If the source volume of the relationship is a data protection volume and is a target of another relationship, reversing the replication relationship isn't supported.
 * One replica of a data protection volume (or a second hop) is supported. It isn't considered best practice to create a second replica of a data protection volume (or a third hop). 
 * Open TCP ports 11104 and 11105 for secure data transfer and management between storage systems. ICMP is optional, but can help with network checks and troubleshooting.  

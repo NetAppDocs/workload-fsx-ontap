@@ -9,7 +9,6 @@ summary: "Amazon FSx for NetApp ONTAP is a fully managed service allowing custom
 :imagesdir: ./media/
 
 [.lead]
-
 Amazon FSx for NetApp ONTAP is a fully managed, cloud-based data storage service that provides advanced data management capabilities and highly scalable performance. FSx for ONTAP allows you to create and manage file systems as the storage backend for all your workloads within NetApp Workload Factory. 
 
 FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
