@@ -140,7 +140,7 @@ Means: Replication is fully synced, and the cutover has been initiated.
 +
 Means: Not a storage VM migration
 
-* Unsynced
+* Waiting for all volumes to sync 
 +
 Means: One or more volumes aren't synced yet. Cutover cannot be performed until all volumes are fully synced.
 
