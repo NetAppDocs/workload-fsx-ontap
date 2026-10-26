@@ -25,7 +25,7 @@ If you replicate a source volume with immutable files, the target volume and fil
 
 [NOTE]
 ===============================
-You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html[cascading replication].
+You can replicate one source (read/write) volume or one data protection (DP) volume. Cascading replication is supported, but a third hop isn't. Learn more about <<cascade-replication,cascading replication>>.
 ===============================
 
 === Migration use cases
@@ -42,10 +42,11 @@ Workload Factory supports migration replication for storage VMs between the foll
 
 To migrate storage VM data and configuration settings, you must complete three operations.
 
-1. <<Step 1: Create the replication relationship,Create the replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*.
-2. <<Step 2: Initialize the replication relationship,Initialize the replication relationship>> to transfer the data from the source to the target storage system.
-3. <<Step 3: Cut over replication for migration use cases,Cut over replication for migration use cases>> to test migration and then permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
+1. <<step-1-create-replication-relationship,Step 1: Create the replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*.
+2. <<step-2-initialize-replication-relationship,Step 2: Initialize the replication relationship>> to transfer the data from the source to the target storage system.
+3. <<step-3-cutover-replication,Step 3: Cut over replication for migration use cases>> to test migration and then permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
+[[step-1-create-replication-relationship]]
 == Step 1: Create the replication relationship
 Replicate data between two FSx for ONTAP file systems, between an on-premises ONTAP system and an FSx for ONTAP file system, or between Cloud Volumes ONTAP and an FSx for ONTAP file system.
 
@@ -82,6 +83,7 @@ The replication relationship appears in the *Replication relationships* tab in t
 
 If you created a replication relationship for migration purposes, you must cut over all the volumes and their associated storage VM to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system.
 
+[[step-2-initialize-replication-relationship]]
 == Step 2: Initialize the replication relationship
 
 Initialize a replication relationship between source and target volumes to transfer the snapshot and all data blocks in NetApp Workload Factory. 
@@ -101,6 +103,7 @@ include::_include/initialize-replication.adoc[]
 +
 When the replication status shows *Idle*, the data transfer is complete. 
 
+[[step-3-cutover-replication]]
 == Step 3: Cut over replication for migration use cases 
 
 Cutover is a multi-step process that includes testing that your environment is ready for cutover and then cutting over to production. 
@@ -148,7 +151,7 @@ Consider the following before you test and cut over.
 
 * *Storage VM configuration settings*:
 
-** The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<Update configuration settings after cutover,Update configuration settings after cutover>> section.
+** The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<update-configuration-settings-after-cutover,Update configuration settings after cutover>> section.
 
 ** If your storage VM uses domain-tunnel authentication, set up and enable a domain tunnel on the target file system before you start the migration.
 
@@ -192,6 +195,7 @@ include::_include/cutover-replication.adoc[]
 .Result
 After initiating cutover, the source storage VM goes offline. 
 
+[[update-configuration-settings-after-cutover]]
 === Update configuration settings after cutover 
 After you cut over replication for migration use cases, update the following storage VM configuration settings on the target storage VM. 
 
@@ -205,6 +209,7 @@ After you cut over replication for migration use cases, update the following sto
 
 If needed, link:change-tiering-policy.html[modify the tiering policy] for the target volume(s) after cutover.
 
+[[cascade-replication]]
 == Cascade replication for data protection volumes
 
 NetApp Workload Factory supports replicating data protection volumes, also called _cascade deployments_. A _cascade deployment_ consists of a chain of relationships in which a source volume is mirrored to a secondary volume (first hop), and the secondary volume is mirrored to a tertiary volume (second hop). If the secondary volume becomes unavailable, you can synchronize the relationship between the primary and tertiary volumes without performing a new baseline transfer.
