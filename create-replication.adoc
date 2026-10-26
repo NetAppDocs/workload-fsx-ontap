@@ -151,7 +151,7 @@ Consider the following before you test and cut over.
 
 * *Storage VM configuration settings*:
 
-** The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. Update these settings manually on the target storage VM after cutover. For more details, refer to the <<update-configuration-settings-after-cutover,Update configuration settings after cutover>> section.
+** The cutover operation doesn't migrate all storage VM configuration settings to the target storage VM. For example, iSCSI, broadcast-domain MTU, and DNS settings do not migrate. <<update-configuration-settings-after-cutover,Update these settings manually>> on the target storage VM after cutover.
 
 ** If your storage VM uses domain-tunnel authentication, set up and enable a domain tunnel on the target file system before you start the migration.
 
