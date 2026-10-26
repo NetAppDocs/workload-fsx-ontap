@@ -44,7 +44,7 @@ To migrate storage VM data and configuration settings, you must complete three o
 
 1. <<Step 1: Create the replication relationship,Create the replication relationship>>, select *Migration* as the use case and select *Replicate storage VM configuration*.
 2. <<Step 2: Initialize the replication relationship,Initialize the replication relationship>> to transfer the data from the source to the target storage system.
-3. <<Step 3: Cut over replication for migration use cases,Cut over replication for migration use cases>> to permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
+3. <<Step 3: Cut over replication for migration use cases,Cut over replication for migration use cases>> to test migration and then permanently migrate data and configuration settings from the source file system to the target FSx for ONTAP file system.
 
 == Step 1: Create the replication relationship
 Replicate data between two FSx for ONTAP file systems, between an on-premises ONTAP system and an FSx for ONTAP file system, or between Cloud Volumes ONTAP and an FSx for ONTAP file system.
@@ -105,9 +105,14 @@ When the replication status shows *Idle*, the data transfer is complete.
 
 Cutover is a multi-step process that includes testing that your environment is ready for cutover and then cutting over to production. 
 
-The test uses replicated data on the target file system and doesn't affect your source environment. 
-
 Cutting over to production permanently migrates data and storage VM configuration settings from the source file system to the target file system. During the cutover, Workload Factory replicates the data one last time. The source storage VM goes offline when the cutover begins.
+
+=== Testing migration
+The migration test uses replicated data on the target file system and doesn't affect your source environment.  
+
+Workload Factory temporarily replicates the storage VM without preserving its identity. The target gets its own network, so you can access the data without conflicting with your source environment. You can optionally configure Active Directory for the test environment.
+
+Changes made during the test aren't kept. When you finish the test, Workload Factory replicates the storage VM again with its identity preserved, and any data or settings changed during the test are overwritten with the source data.
 
 === Storage VM migration status in Workload Factory
 The *SVM migration status* indicates the current state of the storage VM migration in Workload Factory. You can find the status in the *Replication relationships* table from within a file system. The possible statuses are as follows:
@@ -137,7 +142,7 @@ Means: Not a storage VM migration
 Means: One or more volumes aren't synced yet. Cutover cannot be performed until all volumes are fully synced.
 
 === Plan for the cutover operation
-Consider the following before you test and cutover.
+Consider the following before you test and cut over.
 
 * *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source system is running ONTAP version 9.18.1, then the target system must also run a version of 9.18.1.
 
@@ -169,6 +174,8 @@ Review these requirements before you begin.
 
 === Cut over replication
 Workload Factory helps you manage the cutover process for replication in migration use cases. First, it tests your environment to confirm that the cutover can proceed without issues. Second, it performs the actual cutover to the target file system. 
+
+Before you complete the migration test, make sure you can access all the data on the target storage VM.
 
 Follow the instructions to cut over replication for migration use cases. The user interface guides you through the cutover process step by step.
 
