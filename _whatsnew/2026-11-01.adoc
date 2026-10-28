@@ -2,7 +2,7 @@
 The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When you hover over a host in the diagram, host details appear, including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN).
 
 === Email enhancement for well-architected issues
-The new email design provides more details and context for configuration issues detected by Workload Factory. The email includes the number of analyzed resources and out of those how many are warning and critical issues and what they are. You'll find a link to the FSx for ONTAP well-architected dashboard to make it easy for you to address issues right away. 
+The new email design provides more details and context for configuration issues detected by Workload Factory. The email includes the number of analyzed resources, how many have warning or critical issues, and what those issues are. The email also links to the FSx for ONTAP well-architected dashboard so you can address issues right away. 
 
 === Well-architected dashboard enhancements
 
@@ -34,7 +34,7 @@ You can view the current and recommended values for unoptimized configurations i
 You can now forecast costs for your FSx for ONTAP file systems using the cost forecasting feature. This helps you plan your budget and optimize your resources effectively. You can also view insights about your costs and usage patterns to identify opportunities for cost optimization.
 
 ==== AWS Cost and Usage Reports (CUR)
-Workload Factory now uses AWS Cost and Usage Reports (CUR) instead of AWS Cost Explorer toprovide detailed billing records delivered to customer-owned S3 buckets. CUR offers better cost granularity  and serves as the foundation for advanced FinOps, chargeback, and cost allocation use cases.
+Workload Factory now uses AWS Cost and Usage Reports (CUR) instead of AWS Cost Explorer to provide detailed billing records delivered to customer-owned S3 buckets. CUR offers better cost granularity and serves as the foundation for advanced FinOps, chargeback, and cost allocation use cases.
 
 === Storage VM migration improvements
 
