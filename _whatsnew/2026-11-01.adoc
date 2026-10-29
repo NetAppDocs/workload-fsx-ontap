@@ -23,7 +23,7 @@ Workload Factory now includes the following configurations in the well-architect
 * *Match igroup OS to host*: checks whether the operating system of the initiator group (igroup) matches the host's operating system to prevent I/O or performance issues.
 
 ==== Current and recommended values for configurations
-You can view the current and recommended values for selected unoptimized configurations in the well-architected dashboard. This tells you what the recommended value is before you fix it. 
+You can view the current and recommended values for some unoptimized configurations in the well-architected dashboard. This tells you what the recommended value is before you fix it. 
 
 * Cold data tiering
 * Snapshot policy
