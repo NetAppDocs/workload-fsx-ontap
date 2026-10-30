@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-file-system-settings.html
 keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password
-summary: "Add, update, or remove FSx for ONTAP file system tags for a file system at any time." 
+summary: "Manage FSx for ONTAP file system settings in NetApp Workload Factory, including tags, ONTAP credentials, the fsxadmin password, and throughput capacity." 
 ---
 = Manage FSx for ONTAP file system settings in NetApp Workload Factory
 :icons: font
@@ -38,7 +38,7 @@ Workload Factory supports transitioning between the Workload Factory credentials
 
 Workload Factory handles restricted credentials as follows:
 
-* If you have not provided restricted credentials for a file system and then you create custom rules or dashboards or ask Ask Me questions, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set.
+* If you have not provided restricted credentials for a file system and then you create custom rules or dashboards or submit questions to Ask Me, Workload Factory creates read-only ONTAP credentials to use as the restricted credential set.
 * If you have already provided restricted credentials for a file system, those credentials are used for AIOps.
 
 .Before you begin
