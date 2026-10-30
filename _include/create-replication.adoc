@@ -10,7 +10,7 @@ The tiering policy for all volumes defaults to the tiering policy of the source 
 During migration, clients access data from the source ONTAP file system. After cutover, volumes are available through the target FSx for ONTAP file system IP addresses. Update any clients or resources that still use the old IP address.
 * Hot disaster recovery: ensures high availability and rapid disaster recovery for critical workloads
 * Cold or archive disaster recovery: 
-** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objects (RPO) to lower costs
+** Cold disaster recovery: uses longer recovery time objectives (RTO) and recovery point objectives (RPO) to lower costs
 ** Archive: replicates data for long-term storage and compliance
 * Other
 +
@@ -30,11 +30,11 @@ When the source and target storage VM names are identical, we create a file syst
 +
 _Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload Factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses.
 +
-If you selected the migration use case, Workload Factory automatically selects to copy the tiering policy of source volume to the target volume. You can deselect to copy the tiering policy and select a tiering policy which applies to the volume selected for replication. 
+If you selected the migration use case, Workload Factory automatically selects to copy the tiering policy of source volume to the target volume. You can deselect to copy the tiering policy and select a tiering policy that applies to the volume selected for replication. 
 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MB/s. Alternatively, select *Unlimited*. 
 +
-Without a limit, network and application performance may decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+Without a limit, network and application performance might decline. However, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 
 . Under Replication settings, provide the following: 
 .. *Initialize replication relationship*: Choose to initialize the replication relationship immediately after creating the replication relationship or later. Note that initialization can be time-consuming, and you might want to run the baseline transfer in off-peak hours.
@@ -56,7 +56,7 @@ NOTE: Matching source and target labels are required for long-term retention. If
 +
 * Set the *Retention period* in number of hours, days, months, or years. 
 * *Snapshot policies*: In the table, select the snapshot policy frequency and the number of copies to retain. You can select more than one snapshot policy.
-.. *S3 access point*: Optionally, attach an S3 access point to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Providing the following details: 
+.. *S3 access point*: Optionally, attach an S3 access point to access FSx for ONTAP file system data residing on NFS or SMB/CIFS volumes via AWS S3 APIs. Only the file access type is supported. Provide the following details: 
 +
 * *S3 access point name*: Enter the name of the S3 access point.
 * *User*: Select an existing user with access to the volume or create a new user.
