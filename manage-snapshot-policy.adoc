@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, assign snapshot policy, remove snapshot policy, snapshot policies, snapshot schedule, update, snapshot long-term retention, enable long-term retention 
-summary: "Manage snapshot policies for FSx for ONTAP volumes in Workload Factory. A snapshot policy defines how the system creates snapshots for a volume."
+summary: "Assign, change, remove, and delete snapshot policies, and enable immutable snapshots and long-term retention for FSx for ONTAP volumes in Workload Factory."
 ---
 = Manage snapshot policies for volumes in NetApp Workload Factory
 :icons: font
@@ -21,7 +21,7 @@ By default, every volume is associated with the file system's `default` snapshot
 You can assign a snapshot policy to a single volume to create scheduled snapshots for the volume. 
 
 .Before you begin
-You must associate a link to assign a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+You must associate a link to assign a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -32,17 +32,17 @@ You must associate a link to assign a snapshot policy. link:https://docs.netapp.
 . On the Snapshot policy management page, select the actions menu of the snapshot policy and then select *Assign policy to volume*.
 . In the Assign snapshot policy dialog, select a snapshot policy to assign to the volume and review the policy schedule. 
 +
-If the policy contains immutable snapshots, and you want use it, accept the statement. 
+If the policy contains immutable snapshots and you want to use it, accept the statement. 
 . Select *Assign*. 
 
 .Result
 The snapshot policy is assigned to the volume. 
 
 == Change a snapshot policy
-You can change the snapshot policy name, schedule, and number of copies to retain, and enable or disable immutable snapshots. It isn't possible to enable or disable policy sharing across storage VMs. This option is available only during snapshot policy creation.
+You can change the snapshot policy name, schedule, and number of copies to retain, and enable or disable immutable snapshots. You can't enable or disable policy sharing across storage VMs. You can set this option only when you create a snapshot policy.
 
 .Before you begin
-To display existing snapshot policies, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+To display existing snapshot policies, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -61,14 +61,14 @@ The snapshot policy is updated.
 Lock snapshots to prevent them from being deleted during the retention period.
 
 .Before you begin
-You must associate a link to enable immutable snapshots. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+You must associate a link to enable immutable snapshots. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . In the *FSx for ONTAP* tab, select the actions menu of the file system that contains the volume to lock snapshots for and then select *Manage*.  
 . In the file system overview, select the *Volumes* tab.
-. From the *Volumes* tab, select the actionsenu for the volume to protect. 
+. From the *Volumes* tab, select the actions menu for the volume to protect. 
 . Select *Data protection actions*, *Snapshots*, then *Make a snapshot immutable*. 
 . In the Make a snapshot immutable dialog, do the following: 
 .. *Snapshot name*: Select the snapshot to lock.  
@@ -112,7 +112,7 @@ NOTE: Editing long-term retention isn't available when replicating storage VM da
 Remove a snapshot policy from a volume because you no longer want snapshots of the volume or because you want to delete a snapshot policy that is assigned to multiple volumes. To <<Delete a snapshot policy,delete a snapshot policy>> that is assigned to more than one volume, you must manually remove it from all volumes. 
 
 .Before you begin
-You must associate a link to remove a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation.  
+You must associate a link to remove a snapshot policy. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.  
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

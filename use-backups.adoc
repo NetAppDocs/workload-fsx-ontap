@@ -18,7 +18,7 @@ Create a manual backup of a volume outside regularly scheduled backups in NetApp
 
 Volume backups are per volume, so each backup contains only the data in a particular volume. 
 
-Volume backups are incremental which means that only the data on the volume that has changed after your most recent backup is saved. This minimizes the time required to create the backup and the storage required for the backup, which saves on storage costs by not duplicating data.
+Volume backups are incremental, which means that only the data on the volume that has changed after your most recent backup is saved. This minimizes the time required to create the backup and the storage required for the backup, which saves on storage costs by not duplicating data.
 
 .Before you begin
 
