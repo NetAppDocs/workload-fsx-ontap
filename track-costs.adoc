@@ -62,4 +62,4 @@ Generate cost reports for specific FSx for ONTAP file system resources to share 
 .. *Volume*: (Optional) Select one or more volumes to include in the report.
 
 .Result
-A CSV report is generated and can be downloaded. 
+Workload Factory generates a CSV report that you can download. 

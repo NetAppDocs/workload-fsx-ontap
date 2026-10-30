@@ -9,7 +9,7 @@ summary: "Discover and view cache volumes that are associated with cache relatio
 :imagesdir: ./media/
 
 [.lead]
-Discover and view _cache_ volumes that are associated with cache relationships without leaving the NetApp Workload Factory console. Cache relationships are also known as ONTAP FlexCache relationships. Workload Factory discovers existing cache relationships using FlexCache technology, which is NetApp ONTAP's remote caching capability that accelerates data access, reduces WAN latency, bandwidth and costs for read-intensive workloads, especially where clients need to access the same data repeatedly.
+Discover and view _cache_ volumes that are associated with cache relationships without leaving the NetApp Workload Factory console. Cache relationships are also known as ONTAP FlexCache relationships. Workload Factory discovers existing cache relationships using FlexCache technology, which is the remote caching capability of NetApp ONTAP that accelerates data access, reduces WAN latency, bandwidth and costs for read-intensive workloads, especially where clients need to access the same data repeatedly.
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html[Learn more about replicating data with FlexCache.^]
 
