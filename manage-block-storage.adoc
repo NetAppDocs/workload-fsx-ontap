@@ -14,13 +14,13 @@ Use NetApp Workload Factory to simplify managing your block storage resources, i
 .About this task
 From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices. You can also view block device details, increase capacity, make clones, manage client access, archive data for inactive block devices, and delete block devices.
 
-Learn about client connections by referring to the block device igroup diagram. The diagram includes the following information: 
+Use the block storage diagram to check for the following: 
 
 * Host details including host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN)
 * Client connections
 * Block device status
 * Node-client relationship
-* Potential incorrect client connections
+* Potentially incorrect client connections
 
 .Before you begin
 * You must associate a link to manage igroups. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
@@ -76,9 +76,9 @@ View details for an existing block device at any time.
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
-. Navigate to the actions menu for block device and then select *View details*.
+. Navigate to the actions menu for the block device and then select *View details*.
 + 
-General details, consumption, access, and protection information for the block device are displayed.
+Workload Factory displays general details, consumption, access, and protection information for the block device.
 
 === Manage client access for a block device
 You can manage client access for an existing block device at any time by creating igroups, and adding or removing block devices and host initiators.
@@ -136,6 +136,12 @@ You can create a clone of an existing block device at any time. A block device c
 === Archive the data of an inactive block device
 Block devices that are no longer mapped to a client or unused for seven consecutive days are classified as inactive block devices. You can archive the data of an inactive block device to the capacity pool tier to reclaim SSD capacity.
 
+NOTE: A volume with child clones cannot be deleted until all child clones are either deleted or separated into independent volumes.
+
+.Before you begin
+
+Make sure all block devices (LUNs) are inactive on the same volume before you archive the data. 
+
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
@@ -154,7 +160,7 @@ Block devices that are not mapped to a client or are unused for seven days are i
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
 . Under Orphan devices, select *View and reclaim capacity*.
-. On the Reclaim space for unused block devices screen, select one or more block devices to archive the data and reclaim the capacity.
+. On the Reclaim space for unused block devices screen, select one or more block devices to reclaim the capacity.
 . Select *Delete*. 
 
 == Related information

@@ -21,8 +21,8 @@ Turn on tracking to monitor replication delays across your account. Workload Fac
 . In the Enable replication lag history dialog, select *Enable*. 
 . Back in the Replication lag history tile, select *Customize threshold* to set your preferred threshold.
 . In the Customize lag time threshold dialog, enter the threshold in hours and minutes. 
-. Optionally, select *Enable lag time notifications* to receive notifications when replication lags 
-exceed the threshold. 
+. Optionally, select *Enable lag time notifications* to receive notifications when replication lag 
+exceeds the threshold. 
 +
 Notifications come in an email and include:
 +
