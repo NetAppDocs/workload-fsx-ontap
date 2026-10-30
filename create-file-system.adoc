@@ -2,20 +2,20 @@
 sidebar: sidebar
 permalink: create-file-system.html
 keywords: create, FSx file system, ONTAP file system, Workload Factory, storage
-summary: "Using NetApp Workload Factory you can create an FSx for ONTAP file system to add and manage volumes and additional data services." 
+summary: "Create an FSx for ONTAP file system in NetApp Workload Factory to add and manage volumes and additional data services." 
 ---
 = Create an FSx for ONTAP file system in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Using NetApp Workload Factory you can create first and second-generation FSx for ONTAP file systems to add and manage volumes and additional data services. 
+Create first-generation and second-generation FSx for ONTAP file systems in NetApp Workload Factory to add and manage volumes and additional data services. 
 
 .About this task
 A storage VM and a security group are created as part of file system creation. 
 
 .Before you begin
-Before creating your FSx for ONTAP file system, you will need:
+Before you create your FSx for ONTAP file system, you need:
 
 * Credentials with _file system creation and deletion_ permissions to create an FSx for ONTAP file system. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Learn how to grant permissions to an AWS account^].
 
@@ -41,7 +41,7 @@ Second-generation FSx for ONTAP file systems are the default deployment type for
 . From the Storage dashboard, select *Create file system*.
 include::_include/create-file-system-quick-create.adoc[]
 
-If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.
+After you create the file system, you can view it on the *Inventory* page.
 --
 
 .Advanced create
@@ -53,13 +53,13 @@ With Advanced create, you set all of the configuration options, including availa
 . In the Storage tile, select *Create FSx for ONTAP*.  
 include::_include/create-file-system-advanced-create.adoc[]
 
-If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.
+After you create the file system, you can view it on the *Inventory* page.
 --
 
 ====
 
 == Security group details
-The following table provides security group details including protocols, ports, and roles. 
+The table lists security group details, including protocols, ports, and roles. 
 
 ====
 [cols="2,2,4a" options="header"]

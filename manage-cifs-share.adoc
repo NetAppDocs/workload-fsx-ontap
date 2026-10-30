@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: manage-cifs-share.html
 keywords: cifs, smb, SMB, CIFS, cifs share, change, update, modify, delete, create
-summary: "Managing a volume's SMB or CIFS share in Workload Factory includes creation, determining user and group access, and deletion." 
+summary: "Create, change, or delete an SMB/CIFS share for a volume in Workload Factory, and control which users and groups can access it." 
 ---
 = Manage the SMB/CIFS share for a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Managing a volume's SMB/CIFS share in Workload Factory includes SMB/CIFS share creation, determining the users and groups to give access to and the level of permissions to give them, and SMB/CIFS share deletion.
+Create, change, or delete an SMB/CIFS share for a volume in Workload Factory. Control which users and groups can access the share and the level of permissions they have.
 
 .Before you begin
 Before you begin, do the following: 
@@ -18,7 +18,7 @@ Before you begin, do the following:
 * Determine the users or groups to give access to and the level of permissions to give them. 
 
 == Create an SMB/CIFS share for a volume
-Follow the steps to create an SMB/CIFS share for a volume. 
+Create an SMB/CIFS share for a volume. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -29,7 +29,7 @@ Follow the steps to create an SMB/CIFS share for a volume.
 . On the Manage SMB/CIFS shares page, select *Create SMB/CIFS share*.
 . In the Create SMB/CIFS share dialog, provide the following: 
 .. *Name*: Enter the name of the SMB/CIFS share.
-.. *Path*: Either define the path using the default volume name or provide a share to an internal directory. 
+.. *Path*: Define the path using the default volume name, or provide a share to an internal directory. 
 +
 Valid path inputs for volume name, for example "avocado", are as follows:
 +
@@ -47,7 +47,7 @@ Valid path inputs for share name, for example "Server", are as follows:
 . Select *Create*. 
 
 == Change an SMB/CIFS share for a volume
-Follow the steps to change the SMB/CIFS share settings for a volume.
+Change the SMB/CIFS share settings for a volume.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

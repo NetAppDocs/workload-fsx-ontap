@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: use-onprem-data.html
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP
-summary: "Discover and replicate on-premises ONTAP data in NetApp Workload Factory so it can be used as a backup in the cloud."
+summary: "Discover, replicate, and remove on-premises ONTAP clusters in NetApp Workload Factory to back up volume data to FSx for ONTAP file systems in the cloud."
 ---
 = Use on-premises ONTAP cluster data in NetApp Workload Factory
 :icons: font
@@ -23,12 +23,12 @@ Use cases::
 Discover an on-premises ONTAP cluster in NetApp Workload Factory so that you can replicate the data to an Amazon FSx for NetApp ONTAP file system. 
 
 .Before you begin
-Make sure you have the following before you begin: 
+Make sure you have the following: 
 
 * An FSx for ONTAP file system for replication.
 * A connected link to associate with the discovered on-premises cluster. If you don't have a link, you'll need to link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[create one^]. 
 * ONTAP user credentials with required permissions. 
-* On-premises ONTAP version 9.8 and above.
+* On-premises ONTAP version 9.8 or later.
 * Connectivity as shown in the following diagram. 
 +
 image:screenshot-on-prem-connectivity.png["Screenshot that shows how an on-premises ONTAP cluster should be connected for the management path and data path to Amazon Web Services Cloud"]
@@ -62,7 +62,7 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 
 * You must discover an on-premises ONTAP cluster to replicate its volume data.
 * You must have an available FSx for ONTAP file system to be the target for the replication.
-* Both the on-premises ONTAP cluster and the FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+* Both the on-premises ONTAP cluster and the FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -83,15 +83,15 @@ Replicate volume data from an on-premises ONTAP cluster to an FSx for ONTAP file
 +
 Note that some tiering policies have an associated minimum cooling period which sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk.
 +
-For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^]in AWS FSx for NetApp ONTAP documentation. 
+For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. 
 .. *Max transfer rate*: Select *Limited* and enter the max transfer limit in MiB/s. Alternatively, select *Unlimited*. 
 +
-Without a limit, network and application performance might decline. Alternatively, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
+Without a limit, network and application performance might decline. However, we recommend an unlimited transfer rate for FSx for ONTAP file systems for critical workloads, for example, those that are used primarily for disaster recovery. 
 . Under Replication settings, provide the following: 
 .. *Replication interval*: Select the frequency that snapshots are transferred from the source volume to the target volume. 
 .. *Long-term retention*: Optionally, enable snapshots for long-term retention. 
 +
-If you enable long-term retention, then select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
+If you enable long-term retention, select an existing policy or create a new policy to define the snapshots to replicate and the number to retain.  
 +
 * For an existing policy, select *Choose an existing policy* and then select the existing policy from the dropdown menu. 
 * For a new policy, select *Create a new policy* and provide the following: 

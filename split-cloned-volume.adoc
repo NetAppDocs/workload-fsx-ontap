@@ -16,16 +16,16 @@ Data is accessible on the clone and the parent during the split. The split proce
 .About this task 
 The clone splitting operation involves the following: 
 
-* New snapshot copies of the FlexClone volume cannot be created during the split operation.
-* A FlexClone volume cannot be split from the parent volume if it belongs to a data protection relationship.
-* If you take the FlexClone volume offline while splitting is in progress, the split operation is suspended; when you bring the FlexClone volume back online, the splitting operation resumes.
+* You can't create new snapshot copies of the FlexClone volume during the split operation.
+* You can't split a FlexClone volume from its parent volume if it belongs to a data protection relationship.
+* If you take the FlexClone volume offline during the split, the split operation suspends. When you bring the FlexClone volume back online, the split operation resumes.
 * After the split, both the parent FlexVol volume and the clone require the full space allocation determined by their volume guarantees.
-* After a FlexClone volume is split from its parent the two cannot be rejoined.
+* After you split a FlexClone volume from its parent, you can't rejoin them.
 
 .Before you begin
 Consider the following before you split a cloned volume: 
 
-* To split a cloned volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After the link associates, return to this operation. 
+* To split a cloned volume, you must associate a link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation. 
 * The FlexClone volume must be online when the split operation begins.
 * The parent volume must be online for the split to succeed.
 

@@ -38,7 +38,7 @@ To adjust capacity for a file system, you must first link:manage-capacity-automa
 . Select *Apply*. 
 
 == Enable automatic capacity and inode management
-Enable capacity and inode management to let NetApp Workload Factory automatically add incremental storage an FSx for ONTAP file system and inodes (files) to a volume as capacity needs change over time. These features remove the need to monitor capacity and inodes manually. 
+Enable capacity and inode management to let NetApp Workload Factory automatically add incremental storage to an FSx for ONTAP file system and inodes (files) to a volume as capacity needs change over time. These features remove the need to monitor capacity and inodes manually. 
 
 Only one account can manage these features. 
 
@@ -109,7 +109,7 @@ Consider the following before you begin:
 . From the Storage menu, select *FSx for ONTAP*. 
 . From *FSx for ONTAP*, select the actions menu of the file system to enable automatic inodes management for. 
 . Select *Manage*. 
-. Under Information, select the pencil icon next to *Automatic inodes management*. The pencil icon appears next to the drop down arrow when the mouse hovers over the *Automatic inodes management* row. 
+. Under Information, select the pencil icon next to *Automatic inodes management*. The pencil icon appears next to the dropdown arrow when the mouse hovers over the *Automatic inodes management* row. 
 . In the *Automatic inodes management* dialog, provide the following: 
 .. *Credentials*: Select credentials with _Automate_ permissions from the dropdown menu. 
 .. Select the enable button to *Enable automatic inodes management*. 

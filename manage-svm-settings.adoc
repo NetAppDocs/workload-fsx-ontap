@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: manage-svm-settings.html
 keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password
-summary: "Add, update, or remove storage VM tags for a storage VM at any time." 
+summary: "Configure Active Directory, manage tags, and reset the password for a storage VM in an FSx for ONTAP file system." 
 ---
 = Manage storage VM settings in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Manage the settings of a storage VM in NetApp Workload Factory. You configure and update Active Directory for a storage VM, can update the storage VM password, and manage tags for the storage VM. 
+Manage the settings of a storage VM in NetApp Workload Factory. You can configure and update Active Directory, reset the storage VM password, and manage storage VM tags. 
 
 == Configure and update AD for a storage VM in NetApp Workload Factory
 Configure and update Active Directory for a storage VM in an FSx for ONTAP file system in NetApp Workload Factory.
@@ -26,12 +26,12 @@ The same steps apply for configuring and updating Active Directory for a storage
 . On the Manage AD configuration page, provide the following: 
 .. *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) of your Active Directory. 
 .. *DNS IP addresses*: Enter up to three IP addresses separated by commas. 
-.. *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this SVM in Active Directory.
+.. *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of the storage VM in Active Directory.
 .. *User name*: Enter the user name of the service account in your existing Active Directory. 
 +
 Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
 .. *Password*: Enter the password for the service account. 
-.. *Organization unit (OU)*: Enter the organization unit. 
+.. *Organization unit (OU)*: Enter the organizational unit. 
 +
 The OU is the distinguished path name of the organizational unit to which you want to join your file system.
 .. *Delegated administrators group*: Optionally, enter the delegated file system administrators group. 

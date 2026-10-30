@@ -2,14 +2,14 @@
 sidebar: sidebar
 permalink: delete-volume.html
 keywords: delete volume, volume deletion
-summary: "Delete a volume in your FSx for ONTAP file system that is no longer required and to free up space. This operation is irreversible."
+summary: "Delete a volume you no longer need from an FSx for ONTAP file system to free up space. This operation is irreversible."
 ---
 = Delete a volume in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
 [.lead]
-Delete a volume in your FSx for ONTAP file system that is no longer required and to free up space. This operation is irreversible. 
+Delete a volume you no longer need from an FSx for ONTAP file system to free up space. This operation is irreversible. 
 
 .Before you begin
 Consider the following before deleting a volume: 
