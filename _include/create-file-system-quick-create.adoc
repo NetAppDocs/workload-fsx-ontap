@@ -13,7 +13,7 @@ This configuration is recommended for high performance workloads or when workloa
 * Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
 +
 This single HA-pair configuration is recommended for workloads that require up to 6 GB/s of throughput or 200,000 IOPS. 
-.. *Tags*: Optionally, you can add up to 50 tags. 
+.. *Tags*: Optionally, add up to 50 tags. 
 . Under *File system details*, provide the following: 
 .. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
 +
@@ -28,7 +28,7 @@ If the user you provide is not the fsxadmin user, and later you need to reset th
 ... *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this storage VM in the Active Directory.
 ... *User name*: Enter the user name of the service account in your existing Active Directory. 
 +
-Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
+Don't include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
 ... *Password*: Enter the password for the service account. 
 ... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. The OU is the distinguished path name of the organizational unit to which you want to join the file system. 
 ... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.

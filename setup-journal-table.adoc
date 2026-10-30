@@ -180,7 +180,7 @@ Set up the infrastructure to capture AWS service events from the S3 access point
 . From the file system overview, select the *Volumes* tab.
 . From the Volumes tab, select the actions menu for the volume you want to manage S3 access points for, then select *Advanced actions*, and then *Manage S3 access points*.
 . From the *Manage S3 access points* screen, select the actions menu and then select *Edit access point*.
-. In the *Edit S3 access point* dialog, ensure that the network configuration is set to *Internet*.
+. In the *Edit S3 access point* dialog, confirm that the network configuration is set to *Internet*.
 . Follow the instructions in the dialog to set up the infrastructure for the journal table feature.
 . Download the CloudFormation template.
 . Deploy the CloudFormation stack in your AWS account.
@@ -208,7 +208,7 @@ The deploying role/user needs a specific set of permissions. Refer to <<Before y
 If the stack fails with an `AccessDenied` or `InsufficientPermission` error, check the stack events and look for the missing permission in the `ResourceStatusReason` field.
 
 ==== CloudTrail limit 
-AWS enforces a default limit of 5 trails per region. If the account already has 5 trails, `the FsxDataEventTrail` resource will fail with: Maximum number of trails (5) exceeded. You can check the number of Trails on a regional level with the following command:
+AWS enforces a default limit of five trails per region. If the account already has five trails, the `FsxDataEventTrail` resource will fail with: Maximum number of trails (5) exceeded. You can check the number of Trails on a regional level with the following command:
 
 [source, cli]
 ----
@@ -302,12 +302,12 @@ The S3TableIntegration automatically creates a table bucket called aws-cloudwatc
 +
 * If the aws-cloudwatch table bucket does not exist, then the `S3TableIntegrationRole` is missing permissions. It needs `s3tables:CreateTableBucket`, `s3tables:PutTableBucketEncryption`, and `s3tables:PutTableBucketPolicy` — all scoped to `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`.
 * If the table bucket exists but `logs.aws_cloudtrail__data` does not, then the integration is not routing events. The integration must show `Status: ACTIVE` and include `aws_cloudtrail` as a log source.
-* If the table exists but the seed event is not in it, then the event may still be in transit. S3 Tables ingestion has some latency. Wait a few more minutes. If it still does not appear after 15-20 minutes, the integration may be broken.
+* If the table exists but the seed event is not in it, then the event might still be in transit. S3 Tables ingestion has some latency. Wait a few more minutes. If it still does not appear after 15-20 minutes, the integration might be broken.
 
 . Query the seed event directly.
 .. Open the S3 Tables in the AWS Management Console.
 .. Navigate to the aws-cloudwatch table bucket → aws_cloudtrail__data table, and use the *Preview* button to run a quick query directly in the browser. 
-.. If the event is present in the table but the journal still shows `FAILED`, then the polling window may have expired before the event arrived. 
+.. If the event is present in the table but the journal still shows `FAILED`, then the polling window might have expired before the event arrived. 
 
 After resolving the issue, return to the Workload Factory console. Retry <<Set up the journal table infrastructure,initiating the journal table setup>> by submitting the Trail ARN again.
 

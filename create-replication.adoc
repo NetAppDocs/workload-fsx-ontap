@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-replication.html
 keywords: replication, replicate, data protection, disaster recovery, data loss, initialize, cut over, cutover, data transfer, sync, replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume
-summary: "Use replication to protect your data from data loss in case of an unforeseen disaster, to migrate your data, or to cascade replication for data protection volumes in an Amazon FSx for NetApp ONTAP file system"
+summary: "Replicate data to protect against data loss, migrate data, or cascade replication for data protection volumes in an Amazon FSx for NetApp ONTAP file system"
 ---
 = Replicate data to FSx for ONTAP in NetApp Workload Factory
 :icons: font
@@ -11,11 +11,11 @@ summary: "Use replication to protect your data from data loss in case of an unfo
 [.lead]
 Replicate data in NetApp Workload Factory to protect against data loss if the region where your data resides experiences a disaster. Data replication is supported between FSx for ONTAP file systems and on-premises ONTAP systems or Cloud Volumes ONTAP. Workload Factory also supports cascading replication to extend data protection to tertiary systems or migrate your data. 
 
-When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cut over operation.
+When replicating storage VM data and configuration settings, you must first create and initialize the replication relationship and then wait for the data to sync at least once before completing the cutover operation.
 
 == Standard replication
 
-Replication protects your data if a disaster affects your region; it can also be used for migration purposes. 
+Replication protects your data if a disaster affects your region and can also support migration. 
 
 Replication includes creating and initializing a replication relationship. To set up replication, create the replication relationship. To transfer the data between the source and target storage systems, initialize the replication relationship. When migrating storage VM data and configuration settings, you must also complete the cutover operation.
 
@@ -52,12 +52,12 @@ Replicate data between two FSx for ONTAP file systems, between an on-premises ON
 .Before you begin
 Review these requirements before you begin.
 
-* Ensure that one FSx for ONTAP file system is available to use for the target in the replication relationship.
+* Confirm that one FSx for ONTAP file system is available to use for the target in the replication relationship.
 * Open TCP ports 11104 and 11105 for secure data transfer and management between storage systems. ICMP is optional, but can help with network checks and troubleshooting.   
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
 * For replication from an on-premises ONTAP system to an FSx for ONTAP file system, make sure you have discovered the on-premises ONTAP system. 
 * Replication isn't supported for volumes in a state other than available, created, or misconfigured, and when the ONTAP version isn't compatible.
-* For migration use cases ensure that the last replication for the volume completed in the last 24 hours before you create a replication relationship with storage VM data and configuration settings.
+* For migration use cases, confirm that the last replication for the volume completed in the last 24 hours before you create a replication relationship with storage VM data and configuration settings.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -103,12 +103,12 @@ When the replication status shows *Idle*, the data transfer is complete.
 
 == Step 3: Cut over replication for migration use cases 
 
-After creating the replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, data gets replicated for the last time. The source storage VM goes offline when the cutover begins.
+After creating the replication relationship for a migration use case, you must cut over replication to complete migration of storage VM data and configuration settings to the target FSx for ONTAP file system. Cutover replication permanently migrates data and storage VM configuration settings from the source file system to the target FSx for ONTAP file system. During the cutover, Workload Factory replicates the data one last time. The source storage VM goes offline when the cutover begins.
 
 === Plan for the cutover operation
 Consider the following when planning for the cutover operation for migration use cases.
 
-* *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source system is running ONTAP version 9.18.1, then the target system must also run a version of 9.18.1.
+* *Replication version support*: Source and target storage systems must have the same major ONTAP version. For example, if the source system is running ONTAP version 9.18.1, then the target system must also run ONTAP version 9.18.1.
 
 * *Storage VM configuration settings*:
 
@@ -116,7 +116,7 @@ Consider the following when planning for the cutover operation for migration use
 
 ** If your storage VM uses domain-tunnel authentication, set up and enable a domain tunnel on the target file system before you start the migration.
 
-* *Clones*: Clones get migrated as individual volumes, and therefore, will consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
+* *Clones*: The cutover operation migrates clones as individual volumes, which consume more space on the target FSx for ONTAP file system. Consider deleting the clones before cutover to avoid increased capacity on the target.
 
 * *Cache volumes*: Source storage VMs that contain cache volumes aren't supported for cutover. Remove the ONTAP FlexCache relationship before cutover to avoid migration failures.
 
@@ -130,8 +130,8 @@ Consider the following when planning for the cutover operation for migration use
 Review these requirements before you begin.
 
 * Stop any client access to your storage VM before you cut over replication.
-* Ensure all source volumes are not serving any data before you cut over replication.
-* Ensure the data is synced between the source and target volumes before you cut over replication. 
+* Confirm that no source volume is serving data before you cut over replication.
+* Confirm that the data is synced between the source and target volumes before you cut over replication. 
 * The FSx for ONTAP file system you use for the replication relationship must have an associated link. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
 ** The following ports must be open in the security group associated with the FSx for ONTAP file system for link connectivity: port 443 (HTTPS) and port 22 (SSH).
 
@@ -172,9 +172,9 @@ Learn more about link:https://docs.netapp.com/us-en/ontap/data-protection/suppor
 .Before you begin
 Consider the following before you begin: 
 
-* Be aware that volumes that are part of a cascade configuration can take longer to resynchronize.
+* Volumes that are part of a cascade configuration can take longer to resynchronize.
 * If the source volume of the relationship is a data protection volume and is a target of another relationship, reversing the replication relationship isn't supported.
-* One replica of a data protection volume (or a second hop) is supported. It isn't considered best practice to create a second replica of a data protection volume (or a third hop). 
+* One replica of a data protection volume (or a second hop) is supported. Creating a second replica of a data protection volume (or a third hop) isn't a best practice. 
 * Open TCP ports 11104 and 11105 for secure data transfer and management between storage systems. ICMP is optional, but can help with network checks and troubleshooting.  
 
 .Steps

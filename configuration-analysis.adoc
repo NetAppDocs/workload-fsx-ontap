@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: configuration-analysis.html
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations
-summary: "NetApp Workload Factory analyzes Amazon FSx for NetApp ONTAP file system configurations regularly to determine if there are any configuration issues."  
+summary: "Analyze FSx for ONTAP file system configurations in NetApp Workload Factory to find issues and get recommendations that improve performance, cost efficiency, and compliance."  
 ---
 = Configuration analysis for FSx for ONTAP file systems
 :icons: font
@@ -80,7 +80,7 @@ The snapshot policy labels of the source volume and the replication policy label
 
 * *File object capacity* 
 +
-The file capacity threshold should be raised to avoid hitting the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80% to allow new file creation. 
+Raise the file capacity threshold to avoid reaching the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80% to allow new file creation. 
 
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
@@ -98,7 +98,7 @@ Operational excellence focuses on delivering the most optimal architecture and b
 
 * *Automatic capacity management* 
 +
-Automatic capacity management should be enabled to regularly ensure that the SSD tier doesn't exceed the threshold. 
+Enable automatic capacity management to regularly ensure that the SSD tier doesn't exceed the threshold. 
 
 * *Volume capacity headroom*
 +

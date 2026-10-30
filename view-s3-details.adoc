@@ -9,7 +9,7 @@ summary: "View the details of S3 access points for a volume in NetApp Workload F
 :imagesdir: ./media/
 
 [.lead]
-View S3 access point details like the alias, ARN, and S3 URI. With inventory and journal tables enabled, you can view metadata and audit logs of user access events and object operations across S3 access points.
+View S3 access point details like the alias, ARN, and S3 URI. When the inventory and journal tables are enabled, you can view metadata and audit logs of user access events and object operations across S3 access points.
 
 .About this task
 When the inventory table is enabled on the volume, you can view access point, inventory table, and table bucket details of existing S3 access points attached to the volume. The system also provides a link to the inventory table in the AWS Management Console.

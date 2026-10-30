@@ -28,10 +28,10 @@ Review the available tiering policies before you change the tiering policy.
 
 * *Balanced (Auto)*: default tiering policy when creating a volume using the user interface. Keeps frequently accessed data in the SSD storage tier and tiers infrequently accessed data and snapshots to the capacity pool storage tier after the cooling period ends. Recommended for general primary workloads. 
 * *Cost-optimized (All)*: Tiers all snapshots and data to the capacity pool storage tier. Recommended for secondary targets.
-* *Performance optimized (Snapshots only)*: Tiers only snapshot data to the capacity pool storage tier. Recommended for low-latency workloads such as mission-critical databases.
+* *Performance-optimized (Snapshots only)*: Tiers only snapshot data to the capacity pool storage tier. Recommended for low-latency workloads such as mission-critical databases.
 * *None*: Keeps volume data in the SSD storage tier, preventing it from being moved to the capacity pool storage tier.
 
-Note that some tiering policies have an associated minimum cooling period which sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk. 
+Some tiering policies have an associated minimum cooling period that sets the time, or _cooling days_, that user data in a volume must remain inactive for the data to be considered "cold" and moved to the capacity pool storage tier. The cooling period starts when data is written to the disk. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].

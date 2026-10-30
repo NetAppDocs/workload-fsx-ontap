@@ -14,12 +14,12 @@ Use NetApp Workload Factory to simplify managing your block storage resources, i
 .About this task
 From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices. You can also view block device details, increase capacity, make clones, manage client access, archive data for inactive block devices, and delete block devices.
 
-Check the block storage diagram to check for the following: 
+Use the block storage diagram to check for the following: 
 
 * Client connections
 * Block device status
 * Node-client relationship
-* Potential incorrect client connections
+* Potentially incorrect client connections
 
 .Before you begin
 * You must associate a link to manage igroups. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
@@ -75,9 +75,9 @@ View details for an existing block device at any time.
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *FSx for ONTAP*.
 . From *FSx for ONTAP*, select the *Block devices* tab. 
-. Navigate to the actions menu for block device and then select *View details*.
+. Navigate to the actions menu for the block device and then select *View details*.
 + 
-General details, consumption, access, and protection information for the block device are displayed.
+Workload Factory displays general details, consumption, access, and protection information for the block device.
 
 === Manage client access for a block device
 You can manage client access for an existing block device at any time by creating igroups, and adding or removing block devices and host initiators.

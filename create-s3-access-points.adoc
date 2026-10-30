@@ -9,7 +9,7 @@ summary: "Create S3 access points for a volume in NetApp Workload Factory."
 :imagesdir: ./media/
 
 [.lead]
-Create and attach S3 access points for a volume in NetApp Workload Factory. 
+Create and attach S3 access points to an FSx for ONTAP volume in NetApp Workload Factory so AWS services can access volume files as if they were in an S3 bucket. 
 
 .About this task
 Amazon FSx for NetApp ONTAP lets NFS and SMB file systems access S3 data and connect to AWS services like Amazon Bedrock, SageMaker, Athena, AWS Glue, and more. You can connect AWS services to all of your object storage data.
@@ -38,7 +38,7 @@ Complete the following requirements before you begin.
 * *User*: Select an existing user with access to the volume or create a new user.
 * *User type*: Select *UNIX* or *Windows* as the user type.
 * *Network configuration*: Select *Internet* or *Virtual private cloud (VPC)*. The type of network you choose determines whether the access point is accessible from the internet or restricted to a specific VPC. To use the Journal table feature, you must select *Internet* as the network configuration.
-* *Inventory table*: Optional. Requires the `getObject` permission. Enable the inventory table on the volume to generate metadata for all objects accessible to the S3 access point and incurs AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information. The table updates every 24 hours.
+* *Inventory table*: Optional. Requires the `getObject` permission. Enable the inventory table on the volume to generate metadata for all objects accessible to the S3 access point and incur AWS S3 request costs. Refer to link:https://aws.amazon.com/s3/pricing/[Amazon S3 pricing documentation^] for more information. The table updates every 24 hours.
 * *S3 access point tags*: Optionally, you can add up to 50 tags or remove tags.
 . Select *Create*. 
 

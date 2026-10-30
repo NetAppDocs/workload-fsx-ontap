@@ -7,7 +7,7 @@ FSx for ONTAP is the _Storage_ component in Workload Factory.
 == Features
 FSx for ONTAP offers the following features:
 
-* *Fully-managed service*: provides a fully-managed service integrated with the Workload Factory console. 
+* *Fully managed service*: provides a fully managed service integrated with the Workload Factory console. 
 * *High availability*: provides high availability for each FSx for ONTAP file system, supporting Single and Multiple Availability Zones deployments. 
 * *Automated snapshots*: protects data with automated, efficient snapshots, which are near instantaneous, space efficient point-in-time read-only copies of the file system or volumes. 
 * *Volume replication*: provides disaster recovery with cross-region replication across Amazon Web Services. 
@@ -18,7 +18,7 @@ FSx for ONTAP offers the following features:
 * *In-memory cache and NVMe cache*: includes a unique in-memory cache and NVMe cache, which boosts the performance of frequently accessed data.
 * *Hundreds of thousands of IOPS*: provides hundreds of thousands of IOPS with SSD disks, ensuring that your storage and workloads receive timely results.
 * *Thin Provisioning*: allows capacity provisioning in advance, saving costs until more capacity is needed.  
-* *Data deduplication and compression*: removes duplicate data and compresses data to reduce the amount of physical storage that is required for FSx for ONTAP file systems resulting in cost savings. 
+* *Data deduplication and compression*: removes duplicate data and compresses data to reduce the amount of physical storage that is required for FSx for ONTAP file systems, resulting in cost savings. 
 * *Data tiering*: allows storage cost reduction by moving less frequently accessed data from the primary, high performance SSD storage tier to the secondary capacity pool storage tier. 
 
 == Additional features in Workload Factory
@@ -34,7 +34,7 @@ include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_incl
 AWS maintains your FSx for ONTAP account, not Workload Factory. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap[Pricing for Amazon FSx for NetApp ONTAP^].
 
 == Regions
-Workload factory is supported in all commercial regions where FSx for ONTAP is supported. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
+Workload Factory is supported in all commercial regions where FSx for ONTAP is supported. link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/[View supported Amazon regions.^]
  
 The following AWS regions aren't supported:
  

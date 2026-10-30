@@ -9,7 +9,7 @@ summary: "Manage the cache volumes for an FSx for ONTAP file system in NetApp Wo
 :imagesdir: ./media/
 
 [.lead]
-Use the NetApp Workload Factory console to manage cache volumes for FSx for ONTAP file systems. Caching, a method for temporarily storing data, improves data access performance by reducing retrieval time. You can edit the cache name, adjust capacity, change the export policy, select a caching method, pre-populate the cache, or delete cache volumes.
+Use the NetApp Workload Factory console to manage cache volumes for FSx for ONTAP file systems. Caching, a method for temporarily storing data, improves data access performance by reducing retrieval time. You can edit the cache name, adjust capacity, change the export policy, select a caching method, prepopulate the cache, or delete cache volumes.
 
 .About this task
 You can manage cache volumes that are associated with cache relationships in the NetApp Workload Factory console. 
