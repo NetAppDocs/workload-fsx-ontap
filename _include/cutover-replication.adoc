@@ -2,4 +2,7 @@
 . From *FSx for ONTAP*, select the file system that contains the volume(s) to replicate.
 . Select the *Replication relationships* tab.
 . In the Replication relationships table, select the replication relationship to cut over and then select *Cut over replication*.
-. Review the information in the Cut over replication dialog and then type _cut over_ to confirm.
+. Complete the steps to test the cutover and then perform the actual cutover.
++
+If you close the dialog during the process, you can check the *SVM migration status* from the *Replication relationships* tab and continue the cutover operation when ready.
+. Review the information in the Cut over replication dialog and then type _cut over_ to complete the process.
