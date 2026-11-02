@@ -1,8 +1,2 @@
-=== Faster detection of newly added accounts for tagging classification
-Workload Factory now detects AWS accounts added after the last well-architected analysis and automatically runs tagging classification for each new account, so new accounts no longer have to wait for the next full analysis cycle.
-
-=== Monthly tagging classification schedule restored
-Workload Factory has restored the monthly tagging classification scan, so the recurring job now runs automatically on schedule again.
-
 === Throughput decision points
 You can now see client throughput recommendation and automation decision points. Hover over a decision point to view details, such as the current and recommended SKU or breached metrics in time window (%).
