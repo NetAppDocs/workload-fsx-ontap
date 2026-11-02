@@ -63,3 +63,5 @@ When a large number of related replication lag events occur, Workload Factory au
 
 You can now turn on automatic capacity management notifications to try out the feature before asking Workload Factory to manage your capacity automatically. You'll be notified when your file system is running low on capacity. 
 
+=== Throughput decision points
+You can now see client throughput recommendation and automation decision points. Hover over a decision point to view details, such as the current and recommended SKU or breached metrics in time window (%).
