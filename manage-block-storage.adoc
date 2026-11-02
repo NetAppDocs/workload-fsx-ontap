@@ -9,13 +9,14 @@ summary: "Manage block storage for an FSx for ONTAP file system in NetApp Worklo
 :imagesdir: ./media/
 
 [.lead]
-Use NetApp Workload Factory to simplify managing your block storage resources, including igroups and block devices, and control client access for FSx for ONTAP block devices to provide optimal performance and minimize costs. 
+Use NetApp Workload Factory to simplify managing your block storage resources, including igroups and block devices, and control client access for FSx for ONTAP block devices to provide optimal performance and minimize costs. Refer to the block device igroup diagram to optimize client connections and resolve issues quickly. 
 
 .About this task
 From the Workload Factory console, you can manage initiator groups (igroups) to control client access to block devices. You can also view block device details, increase capacity, make clones, manage client access, archive data for inactive block devices, and delete block devices.
 
 Use the block storage diagram to check for the following: 
 
+* Host details including host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN)
 * Client connections
 * Block device status
 * Node-client relationship
