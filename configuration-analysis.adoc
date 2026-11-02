@@ -90,6 +90,14 @@ Workload Factory recommends connecting hosts to the failover node to maintain co
 +
 Set the snapshot policy to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
 
+* *MySQL snapshot policy*
++
+Set the snapshot policy to "None" for MySQL volumes to lower storage costs and improve performance for active database data.
+
+* *PostgreSQL snapshot policy*
++
+Set the snapshot policy to "None" for PostgreSQL volumes to lower storage costs and improve performance for active database data.
+
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
 
