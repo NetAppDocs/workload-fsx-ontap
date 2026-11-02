@@ -105,6 +105,10 @@ Volumes serving application data using iSCSI should not allow NAS access at the 
 + 
 ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
 
+* *Bidirectional CHAP for Kubernetes iSCSI backends*
++
+Use bidirectional CHAP authentication for Trident iSCSI backends to ensure iSCSI initiator and target are mutually authenticated. This prevents unauthorized hosts from establishing iSCSI sessions against the storage VM.
+
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value.
 
