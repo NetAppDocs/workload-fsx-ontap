@@ -65,3 +65,7 @@ You can now turn on automatic capacity management notifications to try out the f
 
 === Throughput decision points
 You can now see client throughput recommendation and automation decision points. Hover over a decision point to view details, such as the current and recommended SKU or breached metrics in time window (%).
+
+=== Customer-managed Bedrock support for classification
+Workload Factory now lets you use your own Amazon Bedrock setup for workload tagging classification. You can provide your own Bedrock endpoint and credentials so that classification requests run through your own Bedrock configuration.
+
