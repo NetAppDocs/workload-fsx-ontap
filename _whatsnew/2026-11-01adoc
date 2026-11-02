@@ -1,2 +1,0 @@
-=== Customer-managed Bedrock support for classification
-Workload Factory now lets you use your own Amazon Bedrock setup for workload tagging classification. You can provide your own Bedrock endpoint and credentials so that classification requests run through your own Bedrock configuration.
