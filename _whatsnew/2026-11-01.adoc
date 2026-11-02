@@ -14,13 +14,15 @@ Workload Factory now includes the following configurations in the well-architect
 
 * *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system for reliability.
 * *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node for performance efficiency.
+* *ARP/AI multi-device detection gap*: ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
+* *Clone cleanup*: checks whether there are any volume clones older than 30 days that can be deleted to optimize storage usage and reduce costs.
+* *Match igroup OS to host*: checks whether the operating system of the initiator group (igroup) matches the host's operating system to prevent I/O or performance issues.
 * *QoS configuration*: checks whether Kubernetes persistent volumes are protected with an ONTAP QoS policy for performance efficiency.
 * *Dedicated Kubernetes storage VM*: checks whether the file system is using a dedicated storage VM for Kubernetes workloads to improve isolation and simplify storage management.
 * *Dedicated Kubernetes export policy*: checks whether each Kubernetes persistent volume has a dedicated export policy that only allows access from the cluster's worker nodes.
 * *SAP HANA snapshot policy*: checks whether the snapshot policy is set to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
-* *ARP/AI multi-device detection gap*: ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
-* *Clone cleanup*: checks whether there are any volume clones older than 30 days that can be deleted to optimize storage usage and reduce costs.
-* *Match igroup OS to host*: checks whether the operating system of the initiator group (igroup) matches the host's operating system to prevent I/O or performance issues.
+* *MySQL snapshot policy*: checks whether the snapshot policy is set to "None" for MySQL volumes to lower storage costs and improve performance for active database data.
+* *PostgreSQL snapshot policy*: checks whether the snapshot policy is set to "None" for PostgreSQL volumes to lower storage costs and improve performance for active database data.
 
 ==== Current and recommended values for configurations
 You can view the current and recommended values for some unoptimized configurations in the well-architected dashboard. This tells you what the recommended value is before you fix it. 
