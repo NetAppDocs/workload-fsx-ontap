@@ -27,7 +27,7 @@ A link establishes a trust relationship between Workload Factory and one or more
 * Managing igroups and cache volumes
 * Managing ONTAP credentials
 
-link:learn-about-links.html[Learn more about links].
+link:links-overview.html[Learn more about links].
 
 .What happens if I don't associate a link with my file system?
 
