@@ -12,14 +12,24 @@ You can manually run analysis on selected configurations so that you analyze onl
 ==== New recommendations in the well-architected analysis
 Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
 
+For storage workloads: 
+
 * *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system for reliability.
 * *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node for performance efficiency.
 * *ARP/AI multi-device detection gap*: ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
 * *Clone cleanup*: checks whether there are any volume clones older than 30 days that can be deleted to optimize storage usage and reduce costs.
 * *Match igroup OS to host*: checks whether the operating system of the initiator group (igroup) matches the host's operating system to prevent I/O or performance issues.
+
+For Kubernetes workloads:
+
 * *QoS configuration*: checks whether Kubernetes persistent volumes are protected with an ONTAP QoS policy for performance efficiency.
 * *Dedicated Kubernetes storage VM*: checks whether the file system is using a dedicated storage VM for Kubernetes workloads to improve isolation and simplify storage management.
 * *Dedicated Kubernetes export policy*: checks whether each Kubernetes persistent volume has a dedicated export policy that only allows access from the cluster's worker nodes.
+* *Bidirectional CHAP for Kubernetes iSCSI backends*: checks whether Trident iSCSI backends have mutual CHAP authentication enabled for security.
+* *Disable `showmount` on the application storage VM*: checks whether `showmount` is disabled on the application storage VM to prevent clients from listing exports they can't access.
+
+For database workloads:
+
 * *SAP HANA snapshot policy*: checks whether the snapshot policy is set to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
 * *MySQL snapshot policy*: checks whether the snapshot policy is set to "None" for MySQL volumes to lower storage costs and improve performance for active database data.
 * *PostgreSQL snapshot policy*: checks whether the snapshot policy is set to "None" for PostgreSQL volumes to lower storage costs and improve performance for active database data.
