@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: manage-snapshots.html
 keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
-summary: "Edit snapshot settings, enable directory access, and delete snapshots to manage your snapshots and data protection in Workload Factory."
+summary: "Edit snapshot names, labels, and retention periods, make snapshots immutable, enable snapshot directory access, and delete snapshots of FSx for ONTAP volumes."
 ---
 = Manage snapshots of an FSx for ONTAP volume
 :icons: font
@@ -21,7 +21,7 @@ Edit the name, label, and retention period of a snapshot. If the snapshot isn't 
 . Select the actions menu for the volume with the snapshot to edit.
 . Select *Data protection actions* and then *Manage snapshots*. 
 . From the Manage snapshots page, select the actions menu for the snapshot to edit, and then select *Edit*.
-. In the Edit a snapshot dialog, you may edit the following: 
+. In the Edit a snapshot dialog, edit the following settings: 
 .. Change the name. 
 .. Change the label. 
 .. Change the retention period. 
@@ -33,7 +33,7 @@ Accept the statement regarding immutable snapshots.
 . Select *Apply*. 
 
 == Access a snapshot
-Enable snapshot directory access to give users the ability access snapshots autonomously.
+Enable snapshot directory access so users can access snapshots autonomously.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
@@ -42,7 +42,7 @@ Enable snapshot directory access to give users the ability access snapshots auto
 . Select the actions menu for the volume with the snapshot to access.
 . Select *Data protection actions* and then *Manage snapshots*. 
 . From the Manage snapshots page, select the actions menu for the snapshot to access, and then select *Access*.
-. In the Access snapshot dialog, select to *Enable snapshot directory access* to access this volume snapshot and all snapshots of the volume.
+. In the Access snapshot dialog, select *Enable snapshot directory access* to access this volume snapshot and all snapshots of the volume.
 
 * For NFS volumes: Select *NFS access path* to view the NFS path for the snapshot.
 * For SMB/CIFS volumes: Select *SMB access path* to view the SMB path for the snapshot.
@@ -50,14 +50,14 @@ Enable snapshot directory access to give users the ability access snapshots auto
 . Select *Apply*. 
 
 == Restore data from a snapshot
-You have the option to restore data from a snapshot to an existing volume or to a new volume.
+You can restore data from a snapshot to an existing volume or to a new volume.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html[Restore a volume from a snapshot]
 
 == Delete a snapshot
 Delete a snapshot to free up space.
 
-Immutable snapshots cannot be deleted until the retention period ends. 
+You can't delete immutable snapshots until the retention period ends. 
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
