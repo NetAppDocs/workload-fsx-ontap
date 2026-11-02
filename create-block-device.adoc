@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: create-block-device.html
 keywords: create block device, create lun, iscsi protocol
-summary: "Create block devices to support your line of business (LOB) application requirements." 
+summary: "Create iSCSI block devices in an existing or new volume, configure initiator group access, and set storage efficiency and protection options for FSx for ONTAP." 
 ---
 = Create a block device for a file system in NetApp Workload Factory
 :icons: font
@@ -68,7 +68,7 @@ NOTE: Snapshot times are based on the file system's time zone, which defaults to
 
 .. *Tiering policy*: Select the tiering policy for the data stored in the volume. 
 +
-_Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Note that Workload Factory uses use-case based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
+_Balanced (Auto)_ is the default tiering policy when creating a volume using the Workload Factory console. For more information about volume tiering policies, refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy[Volume storage capacity^] in AWS FSx for NetApp ONTAP documentation. Workload Factory uses use-case-based names in the Workload Factory console for tiering policies and includes FSx for ONTAP tiering policy names in parentheses. 
 .. *ARP/AI*: NetApp Autonomous Ransomware Protection with AI (ARP/AI) is enabled by default when a link is associated with the file system. link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html[Learn more about ARP/AI]. Accept the statement to proceed.
 +
 If the feature is unavailable, it is because of one of the following reasons: 

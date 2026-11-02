@@ -14,7 +14,7 @@ Use NetApp Workload Factory to create initiator groups and manage host access to
 .About this task
 Initiator groups, or igroups, connect block devices (LUNs) to the compute resources that are allowed to access them. Unlike NFS or CIFS, where a volume is broadly accessible and user permissions control access, block storage permissions operate at the machine level. Typically, only one system can access a block device at a time.
 
-An igroup acts as a permission layer for block storage. When a server connects to the storage system, it identifies itself using its iSCSI qualified (IQN) host initiator. If that IQN belongs to one or more igroups, then the server gains access to all LUNs associated with those igroups. Both an igroup and an iSCSI host connection are required for iSCSI to function properly.
+An igroup acts as a permission layer for block storage. When a server connects to the storage system, it identifies itself using its iSCSI qualified name (IQN) host initiator. If that IQN belongs to one or more igroups, then the server gains access to all LUNs associated with those igroups. Both an igroup and an iSCSI host connection are required for iSCSI to function properly.
 
 .Before you begin
 You must associate a link to create igroups. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Learn how to associate an existing link or to create and associate a new link^]. After you associate the link, return to this operation.
@@ -32,7 +32,7 @@ You must associate a link to create igroups. link:https://docs.netapp.com/us-en/
 * *Storage VM name*: Select the storage VM for the initiator group.
 * *Block device name*: Select one or more block devices to associate with the initiator group. The block devices listed are those that have not been mapped to a host initiator yet.
 * *Operating system type*: Select Linux, VMware, or Windows for the operating system type.
-* *Host initiators*: Add one or more iSCSI qualified (IQN) host initiators to the initiator group. 
+* *Host initiators*: Add one or more iSCSI qualified name (IQN) host initiators to the initiator group. 
 . Select *Create*.
 
 .Related information
