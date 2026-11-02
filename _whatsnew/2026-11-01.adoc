@@ -1,0 +1,2 @@
+=== Throughput decision points
+You can now see client throughput recommendation and automation decision points. Hover over a decision point to view details, such as the current and recommended SKU or breached metrics in time window (%).
