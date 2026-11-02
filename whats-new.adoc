@@ -23,6 +23,14 @@ include::_whatsnew/2026-09-30.adoc[]
 
 include::_whatsnew/2026-09-30.adoc[]
 
+== 1 November 2026
+
+include::_whatsnew/2026-11-01.adoc[]
+
+== 30 September 2026
+
+include::_whatsnew/2026-09-30.adoc[]
+
 == 30 August 2026
 
 include::_whatsnew/2026-08-30.adoc[]

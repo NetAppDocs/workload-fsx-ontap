@@ -1,2 +1,67 @@
+=== Initiator group diagram enhancements    
+The diagram that displays initiator groups for block devices on the Manage Client Access page now includes more details for hosts. When you hover over a host in the diagram, host details appear, including the host name, instance ID, workload type, region, and iSCSI Qualified Name (IQN).
+
+=== Email enhancement for well-architected issues
+The new email design provides more details and context for configuration issues detected by Workload Factory. The email includes the number of analyzed resources, how many have warning or critical issues, and what those issues are. The email also links to the FSx for ONTAP well-architected dashboard so you can address issues right away. 
+
+=== Well-architected dashboard enhancements
+
+==== Support for selected configuration checks
+You can manually run analysis on selected configurations so that you analyze only the configurations you're interested in and reduce wait time.
+
+==== New recommendations in the well-architected analysis
+Workload Factory now includes the following configurations in the well-architected analysis for FSx for ONTAP file systems: 
+
+For storage workloads: 
+
+* *Connect host to failover node*: checks whether hosts are connected to the failover node in an active-passive FSx for ONTAP file system for reliability.
+* *Connect host to preferred node*: checks whether hosts are connected to their block devices using the preferred node for performance efficiency.
+* *ARP/AI multi-device detection gap*: ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
+* *Clone cleanup*: checks whether there are any volume clones older than 30 days that can be deleted to optimize storage usage and reduce costs.
+* *Match igroup OS to host*: checks whether the operating system of the initiator group (igroup) matches the host's operating system to prevent I/O or performance issues.
+
+For Kubernetes workloads:
+
+* *QoS configuration*: checks whether Kubernetes persistent volumes are protected with an ONTAP QoS policy for performance efficiency.
+* *Dedicated Kubernetes storage VM*: checks whether the file system is using a dedicated storage VM for Kubernetes workloads to improve isolation and simplify storage management.
+* *Dedicated Kubernetes export policy*: checks whether each Kubernetes persistent volume has a dedicated export policy that only allows access from the cluster's worker nodes.
+* *Bidirectional CHAP for Kubernetes iSCSI backends*: checks whether Trident iSCSI backends have mutual CHAP authentication enabled for security.
+* *Disable `showmount` on the application storage VM*: checks whether `showmount` is disabled on the application storage VM to prevent clients from listing exports they can't access.
+
+For database workloads:
+
+* *SAP HANA snapshot policy*: checks whether the snapshot policy is set to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
+* *MySQL snapshot policy*: checks whether the snapshot policy is set to "None" for MySQL volumes to lower storage costs and improve performance for active database data.
+* *PostgreSQL snapshot policy*: checks whether the snapshot policy is set to "None" for PostgreSQL volumes to lower storage costs and improve performance for active database data.
+
+==== Current and recommended values for configurations
+You can view the current and recommended values for some unoptimized configurations in the well-architected dashboard. This tells you what the recommended value is before you fix it. 
+
+* Cold data tiering
+* Snapshot policy
+* SSD capacity headroom
+
+=== Cost improvements
+
+==== Cost forecasting and insights
+You can now forecast costs for your FSx for ONTAP file systems using the cost forecasting feature. This helps you plan your budget and optimize your resources effectively. You can also view insights about your costs and usage patterns to identify opportunities for cost optimization.
+
+==== AWS Cost and Usage Reports (CUR)
+Workload Factory now uses AWS Cost and Usage Reports (CUR) instead of AWS Cost Explorer to provide detailed billing records delivered to customer-owned S3 buckets. CUR offers better cost granularity and serves as the foundation for advanced FinOps, chargeback, and cost allocation use cases.
+
+=== Storage VM migration improvements
+
+Workload Factory provides enhanced guidance within the user interface for migrating storage VMs. This includes step-by-step instructions and a test run before committing the migration to production.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Learn more about storage VM migration]
+
+=== Replication lag email notification improvement
+
+When a large number of related replication lag events occur, Workload Factory automatically consolidates them into a single email notification so you won't get overwhelmed by notifications. 
+
+=== Automatic capacity management enhancement
+
+You can now turn on automatic capacity management notifications to try out the feature before asking Workload Factory to manage your capacity automatically. You'll be notified when your file system is running low on capacity. 
+
 === Throughput decision points
 You can now see client throughput recommendation and automation decision points. Hover over a decision point to view details, such as the current and recommended SKU or breached metrics in time window (%).
