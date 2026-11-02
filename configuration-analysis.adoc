@@ -117,6 +117,10 @@ ARP/AI provides full protection coverage when a volume has only one block device
 +
 Use bidirectional CHAP authentication for Trident iSCSI backends to ensure iSCSI initiator and target are mutually authenticated. This prevents unauthorized hosts from establishing iSCSI sessions against the storage VM.
 
+* *Disable `showmount` on the application storage VM*
++
+Disable `showmount` on the application storage VM to prevent clients from listing exports they can't access.
+
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value.
 
