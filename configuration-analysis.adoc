@@ -82,6 +82,22 @@ The snapshot policy labels of the source volume and the replication policy label
 +
 Raise the file capacity threshold to avoid reaching the volume capacity limit. Low file capacity (inodes) prevents writing additional data to the volume. Workload Factory recommends maintaining file capacity utilization below 80% to allow new file creation. 
 
+* *Connect host to failover node*
++
+Workload Factory recommends connecting hosts to the failover node to maintain connectivity and avoid disruptions during failovers.
+
+* *SAP HANA snapshot policy*
++
+Set the snapshot policy to "None" for SAP HANA volumes to lower storage costs and improve performance for active database data.
+
+* *MySQL snapshot policy*
++
+Set the snapshot policy to "None" for MySQL volumes to lower storage costs and improve performance for active database data.
+
+* *PostgreSQL snapshot policy*
++
+Set the snapshot policy to "None" for PostgreSQL volumes to lower storage costs and improve performance for active database data.
+
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
 
@@ -92,6 +108,18 @@ NetApp Autonomous Ransomware Protection with AI (ARP/AI) helps protect your volu
 * *Unauthorized iSCSI volume access*
 +
 Volumes serving application data using iSCSI should not allow NAS access at the same time. Workload Factory recommends restricting iSCSI volumes from using any other protocol.
+
+* *ARP/AI multi-device detection gap* 
++ 
+ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
+
+* *Bidirectional CHAP for Kubernetes iSCSI backends*
++
+Use bidirectional CHAP authentication for Trident iSCSI backends to ensure iSCSI initiator and target are mutually authenticated. This prevents unauthorized hosts from establishing iSCSI sessions against the storage VM.
+
+* *Disable `showmount` on the application storage VM*
++
+Disable `showmount` on the application storage VM to prevent clients from listing exports they can't access.
 
 === Operational excellence
 Operational excellence focuses on delivering the most optimal architecture and business value.
@@ -132,6 +160,14 @@ Configure thin provisioning for FSx for ONTAP volumes hosting database instances
 +
 Configure FSx for ONTAP file systems with the required AWS Transform MGN (MGN) connectivity and API authentication settings before using them with AWS MGN. 
 
+* *Dedicated Kubernetes storage VM*
++
+Use a dedicated storage VM for Kubernetes workloads. Keeping Kubernetes storage separate makes it easier to manage, simplifies policy setup, and helps ensure consistent storage settings.
+
+* *Match igroup OS to host*
++ 
+Match the operating system of the initiator group (igroup) to the host's operating system to prevent I/O or performance issues.
+
 === Cost optimization
 Cost optimization helps you get the most value for your business while keeping costs low.
 
@@ -162,6 +198,10 @@ Excess SSD capacity adds unnecessary cost. Reduce the SSD tier while maintaining
 * *Inactive NAS volumes*
 +
 After a NAS volume isn't used for 31 days, archive or delete the unused NAS volume to reduce costs. 
+
+* *Clone cleanup* 
++
+Delete any volume clones older than 30 days to optimize storage usage and reduce costs.
 
 === Performance efficiency
 Performance efficiency helps you ensure that your storage resources are used effectively and that workloads perform optimally.
