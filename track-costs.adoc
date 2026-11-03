@@ -18,7 +18,7 @@ Workload Factory gets cost and usage data for your FSx for ONTAP file system res
 In the Cost dashboard, two tabs provide overall cost and cost by resource. 
 
 * Overall cost is based on data pulled directly from the AWS Cost Explorer API.
-* Cost by Resource shows you cost estimates by file system(s) and/or volumes. 
+* Cost by Resource shows you cost estimates by file systems or volumes. 
 +
 For unique resources, Workload Factory calculates costs by combining the actual performance tier usage, a proportional share of performance tier costs allocated to provisioned but unused space, performance allocations distributed by capacity, and capacity pool usage. Workload Factory multiplies each component by its price per unit for that dimension and sums the results to determine the total cost for each resource.
 
@@ -26,7 +26,7 @@ Workload Factory always shows data at a monthly rate.
 
 You can filter cost and usage data by AWS accounts, credentials, one or more regions, and time ranges so that you can understand your FSx for ONTAP file system consumption. You can also filter by one or more file systems and one or more volumes within a file system. 
 
-AWS cost allocation tag keys and tag key values add an additional layer of filtering to pinpoint specific costs. A _tag_ consists of a key and a value. To filter by tag keys and tag key values, assign tags to your FSx for ONTAP file systems. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html[Learn more about AWS cost allocation tags.^]
+AWS cost allocation tag keys and tag key values add a layer of filtering to pinpoint specific costs. A _tag_ consists of a key and a value. To filter by tag keys and tag key values, assign tags to your FSx for ONTAP file systems. link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html[Learn more about AWS cost allocation tags.^]
 
 In addition to the cost data in the Cost dashboard, the AI-generated cost executive summary shows your FSx for ONTAP file system costs and your organization's spending patterns. You can generate CSV files of your FSx for ONTAP file system resources to share with your team and stakeholders. 
 
