@@ -1,0 +1,115 @@
+---
+sidebar: sidebar
+permalink: manage-custom-rules.html
+keywords: manage rules, edit rules, disable rules, delete rules, rule catalog, byor
+summary: "View, edit, pause, resume, test, and delete custom architectural rules from the Rules catalog in NetApp Workload Factory."
+---
+= Manage custom rules in NetApp Workload Factory
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Rules catalog in NetApp Workload Factory gives you one place to manage all your custom architectural rules. You can review rule details and results, edit rules, run quick tests, pause or resume scheduled evaluations, and delete rules that you no longer need.
+
+== View the Rules catalog
+
+The Rules catalog shows all the rules you created, their status, schedule, and latest results.
+
+.Steps
+
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected* > *Rule builder*.
+. Select *View your rules* to open the Rules catalog.
+
+== View rule results
+
+The results show which resources follow your rule and which do not.
+
+.Steps
+
+. In the Rules catalog, select the rule you want to review.
+. Select the *All runs results* tab.
+. Select **View details** to see the results for each run.
+
+If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a link that hasn't been set up.
+
+== Edit a custom rule
+
+You can rename a rule at any time. You can also edit a rule's description, resource type, schedule, severity, condition logic, evaluation scope, and remediation guidance.
+
+You can rename a rule from the Rules catalog or from the rule details card. To edit any other rule setting, start from the Rules catalog.
+
+.Steps
+
+. In the Rules catalog, select the rule you want to edit.
+. Do one of the following:
++
+* To rename the rule, update the rule name from the catalog or the rule details card.
+* To edit other rule settings, select *Edit*.
++
+The rule opens in chat mode with its full history.
+
+. Ask for the changes you want to make, or update the request in chat.
++
+If creating the rule failed earlier, you can continue from that rule and update your request in the chat.
+
+. Review the updated explanation and summary of changes.
++
+The system shows what changed from the current rule before you save it.
+
+. If the rule is in draft mode, select *Validate rule* to test the updated logic.
+
+. Do one of the following:
++
+* To keep the changes, select *Save* to replace the current rule. If you changed the schedule, save the updated schedule. If you didn't change the schedule, it stays the same.
+* To discard the changes, select *Discard changes*. The rule returns to its previous version and exits edit mode.
+
+While you edit a rule, the rule appears as *Editing* for you. Other users still see the current scheduled rule, and scheduled runs continue normally until you save the changes.
+
+== Pause a rule
+
+Pause a rule to stop evaluations without deleting the rule. Paused rules stay in the catalog, and you can resume them at any time.
+
+.Steps
+
+. In the Rules catalog, select the rule you want to pause.
+. Do one of the following:
++
+* To pause a scheduled rule, select *Pause*, then confirm. The rule stops running on its schedule.
+* To resume a paused rule, select *Resume*, then confirm. The rule resumes regular evaluations.
+
+== Delete a custom rule
+
+Delete a rule permanently when you no longer need it. This action cannot be undone.
+
+.Steps
+
+. In the Rules catalog, select the rule you want to delete.
+. Select *Delete*.
+. Confirm that you want to permanently delete the rule.
+
+.Result
+
+The rule is removed from the catalog. All evaluation history is deleted.
+
+== Run a quick test
+
+Run a quick test at any time to check current compliance without waiting for the next scheduled run.
+
+.Steps
+
+. In the Rules catalog, select the rule you want to evaluate.
+. Select *Validate*.
++
+The system evaluates all resources in scope against the rule logic.
+
+. Review the results to see current compliance status.
+
+Tests are audited and appear in the rule's evaluation history.
+
+== Related information
+
+link:learn-custom-rules.html[Learn more about custom rules]
