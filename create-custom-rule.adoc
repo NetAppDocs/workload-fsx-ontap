@@ -17,7 +17,7 @@ Create custom rules to check your FSx for ONTAP resources in Workload Factory ag
 .About this task
 The rule setup process guides you through each step: creating the rule, reviewing how the AI understood it, and checking the results before scheduling regular reviews. You stay in control throughout the process. The system suggests a rule based on your prompt, but nothing happens until you approve it.
 
-NOTE: If your account administrator has turned off AI features, you'll see a message and can't create or edit custom rules. Contact your administrator or link:manage-genai-features.html[learn about AI administration^].
+NOTE: If your account administrator has turned off AI features, you'll see a message and can't create or edit custom rules. Contact your administrator or link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
 
 .Before you begin
 * You have configured AWS credentials with read-only access.

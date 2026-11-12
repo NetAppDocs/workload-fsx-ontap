@@ -18,7 +18,7 @@ Custom rules let you set, check, and enforce your own architecture standards, al
 The Rule builder lets you create custom rules using plain language. These rules are checked across all your resources.
 Custom rules help you enforce your organization's standards, risk limits, and operational requirements that default rules might not cover.
 
-NOTE: If your account administrator has turned off AI features, you cannot create new rules or edit existing rules. Any rules that are already scheduled continue to run. link:../admin/manage-genai-features.html[Learn about managing AI features].
+NOTE: If your account administrator has turned off AI features, you cannot create new rules or edit existing rules. Any rules that are already scheduled continue to run. link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[Learn about managing AI features^].
 
 == How custom rules work
 Custom rules use AI to turn plain-language instructions into clear, structured rules. The AI translates your request, suggests a rule, explains how it understood your instructions, and asks for approval before saving or scheduling the rule.
@@ -32,12 +32,12 @@ This process helps ensure that:
 == Before you begin
 Before you can create and run custom rules, ensure you have the following:
 
-AWS credentials:: Read-only access to your AWS environment. Custom rules require read-only permissions as a security boundary. link:add-credentials.html[Add AWS credentials to Workload Factory].
+AWS credentials:: Read-only access to your AWS environment. Custom rules require read-only permissions as a security boundary. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html[Add AWS credentials to Workload Factory].
 ONTAP credentials:: FSx viewer user with read-only permissions. Workload Factory creates a read-only user on each FSx for ONTAP file system if one does not already exist, so that Workload Factory can perform evaluations.
-Link or agent:: Required only for rules that must connect directly to ONTAP to check settings that AWS APIs cannot access. link:create-link.html[Connect to an FSx for ONTAP file system with a link].
+Link or agent:: Required only for rules that must connect directly to ONTAP to check settings that AWS APIs cannot access. link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html[Connect to an FSx for ONTAP file system with a link^].
 
 == Limitations
-* Rules cannot fix issues automatically. You must correct non-compliant resources yourself using the provided guidance.
+* Rules can't fix issues automatically. You must correct non-compliant resources yourself using the provided guidance.
 * Each rule checks only one type of resource, but it can apply to a wide range of resources. For example, one rule can evaluate volumes in multiple regions, all regions, or multiple accounts. To evaluate different resource types, create separate rules.
 * Rules run at most once per hour to prevent excessive scanning.
 * Rules can only read your environment and cannot make changes.
