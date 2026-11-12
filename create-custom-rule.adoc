@@ -1,0 +1,96 @@
+---
+sidebar: sidebar
+permalink: create-custom-rule.html
+keywords: create custom rule, byor, custom rules, fsx, ontap, well architected, rule builder
+summary: "Create a custom architectural rule using natural language to enforce your organizational standards for FSx for ONTAP in NetApp Workload Factory."
+---
+= Create a custom rule in NetApp Workload Factory
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Create custom rules to check your FSx for ONTAP resources in Workload Factory against your organization's standards. Describe each rule in plain language, and the AI rule builder turns your request into a validated rule.
+
+.About this task
+The rule setup process guides you through each step: creating the rule, reviewing how the AI understood it, and checking the results before scheduling regular reviews. You stay in control throughout the process. The system suggests a rule based on your prompt, but nothing happens until you approve it.
+
+NOTE: If your account administrator has turned off AI features, you'll see a message and can't create or edit custom rules. Contact your administrator or link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html[learn about AI administration^].
+
+.Before you begin
+* You have configured AWS credentials with read-only access.
+* You have ONTAP credentials with viewer permissions.
+* You have a link or agent configured for FSx for ONTAP connectivity.
+* You understand that custom rule creation uses NetApp's Bedrock AI service.
+
+== Create a rule
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected* > *Rule builder*.
++
+When you open the rule builder, it shows sample prompts to help you write your custom rule. You can select *Copy prompt* to copy a sample prompt into the AI dialog text box.
+. In the *Create a rule* field, enter your rule description in natural language. Be as specific as possible about:
+* What resource type you're checking (file system, volume, or cache).
+* What condition you're validating.
+* What threshold defines compliance.
+* Why this rule matters (optional but recommended).
+. Select image:arrow.png[The menu icon is used to begin generating rules., width=18].
++
+The AI analyzes your prompt and generates a rule definition.
+
+== Review the AI interpretation
+The rule builder displays:
+
+Parsed interpretation:: How the AI understood your prompt in plain language.
+Rule definition:: The structured rule including resource type, condition logic, and evaluation criteria.
+Reasoning:: Why the AI interpreted your prompt this way.
+Confidence indicator:: How confident the system is in the interpretation.
+
+.Steps
+. Review the interpretation to make sure it matches what you intended.
+
+. Check that the rule definition is correct.
+If the interpretation is unclear or wrong, the system might ask questions such as:
+* Which resource should be checked?
+* What value or limit defines compliance?
+* How often should the rule run?
+. Respond to the AI's clarifying questions.
++
+The AI might ask you to choose from several options to better understand what you need. Answer each question and select *Continue*, or select *Skip* to move past optional questions.
+. After answering all questions, select *Continue* to create your rule.
+
+== Test the rule
+Before you save or schedule the rule, run a test to see which resources the rule affects.
+
+.Steps
+
+. Select *Validate rule*.
++
+The system evaluates all resources in scope against your rule logic.
+. Review the validation results:
+** Resources evaluated: Total number of resources checked
+** Compliant: Resources that meet the rule criteria
+** Non-compliant: Resources that do not meet the criteria
+** Failed evaluations: Resources that could not be evaluated (with error details)
+
+== Save or schedule the rule
+After you validate your rule, you can save it as a draft or set it to run regularly.
+
+.Steps
+
+. Do one of the following:
++
+* To schedule regular evaluation, set the evaluation frequency and select *Schedule*. The rule is enabled and runs on the defined schedule.
+* To save after validation without scheduling, select *Save as draft*. The rule is saved but not evaluated until you schedule it.
+* To delete the rule, select *Delete*.
+
+.Result
+Your custom rule is created and listed in the rule catalog. If you set a schedule, the rule checks your FSx for ONTAP resources at the specified frequency.
+If you edit the rule later, the system guides you through the same steps—chat, review, approval, and validation—before you save the updated version.
+
+== What's next
+
+link:manage-custom-rules.html[Manage custom rules]
