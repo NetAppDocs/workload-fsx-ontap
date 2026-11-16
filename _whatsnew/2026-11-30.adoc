@@ -3,7 +3,7 @@
 ==== Workload and workload category filters
 You can now filter the well-architected dashboard by workload and workload category. This helps you focus on the configurations that are most relevant to your workloads.
 
-==== Recommendation source indicator
+==== Workload-based recommendations
 When you select *View and fix* for a configuration, Workload Factory now shows whether each recommendation is workload-based or a general best practice. Workload-based recommendations come from analysis of your workloads. This helps you decide whether a recommendation fits your workload and business needs.
 
 ==== Configurations that need missing credentials
@@ -66,19 +66,14 @@ The Volumes explorer table includes the following new columns:
 You can now manage SSD capacity and throughput capacity for one or more file systems at a time from the file system inventory. Select the file systems, then choose an action from the new *Elasticity* section in the actions menu. For each action, choose a mode: none, recommendation (notify only), or automate. You can also adjust its thresholds. For SSD capacity, choose either incremental or adaptive mode. Workload Factory automatically selects credentials with the required permissions for each file system and logs each operation in the tracker.
 
 ==== New inventory columns
-The file system inventory includes new columns for SSD capacity and throughput utilization, such as SSD used capacity, SSD usage, P95 and P99 throughput, average and maximum throughput, HA pairs, and deployment type. Use the new SSD and throughput column filters to show the columns related to each area. The columns you already selected don't change.
+The file system inventory includes new columns for SSD capacity and throughput utilization, such as SSD used capacity, SSD usage, P95 and P99 throughput, average and maximum throughput, HA pairs, and deployment type. 
 
 === Associate multiple file systems with a link
-You can now associate multiple FSx for ONTAP file systems with a new or existing link in one workflow from the Link management page. You can enter different ONTAP credentials for each file system, or apply the same credentials to several file systems. Workload Factory shows the association status and any failure reason for each file system, and you can retry failed associations.
+You can now associate multiple FSx for ONTAP file systems with a new or existing link in one workflow from the Link management page. You can enter different ONTAP credentials for each file system, or apply the same credentials to several file systems. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn more about links]
 
-=== Storage VM migration cutover test
-You can now test a storage VM migration cutover without shutting down the source storage VM. Run the cutover test as many times as you need. You must complete a successful test and confirm readiness before the final cutover becomes available. During the final cutover, Workload Factory shuts down the source storage VM only just before it brings the destination storage VM online. It also validates more conditions that can block cutover and reports detailed ONTAP errors instead of generic migration failures. The *Cut over replication* action is now called *Cutover replication*.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html[Learn more about storage VM migration]
-
 === Improved snapshot capacity estimates in savings calculators
-All Explore savings calculators now use the same snapshot capacity calculation. They add snapshot capacity to the capacity pool tier and use the used capacity when it's available, or the provisioned capacity otherwise. This gives you more accurate FSx for ONTAP sizing and savings estimates.
+All savings calculators use the same snapshot capacity calculation. It adds snapshot capacity to the capacity pool tier and uses the used capacity when it's available, or the provisioned capacity otherwise. This gives you more accurate FSx for ONTAP sizing and savings estimates.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Learn more about exploring savings]
