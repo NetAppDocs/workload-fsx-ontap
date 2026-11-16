@@ -89,6 +89,14 @@ sidebar:
               url: /configuration-analysis.html
             - title: Implement well-architected file system configurations
               url: /improve-configurations.html 
+            - title: Custom rules
+              entries: 
+                - title: Learn about custom rules
+                  url: /learn-custom-rules.html
+                - title: Create a custom rule
+                  url: /create-custom-rule.html
+                - title: Manage custom rules
+                  url: /manage-custom-rules.html
         - title: Track and analyze FSx for ONTAP costs
           url: /track-costs.html           
         - title: Manage volumes
