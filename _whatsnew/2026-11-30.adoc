@@ -1,10 +1,13 @@
 === Well-architected dashboard enhancements
+Workload Factory now includes the following enhancements to the well-architected dashboard.
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
 
 ==== Workload and workload category filters
-You can now filter the well-architected dashboard by workload and workload category. This helps you focus on the configurations that are most relevant to your workloads.
+You can now filter the well-architected dashboard by workload and workload category. These filters help you focus on the configurations that are most relevant to your workloads.
 
 ==== Workload-based recommendations
-When you select *View and fix* for a configuration, Workload Factory now shows whether each recommendation is workload-based or a general best practice. Workload-based recommendations come from analysis of your workloads. This helps you decide whether a recommendation fits your workload and business needs.
+When you select *View and fix* for a configuration, Workload Factory now shows whether each recommendation is workload-based or a general best practice. Workload-based recommendations come from analysis of your workloads. The recommendation type helps you decide whether a recommendation fits your workload and business needs.
 
 ==== Configurations that need missing credentials
 Workload Factory now disables configurations that it can't evaluate with the credentials selected in the global filter, such as configurations that need database credentials. These configurations keep the *Not analyzed* status, and the *View and fix* action is disabled. Hover over the action to see why the configuration wasn't evaluated.
@@ -13,60 +16,55 @@ Workload Factory now disables configurations that it can't evaluate with the cre
 Workload Factory now includes the following SAP HANA configurations in the well-architected analysis for FSx for ONTAP file systems:
 
 * *FSx for ONTAP backups for SAP HANA*: recommends disabling automatic FSx for ONTAP backups for SAP HANA and using application-aware backups instead.
-* *Ransomware protection for SAP HANA*: recommends disabling ARP/AI on SAP HANA data and log volumes and protecting them with SnapCenter tamperproof snapshots.
+* *Ransomware protection for SAP HANA*: recommends disabling NetApp Autonomous Ransomware Protection with AI (ARP/AI) on SAP HANA data and log volumes and protecting them with SnapCenter tamperproof snapshots.
 * *Single Availability Zone deployment*: recommends placing SAP HANA data and log volumes on a Single-AZ file system.
 * *Dedicated storage VM for SAP HANA*: recommends using a storage VM dedicated to SAP HANA.
 * *Separate storage VMs for data and log volumes*: recommends serving SAP HANA data and log volumes from separate storage VMs.
-* *Dedicated volumes*: recommends separate volumes for SAP HANA data, log, and shared.
-* *Volume style*: recommends FlexVol volumes for SAP HANA data, log, and shared.
+* *Dedicated volumes*: recommends separate SAP HANA data, log, and shared volumes.
+* *Volume style*: recommends FlexVol volumes for SAP HANA data, log, and shared volumes.
 * *NFS TCP max transfer size*: recommends setting the NFS TCP max transfer size to 262144 on storage VMs that serve SAP HANA.
-* *Subnet placement*: recommends deploying the EC2 instance that runs SAP HANA in the same subnet as the file system that holds the volume.
+* *Subnet placement*: recommends deploying the EC2 instance that runs SAP HANA in the same subnet as the file system that holds the SAP HANA volumes.
+* *Application-consistent snapshots*: recommends protecting SAP HANA data volumes with SnapCenter plug-in for SAP HANA or SAP HANA data snapshots.
+* *Cold data tiering*: recommends the "None" tiering policy for SAP HANA data, log, and shared volumes so active database data stays on high-performance storage.
 
 === New recommendations for Kubernetes workloads in the well-architected analysis
 Workload Factory now includes the following Kubernetes configurations in the well-architected analysis for FSx for ONTAP file systems:
 
+* *Snapshot expiration*: recommends deleting the VolumeSnapshot in Kubernetes so Kubernetes and the storage stay in sync.
+* *Inactive NAS volumes* and *Inactive block devices*: recommends archiving the data to the capacity pool tier or removing the persistent volumes in Kubernetes.
 * *Use Trident for Kubernetes persistent volumes*: recommends provisioning Kubernetes persistent volumes with NetApp Trident so Kubernetes manages the full volume lifecycle.
 * *Trident provisioning model*: recommends using Trident NAS Economy provisioning for large-scale Kubernetes environments.
-* *Volume count*: recommends reducing the number of volumes on a file system before it reaches its volume limit, because Kubernetes can't create new persistent volumes after the limit is reached.
+* *Volume count*: recommends reducing the number of volumes on a file system before it reaches its volume limit so Kubernetes can create new persistent volumes after the limit is reached.
+* *Volume capacity headroom*: for volumes that back Kubernetes persistent volumes, recommends expanding the persistent volume claim or using a Trident _Autogrow Policy_ instead of resizing the volume. The 80% threshold is unchanged.
 
 === New recommendations for storage VM name services
-* *DNS and LDAP server redundancy*: recommends at least two DNS servers on storage VMs that use DNS, and at least two LDAP servers on storage VMs that use LDAP. A single server can block name resolution, domain authentication, or NFS access.
+*DNS and LDAP server redundancy*: recommends at least two DNS servers on storage VMs that use DNS, and at least two LDAP servers on storage VMs that use LDAP. A single server failure can block name resolution, domain authentication, or NFS access.
 
-=== Enhancements to existing well-architected recommendations
-* *Application-consistent snapshots*: now includes SAP HANA data volumes. Protect them with the SnapCenter plug-in for SAP HANA or SAP HANA data snapshots.
-* *Cold data tiering*: now recommends the "None" tiering policy for SAP HANA data, log, and shared volumes so active database data stays on high-performance storage.
-* *Ransomware protection (ARP/AI)*: no longer applies to SAP HANA data and log volumes. SAP HANA has its own recommendation.
-* *Volume backups*: recommendation now describes a centrally managed, automated backup and retention strategy with FSx for ONTAP backups.
-* *Snapshot expiration*: for Kubernetes volume snapshots, delete the VolumeSnapshot in Kubernetes so Kubernetes and the storage stay in sync.
-* *Inactive NAS volumes* and *Inactive block devices*: for Kubernetes persistent volumes, archive the data to the capacity pool tier or remove the persistent volumes in Kubernetes.
-* *Volume capacity headroom*: for volumes that back Kubernetes persistent volumes, expand the persistent volume claim or use a Trident _Autogrow Policy_ instead of resizing the volume. The 80% threshold is unchanged.
+=== Volumes explorer enhancements
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
+==== Manage junction paths
+You can now manage where volumes are mounted in a storage VM namespace directly from Volumes explorer. Select *Manage junction paths* from the *Advanced* menu for a volume to view the storage VM namespace as a tree, then mount, unmount, or change the junction path for the volume. Workload Factory checks dependencies before it unmounts a volume. You can't unmount a volume that has other volumes mounted under it, and you get a warning when the volume has SMB shares. 
 
-=== Volume management enhancements
-
-==== Manage mount points
-You can now manage where volumes are mounted in a storage VM namespace directly from the Volumes explorer. Select *Manage mount points* from the *Advanced* menu for a volume to view the storage VM namespace as a tree, then mount, unmount, or change the mount path for the volume. Workload Factory checks dependencies before it unmounts a volume. You can't unmount a volume that has other volumes mounted under it, and you get a warning when the volume has SMB shares. The Volumes explorer table also includes an optional *Mount path* column.
-
-==== Nested mount points for new volumes
-When you create a volume, you can now enter a nested mount point, such as `/test1/test2`, in the *Advanced configuration* section. The *Junction path* field is now called *Mount point*, and mount points and SMB share names can now include spaces.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Learn how to create a volume]
-
-==== New Volumes explorer columns
+==== New Volumes explorer table columns
 The Volumes explorer table includes the following new columns:
 
 * *SMB shares*: lists the SMB shares for a volume. Each share name links to share management for the storage VM.
 * *Block device access*: lists the block devices in a volume that belong to an initiator group (igroup). Each block device links to its *Manage client access* page.
 * *Logical used size*: shows the space that clients see as used, before storage efficiency savings. This column appears by default.
+* *Junction path*: shows the junction path for a volume.
+
+=== Nested junction paths for new volumes
+When you create a volume, you can now enter a nested junction path, such as `/test1/test2`, in the *Advanced configuration* section. 
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Learn how to create a volume]
 
 === File system inventory enhancements
 
 ==== Bulk SSD and throughput management
-You can now manage SSD capacity and throughput capacity for one or more file systems at a time from the file system inventory. Select the file systems, then choose an action from the new *Elasticity* section in the actions menu. For each action, choose a mode: none, recommendation (notify only), or automate. You can also adjust its thresholds. For SSD capacity, choose either incremental or adaptive mode. Workload Factory automatically selects credentials with the required permissions for each file system and logs each operation in the tracker.
+You can now manage Performance tier (SSD) capacity and throughput capacity for one or more file systems at a time from the file system inventory. Select the file systems, then choose an action from the new *Elasticity* section in the actions menu. For each action, choose a mode: none, recommendation (notify only), or automate. You can also adjust the thresholds for each action. For SSD capacity, choose either incremental or adaptive mode. Workload Factory automatically selects credentials with the required permissions for each file system and logs each operation in Tracker.
 
 ==== New inventory columns
-The file system inventory includes new columns for SSD capacity and throughput utilization, such as SSD used capacity, SSD usage, P95 and P99 throughput, average and maximum throughput, HA pairs, and deployment type. 
+The file system inventory includes new columns for SSD used capacity, SSD usage, P95 and P99 throughput, average and maximum throughput, HA pairs, and deployment type. 
 
 === Associate multiple file systems with a link
 You can now associate multiple FSx for ONTAP file systems with a new or existing link in one workflow from the Link management page. You can enter different ONTAP credentials for each file system, or apply the same credentials to several file systems. 
@@ -74,6 +72,6 @@ You can now associate multiple FSx for ONTAP file systems with a new or existing
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn more about links]
 
 === Improved snapshot capacity estimates in savings calculators
-All savings calculators use the same snapshot capacity calculation. It adds snapshot capacity to the capacity pool tier and uses the used capacity when it's available, or the provisioned capacity otherwise. This gives you more accurate FSx for ONTAP sizing and savings estimates.
+All savings calculators use the same snapshot capacity calculation. The calculation adds snapshot capacity to the capacity pool tier and uses the used capacity when it's available, or the provisioned capacity otherwise. The shared calculation gives you more accurate FSx for ONTAP sizing and savings estimates.
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Learn more about exploring savings]
