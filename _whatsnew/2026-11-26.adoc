@@ -60,8 +60,3 @@ The file system inventory includes new columns for SSD used capacity, SSD usage,
 You can now associate multiple FSx for ONTAP file systems with a new or existing link in one workflow from the Link management page. You can enter different ONTAP credentials for each file system, or apply the same credentials to several file systems. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html[Learn more about links]
-
-=== Improved snapshot capacity estimates in savings calculators
-All savings calculators use the same snapshot capacity calculation. The calculation adds snapshot capacity to the capacity pool tier and uses the used capacity when it's available, or the provisioned capacity otherwise. The shared calculation gives you more accurate FSx for ONTAP sizing and savings estimates.
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html[Learn more about exploring savings]
