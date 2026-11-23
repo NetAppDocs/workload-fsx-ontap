@@ -9,7 +9,7 @@ summary: "Change volume workloads, edit volume tags, update storage efficiency, 
 :imagesdir: ./media/
 
 [.lead]
-Customize FSx for ONTAP volume settings in NetApp Workload Factory to fit your organization's needs. You can set volume workloads and tags to categorize resources, update storage efficiency settings to optimize space and cost savings, and manage immutable files settings to control data retention and protect against unauthorized changes.
+Customize FSx for ONTAP volume settings in NetApp Workload Factory to fit your organization's needs. You can set volume workloads and tags to categorize resources, update storage efficiency settings to optimize space and cost savings, manage mount points (junction paths) to control where volumes are mounted, and manage immutable files settings to control data retention and protect against unauthorized changes.
 
 == Change volume workload
 Update the workloads for a volume to match its intended use cases. 
@@ -22,6 +22,17 @@ Update the workloads for a volume to match its intended use cases.
 . Select *Advanced actions* then *Change workloads*.
 . In the Change workloads dialog, select the correct workloads for the volume. 
 . Select *Apply* to save the changes.
+
+== Manage mount points (junction paths)
+Manage where volumes are mounted in a storage VM namespace. Workload Factory checks dependencies before it unmounts a volume. You can't unmount a volume that has other volumes mounted under it, and you get a warning when the volume has SMB shares. 
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
+. From the Storage menu, select *Volumes explorer*. 
+. Select the actions menu for the volume to manage mount points for.
+. Select *Advanced actions* then *Manage mount points*.
+. On the Manage mount points page, you can mount, unmount, or change the mount point (junction path) for the volume.
 
 == Manage volume tags
 Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes in NetApp Workload Factory. 
