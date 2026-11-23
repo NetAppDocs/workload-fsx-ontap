@@ -32,14 +32,14 @@ Workload Factory now includes the following Kubernetes configurations in the wel
 
 === Volumes explorer enhancements
 
-==== Manage junction paths
-You can now manage where volumes are mounted in a storage VM namespace directly from Volumes explorer. Select *Manage junction paths* from the *Advanced* menu for a volume to view the storage VM namespace as a tree, then mount, unmount, or change the junction path for the volume. Workload Factory checks dependencies before it unmounts a volume. You can't unmount a volume that has other volumes mounted under it, and you get a warning when the volume has SMB shares. 
-
 ==== New Volumes explorer table columns
 The Volumes explorer table includes the following new columns:
 
 * *Logical used size*: shows the space that clients see as used, before storage efficiency savings. This column appears by default.
 * *Junction path*: shows the junction path for a volume.
+
+==== Manage mount points
+You can now manage where volumes are mounted in a storage VM namespace directly from Volumes explorer. Select *Manage mount points* from the *Advanced* menu for a volume to view the storage VM namespace as a tree, then mount, unmount, or change the mount point (junction path) for the volume. Workload Factory checks dependencies before it unmounts a volume. You can't unmount a volume that has other volumes mounted under it, and you get a warning when the volume has SMB shares. 
 
 === Nested junction paths for new volumes
 When you create a volume, you can now enter a nested junction path, such as `/test1/test2`, in the *Advanced configuration* section. 
