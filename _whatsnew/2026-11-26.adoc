@@ -41,6 +41,8 @@ The Volumes explorer table includes the following new columns:
 ==== Manage mount points
 You can now manage where volumes are mounted in a storage VM namespace directly from Volumes explorer. Select *Manage mount points* from the *Advanced* menu for a volume to view the storage VM namespace as a tree, then mount, unmount, or change the mount point (junction path) for the volume. Workload Factory checks dependencies before it unmounts a volume. You can't unmount a volume that has other volumes mounted under it, and you get a warning when the volume has SMB shares. 
 
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-settings.html[Learn how to manage mount points]
+
 === Nested junction paths for new volumes
 When you create a volume, you can now enter a nested junction path, such as `/test1/test2`, in the *Advanced configuration* section. 
 
