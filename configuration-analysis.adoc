@@ -58,10 +58,6 @@ Reliability ensures that workloads perform their intended functions correctly an
 +
 Back up your volumes with FSx for ONTAP backup to implement a centrally managed, automated backup and retention strategy. This supports data retention and compliance needs.
 
-* *FSx for ONTAP backups for SAP HANA*
-+
-Disable automatic FSx for ONTAP backups for SAP HANA and use application-aware backups (SnapCenter, SnapMirror, or SnapVault) instead.
-
 * *Snapshot policy*
 +
 Schedule local snapshots for efficient backup and quick restores. Snapshots are instant, point-in-time images of your volumes. This recommendation doesn't apply to database environments.
