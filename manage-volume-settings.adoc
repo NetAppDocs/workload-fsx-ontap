@@ -2,9 +2,9 @@
 sidebar: sidebar
 permalink: manage-volume-settings.html
 keywords: volume tags, edit volume tags, edit tags, manage mount points, mount points, junction paths, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency
-summary: "Change volume workloads, edit volume tags, update storage efficiency, and manage immutable files settings for FSx for ONTAP volumes in NetApp Workload Factory." 
+summary: "Change volume workloads, manage mount points, edit volume tags, update storage efficiency, and manage immutable files settings for FSx for ONTAP volumes in NetApp Workload Factory." 
 ---
-= Manage volume settings in NetApp Workload Factory
+= Manage FSx for ONTAP volume settings in NetApp Workload Factory
 :icons: font
 :imagesdir: ./media/
 
@@ -19,7 +19,7 @@ Update the workloads for a volume to match its intended use cases.
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *Volumes explorer*. 
 . Select the actions menu for the volume to update the workload for.
-. Select *Advanced actions* then *Change workloads*.
+. Select *Advanced actions*, then *Change workloads*.
 . In the Change workloads dialog, select the correct workloads for the volume. 
 . Select *Apply* to save the changes.
 
@@ -31,8 +31,8 @@ Manage where volumes are mounted in a storage VM namespace. Workload Factory che
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *Volumes explorer*. 
 . Select the actions menu for the volume to manage mount points for.
-. Select *Advanced actions* then *Manage mount points*.
-. On the Manage mount points page, you can mount, unmount, or change the mount point (junction path) for the volume.
+. Select *Advanced actions*, then *Manage mount points*.
+. On the Manage mount points page, mount, unmount, or change the mount point (junction path) for the volume.
 
 == Manage volume tags
 Tags can help you categorize your resources. You can add, edit, and remove volume tags at any time for FSx for ONTAP volumes in NetApp Workload Factory. 
@@ -42,7 +42,7 @@ Tags can help you categorize your resources. You can add, edit, and remove volum
 . Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Storage*.
 . From the Storage menu, select *Volumes explorer*. 
 . Select the actions menu for the volume to modify tags for. 
-. Select *Basic actions* then *Edit volume tags*. 
+. Select *Basic actions*, then *Edit volume tags*. 
 . On the Edit volume tags page, add, edit, or remove tags. 
 +
 The maximum number of tags you can apply to a volume is 50.
@@ -51,7 +51,7 @@ The maximum number of tags you can apply to a volume is 50.
 == Update volume storage efficiency 
 Update the storage efficiency setting after volume creation. 
 
-The storage efficiency feature includes deduplication, data compression, and data compaction to achieve optimal space savings on a FlexVol volume. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage that is required. Data compaction stores more data in less space to increase storage efficiency. 
+The storage efficiency feature includes deduplication, data compression, and data compaction to achieve optimal space savings on a FlexVol volume. Deduplication eliminates duplicate data blocks. Data compression compresses the data blocks to reduce the amount of physical storage required. Data compaction stores more data in less space to increase storage efficiency. 
 
 If you chose not to enable storage efficiency when you created a volume, you can enable the setting for potential space and cost savings at any time. 
 
@@ -67,7 +67,7 @@ Volumes use thin provisioning whether you enable or disable storage efficiency.
 . Select *Apply* to save the change. 
 
 == Manage immutable files for a volume in NetApp Workload Factory
-You can update certain immutable files settings for a volume when the feature is enabled, such as the retention policy and periods, the autocommit period, and volume append mode.
+When the immutable files feature is enabled for a volume, you can update settings such as the retention policy and periods, the autocommit period, and volume append mode.
 
 You can enable immutable files only during link:create-volume.html[volume creation].
 
@@ -77,16 +77,16 @@ You can enable immutable files only during link:create-volume.html[volume creati
 . From the Storage menu, select *Volumes explorer*. 
 . Select the actions menu of the volume to update. 
 . Select *Data protection actions*, then *Manage immutable files*.
-. On the Manage Immutable files page, you can update the following:  
-* *Retention period*: select *Unspecified* or *Specify period*. 
+. On the Manage Immutable files page, update the following:  
+* *Retention period*: Select *Unspecified* or *Specify period*. 
 +
 ** *Unspecified*: The default minimum period is 0 years and the default maximum period is 30 years.
-** *Specify period*: Option to define the retention policy, minimum and maximum periods, the autocommit feature, and the volume append mode feature. Provide the following details: 
+** *Specify period*: Define the retention policy, minimum and maximum periods, the autocommit feature, and the volume append mode feature. Provide the following details: 
 *** *Retention policy*: This period must be greater than or equal to the minimum retention period and less than or equal to the maximum retention period. 
 *** *Minimum and maximum periods*: Set the minimum and maximum periods to commit files in this volume to an immutable WORM state. 
-* *Autocommit*: enable or disable the feature to automatically commit files to WORM that haven't been modified during the Autocommit period.
-* *Privileged delete*: Enable or disable the feature. Enabling the feature allows a SnapLock administrator to delete an unexpired WORM volume. This feature is only supported in Enterprise retention mode. 
-* *Volume append mode*: enable or disable the feature. Enabling volume append mode lets you add new content to WORM files. 
+* *Autocommit*: Enable or disable the feature to automatically commit files to WORM when they haven't been modified during the Autocommit period.
+* *Privileged delete*: Enable or disable the feature. Enabling the feature allows a SnapLock administrator to delete an unexpired WORM volume. This feature is supported only in Enterprise retention mode. 
+* *Volume append mode*: Enable or disable the feature. Enabling volume append mode lets you add new content to WORM files. 
 . Select *Apply*. 
 
 == Related information
