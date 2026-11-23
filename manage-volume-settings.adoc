@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: manage-volume-settings.html
-keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency
+keywords: volume tags, edit volume tags, edit tags, manage mount points, mount points, junction paths, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency
 summary: "Change volume workloads, edit volume tags, update storage efficiency, and manage immutable files settings for FSx for ONTAP volumes in NetApp Workload Factory." 
 ---
 = Manage volume settings in NetApp Workload Factory
