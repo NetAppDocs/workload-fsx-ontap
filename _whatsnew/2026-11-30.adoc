@@ -3,19 +3,9 @@ Workload Factory now includes the following enhancements to the well-architected
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
 
-==== Workload and workload category filters
-You can now filter the well-architected dashboard by workload and workload category. These filters help you focus on the configurations that are most relevant to your workloads.
-
-==== Workload-based recommendations
-When you select *View and fix* for a configuration, Workload Factory now shows whether each recommendation is workload-based or a general best practice. Workload-based recommendations come from analysis of your workloads. The recommendation type helps you decide whether a recommendation fits your workload and business needs.
-
-==== Configurations that need missing credentials
-Workload Factory now disables configurations that it can't evaluate with the credentials selected in the global filter, such as configurations that need database credentials. These configurations keep the *Not analyzed* status, and the *View and fix* action is disabled. Hover over the action to see why the configuration wasn't evaluated.
-
 === New recommendations for SAP HANA workloads in the well-architected analysis
 Workload Factory now includes the following SAP HANA configurations in the well-architected analysis for FSx for ONTAP file systems:
 
-* *FSx for ONTAP backups for SAP HANA*: recommends disabling automatic FSx for ONTAP backups for SAP HANA and using application-aware backups instead.
 * *Ransomware protection for SAP HANA*: recommends disabling NetApp Autonomous Ransomware Protection with AI (ARP/AI) on SAP HANA data and log volumes and protecting them with SnapCenter tamperproof snapshots.
 * *Single Availability Zone deployment*: recommends placing SAP HANA data and log volumes on a Single-AZ file system.
 * *Dedicated storage VM for SAP HANA*: recommends using a storage VM dedicated to SAP HANA.
@@ -48,8 +38,6 @@ You can now manage where volumes are mounted in a storage VM namespace directly 
 ==== New Volumes explorer table columns
 The Volumes explorer table includes the following new columns:
 
-* *SMB shares*: lists the SMB shares for a volume. Each share name links to share management for the storage VM.
-* *Block device access*: lists the block devices in a volume that belong to an initiator group (igroup). Each block device links to its *Manage client access* page.
 * *Logical used size*: shows the space that clients see as used, before storage efficiency savings. This column appears by default.
 * *Junction path*: shows the junction path for a volume.
 
