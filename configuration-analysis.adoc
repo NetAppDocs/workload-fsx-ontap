@@ -27,7 +27,7 @@ After the daily analysis completes, configurations appear as "optimized" or "not
 
 You can dismiss the analysis of configurations that do not apply to your environments. This avoids unnecessary alerts and inaccurate optimization results. 
 
-You can also create custom rules in plain language to validate your environments against your organization's standards and NetApp best practices. Test rules with a dry run, then schedule them to run across your environments. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html[Learn more about custom rules^].
+You can also create custom rules in plain language to validate your environments against your organization's standards and NetApp best practices. You can start a rule from a supported well-architected configuration, or write your own prompt. Test rules with a dry run, then schedule them to run across your environments. link:learn-custom-rules.html[Learn more about custom rules].
 
 == Why it matters
 

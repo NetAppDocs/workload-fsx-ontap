@@ -54,6 +54,26 @@ Some fix operations are only available for specific operations and not always fo
 .Result
 The fix process starts. Select the account settings menu and then select *Tracker* to view the status of the operation.
 
+== Customize a configuration as a custom rule
+Match an architecture check to your organization's standard so the original recommendation remains available.
+
+If *Customize as rule* is available, you can create a custom rule from that configuration. The prompt is prefilled from the configuration and won't be submitted until you send it.
+
+.Steps
+. Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected*.
+. Select the configuration that you want to adjust.
+. If *Customize as rule* is available, select it.
++
+Custom rules opens with a prompt based on your configuration. The prompt is not submitted. Edit the prompt to use a different resource, threshold, or check.
+
+Complete the steps to review the prompt, validate the rule, and save or schedule it. The rule stays in draft until you schedule it.
++
+link:create-custom-rule.html[Create a custom rule]
+
+.Result
+The original configuration stays in the well-architected dashboard and is not removed. The rule description explains that the rule is based on this configuration. A custom rule only reads your environment. To apply the recommendation, update the configuration in the dashboard.
+
 == Dismiss a configuration analysis
 Stop a configuration analysis indefinitely for one or more resources. You can restart the analysis when needed.
 
