@@ -20,11 +20,3 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-settings.htm
 When you create a volume, you can now enter a nested junction path, such as `/test1/test2`, in the *Advanced configuration* section. 
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[Learn how to create a volume]
-
-=== File system inventory enhancements
-
-==== Bulk SSD and throughput management
-You can now manage Performance tier (SSD) capacity and throughput capacity for one or more file systems at a time from the file system inventory. Select the file systems, then choose an action from the new *Elasticity* section in the actions menu. For each action, choose a mode: none, recommendation (notify only), or automate. You can also adjust the thresholds for each action. For SSD capacity, choose either incremental or adaptive mode. Workload Factory automatically selects credentials with the required permissions for each file system and logs each operation in Tracker.
-
-==== New inventory columns
-The file system inventory includes new columns for SSD used capacity, SSD usage, P95 and P99 throughput, average and maximum throughput, HA pairs, and deployment type. 
