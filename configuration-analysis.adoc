@@ -64,7 +64,7 @@ Schedule local snapshots for efficient backup and quick restores. Snapshots are 
 
 * *Application-consistent snapshots*
 + 
-For database environments, use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This helps keep your applications running smoothly and your data protected. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads. Protect SAP HANA data volumes with application-consistent snapshots, using the SnapCenter plug-in for SAP HANA or SAP HANA data snapshots.
+For database environments, use application-consistent snapshots with NetApp SnapCenter to take accurate, reliable snapshots of your volume data at a specific moment in time. This helps keep your applications running smoothly and your data protected. SnapCenter makes backups easier and helps you restore data quickly and correctly, reducing downtime and protecting your most important workloads. 
 
 * *Cross-region replication*
 +
@@ -94,25 +94,12 @@ Configure at least two DNS servers on storage VMs that use DNS, and at least two
 +
 Set the snapshot policy to "None" for SAP HANA, MySQL, and PostgreSQL volumes to lower storage costs and improve performance for active database data.
 
-
-* *Single Availability Zone deployment*
-+
-Place SAP HANA data and log volumes on a Single-AZ file system. The Availability Zone deployment is set by the file system that holds the volume.
-
-* *Volume count*
-+
-Reduce the number of volumes on the file system, or stop adding more, before the file system reaches its volume limit. Kubernetes can't create new persistent volumes once the limit is reached.
-
 === Security 
 Security emphasizes protecting data, systems, and assets through risk assessments and mitigation strategies. 
 
 * *Ransomware protection (ARP/AI)* 
 +
-Enable NetApp Autonomous Ransomware Protection with AI (ARP/AI) on volumes to protect your volumes from ransomware threats. This recommendation doesn't apply to SAP HANA data and log volumes, which have their own recommendation.
-
-* *Ransomware protection for SAP HANA*
-+
-Disable ARP/AI on SAP HANA data and log volumes and protect them with SnapCenter tamperproof snapshots. ARP/AI can remain on `/hana/shared`.
+Enable NetApp Autonomous Ransomware Protection with AI (ARP/AI) on volumes to protect your volumes from ransomware threats. 
 
 * *Unauthorized iSCSI volume access*
 +
@@ -121,10 +108,6 @@ Volumes serving application data using iSCSI should not allow NAS access at the 
 * *ARP/AI multi-device detection gap* 
 + 
 ARP/AI provides full protection coverage when a volume has only one block device attached to it. If a volume has multiple block devices attached, Workload Factory moves the block devices to new volumes so that each volume has only one block device. 
-
-* *Bidirectional CHAP for Kubernetes iSCSI backends*
-+
-Use bidirectional CHAP authentication for Trident iSCSI backends to ensure iSCSI initiator and target are mutually authenticated. This prevents unauthorized hosts from establishing iSCSI sessions against the storage VM.
 
 * *Disable `showmount` on the application storage VM*
 +
@@ -139,7 +122,7 @@ Enable automatic capacity management to regularly ensure that the SSD tier doesn
 
 * *Volume capacity headroom*
 +
-Keep volume utilization below 80% to prevent potential application read/write impacts. You can increase capacity manually or with volume autogrow. For volumes that back Kubernetes persistent volumes, expand the PVC or use a Trident Autogrow policy instead of resizing the volume on the storage.
+Keep volume utilization below 80% to prevent potential application read/write impacts. You can increase capacity manually or with volume autogrow. 
 
 * *FlexCache write mode*
 +
@@ -169,18 +152,6 @@ Configure thin provisioning for FSx for ONTAP volumes hosting database instances
 +
 Configure FSx for ONTAP file systems with the required AWS Transform MGN (MGN) connectivity and API authentication settings before using them with AWS MGN. 
 
-* *Dedicated Kubernetes storage VM*
-+
-Use a dedicated storage VM for Kubernetes workloads. Keeping Kubernetes storage separate makes it easier to manage, simplifies policy setup, and helps ensure consistent storage settings.
-
-* *Use Trident for Kubernetes persistent volumes*
-+
-Provision Kubernetes persistent volumes with NetApp Trident so Kubernetes manages the full volume lifecycle.
-
-* *Dedicated storage VM for SAP HANA*
-+
-Use a storage VM dedicated to SAP HANA so HANA I/O stays separate from other workloads.
-
 * *Match igroup OS to host*
 + 
 Match the initiator group (igroup) OS type to the host operating system to keep I/O aligned and prevent performance issues.
@@ -190,7 +161,7 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Cold data tiering* 
 +
-Enable cold data tiering to reduce SSD storage tier utilization. Apply a tiering policy to every volume focused on general data storage. For database volumes other than SAP HANA primary volumes, enable cold data tiering where appropriate. Use the "None" tiering policy for SAP HANA data, log, and shared volumes so active database data stays on high-performance storage. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
+Enable cold data tiering to reduce SSD storage tier utilization. Apply a tiering policy to every volume focused on general data storage. For database volumes other than SAP HANA primary volumes, enable cold data tiering where appropriate. 
 
 * *Storage efficiencies* 
 +
@@ -202,11 +173,11 @@ Delete any manually created backups for volumes that were deleted, and any backu
 
 * *Snapshot expiration*
 +
-Delete old or manually created snapshots you no longer need. Removing them can lower costs and reduce clutter, especially if they aren't required for your SLA or recovery needs. For Kubernetes volume snapshots, delete the VolumeSnapshot in Kubernetes so Kubernetes and the storage stay in sync.
+Delete old or manually created snapshots you no longer need. Removing them can lower costs and reduce clutter, especially if they aren't required for your SLA or recovery needs. 
 
 * *Inactive block devices*
 +
-After a block device isn't used for seven days, archive block device data to the capacity pool tier or delete the unused block device to reduce costs. For block devices that back Kubernetes persistent volumes, archive the data or remove the persistent volumes in Kubernetes. 
+After a block device isn't used for seven days, archive block device data to the capacity pool tier or delete the unused block device to reduce costs. 
 
 * *Overprovisioned SSD capacity*
 +
@@ -214,11 +185,7 @@ Excess SSD capacity adds unnecessary cost. Reduce the SSD tier while maintaining
 
 * *Inactive NAS volumes*
 +
-After a NAS volume isn't used for 31 days, archive the data to the capacity pool tier or delete the unused NAS volume to reduce costs. For volumes that back Kubernetes persistent volumes, archive the data or remove the persistent volumes in Kubernetes.
-
-* *Trident provisioning model*
-+
-Use Trident NAS Economy provisioning for large-scale Kubernetes environments to improve storage efficiency and reduce volume management overhead. 
+After a NAS volume isn't used for 31 days, archive the data to the capacity pool tier or delete the unused NAS volume to reduce costs.
 
 * *Clone cleanup* 
 +
@@ -238,30 +205,6 @@ Rebalance your FlexVol volumes to improve efficiency. After scaling out, capacit
 * *Volume space management*
 +
 Enable coordinated volume space management to reduce the risk of a volume running out of space. Without it, unexpected data or snapshot growth can fill a volume, causing write failures and application impact.
-
-* *QoS policy for Kubernetes persistent volumes*
-+
-Use QoS policies for Kubernetes persistent volumes so one workload doesn't consume too much storage and application performance stays consistent.
-
-* *NFS TCP max transfer size*
-+
-Set the NFS TCP max transfer size to `262144` on storage VMs that serve SAP HANA.
-
-* *Separate storage VMs for data and log volumes*
-+
-Serve SAP HANA data and log volumes from separate storage VMs. There is no additional cost.
-
-* *Volume style*
-+
-Use FlexVol volumes for SAP HANA data, log, and shared.
-
-* *Dedicated volumes*
-+
-Create separate volumes for SAP HANA data, log, and shared. `/hana/data` and `/hana/log` each need their own volume. `/hana/shared` and `/usr/sap` can share a volume.
-
-* *Subnet placement*
-+
-Deploy the EC2 instance that runs SAP HANA in the same subnet as the file system that holds the volume (the file system's preferred subnet).
 
 .What's next
 
