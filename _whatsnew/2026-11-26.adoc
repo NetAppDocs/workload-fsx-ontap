@@ -3,30 +3,6 @@ Workload Factory now includes the following enhancements to the well-architected
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/configuration-analysis.html[Learn more about best practice recommendations for your FSx for ONTAP file systems.]
 
-=== New recommendations for SAP HANA workloads in the well-architected analysis
-Workload Factory now includes the following SAP HANA configurations in the well-architected analysis for FSx for ONTAP file systems:
-
-* *Ransomware protection for SAP HANA*: recommends disabling NetApp Autonomous Ransomware Protection with AI (ARP/AI) on SAP HANA data and log volumes and protecting them with SnapCenter tamperproof snapshots.
-* *Single Availability Zone deployment*: recommends placing SAP HANA data and log volumes on a Single-AZ file system.
-* *Dedicated storage VM for SAP HANA*: recommends using a storage VM dedicated to SAP HANA.
-* *Separate storage VMs for data and log volumes*: recommends serving SAP HANA data and log volumes from separate storage VMs.
-* *Dedicated volumes*: recommends separate SAP HANA data, log, and shared volumes.
-* *Volume style*: recommends FlexVol volumes for SAP HANA data, log, and shared volumes.
-* *NFS TCP max transfer size*: recommends setting the NFS TCP max transfer size to 262144 on storage VMs that serve SAP HANA.
-* *Subnet placement*: recommends deploying the EC2 instance that runs SAP HANA in the same subnet as the file system that holds the SAP HANA volumes.
-* *Application-consistent snapshots*: recommends protecting SAP HANA data volumes with SnapCenter plug-in for SAP HANA or SAP HANA data snapshots.
-* *Cold data tiering*: recommends the "None" tiering policy for SAP HANA data, log, and shared volumes so active database data stays on high-performance storage.
-
-=== New recommendations for Kubernetes workloads in the well-architected analysis
-Workload Factory now includes the following Kubernetes configurations in the well-architected analysis for FSx for ONTAP file systems:
-
-* *Snapshot expiration*: recommends deleting the VolumeSnapshot in Kubernetes so Kubernetes and the storage stay in sync.
-* *Inactive NAS volumes* and *Inactive block devices*: recommends archiving the data to the capacity pool tier or removing the persistent volumes in Kubernetes.
-* *Use Trident for Kubernetes persistent volumes*: recommends provisioning Kubernetes persistent volumes with NetApp Trident so Kubernetes manages the full volume lifecycle.
-* *Trident provisioning model*: recommends using Trident NAS Economy provisioning for large-scale Kubernetes environments.
-* *Volume count*: recommends reducing the number of volumes on a file system before it reaches its volume limit so Kubernetes can create new persistent volumes after the limit is reached.
-* *Volume capacity headroom*: for volumes that back Kubernetes persistent volumes, recommends expanding the persistent volume claim or using a Trident _Autogrow Policy_ instead of resizing the volume. The 80% threshold is unchanged.
-
 === New recommendations for storage VM name services
 *DNS and LDAP server redundancy*: recommends at least two DNS servers on storage VMs that use DNS, and at least two LDAP servers on storage VMs that use LDAP. A single server failure can block name resolution, domain authentication, or NFS access.
 
