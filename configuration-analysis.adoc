@@ -56,7 +56,7 @@ Reliability ensures that workloads perform their intended functions correctly an
  
 * *Volume backups*
 +
-Back up your volumes with FSx for ONTAP backup to implement a centrally managed, automated backup and retention strategy. This supports data retention and compliance needs.
+Backing up your volumes helps support data retention and compliance needs. Use volume backups to set up automated backups and retention for your data.
 
 * *Snapshot policy*
 +
@@ -99,7 +99,7 @@ Security emphasizes protecting data, systems, and assets through risk assessment
 
 * *Ransomware protection (ARP/AI)* 
 +
-Enable NetApp Autonomous Ransomware Protection with AI (ARP/AI) on volumes to protect your volumes from ransomware threats. 
+Enable NetApp Autonomous Ransomware Protection with AI (ARP/AI) on volumes to protect your volumes from ransomware threats. Workload Factory recommends enabling ARP/AI for all volumes.
 
 * *Unauthorized iSCSI volume access*
 +
@@ -161,7 +161,7 @@ Cost optimization helps you get the most value for your business while keeping c
 
 * *Cold data tiering* 
 +
-Enable cold data tiering to reduce SSD storage tier utilization. Apply a tiering policy to every volume focused on general data storage. For database volumes other than SAP HANA primary volumes, enable cold data tiering where appropriate. 
+Enable cold data tiering to reduce SSD storage tier utilization. Apply a tiering policy to every volume focused on general data storage. For database volumes other than SAP HANA primary volumes, enable cold data tiering where appropriate. FSx for ONTAP continuously scans the data for cold data and moves it to the capacity pool tier without disruption. 
 
 * *Storage efficiencies* 
 +
