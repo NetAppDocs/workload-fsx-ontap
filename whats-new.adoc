@@ -11,9 +11,9 @@ summary: "Review new features, enhancements, and fixes for Amazon FSx for NetApp
 [.lead]
 Review new features and enhancements for Amazon FSx for NetApp ONTAP in NetApp Workload Factory, organized by release date.
 
-== 30 November 2026
+== 26 November 2026
 
-include::_whatsnew/2026-11-30.adoc[]
+include::_whatsnew/2026-11-26.adoc[]
 
 == 01 November 2026
 

@@ -1,0 +1,10 @@
+=== Custom rules
+Custom rules, available from *Well-architected* > *Custom rules*, let you start a rule from a well-architected configuration and receive a notification when a scheduled run finishes.
+
+==== Customize a well-architected configuration as a custom rule
+
+You can start a custom rule from a well-architected configuration so that you can apply your own threshold or scope while the original best practice stays in place. Workload Factory opens Custom rules with an editable prompt based on that configuration. The rule starts as a draft, and its description states which configuration it is based on. link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.html[Learn more about customizing a well-architected configuration]
+
+==== Receive notifications for scheduled custom rule runs
+
+Turn on notifications for a scheduled custom rule to get results without signing in to Workload Factory. You can receive notifications after every scheduled run or only when a run fails or partially succeeds. Notifications are sent through the channels you already set up. Manual tests do not send notifications. link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-custom-rules.html[Learn more about notifications for scheduled custom rules]
