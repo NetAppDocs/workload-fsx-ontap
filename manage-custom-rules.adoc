@@ -12,16 +12,16 @@ summary: "View, edit, pause, resume, test, and delete custom architectural rules
 :imagesdir: ./media/
 
 [.lead]
-The Rules catalog in NetApp Workload Factory gives you one place to manage all your custom architectural rules. You can review rule details and results, edit rules, run quick tests, pause or resume scheduled evaluations, and delete rules that you no longer need.
+The Rules catalog in NetApp Workload Factory gives you one place to manage all your custom architectural rules. You can review rule details and results, edit rules, turn on notifications for scheduled runs, run quick tests, pause or resume scheduled evaluations, and delete rules that you no longer need.
 
 == View the Rules catalog
 
-The Rules catalog shows all the rules you created, their status, schedule, and latest results.
+The Rules catalog shows all the rules you created, their status, schedule, latest results, and whether notifications are on.
 
 .Steps
 
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected* > *Rule builder*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected* > *Custom rules*.
 . Select *View your rules* to open the Rules catalog.
 
 == View rule results
@@ -35,6 +35,24 @@ The results show which resources follow your rule and which do not.
 . Select **View details** to see the results for each run.
 
 If the check failed for some items, read the error message to see why. Common reasons are connection problems, missing permissions, or a link that hasn't been set up.
+
+== Receive notifications for a scheduled custom rule
+
+Get notified when a scheduled custom rule finishes so you can review the results without signing in.
+
+Notifications are off by default and must be turned on for each rule. After each scheduled run, Workload Factory sends one notification using the channels already set up for the account. Any user on the account can turn notifications on or off. Manual tests do not send notifications.
+
+.Before you begin
+Confirm that the rule can run on a schedule and that your account can send notifications.
+
+* You can change this setting only when the rule is scheduled.
+* The Workload Factory notification service is enabled. link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html[Configure notifications in Workload Factory^].
+
+.Steps
+. In the Rules catalog, select the rule.
+. If *Notify me* is unavailable because the rule is not scheduled, schedule the rule and open it again.
+. If *Notify me* is unavailable because notifications are not set up, configure notifications for the account and then open the rule again.
+. Turn *Notify me* on, and choose every scheduled run or only runs that fail or partly succeed.
 
 == Edit a custom rule
 
@@ -67,11 +85,11 @@ The system shows what changed from the current rule before you save it.
 * To keep the changes, select *Save* to replace the current rule. If you changed the schedule, save the updated schedule. If you didn't change the schedule, it stays the same.
 * To discard the changes, select *Discard changes*. The rule returns to its previous version and exits edit mode.
 
-While you edit a rule, the rule appears as *Editing* for you. Other users still see the current scheduled rule, and scheduled runs continue normally until you save the changes.
+While you edit a rule, the rule appears as *Editing* for you. Other users still see the current scheduled rule, and scheduled runs continue normally until you save the changes. Editing a rule does not turn its notifications on or off.
 
 == Pause a rule
 
-Pause a rule to stop evaluations without deleting the rule. Paused rules stay in the catalog, and you can resume them at any time.
+Pause a rule to stop evaluations without deleting the rule. Paused rules stay in the catalog, and you can resume them at any time. Pausing a rule does not turn its notifications on or off.
 
 .Steps
 
@@ -97,7 +115,7 @@ The rule is removed from the catalog. All evaluation history is deleted.
 
 == Run a quick test
 
-Run a quick test at any time to check current compliance without waiting for the next scheduled run.
+Run a quick test at any time to check current compliance without waiting for the next scheduled run. A quick test does not send a notification.
 
 .Steps
 

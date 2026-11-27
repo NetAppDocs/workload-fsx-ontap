@@ -59,7 +59,7 @@ link:add-ha-pairs.html[Add HA pairs].
 
 .What is the difference between primary and restricted ONTAP credentials?
 
-A file system uses primary ONTAP credentials, your main credentials for managing the file system, by default. Restricted credentials are used only for AI operations such as Ask Me, Rule builder, and Custom dashboards. If you haven't provided restricted credentials, Workload Factory creates read-only ONTAP credentials for those operations. Managing credentials requires a link.
+A file system uses primary ONTAP credentials, your main credentials for managing the file system, by default. Restricted credentials are used only for AI operations such as Ask Me, Custom rules, and Custom dashboards. If you haven't provided restricted credentials, Workload Factory creates read-only ONTAP credentials for those operations. Managing credentials requires a link.
 
 link:manage-file-system-settings.html[Manage ONTAP credentials]
 
