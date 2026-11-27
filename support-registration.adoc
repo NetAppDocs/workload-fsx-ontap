@@ -6,7 +6,7 @@ summary: "Add a NetApp Support Site account to Workload Factory and register you
 ---
 = Register your Workload Factory account for NetApp support
 :icons: font
-:imagesdir: ./media/
+:imagesdir: https://docs.netapp.com/us-en/workload-family/media/
 
 [.lead]
 Before you can open a support case with NetApp technical support, you need to add a NetApp Support Site account to Workload Factory and then register for support.

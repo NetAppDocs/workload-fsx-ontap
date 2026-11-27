@@ -6,7 +6,7 @@ summary: "Get help with NetApp Workload Factory through self-support resources s
 ---
 = Get help for FSx for ONTAP in NetApp Workload Factory
 :icons: font
-:imagesdir: ./media/
+:imagesdir: https://docs.netapp.com/us-en/workload-family/media/
 
 [.lead]
 include::https://raw.githubusercontent.com/NetAppDocs/workload-family/main/_include/get-help.adoc[]
