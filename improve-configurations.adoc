@@ -66,8 +66,7 @@ If *Customize as rule* is available, you can create a custom rule from that conf
 . If *Customize as rule* is available, select it.
 +
 Custom rules opens with a prompt based on your configuration. The prompt is not submitted. Edit the prompt to use a different resource, threshold, or check.
-
-Complete the steps to review the prompt, validate the rule, and save or schedule it. The rule stays in draft until you schedule it.
+. Complete the steps to review the prompt, validate the rule, and save or schedule it. The rule stays in draft until you schedule it.
 +
 link:create-custom-rule.html[Create a custom rule]
 
