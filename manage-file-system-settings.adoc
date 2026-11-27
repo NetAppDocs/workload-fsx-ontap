@@ -27,7 +27,7 @@ The maximum number of tags you can apply to a file system is 50.
 . Select *Apply*. 
 
 == Manage ONTAP credentials
-Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials: primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI operations (AIOps) like Ask Me, Rule builder, and Custom dashboards. You can optionally add a restricted credential set, and you can update either credential set at any time. 
+Manage ONTAP credentials for an FSx for ONTAP file system in NetApp Workload Factory. Workload Factory has two types of credentials: primary and restricted. By default, the file system uses the primary ONTAP credentials. Restricted credentials are used only for AI operations (AIOps) like Ask Me, Custom rules, and Custom dashboards. You can optionally add a restricted credential set, and you can update either credential set at any time.
 
 You can perform the following tasks:
 

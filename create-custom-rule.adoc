@@ -12,7 +12,7 @@ summary: "Create a custom architectural rule using natural language to enforce y
 :imagesdir: ./media/
 
 [.lead]
-Create custom rules to check your FSx for ONTAP resources in Workload Factory against your organization's standards. Describe each rule in plain language, and the AI rule builder turns your request into a validated rule.
+Create custom rules to check your FSx for ONTAP resources in Workload Factory against your organization's standards. Describe each rule in plain language, and Workload Factory turns your request into a validated rule.
 
 .About this task
 The rule setup process guides you through each step: creating the rule, reviewing how the AI understood it, and checking the results before scheduling regular reviews. You stay in control throughout the process. The system suggests a rule based on your prompt, but nothing happens until you approve it.
@@ -26,12 +26,16 @@ NOTE: If your account administrator has turned off AI features, you'll see a mes
 * You understand that custom rule creation uses NetApp's Bedrock AI service.
 
 == Create a rule
+Describe the check you want so that you can review the rule before it runs on your resources.
 
 .Steps
 . Log in using one of the link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html[console experiences^].
-. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected* > *Rule builder*.
+. Select the menu image:workloads-menu-icon.png[The hamburger menu icon is used to navigate to workloads like storage, eda, ai, databases, vmware, and administration.] and then select *Well-architected* > *Custom rules*.
 +
-When you open the rule builder, it shows sample prompts to help you write your custom rule. You can select *Copy prompt* to copy a sample prompt into the AI dialog text box.
+When you open Custom rules, it shows sample prompts to help you write your custom rule. You can select *Copy prompt* to copy a sample prompt into the AI dialog text box.
++
+If you opened Custom rules from a well-architected configuration, the prompt is already filled in and is not submitted. Edit the prompt before you continue.
+
 . In the *Create a rule* field, enter your rule description in natural language. Be as specific as possible about:
 * What resource type you're checking (file system, volume, or cache).
 * What condition you're validating.
@@ -42,7 +46,7 @@ When you open the rule builder, it shows sample prompts to help you write your c
 The AI analyzes your prompt and generates a rule definition.
 
 == Review the AI interpretation
-The rule builder displays:
+The page displays:
 
 Parsed interpretation:: How the AI understood your prompt in plain language.
 Rule definition:: The structured rule including resource type, condition logic, and evaluation criteria.
@@ -89,6 +93,7 @@ After you validate your rule, you can save it as a draft or set it to run regula
 
 .Result
 Your custom rule is created and listed in the rule catalog. If you set a schedule, the rule checks your FSx for ONTAP resources at the specified frequency.
+If you started from a well-architected configuration, the rule description says the rule is based on that configuration. The original configuration is not changed or removed.
 If you edit the rule later, the system guides you through the same steps—chat, review, approval, and validation—before you save the updated version.
 
 == What's next
